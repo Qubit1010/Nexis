@@ -4,7 +4,7 @@
 
 ## Top Focus Areas
 
-1. **Building AI automation tools for NexusPoint ops** — Daily Brief, YouTube scraper, website audit system, n8n-to-Python converter
+1. **Building AI automation tools for NexusPoint ops** — Daily AI/Tech Brief, Cold Email system, Cold Outreach system, website audit system, Agency Operations
 2. **Scaling NexusPoint as an independent agency** — Moving beyond Upwork/Fiverr dependency
 3. **Client acquisition system** — Cold outreach, direct sales, social media presence
 4. **University** — 6th semester BSAI at Iqra University, Islamabad. Maintain CGPA above 3.0

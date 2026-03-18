@@ -32,15 +32,39 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 
 ### Skills to Build (Backlog)
 
-These emerged from onboarding. Build them as needed:
+Build as needed. Organized by domain:
 
-1. **Upwork job filtering & proposal drafting** — Pre-qualify jobs, draft tailored proposals
-2. **Cold email outreach** — Personalized sequences for the 300+ lead pool
-3. **Social media content pipeline** — Research, generate, and post platform-specific content
-4. **Lead tracking & follow-up** — Track outreach responses, automate follow-ups
-5. **Project scoping template** — Standardized requirement breakdowns for new client work
-6. **Website audit system** — Automated site analysis for prospecting
-7. **Session closeout** — Summarize work done, decisions made, next steps
+**Revenue & Client Acquisition**
+1. Upwork job filtering & proposal drafting
+2. Cold email outreach (300+ lead pool)
+3. Lead tracking & follow-up
+4. Client onboarding workflow
+5. Proposal/SOW generator
+6. Testimonial & case study builder
+7. Competitor/market research
+
+**Content & Brand**
+8. Social media content pipeline
+9. LinkedIn thought leadership
+10. Content repurposing engine
+11. Daily AI/Tech Brief
+
+**Operations & Team**
+12. Project scoping template
+13. Website audit system
+14. Session closeout
+15. Team task delegation
+16. Weekly business review
+17. Invoice & payment tracker
+18. Client communication drafter
+
+**University**
+19. Assignment research assistant
+20. Study session planner
+
+**Automation Building**
+21. n8n-to-Python converter
+22. API integration scaffolder
 
 ## Decision Log
 
