@@ -33,6 +33,7 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 ### Active Skills
 - **Deep Research** (`.claude/skills/deep-research/`) — Context-aware research via OpenAI. Say "research [topic]" or force mode with "deep research..." / "quick search..." / "lite research..."
 - **Team Task Delegation** (`.claude/skills/delegate/`) — Auto-match tasks to team members and generate ready-to-send delegation messages. Say "delegate [task]" or "assign [task] to [person]"
+- **Daily Brief** (`.claude/skills/daily-brief/`) — AI-powered daily intelligence brief for AI/tech news. Fetches from NewsAPI, HackerNews, RSS, analyzes with Claude Haiku + Sonnet. Say "generate brief" or "what's happening in AI today"
 
 ### Skills to Build (Backlog)
 
