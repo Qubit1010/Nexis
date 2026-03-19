@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexusPoint — Delegation Board</title>
+<link rel="icon" href="/brand-assets/logos/favicon-32x32.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'Neutra Text';
+    src: url('/brand-assets/fonts/Neutra Text Bold.otf') format('opentype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Neutra Text';
+    src: url('/brand-assets/fonts/Neutra Text Book.otf') format('opentype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Neutra Text';
+    src: url('/brand-assets/fonts/Neutra Text Light.otf') format('opentype');
+    font-weight: 300;
+  }
+
+  :root {
+    --blue-start: #208ec7;
+    --blue-end: #1f5b99;
+    --blue-mid: #1f76b0;
+    --blue-dim: rgba(32, 142, 199, 0.12);
+    --blue-border: rgba(32, 142, 199, 0.25);
+    --charcoal: #232323;
+    --bg-deep: #1a1a1a;
+    --bg-surface: #222222;
+    --bg-card: #2a2a2a;
+    --bg-card-hover: #303030;
+    --border: #333333;
+    --border-subtle: #2a2a2a;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --text-muted: #666666;
+    --accent-green: #2dd4a0;
+    --accent-green-dim: rgba(45, 212, 160, 0.12);
+    --accent-red: #f87171;
+    --accent-red-dim: rgba(248, 113, 113, 0.12);
+    --accent-amber: #f0b429;
+    --accent-amber-dim: rgba(240, 180, 41, 0.12);
+    --font-body: 'Urbanist', sans-serif;
+    --font-display: 'Neutra Text', 'Urbanist', sans-serif;
+    --radius: 6px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Diagonal accent stripe — brand element */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: -20%;
+    width: 140%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue-start), var(--blue-end), var(--blue-start));
+    z-index: 10;
+  }
+
+  /* Subtle grid texture */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border-subtle) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .app {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  /* Header */
+  .header { margin-bottom: 40px; animation: fadeSlideIn 0.6s ease-out; }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+
+  .header-logo {
+    height: 36px;
+    filter: invert(1);
+    opacity: 0.9;
+  }
+
+  .header-divider {
+    width: 1px;
+    height: 28px;
+    background: var(--border);
+  }
+
+  .header-badge {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--blue-start);
+    background: var(--blue-dim);
+    padding: 5px 12px;
+    border-radius: 3px;
+    border: 1px solid var(--blue-border);
+  }
+
+  .header h1 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+  }
+
+  .header-sub {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-top: 4px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    gap: 1px;
+    background: var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 28px;
+    animation: fadeSlideIn 0.6s ease-out 0.1s both;
+  }
+
+  .stat {
+    flex: 1;
+    background: var(--bg-surface);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+  }
+
+  .stat::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: transparent;
+    transition: background 0.2s ease;
+  }
+
+  .stat:first-child::after { background: linear-gradient(90deg, var(--blue-start), var(--blue-end)); }
+
+  .stat-label {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+  }
+
+  .stat-value {
+    font-family: var(--font-body);
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+
+  .stat-value.blue { color: var(--blue-start); }
+  .stat-value.green { color: var(--accent-green); }
+
+  /* Toolbar */
+  .toolbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    animation: fadeSlideIn 0.6s ease-out 0.15s both;
+  }
+
+  .filter-group { display: flex; gap: 4px; align-items: center; }
+
+  .filter-label {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-right: 4px;
+  }
+
+  .filter-btn {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .filter-btn:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    border-color: var(--text-muted);
+  }
+
+  .filter-btn.active {
+    background: var(--blue-dim);
+    color: var(--blue-start);
+    border-color: var(--blue-border);
+  }
+
+  .toolbar-divider {
+    width: 1px;
+    background: var(--border);
+    margin: 0 8px;
+    align-self: stretch;
+  }
+
+  .action-btn {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 7px 18px;
+    border: none;
+    background: linear-gradient(135deg, var(--blue-start), var(--blue-end));
+    color: #fff;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: auto;
+    box-shadow: 0 2px 8px rgba(32, 142, 199, 0.25);
+  }
+
+  .action-btn:hover {
+    box-shadow: 0 4px 16px rgba(32, 142, 199, 0.4);
+    transform: translateY(-1px);
+  }
+
+  /* Modal */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-overlay.active { display: flex; }
+
+  .modal {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    width: 480px;
+    max-width: 90vw;
+    padding: 32px;
+    animation: fadeSlideIn 0.25s ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Blue top accent on modals */
+  .modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue-start), var(--blue-end));
+  }
+
+  .modal h2 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+  }
+
+  .form-row { margin-bottom: 16px; }
+
+  .form-row label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 13px;
+    padding: 10px 14px;
+    background: var(--bg-deep);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus {
+    border-color: var(--blue-start);
+    box-shadow: 0 0 0 2px var(--blue-dim);
+  }
+
+  .form-row textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+
+  .form-row select {
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .form-row-inline {
+    display: flex;
+    gap: 12px;
+  }
+
+  .form-row-inline .form-row { flex: 1; margin-bottom: 0; }
+
+  .modal-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 24px;
+  }
+
+  .btn-cancel {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .btn-cancel:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+  }
+
+  .btn-submit {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 24px;
+    border: none;
+    background: linear-gradient(135deg, var(--blue-start), var(--blue-end));
+    color: #fff;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 2px 8px rgba(32, 142, 199, 0.2);
+  }
+
+  .btn-submit:hover { box-shadow: 0 4px 12px rgba(32, 142, 199, 0.35); }
+  .btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* Delete confirm modal */
+  .confirm-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .confirm-task-name {
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .btn-delete {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 24px;
+    border: none;
+    background: var(--accent-red);
+    color: #fff;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .btn-delete:hover { opacity: 0.9; }
+
+  /* Table */
+  .table-wrap {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: visible;
+    animation: fadeSlideIn 0.6s ease-out 0.2s both;
+    position: relative;
+  }
+
+  /* Diagonal accent on table top-left corner */
+  .table-wrap::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue-start), transparent);
+    border-radius: var(--radius) 0 0 0;
+    z-index: 3;
+  }
+
+  table { width: 100%; border-collapse: collapse; }
+
+  thead th {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    background: var(--bg-surface);
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  thead th:last-child { text-align: center; width: 60px; }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background 0.12s ease;
+  }
+
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--bg-card-hover); }
+
+  tbody td {
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    vertical-align: top;
+  }
+
+  .cell-date {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .cell-task { font-weight: 700; color: var(--text-primary); max-width: 300px; }
+  .cell-assignee { color: var(--text-secondary); font-weight: 600; }
+
+  .cell-deadline {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .cell-notes {
+    font-size: 12px;
+    color: var(--text-muted);
+    max-width: 250px;
+    line-height: 1.5;
+  }
+
+  .cell-actions { text-align: center; }
+
+  .delete-btn {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-muted);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .delete-btn:hover {
+    color: var(--accent-red);
+    background: var(--accent-red-dim);
+    border-color: rgba(248, 113, 113, 0.2);
+  }
+
+  /* Status badges */
+  .status-badge {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .status-badge:hover { opacity: 0.8; }
+
+  .status-delegated { color: var(--blue-start); background: var(--blue-dim); border: 1px solid var(--blue-border); }
+  .status-in-progress { color: var(--accent-amber); background: var(--accent-amber-dim); border: 1px solid rgba(240, 180, 41, 0.25); }
+  .status-completed { color: var(--accent-green); background: var(--accent-green-dim); border: 1px solid rgba(45, 212, 160, 0.25); }
+  .status-blocked { color: var(--accent-red); background: var(--accent-red-dim); border: 1px solid rgba(248, 113, 113, 0.25); }
+  .status-unknown { color: var(--text-secondary); background: rgba(160, 160, 160, 0.08); border: 1px solid rgba(160, 160, 160, 0.15); }
+
+  /* Status dropdown */
+  .status-dropdown {
+    position: fixed;
+    z-index: 999;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    min-width: 148px;
+    padding: 4px;
+    animation: fadeSlideIn 0.15s ease-out;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+  }
+
+  /* Blue top accent on dropdown */
+  .status-dropdown::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue-start), var(--blue-end));
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .status-option {
+    display: block;
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.1s ease;
+  }
+
+  .status-option:hover { background: var(--bg-card-hover); }
+  .status-option.opt-delegated { color: var(--blue-start); }
+  .status-option.opt-in-progress { color: var(--accent-amber); }
+  .status-option.opt-completed { color: var(--accent-green); }
+  .status-option.opt-blocked { color: var(--accent-red); }
+
+  /* Empty state */
+  .empty-state { text-align: center; padding: 80px 24px; animation: fadeSlideIn 0.6s ease-out; }
+  .empty-state .icon { font-size: 40px; margin-bottom: 16px; opacity: 0.2; color: var(--blue-start); font-family: var(--font-display); font-weight: 700; }
+  .empty-state h2 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px; }
+  .empty-state p { font-family: var(--font-body); font-size: 13px; color: var(--text-muted); max-width: 360px; margin: 0 auto; line-height: 1.6; }
+
+  /* Toast notification */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    z-index: 300;
+    animation: toastIn 0.3s ease-out;
+    transition: opacity 0.3s ease;
+  }
+
+  .toast-success {
+    background: var(--accent-green-dim);
+    color: var(--accent-green);
+    border: 1px solid rgba(45, 212, 160, 0.3);
+  }
+
+  .toast-error {
+    background: var(--accent-red-dim);
+    color: var(--accent-red);
+    border: 1px solid rgba(248, 113, 113, 0.3);
+  }
+
+  @keyframes toastIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Row animations */
+  tbody tr { animation: rowSlideIn 0.35s ease-out both; }
+  @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes rowSlideIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+
+  /* Load indicator */
+  .load-indicator {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 16px;
+    text-align: right;
+    letter-spacing: 0.3px;
+  }
+
+  .load-indicator .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    margin-right: 6px;
+    vertical-align: middle;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+  /* Footer brand mark */
+  .footer-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .footer-mark img {
+    height: 16px;
+    filter: invert(1);
+    opacity: 0.3;
+  }
+
+  .footer-mark span {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    opacity: 0.4;
+  }
+
+  @media (max-width: 768px) {
+    .app { padding: 24px 16px; }
+    .stats-bar { flex-direction: column; }
+    .toolbar { flex-direction: column; }
+    .toolbar-divider { display: none; }
+    .action-btn { margin-left: 0; }
+    .table-wrap { overflow-x: auto; }
+    table { min-width: 800px; }
+    .modal { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Create Task Modal -->
+<div class="modal-overlay" id="create-modal">
+  <div class="modal">
+    <h2>New Delegation</h2>
+    <div class="form-row">
+      <label>Task</label>
+      <input type="text" id="f-title" placeholder="e.g. Homepage redesign for Acme Corp">
+    </div>
+    <div class="form-row-inline">
+      <div class="form-row">
+        <label>Assignee</label>
+        <select id="f-assignee">
+          <option value="">Select team member</option>
+          <option>Areeba Noor</option>
+          <option>Sohail Ahmed</option>
+          <option>Muzammil</option>
+          <option>Moiz Hussain</option>
+          <option>Sher Nadir</option>
+          <option>Ashhad</option>
+          <option>Kaleem</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Status</label>
+        <select id="f-status">
+          <option>Delegated</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+          <option>Blocked</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row-inline">
+      <div class="form-row">
+        <label>Date</label>
+        <input type="date" id="f-date">
+      </div>
+      <div class="form-row">
+        <label>Deadline</label>
+        <input type="text" id="f-deadline" placeholder="e.g. 2026-03-25 or None">
+      </div>
+    </div>
+    <div class="form-row">
+      <label>Notes</label>
+      <textarea id="f-notes" placeholder="Additional context..."></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="create-cancel">Cancel</button>
+      <button class="btn-submit" id="create-submit">Create Task</button>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Confirm Modal -->
+<div class="modal-overlay" id="delete-modal">
+  <div class="modal">
+    <h2>Delete Delegation</h2>
+    <p class="confirm-text">Remove <span class="confirm-task-name" id="delete-task-name"></span> from the board?</p>
+    <p class="confirm-text" style="font-size:12px; color: var(--text-muted);">This will update logs/delegations.md directly.</p>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="delete-cancel">Cancel</button>
+      <button class="btn-delete" id="delete-confirm">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="app">
+  <header class="header">
+    <div class="header-top">
+      <img src="/brand-assets/logos/1x/Logo Symbol Small.png" alt="NexusPoint" class="header-logo">
+      <div class="header-divider"></div>
+      <span class="header-badge">Operations</span>
+    </div>
+    <h1>Delegation Board</h1>
+    <p class="header-sub">Task tracking and team delegation management</p>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-label">Total Tasks</span>
+      <span class="stat-value" id="stat-total">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Delegated</span>
+      <span class="stat-value blue" id="stat-delegated">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">In Progress</span>
+      <span class="stat-value" id="stat-progress">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Completed</span>
+      <span class="stat-value green" id="stat-completed">0</span>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="filter-group" id="status-filters">
+      <span class="filter-label">Status</span>
+      <button class="filter-btn active" data-filter="status" data-value="all">All</button>
+    </div>
+    <div class="toolbar-divider"></div>
+    <div class="filter-group" id="member-filters">
+      <span class="filter-label">Member</span>
+      <button class="filter-btn active" data-filter="member" data-value="all">All</button>
+    </div>
+    <button class="action-btn" id="create-btn">+ New Task</button>
+  </div>
+
+  <div id="content">
+    <div class="empty-state">
+      <div class="icon">N</div>
+      <h2>Loading delegations...</h2>
+      <p>Connecting to server</p>
+    </div>
+  </div>
+
+  <div class="load-indicator" id="load-indicator" style="display:none">
+    <span class="dot"></span>
+    Synced <span id="load-time"></span>
+  </div>
+
+  <div class="footer-mark">
+    <img src="/brand-assets/logos/1x/Logo Symbol Small.png" alt="">
+    <span>NexusPoint</span>
+  </div>
+</div>
+
+<script>
+(function() {
+  const API = '/api/tasks';
+  let allTasks = [];
+  let activeStatusFilter = 'all';
+  let activeMemberFilter = 'all';
+  let deleteTargetIdx = null;
+
+  function getStatusClass(status) {
+    const s = status.toLowerCase();
+    if (s === 'delegated') return 'status-delegated';
+    if (s === 'in progress' || s === 'in-progress') return 'status-in-progress';
+    if (s === 'completed' || s === 'done') return 'status-completed';
+    if (s === 'blocked') return 'status-blocked';
+    return 'status-unknown';
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function toast(msg, type) {
+    const el = document.createElement('div');
+    el.className = `toast toast-${type}`;
+    el.textContent = msg;
+    document.body.appendChild(el);
+    setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 300); }, 2500);
+  }
+
+  // API calls
+  async function fetchTasks() {
+    try {
+      const res = await fetch(API);
+      allTasks = await res.json();
+      refresh();
+      document.getElementById('load-indicator').style.display = 'block';
+      document.getElementById('load-time').textContent = new Date().toLocaleTimeString();
+    } catch(e) {
+      document.getElementById('content').innerHTML = `
+        <div class="empty-state">
+          <div class="icon">!</div>
+          <h2>Cannot connect to server</h2>
+          <p>Run "node dashboards/delegate/server.js" from the project root to start the dashboard server.</p>
+        </div>`;
+    }
+  }
+
+  async function createTask(task) {
+    const res = await fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(task)
+    });
+    if (!res.ok) throw new Error('Failed to create task');
+    toast('Task created', 'success');
+    await fetchTasks();
+  }
+
+  async function updateStatus(idx, status) {
+    const res = await fetch(`${API}/${idx}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status })
+    });
+    if (!res.ok) throw new Error('Failed to update status');
+    toast(`Status updated`, 'success');
+    await fetchTasks();
+  }
+
+  async function deleteTask(idx) {
+    const res = await fetch(`${API}/${idx}`, { method: 'DELETE' });
+    if (!res.ok) throw new Error('Failed to delete task');
+    toast('Task deleted', 'success');
+    await fetchTasks();
+  }
+
+  function buildFilters() {
+    const statuses = [...new Set(allTasks.map(t => t.status))].filter(Boolean);
+    const members = [...new Set(allTasks.map(t => t.assignee))].filter(Boolean);
+
+    const statusGroup = document.getElementById('status-filters');
+    statusGroup.innerHTML = '<span class="filter-label">Status</span>';
+    statusGroup.innerHTML += '<button class="filter-btn active" data-filter="status" data-value="all">All</button>';
+    statuses.forEach(s => {
+      const cls = activeStatusFilter === s ? ' active' : '';
+      statusGroup.innerHTML += `<button class="filter-btn${cls}" data-filter="status" data-value="${escapeHtml(s)}">${escapeHtml(s)}</button>`;
+    });
+    if (activeStatusFilter !== 'all') {
+      statusGroup.querySelector('[data-value="all"]').classList.remove('active');
+    }
+
+    const memberGroup = document.getElementById('member-filters');
+    memberGroup.innerHTML = '<span class="filter-label">Member</span>';
+    memberGroup.innerHTML += '<button class="filter-btn active" data-filter="member" data-value="all">All</button>';
+    members.forEach(m => {
+      const firstName = m.split(' ')[0];
+      const cls = activeMemberFilter === m ? ' active' : '';
+      memberGroup.innerHTML += `<button class="filter-btn${cls}" data-filter="member" data-value="${escapeHtml(m)}">${escapeHtml(firstName)}</button>`;
+    });
+    if (activeMemberFilter !== 'all') {
+      memberGroup.querySelector('[data-value="all"]').classList.remove('active');
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', handleFilterClick);
+    });
+  }
+
+  function handleFilterClick(e) {
+    const btn = e.target;
+    const group = btn.closest('.filter-group');
+    group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    if (btn.dataset.filter === 'status') activeStatusFilter = btn.dataset.value;
+    if (btn.dataset.filter === 'member') activeMemberFilter = btn.dataset.value;
+    renderTable();
+  }
+
+  function getFilteredTasks() {
+    return allTasks.filter(t => {
+      if (activeStatusFilter !== 'all' && t.status !== activeStatusFilter) return false;
+      if (activeMemberFilter !== 'all' && t.assignee !== activeMemberFilter) return false;
+      return true;
+    });
+  }
+
+  function updateStats() {
+    document.getElementById('stat-total').textContent = allTasks.length;
+    document.getElementById('stat-delegated').textContent = allTasks.filter(t => t.status.toLowerCase() === 'delegated').length;
+    document.getElementById('stat-progress').textContent = allTasks.filter(t => { const s = t.status.toLowerCase(); return s === 'in progress' || s === 'in-progress'; }).length;
+    document.getElementById('stat-completed').textContent = allTasks.filter(t => { const s = t.status.toLowerCase(); return s === 'completed' || s === 'done'; }).length;
+  }
+
+  function renderTable() {
+    const tasks = getFilteredTasks();
+    const content = document.getElementById('content');
+
+    if (allTasks.length === 0) {
+      content.innerHTML = `
+        <div class="empty-state">
+          <div class="icon">N</div>
+          <h2>No delegations yet</h2>
+          <p>Click "+ New Task" to create your first delegation.</p>
+        </div>`;
+      return;
+    }
+
+    if (tasks.length === 0) {
+      content.innerHTML = `
+        <div class="empty-state">
+          <div class="icon">--</div>
+          <h2>No matching tasks</h2>
+          <p>No delegations match the current filters.</p>
+        </div>`;
+      return;
+    }
+
+    let html = `<div class="table-wrap"><table>
+      <thead><tr>
+        <th>Date</th><th>Task</th><th>Assignee</th><th>Status</th><th>Deadline</th><th>Notes</th><th></th>
+      </tr></thead><tbody>`;
+
+    tasks.forEach((t, i) => {
+      const realIdx = allTasks.indexOf(t);
+      html += `<tr style="animation-delay: ${i * 0.04}s">
+        <td class="cell-date">${escapeHtml(t.date)}</td>
+        <td class="cell-task">${escapeHtml(t.title)}</td>
+        <td class="cell-assignee">${escapeHtml(t.assignee)}</td>
+        <td><span class="status-badge ${getStatusClass(t.status)}" data-idx="${realIdx}" data-status="${escapeHtml(t.status)}">${escapeHtml(t.status)}</span></td>
+        <td class="cell-deadline">${escapeHtml(t.deadline)}</td>
+        <td class="cell-notes">${escapeHtml(t.notes)}</td>
+        <td class="cell-actions"><button class="delete-btn" data-idx="${realIdx}" data-title="${escapeHtml(t.title)}">DEL</button></td>
+      </tr>`;
+    });
+
+    html += '</tbody></table></div>';
+    content.innerHTML = html;
+
+    // Bind status badges
+    const STATUSES = ['Delegated', 'In Progress', 'Completed', 'Blocked'];
+    const STATUS_OPT_CLASS = { 'Delegated': 'opt-delegated', 'In Progress': 'opt-in-progress', 'Completed': 'opt-completed', 'Blocked': 'opt-blocked' };
+
+    content.querySelectorAll('.status-badge').forEach(badge => {
+      badge.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const existing = document.querySelector('.status-dropdown');
+        if (existing) {
+          existing.remove();
+          if (existing._badgeRef === badge) return;
+        }
+
+        const current = badge.dataset.status;
+        const idx = parseInt(badge.dataset.idx, 10);
+        const rect = badge.getBoundingClientRect();
+
+        const dropdown = document.createElement('div');
+        dropdown.className = 'status-dropdown';
+        dropdown._badgeRef = badge;
+        dropdown.style.top = (rect.bottom + 6) + 'px';
+        dropdown.style.left = rect.left + 'px';
+
+        STATUSES.forEach(s => {
+          const opt = document.createElement('button');
+          opt.className = `status-option ${STATUS_OPT_CLASS[s]}`;
+          opt.textContent = s;
+          if (s === current) opt.style.fontWeight = '800';
+          opt.addEventListener('mousedown', async (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            dropdown.remove();
+            if (s !== current) {
+              try { await updateStatus(idx, s); } catch(err) { toast('Failed to update status', 'error'); }
+            }
+          });
+          dropdown.appendChild(opt);
+        });
+
+        document.body.appendChild(dropdown);
+
+        const dropRect = dropdown.getBoundingClientRect();
+        if (dropRect.bottom > window.innerHeight) {
+          dropdown.style.top = (rect.top - dropRect.height - 6) + 'px';
+        }
+
+        setTimeout(() => {
+          const closeHandler = (ev) => {
+            if (!dropdown.contains(ev.target) && ev.target !== badge) {
+              dropdown.remove();
+            }
+            document.removeEventListener('mousedown', closeHandler);
+          };
+          document.addEventListener('mousedown', closeHandler);
+        }, 0);
+      });
+    });
+
+    // Bind delete buttons
+    content.querySelectorAll('.delete-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        deleteTargetIdx = parseInt(btn.dataset.idx, 10);
+        document.getElementById('delete-task-name').textContent = btn.dataset.title;
+        document.getElementById('delete-modal').classList.add('active');
+      });
+    });
+  }
+
+  function refresh() {
+    buildFilters();
+    updateStats();
+    renderTable();
+  }
+
+  // Create modal
+  document.getElementById('create-btn').addEventListener('click', () => {
+    document.getElementById('f-date').value = new Date().toISOString().slice(0, 10);
+    document.getElementById('create-modal').classList.add('active');
+    document.getElementById('f-title').focus();
+  });
+
+  document.getElementById('create-cancel').addEventListener('click', () => {
+    document.getElementById('create-modal').classList.remove('active');
+  });
+
+  document.getElementById('create-submit').addEventListener('click', async () => {
+    const title = document.getElementById('f-title').value.trim();
+    const assignee = document.getElementById('f-assignee').value;
+    if (!title || !assignee) { toast('Title and assignee required', 'error'); return; }
+
+    const btn = document.getElementById('create-submit');
+    btn.disabled = true;
+    try {
+      await createTask({
+        title,
+        assignee,
+        date: document.getElementById('f-date').value,
+        status: document.getElementById('f-status').value,
+        deadline: document.getElementById('f-deadline').value || 'None specified',
+        notes: document.getElementById('f-notes').value.trim()
+      });
+      document.getElementById('create-modal').classList.remove('active');
+      document.getElementById('f-title').value = '';
+      document.getElementById('f-assignee').value = '';
+      document.getElementById('f-status').value = 'Delegated';
+      document.getElementById('f-deadline').value = '';
+      document.getElementById('f-notes').value = '';
+    } catch(e) { toast('Failed to create task', 'error'); }
+    btn.disabled = false;
+  });
+
+  document.getElementById('create-modal').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) document.getElementById('create-modal').classList.remove('active');
+  });
+
+  // Delete modal
+  document.getElementById('delete-cancel').addEventListener('click', () => {
+    document.getElementById('delete-modal').classList.remove('active');
+    deleteTargetIdx = null;
+  });
+
+  document.getElementById('delete-confirm').addEventListener('click', async () => {
+    if (deleteTargetIdx === null) return;
+    try {
+      await deleteTask(deleteTargetIdx);
+    } catch(e) { toast('Failed to delete task', 'error'); }
+    document.getElementById('delete-modal').classList.remove('active');
+    deleteTargetIdx = null;
+  });
+
+  document.getElementById('delete-modal').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+      document.getElementById('delete-modal').classList.remove('active');
+      deleteTargetIdx = null;
+    }
+  });
+
+  // Escape closes modals
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.getElementById('create-modal').classList.remove('active');
+      document.getElementById('delete-modal').classList.remove('active');
+      document.querySelectorAll('.status-dropdown').forEach(d => d.remove());
+      deleteTargetIdx = null;
+    }
+  });
+
+  fetchTasks();
+})();
+</script>
+</body>
+</html>

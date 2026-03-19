@@ -30,6 +30,10 @@ Skills live in `.claude/skills/`. Each skill gets its own folder with a `SKILL.m
 
 Skills are built organically -- when a workflow gets repeated, we turn it into a skill.
 
+### Active Skills
+- **Deep Research** (`.claude/skills/deep-research/`) — Context-aware research via OpenAI. Say "research [topic]" or force mode with "deep research..." / "quick search..." / "lite research..."
+- **Team Task Delegation** (`.claude/skills/delegate/`) — Auto-match tasks to team members and generate ready-to-send delegation messages. Say "delegate [task]" or "assign [task] to [person]"
+
 ### Skills to Build (Backlog)
 
 Build as needed. Organized by domain:
@@ -53,8 +57,7 @@ Build as needed. Organized by domain:
 12. Project scoping template
 13. Website audit system
 14. Session closeout
-15. Team task delegation
-16. Weekly business review
+15. Weekly business review
 17. Invoice & payment tracker
 18. Client communication drafter
 

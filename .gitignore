@@ -1,4 +1,30 @@
+# Secrets & local config
 .env
+.env.*
+*.key
+*.pem
+*.secret
+credentials*.json
+
+# Claude Code local config
 CLAUDE.local.md
 .claude/settings.local.json
+
+# Dependencies
 node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+
+# IDE
+.vscode/
+.idea/
