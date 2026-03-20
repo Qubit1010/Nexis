@@ -169,7 +169,7 @@ export default async function BriefPage({ params }: BriefPageProps) {
       {/* Content Opportunities */}
       <div className="mt-8" id="content-ideas">
         <CollapsibleSection id="content-ideas" label="Content Opportunities">
-          <ContentOpportunities ideas={briefContentIdeas} />
+          <ContentOpportunities ideas={briefContentIdeas} briefDate={date} />
         </CollapsibleSection>
       </div>
 

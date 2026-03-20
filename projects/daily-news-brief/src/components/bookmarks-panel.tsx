@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import { useBookmarkContext } from "@/lib/hooks/bookmark-context";
 
 export function BookmarksPanel({
@@ -10,6 +11,35 @@ export function BookmarksPanel({
   onClose: () => void;
 }) {
   const { bookmarks, toggleBookmark, clearBookmarks } = useBookmarkContext();
+  const [savingId, setSavingId] = useState<number | null>(null);
+  const [savedIds, setSavedIds] = useState<Set<number>>(new Set());
+
+  const saveToSheet = useCallback(
+    async (b: (typeof bookmarks)[0]) => {
+      if (savedIds.has(b.id)) return;
+      setSavingId(b.id);
+      try {
+        const res = await fetch("/api/sheets/articles", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            briefDate: b.date,
+            title: b.title,
+            source: b.source,
+            url: b.url,
+            tldr: b.tldr,
+          }),
+        });
+        if (!res.ok) throw new Error("Failed to save");
+        setSavedIds((prev) => new Set(prev).add(b.id));
+      } catch (err) {
+        console.error("Failed to save article to sheet:", err);
+      } finally {
+        setSavingId(null);
+      }
+    },
+    [savedIds]
+  );
 
   if (!open) return null;
 
@@ -68,31 +98,63 @@ export function BookmarksPanel({
                 >
                   {b.title}
                 </a>
-                <button
-                  onClick={() =>
-                    toggleBookmark({
-                      id: b.id,
-                      title: b.title,
-                      url: b.url,
-                      source: b.source,
-                      tldr: b.tldr,
-                      date: b.date,
-                    })
-                  }
-                  className="text-amber-400 hover:text-red-400 transition-colors shrink-0 mt-0.5"
-                  title="Remove bookmark"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeWidth="2"
+                <div className="flex items-center gap-1 shrink-0 mt-0.5">
+                  <button
+                    onClick={() => saveToSheet(b)}
+                    disabled={savingId === b.id || savedIds.has(b.id)}
+                    className={`w-6 h-6 rounded flex items-center justify-center transition-all duration-200 ${
+                      savedIds.has(b.id)
+                        ? "text-green-400"
+                        : savingId === b.id
+                          ? "text-muted-foreground/40 animate-pulse"
+                          : "text-muted-foreground/40 hover:text-foreground hover:bg-accent/60"
+                    }`}
+                    title={savedIds.has(b.id) ? "Saved to Google Sheet" : "Save to Google Sheet"}
                   >
-                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-                  </svg>
-                </button>
+                    <svg
+                      width="13"
+                      height="13"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                      <rect x="7" y="7" width="4" height="4" />
+                      <line x1="15" y1="7" x2="19" y2="7" />
+                      <line x1="15" y1="11" x2="19" y2="11" />
+                      <line x1="7" y1="15" x2="19" y2="15" />
+                      <line x1="7" y1="19" x2="19" y2="19" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() =>
+                      toggleBookmark({
+                        id: b.id,
+                        title: b.title,
+                        url: b.url,
+                        source: b.source,
+                        tldr: b.tldr,
+                        date: b.date,
+                      })
+                    }
+                    className="text-amber-400 hover:text-red-400 transition-colors"
+                    title="Remove bookmark"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div className="flex items-center gap-2 mt-1 text-[12px] text-muted-foreground/50">
                 <span>{b.source}</span>

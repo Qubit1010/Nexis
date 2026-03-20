@@ -15,6 +15,7 @@ interface ContentIdea {
 
 interface ContentOpportunitiesProps {
   ideas: ContentIdea[];
+  briefDate: string;
 }
 
 const FORMAT_TABS = [
@@ -88,11 +89,13 @@ function ClipboardIcon() {
   );
 }
 
-export function ContentOpportunities({ ideas }: ContentOpportunitiesProps) {
+export function ContentOpportunities({ ideas, briefDate }: ContentOpportunitiesProps) {
   const [activeTab, setActiveTab] = useState<string>("all");
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [usedIds, setUsedIds] = useState<Set<number>>(new Set());
   const [copiedField, setCopiedField] = useState<string | null>(null);
+  const [savingId, setSavingId] = useState<number | null>(null);
+  const [savedIds, setSavedIds] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     setUsedIds(loadUsedIds());
@@ -143,6 +146,38 @@ export function ContentOpportunities({ ideas }: ContentOpportunitiesProps) {
     a.click();
     URL.revokeObjectURL(url);
   }, []);
+
+  const saveToSheet = useCallback(
+    async (idea: ContentIdea, e: React.MouseEvent) => {
+      e.stopPropagation();
+      if (savedIds.has(idea.id)) return;
+      setSavingId(idea.id);
+      try {
+        const res = await fetch("/api/sheets", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            briefDate,
+            title: idea.title,
+            format: idea.format,
+            timeliness: idea.timeliness,
+            angle: idea.angle,
+            hook: idea.hook,
+            keyPoints: idea.keyPoints,
+            relatedTrends: idea.relatedTrendSlugs,
+          }),
+        });
+        if (!res.ok) throw new Error("Failed to save");
+        setSavedIds((prev) => new Set(prev).add(idea.id));
+      } catch (err) {
+        console.error("Failed to save to sheet:", err);
+        alert("Failed to save to Google Sheet. Check console for details.");
+      } finally {
+        setSavingId(null);
+      }
+    },
+    [briefDate, savedIds]
+  );
 
   if (ideas.length === 0) return null;
 
@@ -282,6 +317,36 @@ export function ContentOpportunities({ ideas }: ContentOpportunitiesProps) {
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                         <polyline points="7 10 12 15 17 10" />
                         <line x1="12" y1="15" x2="12" y2="3" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={(e) => saveToSheet(idea, e)}
+                      disabled={savingId === idea.id || savedIds.has(idea.id)}
+                      className={`w-7 h-7 rounded-md flex items-center justify-center transition-all duration-200 ${
+                        savedIds.has(idea.id)
+                          ? "text-green-400"
+                          : savingId === idea.id
+                            ? "text-muted-foreground/40 animate-pulse"
+                            : "text-muted-foreground/40 hover:text-foreground hover:bg-accent/60"
+                      }`}
+                      title={savedIds.has(idea.id) ? "Saved to Google Sheet" : "Save to Google Sheet"}
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <rect x="7" y="7" width="4" height="4" />
+                        <line x1="15" y1="7" x2="19" y2="7" />
+                        <line x1="15" y1="11" x2="19" y2="11" />
+                        <line x1="7" y1="15" x2="19" y2="15" />
+                        <line x1="7" y1="19" x2="19" y2="19" />
                       </svg>
                     </button>
                   </div>
