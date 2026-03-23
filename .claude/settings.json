@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python .claude/skills/deep-research/research.py*)"
+      "Bash(python .claude/skills/deep-research/research.py*)",
+      "Bash(*python .claude/skills/proposal-generator/scripts/create_proposal_doc.py*)"
     ]
   }
 }

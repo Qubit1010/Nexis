@@ -34,6 +34,7 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 - **Deep Research** (`.claude/skills/deep-research/`) — Context-aware research via OpenAI. Say "research [topic]" or force mode with "deep research..." / "quick search..." / "lite research..."
 - **Team Task Delegation** (`.claude/skills/delegate/`) — Auto-match tasks to team members and generate ready-to-send delegation messages. Say "delegate [task]" or "assign [task] to [person]"
 - **Daily Brief** (`.claude/skills/daily-brief/`) — AI-powered daily intelligence brief for AI/tech news. Fetches from NewsAPI, HackerNews, RSS, analyzes with Claude Haiku + Sonnet. Say "generate brief" or "what's happening in AI today"
+- **Proposal Generator** (`.claude/skills/proposal-generator/`) — Generate client proposals using Hormozi's $100M Offers framework and create formatted Google Docs. Say "create a proposal for [client]" or "draft a proposal"
 
 ### Skills to Build (Backlog)
 
@@ -44,7 +45,6 @@ Build as needed. Organized by domain:
 2. Cold email outreach (300+ lead pool)
 3. Lead tracking & follow-up
 4. Client onboarding workflow
-5. Proposal/SOW generator
 6. Testimonial & case study builder
 7. Competitor/market research
 

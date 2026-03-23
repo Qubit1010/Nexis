@@ -1,0 +1,115 @@
+{
+  "client_name": "Acme Corp",
+  "industry": "E-commerce",
+  "date": "2026-03-20",
+  "title": "The Q1 Revenue Acceleration 90-Day System -- Proposal for Acme Corp",
+  "sections": [
+    {
+      "heading": "The Q1 Revenue Acceleration 90-Day System",
+      "level": 1,
+      "body": "A complete conversion optimization and automation system designed to transform your online store into a lead-generating machine within 90 days."
+    },
+    {
+      "heading": "The Problem",
+      "level": 1,
+      "body": "Your current website converts at 1.2%, well below the 3.5% industry average. Every month, thousands of visitors land on your site and leave without buying. Your team spends 15+ hours per week on manual follow-ups that should be automated. Meanwhile, competitors with half your product quality are outperforming you because their digital systems work while yours leak revenue."
+    },
+    {
+      "heading": "The Dream Outcome",
+      "level": 1,
+      "body": "A conversion-optimized storefront that turns browsers into buyers at 3x your current rate, backed by automated follow-up sequences that recover abandoned carts and nurture leads while you sleep. Within 90 days: 3.5%+ conversion rate, 40% reduction in manual follow-up time, and a projected $180K in additional annual revenue."
+    },
+    {
+      "heading": "How We Get You There",
+      "level": 1,
+      "body": "We deploy a 3-phase system that eliminates friction at every stage of your customer journey:"
+    },
+    {
+      "heading": "Core Deliverables",
+      "level": 2,
+      "bullets": [
+        "The Conversion Audit Blueprint ($3,000 value) -- Full-funnel analysis of your current site, identifying the exact drop-off points costing you revenue.",
+        "Revenue-Optimized Storefront Redesign ($12,000 value) -- Complete redesign of your product pages, checkout flow, and mobile experience built for conversion.",
+        "The Automated Follow-Up Engine ($5,000 value) -- Cart abandonment sequences, post-purchase flows, and lead nurture campaigns that run on autopilot.",
+        "Performance Command Center ($2,500 value) -- Real-time dashboard tracking conversion rates, revenue attribution, and campaign performance."
+      ]
+    },
+    {
+      "heading": "Bonuses",
+      "level": 2,
+      "bullets": [
+        "90-Day Growth Dashboard ($2,000 value) -- Custom analytics dashboard tracking every metric that matters. Yours free because we build it as part of our process anyway.",
+        "SEO Quick-Win Package ($1,500 value) -- Technical SEO fixes and content optimization for your top 10 pages. Free because it takes us 2 hours and compounds your results.",
+        "60-Day Post-Launch Support ($3,000 value) -- Direct Slack access to our team for 60 days after launch. Free because your success is our best case study."
+      ]
+    },
+    {
+      "heading": "Deliverables & Timeline",
+      "level": 1,
+      "table": {
+        "headers": ["Phase", "Deliverables", "Timeline"],
+        "rows": [
+          ["Discovery & Audit", "Conversion audit, competitor analysis, user journey mapping", "Week 1-2"],
+          ["Strategy & Architecture", "Wireframes, content strategy, automation flow design", "Week 3-4"],
+          ["Design & Development", "UI/UX design, frontend build, automation setup", "Week 5-8"],
+          ["Testing & Launch", "QA, performance testing, staged rollout", "Week 9-10"],
+          ["Optimization", "A/B testing, iteration based on live data", "Week 11-12"],
+          ["Post-Launch Support", "Monitoring, tweaks, knowledge transfer", "Week 13-20"]
+        ]
+      }
+    },
+    {
+      "heading": "Your Investment",
+      "level": 1
+    },
+    {
+      "heading": "Total Value Stack",
+      "level": 2,
+      "table": {
+        "headers": ["Deliverable", "Value"],
+        "rows": [
+          ["Conversion Audit Blueprint", "$3,000"],
+          ["Revenue-Optimized Storefront Redesign", "$12,000"],
+          ["Automated Follow-Up Engine", "$5,000"],
+          ["Performance Command Center", "$2,500"],
+          ["90-Day Growth Dashboard (Bonus)", "$2,000"],
+          ["SEO Quick-Win Package (Bonus)", "$1,500"],
+          ["60-Day Post-Launch Support (Bonus)", "$3,000"],
+          ["Total Value", "$29,000"]
+        ]
+      }
+    },
+    {
+      "heading": "Pricing Options",
+      "level": 2,
+      "table": {
+        "headers": ["Tier", "What's Included", "Investment"],
+        "rows": [
+          ["Essential", "Core deliverables only", "$8,500"],
+          ["Growth", "Core + Growth Dashboard + SEO Package", "$12,000"],
+          ["Scale", "Everything above + Post-Launch Support + Priority Scheduling", "$16,500"]
+        ]
+      }
+    },
+    {
+      "heading": "ROI Math",
+      "level": 2,
+      "body": "Current monthly revenue: ~$150K. A conservative 2x conversion rate improvement means an additional $150K/month in revenue. Even at 1.5x improvement, that's $75K/month in new revenue. The Growth tier ($12K) pays for itself in the first 5 days of improved performance."
+    },
+    {
+      "heading": "Our Guarantee",
+      "level": 1,
+      "body": "The Safety Net: If within the first 14 days you feel this isn't the right fit for any reason, we'll refund your investment in full. No questions, no friction.\n\nThe Results Promise: If your conversion rate hasn't improved by at least 50% within 90 days of launch, we continue working for free until it does."
+    },
+    {
+      "heading": "Why Now",
+      "level": 1,
+      "body": "We take on 3 new e-commerce projects per month to maintain quality. We currently have 1 slot available for April. Bonuses are included if we kick off by March 28. This proposal is valid for 7 days."
+    },
+    {
+      "heading": "Next Step",
+      "level": 1,
+      "body": "Reply with \"Let's go\" to lock in your April slot, or book a 15-minute scoping call to finalize details. Either way, the next move takes less than 60 seconds."
+    }
+  ]
+}
