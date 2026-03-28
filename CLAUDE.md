@@ -35,6 +35,7 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 - **Team Task Delegation** (`.claude/skills/delegate/`) — Auto-match tasks to team members and generate ready-to-send delegation messages. Say "delegate [task]" or "assign [task] to [person]"
 - **Daily Brief** (`.claude/skills/daily-brief/`) — AI-powered daily intelligence brief for AI/tech news. Fetches from NewsAPI, HackerNews, RSS, analyzes with Claude Haiku + Sonnet. Say "generate brief" or "what's happening in AI today"
 - **Proposal Generator** (`.claude/skills/proposal-generator/`) — Generate client proposals using Hormozi's $100M Offers framework and create formatted Google Docs. Say "create a proposal for [client]" or "draft a proposal"
+- **Assignment Research** (`.claude/skills/assignment-research/`) — Research university assignments, find academic sources, synthesize findings into structured outlines saved to Google Docs. Say "research [topic] for my assignment" or "help with my [course] assignment"
 
 ### Skills to Build (Backlog)
 
@@ -63,7 +64,7 @@ Build as needed. Organized by domain:
 18. Client communication drafter
 
 **University**
-19. Assignment research assistant
+19. ~~Assignment research assistant~~ (built — see Active Skills)
 20. Study session planner
 
 **Automation Building**

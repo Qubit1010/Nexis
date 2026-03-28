@@ -1,4 +1,4 @@
-import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 import {
   buildPass1Prompt,
   buildSynthesisPrompt,
@@ -8,15 +8,15 @@ import {
 import { withRetry, extractJSON } from "./utils";
 import type { RawArticle } from "./sources/types";
 
-let client: Anthropic | null = null;
+let client: OpenAI | null = null;
 
-function getClient(): Anthropic {
+function getClient(): OpenAI {
   if (!client) {
-    const apiKey = process.env.ANTHROPIC_API_KEY;
+    const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
-      throw new Error("ANTHROPIC_API_KEY is not set in environment variables");
+      throw new Error("OPENAI_API_KEY is not set in environment variables");
     }
-    client = new Anthropic({ apiKey });
+    client = new OpenAI({ apiKey });
   }
   return client;
 }
@@ -49,18 +49,17 @@ export async function processCategoryPass1(
   }
 
   const prompt = buildPass1Prompt(categoryName, categoryDescription, articles);
-  const anthropic = getClient();
+  const openai = getClient();
 
   const message = await withRetry(() =>
-    anthropic.messages.create({
-      model: "claude-haiku-4-5-20251001",
+    openai.chat.completions.create({
+      model: "gpt-4o-mini",
       max_tokens: 2048,
       messages: [{ role: "user", content: prompt }],
     })
   );
 
-  const responseText =
-    message.content[0].type === "text" ? message.content[0].text : "";
+  const responseText = message.choices[0]?.message?.content ?? "";
 
   return parseJSON<Pass1Result>(responseText, categoryName);
 }
@@ -85,18 +84,17 @@ export async function synthesizeBrief(
   date: string
 ): Promise<SynthesisResult> {
   const prompt = buildSynthesisPrompt(categoryResults, date);
-  const anthropic = getClient();
+  const openai = getClient();
 
   const message = await withRetry(() =>
-    anthropic.messages.create({
-      model: "claude-sonnet-4-20250514",
+    openai.chat.completions.create({
+      model: "gpt-4o",
       max_tokens: 4096,
       messages: [{ role: "user", content: prompt }],
     })
   );
 
-  const responseText =
-    message.content[0].type === "text" ? message.content[0].text : "";
+  const responseText = message.choices[0]?.message?.content ?? "";
 
   return parseJSON<SynthesisResult>(responseText, "synthesis");
 }
