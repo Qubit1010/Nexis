@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-blue: var(--blue);
+  --color-blue-dark: var(--blue-dark);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+/* NexusPoint brand — near-black dark theme */
+:root {
+  /* Base */
+  --background: #0a0a0a;
+  --foreground: #ebebeb;
+
+  /* Card surfaces */
+  --card: #111111;
+  --card-foreground: #ebebeb;
+
+  /* Popovers */
+  --popover: #161616;
+  --popover-foreground: #ebebeb;
+
+  /* Brand blue (primary) */
+  --primary: #208ec7;
+  --primary-foreground: #ffffff;
+
+  /* Secondary (deeper blue) */
+  --secondary: #1f5b99;
+  --secondary-foreground: #ffffff;
+
+  /* Muted surfaces */
+  --muted: #1a1a1a;
+  --muted-foreground: #888888;
+
+  /* Accent (hover states) */
+  --accent: #1e1e1e;
+  --accent-foreground: #ebebeb;
+
+  /* Destructive */
+  --destructive: #e53e3e;
+
+  /* Borders and inputs */
+  --border: rgba(255, 255, 255, 0.07);
+  --input: #181818;
+  --ring: #208ec7;
+
+  /* Brand colors as vars */
+  --blue: #208ec7;
+  --blue-dark: #1f5b99;
+
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar — thin, brand-tinted */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(32, 142, 199, 0.2);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(32, 142, 199, 0.45);
+}
+
+/* Blue gradient utility */
+.gradient-blue {
+  background: linear-gradient(135deg, #208ec7, #1f5b99);
+}
+
+.gradient-blue-text {
+  background: linear-gradient(135deg, #208ec7, #7ab8d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

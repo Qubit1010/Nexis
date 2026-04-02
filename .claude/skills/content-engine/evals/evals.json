@@ -1,0 +1,23 @@
+{
+  "skill_name": "content-engine",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What should I post today?",
+      "expected_output": "Scored ranked list of top content ideas (5-8) from all available sources. Each idea should show: score/10, topic, platform, format, goal, buyer stage, angle, hook, why now, pillar, source. Ends with prompt to create, plan, or run full mode.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Create a LinkedIn post about the Claude Code security leak",
+      "expected_output": "A finished LinkedIn text post (300-800 words) written in Aleem's voice (first person, no em dashes, no emojis). Should have a strong 3-line hook, structured body with insights, and end with a question CTA. Research should have been run first.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Plan my content for the week",
+      "expected_output": "A 5-7 day content calendar with one entry per day showing: platform, format, topic, goal, buyer stage, angle, hook, CTA, research needed. At least 1 blog, no platform repeated more than 3 times, repurposing links noted where applicable. Ends with rhythm check.",
+      "files": []
+    }
+  ]
+}

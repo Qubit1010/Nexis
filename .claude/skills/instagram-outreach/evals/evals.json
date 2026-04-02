@@ -1,0 +1,29 @@
+{
+  "skill_name": "instagram-outreach",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "scrape instagram leads for SaaS founders and agency owners, limit to 20",
+      "expected_output": "Claude runs scrape_leads.py with --hashtags and --limit args, shows the command, explains what it does and what to do next",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "generate DM messages for my instagram leads using ChatGPT",
+      "expected_output": "Claude runs generate_messages.py, recommends --dry-run first, shows the command, explains that messages are saved to Google Sheets and sent manually",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "run the full instagram pipeline — find 30 agency owners and write personalized DMs",
+      "expected_output": "Claude runs scrape_leads.py then generate_messages.py in sequence, uses correct args, shows both commands clearly",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "show me my instagram outreach status — how many leads do I have?",
+      "expected_output": "Claude reads the Google Sheet, shows total leads, status breakdown, and the sheet link",
+      "files": []
+    }
+  ]
+}

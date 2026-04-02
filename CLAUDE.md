@@ -36,6 +36,11 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 - **Daily Brief** (`.claude/skills/daily-brief/`) — AI-powered daily intelligence brief for AI/tech news. Fetches from NewsAPI, HackerNews, RSS, analyzes with Claude Haiku + Sonnet. Say "generate brief" or "what's happening in AI today"
 - **Proposal Generator** (`.claude/skills/proposal-generator/`) — Generate client proposals using Hormozi's $100M Offers framework and create formatted Google Docs. Say "create a proposal for [client]" or "draft a proposal"
 - **Assignment Research** (`.claude/skills/assignment-research/`) — Research university assignments, find academic sources, synthesize findings into structured outlines saved to Google Docs. Say "research [topic] for my assignment" or "help with my [course] assignment"
+- **Marketing Advisor** (`.claude/skills/marketing-advisor/`) — Expert marketing advisor and planner for NexusPoint. Cold email, LinkedIn outreach, content strategy, ads, offer positioning, automation blueprints. Grounded in Hormozi's $100M Leads/Offers and Voss's Never Split the Difference. Say "marketing advice", "write a cold email", "LinkedIn strategy", "content plan", "how do I get more clients", "automate my outreach"
+- **Cold Outreach** (`.claude/skills/cold-outreach/`) — Automated cold email client acquisition pipeline. Free stack: Apify (lead scraping) + Python SMTP (email finding) + Gmail (sending) + Google Sheets (CRM). Saves $112/month vs paid tools. Say "scrape leads", "find emails", "send emails", "send today's batch", "check replies", "outreach status", "run the pipeline"
+- **LinkedIn Outreach** (`.claude/skills/linkedin-outreach/`) — LinkedIn lead generation and personalized connection request message system. Scrapes founder/COO/ops leads via Apify, stores in Google Sheets CRM, generates 300-char personalized connection notes using OpenAI (ChatGPT). Say "scrape linkedin leads", "generate connection messages", "run linkedin pipeline", "linkedin outreach"
+- **Instagram Outreach** (`.claude/skills/instagram-outreach/`) — Instagram lead generation and personalized DM system. Scrapes founder/CEO/ops leads via Apify hashtag search, stores in Google Sheets CRM, generates personalized Touch 1 DMs using OpenAI (GPT-4o-mini). All sending is manual (Instagram bans bots). Say "scrape instagram leads", "generate instagram DMs", "run instagram pipeline", "instagram outreach"
+- **Content Engine** (`.claude/skills/content-engine/`) — Full content creation system for Instagram, LinkedIn, and blog. Pulls ideas from 3 sources (daily-news-brief, YouTube brief, saved topics sheet), scores with opportunity scores, researches with OpenAI web search, writes finished content, and repurposes via flywheel (Blog -> LinkedIn + Instagram). Logs to Google Sheets + saves to Google Docs. Say "content ideas", "what should I post", "create content", "write a blog", "full content run", "repurpose this"
 
 ### Skills to Build (Backlog)
 
@@ -43,16 +48,16 @@ Build as needed. Organized by domain:
 
 **Revenue & Client Acquisition**
 1. Upwork job filtering & proposal drafting
-2. Cold email outreach (300+ lead pool)
-3. Lead tracking & follow-up
+2. ~~Cold email outreach~~ (covered by cold-outreach skill)
+3. ~~Lead tracking & follow-up~~ (covered by cold-outreach skill — Google Sheets CRM)
 4. Client onboarding workflow
 6. Testimonial & case study builder
 7. Competitor/market research
 
 **Content & Brand**
-8. Social media content pipeline
-9. LinkedIn thought leadership
-10. Content repurposing engine
+8. ~~Social media content pipeline~~ (covered by marketing-advisor)
+9. ~~LinkedIn thought leadership~~ (covered by marketing-advisor)
+10. ~~Content repurposing engine~~ (covered by content-engine skill)
 11. Daily AI/Tech Brief
 
 **Operations & Team**

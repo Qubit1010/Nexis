@@ -10,6 +10,10 @@ credentials*.json
 CLAUDE.local.md
 .claude/settings.local.json
 
+# Next.js
+.next/
+out/
+
 # Dependencies
 node_modules/
 __pycache__/

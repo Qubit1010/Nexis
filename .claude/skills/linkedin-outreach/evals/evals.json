@@ -1,0 +1,29 @@
+{
+  "skill_name": "linkedin-outreach",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "scrape linkedin leads for SaaS founders and COOs, limit to 30",
+      "expected_output": "Claude runs scrape_leads.py with --titles and --limit args, shows the command, explains what it does and what to do next",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "generate connection messages for my linkedin leads using chatgpt",
+      "expected_output": "Claude runs generate_messages.py, recommends --dry-run first, shows the command, explains the 300-char limit and that messages are saved to Google Sheets",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "run the full linkedin pipeline — scrape 50 agency owners and write personalized connection notes",
+      "expected_output": "Claude runs scrape_leads.py then generate_messages.py in sequence, uses correct args, shows both commands clearly",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "set up my linkedin outreach sheet for the first time",
+      "expected_output": "Claude runs setup.py, shows the command, explains the sheet structure and required env vars",
+      "files": []
+    }
+  ]
+}
