@@ -75,31 +75,29 @@ SEND_DELAY_SECONDS = 30  # between each email
 
 TEMPLATES = {
     1: {
-        "subject": "quick question about [COMPANY]'s workflows",
+        "subject": "quick question about [COMPANY]",
         "body": """Hey [FIRST_NAME],
 
-I know you probably get a lot of emails like this — I'll keep it short.
+It looks like [COMPANY] is at that stage where the operational overhead starts compounding — more clients, same team, more manual work filling the gaps.
 
-It seems like [COMPANY] is scaling fast, and that usually means a few operational bottlenecks start eating your team's time.
+I run NexusPoint. I'm doing free workflow teardowns for a handful of [INDUSTRY] founders this week — I map out exactly how to automate your biggest bottleneck with n8n and AI, sent as a 5-minute Loom.
 
-I run NexusPoint, an AI automation agency. I'm doing free custom workflow teardowns this week for a handful of founders — I map out exactly how to automate your biggest bottleneck using tools like n8n and AI, recorded as a 5-minute Loom video.
+No pitch. Just the blueprint. You keep it either way.
 
-No pitch. Just the blueprint. You can hand it to your devs or build it yourself.
-
-Would it be a bad idea if I sent over a quick 3-question link so I know which bottleneck to look at for [COMPANY]?
+Would it be a bad idea to send over a quick 3-question link so I know where to look for [COMPANY]?
 
 Aleem
 NexusPoint | AI Automation & Web Systems""",
     },
     2: {
-        "subject": "re: quick question about [COMPANY]'s workflows",
+        "subject": "re: [COMPANY]",
         "body": """Hey [FIRST_NAME],
 
-Wanted to share a quick example. Last month I mapped out an automation for a [INDUSTRY] company that was spending hours a week manually managing data and reporting. The teardown showed them how to cut it to near-zero with a simple n8n workflow.
+Wanted to share something concrete. Worked with a 12-person [INDUSTRY] company last month — they were spending 15+ hours a week on manual reporting and client data wrangling. Mapped out an n8n workflow in the teardown and they cut it to under 2 hours.
 
-Still happy to do the same for [COMPANY] if you're open to it.
+Not pitching — just figured it was worth sharing given where [COMPANY] is.
 
-Worth a look?
+Still happy to do the same if you're open to it.
 
 Aleem
 NexusPoint""",
@@ -110,9 +108,9 @@ NexusPoint""",
 
 [PAIN_SIGNAL_LINE]
 
-Not pitching anything — just figured it was worth flagging since it's probably costing your team a few hours a week.
+Not pitching anything — just figured it was worth flagging since it's the kind of thing that quietly compounds over time.
 
-If you want, I can record a quick Loom showing exactly how to fix it. Takes me 5 minutes.
+If you want, I can record a quick Loom showing exactly what I'd fix. Takes me 5 minutes.
 
 Aleem
 NexusPoint""",
@@ -123,7 +121,7 @@ NexusPoint""",
 
 It sounds like the timing isn't right or this isn't a priority for [COMPANY] right now.
 
-No hard feelings. If you ever want a fresh set of eyes on your workflows, the offer stands.
+No hard feelings. If automating the operational overhead ever gets on the radar, I'm easy to find.
 
 Should I close your file, or is this worth revisiting down the line?
 

@@ -1,0 +1,16 @@
+# Lead Gen System Dependencies
+
+# HTTP requests
+requests>=2.31.0
+
+# DNS/SMTP email verification (ported from cold-outreach find_emails.py)
+dnspython>=2.4.0
+
+# OpenAI SDK — GPT-4o-mini personalization
+openai>=1.30.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Firecrawl SDK (optional — falls back to requests if not installed)
+firecrawl-py>=0.0.16
