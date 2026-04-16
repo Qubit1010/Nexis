@@ -12,10 +12,91 @@ Principles:
   - Only generated for HOT tier leads with confirmed instagram_url
 """
 
+import os
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+
+def _generate_touch1_dm_gpt(lead: dict) -> str | None:
+    """Generate a personalized Touch 1 DM via GPT-4o-mini.
+
+    Returns the message string, or None if the API call fails.
+    """
+    try:
+        from openai import OpenAI
+        from dotenv import load_dotenv
+        load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+        api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+        if not api_key:
+            return None
+        client = OpenAI(api_key=api_key)
+
+        first_name = (lead.get("first_name") or "").strip()
+        title = (lead.get("title") or "").strip()
+        company = (lead.get("company") or "").strip()
+        bio = (lead.get("bio") or "").strip()
+
+        context_parts = []
+        if bio:
+            context_parts.append(f"Bio: {bio[:150]}")
+        if title:
+            context_parts.append(f"Title: {title}")
+        if company:
+            context_parts.append(f"Company: {company}")
+        context = "\n".join(context_parts) if context_parts else "No additional context."
+
+        prompt = f"""Write a cold Instagram DM to this person:
+
+Name: {first_name}
+{context}
+
+Rules:
+- Casual Instagram tone, not business email language
+- Start with: Hey {first_name} -
+- One specific observation about their work, content, or bio (1 sentence) — rooted in what's visible, not generic praise
+- End with ONE open question that invites a reply (not a pitch)
+- No CTA, no services mention, no ask to book a call
+- Max 200 characters total
+- No emojis, no symbols
+
+Output ONLY the message. No quotes, no explanation."""
+
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=80,
+            temperature=0.9,
+        )
+        note = response.choices[0].message.content.strip().replace("\n", " ").replace("  ", " ")
+        return note[:200] if note else None
+    except Exception:
+        return None
+
+
+def generate_touch1_dm(lead: dict) -> str:
+    """Generate a standalone Touch 1 DM for cold Instagram outreach.
+
+    Tries GPT-4o-mini first, falls back to templates if unavailable.
+    """
+    gpt_dm = _generate_touch1_dm_gpt(lead)
+    if gpt_dm:
+        return gpt_dm
+
+    first_name = (lead.get("first_name") or "").strip()
+    company = (lead.get("company") or "").strip()
+    bio = (lead.get("bio") or "").strip()
+
+    greeting = f"Hey {first_name}" if first_name else "Hey"
+
+    if bio:
+        snippet = bio[:80].rstrip("., ")
+        return f'{greeting} - saw your bio: "{snippet}..." Curious what\'s been the hardest thing to systemize as you\'ve scaled?'
+    elif company:
+        return f"{greeting} - came across {company} and your content caught my attention. What's the biggest thing you're focused on scaling right now?"
+    else:
+        return f"{greeting} - came across your profile and it caught my attention. Curious - what's the biggest thing you're focused on right now?"
 
 
 def generate_instagram_sequence(lead: dict, personalization: dict) -> dict:

@@ -1,0 +1,28 @@
+{
+  "eval_id": 0,
+  "eval_name": "latenode-ai-automation",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Output performs web research on Latenode (scrapes site or uses search) rather than relying solely on general knowledge",
+      "passed": true,
+      "evidence": "WebFetch used on latenode.com. Brief includes specific data (10,000+ teams, pricing, ratings) grounded in real research."
+    },
+    {
+      "text": "Company Snapshot includes specific details about Latenode (scale, pricing, product features, or target customers)",
+      "passed": true,
+      "evidence": "Mentions 10,000+ active teams, 10M+ workflows/month, $0-$299 pricing, 4.9 Capterra rating, JavaScript support, white-label iPaaS."
+    },
+    {
+      "text": "NexusPoint Positioning section leads with AI automation as the primary angle, not web design",
+      "passed": false,
+      "evidence": "No dedicated 'NexusPoint Positioning' section exists. Output has 'Possible angles' bullet list with no 'Best angle' statement and no structured service mapping. AI is implied but not explicitly framed as the lead pitch."
+    },
+    {
+      "text": "Output includes at least 3 tailored discovery questions specific to Latenode's context",
+      "passed": true,
+      "evidence": "'Things to ask' has 3 questions — reasonably tailored but more generic than with_skill version (no reference to their 10k teams, white-label clients, or specific cold email context)."
+    }
+  ],
+  "pass_rate": 0.75
+}

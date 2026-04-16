@@ -1,0 +1,23 @@
+{
+  "skill_name": "session-closeout",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "ok we're done for today, close out the session. we built the session-closeout skill, updated context/goals.md to add Q2 goals and mark Q1 done, updated current-priorities.md to reflect april reality, created context/ideas.md with a tiered build backlog, and updated CLAUDE.md to fix stale backlog items and add the ideas file to context.",
+      "expected_output": "A clean session summary printed in conversation, decisions extracted and offered for logging to decisions/log.md, check if context/current-priorities.md needs updating (it was just updated so probably not), and a final one-line closeout block.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "wrap up. today i worked on the lead-gen project — added a sheets_importer.py scraper, rewrote the linkedin transformer to use the new ICP scoring system, and deleted the old google_search.py and product_hunt.py scrapers since we're consolidating sources. i decided to drop product hunt as a lead source because the signal quality was too low.",
+      "expected_output": "Session summary with what was built/deleted, the 'drop product hunt' decision extracted and offered for logging, and priorities checked for whether anything needs updating.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "what did we do this session? i want a summary",
+      "expected_output": "Should trigger the session-closeout skill, run git status/diff to ground the summary, produce a structured summary of changes, check for decisions, and check priorities.",
+      "files": []
+    }
+  ]
+}

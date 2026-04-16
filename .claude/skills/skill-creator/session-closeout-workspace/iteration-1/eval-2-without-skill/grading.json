@@ -1,0 +1,28 @@
+{
+  "eval_id": 2,
+  "eval_name": "casual-phrasing-triggers-full-workflow",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Output runs git status/diff and grounds the summary in actual file changes (not just vague recollection)",
+      "passed": true,
+      "evidence": "Agent ran git diff and git status, summary is grounded in real file changes across content-engine-dashboard and lead-gen"
+    },
+    {
+      "text": "Output extracts at least one decision worth logging (session had real changes so decisions exist)",
+      "passed": true,
+      "evidence": "'Key Decisions Worth Logging' section has 3 decisions, though they lack the full DECISION | REASONING | CONTEXT pipe format"
+    },
+    {
+      "text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved",
+      "passed": false,
+      "evidence": "No standardized closeout block. Output ends abruptly with the decisions list — no 'Session closed.' block."
+    },
+    {
+      "text": "Output explicitly checks context/current-priorities.md for whether it needs updating",
+      "passed": false,
+      "evidence": "No priorities check performed. Output does not mention current-priorities.md or whether it needs updating."
+    }
+  ],
+  "pass_rate": 0.5
+}

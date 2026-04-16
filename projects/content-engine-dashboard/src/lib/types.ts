@@ -44,7 +44,7 @@ export interface TrendingTopic {
 }
 
 export interface SavedIdea {
-  source: "saved-topics";
+  source: "content-opportunities";
   title: string;
   format: string;
   timeliness: string;
@@ -81,18 +81,49 @@ export interface SavedTopics {
   error: string | null;
 }
 
+export interface SavedArticle {
+  source: "saved-articles";
+  title: string;
+  publication: string;
+  url: string;
+  tldr: string;
+  date_saved: string;
+  brief_date: string;
+  platform_affinity: string[];
+  saved_bonus: true;
+}
+
+export interface SavedArticlesSource {
+  available: boolean;
+  articles: SavedArticle[];
+  error: string | null;
+}
+
 export interface PullIdeasOutput {
   generated_at: string;
   news_brief: NewsBrief;
   youtube_brief: YouTubeBrief;
   saved_topics: SavedTopics;
+  saved_articles: SavedArticlesSource;
   errors: string[];
 }
 
 // ---- Scored idea (computed client-side) ----
 
-export type IdeaSource = "news-brief" | "youtube-brief" | "saved-topics";
+export type IdeaSource = "news-brief" | "youtube-brief" | "content-opportunities" | "saved-articles";
 export type Platform = "LinkedIn" | "Instagram" | "Blog";
+
+export type ContentMode = "news" | "opinion" | "story" | "tutorial";
+
+export type PillarKey =
+  | "lived_experience"
+  | "strong_pov"
+  | "cross_domain"
+  | "taste_judgment"
+  | "identity_voice"
+  | "practical_stakes"
+  | "content_specific";
+
 export type Format =
   | "Text Post"
   | "Carousel"
@@ -118,6 +149,8 @@ export interface ScoredIdea {
   competition?: string;
   momentum?: string;
   isCooling?: boolean;
+  url?: string;
+  date?: string;
 }
 
 // ---- research_topic.py output types ----
@@ -139,6 +172,41 @@ export interface ResearchOutput {
   people_also_ask?: string[];
   hashtags?: string[];
   searched_at?: string;
+}
+
+// ---- Weekly Schedule columns (shared between API route and modal) ----
+
+export const SCHEDULE_COLUMNS = [
+  "Date", "Day", "Platform", "Post Type", "Media Type", "Content Theme",
+  "Topic / Idea", "Post Description", "Video/Post Script", "Video Prompt",
+  "Image Prompt", "Reference Images", "Thumbnail", "Audio", "Draft",
+  "Final Video/Post", "Reference", "Hashtags", "Publish Time", "Status", "Editor",
+] as const;
+
+// ---- Weekly Schedule row ----
+
+export interface ScheduleRow {
+  date: string;
+  day: string;
+  platform: string;
+  postType: string;
+  mediaType: string;
+  contentTheme: string;
+  topic: string;
+  description: string;
+  videoScript: string;
+  videoPrompt: string;
+  imagePrompt: string;
+  referenceImages: string;
+  thumbnail: string;
+  audio: string;
+  draft: string;
+  finalPost: string;
+  reference: string;
+  hashtags: string;
+  publishTime: string;
+  status: string;
+  editor: string;
 }
 
 // ---- Content Log row ----

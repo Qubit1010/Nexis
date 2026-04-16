@@ -1,0 +1,46 @@
+{
+  "eval_id": 1,
+  "eval_name": "ecommerce-jewelry",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Output contains exactly 3 use case sections",
+      "passed": true,
+      "evidence": "Three clearly delimited use cases: (1) AI Customer Support Inbox Automation, (2) Inventory Sync and Low-Stock Alert System, (3) Automated Returns Processing with Post-Return Recovery"
+    },
+    {
+      "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+      "passed": true,
+      "evidence": "UC1: '15-20 hours/week', '$900-$1,600/month'; UC2: '3-5 hours/week', '$500-$2,000'; UC3: '5-8 hours/week', '8-15%'"
+    },
+    {
+      "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+      "passed": true,
+      "evidence": "All 3 use cases have a bold 'Hook:' label followed by a sentence in double quotes"
+    },
+    {
+      "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+      "passed": true,
+      "evidence": "Explicitly labelled: Operational Efficiency, Revenue/Growth, Customer Experience \u00e2\u20ac\u201d all 3 dimensions covered"
+    },
+    {
+      "text": "Use cases reference specific details from the input (e.g., Shopify, inventory, returns, support emails) \u00e2\u20ac\u201d not generic 'AI automation' descriptions",
+      "passed": true,
+      "evidence": "Mentions Shopify API, spreadsheet elimination, returns email trigger, inventory threshold alerts \u00e2\u20ac\u201d all input-specific"
+    },
+    {
+      "text": "Output ends with a quick pitch summary section containing 3 bullets",
+      "passed": true,
+      "evidence": "Ends with '**Quick pitch summary**' followed by exactly 3 bullets"
+    }
+  ],
+  "pass_count": 6,
+  "total_count": 6,
+  "pass_rate": 1.0,
+  "summary": {
+    "pass_rate": 1.0,
+    "passed": 6,
+    "failed": 0,
+    "total": 6
+  }
+}

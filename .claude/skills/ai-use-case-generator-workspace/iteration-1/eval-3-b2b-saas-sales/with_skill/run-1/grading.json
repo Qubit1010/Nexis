@@ -1,0 +1,46 @@
+{
+  "eval_id": 3,
+  "eval_name": "b2b-saas-sales",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Output contains exactly 3 use case sections",
+      "passed": true,
+      "evidence": "Three use cases: (1) AI-Powered Lead Qualification from LinkedIn, (2) Personalized Outreach Email Generation at Scale, (3) Automated Post-Outreach Follow-Up Sequences"
+    },
+    {
+      "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+      "passed": true,
+      "evidence": "UC1: '30-50%', '120 hours/week'; UC2: '2-4x reply rates', '1.5-2.5 hours per rep per day', '22-37 hours'; UC3: '15-25%', 'under 4 hours'"
+    },
+    {
+      "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+      "passed": true,
+      "evidence": "All 3 use cases have '**Hook:**' followed by a sentence in double quotes"
+    },
+    {
+      "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+      "passed": true,
+      "evidence": "Explicitly labeled: Operational Efficiency, Revenue/Growth, Customer Experience"
+    },
+    {
+      "text": "Use cases reference specific details from the input (e.g., LinkedIn lead qualification, outreach emails, 15-person sales team, burnout) \u00e2\u20ac\u201d not generic AI descriptions",
+      "passed": true,
+      "evidence": "References LinkedIn qualification, 15 reps, custom outreach emails from scratch, Proxycurl/Clay enrichment tools, email engagement signals"
+    },
+    {
+      "text": "Output ends with a quick pitch summary section containing 3 bullets",
+      "passed": true,
+      "evidence": "Ends with '**Quick pitch summary**' followed by exactly 3 bullets"
+    }
+  ],
+  "pass_count": 6,
+  "total_count": 6,
+  "pass_rate": 1.0,
+  "summary": {
+    "pass_rate": 1.0,
+    "passed": 6,
+    "failed": 0,
+    "total": 6
+  }
+}

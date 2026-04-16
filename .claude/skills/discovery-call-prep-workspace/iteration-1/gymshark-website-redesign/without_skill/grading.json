@@ -1,0 +1,28 @@
+{
+  "eval_id": 1,
+  "eval_name": "gymshark-website-redesign",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Output performs web research on Gymshark (scrapes site or uses search) to ground the brief in real info",
+      "passed": true,
+      "evidence": "WebFetch used. Brief mentions specific tech stack (Next.js, Contentful, Shopify, Dynamic Yield, mParticle) and real company details."
+    },
+    {
+      "text": "Brief includes specific details about Gymshark identifying them as a large, enterprise-scale brand",
+      "passed": true,
+      "evidence": "Mentions multi-currency, 25+ international markets, physical retail locations, hundreds of SKUs, full tech stack — clearly identifies them as large."
+    },
+    {
+      "text": "Output explicitly flags the size mismatch as a watch-out — Gymshark is not a typical small-agency prospect",
+      "passed": true,
+      "evidence": "Final paragraph: 'This could be a big client but also a misfit — enterprise brands have procurement processes, slow payment cycles, and high expectations.' Size mismatch flagged, though less prominent than with_skill version."
+    },
+    {
+      "text": "Output includes a NexusPoint Positioning section with a specific angle for this prospect",
+      "passed": false,
+      "evidence": "No 'NexusPoint Positioning' section exists. Has 'Potential scope' bullets but no best angle statement, no service mapping, no framing of how to pitch NexusPoint to Gymshark specifically."
+    }
+  ],
+  "pass_rate": 0.75
+}

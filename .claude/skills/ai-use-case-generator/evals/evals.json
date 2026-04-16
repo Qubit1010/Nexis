@@ -1,0 +1,23 @@
+{
+  "skill_name": "ai-use-case-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate AI use cases for this prospect: E-commerce brand selling handmade jewelry, 8 employees, they spend 4+ hours a day on customer support emails and manually tracking inventory across their Shopify store and a spreadsheet. Getting a lot of returns they have to process manually too.",
+      "expected_output": "3 use cases covering operational efficiency (e.g. support automation or inventory), revenue/growth (e.g. cart recovery or upsell), and customer experience (e.g. returns or post-purchase). Each should have specific ROI metrics (hours saved, revenue recovered) and a hook line ready for outreach.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have a discovery call tomorrow with a physiotherapy clinic that has 3 locations. From what I know they do appointment scheduling manually, staff spend a lot of time on patient follow-up calls, and insurance claim processing takes forever. Give me AI use cases I can pitch them.",
+      "expected_output": "3 use cases specific to a multi-location physio clinic: ops efficiency (e.g. scheduling automation, no-show reduction), revenue/growth (e.g. waitlist monetization, claim processing speed), customer experience (e.g. automated follow-ups, patient communication). ROI should reference clinic-specific benchmarks like no-show rates and admin hours. Hooks should be discovery-call ready.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "What AI automation use cases should I pitch to a B2B SaaS startup? They have a 15-person sales team manually qualifying leads from LinkedIn and writing custom outreach emails. No automation in place yet. They're burning out their reps.",
+      "expected_output": "3 use cases for a B2B SaaS sales context: ops efficiency (e.g. lead scoring/qualification), revenue/growth (e.g. personalized outreach at scale, faster pipeline), customer experience (e.g. onboarding or trial activation). ROI should reference sales team benchmarks like time-per-lead, reply rates, cost-per-meeting. Hooks should work in cold email or LinkedIn outreach.",
+      "files": []
+    }
+  ]
+}

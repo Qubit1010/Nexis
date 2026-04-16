@@ -232,18 +232,7 @@ Save = 3 separate docs. Log = 3 rows in Content Log.
 
 ## Voice Rules (apply to ALL written content)
 
-These aren't style preferences — they define Aleem's personal brand voice. Every piece of
-content must feel like it was written by a 21-year-old founder/student who's building
-real things, not a corporate content team.
-
-- Write as Aleem: first person ("I", "my", "I built", "I tried")
-- "How I" not "How to" — share experience, not generic advice
-- No em dashes — use commas or short sentences instead
-- No emojis in Blog or LinkedIn — Instagram max 2
-- Specific > vague: replace "many companies" with actual numbers from research data
-- Hook first — never bury the lead in any platform
-- No filler openers: never start with "In today's rapidly evolving AI landscape..."
-  or any variant of that pattern
+@.claude/skills/content-engine/references/voice-principles.md
 
 ---
 

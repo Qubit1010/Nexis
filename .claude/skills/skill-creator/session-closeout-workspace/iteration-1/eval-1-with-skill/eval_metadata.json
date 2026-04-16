@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "lead-gen-with-explicit-decision",
+  "prompt": "wrap up. today i worked on the lead-gen project — added a sheets_importer.py scraper, rewrote the linkedin transformer to use the new ICP scoring system, and deleted the old google_search.py and product_hunt.py scrapers since we're consolidating sources. i decided to drop product hunt as a lead source because the signal quality was too low.",
+  "assertions": [
+    {
+      "text": "Output contains a session summary with specific items from the lead-gen work",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "The 'drop product hunt' decision is explicitly extracted with correct DECISION | REASONING | CONTEXT format",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Output checks priorities and makes a judgment (no change expected since lead-gen is already listed as live)",
+      "passed": null,
+      "evidence": null
+    }
+  ]
+}

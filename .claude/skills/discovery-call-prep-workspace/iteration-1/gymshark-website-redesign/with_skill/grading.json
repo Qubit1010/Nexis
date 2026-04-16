@@ -1,0 +1,28 @@
+{
+  "eval_id": 1,
+  "eval_name": "gymshark-website-redesign",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Output performs web research on Gymshark (scrapes site or uses search) to ground the brief in real info",
+      "passed": true,
+      "evidence": "WebFetch used on gymshark.com. Brief contains specific tech stack details (Next.js, Contentful, Shopify, Dynamic Yield, mParticle) and specifics about their product catalog and international reach."
+    },
+    {
+      "text": "Brief includes specific details about Gymshark identifying them as a large, enterprise-scale brand",
+      "passed": true,
+      "evidence": "Explicitly states: 25+ international markets, multi-currency, physical retail locations, hundreds of SKUs, mature loyalty infrastructure, sophisticated tech stack. Description is grounded in real company data."
+    },
+    {
+      "text": "Output explicitly flags the size mismatch as a watch-out — Gymshark is not a typical small-agency prospect",
+      "passed": true,
+      "evidence": "Watch-outs section leads with: 'Size mismatch: Gymshark is an enterprise brand with a full internal engineering team... Make sure the conversation is about a specific project, not ongoing work.'"
+    },
+    {
+      "text": "Output includes a NexusPoint Positioning section with a specific angle for this prospect",
+      "passed": true,
+      "evidence": "NexusPoint Positioning section with Best angle: 'We move fast on scoped, specific builds — campaign pages, performance fixes, and AI-powered features you want to ship without tying up your internal team.'"
+    }
+  ],
+  "pass_rate": 1.0
+}

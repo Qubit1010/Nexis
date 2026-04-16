@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "ai-use-case-generator", "runs": [{"id": "eval-1-ecommerce-jewelry-with_skill", "prompt": "Generate AI use cases for this prospect: E-commerce brand selling handmade jewelry, 8 employees, they spend 4+ hours a day on customer support emails and manually tracking inventory across their Shopify store and a spreadsheet. Getting a lot of returns they have to process manually too.", "eval_id": 1, "outputs": [{"name": "output.md", "type": "text", "content": "**AI Use Cases for Handmade Jewelry E-commerce Brand (8 employees)**\n\n---\n\n**Use Case 1: AI Customer Support Inbox Automation**\n**Dimension:** Operational Efficiency\n**Problem:** The team is spending 4+ hours a day answering customer support emails \u00e2\u20ac\u201d a mix of order status questions, shipping inquiries, sizing/product questions, and return requests. At 8 employees, that's a significant chunk of productive capacity eaten by inbox triage every single day.\n**Solution:** An AI support agent connected to their email inbox (or a simple chat widget) that automatically handles the top 40-60% of incoming tickets \u00e2\u20ac\u201d order status lookups via Shopify API, shipping updates, return initiation, and FAQ responses \u00e2\u20ac\u201d routing only complex or high-value conversations to a human.\n**ROI:** Deflects 40-60% of support tickets automatically, saving 15-20 hours/week across the team. At a conservative $15-20/hour equivalent, that's $900-$1,600/month in reclaimed staff time without hiring anyone new.\n**Hook:** \"Most e-commerce brands we work with reclaim 15-20 hours a week just by automating the top half of their support inbox \u00e2\u20ac\u201d order status, shipping updates, and return requests \u00e2\u20ac\u201d without touching the conversations that actually need a human.\"\n\n---\n\n**Use Case 2: Inventory Sync and Low-Stock Alert System**\n**Dimension:** Revenue / Growth\n**Problem:** Manually reconciling inventory between Shopify and a spreadsheet is time-consuming and error-prone. Stockouts on best-selling SKUs mean lost sales that never get recovered \u00e2\u20ac\u201d customers who hit an \"out of stock\" page rarely come back. For handmade jewelry with longer production lead times, catching low stock early is especially critical.\n**Solution:** An automation that syncs Shopify inventory into a single source of truth (eliminating the manual spreadsheet entirely), monitors stock levels per SKU, and sends proactive alerts when any product drops below a set threshold \u00e2\u20ac\u201d giving the team time to restock before selling out. A weekly report surfaces top-selling SKUs, slow movers, and revenue-at-risk items automatically.\n**ROI:** Eliminates 3-5 hours/week of manual inventory tracking. More importantly, reduces stockouts by 20-30% \u00e2\u20ac\u201d for a brand doing $15K+/month, recovering even one stockout event per month can add $500-$2,000 in sales that would otherwise be lost permanently.\n**Hook:** \"Handmade brands are especially exposed to stockouts because you can't scale production overnight \u00e2\u20ac\u201d an automated inventory alert system means you're restocking before you run out, not after you've already missed the sale.\"\n\n---\n\n**Use Case 3: Automated Returns Processing with Post-Return Recovery**\n**Dimension:** Customer Experience\n**Problem:** Processing returns manually \u00e2\u20ac\u201d reading the email, verifying the order, issuing the label, updating inventory, processing the refund \u00e2\u20ac\u201d takes significant time per return. With a high return volume, this compounds fast. Most brands stop at the refund and move on, missing the window to convert a return into an exchange or retain the customer relationship.\n**Solution:** An automated returns flow where the customer submits a return request via a simple form or email trigger, the system checks the order against Shopify automatically, generates a return label, triggers the refund or store credit based on configurable rules, and sends a personalized follow-up \u00e2\u20ac\u201d either offering an exchange or a discount on their next order. Standard cases resolve same-day with zero human involvement.\n**ROI:** Reduces return resolution time from 3-5 days to same-day for standard cases, saving 5-8 hours/week in manual handling. The post-return recovery email sequence typically converts 8-15% of returners into exchanges or repeat purchases \u00e2\u20ac\u201d turning a cost center into a partial revenue recovery channel.\n**Hook:** \"Right now every return your team processes manually is costing you twice \u00e2\u20ac\u201d once to handle the logistics, and again because you're not following up to keep the customer. An automated returns flow fixes both in a single build.\"\n\n---\n\n**Quick pitch summary**\n- AI support inbox agent that deflects 40-60% of emails automatically, saving 15-20 hours/week\n- Shopify inventory sync that kills the spreadsheet and sends low-stock alerts before you run out\n- Automated returns flow that resolves standard cases same-day and converts 8-15% of returners into repeat buyers\n"}], "grading": null}, {"id": "eval-1-ecommerce-jewelry-without_skill", "prompt": "Generate AI use cases for this prospect: E-commerce brand selling handmade jewelry, 8 employees, they spend 4+ hours a day on customer support emails and manually tracking inventory across their Shopify store and a spreadsheet. Getting a lot of returns they have to process manually too.", "eval_id": 1, "outputs": [{"name": "output.md", "type": "text", "content": "**AI Use Cases: Handmade Jewelry E-commerce Brand**\n\n**Prospect Profile:** E-commerce brand, handmade jewelry, 8 employees, Shopify store + spreadsheet inventory, 4+ hours/day on customer support emails, high return volume processed manually.\n\n---\n\n**Use Case 1: AI Customer Support Agent (Tier-1 Email Automation)**\n\nAn AI agent trained on your product catalog, policies, and FAQ handles incoming customer emails automatically. It drafts or sends responses for the top 80% of repeatable queries: order status, shipping timelines, return initiation, product care instructions, size questions, and customization inquiries. Anything it can't resolve with confidence gets escalated to a human with a pre-drafted reply ready to review.\n\nROI framing:\n- 4+ hours/day on support = $300+/week in labor cost (~$15,000+/year equivalent)\n- AI handles 70-80% of tickets without human touch\n- Frees up 3+ hours/day across the team\n- Payback period: under 60 days\n- Bonus: 24/7 response capability improves customer satisfaction and repeat purchase rate\n\n---\n\n**Use Case 2: Unified Inventory Sync + Low-Stock Alert System**\n\nEliminates the Shopify-spreadsheet split. An automation layer keeps inventory in sync in real time, and an AI alert system flags low-stock items, predicts restock timing based on sales velocity, and surfaces stockout risks before they happen.\n\nROI framing:\n- Manual dual-tracking causes oversells -- especially painful for handmade items with limited production capacity\n- Saves 30-60 minutes/day in manual reconciliation\n- A single prevented oversell avoids refund cost + customer acquisition cost of replacing that buyer\n- At $75 AOV and even 1 prevented oversell/week: ~$3,900/year recovered\n\n---\n\n**Use Case 3: Automated Returns Processing + Deflection Workflow**\n\nTwo-part system. First, an AI deflection layer identifies return requests early and attempts resolution before the return is initiated -- offering exchanges, store credit, or care instructions. Second, for returns that proceed, the workflow auto-generates return labels, updates Shopify inventory, triggers the refund, and logs return reasons for trend analysis.\n\nROI framing:\n- Handmade jewelry: higher cost per unit, harder to resell if damaged\n- 10 returns/month at $75 AOV = $750/month flowing out + 2-4 hours of manual processing\n- 20-30% deflection rate (converting to exchanges/credit) recovers $150-$225/month in revenue\n- Full automation eliminates manual processing labor\n- Combined: estimated 5-8 hours/day freed and $18,000-$25,000+/year in direct + indirect savings\n\n---\n\n**Summary Table**\n\n| Use Case | Time Saved | Est. Annual Value | Complexity |\n|---|---|---|---|\n| AI Customer Support Agent | 3+ hrs/day | $15,000+ | Medium |\n| Inventory Sync + Alerts | 30-60 min/day | $4,000-$6,000 | Low |\n| Returns Automation + Deflection | 2-4 hrs/month + revenue recovery | $3,000-$5,000 | Medium |\n| Combined | 5-8 hrs/day | $18,000-$25,000+ | |"}], "grading": null}, {"id": "eval-2-physio-clinic-with_skill", "prompt": "I have a discovery call tomorrow with a physiotherapy clinic that has 3 locations. From what I know they do appointment scheduling manually, staff spend a lot of time on patient follow-up calls, and insurance claim processing takes forever. Give me AI use cases I can pitch them.", "eval_id": 2, "outputs": [{"name": "output.md", "type": "text", "content": "**AI Use Cases for Physiotherapy Clinic (3 Locations)**\n\n---\n\n**Use Case 1: Automated Appointment Scheduling + No-Show Recovery**\n**Dimension:** Operational Efficiency\n**Problem:** Staff at all 3 locations are manually handling appointment bookings, confirmations, and rescheduling over the phone. With a typical no-show rate of 15-25% in allied health, they're losing revenue on every empty slot that could have been filled from the waitlist.\n**Solution:** An AI-powered scheduling assistant handles booking confirmations, sends automated SMS/email reminders 48 and 24 hours before appointments, and automatically texts the waitlist to fill last-minute cancellations \u00e2\u20ac\u201d all without front-desk involvement.\n**ROI:** Reduces no-show rate from ~20% to 5-10%, which for a 3-location clinic typically recovers $80K-$120K/year in unbilled slots. Front-desk staff reclaim 2-3 hours/day per location previously spent on reminder calls and manual rescheduling.\n**Hook:** \"A 3-location physio clinic running at a 20% no-show rate is leaving $80K-$120K on the table every year \u00e2\u20ac\u201d we've seen clinics cut that in half with automated reminders and waitlist filling, without touching their existing booking system.\"\n\n---\n\n**Use Case 2: Insurance Pre-Authorization + Claim Status Automation**\n**Dimension:** Revenue / Growth\n**Problem:** Insurance claim processing is a bottleneck \u00e2\u20ac\u201d staff spend hours per day on hold with insurers, manually tracking claim statuses, and chasing pre-authorizations. Slow turnaround delays patient starts and creates cash flow gaps between service delivery and reimbursement.\n**Solution:** An AI workflow automatically submits pre-authorization requests, monitors claim status via insurer portals, flags exceptions that need human review, and sends staff a daily summary of pending and approved claims \u00e2\u20ac\u201d reducing the manual chase to exception handling only.\n**ROI:** Cuts pre-authorization turnaround from 3-5 days to same-day for standard procedures. Across 3 locations, this typically saves 8-15 hours/week of admin time and accelerates cash collection by 10-20 days on average.\n**Hook:** \"Most multi-location clinics have 1-2 admin staff spending half their day on insurance follow-ups \u00e2\u20ac\u201d we can get that down to exception handling only, which usually cuts authorization turnaround from days to hours.\"\n\n---\n\n**Use Case 3: Automated Post-Visit Patient Follow-Up**\n**Dimension:** Customer Experience\n**Problem:** Physio patients need consistent follow-up between sessions to stay on their treatment plan, but staff don't have time to call every patient after every visit. Patients who feel disconnected between appointments are more likely to drop off before completing their treatment.\n**Solution:** An AI system sends personalized post-visit messages (via SMS or WhatsApp) after each appointment: a check-in on how they're feeling, a reminder of their home exercises, and a prompt to rebook. Patients who don't rebook within 48 hours get a gentle automated nudge.\n**ROI:** Saves 2-3 hours/day of post-visit phone follow-up across the clinic network. In similar allied health settings, automated follow-up typically improves rebooking rates by 15-25%, directly lifting per-patient revenue.\n**Hook:** \"Patients who don't hear from you after a session are the ones who quietly stop coming back \u00e2\u20ac\u201d automated post-visit check-ins typically lift rebooking rates by 15-25% without adding any staff workload.\"\n\n---\n\n**Quick pitch summary**\n- Automated scheduling reminders and waitlist filling recover $80K-$120K/year lost to no-shows across 3 locations\n- AI-driven insurance pre-authorization cuts 8-15 hours/week of admin follow-up and accelerates cash collection by 10-20 days\n- Personalized post-visit follow-up automation increases patient rebooking rates by 15-25% without adding staff workload"}], "grading": null}, {"id": "eval-2-physio-clinic-without_skill", "prompt": "I have a discovery call tomorrow with a physiotherapy clinic that has 3 locations. From what I know they do appointment scheduling manually, staff spend a lot of time on patient follow-up calls, and insurance claim processing takes forever. Give me AI use cases I can pitch them.", "eval_id": 2, "outputs": [{"name": "output.md", "type": "text", "content": "# AI Use Cases: Physiotherapy Clinic (3 Locations)\n\n**Business profile:** Multi-location physio clinic -- manual scheduling, high staff time on follow-up calls, slow insurance claim processing\n\n---\n\n## Use Case 1: AI Appointment Scheduling & Rescheduling\n\n**What it does:**\nAn AI assistant (voice or web chat) handles all inbound bookings, rescheduling, and cancellations across all 3 locations -- 24/7, no staff involvement. Integrates with existing scheduling software. Sends automated SMS/email confirmations and reminders.\n\n**The problem it solves:**\nFront desk staff spend 2-3 hours/day on scheduling calls. After-hours calls go unanswered -- missed calls become missed bookings.\n\n**ROI framing:**\n- If AI captures just 5 missed/after-hours bookings per week across locations at $80-150/session, that's $400-750/week recovered -- $20,000-39,000/year from appointments that would otherwise be lost\n- Front desk redirects 10+ hours/week to higher-value in-clinic work\n- No additional headcount needed to scale booking volume\n\n---\n\n## Use Case 2: Automated Patient Follow-Up & Recall System\n\n**What it does:**\nAI sends personalized post-session messages -- checking recovery, reinforcing home exercises, and prompting rebooking when the next session is due. Flags patients who go cold so staff know exactly who to prioritize.\n\n**The problem it solves:**\nStaff spend hours manually calling lapsed patients. Drop-off after initial sessions is 30-50% industry-wide. Inconsistent follow-up means lost patients and lost revenue.\n\n**ROI framing:**\n- Average patient LTV: 6-10 sessions at $80-150 = $480-1,500 per patient\n- Recovering 10 lapsed patients/month across 3 locations = $4,800-15,000/month in retained revenue\n- Staff follow-up time drops 60-70% -- freeing 5-8 hours/week per location\n- Better care continuity is also a differentiator patients notice\n\n---\n\n## Use Case 3: AI-Assisted Insurance Claim Processing\n\n**What it does:**\nAI extracts session data and patient info, auto-fills claim forms, flags errors and missing fields before submission, and tracks claim status. Reduces the manual work and error rate driving your rejection and delay problem.\n\n**The problem it solves:**\nEvery rejected claim = rework, delayed payment, and staff hours chasing. At 3 locations processing 200+ claims/month, even a 5-10% rejection rate is a constant drain on cash flow and admin time.\n\n**ROI framing:**\n- Industry average rejection rate 5-10%; each rejection costs $25-50 in rework plus delayed cash flow\n- AI cuts rejections 50-70% by catching errors pre-submission -- $125-700/month saved on rework alone, plus faster payment cycles\n- Staff time on claims drops 40-60% -- 1-2 hours/day per location recovered\n- Cleaner submissions = faster approvals = better cash flow across all 3 locations\n\n---\n\n**Closing pitch line:** This isn't software. It's a system that makes your clinic run like it has twice the staff -- without adding headcount.\n"}], "grading": null}, {"id": "eval-3-b2b-saas-sales-with_skill", "prompt": "What AI automation use cases should I pitch to a B2B SaaS startup? They have a 15-person sales team manually qualifying leads from LinkedIn and writing custom outreach emails. No automation in place yet. They're burning out their reps.", "eval_id": 3, "outputs": [{"name": "output.md", "type": "text", "content": "**AI Use Cases for B2B SaaS Startup \u00e2\u20ac\u201d 15-Person Sales Team**\n\n---\n\n**Use Case 1: AI-Powered Lead Qualification from LinkedIn**\n**Dimension:** Operational Efficiency\n**Problem:** Each rep is manually reviewing LinkedIn profiles to determine if a lead fits the ICP \u00e2\u20ac\u201d checking company size, industry, role, and tech stack signals by hand. With 15 reps, this is likely consuming 8-15 hours per rep per week on work that doesn't require human judgment.\n**Solution:** An AI lead scoring system that ingests LinkedIn data (via enrichment tools like Proxycurl or Clay) and scores each prospect against a defined ICP rubric \u00e2\u20ac\u201d company size, funding stage, tech stack, growth signals, role seniority. Reps see a ranked list every morning instead of a raw prospect dump.\n**ROI:** Reduces SDR time-per-qualified-lead by 30-50%. Across 15 reps at even a conservative 8 hours/week savings each, that's 120 hours/week reclaimed \u00e2\u20ac\u201d equivalent to 3 full-time reps freed up for actual selling.\n**Hook:** \"Your reps are spending half their day deciding who to talk to \u00e2\u20ac\u201d AI qualification can hand them a ranked list every morning so they only touch the leads worth touching.\"\n\n---\n\n**Use Case 2: Personalized Outreach Email Generation at Scale**\n**Dimension:** Revenue / Growth\n**Problem:** Reps are writing custom cold emails from scratch for every prospect \u00e2\u20ac\u201d pulling context from LinkedIn, crafting a hook, writing the body, personalizing the CTA. At 15 reps each doing 20-40 outreach emails per day, this burns 2-3 hours per rep daily and creates massive quality variance across the team.\n**Solution:** An AI outreach system that ingests the scored lead's LinkedIn profile, company context, and recent signals (funding, job postings, product launches), then generates a fully personalized email draft. Reps review and send in under 60 seconds instead of writing from scratch. Output quality is consistent and grounded in real prospect context.\n**ROI:** Industry benchmarks show AI-personalized sequences achieve 2-4x reply rates vs generic templates (Outreach/Salesloft data). At current volume, even a 2x lift in reply rate doubles pipeline without adding headcount. Time savings: 1.5-2.5 hours per rep per day \u00e2\u20ac\u201d 22-37 hours reclaimed across the team daily.\n**Hook:** \"Most sales teams we work with cut outreach writing time by 80% and double their reply rates in the first 60 days \u00e2\u20ac\u201d without changing their sending volume or their ICP.\"\n\n---\n\n**Use Case 3: Automated Post-Outreach Follow-Up Sequences**\n**Dimension:** Customer Experience\n**Problem:** After an initial email goes out, follow-up is inconsistent \u00e2\u20ac\u201d reps forget, get busy, or manually track touchpoints in their head. Prospects who showed intent signals (opened 3x, clicked a link) get the same delayed generic follow-up as everyone else. This leaks deals from the pipeline silently.\n**Solution:** An AI-driven follow-up system that monitors email engagement signals (opens, clicks, replies) and triggers personalized follow-up sequences based on behavior. A prospect who clicks the pricing page gets a different follow-up than one who went cold. Sequences run automatically; reps only intervene when a lead responds.\n**ROI:** Automated, behavior-triggered follow-up typically increases booked meetings by 15-25% from the same lead pool \u00e2\u20ac\u201d without reps doing any additional work. Reduces time-to-first-response from days (manual tracking) to under 4 hours (triggered).\n**Hook:** \"Right now your best leads \u00e2\u20ac\u201d the ones opening your emails multiple times \u00e2\u20ac\u201d are probably getting the same follow-up as everyone else, or worse, slipping through because a rep forgot to circle back.\"\n\n---\n\n**Quick pitch summary**\n- AI lead scoring from LinkedIn data cuts qualification time by 30-50% and gives reps a prioritized list every morning instead of a raw pool\n- AI-personalized email generation reduces outreach writing from 2-3 hours/day to under 30 minutes per rep, with 2-4x better reply rates\n- Behavior-triggered follow-up sequences ensure no hot lead goes cold, booking 15-25% more meetings from the same pipeline without extra rep effort\n"}], "grading": null}, {"id": "eval-3-b2b-saas-sales-without_skill", "prompt": "What AI automation use cases should I pitch to a B2B SaaS startup? They have a 15-person sales team manually qualifying leads from LinkedIn and writing custom outreach emails. No automation in place yet. They're burning out their reps.", "eval_id": 3, "outputs": [{"name": "output.md", "type": "text", "content": "# AI Automation Use Cases \u00e2\u20ac\u201d B2B SaaS Startup (15-Person Sales Team)\n\n**Client Profile:** B2B SaaS startup. 15 sales reps manually qualifying leads from LinkedIn and hand-writing custom outreach emails. No automation in place. Reps are burning out.\n\n---\n\n## Use Case 1: AI-Powered Lead Qualification Engine\n\n**What it does:**\nAn AI system ingests raw LinkedIn leads and automatically scores each prospect against your ICP -- company size, industry, job title, tech stack signals, growth indicators. Reps only see leads that already meet your minimum qualification bar.\n\n**How it works:**\n- Lead data flows into a pipeline (Apify scrape or CSV upload)\n- AI model scores each lead against a defined ICP rubric\n- Qualified leads pushed to CRM with tags; unqualified filtered out\n- Reps review a pre-filtered, scored list every morning\n\n**ROI Framing:**\nYour reps are spending an estimated 2-3 hours per day manually sifting LinkedIn profiles. At 15 reps, that's 30-45 hours of selling time lost daily -- to a task a machine can do in minutes. If even 20% of recovered time converts to pipeline activity, and your average deal is $10K ARR, that's a meaningful revenue unlock within the first quarter. Reps stop grinding, start closing.\n\n**Build Complexity:** Medium. 2-3 weeks to deploy.\n\n---\n\n## Use Case 2: Personalized Outreach Email Generator\n\n**What it does:**\nAn AI system takes each qualified lead's profile data -- LinkedIn bio, company description, recent news, job title -- and generates a fully personalized cold email in your brand voice. Not a mail-merge with first name swapped in. A genuinely tailored email that references their specific context, speaks to a relevant pain, and opens with a hook tied to their world.\n\n**How it works:**\n- Qualified lead data feeds into an AI prompt chain\n- System pulls additional context via web search (company news, product page, LinkedIn posts)\n- AI generates a draft email per lead following your approved structure (hook, problem, credibility, CTA)\n- Rep reviews, approves or edits, sends from their Gmail or CRM sequence\n\n**ROI Framing:**\nA rep writing 15 custom emails a day spends 1.5-2 hours on copy alone. Multiply by 15 reps -- that's up to 30 hours of daily writing time, every day, producing zero revenue on its own. AI-generated personalization cuts that to 15-20 minutes of review per rep. Reply rates on genuinely personalized emails run 3-5x higher than templates. Better emails, faster, with reps who have energy left to handle the replies.\n\n**Build Complexity:** Low-Medium. 1-2 weeks to deploy with your brand voice dialed in.\n\n---\n\n## Use Case 3: LinkedIn Signal Monitor + Intent Trigger System\n\n**What it does:**\nAn AI system monitors your target account list for buying signals -- job postings indicating budget, LinkedIn posts signaling pain or growth, funding announcements, executive hires. When a signal fires, the system alerts the relevant rep with context and a suggested outreach angle tied to that specific signal.\n\n**How it works:**\n- Target account list loaded into monitoring system\n- System checks LinkedIn activity, company news, and job boards on a defined cadence (daily or weekly)\n- AI classifies signals by intent strength (high, medium, low)\n- High-intent signals trigger a rep notification with: signal summary, suggested hook, and a draft first-touch message\n\n**ROI Framing:**\nRight now your team is reaching out cold, with no timing advantage. This system gives reps a reason to reach out at exactly the right moment -- when a prospect is actively signaling pain or growth. Companies that reach out within 24 hours of a buying signal see response rates 5-7x higher than average cold outreach. You're not just automating work -- you're giving your team an unfair timing advantage that compounds every week.\n\n**Build Complexity:** Medium-High. 3-4 weeks for a full signal monitoring loop.\n\n---\n\n## Summary Table\n\n| Use Case | Time to Value | ROI Driver | Complexity |\n|---|---|---|---|\n| Lead Qualification Engine | 2-3 weeks | Reclaim 30-45 hrs/day of rep time | Medium |\n| Personalized Email Generator | 1-2 weeks | 3-5x reply rate lift, 30 hrs/day writing saved | Low-Medium |\n| Signal Monitor + Intent Triggers | 3-4 weeks | 5-7x response rate on timed outreach | Medium-High |\n\n**Recommended starting point:** Use Case 2 (email generator) -- fastest to deploy, immediate relief for burned-out reps, visible ROI within the first week.\n"}], "grading": null}], "previous_feedback": {}, "previous_outputs": {}, "benchmark": {"metadata": {"skill_name": "ai-use-case-generator", "skill_path": "<path/to/skill>", "executor_model": "<model-name>", "analyzer_model": "<model-name>", "timestamp": "2026-04-14T19:22:05Z", "evals_run": [1, 2, 3], "runs_per_configuration": 3}, "runs": [{"eval_id": 1, "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 68.6, "tokens": 22915, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Output contains exactly 3 use case sections", "passed": true, "evidence": "Three clearly delimited use cases: (1) AI Customer Support Inbox Automation, (2) Inventory Sync and Low-Stock Alert System, (3) Automated Returns Processing with Post-Return Recovery"}, {"text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field", "passed": true, "evidence": "UC1: '15-20 hours/week', '$900-$1,600/month'; UC2: '3-5 hours/week', '$500-$2,000'; UC3: '5-8 hours/week', '8-15%'"}, {"text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes", "passed": true, "evidence": "All 3 use cases have a bold 'Hook:' label followed by a sentence in double quotes"}, {"text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme", "passed": true, "evidence": "Explicitly labelled: Operational Efficiency, Revenue/Growth, Customer Experience \u00e2\u20ac\u201d all 3 dimensions covered"}, {"text": "Use cases reference specific details from the input (e.g., Shopify, inventory, returns, support emails) \u00e2\u20ac\u201d not generic 'AI automation' descriptions", "passed": true, "evidence": "Mentions Shopify API, spreadsheet elimination, returns email trigger, inventory threshold alerts \u00e2\u20ac\u201d all input-specific"}, {"text": "Output ends with a quick pitch summary section containing 3 bullets", "passed": true, "evidence": "Ends with '**Quick pitch summary**' followed by exactly 3 bullets"}], "notes": []}, {"eval_id": 2, "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 70.2, "tokens": 22861, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Output contains exactly 3 use case sections", "passed": true, "evidence": "Three use cases: (1) Automated Appointment Scheduling + No-Show Recovery, (2) Insurance Pre-Authorization + Claim Status Automation, (3) Automated Post-Visit Patient Follow-Up"}, {"text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field", "passed": true, "evidence": "UC1: '$80K-$120K/year', '2-3 hours/day'; UC2: '3-5 days to same-day', '8-15 hours/week', '10-20 days'; UC3: '2-3 hours/day', '15-25%'"}, {"text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes", "passed": true, "evidence": "All 3 use cases have a '**Hook:**' label with an outreach sentence in double quotes"}, {"text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme", "passed": true, "evidence": "Explicitly labeled: Operational Efficiency, Revenue/Growth, Customer Experience \u00e2\u20ac\u201d all 3 covered"}, {"text": "Use cases reference specific details from the input (e.g., multi-location, appointment scheduling, insurance claims, patient follow-up) \u00e2\u20ac\u201d not generic descriptions", "passed": true, "evidence": "References 3 locations, no-show rates in allied health, insurance pre-authorization, post-visit physio context (home exercises, treatment plan)"}, {"text": "Output ends with a quick pitch summary section containing 3 bullets", "passed": true, "evidence": "Ends with '**Quick pitch summary**' followed by exactly 3 bullets"}], "notes": []}, {"eval_id": 3, "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 68.6, "tokens": 22901, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Output contains exactly 3 use case sections", "passed": true, "evidence": "Three use cases: (1) AI-Powered Lead Qualification from LinkedIn, (2) Personalized Outreach Email Generation at Scale, (3) Automated Post-Outreach Follow-Up Sequences"}, {"text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field", "passed": true, "evidence": "UC1: '30-50%', '120 hours/week'; UC2: '2-4x reply rates', '1.5-2.5 hours per rep per day', '22-37 hours'; UC3: '15-25%', 'under 4 hours'"}, {"text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes", "passed": true, "evidence": "All 3 use cases have '**Hook:**' followed by a sentence in double quotes"}, {"text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme", "passed": true, "evidence": "Explicitly labeled: Operational Efficiency, Revenue/Growth, Customer Experience"}, {"text": "Use cases reference specific details from the input (e.g., LinkedIn lead qualification, outreach emails, 15-person sales team, burnout) \u00e2\u20ac\u201d not generic AI descriptions", "passed": true, "evidence": "References LinkedIn qualification, 15 reps, custom outreach emails from scratch, Proxycurl/Clay enrichment tools, email engagement signals"}, {"text": "Output ends with a quick pitch summary section containing 3 bullets", "passed": true, "evidence": "Ends with '**Quick pitch summary**' followed by exactly 3 bullets"}], "notes": []}, {"eval_id": 1, "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.6667, "passed": 4, "failed": 2, "total": 6, "time_seconds": 86.2, "tokens": 18833, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Output contains exactly 3 use case sections", "passed": true, "evidence": "Three use cases present: Customer Support Agent, Inventory Sync, Returns Processing"}, {"text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field", "passed": true, "evidence": "UC1: '$300+/week', '3+ hours/day'; UC2: '30-60 minutes/day', '$3,900/year'; UC3: '$750/month', '20-30% deflection rate'"}, {"text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes", "passed": false, "evidence": "No 'Hook:' lines present. Uses 'ROI framing:' bullet sections instead. No outreach-ready one-liners in quotes."}, {"text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme", "passed": true, "evidence": "Covers support (ops), inventory (revenue protection), returns (CX + ops) \u00e2\u20ac\u201d 2+ dimensions covered even without explicit labeling"}, {"text": "Use cases reference specific details from the input (e.g., Shopify, inventory, returns, support emails) \u00e2\u20ac\u201d not generic 'AI automation' descriptions", "passed": true, "evidence": "References Shopify, spreadsheet, handmade jewelry production constraints, returns \u00e2\u20ac\u201d all input-specific"}, {"text": "Output ends with a quick pitch summary section containing 3 bullets", "passed": false, "evidence": "Ends with a Summary Table (not 3 bullets). No 'Quick pitch summary' section."}], "notes": []}, {"eval_id": 2, "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.6667, "passed": 4, "failed": 2, "total": 6, "time_seconds": 59.9, "tokens": 18896, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Output contains exactly 3 use case sections", "passed": true, "evidence": "Three use cases: AI Appointment Scheduling, Automated Patient Follow-Up & Recall, AI-Assisted Insurance Claim Processing"}, {"text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field", "passed": true, "evidence": "UC1: '$400-750/week', '$20,000-39,000/year'; UC2: '$480-1,500 per patient', '$4,800-15,000/month'; UC3: '5-10% rejection rate', '$125-700/month'"}, {"text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes", "passed": false, "evidence": "No per-use-case Hook lines. Has a single closing 'Closing pitch line:' at the end but no individual hooks per use case."}, {"text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme", "passed": true, "evidence": "Covers scheduling/ops, patient retention/revenue, insurance/cash flow \u00e2\u20ac\u201d 3 different angles"}, {"text": "Use cases reference specific details from the input (e.g., multi-location, appointment scheduling, insurance claims, patient follow-up) \u00e2\u20ac\u201d not generic descriptions", "passed": true, "evidence": "References multi-location (explicitly '3 locations'), scheduling, insurance claims, patient follow-up calls \u00e2\u20ac\u201d all from input"}, {"text": "Output ends with a quick pitch summary section containing 3 bullets", "passed": false, "evidence": "Ends with a single 'Closing pitch line:' sentence, not a 3-bullet summary"}], "notes": []}, {"eval_id": 3, "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.6667, "passed": 4, "failed": 2, "total": 6, "time_seconds": 72.5, "tokens": 18997, "tool_calls": 0, "errors": 0}, "expectations": [{"text": "Output contains exactly 3 use case sections", "passed": true, "evidence": "Three use cases: Lead Qualification Engine, Personalized Outreach Email Generator, LinkedIn Signal Monitor + Intent Trigger System"}, {"text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field", "passed": true, "evidence": "UC1: '2-3 hours per day', '30-45 hours'; UC2: '3-5x higher' reply rates, '1.5-2 hours'; UC3: '5-7x higher' response rates, '24 hours'"}, {"text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes", "passed": false, "evidence": "No 'Hook:' lines. Uses 'ROI Framing:' narrative paragraphs. No outreach-ready one-liners in quotes."}, {"text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme", "passed": true, "evidence": "Lead qualification (ops efficiency), email generation (revenue), intent signals (timing/CX) \u00e2\u20ac\u201d 3 distinct angles"}, {"text": "Use cases reference specific details from the input (e.g., LinkedIn lead qualification, outreach emails, 15-person sales team, burnout) \u00e2\u20ac\u201d not generic AI descriptions", "passed": true, "evidence": "References LinkedIn profiles, 15 reps, custom cold emails, Apify scraping, rep burnout"}, {"text": "Output ends with a quick pitch summary section containing 3 bullets", "passed": false, "evidence": "Ends with a Summary Table and 'Recommended starting point' paragraph, not a 3-bullet pitch summary"}], "notes": []}], "run_summary": {"with_skill": {"pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0}, "time_seconds": {"mean": 69.1333, "stddev": 0.9238, "min": 68.6, "max": 70.2}, "tokens": {"mean": 22892.3333, "stddev": 28.0238, "min": 22861, "max": 22915}}, "without_skill": {"pass_rate": {"mean": 0.6667, "stddev": 0.0, "min": 0.6667, "max": 0.6667}, "time_seconds": {"mean": 72.8667, "stddev": 13.1538, "min": 59.9, "max": 86.2}, "tokens": {"mean": 18908.6667, "stddev": 82.7305, "min": 18833, "max": 18997}}, "delta": {"pass_rate": "+0.33", "time_seconds": "-3.7", "tokens": "+3984"}}, "notes": []}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>

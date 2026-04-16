@@ -1,0 +1,31 @@
+{
+  "eval_id": 2,
+  "eval_name": "physio-clinic",
+  "prompt": "I have a discovery call tomorrow with a physiotherapy clinic that has 3 locations. From what I know they do appointment scheduling manually, staff spend a lot of time on patient follow-up calls, and insurance claim processing takes forever. Give me AI use cases I can pitch them.",
+  "assertions": [
+    {
+      "text": "Output contains exactly 3 use case sections",
+      "type": "structural"
+    },
+    {
+      "text": "Each use case includes at least one specific metric — a number, percentage, time range, or dollar range — in the ROI field",
+      "type": "content"
+    },
+    {
+      "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+      "type": "structural"
+    },
+    {
+      "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) — not all three on the same theme",
+      "type": "content"
+    },
+    {
+      "text": "Use cases reference specific details from the input (e.g., multi-location, appointment scheduling, insurance claims, patient follow-up) — not generic descriptions",
+      "type": "specificity"
+    },
+    {
+      "text": "Output ends with a quick pitch summary section containing 3 bullets",
+      "type": "structural"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "eval_id": 2,
+  "eval_name": "physio-clinic",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Output contains exactly 3 use case sections",
+      "passed": true,
+      "evidence": "Three use cases: AI Appointment Scheduling, Automated Patient Follow-Up & Recall, AI-Assisted Insurance Claim Processing"
+    },
+    {
+      "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+      "passed": true,
+      "evidence": "UC1: '$400-750/week', '$20,000-39,000/year'; UC2: '$480-1,500 per patient', '$4,800-15,000/month'; UC3: '5-10% rejection rate', '$125-700/month'"
+    },
+    {
+      "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+      "passed": false,
+      "evidence": "No per-use-case Hook lines. Has a single closing 'Closing pitch line:' at the end but no individual hooks per use case."
+    },
+    {
+      "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+      "passed": true,
+      "evidence": "Covers scheduling/ops, patient retention/revenue, insurance/cash flow \u00e2\u20ac\u201d 3 different angles"
+    },
+    {
+      "text": "Use cases reference specific details from the input (e.g., multi-location, appointment scheduling, insurance claims, patient follow-up) \u00e2\u20ac\u201d not generic descriptions",
+      "passed": true,
+      "evidence": "References multi-location (explicitly '3 locations'), scheduling, insurance claims, patient follow-up calls \u00e2\u20ac\u201d all from input"
+    },
+    {
+      "text": "Output ends with a quick pitch summary section containing 3 bullets",
+      "passed": false,
+      "evidence": "Ends with a single 'Closing pitch line:' sentence, not a 3-bullet summary"
+    }
+  ],
+  "pass_count": 4,
+  "total_count": 6,
+  "pass_rate": 0.667,
+  "summary": {
+    "pass_rate": 0.6667,
+    "passed": 4,
+    "failed": 2,
+    "total": 6
+  }
+}

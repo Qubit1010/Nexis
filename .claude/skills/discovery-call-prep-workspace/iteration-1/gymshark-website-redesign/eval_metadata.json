@@ -1,0 +1,11 @@
+{
+  "eval_id": 1,
+  "eval_name": "gymshark-website-redesign",
+  "prompt": "discovery call prep for gymshark.com - they reached out after seeing our work and want to talk about website improvements",
+  "assertions": [
+    "Output performs web research on Gymshark (scrapes site or uses search) to ground the brief in real info",
+    "Brief includes specific details about Gymshark identifying them as a large, enterprise-scale brand",
+    "Output explicitly flags the size mismatch as a watch-out — Gymshark is not a typical small-agency prospect",
+    "Output includes a NexusPoint Positioning section with a specific angle for this prospect"
+  ]
+}

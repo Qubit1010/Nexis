@@ -60,12 +60,12 @@ function StatusBadge({ label, available, date, count }: BadgeProps) {
 export function SourceStatus({ data }: SourceStatusProps) {
   if (!data) return null;
 
-  const newsCount =
-    (data.news_brief.ideas?.length ?? 0);
+  const newsCount = data.news_brief.ideas?.length ?? 0;
   const ytCount =
     (data.youtube_brief.content_opportunities?.length ?? 0) +
     (data.youtube_brief.suggested_topics?.length ?? 0);
   const savedCount = data.saved_topics.ideas?.length ?? 0;
+  const articlesCount = data.saved_articles?.articles?.length ?? 0;
 
   return (
     <div className="flex flex-wrap gap-2 items-center">
@@ -82,9 +82,14 @@ export function SourceStatus({ data }: SourceStatusProps) {
         count={ytCount}
       />
       <StatusBadge
-        label="Saved Topics"
+        label="Content Opportunities"
         available={data.saved_topics.available}
         count={savedCount}
+      />
+      <StatusBadge
+        label="Saved Articles"
+        available={data.saved_articles?.available ?? false}
+        count={articlesCount}
       />
     </div>
   );

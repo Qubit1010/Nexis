@@ -10,6 +10,7 @@ Principles:
   - Uses Proxycurl recent posts data when available for hyper-personalization
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -24,12 +25,66 @@ def _truncate(text: str, max_len: int) -> str:
     return truncated + "..."
 
 
+def generate_connection_note_gpt(lead: dict) -> str | None:
+    """Generate a personalized connection note via GPT-4o-mini.
+
+    Returns the note string, or None if the API call fails.
+    """
+    try:
+        from openai import OpenAI
+        from dotenv import load_dotenv
+        load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+        api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+        if not api_key:
+            return None
+        client = OpenAI(api_key=api_key)
+
+        first_name = (lead.get("first_name") or "").strip()
+        title = (lead.get("title") or "").strip()
+        company = (lead.get("company") or "").strip()
+        industry = (lead.get("industry") or "").strip()
+
+        prompt = f"""Write a LinkedIn connection request note for this person:
+
+Name: {first_name}
+Title: {title}
+Company: {company}
+Industry: {industry}
+
+Rules:
+- Start with: Hey {first_name},
+- One specific observation about their work, role, or company (1 sentence) — not generic praise
+- Why you want to connect — peer angle, not sales
+- End with: Looking forward to being in your network.
+- Max 300 characters total — count carefully
+- No CTA, no ask, no pitch
+- Sound natural and human, not corporate
+- No emojis, no symbols
+
+Output ONLY the message text. No quotes, no explanation."""
+
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=120,
+            temperature=0.9,
+        )
+        note = response.choices[0].message.content.strip().replace("\n", " ").replace("  ", " ")
+        return _truncate(note, 300)
+    except Exception:
+        return None
+
+
 def generate_connection_note(lead: dict, personalization: dict, enrichment: dict = None) -> str:
     """Generate a LinkedIn connection request note (≤300 chars).
 
-    References something specific — post, company, or industry context.
-    Never pitches. Just creates a reason to connect.
+    Tries GPT-4o-mini first for genuine personalization, falls back to
+    deterministic templates if the API is unavailable.
     """
+    gpt_note = generate_connection_note_gpt(lead)
+    if gpt_note:
+        return gpt_note
+
     first_name = (lead.get("first_name") or "").strip()
     company = (lead.get("company") or "your company").strip()
     industry = (lead.get("industry") or "").strip()
@@ -47,17 +102,28 @@ def generate_connection_note(lead: dict, personalization: dict, enrichment: dict
         else:
             recent_posts = posts_raw or []
 
+    company_size = (lead.get("company_size") or "").strip()
+
     if recent_posts and recent_posts[0].get("text"):
-        # Reference their most recent post
-        post_text = recent_posts[0]["text"][:100]
-        note = f"Hey {first_name}, saw your post about {post_text[:60].rstrip('., ')}... resonated with what I'm seeing in the {industry} space. Would love to connect."
+        # Reference their most recent post — most specific signal available
+        post_snippet = recent_posts[0]["text"][:60].rstrip("., ")
+        note = f"Hey {first_name}, saw your recent post on {post_snippet}. Exploring similar ideas in the {industry} space and would love to exchange perspectives. Looking forward to being in your network."
     elif personalization.get("hook_2"):
-        # Use the pain hook
-        hook = personalization["hook_2"][:150]
-        note = f"Hey {first_name} — {hook} Working with {industry} founders on this. Would love to connect."
+        # Use the pain hook — cold reading based on observable signals
+        hook = personalization["hook_2"][:120].rstrip("., ")
+        note = f"Hey {first_name}, {hook}. Doing similar work in the {industry} space and would love to connect with someone thinking about this the same way. Looking forward to being in your network."
+    elif company_size and company_size.isdigit() and int(company_size) <= 5:
+        # Small team cold read — lean ops reality
+        note = f"Hey {first_name}, noticed {company} is staying intentionally lean. That's a deliberate call most people don't make. Would love to connect with a founder building it that way. Looking forward to being in your network."
+    elif company_size and company_size.isdigit() and int(company_size) >= 20:
+        # Larger team cold read — coordination overhead reality
+        note = f"Hey {first_name}, {company} looks like it's past the scrappy stage and into the scale-without-losing-speed phase. That's where things get genuinely interesting. Looking forward to being in your network."
+    elif industry:
+        # Cold read on industry + company
+        note = f"Hey {first_name}, came across {company} while exploring the {industry} space. The stage you're building through is one I find genuinely interesting to follow. Looking forward to being in your network."
     else:
-        # Generic but specific connection note
-        note = f"Hey {first_name}, building in the {industry} space and came across {company}. Doing similar work with AI automation. Would love to connect."
+        # No industry — lean on company name alone
+        note = f"Hey {first_name}, came across {company} and the work you're building caught my attention. The founder-led stage is one I find genuinely interesting to follow. Looking forward to being in your network."
 
     return _truncate(note, 300)
 
@@ -76,6 +142,7 @@ def generate_linkedin_sequence(lead: dict, personalization: dict, enrichment: di
     first_name = (lead.get("first_name") or "there").strip()
     company = (lead.get("company") or "your company").strip()
     industry = (lead.get("industry") or "your industry").strip()
+    company_size = (lead.get("company_size") or "").strip()
 
     connection_note = generate_connection_note(lead, personalization, enrichment)
 
@@ -88,12 +155,28 @@ def generate_linkedin_sequence(lead: dict, personalization: dict, enrichment: di
     value_prop = personalization.get("value_prop", "")
 
     # DM 1: Warm opener after connection (Day 0)
-    dm_1 = (
-        f"Hey {first_name}, thanks for connecting!\n\n"
-        f"I came across {company} while researching {industry} companies — "
-        f"you're doing interesting work there.\n\n"
-        f"What's the biggest challenge on your plate right now?"
-    )
+    # Cold reading label + genuine question — no pitch, no mention of services
+    if company_size and company_size.isdigit() and int(company_size) <= 5:
+        dm_1 = (
+            f"Hey {first_name}, thanks for connecting!\n\n"
+            f"It looks like you're running {company} pretty lean — that usually means "
+            f"you're wearing more hats than you'd like.\n\n"
+            f"What's the part of the business that's eating the most of your time right now?"
+        )
+    elif company_size and company_size.isdigit() and int(company_size) >= 20:
+        dm_1 = (
+            f"Hey {first_name}, thanks for connecting!\n\n"
+            f"It sounds like {company} has scaled to the point where keeping everyone "
+            f"moving in the same direction becomes its own full-time job.\n\n"
+            f"What's the biggest friction point at your stage right now?"
+        )
+    else:
+        dm_1 = (
+            f"Hey {first_name}, thanks for connecting!\n\n"
+            f"It looks like {company} is at an interesting stage in the {industry} space — "
+            f"the kind where the decisions you make now compound fast.\n\n"
+            f"What's the biggest challenge on your plate right now?"
+        )
 
     # DM 2: Value add (Day 4)
     if pain_1:

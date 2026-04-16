@@ -1,0 +1,31 @@
+{
+  "eval_id": 3,
+  "eval_name": "b2b-saas-sales",
+  "prompt": "What AI automation use cases should I pitch to a B2B SaaS startup? They have a 15-person sales team manually qualifying leads from LinkedIn and writing custom outreach emails. No automation in place yet. They're burning out their reps.",
+  "assertions": [
+    {
+      "text": "Output contains exactly 3 use case sections",
+      "type": "structural"
+    },
+    {
+      "text": "Each use case includes at least one specific metric — a number, percentage, time range, or dollar range — in the ROI field",
+      "type": "content"
+    },
+    {
+      "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+      "type": "structural"
+    },
+    {
+      "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) — not all three on the same theme",
+      "type": "content"
+    },
+    {
+      "text": "Use cases reference specific details from the input (e.g., LinkedIn lead qualification, outreach emails, 15-person sales team, burnout) — not generic AI descriptions",
+      "type": "specificity"
+    },
+    {
+      "text": "Output ends with a quick pitch summary section containing 3 bullets",
+      "type": "structural"
+    }
+  ]
+}

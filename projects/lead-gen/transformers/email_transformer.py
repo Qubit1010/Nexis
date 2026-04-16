@@ -12,11 +12,76 @@ Sequence structure:
   Email 4 (Day 16): Breakup email ("Should I close your file?")
 """
 
+import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config import EMAIL_SIGNATURE
+
+
+def generate_cold_email_touch1(lead: dict) -> dict:
+    """Generate Touch 1 cold email subject + body. No API, pure template.
+
+    Follows copywriting_principles.md:
+      - Voss cold read opener (observable fact, not flattery)
+      - No pitch in Touch 1
+      - Give-first offer (free Loom teardown)
+      - No-oriented CTA
+    """
+    company    = (lead.get("company") or "your company").strip()
+    first_name = (lead.get("first_name") or "").strip()
+    greeting   = f"Hi {first_name}" if first_name else "Hi"
+    reviews    = (lead.get("reviews") or "").strip()
+    loc_years  = (lead.get("loc_years") or "").strip()
+
+    years_match = re.search(r'(\d+)\+?\s*years? in business', loc_years, re.I)
+    years = years_match.group(1) if years_match else ""
+    city = ""
+    if "·" in loc_years:
+        city_part = loc_years.split("·", 1)[-1].strip()
+        city = city_part.split(",")[0].strip()
+
+    subject = f"quick question about {company}"
+
+    if reviews:
+        snippet = reviews[:120].rstrip('., "\'')
+        opener = (
+            f"Came across {company} — a client of yours mentioned \"{snippet}...\"\n\n"
+            f"That kind of result usually means the delivery is dialled in. "
+            f"The challenge most agencies face at that point is whether the ops behind it "
+            f"can scale without adding headcount."
+        )
+    elif years and city:
+        opener = (
+            f"It looks like {company} has been running for {years}+ years out of {city} — "
+            f"that kind of track record usually means the delivery is solid, "
+            f"but the backend systems are still the original ones from when you were half the size."
+        )
+    elif years:
+        opener = (
+            f"It looks like {company} has been running for {years}+ years — "
+            f"that kind of longevity usually means delivery is solid, "
+            f"but the ops behind it are still running on the original setup."
+        )
+    else:
+        opener = (
+            f"It looks like {company} is at the stage where the client work is running well, "
+            f"but the operational side — reporting, onboarding, follow-up — "
+            f"starts eating time that should go into growth."
+        )
+
+    body = (
+        f"{greeting},\n\n"
+        f"{opener}\n\n"
+        f"I do free 5-minute Loom workflow teardowns for agencies — "
+        f"map out exactly what I'd automate first, specific to how {company} operates. "
+        f"No pitch, just the blueprint.\n\n"
+        f"Would it be a bad idea to send one over?\n\n"
+        f"Aleem | NexusPoint\nnexuspointai.com"
+    )
+
+    return {"subject": subject, "body": body}
 
 
 def generate_email_sequence(lead: dict, personalization: dict) -> dict:
@@ -32,6 +97,8 @@ def generate_email_sequence(lead: dict, personalization: dict) -> dict:
     first_name = (lead.get("first_name") or "there").strip()
     company = (lead.get("company") or "your company").strip()
     industry = (lead.get("industry") or "your industry").strip()
+    company_size = (lead.get("company_size") or "").strip()
+    pain_signal = (lead.get("pain_signal") or "").strip()
 
     # Best hook — use first non-empty hook
     hooks = [
@@ -69,31 +136,43 @@ def generate_email_sequence(lead: dict, personalization: dict) -> dict:
             f"Worth a 15-min call to see if it's relevant?\n\n"
             f"{EMAIL_SIGNATURE}"
         )
-    else:
+    elif pain_signal:
+        # Cold reading from observable signal (CMS, tech stack, etc.)
         email_1_body = (
             f"Hi {first_name},\n\n"
-            f"Quick question — is {company} running into any bottlenecks with operations or tech right now?\n\n"
-            f"We help {industry} companies automate the manual stuff so the team can focus on growth.\n\n"
-            f"Worth a 15-min call?\n\n"
+            f"It looks like {company} might be running into some friction on the tech side — {pain_signal.lower()}\n\n"
+            f"I do free 5-minute Loom teardowns for {industry} founders this week — "
+            f"I map out exactly what I'd fix and why, specific to {company}. No pitch, just the blueprint.\n\n"
+            f"Would it be a bad idea to send one over?\n\n"
+            f"{EMAIL_SIGNATURE}"
+        )
+    elif company_size and company_size.isdigit() and int(company_size) <= 5:
+        # Small lean team — cold reading on resource constraints
+        email_1_body = (
+            f"Hi {first_name},\n\n"
+            f"It sounds like {company} is running lean right now — which usually means "
+            f"the manual operational work falls on whoever has a spare hour.\n\n"
+            f"I do free 5-minute Loom workflow teardowns for {industry} founders — "
+            f"I map out how to automate the stuff eating your time, specific to {company}. No pitch.\n\n"
+            f"Would it be a bad idea to send one over?\n\n"
+            f"{EMAIL_SIGNATURE}"
+        )
+    else:
+        # Generic cold read on growth stage
+        email_1_body = (
+            f"Hi {first_name},\n\n"
+            f"It looks like {company} is at the stage where operational overhead starts "
+            f"compounding — more clients, same team, more manual work filling the gaps.\n\n"
+            f"I do free 5-minute Loom workflow teardowns for {industry} founders — "
+            f"I map out exactly what I'd automate first, specific to {company}. No pitch, just the blueprint.\n\n"
+            f"Would it be a bad idea to send one over?\n\n"
             f"{EMAIL_SIGNATURE}"
         )
 
-    # --- Email 2: Value add ---
-    email_2_body = (
-        f"Hi {first_name},\n\n"
-        f"Thought this might be useful — one of the most common bottlenecks we see in {industry} companies "
-        f"at {company}'s stage is operational work that doesn't scale with the team.\n\n"
-        f"Not pitching anything. Just wanted to share the pattern in case it's useful.\n\n"
-        f"{EMAIL_SIGNATURE}"
-    )
-
-    # Inject second pain point if available
+    # --- Email 2: Value add — quantified social proof + give-first, no pitch ---
     if len(pain_points) > 1:
         pp2 = pain_points[1]
-        if isinstance(pp2, dict):
-            insight = pp2.get("pain", "")
-        else:
-            insight = str(pp2)
+        insight = pp2.get("pain", "") if isinstance(pp2, dict) else str(pp2)
         if insight:
             email_2_body = (
                 f"Hi {first_name},\n\n"
@@ -101,6 +180,24 @@ def generate_email_sequence(lead: dict, personalization: dict) -> dict:
                 f"Not pitching anything — just flagging what usually signals a scaling bottleneck at your stage.\n\n"
                 f"{EMAIL_SIGNATURE}"
             )
+        else:
+            email_2_body = (
+                f"Hi {first_name},\n\n"
+                f"Wanted to share something concrete. Worked with a {industry} company recently — "
+                f"they were spending 10+ hours a week on manual reporting and client data syncing. "
+                f"Mapped it out in a teardown and cut it to under 90 minutes with a simple automation.\n\n"
+                f"Not pitching — just figured it might be relevant given where {company} is.\n\n"
+                f"{EMAIL_SIGNATURE}"
+            )
+    else:
+        email_2_body = (
+            f"Hi {first_name},\n\n"
+            f"Wanted to share something concrete. Worked with a {industry} company recently — "
+            f"they were spending 10+ hours a week on manual reporting and client data syncing. "
+            f"Mapped it out in a teardown and cut it to under 90 minutes with a simple automation.\n\n"
+            f"Not pitching — just figured it might be relevant given where {company} is.\n\n"
+            f"{EMAIL_SIGNATURE}"
+        )
 
     # --- Email 3: Soft follow-up + Loom offer ---
     email_3_body = (

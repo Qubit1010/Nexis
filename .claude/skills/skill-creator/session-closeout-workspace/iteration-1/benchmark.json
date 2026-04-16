@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "skill_name": "session-closeout",
+    "skill_path": ".claude/skills/session-closeout",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-04-12T13:00:00Z",
+    "evals_run": [0, 1, 2],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "full-session-closeout",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 71.5,
+        "tokens": 24696,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output contains a session summary with a 'What Got Done' section listing specific items", "passed": true, "evidence": "Has '### What Got Done' section with 5 specific bullet points"},
+        {"text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved", "passed": true, "evidence": "Ends with exact 'Session closed.' block with all 4 fields"},
+        {"text": "Output references running git status or git diff to ground the summary", "passed": true, "evidence": "Agent explicitly ran git status and git diff --stat HEAD"},
+        {"text": "Output checks context/current-priorities.md and makes a judgment on whether it needs updating", "passed": true, "evidence": "'Priorities Check' section explicitly states file was just updated this session"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "full-session-closeout",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 73.6,
+        "tokens": 24016,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output contains a session summary with a 'What Got Done' section listing specific items", "passed": true, "evidence": "Has 'What Was Built / Changed' section with specific items"},
+        {"text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved", "passed": false, "evidence": "No standardized closeout block — ends with 'Open Threads' section, no 'Session closed.' block"},
+        {"text": "Output references running git status or git diff to ground the summary", "passed": true, "evidence": "Agent ran git status and git diff --stat"},
+        {"text": "Output checks context/current-priorities.md and makes a judgment on whether it needs updating", "passed": true, "evidence": "'Priorities Check' section confirms file is accurate"}
+      ],
+      "notes": ["Without skill still produced good output but missing standardized close block"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "lead-gen-with-explicit-decision",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 51.5,
+        "tokens": 21834,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output contains a session summary with specific items from the lead-gen work", "passed": true, "evidence": "'### What Got Done' section with 5 specific bullets including sheets_importer.py and linkedin_transformer rewrite"},
+        {"text": "The 'drop product hunt' decision is explicitly extracted with correct DECISION | REASONING | CONTEXT format", "passed": true, "evidence": "Decision 1: '[2026-04-12] DECISION: Dropped Product Hunt as a lead source | REASONING: Signal quality too low | CONTEXT: projects/lead-gen scraper consolidation'"},
+        {"text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved", "passed": true, "evidence": "Ends with 'Session closed.' block with all 4 fields"},
+        {"text": "Output checks priorities and makes a judgment", "passed": true, "evidence": "States lead-gen is already in 'What's Live', no update needed"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "lead-gen-with-explicit-decision",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 51.0,
+        "tokens": 20286,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output contains a session summary with specific items from the lead-gen work", "passed": true, "evidence": "Lists sheets_importer.py, linkedin_transformer rewrite, 4 deleted scrapers"},
+        {"text": "The 'drop product hunt' decision is explicitly extracted with correct DECISION | REASONING | CONTEXT format", "passed": true, "evidence": "Decision uses correct pipe format with DECISION | REASONING | CONTEXT fields"},
+        {"text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved", "passed": false, "evidence": "No 'Session closed.' block — ends with a suggested commit message instead"},
+        {"text": "Output checks priorities and makes a judgment", "passed": true, "evidence": "'Priorities Check' section confirms current priorities hold, no update needed"}
+      ],
+      "notes": ["Added a commit message which is useful but not part of the spec"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "casual-phrasing-triggers-full-workflow",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 65.8,
+        "tokens": 22529,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output runs git status/diff and grounds the summary in actual file changes", "passed": true, "evidence": "Agent ran git status and git diff --stat HEAD, summary references real changed files"},
+        {"text": "Output extracts at least one decision worth logging", "passed": true, "evidence": "3 decisions extracted with correct pipe format"},
+        {"text": "Output includes the final closeout block with all 4 fields", "passed": true, "evidence": "Ends with 'Session closed.' block with all 4 fields populated"},
+        {"text": "Output explicitly checks context/current-priorities.md for whether it needs updating", "passed": true, "evidence": "'Priorities look current -- no update needed.' stated explicitly"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "casual-phrasing-triggers-full-workflow",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 89.3,
+        "tokens": 31295,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output runs git status/diff and grounds the summary in actual file changes", "passed": true, "evidence": "Agent ran git diff and git status, grounded summary in real files"},
+        {"text": "Output extracts at least one decision worth logging", "passed": true, "evidence": "'Key Decisions Worth Logging' section has 3 decisions (format less structured)"},
+        {"text": "Output includes the final closeout block with all 4 fields", "passed": false, "evidence": "No standardized closeout block — output ends with decisions list"},
+        {"text": "Output explicitly checks context/current-priorities.md for whether it needs updating", "passed": false, "evidence": "No priorities check performed. current-priorities.md not mentioned."}
+      ],
+      "notes": ["Most verbose output of all runs (31k tokens) but missed 2 key assertions"]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 62.9, "stddev": 10.1, "min": 51.5, "max": 71.5},
+      "tokens": {"mean": 23020, "stddev": 1456, "min": 21834, "max": 24696}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.67, "stddev": 0.12, "min": 0.5, "max": 0.75},
+      "time_seconds": {"mean": 71.3, "stddev": 19.6, "min": 51.0, "max": 89.3},
+      "tokens": {"mean": 25199, "stddev": 5684, "min": 20286, "max": 31295}
+    },
+    "delta": {
+      "pass_rate": "+0.33",
+      "time_seconds": "-8.4",
+      "tokens": "-2179"
+    }
+  },
+  "notes": [
+    "The 'final closeout block' assertion is the most discriminating — with_skill passes 3/3, without_skill passes 0/3. This is the clearest value-add of the skill.",
+    "Priorities check assertion is also discriminating — without_skill failed it on eval 2 (casual phrasing), suggesting the skill is needed to enforce the full workflow on ambiguous prompts.",
+    "Decision extraction is NOT discriminating — both configs pass it consistently. The without_skill baseline naturally extracts decisions when the user mentions them. The skill adds the standardized format.",
+    "Without-skill runs used more tokens on average (25k vs 23k) and were slower, suggesting the skill actually streamlines execution.",
+    "Eval 2 (casual phrasing) is the toughest test — without_skill dropped to 50% pass rate vs 100% with_skill. The skill is most valuable when the user's prompt is ambiguous."
+  ]
+}

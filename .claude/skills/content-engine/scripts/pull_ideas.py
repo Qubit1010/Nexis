@@ -338,9 +338,9 @@ def pull_saved_topics():
             if not row:
                 continue
 
-            # Skip rows already used — include empty status and "New"
+            # Only show rows with status "New" or empty (not yet tagged)
             status = col(row, "Status").strip().lower()
-            if status and status not in ("new", ""):
+            if status not in ("new", ""):
                 continue
 
             title = col(row, "Title").strip()
@@ -367,7 +367,7 @@ def pull_saved_topics():
 
             result["ideas"].append(
                 {
-                    "source": "saved-topics",
+                    "source": "content-opportunities",
                     "title": title,
                     "format": fmt,
                     "timeliness": timeliness,
@@ -378,6 +378,77 @@ def pull_saved_topics():
                     "date_saved": col(row, "Date Saved").strip(),
                     "brief_date": col(row, "Brief Date").strip(),
                     "platform_affinity": get_affinity(fmt, timeliness),
+                    "saved_bonus": True,
+                }
+            )
+
+        result["available"] = True
+
+    except Exception as e:
+        result["error"] = str(e)
+
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Source 4: Saved Articles Google Sheet
+# ---------------------------------------------------------------------------
+
+def pull_saved_articles():
+    result = {"available": False, "articles": [], "error": None}
+    try:
+        data = run_gws(
+            [
+                "sheets",
+                "spreadsheets",
+                "values",
+                "get",
+                "--params",
+                json.dumps(
+                    {
+                        "spreadsheetId": SAVED_TOPICS_SHEET_ID,
+                        "range": "Saved Articles",
+                    }
+                ),
+            ]
+        )
+        values = data.get("values", [])
+        if not values:
+            result["error"] = "Saved Articles sheet is empty or has no data"
+            return result
+
+        headers = [h.strip() for h in values[0]]
+
+        def col(row, name):
+            try:
+                idx = headers.index(name)
+                return row[idx] if idx < len(row) else ""
+            except ValueError:
+                return ""
+
+        for row in values[1:]:
+            if not row:
+                continue
+
+            # Only show rows with status "New" or empty (not yet tagged)
+            status = col(row, "Status").strip().lower()
+            if status not in ("new", ""):
+                continue
+
+            title = col(row, "Title").strip()
+            if not title:
+                continue
+
+            result["articles"].append(
+                {
+                    "source": "saved-articles",
+                    "title": title,
+                    "publication": col(row, "Source").strip(),
+                    "url": col(row, "URL").strip(),
+                    "tldr": col(row, "TLDR").strip(),
+                    "date_saved": col(row, "Date Saved").strip(),
+                    "brief_date": col(row, "Brief Date").strip(),
+                    "platform_affinity": get_affinity("blog"),
                     "saved_bonus": True,
                 }
             )
@@ -409,11 +480,16 @@ def main():
     if saved_topics.get("error"):
         errors.append(f"saved-topics: {saved_topics['error']}")
 
+    saved_articles = pull_saved_articles()
+    if saved_articles.get("error"):
+        errors.append(f"saved-articles: {saved_articles['error']}")
+
     output = {
         "generated_at": datetime.now().isoformat(),
         "news_brief": news_brief,
         "youtube_brief": youtube_brief,
         "saved_topics": saved_topics,
+        "saved_articles": saved_articles,
         "errors": errors,
     }
 

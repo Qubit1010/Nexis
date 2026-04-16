@@ -1,0 +1,46 @@
+{
+  "eval_id": 3,
+  "eval_name": "b2b-saas-sales",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Output contains exactly 3 use case sections",
+      "passed": true,
+      "evidence": "Three use cases: Lead Qualification Engine, Personalized Outreach Email Generator, LinkedIn Signal Monitor + Intent Trigger System"
+    },
+    {
+      "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+      "passed": true,
+      "evidence": "UC1: '2-3 hours per day', '30-45 hours'; UC2: '3-5x higher' reply rates, '1.5-2 hours'; UC3: '5-7x higher' response rates, '24 hours'"
+    },
+    {
+      "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+      "passed": false,
+      "evidence": "No 'Hook:' lines. Uses 'ROI Framing:' narrative paragraphs. No outreach-ready one-liners in quotes."
+    },
+    {
+      "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+      "passed": true,
+      "evidence": "Lead qualification (ops efficiency), email generation (revenue), intent signals (timing/CX) \u00e2\u20ac\u201d 3 distinct angles"
+    },
+    {
+      "text": "Use cases reference specific details from the input (e.g., LinkedIn lead qualification, outreach emails, 15-person sales team, burnout) \u00e2\u20ac\u201d not generic AI descriptions",
+      "passed": true,
+      "evidence": "References LinkedIn profiles, 15 reps, custom cold emails, Apify scraping, rep burnout"
+    },
+    {
+      "text": "Output ends with a quick pitch summary section containing 3 bullets",
+      "passed": false,
+      "evidence": "Ends with a Summary Table and 'Recommended starting point' paragraph, not a 3-bullet pitch summary"
+    }
+  ],
+  "pass_count": 4,
+  "total_count": 6,
+  "pass_rate": 0.667,
+  "summary": {
+    "pass_rate": 0.6667,
+    "passed": 4,
+    "failed": 2,
+    "total": 6
+  }
+}

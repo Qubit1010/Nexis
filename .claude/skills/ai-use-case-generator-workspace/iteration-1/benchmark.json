@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "skill_name": "ai-use-case-generator",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-04-14T19:22:05Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 68.6,
+        "tokens": 22915,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains exactly 3 use case sections",
+          "passed": true,
+          "evidence": "Three clearly delimited use cases: (1) AI Customer Support Inbox Automation, (2) Inventory Sync and Low-Stock Alert System, (3) Automated Returns Processing with Post-Return Recovery"
+        },
+        {
+          "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+          "passed": true,
+          "evidence": "UC1: '15-20 hours/week', '$900-$1,600/month'; UC2: '3-5 hours/week', '$500-$2,000'; UC3: '5-8 hours/week', '8-15%'"
+        },
+        {
+          "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+          "passed": true,
+          "evidence": "All 3 use cases have a bold 'Hook:' label followed by a sentence in double quotes"
+        },
+        {
+          "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+          "passed": true,
+          "evidence": "Explicitly labelled: Operational Efficiency, Revenue/Growth, Customer Experience \u00e2\u20ac\u201d all 3 dimensions covered"
+        },
+        {
+          "text": "Use cases reference specific details from the input (e.g., Shopify, inventory, returns, support emails) \u00e2\u20ac\u201d not generic 'AI automation' descriptions",
+          "passed": true,
+          "evidence": "Mentions Shopify API, spreadsheet elimination, returns email trigger, inventory threshold alerts \u00e2\u20ac\u201d all input-specific"
+        },
+        {
+          "text": "Output ends with a quick pitch summary section containing 3 bullets",
+          "passed": true,
+          "evidence": "Ends with '**Quick pitch summary**' followed by exactly 3 bullets"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 70.2,
+        "tokens": 22861,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains exactly 3 use case sections",
+          "passed": true,
+          "evidence": "Three use cases: (1) Automated Appointment Scheduling + No-Show Recovery, (2) Insurance Pre-Authorization + Claim Status Automation, (3) Automated Post-Visit Patient Follow-Up"
+        },
+        {
+          "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+          "passed": true,
+          "evidence": "UC1: '$80K-$120K/year', '2-3 hours/day'; UC2: '3-5 days to same-day', '8-15 hours/week', '10-20 days'; UC3: '2-3 hours/day', '15-25%'"
+        },
+        {
+          "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+          "passed": true,
+          "evidence": "All 3 use cases have a '**Hook:**' label with an outreach sentence in double quotes"
+        },
+        {
+          "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+          "passed": true,
+          "evidence": "Explicitly labeled: Operational Efficiency, Revenue/Growth, Customer Experience \u00e2\u20ac\u201d all 3 covered"
+        },
+        {
+          "text": "Use cases reference specific details from the input (e.g., multi-location, appointment scheduling, insurance claims, patient follow-up) \u00e2\u20ac\u201d not generic descriptions",
+          "passed": true,
+          "evidence": "References 3 locations, no-show rates in allied health, insurance pre-authorization, post-visit physio context (home exercises, treatment plan)"
+        },
+        {
+          "text": "Output ends with a quick pitch summary section containing 3 bullets",
+          "passed": true,
+          "evidence": "Ends with '**Quick pitch summary**' followed by exactly 3 bullets"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 68.6,
+        "tokens": 22901,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains exactly 3 use case sections",
+          "passed": true,
+          "evidence": "Three use cases: (1) AI-Powered Lead Qualification from LinkedIn, (2) Personalized Outreach Email Generation at Scale, (3) Automated Post-Outreach Follow-Up Sequences"
+        },
+        {
+          "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+          "passed": true,
+          "evidence": "UC1: '30-50%', '120 hours/week'; UC2: '2-4x reply rates', '1.5-2.5 hours per rep per day', '22-37 hours'; UC3: '15-25%', 'under 4 hours'"
+        },
+        {
+          "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+          "passed": true,
+          "evidence": "All 3 use cases have '**Hook:**' followed by a sentence in double quotes"
+        },
+        {
+          "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+          "passed": true,
+          "evidence": "Explicitly labeled: Operational Efficiency, Revenue/Growth, Customer Experience"
+        },
+        {
+          "text": "Use cases reference specific details from the input (e.g., LinkedIn lead qualification, outreach emails, 15-person sales team, burnout) \u00e2\u20ac\u201d not generic AI descriptions",
+          "passed": true,
+          "evidence": "References LinkedIn qualification, 15 reps, custom outreach emails from scratch, Proxycurl/Clay enrichment tools, email engagement signals"
+        },
+        {
+          "text": "Output ends with a quick pitch summary section containing 3 bullets",
+          "passed": true,
+          "evidence": "Ends with '**Quick pitch summary**' followed by exactly 3 bullets"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6667,
+        "passed": 4,
+        "failed": 2,
+        "total": 6,
+        "time_seconds": 86.2,
+        "tokens": 18833,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains exactly 3 use case sections",
+          "passed": true,
+          "evidence": "Three use cases present: Customer Support Agent, Inventory Sync, Returns Processing"
+        },
+        {
+          "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+          "passed": true,
+          "evidence": "UC1: '$300+/week', '3+ hours/day'; UC2: '30-60 minutes/day', '$3,900/year'; UC3: '$750/month', '20-30% deflection rate'"
+        },
+        {
+          "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+          "passed": false,
+          "evidence": "No 'Hook:' lines present. Uses 'ROI framing:' bullet sections instead. No outreach-ready one-liners in quotes."
+        },
+        {
+          "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+          "passed": true,
+          "evidence": "Covers support (ops), inventory (revenue protection), returns (CX + ops) \u00e2\u20ac\u201d 2+ dimensions covered even without explicit labeling"
+        },
+        {
+          "text": "Use cases reference specific details from the input (e.g., Shopify, inventory, returns, support emails) \u00e2\u20ac\u201d not generic 'AI automation' descriptions",
+          "passed": true,
+          "evidence": "References Shopify, spreadsheet, handmade jewelry production constraints, returns \u00e2\u20ac\u201d all input-specific"
+        },
+        {
+          "text": "Output ends with a quick pitch summary section containing 3 bullets",
+          "passed": false,
+          "evidence": "Ends with a Summary Table (not 3 bullets). No 'Quick pitch summary' section."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6667,
+        "passed": 4,
+        "failed": 2,
+        "total": 6,
+        "time_seconds": 59.9,
+        "tokens": 18896,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains exactly 3 use case sections",
+          "passed": true,
+          "evidence": "Three use cases: AI Appointment Scheduling, Automated Patient Follow-Up & Recall, AI-Assisted Insurance Claim Processing"
+        },
+        {
+          "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+          "passed": true,
+          "evidence": "UC1: '$400-750/week', '$20,000-39,000/year'; UC2: '$480-1,500 per patient', '$4,800-15,000/month'; UC3: '5-10% rejection rate', '$125-700/month'"
+        },
+        {
+          "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+          "passed": false,
+          "evidence": "No per-use-case Hook lines. Has a single closing 'Closing pitch line:' at the end but no individual hooks per use case."
+        },
+        {
+          "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+          "passed": true,
+          "evidence": "Covers scheduling/ops, patient retention/revenue, insurance/cash flow \u00e2\u20ac\u201d 3 different angles"
+        },
+        {
+          "text": "Use cases reference specific details from the input (e.g., multi-location, appointment scheduling, insurance claims, patient follow-up) \u00e2\u20ac\u201d not generic descriptions",
+          "passed": true,
+          "evidence": "References multi-location (explicitly '3 locations'), scheduling, insurance claims, patient follow-up calls \u00e2\u20ac\u201d all from input"
+        },
+        {
+          "text": "Output ends with a quick pitch summary section containing 3 bullets",
+          "passed": false,
+          "evidence": "Ends with a single 'Closing pitch line:' sentence, not a 3-bullet summary"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6667,
+        "passed": 4,
+        "failed": 2,
+        "total": 6,
+        "time_seconds": 72.5,
+        "tokens": 18997,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains exactly 3 use case sections",
+          "passed": true,
+          "evidence": "Three use cases: Lead Qualification Engine, Personalized Outreach Email Generator, LinkedIn Signal Monitor + Intent Trigger System"
+        },
+        {
+          "text": "Each use case includes at least one specific metric \u00e2\u20ac\u201d a number, percentage, time range, or dollar range \u00e2\u20ac\u201d in the ROI field",
+          "passed": true,
+          "evidence": "UC1: '2-3 hours per day', '30-45 hours'; UC2: '3-5x higher' reply rates, '1.5-2 hours'; UC3: '5-7x higher' response rates, '24 hours'"
+        },
+        {
+          "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+          "passed": false,
+          "evidence": "No 'Hook:' lines. Uses 'ROI Framing:' narrative paragraphs. No outreach-ready one-liners in quotes."
+        },
+        {
+          "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) \u00e2\u20ac\u201d not all three on the same theme",
+          "passed": true,
+          "evidence": "Lead qualification (ops efficiency), email generation (revenue), intent signals (timing/CX) \u00e2\u20ac\u201d 3 distinct angles"
+        },
+        {
+          "text": "Use cases reference specific details from the input (e.g., LinkedIn lead qualification, outreach emails, 15-person sales team, burnout) \u00e2\u20ac\u201d not generic AI descriptions",
+          "passed": true,
+          "evidence": "References LinkedIn profiles, 15 reps, custom cold emails, Apify scraping, rep burnout"
+        },
+        {
+          "text": "Output ends with a quick pitch summary section containing 3 bullets",
+          "passed": false,
+          "evidence": "Ends with a Summary Table and 'Recommended starting point' paragraph, not a 3-bullet pitch summary"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 69.1333,
+        "stddev": 0.9238,
+        "min": 68.6,
+        "max": 70.2
+      },
+      "tokens": {
+        "mean": 22892.3333,
+        "stddev": 28.0238,
+        "min": 22861,
+        "max": 22915
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.6667,
+        "stddev": 0.0,
+        "min": 0.6667,
+        "max": 0.6667
+      },
+      "time_seconds": {
+        "mean": 72.8667,
+        "stddev": 13.1538,
+        "min": 59.9,
+        "max": 86.2
+      },
+      "tokens": {
+        "mean": 18908.6667,
+        "stddev": 82.7305,
+        "min": 18833,
+        "max": 18997
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.33",
+      "time_seconds": "-3.7",
+      "tokens": "+3984"
+    }
+  },
+  "notes": []
+}

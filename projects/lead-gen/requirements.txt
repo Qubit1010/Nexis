@@ -14,3 +14,14 @@ python-dotenv>=1.0.0
 
 # Firecrawl SDK (optional — falls back to requests if not installed)
 firecrawl-py>=0.0.16
+
+# ---------------------------------------------------------------------------
+# Playwright-based scrapers (browser automation — replaces Apify)
+# ---------------------------------------------------------------------------
+
+# Playwright browser automation
+playwright>=1.42.0
+# After install, run: playwright install chromium
+
+# HTML parsing for Playwright scrapers (optional but strongly recommended)
+beautifulsoup4>=4.12.0

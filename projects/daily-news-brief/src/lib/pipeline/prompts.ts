@@ -159,7 +159,16 @@ PRODUCE THE FOLLOWING:
    - Label: "bullish" (excited/optimistic), "cautious" (careful/measured), "mixed" (split opinions), or "bearish" (worried/negative)
    - Summary: 2-3 sentences capturing the mood
 
-3. **CONTENT IDEAS** (exactly 5): Actionable content suggestions. For each:
+3. **CONTENT IDEAS** (exactly 10): Actionable content suggestions. Selection rules — follow these strictly:
+   - Include ALL stories where the underlying articles have 200+ upvotes or 50+ comments (high community signal)
+   - Include at least 2 "breaking" timeliness ideas — these are the freshest angles from today's news
+   - Include at least 1 idea connecting to the highest content_potential_score trend
+   - Cover at least 3 different category slugs across the 10 ideas — no single category dominates
+   - Prefer ideas with a UNIQUE angle that hasn't been covered to death — skip generic "AI is growing" takes
+   - If two ideas are on the same topic, keep only the one with the stronger hook and more specific angle
+   - Fill remaining slots with the highest-potential ideas ranked by: engagement signal > timeliness > uniqueness of angle
+
+   For each idea:
    - Title: compelling content title
    - Angle: the specific perspective or argument (1-2 sentences)
    - Format: "thread" (social media thread), "blog" (blog post or article), or "newsletter" (newsletter edition)
@@ -189,6 +198,7 @@ IMPORTANT:
 - Return ONLY valid JSON, no markdown code fences or extra text
 - Be specific and opinionated — generic advice is useless
 - Content ideas should be things the creator can actually make TODAY
-- Prioritize content ideas by potential engagement and uniqueness of angle
-- Think like a content strategist: what would get clicks, shares, and discussion?`;
+- Follow the selection rules for content ideas exactly — do not ignore high-engagement stories
+- Think like a content strategist: what would get clicks, shares, and discussion?
+- No filler ideas — every one of the 10 must have a clear, differentiated angle`;
 }

@@ -1,0 +1,23 @@
+{
+  "skill_name": "discovery-call-prep",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I have a discovery call with the founder of Latenode (latenode.com) in an hour. They replied to my cold email about AI workflow automation. Prep me.",
+      "expected_output": "A structured prep brief covering Latenode's company snapshot (what they do, stage), likely pain points relevant to their workflow automation needs, NexusPoint positioning with AI automation as the lead angle, 4-5 sharp discovery questions tailored to their context, and any watch-outs.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "discovery call prep for gymshark.com - they reached out after seeing our work and want to talk about website improvements",
+      "expected_output": "A structured prep brief for Gymshark covering their company snapshot (ecom fitness brand), pain points around their website/digital presence, NexusPoint positioning for web design and development, relevant discovery questions, and watch-outs (size mismatch, enterprise expectations, etc).",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "quick prep, I have a call in 15 mins with someone from buffer.com",
+      "expected_output": "A tight prep brief for Buffer despite the casual prompt and minimal info. Should still run research, cover what Buffer does, surface relevant pain points and positioning angles for NexusPoint, and give usable questions — not just say 'I need more info'.",
+      "files": []
+    }
+  ]
+}

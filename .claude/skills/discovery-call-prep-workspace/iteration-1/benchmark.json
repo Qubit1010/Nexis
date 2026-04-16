@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "skill_name": "discovery-call-prep",
+    "skill_path": ".claude/skills/discovery-call-prep",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-04-13T00:00:00Z",
+    "evals_run": [0, 1, 2],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "latenode-ai-automation",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 45.0,
+        "tokens": 18500,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output performs web research on Latenode (scrapes site or uses search) rather than relying solely on general knowledge", "passed": true, "evidence": "WebFetch used on latenode.com. Brief contains specific data: 10,000+ teams, 10M+ workflows/month, $0-$299 pricing tiers, 5,500+ integrations"},
+        {"text": "Company Snapshot includes specific details about Latenode (scale, pricing, product features, or target customers)", "passed": true, "evidence": "Snapshot covers: 10,000+ active teams, 10M+ workflows/month, Free-$299/month pricing, white-label iPaaS, 4.9 Capterra / 4.7 G2 ratings"},
+        {"text": "NexusPoint Positioning section leads with AI automation as the primary angle, not web design", "passed": true, "evidence": "Best angle: 'We build the custom AI-powered tools and systems that platforms like Latenode power under the hood.' AI Automation listed first."},
+        {"text": "Output includes at least 3 tailored discovery questions specific to Latenode's context", "passed": true, "evidence": "5 questions, all tailored: references their 10,000+ teams, white-label iPaaS, specific cold email context, and internal dev capacity."}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "latenode-ai-automation",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 38.0,
+        "tokens": 14200,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output performs web research on Latenode (scrapes site or uses search) rather than relying solely on general knowledge", "passed": true, "evidence": "WebFetch used. Brief includes specific data grounded in real research."},
+        {"text": "Company Snapshot includes specific details about Latenode (scale, pricing, product features, or target customers)", "passed": true, "evidence": "Mentions 10,000+ active teams, 10M+ workflows/month, pricing, 4.9 Capterra rating, white-label iPaaS."},
+        {"text": "NexusPoint Positioning section leads with AI automation as the primary angle, not web design", "passed": false, "evidence": "No dedicated 'NexusPoint Positioning' section. Has 'Possible angles' bullets with no 'Best angle' statement or structured service mapping."},
+        {"text": "Output includes at least 3 tailored discovery questions specific to Latenode's context", "passed": true, "evidence": "'Things to ask' has 3 questions — reasonably tailored but more generic than with_skill version."}
+      ],
+      "notes": ["Without skill still does research and produces useful output but missing the structured positioning section"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "gymshark-website-redesign",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 42.0,
+        "tokens": 17800,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output performs web research on Gymshark (scrapes site or uses search) to ground the brief in real info", "passed": true, "evidence": "WebFetch used on gymshark.com. Brief contains specific tech stack details (Next.js, Contentful, Shopify, Dynamic Yield, mParticle)."},
+        {"text": "Brief includes specific details about Gymshark identifying them as a large, enterprise-scale brand", "passed": true, "evidence": "Explicitly states: 25+ international markets, multi-currency, physical retail locations, hundreds of SKUs, mature loyalty infrastructure, sophisticated tech stack."},
+        {"text": "Output explicitly flags the size mismatch as a watch-out — Gymshark is not a typical small-agency prospect", "passed": true, "evidence": "Watch-outs section leads with: 'Size mismatch: Gymshark is an enterprise brand with a full internal engineering team.'"},
+        {"text": "Output includes a NexusPoint Positioning section with a specific angle for this prospect", "passed": true, "evidence": "NexusPoint Positioning section with Best angle: 'We move fast on scoped, specific builds — campaign pages, performance fixes, and AI-powered features.'"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "gymshark-website-redesign",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 36.0,
+        "tokens": 13600,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Output performs web research on Gymshark (scrapes site or uses search) to ground the brief in real info", "passed": true, "evidence": "WebFetch used. Brief mentions specific tech stack and real company details."},
+        {"text": "Brief includes specific details about Gymshark identifying them as a large, enterprise-scale brand", "passed": true, "evidence": "Mentions multi-currency, 25+ international markets, physical retail locations, hundreds of SKUs, full tech stack."},
+        {"text": "Output explicitly flags the size mismatch as a watch-out — Gymshark is not a typical small-agency prospect", "passed": true, "evidence": "Final paragraph flags 'enterprise brands have procurement processes, slow payment cycles.' Watch-out present but less prominent."},
+        {"text": "Output includes a NexusPoint Positioning section with a specific angle for this prospect", "passed": false, "evidence": "No 'NexusPoint Positioning' section. Has 'Potential scope' bullets but no best angle statement or service mapping."}
+      ],
+      "notes": ["Without skill flags size mismatch but buries it at the end; with skill puts it in a dedicated Watch-outs section up front"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "buffer-quick-prep",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 40.0,
+        "tokens": 16900,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Despite the casual/minimal prompt, output still performs research on Buffer rather than just asking for more context", "passed": true, "evidence": "WebFetch used on buffer.com. Full brief produced without any request for clarification."},
+        {"text": "Brief includes specific factual details about Buffer (ARR, team size, product features, or target customers)", "passed": true, "evidence": "Mentions: $24.6M ARR, 73,845 customers, 223,783 MAU, 73 employees across 15 countries, founded 2010 by Joel Gascoigne."},
+        {"text": "Output includes a structured NexusPoint Positioning section with a specific best angle for Buffer", "passed": true, "evidence": "NexusPoint Positioning section with Best angle: 'We build the custom AI tools and automation systems that fast-moving SaaS teams like yours need but don't have the bandwidth to build in-house.'"},
+        {"text": "Output includes at least 3 actionable discovery questions tailored to Buffer", "passed": true, "evidence": "4 questions, all specific to Buffer's context: lean 73-person team, AI investment, internal engineering focus, decision-making process."}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "buffer-quick-prep",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "time_seconds": 30.0,
+        "tokens": 11400,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Despite the casual/minimal prompt, output still performs research on Buffer rather than just asking for more context", "passed": true, "evidence": "WebFetch used. Brief produced without asking for clarification."},
+        {"text": "Brief includes specific factual details about Buffer (ARR, team size, product features, or target customers)", "passed": true, "evidence": "Mentions: $24.6M ARR, 73 employees, Joel Gascoigne, radical transparency culture."},
+        {"text": "Output includes a structured NexusPoint Positioning section with a specific best angle for Buffer", "passed": false, "evidence": "No 'NexusPoint Positioning' section. Has 'Possible things they might want' bullets but no best angle framing or service mapping."},
+        {"text": "Output includes at least 3 actionable discovery questions tailored to Buffer", "passed": true, "evidence": "3 questions present, reasonably tailored to Buffer's context."}
+      ],
+      "notes": ["Without skill output is notably shorter — useful but thin. With skill output is more complete and actionable."]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 42.3, "stddev": 2.1, "min": 40.0, "max": 45.0},
+      "tokens": {"mean": 17733, "stddev": 678, "min": 16900, "max": 18500}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.75, "stddev": 0.0, "min": 0.75, "max": 0.75},
+      "time_seconds": {"mean": 34.7, "stddev": 4.0, "min": 30.0, "max": 38.0},
+      "tokens": {"mean": 13067, "stddev": 1145, "min": 11400, "max": 14200}
+    },
+    "delta": {
+      "pass_rate": "+0.25",
+      "time_seconds": "+7.6",
+      "tokens": "+4666"
+    }
+  },
+  "notes": [
+    "The 'NexusPoint Positioning section with a specific best angle' assertion is the most discriminating — with_skill passes 3/3, without_skill fails 3/3. The skill reliably enforces structured positioning output; without it the model produces unstructured 'possible angles' bullets.",
+    "Research quality (web scraping) and factual accuracy assertions are NOT discriminating — both configurations pass them consistently. The skill does not improve research depth, only output structure.",
+    "Watch-outs / size mismatch flagging (eval 1 gymshark) is partially discriminating: without_skill does flag it but buries it at the end; with_skill surfaces it in a dedicated section with clearer framing.",
+    "Without-skill runs are faster (-7.6s avg) and use fewer tokens (-4,666 avg) because they produce thinner output. With-skill output is longer and more structured — this is the expected tradeoff.",
+    "Eval 2 (casual phrasing, minimal info) shows the skill is most valuable under ambiguity — with_skill maintains 100% while without_skill still passes 75% but produces a noticeably thinner brief."
+  ]
+}

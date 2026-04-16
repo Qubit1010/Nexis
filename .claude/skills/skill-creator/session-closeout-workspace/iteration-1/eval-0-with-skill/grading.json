@@ -1,0 +1,28 @@
+{
+  "eval_id": 0,
+  "eval_name": "full-session-closeout",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Output contains a session summary with a 'What Got Done' section listing specific items",
+      "passed": true,
+      "evidence": "Has '### What Got Done' section with 5 specific bullet points covering session-closeout skill, goals.md, current-priorities.md, ideas.md, and CLAUDE.md"
+    },
+    {
+      "text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved",
+      "passed": true,
+      "evidence": "Ends with exact 'Session closed.' block containing all 4 fields in the specified format"
+    },
+    {
+      "text": "Output references running git status or git diff to ground the summary",
+      "passed": true,
+      "evidence": "Agent explicitly ran git status and git diff --stat HEAD before writing summary"
+    },
+    {
+      "text": "Output checks context/current-priorities.md and makes a judgment on whether it needs updating",
+      "passed": true,
+      "evidence": "'Priorities Check' section explicitly states file was just updated this session and no change is needed"
+    }
+  ],
+  "pass_rate": 1.0
+}

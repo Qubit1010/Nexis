@@ -1,0 +1,27 @@
+{
+  "eval_id": 0,
+  "eval_name": "full-session-closeout",
+  "prompt": "ok we're done for today, close out the session. we built the session-closeout skill, updated context/goals.md to add Q2 goals and mark Q1 done, updated current-priorities.md to reflect april reality, created context/ideas.md with a tiered build backlog, and updated CLAUDE.md to fix stale backlog items and add the ideas file to context.",
+  "assertions": [
+    {
+      "text": "Output contains a session summary with a 'What Got Done' section listing specific items",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Output references running git status or git diff to ground the summary",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Output checks context/current-priorities.md and makes a judgment on whether it needs updating",
+      "passed": null,
+      "evidence": null
+    }
+  ]
+}

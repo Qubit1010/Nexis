@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowRight, AlertTriangle } from "lucide-react";
+import { ArrowRight, AlertTriangle, ExternalLink, CalendarPlus } from "lucide-react";
 import type { ScoredIdea } from "@/lib/types";
+import { ScheduleModal } from "@/components/schedule-modal";
 
 interface IdeaCardProps {
   idea: ScoredIdea;
@@ -52,8 +54,15 @@ function Chip({ label, variant = "default" }: { label: string; variant?: "defaul
   );
 }
 
+function formatDate(d: string): string {
+  const date = new Date(d);
+  if (isNaN(date.getTime())) return d;
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+}
+
 export function IdeaCard({ idea, rank }: IdeaCardProps) {
   const router = useRouter();
+  const [scheduleOpen, setScheduleOpen] = useState(false);
 
   function handleCreate() {
     const params = new URLSearchParams({
@@ -80,13 +89,33 @@ export function IdeaCard({ idea, rank }: IdeaCardProps) {
             </div>
           )}
         </div>
-        <button
-          onClick={handleCreate}
-          className="flex items-center gap-1.5 text-[13px] text-[#208ec7] opacity-0 group-hover:opacity-100 transition-opacity duration-150 hover:text-white font-semibold shrink-0"
-        >
-          Create
-          <ArrowRight className="w-3.5 h-3.5" />
-        </button>
+        <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-150 shrink-0">
+          {idea.url && (
+            <a
+              href={idea.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[13px] text-[#555] hover:text-white font-semibold"
+            >
+              Read
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          )}
+          <button
+            onClick={() => setScheduleOpen(true)}
+            className="flex items-center gap-1.5 text-[13px] text-[#555] hover:text-white font-semibold"
+          >
+            Schedule
+            <CalendarPlus className="w-3.5 h-3.5" />
+          </button>
+          <button
+            onClick={handleCreate}
+            className="flex items-center gap-1.5 text-[13px] text-[#208ec7] hover:text-white font-semibold"
+          >
+            Create
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
       </div>
 
       {/* Topic */}
@@ -115,16 +144,34 @@ export function IdeaCard({ idea, rank }: IdeaCardProps) {
         <Chip label={idea.pillar} variant="pillar" />
         <Chip label={idea.source} variant="source" />
         {idea.timeliness && <Chip label={idea.timeliness} variant="default" />}
+        {idea.date && (
+          <span className="text-[11px] text-[#3a3a3a] ml-auto">{formatDate(idea.date)}</span>
+        )}
       </div>
 
-      {/* Create button — always visible on mobile */}
-      <button
-        onClick={handleCreate}
-        className="mt-4 w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-[rgba(32,142,199,0.18)] text-[13px] text-[#208ec7] font-semibold hover:bg-[rgba(32,142,199,0.08)] hover:border-[rgba(32,142,199,0.3)] transition-all duration-150 lg:hidden"
-      >
-        Create this
-        <ArrowRight className="w-3.5 h-3.5" />
-      </button>
+      {/* Mobile buttons */}
+      <div className="mt-4 flex gap-2 lg:hidden">
+        <button
+          onClick={() => setScheduleOpen(true)}
+          className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border border-[rgba(255,255,255,0.08)] text-[13px] text-[#666] font-semibold hover:bg-[rgba(255,255,255,0.04)] transition-all duration-150"
+        >
+          Schedule
+          <CalendarPlus className="w-3.5 h-3.5" />
+        </button>
+        <button
+          onClick={handleCreate}
+          className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border border-[rgba(32,142,199,0.18)] text-[13px] text-[#208ec7] font-semibold hover:bg-[rgba(32,142,199,0.08)] hover:border-[rgba(32,142,199,0.3)] transition-all duration-150"
+        >
+          Create this
+          <ArrowRight className="w-3.5 h-3.5" />
+        </button>
+      </div>
+
+      <ScheduleModal
+        open={scheduleOpen}
+        onClose={() => setScheduleOpen(false)}
+        prefill={{ topic: idea.topic, platform: idea.platform, format: idea.format, angle: idea.angle }}
+      />
     </div>
   );
 }

@@ -1,16 +1,15 @@
 """NexusPoint Lead Generation Pipeline — CLI Orchestrator.
 
 Usage:
-  python main.py                          # full pipeline run
-  python main.py run [--limit 20]         # full pipeline with limit
-  python main.py discover [--source all]  # discovery only
-  python main.py score [--rescore]        # scoring only
-  python main.py enrich [--tier hot]      # enrichment only
-  python main.py personalize              # personalization only
-  python main.py export [--platform all]  # export only
-  python main.py stats                    # pipeline stats
-  python main.py lead LG-20260402-0001    # show full lead profile
-  python main.py leads [--tier hot]       # list leads
+  python main.py import --source sheets [--sheet-id ID]  # import from Google Sheet
+  python main.py import --source apollo <path.csv>        # import from Apollo CSV
+  python main.py export [--platform all]                  # push to CRM sheets
+  python main.py stats                                    # pipeline stats
+  python main.py score [--rescore]                        # re-score leads
+  python main.py enrich [--tier hot]                      # enrich leads
+  python main.py personalize                              # generate outreach sequences
+  python main.py lead LG-20260402-0001                    # show full lead profile
+  python main.py leads [--tier hot]                       # list leads
 
 Flags:
   --dry-run    Print what would happen without writing
@@ -41,9 +40,6 @@ from config import ENRICHMENT as ENRICH_CFG, PERSONALIZATION as PERS_CFG, EXPORT
 
 from utils.dedup import dedup_lead_list, build_existing_keys_from_db
 
-# Scrapers
-from scrapers import linkedin_jobs, linkedin_profiles, google_search, product_hunt
-
 # Qualification
 from qualification.scorer import score_lead, run_scoring
 
@@ -64,69 +60,6 @@ from transformers.instagram_transformer import generate_instagram_sequence
 # Exporters
 from exporters.gws_exporter import run_export
 from exporters.csv_exporter import run_csv_export
-
-# Google Search (for Instagram URL discovery)
-from scrapers.google_search import find_instagram_url
-
-
-# ---------------------------------------------------------------------------
-# Discover phase
-# ---------------------------------------------------------------------------
-
-def cmd_discover(sources: list, limit: int, dry_run: bool):
-    """Run discovery from specified sources and write new leads to DB."""
-    print("\n=== DISCOVERY PHASE ===")
-
-    all_new_leads = []
-
-    # Priority order: founder/CEO profiles first, job-poster leads last.
-    # This ensures the --limit cap fills with high-quality decision makers.
-
-    if "all" in sources or "linkedin-profiles" in sources or "profiles" in sources:
-        leads = linkedin_profiles.run(dry_run=dry_run)
-        all_new_leads.extend(leads)
-
-    if "all" in sources or "product-hunt" in sources or "ph" in sources:
-        leads = product_hunt.run(dry_run=dry_run)
-        all_new_leads.extend(leads)
-
-    if "all" in sources or "google" in sources or "google-search" in sources:
-        leads = google_search.run(dry_run=dry_run)
-        all_new_leads.extend(leads)
-
-    if "all" in sources or "linkedin-jobs" in sources or "jobs" in sources:
-        leads = linkedin_jobs.run(dry_run=dry_run)
-        all_new_leads.extend(leads)
-
-    if not all_new_leads:
-        print("No leads discovered.")
-        return 0
-
-    # Dedup against each other and existing DB leads
-    print(f"\nDeduplicating {len(all_new_leads)} discovered leads...")
-    existing_keys = build_existing_keys_from_db()
-    unique_leads, skipped = dedup_lead_list(all_new_leads, existing_keys)
-    print(f"  Unique new leads: {len(unique_leads)} | Duplicates skipped: {skipped}")
-
-    if dry_run:
-        print("\n[DRY RUN] Sample leads:")
-        for lead in unique_leads[:5]:
-            print(f"  {lead.get('full_name', '?')} @ {lead.get('company', '?')} [{lead.get('source')}]")
-        return len(unique_leads)
-
-    # Apply limit
-    if limit:
-        unique_leads = unique_leads[:limit]
-
-    # Write to DB
-    inserted = 0
-    for lead in unique_leads:
-        lead_id = insert_lead(lead)
-        if lead_id:
-            inserted += 1
-
-    print(f"\nDiscovery complete: {inserted} new leads added to database.")
-    return inserted
 
 
 # ---------------------------------------------------------------------------
@@ -201,17 +134,6 @@ def cmd_enrich(tiers: list, dry_run: bool, limit: int):
         # 4. Company news
         news_data = enrich_news(lead)
         enrichment_data.update(news_data)
-
-        # 5. Instagram URL discovery (HOT only)
-        if tier in ENRICH_CFG.get("instagram_discovery_tiers", ["HOT"]) and not lead.get("instagram_url"):
-            co = lead.get("company", "")
-            full_name = lead.get("full_name", "")
-            if co or full_name:
-                website = lead.get("company_website", "")
-                insta_url, insta_handle = find_instagram_url(co, full_name, company_website=website)
-                if insta_url:
-                    update_lead(lead_id, {"instagram_url": insta_url, "instagram_handle": insta_handle})
-                    print(f"  Instagram found: @{insta_handle}", flush=True)
 
         # Save enrichment data
         if enrichment_data:
@@ -431,28 +353,26 @@ def cmd_leads_list(tier: str = None, limit: int = 20):
 # Full pipeline
 # ---------------------------------------------------------------------------
 
-def cmd_run(sources: list, limit: int, dry_run: bool):
-    """Run the full pipeline end-to-end."""
+def cmd_run(limit: int, dry_run: bool):
+    """Run enrich + personalize + export (import separately via 'import --source sheets')."""
     print(f"\n{'='*50}")
     print(f"NexusPoint Lead Generation Pipeline")
     print(f"{'='*50}")
     print(f"Date: {date.today().isoformat()} | Limit: {limit} | Dry-run: {dry_run}")
+    print("NOTE: Import leads first with: python main.py import --source sheets")
 
-    # Phase 1: Discover
-    cmd_discover(sources, limit=limit, dry_run=dry_run)
-
-    # Phase 2: Score
+    # Phase 1: Score
     if not dry_run:
         print("\n=== SCORING PHASE ===")
         run_scoring(rescore=False, dry_run=False)
 
-    # Phase 3: Enrich
+    # Phase 2: Enrich
     cmd_enrich(tiers=["HOT", "STRONG"], dry_run=dry_run, limit=limit)
 
-    # Phase 4: Personalize
+    # Phase 3: Personalize
     cmd_personalize(tiers=["HOT", "STRONG"], dry_run=dry_run, limit=limit)
 
-    # Phase 5: Export to Google Sheets
+    # Phase 4: Export to Google Sheets
     print("\n=== EXPORT PHASE ===")
     if not dry_run:
         results = run_export(platform="all", dry_run=False)
@@ -476,26 +396,19 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Commands:
-  discover    Find new leads from LinkedIn Jobs, Profile Search, Google, Product Hunt
+  import      Import leads from Google Sheet (--source sheets) or Apollo CSV (--source apollo)
   score       Score unscored leads against ICP (5-layer, 0-100)
   enrich      Enrich qualified leads (website, email, LinkedIn, news)
   personalize Generate personalized hooks and outreach sequences
-  export      Push leads to existing outreach CRMs
+  export      Push leads to CRM Google Sheets
   stats       Show pipeline statistics
   lead        Show full profile for a specific lead ID
   leads       List leads with optional filters
-  run         Full pipeline (default)
+  run         Run enrich + personalize + export
         """
     )
 
     subparsers = parser.add_subparsers(dest="command")
-
-    # discover
-    p_discover = subparsers.add_parser("discover")
-    p_discover.add_argument("--source", default="all",
-        help="Sources: all, linkedin-jobs, linkedin-profiles, google, product-hunt")
-    p_discover.add_argument("--limit", type=int, default=None)
-    p_discover.add_argument("--dry-run", action="store_true")
 
     # score
     p_score = subparsers.add_parser("score")
@@ -535,31 +448,31 @@ Commands:
     p_leads.add_argument("--tier", default=None, help="Filter by tier: hot, strong, warm, rejected")
     p_leads.add_argument("--limit", type=int, default=20)
 
-    # import (load pre-downloaded harvestapi JSON or Apollo CSV export)
+    # import
     p_import = subparsers.add_parser("import")
-    p_import.add_argument("path", help="Path to import file (JSON or CSV)")
-    p_import.add_argument("--source", default="harvestapi", choices=["harvestapi", "apollo"],
-        help="Import format: harvestapi (JSON) or apollo (CSV)")
+    p_import.add_argument("path", nargs="?", default=None,
+        help="Path to import file (JSON or CSV). Not required for --source sheets.")
+    p_import.add_argument("--source", default="sheets",
+        choices=["sheets", "harvestapi", "apollo"],
+        help="Import source: sheets (Google Sheet), harvestapi (JSON), apollo (CSV)")
+    p_import.add_argument("--sheet-id", default=None,
+        help="Google Sheet ID (overrides config). Only for --source sheets.")
+    p_import.add_argument("--tab", default=None,
+        help="Sheet tab name. Only for --source sheets.")
     p_import.add_argument("--dry-run", action="store_true")
     p_import.add_argument("--limit", type=int, default=None)
 
-    # run (full pipeline)
+    # run (enrich + personalize + export)
     p_run = subparsers.add_parser("run")
-    p_run.add_argument("--source", default="all")
     p_run.add_argument("--limit", type=int, default=20)
     p_run.add_argument("--dry-run", action="store_true")
 
     args = parser.parse_args()
 
     if not args.command or args.command == "run":
-        sources = getattr(args, "source", "all").split(",")
         limit = getattr(args, "limit", 20)
         dry_run = getattr(args, "dry_run", False)
-        cmd_run(sources=sources, limit=limit, dry_run=dry_run)
-
-    elif args.command == "discover":
-        sources = args.source.split(",")
-        cmd_discover(sources=sources, limit=args.limit, dry_run=args.dry_run)
+        cmd_run(limit=limit, dry_run=dry_run)
 
     elif args.command == "score":
         run_scoring(rescore=args.rescore, dry_run=args.dry_run)
@@ -593,13 +506,21 @@ Commands:
                 print(f"  CSV: {path}")
 
     elif args.command == "import":
-        from utils.dedup import dedup_lead_list, build_existing_keys_from_db
-        source = getattr(args, "source", "harvestapi")
-        if source == "apollo":
+        source = getattr(args, "source", "sheets")
+        if source == "sheets":
+            from scrapers.sheets_importer import run as import_run
+            leads = import_run(
+                sheet_id=getattr(args, "sheet_id", None),
+                tab=getattr(args, "tab", None),
+                dry_run=args.dry_run,
+            )
+        elif source == "apollo":
             from scrapers.apollo_import import run as import_run
+            leads = import_run(args.path, dry_run=args.dry_run)
         else:
             from scrapers.json_import import run as import_run
-        leads = import_run(args.path, dry_run=args.dry_run)
+            leads = import_run(args.path, dry_run=args.dry_run)
+
         if leads and not args.dry_run:
             existing_keys = build_existing_keys_from_db()
             unique, skipped = dedup_lead_list(leads, existing_keys)

@@ -14,6 +14,7 @@ import type {
   YouTubeOpportunity,
   YouTubeTopic,
   SavedIdea,
+  SavedArticle,
   ScoredIdea,
   Platform,
 } from "./types";
@@ -170,6 +171,31 @@ export function scoreYouTubeTopic(topic: YouTubeTopic): ScoredIdea {
   };
 }
 
+export function scoreSavedArticle(article: SavedArticle): ScoredIdea {
+  const score = Math.min(
+    10,
+    timelinessPts("evergreen") +
+      competitionPts("medium") +
+      momentumPts("steady") +
+      pillarPts(article.title) +
+      1 // saved bonus
+  );
+
+  return {
+    id: uid(),
+    score,
+    topic: article.title,
+    platform: inferPlatform(article.platform_affinity),
+    format: "Article",
+    hook: "",
+    angle: article.tldr,
+    pillar: "AI & Automation",
+    source: "saved-articles",
+    url: article.url,
+    date: article.date_saved,
+  };
+}
+
 export function scoreSavedIdea(idea: SavedIdea): ScoredIdea {
   const score = Math.min(
     10,
@@ -189,7 +215,8 @@ export function scoreSavedIdea(idea: SavedIdea): ScoredIdea {
     hook: idea.hook,
     angle: idea.angle,
     pillar: "AI & Automation",
-    source: "saved-topics",
+    source: "content-opportunities",
     timeliness: idea.timeliness,
+    date: idea.date_saved || idea.brief_date,
   };
 }

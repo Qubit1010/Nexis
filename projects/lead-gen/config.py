@@ -1,6 +1,5 @@
 """NexusPoint Lead Generation — Configuration & ICP Definition."""
 
-import os
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
@@ -187,6 +186,46 @@ DISCOVERY = {
 
     "product_hunt_days_back": 60,
     "product_hunt_categories": ["SaaS", "AI", "Developer Tools", "Productivity", "Marketing"],
+
+    # ---------------------------------------------------------------------------
+    # Playwright-based scrapers (browser automation — no API keys needed)
+    # ---------------------------------------------------------------------------
+
+    # playwright_google.py: HackerNews Algolia API (Show HN posts → founder company sites)
+    # These are topic queries for the HN Algolia search API — NOT search engine site: queries.
+    # Show HN posters are almost always founders with real company URLs attached.
+    "playwright_queries": [
+        "SaaS startup",
+        "e-commerce automation",
+        "we built small business",
+        "marketing tool agency",
+        "AI tool founder",
+        "web app startup",
+        "productivity SaaS",
+        "CRM tool small business",
+        "invoicing tool freelancer",
+        "analytics dashboard startup",
+        "email marketing tool",
+        "customer support automation",
+    ],
+    "playwright_limit_per_query": 15,  # HN hits per query (API param hitsPerPage)
+
+    # builtwith_scraper.py: platforms to scrape + domains per platform
+    # Set via env: BUILTWITH_PLATFORMS=wix,squarespace,wordpress
+    #              BUILTWITH_MAX_DOMAINS=30
+    "builtwith_platforms": ["wix", "squarespace", "wordpress"],
+    "builtwith_max_domains": 30,  # domains to check per platform
+
+    # ---------------------------------------------------------------------------
+    # Manual Google Sheet import (primary lead source)
+    # ---------------------------------------------------------------------------
+    # Set input_sheet_id to your Google Sheet ID, then run:
+    #   python main.py import --source sheets
+    # Or pass it inline: python main.py import --source sheets --sheet-id <ID>
+    "input_sheet_id":  "",           # Google Sheet ID
+    "input_sheet_tab": "Sheet1",     # Tab name within the sheet
+    "include_column":  "Include",    # Column header that marks rows to keep
+    "include_value":   "yes",        # Value (case-insensitive) meaning "keep this lead"
 }
 
 # ---------------------------------------------------------------------------

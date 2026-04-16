@@ -1,0 +1,27 @@
+{
+  "eval_id": 2,
+  "eval_name": "casual-phrasing-triggers-full-workflow",
+  "prompt": "what did we do this session? i want a summary",
+  "assertions": [
+    {
+      "text": "Output runs git status/diff and grounds the summary in actual file changes (not just vague recollection)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Output extracts at least one decision worth logging (session had real changes so decisions exist)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Output explicitly checks context/current-priorities.md for whether it needs updating",
+      "passed": null,
+      "evidence": null
+    }
+  ]
+}

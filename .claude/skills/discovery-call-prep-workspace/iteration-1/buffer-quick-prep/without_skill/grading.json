@@ -1,0 +1,28 @@
+{
+  "eval_id": 2,
+  "eval_name": "buffer-quick-prep",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Despite the casual/minimal prompt, output still performs research on Buffer rather than just asking for more context",
+      "passed": true,
+      "evidence": "WebFetch used. Brief produced without asking for clarification — research performed despite minimal prompt."
+    },
+    {
+      "text": "Brief includes specific factual details about Buffer (ARR, team size, product features, or target customers)",
+      "passed": true,
+      "evidence": "Mentions: $24.6M ARR, 73 employees, Joel Gascoigne, free tier + paid plans, radical transparency culture."
+    },
+    {
+      "text": "Output includes a structured NexusPoint Positioning section with a specific best angle for Buffer",
+      "passed": false,
+      "evidence": "No 'NexusPoint Positioning' section. Has 'Possible things they might want' bullets but no best angle framing, no specific service mapping, no positioning statement."
+    },
+    {
+      "text": "Output includes at least 3 actionable discovery questions tailored to Buffer",
+      "passed": true,
+      "evidence": "3 questions present. Reasonably tailored — references their AI feature investment and small team size."
+    }
+  ],
+  "pass_rate": 0.75
+}

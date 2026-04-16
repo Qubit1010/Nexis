@@ -1,0 +1,31 @@
+{
+  "eval_id": 1,
+  "eval_name": "ecommerce-jewelry",
+  "prompt": "Generate AI use cases for this prospect: E-commerce brand selling handmade jewelry, 8 employees, they spend 4+ hours a day on customer support emails and manually tracking inventory across their Shopify store and a spreadsheet. Getting a lot of returns they have to process manually too.",
+  "assertions": [
+    {
+      "text": "Output contains exactly 3 use case sections",
+      "type": "structural"
+    },
+    {
+      "text": "Each use case includes at least one specific metric — a number, percentage, time range, or dollar range — in the ROI field",
+      "type": "content"
+    },
+    {
+      "text": "Each use case contains a 'Hook:' line with an outreach-ready sentence in quotes",
+      "type": "structural"
+    },
+    {
+      "text": "Use cases cover at least two different dimensions (operational efficiency, revenue/growth, customer experience) — not all three on the same theme",
+      "type": "content"
+    },
+    {
+      "text": "Use cases reference specific details from the input (e.g., Shopify, inventory, returns, support emails) — not generic 'AI automation' descriptions",
+      "type": "specificity"
+    },
+    {
+      "text": "Output ends with a quick pitch summary section containing 3 bullets",
+      "type": "structural"
+    }
+  ]
+}

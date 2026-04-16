@@ -1,0 +1,28 @@
+{
+  "eval_id": 0,
+  "eval_name": "full-session-closeout",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Output contains a session summary with a 'What Got Done' section listing specific items",
+      "passed": true,
+      "evidence": "Has 'What Was Built / Changed' section with specific items listed under multiple subsections"
+    },
+    {
+      "text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved",
+      "passed": false,
+      "evidence": "No standardized closeout block. Output ends with 'Open Threads / Watch Items' but has no crisp 'Session closed.' summary block with the 4 required fields"
+    },
+    {
+      "text": "Output references running git status or git diff to ground the summary",
+      "passed": true,
+      "evidence": "Agent ran git status and git diff --stat to ground the summary"
+    },
+    {
+      "text": "Output checks context/current-priorities.md and makes a judgment on whether it needs updating",
+      "passed": true,
+      "evidence": "'Priorities Check' section confirms file is accurate and lists current priorities — no update needed"
+    }
+  ],
+  "pass_rate": 0.75
+}

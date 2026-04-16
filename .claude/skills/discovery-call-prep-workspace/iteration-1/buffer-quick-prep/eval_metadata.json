@@ -1,0 +1,11 @@
+{
+  "eval_id": 2,
+  "eval_name": "buffer-quick-prep",
+  "prompt": "quick prep, I have a call in 15 mins with someone from buffer.com",
+  "assertions": [
+    "Despite the casual/minimal prompt, output still performs research on Buffer rather than just asking for more context",
+    "Brief includes specific factual details about Buffer (ARR, team size, product features, or target customers)",
+    "Output includes a structured NexusPoint Positioning section with a specific best angle for Buffer",
+    "Output includes at least 3 actionable discovery questions tailored to Buffer"
+  ]
+}

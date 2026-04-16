@@ -1,0 +1,28 @@
+{
+  "eval_id": 2,
+  "eval_name": "buffer-quick-prep",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Despite the casual/minimal prompt, output still performs research on Buffer rather than just asking for more context",
+      "passed": true,
+      "evidence": "WebFetch used on buffer.com. Full brief produced despite minimal input — no request for clarification, no 'I need more info' response."
+    },
+    {
+      "text": "Brief includes specific factual details about Buffer (ARR, team size, product features, or target customers)",
+      "passed": true,
+      "evidence": "Mentions: $24.6M ARR, 73,845 customers, 223,783 MAU, 73 employees across 15 countries, founded 2010 by Joel Gascoigne, 11 supported social networks, 5 product modules."
+    },
+    {
+      "text": "Output includes a structured NexusPoint Positioning section with a specific best angle for Buffer",
+      "passed": true,
+      "evidence": "NexusPoint Positioning section with Best angle: 'We build the custom AI tools and automation systems that fast-moving SaaS teams like yours need but don't have the bandwidth to build in-house.' Three services mapped."
+    },
+    {
+      "text": "Output includes at least 3 actionable discovery questions tailored to Buffer",
+      "passed": true,
+      "evidence": "4 questions, all specific to Buffer's context: references lean team (73 people), their AI investment, internal engineering focus, and decision-making process."
+    }
+  ],
+  "pass_rate": 1.0
+}

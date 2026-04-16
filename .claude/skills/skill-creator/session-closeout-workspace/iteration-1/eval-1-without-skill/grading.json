@@ -1,0 +1,28 @@
+{
+  "eval_id": 1,
+  "eval_name": "lead-gen-with-explicit-decision",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Output contains a session summary with specific items from the lead-gen work",
+      "passed": true,
+      "evidence": "'What Was Done' section lists sheets_importer.py addition, linkedin_transformer rewrite, 4 deleted scrapers, and supporting file changes"
+    },
+    {
+      "text": "The 'drop product hunt' decision is explicitly extracted with correct DECISION | REASONING | CONTEXT format",
+      "passed": true,
+      "evidence": "First decision in 'Decisions to Log': '[2026-04-12] DECISION: Drop Product Hunt as a lead source | REASONING: Signal quality too low | CONTEXT: Lead-gen pipeline consolidation'"
+    },
+    {
+      "text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved",
+      "passed": false,
+      "evidence": "No standardized closeout block. Ends with a suggested commit message instead. No 'Session closed.' block."
+    },
+    {
+      "text": "Output checks priorities and makes a judgment (no change expected since lead-gen is already listed as live)",
+      "passed": true,
+      "evidence": "'Priorities Check' section confirms current priorities hold, lead-gen work is execution within an already-live system — no update needed"
+    }
+  ],
+  "pass_rate": 0.75
+}

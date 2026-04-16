@@ -1,0 +1,11 @@
+{
+  "eval_id": 0,
+  "eval_name": "latenode-ai-automation",
+  "prompt": "I have a discovery call with the founder of Latenode (latenode.com) in an hour. They replied to my cold email about AI workflow automation. Prep me.",
+  "assertions": [
+    "Output performs web research on Latenode (scrapes site or uses search) rather than relying solely on general knowledge",
+    "Company Snapshot includes specific details about Latenode (scale, pricing, product features, or target customers)",
+    "NexusPoint Positioning section leads with AI automation as the primary angle, not web design",
+    "Output includes at least 3 tailored discovery questions specific to Latenode's context"
+  ]
+}

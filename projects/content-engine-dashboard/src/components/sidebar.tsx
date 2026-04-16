@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Lightbulb, PenLine, BookOpen } from "lucide-react";
+import { Lightbulb, PenLine, BookOpen, CalendarDays } from "lucide-react";
 
 const NAV = [
   {
@@ -16,6 +16,12 @@ const NAV = [
     label: "Create",
     icon: PenLine,
     desc: "Research & write",
+  },
+  {
+    href: "/schedule",
+    label: "Schedule",
+    icon: CalendarDays,
+    desc: "Weekly posting plan",
   },
   {
     href: "/log",

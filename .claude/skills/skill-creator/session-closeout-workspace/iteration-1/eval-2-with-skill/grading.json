@@ -1,0 +1,28 @@
+{
+  "eval_id": 2,
+  "eval_name": "casual-phrasing-triggers-full-workflow",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Output runs git status/diff and grounds the summary in actual file changes (not just vague recollection)",
+      "passed": true,
+      "evidence": "Agent ran git status and git diff --stat HEAD, summary is grounded in real changed files (content-engine-dashboard, lead-gen, SKILL.md, etc.)"
+    },
+    {
+      "text": "Output extracts at least one decision worth logging (session had real changes so decisions exist)",
+      "passed": true,
+      "evidence": "3 decisions extracted: replace scrapers with Sheets importer, split outreach into per-channel scripts, migrate copywriting references to markdown"
+    },
+    {
+      "text": "Output includes the final closeout block with all 4 fields: summary, decisions logged, priorities updated, memory saved",
+      "passed": true,
+      "evidence": "Ends with 'Session closed.' block with all 4 fields populated"
+    },
+    {
+      "text": "Output explicitly checks context/current-priorities.md for whether it needs updating",
+      "passed": true,
+      "evidence": "'Priorities look current -- no update needed.' explicitly stated after checking"
+    }
+  ],
+  "pass_rate": 1.0
+}

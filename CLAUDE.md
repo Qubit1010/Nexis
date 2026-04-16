@@ -15,6 +15,7 @@ These files contain the full picture. Read them when you need context:
 - @context/team.md — Team members, roles, and when to loop them in
 - @context/current-priorities.md — What Aleem is focused on right now
 - @context/goals.md — Quarterly goals and milestones
+- @context/ideas.md — Build backlog: skills and tools to work on next
 
 ## Tool Integrations
 
@@ -48,26 +49,28 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 Build as needed. Organized by domain:
 
 **Revenue & Client Acquisition**
-1. Upwork job filtering & proposal drafting
+1. Upwork Job Scout skill (score job fit + draft proposals — project initialized)
 2. ~~Cold email outreach~~ (covered by cold-outreach skill)
 3. ~~Lead tracking & follow-up~~ (covered by cold-outreach skill — Google Sheets CRM)
-4. Client onboarding workflow
-6. Testimonial & case study builder
-7. Competitor/market research
+4. Upwork reply drafter (paste message → Voss-framed response)
+5. Testimonial & case study builder
+6. Competitor research (Firecrawl + AI → positioning gaps)
 
 **Content & Brand**
 8. ~~Social media content pipeline~~ (covered by marketing-advisor)
 9. ~~LinkedIn thought leadership~~ (covered by marketing-advisor)
 10. ~~Content repurposing engine~~ (covered by content-engine skill)
-11. Daily AI/Tech Brief
+11. ~~Daily AI/Tech Brief~~ (covered by daily-brief skill)
+12. YouTube Brief (scrape/summarize channels → feed content engine)
 
 **Operations & Team**
-12. Project scoping template
-13. Website audit system
-14. Session closeout
-15. Weekly business review
-17. Invoice & payment tracker
-18. Client communication drafter
+13. Website audit system (Firecrawl + AI → formatted audit report for prospects)
+14. Session closeout (summarize session, surface decisions, update priorities)
+15. Weekly business review (outreach stats + content + leads + revenue snapshot)
+16. Project scoping template generator
+17. Client onboarding workflow (Drive folder + onboarding doc + welcome email)
+18. Invoice & payment tracker (Google Sheets-backed)
+19. Client communication drafter
 
 **University**
 19. ~~Assignment research assistant~~ (built — see Active Skills)
