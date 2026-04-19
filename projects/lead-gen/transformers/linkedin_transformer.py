@@ -25,6 +25,20 @@ def _truncate(text: str, max_len: int) -> str:
     return truncated + "..."
 
 
+def _normalize_unicode(text: str) -> str:
+    """Replace smart quotes, curly apostrophes, and em dashes with plain ASCII equivalents."""
+    replacements = {
+        "\u2018": "'", "\u2019": "'",   # left/right single quotation marks
+        "\u201c": '"', "\u201d": '"',   # left/right double quotation marks
+        "\u2013": "-", "\u2014": "-",   # en dash, em dash
+        "\u2026": "...",                 # ellipsis
+        "\u00e2\u0080\u0099": "'",      # UTF-8 misread of right single quote
+    }
+    for char, replacement in replacements.items():
+        text = text.replace(char, replacement)
+    return text
+
+
 def generate_connection_note_gpt(lead: dict) -> str | None:
     """Generate a personalized connection note via GPT-4o-mini.
 
@@ -70,6 +84,7 @@ Output ONLY the message text. No quotes, no explanation."""
             temperature=0.9,
         )
         note = response.choices[0].message.content.strip().replace("\n", " ").replace("  ", " ")
+        note = _normalize_unicode(note)
         return _truncate(note, 300)
     except Exception:
         return None

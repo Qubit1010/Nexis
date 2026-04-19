@@ -46,6 +46,17 @@ SOUTH_ASIA_KEYWORDS = [
     "dhaka", "colombo", "kathmandu",
 ]
 
+# LinkedIn URL subdomains that indicate South Asian profiles (e.g. pk.linkedin.com, in.linkedin.com)
+SOUTH_ASIA_URL_PREFIXES = [
+    "https://pk.linkedin.com",
+    "https://in.linkedin.com",
+    "https://bd.linkedin.com",
+    "https://lk.linkedin.com",
+    "https://np.linkedin.com",
+    "http://pk.linkedin.com",
+    "http://in.linkedin.com",
+]
+
 # ---------------------------------------------------------------------------
 # Column aliases — maps source sheet header variants to canonical field name
 # ---------------------------------------------------------------------------
@@ -232,9 +243,16 @@ def _get(row: list, col_map: dict, field: str, default: str = "") -> str:
 # Filters
 # ---------------------------------------------------------------------------
 
-def _is_south_asia(location: str) -> bool:
-    loc = location.lower()
-    return any(kw in loc for kw in SOUTH_ASIA_KEYWORDS)
+def _is_south_asia(location: str, linkedin_url: str = "") -> bool:
+    if location:
+        loc = location.lower()
+        if any(kw in loc for kw in SOUTH_ASIA_KEYWORDS):
+            return True
+    if linkedin_url:
+        url_lower = linkedin_url.lower().strip()
+        if any(url_lower.startswith(prefix) for prefix in SOUTH_ASIA_URL_PREFIXES):
+            return True
+    return False
 
 
 def _parse_followers(raw: str) -> int | None:
@@ -375,8 +393,8 @@ def main():
                 writeback[row_idx] = "Dropped - Low Followers"
                 continue
 
-        # Filter: South Asian location
-        if location and _is_south_asia(location):
+        # Filter: South Asian location or South Asian LinkedIn URL subdomain
+        if _is_south_asia(location, linkedin_url):
             stats["south_asia"] += 1
             writeback[row_idx] = "Dropped - South Asia"
             continue
@@ -437,9 +455,10 @@ def main():
             print(f"\n[DRY RUN] Would append {len(kept_rows)} rows to CRM. Sample:")
             for row in kept_rows[:5]:
                 name, _, company, role, url, loc, _, msg, *_ = row
-                print(f"  {name} @ {company} [{role}]")
+                safe = lambda s: s.encode("ascii", "replace").decode()
+                print(f"  {safe(name)} @ {safe(company)} [{safe(role)}]")
                 print(f"    URL: {url}")
-                print(f"    Msg ({len(msg)} chars): {msg[:80]}...")
+                print(f"    Msg ({len(msg)} chars): {safe(msg[:80])}...")
         return
 
     # 5. Append to CRM (skip if nothing to push)
