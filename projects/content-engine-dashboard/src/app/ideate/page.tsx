@@ -4,13 +4,14 @@ import { useState, useCallback, useEffect, useMemo } from "react";
 import { RefreshCw, Loader2 } from "lucide-react";
 import { IdeaCard } from "@/components/idea-card";
 import { SourceStatus } from "@/components/source-status";
-import type { PullIdeasOutput, ScoredIdea, IdeaSource } from "@/lib/types";
+import type { PullIdeasOutput, ScoredIdea, IdeaSource, YouTubeBookmarkedVideo } from "@/lib/types";
 import {
   scoreNewsIdea,
   scoreYouTubeOpportunity,
   scoreYouTubeTopic,
   scoreSavedIdea,
   scoreSavedArticle,
+  scoreYouTubeBookmarked,
 } from "@/lib/scoring";
 
 function buildScoredIdeas(data: PullIdeasOutput): ScoredIdea[] {
@@ -47,6 +48,7 @@ const SOURCE_LABELS: Record<FilterSource, string> = {
   "youtube-brief": "YouTube",
   "content-opportunities": "Content Opportunities",
   "saved-articles": "Saved Articles",
+  "youtube-bookmarked": "YT Bookmarked",
 };
 
 export default function IdeatePage() {
@@ -54,13 +56,26 @@ export default function IdeatePage() {
   const [initializing, setInitializing] = useState(true);
   const [data, setData] = useState<PullIdeasOutput | null>(null);
   const [ideas, setIdeas] = useState<ScoredIdea[]>([]);
+  const [bookmarkedVideos, setBookmarkedVideos] = useState<YouTubeBookmarkedVideo[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [savedAt, setSavedAt] = useState<number | null>(null);
   const [sourceFilter, setSourceFilter] = useState<FilterSource>("all");
   const [sortBy, setSortBy] = useState<SortBy>("score");
 
+  const allIdeas = useMemo(() => {
+    const bookmarked = bookmarkedVideos.map(scoreYouTubeBookmarked);
+    return [
+      ...ideas,
+      ...bookmarked,
+    ].sort((a, b) => {
+      if (a.isCooling && !b.isCooling) return 1;
+      if (!a.isCooling && b.isCooling) return -1;
+      return b.score - a.score;
+    });
+  }, [ideas, bookmarkedVideos]);
+
   const filteredIdeas = useMemo(() => {
-    let result = sourceFilter === "all" ? ideas : ideas.filter((i) => i.source === sourceFilter);
+    let result = sourceFilter === "all" ? allIdeas : allIdeas.filter((i) => i.source === sourceFilter);
 
     if (sortBy === "date") {
       result = [...result].sort((a, b) => {
@@ -75,15 +90,15 @@ export default function IdeatePage() {
 
   // Count per source for filter badges
   const counts = useMemo(() => {
-    const map: Partial<Record<FilterSource, number>> = { all: ideas.length };
-    for (const idea of ideas) {
+    const map: Partial<Record<FilterSource, number>> = { all: allIdeas.length };
+    for (const idea of allIdeas) {
       map[idea.source] = (map[idea.source] ?? 0) + 1;
     }
     return map;
-  }, [ideas]);
+  }, [allIdeas]);
 
   useEffect(() => {
-    fetch("/api/ideas-cache")
+    const ideasPromise = fetch("/api/ideas-cache")
       .then((r) => r.json())
       .then(({ data: cached, savedAt: ts }: { data: PullIdeasOutput | null; savedAt: number | null }) => {
         if (cached) {
@@ -92,8 +107,16 @@ export default function IdeatePage() {
           setSavedAt(ts);
         }
       })
-      .catch(() => {})
-      .finally(() => setInitializing(false));
+      .catch(() => {});
+
+    const bookmarkedPromise = fetch("/api/youtube-bookmarked")
+      .then((r) => r.json())
+      .then(({ videos }: { videos: YouTubeBookmarkedVideo[] }) => {
+        if (videos?.length) setBookmarkedVideos(videos);
+      })
+      .catch(() => {});
+
+    Promise.all([ideasPromise, bookmarkedPromise]).finally(() => setInitializing(false));
   }, []);
 
   const refresh = useCallback(async () => {
@@ -113,7 +136,7 @@ export default function IdeatePage() {
     }
   }, []);
 
-  const filterSources: FilterSource[] = ["all", "news-brief", "youtube-brief", "content-opportunities", "saved-articles"];
+  const filterSources: FilterSource[] = ["all", "news-brief", "youtube-brief", "content-opportunities", "saved-articles", "youtube-bookmarked"];
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-8">
@@ -174,7 +197,7 @@ export default function IdeatePage() {
       )}
 
       {/* Empty state */}
-      {!loading && !initializing && ideas.length === 0 && (
+      {!loading && !initializing && allIdeas.length === 0 && (
         <div className="flex flex-col items-center justify-center py-20 text-center">
           <div className="w-14 h-14 rounded-2xl gradient-blue flex items-center justify-center mb-4 opacity-40">
             <RefreshCw className="w-6 h-6 text-white" />
@@ -185,7 +208,7 @@ export default function IdeatePage() {
       )}
 
       {/* Filter + Sort bar */}
-      {!loading && !initializing && ideas.length > 0 && (
+      {!loading && !initializing && allIdeas.length > 0 && (
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           {/* Source filter pills */}
           <div className="flex flex-wrap gap-1.5">
@@ -230,7 +253,7 @@ export default function IdeatePage() {
       )}
 
       {/* Ideas list */}
-      {!loading && !initializing && ideas.length > 0 && (
+      {!loading && !initializing && allIdeas.length > 0 && (
         <div className="space-y-3">
           <p className="text-[11px] text-[#444] uppercase tracking-wide font-semibold mb-3">
             {filteredIdeas.length} ideas{sourceFilter !== "all" ? ` · ${SOURCE_LABELS[sourceFilter]}` : ""} · sorted by {sortBy}

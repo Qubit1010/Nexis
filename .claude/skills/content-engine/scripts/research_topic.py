@@ -93,19 +93,12 @@ Requirements:
     output_text = ""
     try:
         response = client.responses.create(
-            model="gpt-4o",
+            model="gpt-4.1",
             tools=[{"type": "web_search_preview"}],
             input=prompt,
         )
 
-        # Extract text content from response output items
-        for item in response.output:
-            if hasattr(item, "content"):
-                for block in item.content:
-                    if hasattr(block, "text"):
-                        output_text += block.text
-            elif hasattr(item, "text"):
-                output_text += item.text
+        output_text = response.output_text or ""
 
         # Strip markdown code fences if present
         text = output_text.strip()

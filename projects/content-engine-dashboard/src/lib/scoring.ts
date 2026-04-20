@@ -17,6 +17,7 @@ import type {
   SavedArticle,
   ScoredIdea,
   Platform,
+  YouTubeBookmarkedVideo,
 } from "./types";
 
 let _idCounter = 0;
@@ -193,6 +194,35 @@ export function scoreSavedArticle(article: SavedArticle): ScoredIdea {
     source: "saved-articles",
     url: article.url,
     date: article.date_saved,
+  };
+}
+
+export function scoreYouTubeBookmarked(video: YouTubeBookmarkedVideo): ScoredIdea {
+  const viewsMomentum = video.views > 100_000 ? "rising" : video.views > 50_000 ? "steady" : "steady";
+  const engCompetition = video.engRate > 4 ? "low" : video.engRate > 3 ? "medium" : "high";
+  const score = Math.min(
+    10,
+    timelinessPts("trending") +
+      competitionPts(engCompetition) +
+      momentumPts(viewsMomentum) +
+      pillarPts(video.title) +
+      1 // saved bonus
+  );
+
+  return {
+    id: uid(),
+    score,
+    topic: video.title,
+    platform: "LinkedIn",
+    format: "Text Post",
+    hook: "",
+    angle: video.channel,
+    whyNow: `${video.views.toLocaleString()} views · ${video.engRate}% eng`,
+    pillar: "AI & Automation",
+    source: "youtube-bookmarked",
+    timeliness: "trending",
+    url: video.url,
+    date: video.dateSaved,
   };
 }
 

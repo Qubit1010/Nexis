@@ -110,7 +110,20 @@ export interface PullIdeasOutput {
 
 // ---- Scored idea (computed client-side) ----
 
-export type IdeaSource = "news-brief" | "youtube-brief" | "content-opportunities" | "saved-articles";
+export type IdeaSource = "news-brief" | "youtube-brief" | "content-opportunities" | "saved-articles" | "youtube-bookmarked";
+
+export interface YouTubeBookmarkedVideo {
+  dateSaved: string;
+  title: string;
+  channel: string;
+  url: string;
+  views: number;
+  likes: number;
+  engRate: number;
+  duration: string;
+  publishedDate: string;
+  status: string;
+}
 export type Platform = "LinkedIn" | "Instagram" | "Blog";
 
 export type ContentMode = "news" | "opinion" | "story" | "tutorial";

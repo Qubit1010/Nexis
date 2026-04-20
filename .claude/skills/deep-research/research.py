@@ -75,11 +75,11 @@ def run_research(api_key: str, query: str, mode: str, context: str) -> str:
     system_prompt = build_system_prompt(context)
 
     if mode == "deep":
-        model = "gpt-4o"
+        model = "gpt-5"
         user_msg = build_deep_instructions(query)
         search_context = "high"
     else:
-        model = "gpt-4o-mini"
+        model = "gpt-4.1-mini"
         user_msg = build_quick_instructions(query)
         search_context = "low"
 
@@ -92,11 +92,11 @@ def run_research(api_key: str, query: str, mode: str, context: str) -> str:
         )
         return response.output_text
     except Exception as e:
-        # Fallback: try gpt-4o-mini if gpt-4o fails
+        # Fallback: try gpt-4.1-mini if gpt-5 fails
         if mode == "deep" and "model" in str(e).lower():
-            print(f"Note: Falling back to gpt-4o-mini ({e})", file=sys.stderr)
+            print(f"Note: Falling back to gpt-4.1-mini ({e})", file=sys.stderr)
             response = client.responses.create(
-                model="gpt-4o-mini",
+                model="gpt-4.1-mini",
                 instructions=system_prompt,
                 input=user_msg,
                 tools=[{"type": "web_search_preview"}],
