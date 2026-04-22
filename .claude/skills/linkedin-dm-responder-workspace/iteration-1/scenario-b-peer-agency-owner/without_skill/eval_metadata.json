@@ -1,0 +1,17 @@
+{
+  "eval_id": 5,
+  "eval_name": "scenario-b-peer-agency-owner",
+  "prompt": "This prospect looks like a peer — another AI/automation consultant. What do I send back?\n\nConversation:\n[Me, Day 0 connection note]: Hey Steven, came across Rivet AI while exploring the automation space. The founder-led stage you're building through is one I find genuinely interesting to follow. Looking forward to being in your network.\n\n[Steven, Day 1]: Appreciate it Aleem. Checked out your profile — looks like we're in overlapping territory. Always good to know other builders in the space. What are you focused on lately?\n\nProfile: Steven Roberts, Founder of Rivet AI (solo consultancy, AI strategy and implementation for mid-market companies, based in Denver).",
+  "assertions": [
+    "Message body (excluding meta-line) is under 1000 characters",
+    "Contains at least one Voss label",
+    "Does not pitch NexusPoint services as if Steven is a prospective client",
+    "Does not ask Steven to 'hop on a call' as a prospective buyer",
+    "Frames the conversation as peer-to-peer / partnership territory — e.g., asks about his build-side setup, overflow work, specialist partners, or referral dynamics",
+    "Meta-line (Phase or Tactic) flags that this is a peer/referral-partner track, not a direct-client track",
+    "Output includes Phase: and Tactic: meta-line",
+    "Contains no em dashes",
+    "Contains no emoji characters",
+    "Contains a calibrated question that surfaces the nature of his build-side setup"
+  ]
+}

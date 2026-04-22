@@ -1,0 +1,99 @@
+{
+  "skill_name": "linkedin-dm-responder",
+  "evals": [
+    {
+      "id": 1,
+      "name": "scenario-a-dm2-lean-saas",
+      "prompt": "I need DM 2 for a LinkedIn prospect who accepted my connection 4 days ago but hasn't replied. Profile:\n\nName: Sarah Chen\nRole: Co-founder & CEO\nCompany: Growlio (SaaS, analytics for D2C brands)\nCompany size: 4\nBio mentions: ex-Shopify, building out of Toronto\nRecent post: shared a thread about how much of her week is going to manual reporting instead of product work\n\nPrevious DM I sent (DM 1, Day 0):\n\"Hey Sarah, thanks for connecting! It looks like you're running Growlio pretty lean which usually means you're wearing more hats than you'd like. What's the part of the business eating the most of your time right now?\"\n\nWrite DM 2 for Day 4.",
+      "expected_output": "A Scenario A DM 2 output: under 1000 chars, value-only (no pitch, no call ask), includes a Voss label, references her role/stage/recent post in a way that doesn't repeat DM 1's phrasing, signs off with '- Aleem' or nothing, no emojis, no em dashes, no 'just following up' or 'circling back' openers.",
+      "files": [],
+      "assertions": [
+        {"name": "under_1000_chars", "description": "Message body is under 1000 characters"},
+        {"name": "contains_voss_label", "description": "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes (—) — only plain hyphens allowed"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "no_following_up_phrases", "description": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'"},
+        {"name": "no_call_ask_in_dm2", "description": "Does not ask for a call, meeting, Zoom, or 15/20-minute chat"},
+        {"name": "no_pitch_in_dm2", "description": "Does not pitch NexusPoint services or drop a case study / result with a percentage"},
+        {"name": "personalized_to_profile", "description": "References her specific context (lean team, founder-as-integration-layer, reporting pain from her post, or similar) — not generic"},
+        {"name": "does_not_repeat_dm1", "description": "Does not re-use DM 1's exact phrasing like 'wearing more hats' or 'what's eating your time'"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "scenario-a-dm4-agency-coo",
+      "prompt": "I need DM 4 (the final one) for a LinkedIn prospect. They accepted the connection 16 days ago, I sent DM 2 on Day 4 and DM 3 on Day 9, no reply to any of them. Profile:\n\nName: Marcus Ellery\nRole: COO\nCompany: Northwind Collective (20-person marketing agency, specializes in B2B SaaS client work)\nBased in Austin, TX\nCompany size: 20\n\nDM 3 (Day 9) referenced our lead-to-outreach pipeline that cut manual follow-up time by 80%.\n\nWrite DM 4 for Day 16.",
+      "expected_output": "A Scenario A DM 4 output: under 1000 chars, direct but no-oriented call ask, includes a Voss label, permission-framed ('would it be off base', 'is it a bad idea', 'would it be crazy'), specific short duration (15-20 min), graceful exit option ('if it's not the right time, no worries'), signs off with '- Aleem' or nothing. No em dashes, no emojis.",
+      "files": [],
+      "assertions": [
+        {"name": "under_1000_chars", "description": "Message body is under 1000 characters"},
+        {"name": "contains_voss_label", "description": "Contains at least one Voss label"},
+        {"name": "no_oriented_ask", "description": "Contains a no-oriented ask phrase: 'would it be off base', 'is it a bad idea', 'would it be crazy', 'is this the worst timing', or similar"},
+        {"name": "not_yes_oriented", "description": "Does not use yes-oriented framing like 'do you want to', 'can we schedule', 'are you free'"},
+        {"name": "specific_duration", "description": "Specifies a short duration like '15 minutes' or '20 minutes'"},
+        {"name": "graceful_exit_offered", "description": "Offers a low-friction no option ('if not, no worries', 'if it's a bad time, all good', or similar)"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "no_following_up_phrases", "description": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'"},
+        {"name": "last_message_framing", "description": "Signals this is the last message in the sequence ('last note', 'last message from me', 'don't want to camp in your inbox', or similar)"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "scenario-b-opener-reply",
+      "prompt": "A prospect just replied to my connection with a very short message. What should I send back?\n\nConversation:\n[Me, Day 0]: Hey James, thanks for connecting! It looks like you're scaling Inflect past the scrappy stage and into coordination territory which is where most of the interesting problems show up. What's the biggest friction point on your plate right now?\n\n[James, Day 1]: Happy to connect Aleem. What do you do exactly?\n\nProfile: James Tanaka, VP Operations at Inflect (40-person fintech infra startup, Series A, NYC).",
+      "expected_output": "A Scenario B output with the message + meta-line (Phase / Tactic). Message should be a Qualify-phase calibrated question — not a pitch dump. Short, one-line framing of what Aleem does (no feature list, no case study), then a calibrated question that pulls James into naming his own pain. Includes Voss label. Meta-line: Phase = Qualify, Tactic names the specific Voss move.",
+      "files": [],
+      "assertions": [
+        {"name": "under_1000_chars", "description": "Message body (excluding meta-line) is under 1000 characters"},
+        {"name": "contains_voss_label", "description": "Contains at least one Voss label"},
+        {"name": "contains_calibrated_question", "description": "Contains a calibrated question starting with 'how' or 'what' — not a yes/no question"},
+        {"name": "includes_meta_line", "description": "Output includes the meta-line with 'Phase:' and 'Tactic:' fields"},
+        {"name": "phase_is_qualify", "description": "Meta-line declares phase as Qualify (not Label, Proof, Pull, or Call)"},
+        {"name": "no_case_study_drop", "description": "Does not drop a quantified NexusPoint result (70%, 80%, hours-to-minutes, etc.) — too early"},
+        {"name": "no_call_ask", "description": "Does not ask for a call, Zoom, or meeting"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "matches_their_length", "description": "Reply is short/medium, not a 4-paragraph pitch (they sent one line — Aleem should not respond with a wall of text)"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "scenario-b-pain-disclosed",
+      "prompt": "Prospect replied again. What do I send back?\n\nConversation:\n[Me]: Hey Priya, thanks for connecting! It seems like scaling Lumen past the 30-person mark usually means coordination work starts quietly eating founder hours. How are you handling that right now?\n\n[Priya]: Honestly it's rough. We're drowning in manual onboarding for both clients and new hires. Spreadsheets and Looms everywhere, nothing really connected.\n\nProfile: Priya Sharma, Founder/CEO, Lumen (35-person B2B SaaS, HR tech, London).",
+      "expected_output": "A Scenario B output. This is the Label phase — she disclosed pain, Aleem should mirror it back sharper than she said it. One Voss label minimum. Optionally a short calibrated follow-up question. Should NOT drop a case study yet (save proof for when she asks 'what do you do' or confirms the label). Should NOT ask for a call. Meta-line phase should be Label. Matches her message length (she sent 2 sentences — Aleem replies with 2-4 sentences max).",
+      "files": [],
+      "assertions": [
+        {"name": "under_1000_chars", "description": "Message body (excluding meta-line) is under 1000 characters"},
+        {"name": "contains_voss_label", "description": "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'"},
+        {"name": "includes_meta_line", "description": "Output includes Phase: and Tactic: meta-line"},
+        {"name": "phase_is_label", "description": "Meta-line declares phase as Label"},
+        {"name": "no_case_study_yet", "description": "Does not drop a quantified NexusPoint result — she hasn't asked for proof yet, still in Label phase"},
+        {"name": "no_call_ask", "description": "Does not ask for a call or meeting"},
+        {"name": "no_pitch", "description": "Does not pitch NexusPoint services or say 'we can help with this' / 'I can build this for you'"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "label_sharper_than_disclosure", "description": "Label reframes or sharpens what Priya said — not just repeating her own words back verbatim"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "scenario-b-peer-agency-owner",
+      "prompt": "This prospect looks like a peer — another AI/automation consultant. What do I send back?\n\nConversation:\n[Me, Day 0 connection note]: Hey Steven, came across Rivet AI while exploring the automation space. The founder-led stage you're building through is one I find genuinely interesting to follow. Looking forward to being in your network.\n\n[Steven, Day 1]: Appreciate it Aleem. Checked out your profile — looks like we're in overlapping territory. Always good to know other builders in the space. What are you focused on lately?\n\nProfile: Steven Roberts, Founder of Rivet AI (solo consultancy, AI strategy and implementation for mid-market companies, based in Denver).",
+      "expected_output": "A Scenario B output with peer-track framing. Key signal: Steven is an AI consultant himself — not a direct client, potentially a referral partner. Aleem should NOT pitch services. Should flag the peer dynamic in the meta-line's Tactic. Should ask a calibrated question that surfaces whether there's a partnership/overflow/subcontract fit ('do you handle all the build side yourself or bring in specialists'). Meta-line phase is Qualify (peer track).",
+      "files": [],
+      "assertions": [
+        {"name": "under_1000_chars", "description": "Message body (excluding meta-line) is under 1000 characters"},
+        {"name": "contains_voss_label", "description": "Contains at least one Voss label"},
+        {"name": "no_sales_pitch", "description": "Does not pitch NexusPoint services as if Steven is a prospective client"},
+        {"name": "no_call_ask_for_sale", "description": "Does not ask Steven to 'hop on a call' as a prospective buyer"},
+        {"name": "partnership_or_peer_framing", "description": "Frames the conversation as peer-to-peer / partnership territory — e.g., asks about his build-side setup, overflow work, specialist partners, or referral dynamics"},
+        {"name": "meta_flags_peer_track", "description": "Meta-line (Phase or Tactic) flags that this is a peer/referral-partner track, not a direct-client track"},
+        {"name": "includes_meta_line", "description": "Output includes Phase: and Tactic: meta-line"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "calibrated_question_present", "description": "Contains a calibrated question that surfaces the nature of his build-side setup"}
+      ]
+    }
+  ]
+}

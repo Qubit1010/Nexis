@@ -1,0 +1,17 @@
+{
+  "eval_id": 4,
+  "eval_name": "scenario-b-pain-disclosed",
+  "prompt": "Prospect replied again. What do I send back?\n\nConversation:\n[Me]: Hey Priya, thanks for connecting! It seems like scaling Lumen past the 30-person mark usually means coordination work starts quietly eating founder hours. How are you handling that right now?\n\n[Priya]: Honestly it's rough. We're drowning in manual onboarding for both clients and new hires. Spreadsheets and Looms everywhere, nothing really connected.\n\nProfile: Priya Sharma, Founder/CEO, Lumen (35-person B2B SaaS, HR tech, London).",
+  "assertions": [
+    "Message body (excluding meta-line) is under 1000 characters",
+    "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'",
+    "Output includes Phase: and Tactic: meta-line",
+    "Meta-line declares phase as Label",
+    "Does not drop a quantified NexusPoint result — she hasn't asked for proof yet, still in Label phase",
+    "Does not ask for a call or meeting",
+    "Does not pitch NexusPoint services or say 'we can help with this' / 'I can build this for you'",
+    "Contains no em dashes",
+    "Contains no emoji characters",
+    "Label reframes or sharpens what Priya said — not just repeating her own words back verbatim"
+  ]
+}

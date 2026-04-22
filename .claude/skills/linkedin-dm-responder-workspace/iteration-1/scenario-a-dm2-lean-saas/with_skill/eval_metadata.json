@@ -1,0 +1,16 @@
+{
+  "eval_id": 1,
+  "eval_name": "scenario-a-dm2-lean-saas",
+  "prompt": "I need DM 2 for a LinkedIn prospect who accepted my connection 4 days ago but hasn't replied. Profile:\n\nName: Sarah Chen\nRole: Co-founder & CEO\nCompany: Growlio (SaaS, analytics for D2C brands)\nCompany size: 4\nBio mentions: ex-Shopify, building out of Toronto\nRecent post: shared a thread about how much of her week is going to manual reporting instead of product work\n\nPrevious DM I sent (DM 1, Day 0):\n\"Hey Sarah, thanks for connecting! It looks like you're running Growlio pretty lean which usually means you're wearing more hats than you'd like. What's the part of the business eating the most of your time right now?\"\n\nWrite DM 2 for Day 4.",
+  "assertions": [
+    "Message body is under 1000 characters",
+    "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'",
+    "Contains no em dashes (—) — only plain hyphens allowed",
+    "Contains no emoji characters",
+    "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'",
+    "Does not ask for a call, meeting, Zoom, or 15/20-minute chat",
+    "Does not pitch NexusPoint services or drop a case study / result with a percentage",
+    "References her specific context (lean team, founder-as-integration-layer, reporting pain from her post, or similar) — not generic",
+    "Does not re-use DM 1's exact phrasing like 'wearing more hats' or 'what's eating your time'"
+  ]
+}

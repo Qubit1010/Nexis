@@ -1,0 +1,17 @@
+{
+  "eval_id": 3,
+  "eval_name": "scenario-b-opener-reply",
+  "prompt": "A prospect just replied to my connection with a very short message. What should I send back?\n\nConversation:\n[Me, Day 0]: Hey James, thanks for connecting! It looks like you're scaling Inflect past the scrappy stage and into coordination territory which is where most of the interesting problems show up. What's the biggest friction point on your plate right now?\n\n[James, Day 1]: Happy to connect Aleem. What do you do exactly?\n\nProfile: James Tanaka, VP Operations at Inflect (40-person fintech infra startup, Series A, NYC).",
+  "assertions": [
+    "Message body (excluding meta-line) is under 1000 characters",
+    "Contains at least one Voss label",
+    "Contains a calibrated question starting with 'how' or 'what' — not a yes/no question",
+    "Output includes the meta-line with 'Phase:' and 'Tactic:' fields",
+    "Meta-line declares phase as Qualify (not Label, Proof, Pull, or Call)",
+    "Does not drop a quantified NexusPoint result (70%, 80%, hours-to-minutes, etc.) — too early",
+    "Does not ask for a call, Zoom, or meeting",
+    "Contains no em dashes",
+    "Contains no emoji characters",
+    "Reply is short/medium, not a 4-paragraph pitch (they sent one line — Aleem should not respond with a wall of text)"
+  ]
+}

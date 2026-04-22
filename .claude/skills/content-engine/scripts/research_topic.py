@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Research a content topic using OpenAI web search.
+"""Research a content topic using Anthropic web search.
 
 Returns SEO keywords, fresh data points, competitor angles, content gap,
 people-also-ask questions, and relevant hashtags.
@@ -19,44 +19,44 @@ from datetime import datetime
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Research a content topic using OpenAI web search"
+        description="Research a content topic using Anthropic web search"
     )
     parser.add_argument("--topic", required=True, help="Topic to research")
     args = parser.parse_args()
     topic = args.topic
 
-    api_key = os.environ.get("OPENAI_API_KEY")
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         print(
             json.dumps(
                 {
                     "topic": topic,
                     "available": False,
-                    "error": "OPENAI_API_KEY not set in environment",
+                    "error": "ANTHROPIC_API_KEY not set in environment",
                 }
             )
         )
         sys.exit(0)
 
     try:
-        from openai import OpenAI
+        import anthropic
     except ImportError:
         print(
             json.dumps(
                 {
                     "topic": topic,
                     "available": False,
-                    "error": "openai package not installed. Run: pip install openai",
+                    "error": "anthropic package not installed. Run: pip install anthropic",
                 }
             )
         )
         sys.exit(0)
 
-    client = OpenAI(api_key=api_key)
+    client = anthropic.Anthropic(api_key=api_key)
 
     prompt = f"""Research this content topic for a personal brand creator: "{topic}"
 
-Creator context: Aleem is a 21-year-old founder (NexusPoint AI agency) and BSAI student
+Creator context: Aleem is a 25-year-old founder (NexusPoint AI agency) and BSAI student
 in Islamabad, Pakistan. His audience is startup founders, tech entrepreneurs, developers,
 and AI enthusiasts. He posts on Instagram, LinkedIn, and a personal blog.
 
@@ -92,22 +92,24 @@ Requirements:
 
     output_text = ""
     try:
-        response = client.responses.create(
-            model="gpt-4.1",
-            tools=[{"type": "web_search_preview"}],
-            input=prompt,
+        response = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=1024,
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
+            messages=[{"role": "user", "content": prompt}],
         )
 
-        output_text = response.output_text or ""
+        # Extract text from response content blocks
+        for block in response.content:
+            if hasattr(block, "type") and block.type == "text":
+                output_text += block.text
 
-        # Strip markdown code fences if present
         text = output_text.strip()
         if "```json" in text:
             text = text.split("```json")[1].split("```")[0].strip()
         elif "```" in text:
             text = text.split("```")[1].split("```")[0].strip()
 
-        # Find JSON object boundaries in case there's extra text
         start = text.find("{")
         end = text.rfind("}") + 1
         if start != -1 and end > start:
@@ -125,7 +127,7 @@ Requirements:
                 {
                     "topic": topic,
                     "available": False,
-                    "error": f"Could not parse JSON from OpenAI response: {e}",
+                    "error": f"Could not parse JSON from Anthropic response: {e}",
                     "raw_response": output_text[:1000] if output_text else "",
                 }
             )

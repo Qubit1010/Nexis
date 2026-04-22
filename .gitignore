@@ -34,3 +34,7 @@ logs/
 .idea/
 
 context/
+
+# Datasets & ML runs (large files)
+datasets/
+ml-runs/

@@ -1,0 +1,20 @@
+{
+  "skill_name": "upwork-proposal-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a proposal for this job:\n\nLooking for an experienced Framer developer to help us redesign our SaaS landing page. We've tried using templates but they all look the same and our conversion rate is suffering. We need custom animations, a clean pricing section, and mobile responsiveness that actually works. Budget: $500-1000.",
+      "expected_output": "A proposal under 200 words, plain prose, opens with a Voss label referencing the template problem, mentions Framer specifically, includes one web portfolio result, ends with Loom CTA. Job type: Web Dev."
+    },
+    {
+      "id": 2,
+      "prompt": "Draft a proposal for this:\n\nWe're a B2B SaaS company and our sales process is completely manual. Leads come in from our website form, someone has to manually add them to HubSpot, then manually send a follow-up email, then manually set a reminder to follow up again. We need this automated end to end. We use HubSpot, Slack, and Gmail. Looking for someone who knows n8n or Make.",
+      "expected_output": "A proposal under 200 words, plain prose, Voss label about manual process pain, specific mention of n8n/Make + HubSpot, uses the lead-to-outreach or CRM automation result, ends with 15-min call CTA. Job type: Marketing Automation."
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a proposal for this job post:\n\nWe need an AI agent built using LangChain that can read our support tickets, classify them by urgency and category, draft a response using our tone guidelines, and flag anything it's not confident about for human review. We're currently handling 200+ tickets a day manually and it's killing the team.",
+      "expected_output": "A proposal under 200 words, plain prose, Voss label referencing manual ticket volume pain, specific LangChain/agent approach, uses onboarding agent or lead gen pipeline result, ends with 15-min call CTA. Job type: AI Services."
+    }
+  ]
+}

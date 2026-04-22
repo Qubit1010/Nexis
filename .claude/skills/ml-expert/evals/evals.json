@@ -1,0 +1,45 @@
+{
+  "skill_name": "ml-expert",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "EDA Implementation on Images Dataset\n\nYou are required to perform Exploratory Data Analysis (EDA) on a given image dataset. The objective of this task is to understand the dataset structure, distribution, and quality before applying any machine learning or deep learning techniques.\n\nTask Requirements:\n1. Dataset Overview\n   - Total number of images\n   - Number of classes (categories)\n   - Number of images per class\n2. Image Properties Analysis\n   - Image dimensions (height, width)\n   - Color channels (grayscale or RGB)\n   - Check for consistency in image sizes\n3. Data Visualization\n   - Display sample images from each class\n   - Plot class distribution (bar chart)\n   - Visualize random samples\n4. Data Quality Checks\n   - Identify missing or corrupted images\n   - Detect duplicate images (if any)\n   - Check for class imbalance\n5. Statistical Insights\n   - Mean and standard deviation of pixel values\n   - Distribution of pixel intensities\n6. Observations\n   - Write key findings from your analysis\n   - Highlight any issues in the dataset",
+      "expected_output": "Skill asks for dataset path. Once provided, generates a complete EDA Python script covering all 6 requirements, executes it, saves code to ml-runs/, produces PNG charts, and reports key findings.",
+      "assertions": [
+        "Asks for dataset path before writing any code",
+        "Generated code covers all 6 task sections (Overview, Properties, Visualization, Quality, Statistical, Observations)",
+        "Code uses pathlib for paths, not os.path",
+        "Code saves figures as PNG files, does not call plt.show()",
+        "Code is saved to ml-runs/ directory",
+        "Output is captured and saved alongside the code",
+        "Final report includes key findings and chart locations"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "what's the difference between batch normalization and dropout? when should I use each one?",
+      "expected_output": "Clear, expert-level explanation of both techniques: what they do mechanistically, why they exist (overfitting/covariate shift), and when to use each. No code unless offered. Concise, not lecture-length.",
+      "assertions": [
+        "Explains batch normalization correctly (normalizes layer inputs across batch)",
+        "Explains dropout correctly (randomly zeros activations during training)",
+        "Gives concrete guidance on when to use each",
+        "Does not generate or execute code unless user requests it",
+        "Offers to show code examples at the end"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "perform EDA on data/sales.csv, target column is revenue",
+      "expected_output": "Generates a complete tabular EDA Python script: shape, dtypes, null counts, distribution plots, correlation heatmap, and target column analysis. Executes the script and saves code + output to ml-runs/.",
+      "assertions": [
+        "Generates code for tabular EDA (not image EDA)",
+        "Includes null/missing value analysis",
+        "Includes correlation heatmap or correlation matrix",
+        "Includes target column (revenue) distribution analysis",
+        "Saves figures as PNG files",
+        "Code saved to ml-runs/ directory with timestamped folder",
+        "Reports key findings after execution"
+      ]
+    }
+  ]
+}

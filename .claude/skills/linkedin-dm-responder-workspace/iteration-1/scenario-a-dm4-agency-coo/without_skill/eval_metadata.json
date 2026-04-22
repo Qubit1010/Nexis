@@ -1,0 +1,17 @@
+{
+  "eval_id": 2,
+  "eval_name": "scenario-a-dm4-agency-coo",
+  "prompt": "I need DM 4 (the final one) for a LinkedIn prospect. They accepted the connection 16 days ago, I sent DM 2 on Day 4 and DM 3 on Day 9, no reply to any of them. Profile:\n\nName: Marcus Ellery\nRole: COO\nCompany: Northwind Collective (20-person marketing agency, specializes in B2B SaaS client work)\nBased in Austin, TX\nCompany size: 20\n\nDM 3 (Day 9) referenced our lead-to-outreach pipeline that cut manual follow-up time by 80%.\n\nWrite DM 4 for Day 16.",
+  "assertions": [
+    "Message body is under 1000 characters",
+    "Contains at least one Voss label",
+    "Contains a no-oriented ask phrase: 'would it be off base', 'is it a bad idea', 'would it be crazy', 'is this the worst timing', or similar",
+    "Does not use yes-oriented framing like 'do you want to', 'can we schedule', 'are you free'",
+    "Specifies a short duration like '15 minutes' or '20 minutes'",
+    "Offers a low-friction no option ('if not, no worries', 'if it's a bad time, all good', or similar)",
+    "Contains no em dashes",
+    "Contains no emoji characters",
+    "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'",
+    "Signals this is the last message in the sequence ('last note', 'last message from me', 'don't want to camp in your inbox', or similar)"
+  ]
+}

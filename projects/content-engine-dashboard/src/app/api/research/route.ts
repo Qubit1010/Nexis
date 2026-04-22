@@ -13,10 +13,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "topic is required" }, { status: 400 });
     }
 
-    const apiKey = process.env.OPENAI_API_KEY;
+    const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
-        { error: "OPENAI_API_KEY is not set in .env.local" },
+        { error: "ANTHROPIC_API_KEY is not set in .env.local" },
         { status: 500 }
       );
     }
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     const stdout = await runScript(
       "research_topic.py",
       ["--topic", topic],
-      { OPENAI_API_KEY: apiKey }
+      { ANTHROPIC_API_KEY: apiKey }
     );
 
     const data: ResearchOutput = JSON.parse(stdout);

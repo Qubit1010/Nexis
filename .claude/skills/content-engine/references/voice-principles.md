@@ -25,11 +25,11 @@ AI cannot fake: emotional texture, real constraints, consequences, tradeoffs.
 Take a side. Disagree with something. Never be neutral.
 Unswappable: "Why most AI automation ideas fail in real client work"
 Generic (forbidden): "Here are 5 AI automation tips"
-- The disagreement must be with a popular belief, not a straw man. Name the conventional wisdom you're rejecting before you reject it.
+- The disagreement must be with a popular belief, not a straw man. Name the belief you're rejecting using a fresh phrase each time — "what most people assume", "the standard advice", "the default take", "the accepted playbook", "what everyone gets wrong", "how most people think about this". Never repeat the same phrase across posts. Never write "conventional wisdom".
 - The opinion must be defensible — state the condition under which you'd be wrong.
 
 **3. Cross-domain Synthesis**
-Connect Aleem's worlds: AI + freelancing, Philosophy, learning from mistakes, Stoicism + startup life, strategy + business.
+Connect Aleem's worlds: AI + freelancing, Philosophy, learning from mistakes, startup life, strategy + business.
 - "What strong leaders understood about scoping that agency founders ignore"
 - "My lectures and practical experience finally explained why some projects break in production"
 - The connection must be non-obvious. If anyone else would make the same connection, it doesn't count.

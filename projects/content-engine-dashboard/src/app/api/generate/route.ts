@@ -1,19 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
+import Anthropic from "@anthropic-ai/sdk";
 import type { ResearchOutput, ContentMode, PillarKey } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
 const PLATFORM_SPECS: Record<string, string> = {
-  "LinkedIn Text Post": `300-800 words. Strong 3-line hook (each line is its own paragraph).
-Body: 4-6 short insight paragraphs, each 1-3 sentences. Specific and personal.
-End with an open question to invite discussion. No headers. Lots of white space.`,
+  "LinkedIn Text Post": `200-400 words MAX. Strong 3-line hook (each line is its own paragraph).
+Body: 3-4 short insight paragraphs, each 1-2 sentences. Specific and personal.
+End with an open question. No headers. Lots of white space. Cut every sentence that doesn't add new information.`,
 
-  "LinkedIn Article": `800-1500 words. SEO-friendly H1 title (use primary_keyword if available).
-Intro: hook + problem statement. Body: 3-4 sections with H2 headers. Specific data from research.
+  "LinkedIn Article": `600-900 words. SEO-friendly H1 title (use primary_keyword if available).
+Intro: hook + problem statement. Body: 2-3 sections with H2 headers. Specific data from research.
 Conclusion: key takeaway + CTA.`,
 
-  "LinkedIn Newsletter": `600-1000 words. Conversational tone. Intro: why this matters now.
-Body: 3 main insights with examples. End: one actionable takeaway.`,
+  "LinkedIn Newsletter": `400-600 words. Conversational tone. Intro: why this matters now.
+Body: 2-3 main insights with examples. End: one actionable takeaway.`,
 
   "Instagram Carousel": `5-8 slides. For EACH slide output exactly this structure (no deviations):
 
@@ -49,17 +50,17 @@ Include [B-ROLL] notes. Keep spoken lines under 10 words each.`,
   "Instagram Short Video": `45-90 second video script. Hook + problem + 3 insights + CTA.
 Format: [SCENE] descriptions + spoken dialogue.`,
 
-  "Blog Article": `800-2000 words. SEO-optimized. Use primary_keyword in H1 title.
+  "Blog Article": `700-1200 words. SEO-optimized. Use primary_keyword in H1 title.
 Intro: hook + problem + what you'll learn (no "In today's landscape" openings).
-Body: 3-4 H2 sections. Embed 2-3 data_points from research naturally.
+Body: 2-3 H2 sections. Embed 2 data_points from research naturally.
 Conclusion: summary + actionable next step + soft CTA.`,
 
-  "Blog Tutorial": `Step-by-step guide. 800-1500 words. H1: "How I [did X]" format.
+  "Blog Tutorial": `Step-by-step guide. 600-1000 words. H1: "How I [did X]" format.
 Intro: why this matters + quick result. Steps: numbered, specific, with code/examples if relevant.
 End: result + what to try next.`,
 
-  "Blog Opinion": `500-1000 words. Strong POV. H1: contrarian statement.
-Intro: the conventional wisdom. Body: why it's wrong + your experience.
+  "Blog Opinion": `400-700 words. Strong POV. H1: contrarian statement.
+Intro: the popular belief you're challenging (use a fresh phrase each time — e.g. "what most people think", "the standard advice", "what everyone assumes", "the default take", "the accepted playbook" — never repeat the same phrase). Body: why it's wrong + your experience.
 End: what you actually believe + invite disagreement.`,
 };
 
@@ -74,8 +75,8 @@ function getFormatSpec(platform: string, format: string): string {
 
 const PILLAR_DEFINITIONS: Record<PillarKey, string> = {
   lived_experience: "LIVED EXPERIENCE: Root it in real events — failed proposals, client mistakes, what actually happened. Include at least one specific anchor: project type, client type, dollar amount, time lost, or exact mistake. Vague experience is as bad as no experience.",
-  strong_pov: "STRONG POV: Take a clear, defensible side. Name the conventional wisdom you're rejecting before you reject it. The opinion must be defensible — state the condition under which you'd be wrong. Never be neutral.",
-  cross_domain: "CROSS-DOMAIN SYNTHESIS: Connect AI/tech with an unexpected domain (Philosophy, Stoicism, compiler theory, gym discipline, history). The connection must be non-obvious. Lead with the unexpected domain before bridging to the business/AI point.",
+  strong_pov: "STRONG POV: Take a clear, defensible side. Name the popular belief you're rejecting — use a different phrase each time (e.g. 'what most people assume', 'the standard advice', 'the default take', 'the accepted playbook', 'what everyone gets wrong', 'the usual thinking'). Never write the phrase 'conventional wisdom'. The opinion must be defensible — state the condition under which you'd be wrong. Never be neutral.",
+  cross_domain: "CROSS-DOMAIN SYNTHESIS: Connect AI/tech with an unexpected domain (Philosophy, compiler theory, gym discipline, history, science, systems thinking). The connection must be non-obvious. Lead with the unexpected domain first (philosophy, experience, computer science, tech-business, history, or some insight) before bridging to the business/AI point.",
   taste_judgment: "TASTE & JUDGMENT: Make a decisive call. State what you would NOT do and why. Never hedge with 'it depends' — if context matters, state the specific condition, then make the call.",
   identity_voice: "IDENTITY & VOICE: Student founder in Pakistan building real systems. This context must appear as constraint, not credential — show how it limits or shapes decisions. If the piece could have been written by a US-based senior engineer with no resource pressure, rewrite it.",
   practical_stakes: "PRACTICAL STAKES: Answer two questions — what breaks if you ignore this? And what does doing it right look like in production? Don't explain a concept without grounding it in a consequence. The production example must come from real work, not a hypothetical.",
@@ -94,7 +95,7 @@ This is data-driven content. Your primary job is to inform and analyze, not to t
 This is a position piece. Aleem must take a clear, defensible side.
 - Open with the contrarian claim. Build the argument. End with the principle.
 - Do not hedge. Do not present "both sides." Pick one and own it.
-- Name the conventional wisdom you're rejecting before you reject it.
+- Name the popular belief you're rejecting — use a different phrase each time (e.g. "what most people assume", "the standard advice", "the default take", "the accepted playbook", "what everyone gets wrong"). Never write the phrase "conventional wisdom".
 - The opinion must be defensible — state the condition under which you'd be wrong.`,
 
   story: `CONTENT MODE: Personal Story
@@ -186,6 +187,7 @@ VOICE RULES — apply without exception:
 - Specific > vague: replace "many companies" with actual numbers from the research data
 - Hook first — never bury the lead
 - Short sentences. White space. No corporate filler.
+- BREVITY: Stay within the word count. Cut ruthlessly. If a sentence doesn't add new information, delete it. Do not pad, summarize, or repeat points already made.
 
 ALEEM'S CONTEXT:
 - 25-year-old founder of NexusPoint (AI automation agency) + BSAI student in Islamabad, Pakistan
@@ -226,42 +228,24 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const apiKey = process.env.OPENAI_API_KEY;
+    const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
-        { error: "OPENAI_API_KEY is not set in .env.local" },
+        { error: "ANTHROPIC_API_KEY is not set in .env.local" },
         { status: 500 }
       );
     }
 
     const prompt = buildPrompt(platform, format, topic, research ?? null, context, contentMode, selectedPillars);
 
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-4o",
-        messages: [{ role: "user", content: prompt }],
-        temperature: 0.7,
-        max_tokens: 2000,
-      }),
+    const anthropic = new Anthropic({ apiKey });
+    const message = await anthropic.messages.create({
+      model: "claude-sonnet-4-6",
+      max_tokens: 1200,
+      messages: [{ role: "user", content: prompt }],
     });
 
-    if (!response.ok) {
-      const err = await response.text();
-      return NextResponse.json(
-        { error: `OpenAI error: ${err}` },
-        { status: 500 }
-      );
-    }
-
-    const data = await response.json() as {
-      choices: Array<{ message: { content: string } }>;
-    };
-    const content = data.choices[0]?.message?.content ?? "";
+    const content = message.content[0]?.type === "text" ? message.content[0].text : "";
 
     return NextResponse.json({ content });
   } catch (err) {
