@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Message body is under 1000 characters",
+      "passed": true,
+      "evidence": "Message body is approximately 510 characters — under the 1000 char limit."
+    },
+    {
+      "text": "Contains at least one Voss label",
+      "passed": true,
+      "evidence": "'It seems like running ops at a 20-person agency doing B2B SaaS work means you're carrying a lot of the coordination overhead...'"
+    },
+    {
+      "text": "Contains a no-oriented ask phrase: 'would it be off base', 'is it a bad idea', 'would it be crazy', 'is this the worst timing', or similar",
+      "passed": true,
+      "evidence": "'would it be off base to grab 20 minutes this week'"
+    },
+    {
+      "text": "Does not use yes-oriented framing like 'do you want to', 'can we schedule', 'are you free'",
+      "passed": true,
+      "evidence": "None of these yes-oriented phrases present. Ask is no-oriented."
+    },
+    {
+      "text": "Specifies a short duration like '15 minutes' or '20 minutes'",
+      "passed": true,
+      "evidence": "'grab 20 minutes this week'"
+    },
+    {
+      "text": "Offers a low-friction no option ('if not, no worries', 'if it's a bad time, all good', or similar)",
+      "passed": true,
+      "evidence": "'If it's not the right time, no worries at all - I'll leave this alone and stay in the network.'"
+    },
+    {
+      "text": "Contains no em dashes",
+      "passed": true,
+      "evidence": "No em dashes. All dashes are plain hyphens (space-hyphen-space)."
+    },
+    {
+      "text": "Contains no emoji characters",
+      "passed": true,
+      "evidence": "No emoji characters present."
+    },
+    {
+      "text": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'",
+      "passed": true,
+      "evidence": "None of these phrases present."
+    },
+    {
+      "text": "Signals this is the last message in the sequence ('last note', 'last message from me', 'don't want to camp in your inbox', or similar)",
+      "passed": true,
+      "evidence": "'Last note from me on this one - don't want to keep camping in your inbox.'"
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10,
+    "pass_rate": 1.0
+  },
+  "claims": [],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All assertions pass. The Voss label is embedded inside the no-oriented ask (one long sentence) which is slightly unusual but valid."
+  }
+}

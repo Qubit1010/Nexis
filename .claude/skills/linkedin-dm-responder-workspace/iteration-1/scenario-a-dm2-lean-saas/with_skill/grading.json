@@ -1,0 +1,67 @@
+{
+  "expectations": [
+    {
+      "text": "Message body is under 1000 characters",
+      "passed": true,
+      "evidence": "Message body is approximately 330 characters — well under the 1000 char limit."
+    },
+    {
+      "text": "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'",
+      "passed": true,
+      "evidence": "Opens with 'It looks like the reporting side of running a D2C analytics product has a way of becoming the job nobody hired the founder to do.'"
+    },
+    {
+      "text": "Contains no em dashes (—) — only plain hyphens allowed",
+      "passed": true,
+      "evidence": "No em dashes present. Hyphens used in 'not in the tool, but in the gaps between tools' are plain hyphens."
+    },
+    {
+      "text": "Contains no emoji characters",
+      "passed": true,
+      "evidence": "No emoji characters present."
+    },
+    {
+      "text": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'",
+      "passed": true,
+      "evidence": "None of these phrases appear in the output."
+    },
+    {
+      "text": "Does not ask for a call, meeting, Zoom, or 15/20-minute chat",
+      "passed": true,
+      "evidence": "No call ask present. Closes with 'Not pitching anything - just something that might resonate.'"
+    },
+    {
+      "text": "Does not pitch NexusPoint services or drop a case study / result with a percentage",
+      "passed": true,
+      "evidence": "No pitch, no case study, no percentage. Explicitly says 'Not pitching anything.'"
+    },
+    {
+      "text": "References her specific context (lean team, founder-as-integration-layer, reporting pain from her post, or similar) — not generic",
+      "passed": true,
+      "evidence": "References 'D2C analytics product' and 'reporting side' — directly tied to her recent post about manual reporting eating her week."
+    },
+    {
+      "text": "Does not re-use DM 1's exact phrasing like 'wearing more hats' or 'what's eating your time'",
+      "passed": true,
+      "evidence": "Neither 'wearing more hats' nor 'what's eating your time' appear. Different angle: 'job nobody hired the founder to do' vs DM 1's 'wearing more hats.'"
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The DM reads like a founder peer, not a sales rep",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Tone is observational, not promotional. 'Not pitching anything' and the pattern-based framing signal peer perspective."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Assertions are well-targeted. The 'personalized_to_profile' assertion is the most discriminating — worth keeping."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Message body (excluding meta-line) is under 1000 characters",
+      "passed": true,
+      "evidence": "Message body (before ---) is approximately 380 characters — under 1000."
+    },
+    {
+      "text": "Contains at least one Voss label",
+      "passed": true,
+      "evidence": "'It sounds like we're working in pretty similar territory' — matches 'It sounds like' pattern."
+    },
+    {
+      "text": "Does not pitch NexusPoint services as if Steven is a prospective client",
+      "passed": true,
+      "evidence": "No service pitch to Steven as buyer. Describes Aleem's work area but doesn't offer to sell him anything."
+    },
+    {
+      "text": "Does not ask Steven to 'hop on a call' as a prospective buyer",
+      "passed": true,
+      "evidence": "'Would you be open to a quick call to chat about what you're building' — framed as peer/collaboration, not as a sales call to a buyer."
+    },
+    {
+      "text": "Frames the conversation as peer-to-peer / partnership territory — e.g., asks about his build-side setup, overflow work, specialist partners, or referral dynamics",
+      "passed": true,
+      "evidence": "'potential to collaborate - whether that's referrals, subcontracting, or just staying in each other's network' — peer framing present."
+    },
+    {
+      "text": "Meta-line (Phase or Tactic) flags that this is a peer/referral-partner track, not a direct-client track",
+      "passed": false,
+      "evidence": "'Phase: Qualify' with no peer-track qualifier. Tactic mentions 'peer-framed' but the Phase declaration doesn't flag the peer track explicitly. The skill expects 'Qualify (peer track)' or equivalent."
+    },
+    {
+      "text": "Output includes Phase: and Tactic: meta-line",
+      "passed": true,
+      "evidence": "Meta-line present with 'Phase:' and 'Tactic:' fields."
+    },
+    {
+      "text": "Contains no em dashes",
+      "passed": true,
+      "evidence": "No em dashes. Plain hyphens used."
+    },
+    {
+      "text": "Contains no emoji characters",
+      "passed": true,
+      "evidence": "No emoji characters present."
+    },
+    {
+      "text": "Contains a calibrated question that surfaces the nature of his build-side setup",
+      "passed": false,
+      "evidence": "'Would you be open to a quick call to chat about what you're building and where our work might overlap?' — this is a yes/no call ask, not a calibrated question that surfaces the build-side structure. It doesn't ask whether he handles builds himself vs. using specialists."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 2,
+    "total": 10,
+    "pass_rate": 0.8
+  },
+  "claims": [],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Closer than the other without-skill outputs — natural peer framing is accessible without the skill. The two failures (no explicit peer-track phase label, and no build-side calibrated question) are the specific things the skill adds."
+  }
+}

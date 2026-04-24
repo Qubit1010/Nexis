@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Message body (excluding meta-line) is under 1000 characters",
+      "passed": true,
+      "evidence": "Message body (before ---) is approximately 340 characters — well under 1000."
+    },
+    {
+      "text": "Contains at least one Voss label",
+      "passed": true,
+      "evidence": "'It looks like you're operating more at the strategy and advisory layer of AI work...'"
+    },
+    {
+      "text": "Does not pitch NexusPoint services as if Steven is a prospective client",
+      "passed": true,
+      "evidence": "No service pitch. Aleem describes what he does briefly ('I'm mostly on the build side') without framing Steven as a buyer."
+    },
+    {
+      "text": "Does not ask Steven to 'hop on a call' as a prospective buyer",
+      "passed": true,
+      "evidence": "No call ask of any kind. Ends with a calibrated question about his structure."
+    },
+    {
+      "text": "Frames the conversation as peer-to-peer / partnership territory — e.g., asks about his build-side setup, overflow work, specialist partners, or referral dynamics",
+      "passed": true,
+      "evidence": "'do you handle the technical implementation yourself, or bring in specialists for that side?' — directly surfaces partnership/specialist fit."
+    },
+    {
+      "text": "Meta-line (Phase or Tactic) flags that this is a peer/referral-partner track, not a direct-client track",
+      "passed": true,
+      "evidence": "'Phase: Qualify (peer track)' and Tactic explicitly says 'treats him as a peer builder, not a sales prospect.'"
+    },
+    {
+      "text": "Output includes Phase: and Tactic: meta-line",
+      "passed": true,
+      "evidence": "Meta-line present with both 'Phase:' and 'Tactic:' fields."
+    },
+    {
+      "text": "Contains no em dashes",
+      "passed": true,
+      "evidence": "No em dashes. Hyphens used are plain."
+    },
+    {
+      "text": "Contains no emoji characters",
+      "passed": true,
+      "evidence": "No emoji characters present."
+    },
+    {
+      "text": "Contains a calibrated question that surfaces the nature of his build-side setup",
+      "passed": true,
+      "evidence": "'do you handle the technical implementation yourself, or bring in specialists for that side?' — surfaces whether he's a potential build-side partner or solo operator."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10,
+    "pass_rate": 1.0
+  },
+  "claims": [],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All assertions pass. The peer-track pivot is clean and the calibrated question is well-targeted."
+  }
+}

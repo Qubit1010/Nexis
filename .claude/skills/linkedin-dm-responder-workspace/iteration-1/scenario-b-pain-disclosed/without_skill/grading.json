@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Message body (excluding meta-line) is under 1000 characters",
+      "passed": true,
+      "evidence": "Message body (before ---) is approximately 380 characters — under 1000."
+    },
+    {
+      "text": "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'",
+      "passed": false,
+      "evidence": "'That sounds incredibly frustrating' does not match the required Voss label format. The required openers are 'It sounds like', 'It looks like', 'It seems like', or 'It feels like' — not 'That sounds'."
+    },
+    {
+      "text": "Output includes Phase: and Tactic: meta-line",
+      "passed": true,
+      "evidence": "Meta-line present: 'Phase: Proof' and 'Tactic: Dropped a case study result...'"
+    },
+    {
+      "text": "Meta-line declares phase as Label",
+      "passed": false,
+      "evidence": "'Phase: Proof' — the without-skill version correctly identified the behavior (jumping to Proof) but this means the actual conversational behavior is wrong for this stage."
+    },
+    {
+      "text": "Does not drop a quantified NexusPoint result — she hasn't asked for proof yet, still in Label phase",
+      "passed": false,
+      "evidence": "'We recently helped a similar HR tech company automate their client onboarding and cut manual work by 70%' — case study with percentage dropped immediately after pain disclosure."
+    },
+    {
+      "text": "Does not ask for a call or meeting",
+      "passed": false,
+      "evidence": "'Would you be open to a quick 20-minute call?' — direct call ask after only one exchange."
+    },
+    {
+      "text": "Does not pitch NexusPoint services or say 'we can help with this' / 'I can build this for you'",
+      "passed": false,
+      "evidence": "'At NexusPoint, we specialize in building exactly these kinds of automation systems' — explicit service pitch."
+    },
+    {
+      "text": "Contains no em dashes",
+      "passed": true,
+      "evidence": "No em dashes present."
+    },
+    {
+      "text": "Contains no emoji characters",
+      "passed": true,
+      "evidence": "No emoji characters present."
+    },
+    {
+      "text": "Label reframes or sharpens what Priya said — not just repeating her own words back verbatim",
+      "passed": false,
+      "evidence": "'Managing onboarding through spreadsheets and Looms is a really common pain point' — restates her exact situation rather than sharpening it. No reframe present."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 6,
+    "total": 10,
+    "pass_rate": 0.4
+  },
+  "claims": [],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "No suggestions. All six failures represent real problems: phase skipping, pitch dump, call ask too early, no proper Voss label, no label sharpening."
+  }
+}

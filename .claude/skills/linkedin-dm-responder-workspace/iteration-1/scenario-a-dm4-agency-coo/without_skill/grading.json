@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Message body is under 1000 characters",
+      "passed": true,
+      "evidence": "Message body is approximately 380 characters — under the 1000 char limit."
+    },
+    {
+      "text": "Contains at least one Voss label",
+      "passed": false,
+      "evidence": "No Voss label ('It sounds like', 'It looks like', 'It seems like', 'It feels like') present anywhere in the message."
+    },
+    {
+      "text": "Contains a no-oriented ask phrase: 'would it be off base', 'is it a bad idea', 'would it be crazy', 'is this the worst timing', or similar",
+      "passed": false,
+      "evidence": "'Would you be open to a quick 15-minute call to explore this?' is a yes-oriented ask, not a no-oriented one. None of the required no-oriented phrasings appear."
+    },
+    {
+      "text": "Does not use yes-oriented framing like 'do you want to', 'can we schedule', 'are you free'",
+      "passed": true,
+      "evidence": "None of those exact phrases present. 'Would you be open to' is yes-oriented in spirit but not in the listed examples."
+    },
+    {
+      "text": "Specifies a short duration like '15 minutes' or '20 minutes'",
+      "passed": true,
+      "evidence": "'a quick 15-minute call'"
+    },
+    {
+      "text": "Offers a low-friction no option ('if not, no worries', 'if it's a bad time, all good', or similar)",
+      "passed": true,
+      "evidence": "'If the timing isn't right, completely understand - no hard feelings at all.'"
+    },
+    {
+      "text": "Contains no em dashes",
+      "passed": true,
+      "evidence": "No em dashes present."
+    },
+    {
+      "text": "Contains no emoji characters",
+      "passed": true,
+      "evidence": "No emoji characters present."
+    },
+    {
+      "text": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'",
+      "passed": false,
+      "evidence": "'Just circling back one last time' — contains the banned phrase 'circling back'."
+    },
+    {
+      "text": "Signals this is the last message in the sequence ('last note', 'last message from me', 'don't want to camp in your inbox', or similar)",
+      "passed": true,
+      "evidence": "'one last time' and 'I don't want to keep filling up your inbox' signal this is the final message."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 3,
+    "total": 10,
+    "pass_rate": 0.7
+  },
+  "claims": [],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "No suggestions. Key failures — no Voss label, yes-oriented ask, and 'circling back' — are exactly what the skill prevents."
+  }
+}

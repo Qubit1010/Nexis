@@ -44,6 +44,7 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 - **Instagram Outreach** (`.claude/skills/instagram-outreach/`) — Instagram lead generation and personalized DM system. Scrapes founder/CEO/ops leads via Apify hashtag search, stores in Google Sheets CRM, generates personalized Touch 1 DMs using OpenAI (GPT-4o-mini). All sending is manual (Instagram bans bots). Say "scrape instagram leads", "generate instagram DMs", "run instagram pipeline", "instagram outreach"
 - **Content Engine** (`.claude/skills/content-engine/`) — Full content creation system for Instagram, LinkedIn, and blog. Pulls ideas from 3 sources (daily-news-brief, YouTube brief, saved topics sheet), scores with opportunity scores, researches with OpenAI web search, writes finished content, and repurposes via flywheel (Blog -> LinkedIn + Instagram). Logs to Google Sheets + saves to Google Docs. Say "content ideas", "what should I post", "create content", "write a blog", "full content run", "repurpose this"
 - **Lead Gen** (`projects/lead-gen/`) — High-quality lead intelligence pipeline. Discovers prospects via LinkedIn Jobs/Profiles, Product Hunt, and Google Search — scores them with a 5-layer ICP system, enriches with website intel + email + Proxycurl + Perplexity, generates personalized outreach via Claude, and exports to all 3 CRMs. Say "generate leads", "run lead gen", "find me leads", "score leads", "enrich leads", "export leads", "pipeline stats", "build my prospect list"
+- **Website Audit System** (`.claude/skills/website-audit-system/`) — Crawls a prospect's site via Firecrawl, runs AI analysis across UX, SEO, performance (PageSpeed Insights), and conversion gaps, outputs a formatted Google Doc + ready-to-send cold outreach email. Two modes: quick (homepage, 3-5 findings + hook email — for outreach) and deep (multi-page crawl, scored per-dimension report — for paid deliverables). Say "audit this website", "quick audit of [URL]", "deep audit of [URL]", "audit [company]'s site"
 
 ### Skills to Build (Backlog)
 
@@ -65,7 +66,7 @@ Build as needed. Organized by domain:
 12. YouTube Brief (scrape/summarize channels → feed content engine)
 
 **Operations & Team**
-13. Website audit system (Firecrawl + AI → formatted audit report for prospects)
+13. ~~Website audit system~~ (built — see Active Skills)
 14. Session closeout (summarize session, surface decisions, update priorities)
 15. Weekly business review (outreach stats + content + leads + revenue snapshot)
 16. Project scoping template generator

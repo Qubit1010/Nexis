@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Message body is under 1000 characters",
+      "passed": true,
+      "evidence": "Message body is approximately 420 characters — under the 1000 char limit."
+    },
+    {
+      "text": "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'",
+      "passed": false,
+      "evidence": "No Voss label present. 'that definitely resonates' is not a Voss label. None of the required phrases appear."
+    },
+    {
+      "text": "Contains no em dashes (—) — only plain hyphens allowed",
+      "passed": true,
+      "evidence": "No em dashes present."
+    },
+    {
+      "text": "Contains no emoji characters",
+      "passed": true,
+      "evidence": "No emoji characters present."
+    },
+    {
+      "text": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'",
+      "passed": true,
+      "evidence": "None of these exact phrases appear."
+    },
+    {
+      "text": "Does not ask for a call, meeting, Zoom, or 15/20-minute chat",
+      "passed": false,
+      "evidence": "'Would you be open to a quick 20-minute call this week to explore whether there's a fit?' — direct call ask in DM 2, which violates the rule."
+    },
+    {
+      "text": "Does not pitch NexusPoint services or drop a case study / result with a percentage",
+      "passed": false,
+      "evidence": "'at NexusPoint, we help SaaS founders like you automate exactly these kinds of workflows' — explicit pitch. No percentage but services are pitched."
+    },
+    {
+      "text": "References her specific context (lean team, founder-as-integration-layer, reporting pain from her post, or similar) — not generic",
+      "passed": true,
+      "evidence": "'I saw your recent post about spending too much time on manual reporting' — references her post."
+    },
+    {
+      "text": "Does not re-use DM 1's exact phrasing like 'wearing more hats' or 'what's eating your time'",
+      "passed": true,
+      "evidence": "Neither phrase reused."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 3,
+    "total": 9,
+    "pass_rate": 0.667
+  },
+  "claims": [],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "No suggestions. The three failures (no Voss label, call ask in DM 2, NexusPoint pitch) are exactly what the skill prevents — good discriminating power."
+  }
+}

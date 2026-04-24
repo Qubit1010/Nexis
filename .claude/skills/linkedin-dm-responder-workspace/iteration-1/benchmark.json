@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "skill_name": "linkedin-dm-responder",
+    "skill_path": "c:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\.claude\\skills\\linkedin-dm-responder",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-04-23T00:00:00Z",
+    "evals_run": ["scenario-a-dm2-lean-saas", "scenario-a-dm4-agency-coo", "scenario-b-opener-reply", "scenario-b-pain-disclosed", "scenario-b-peer-agency-owner"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "scenario-a-dm2-lean-saas",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body is under 1000 characters", "passed": true, "evidence": "~330 chars"},
+        {"text": "Contains at least one Voss label", "passed": true, "evidence": "'It looks like the reporting side...'"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "Only plain hyphens used"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'", "passed": true, "evidence": "None present"},
+        {"text": "Does not ask for a call, meeting, Zoom, or 15/20-minute chat", "passed": true, "evidence": "No call ask — closes with 'Not pitching anything'"},
+        {"text": "Does not pitch NexusPoint services or drop a case study / result with a percentage", "passed": true, "evidence": "No pitch, no percentage"},
+        {"text": "References her specific context", "passed": true, "evidence": "References D2C analytics and reporting side from her post"},
+        {"text": "Does not re-use DM 1's exact phrasing", "passed": true, "evidence": "Different angle — 'job nobody hired the founder to do' vs 'wearing more hats'"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "scenario-a-dm2-lean-saas",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.667,
+        "passed": 6,
+        "failed": 3,
+        "total": 9,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body is under 1000 characters", "passed": true, "evidence": "~420 chars"},
+        {"text": "Contains at least one Voss label", "passed": false, "evidence": "No 'It sounds/looks/seems/feels like' present"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "None present"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'", "passed": true, "evidence": "None of these exact phrases"},
+        {"text": "Does not ask for a call, meeting, Zoom, or 15/20-minute chat", "passed": false, "evidence": "'Would you be open to a quick 20-minute call this week'"},
+        {"text": "Does not pitch NexusPoint services or drop a case study / result with a percentage", "passed": false, "evidence": "'at NexusPoint, we help SaaS founders like you automate...'"},
+        {"text": "References her specific context", "passed": true, "evidence": "References her post about manual reporting"},
+        {"text": "Does not re-use DM 1's exact phrasing", "passed": true, "evidence": "Not reused"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "scenario-a-dm4-agency-coo",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body is under 1000 characters", "passed": true, "evidence": "~510 chars"},
+        {"text": "Contains at least one Voss label", "passed": true, "evidence": "'It seems like running ops at a 20-person agency...'"},
+        {"text": "Contains a no-oriented ask phrase", "passed": true, "evidence": "'would it be off base to grab 20 minutes'"},
+        {"text": "Does not use yes-oriented framing", "passed": true, "evidence": "No yes-oriented ask present"},
+        {"text": "Specifies a short duration like '15 minutes' or '20 minutes'", "passed": true, "evidence": "'grab 20 minutes this week'"},
+        {"text": "Offers a low-friction no option", "passed": true, "evidence": "'no worries at all - I'll leave this alone'"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "Plain hyphens only"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'", "passed": true, "evidence": "None present"},
+        {"text": "Signals this is the last message in the sequence", "passed": true, "evidence": "'Last note from me on this one'"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "scenario-a-dm4-agency-coo",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.7,
+        "passed": 7,
+        "failed": 3,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body is under 1000 characters", "passed": true, "evidence": "~380 chars"},
+        {"text": "Contains at least one Voss label", "passed": false, "evidence": "No Voss label present"},
+        {"text": "Contains a no-oriented ask phrase", "passed": false, "evidence": "'Would you be open to' is yes-oriented, not no-oriented"},
+        {"text": "Does not use yes-oriented framing", "passed": true, "evidence": "None of the listed yes-oriented phrases exactly"},
+        {"text": "Specifies a short duration like '15 minutes' or '20 minutes'", "passed": true, "evidence": "'15-minute call'"},
+        {"text": "Offers a low-friction no option", "passed": true, "evidence": "'completely understand - no hard feelings at all'"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "None present"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Does not contain 'just following up', 'bumping this', 'circling back', or 'touching base'", "passed": false, "evidence": "'Just circling back one last time' — contains 'circling back'"},
+        {"text": "Signals this is the last message in the sequence", "passed": true, "evidence": "'one last time' and 'don't want to keep filling up your inbox'"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "scenario-b-opener-reply",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body (excluding meta-line) is under 1000 characters", "passed": true, "evidence": "~370 chars"},
+        {"text": "Contains at least one Voss label", "passed": true, "evidence": "'It sounds like you're in the thick of that coordination layer...'"},
+        {"text": "Contains a calibrated question starting with 'how' or 'what'", "passed": true, "evidence": "'how are you handling the ops overhead as the team's grown past 40?'"},
+        {"text": "Output includes the meta-line with 'Phase:' and 'Tactic:' fields", "passed": true, "evidence": "Phase: Qualify, Tactic: present"},
+        {"text": "Meta-line declares phase as Qualify", "passed": true, "evidence": "'Phase: Qualify'"},
+        {"text": "Does not drop a quantified NexusPoint result", "passed": true, "evidence": "No percentages or case study"},
+        {"text": "Does not ask for a call, Zoom, or meeting", "passed": true, "evidence": "No call ask"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "Plain hyphens only"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Reply is short/medium, not a 4-paragraph pitch", "passed": true, "evidence": "Three short paragraphs matching James's one-liner"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "scenario-b-opener-reply",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 5,
+        "failed": 5,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body (excluding meta-line) is under 1000 characters", "passed": true, "evidence": "~400 chars"},
+        {"text": "Contains at least one Voss label", "passed": false, "evidence": "No Voss label present"},
+        {"text": "Contains a calibrated question starting with 'how' or 'what'", "passed": false, "evidence": "'Are you open to a quick 15-minute call' is a yes/no question"},
+        {"text": "Output includes the meta-line with 'Phase:' and 'Tactic:' fields", "passed": true, "evidence": "Meta-line present"},
+        {"text": "Meta-line declares phase as Qualify", "passed": true, "evidence": "'Phase: Qualify'"},
+        {"text": "Does not drop a quantified NexusPoint result", "passed": false, "evidence": "80% and 70% results dropped in Qualify phase"},
+        {"text": "Does not ask for a call, Zoom, or meeting", "passed": false, "evidence": "'Are you open to a quick 15-minute call this week?'"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "None present"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Reply is short/medium, not a 4-paragraph pitch", "passed": false, "evidence": "Four-paragraph wall of text vs James's one-line reply"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "scenario-b-pain-disclosed",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body (excluding meta-line) is under 1000 characters", "passed": true, "evidence": "~295 chars"},
+        {"text": "Contains at least one Voss label", "passed": true, "evidence": "'It sounds like the real cost isn't the manual work itself...'"},
+        {"text": "Output includes Phase: and Tactic: meta-line", "passed": true, "evidence": "Phase: Label, Tactic: present"},
+        {"text": "Meta-line declares phase as Label", "passed": true, "evidence": "'Phase: Label'"},
+        {"text": "Does not drop a quantified NexusPoint result", "passed": true, "evidence": "No percentages or case study"},
+        {"text": "Does not ask for a call or meeting", "passed": true, "evidence": "Ends with calibrated follow-up question, not a call ask"},
+        {"text": "Does not pitch NexusPoint services", "passed": true, "evidence": "No mention of NexusPoint or services"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "Plain hyphens only"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Label reframes or sharpens what Priya said", "passed": true, "evidence": "'process lives in people's heads rather than in a system' sharpens 'spreadsheets and Looms everywhere'"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "scenario-b-pain-disclosed",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.4,
+        "passed": 4,
+        "failed": 6,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body (excluding meta-line) is under 1000 characters", "passed": true, "evidence": "~380 chars"},
+        {"text": "Contains at least one Voss label", "passed": false, "evidence": "'That sounds incredibly frustrating' — not a valid Voss label format"},
+        {"text": "Output includes Phase: and Tactic: meta-line", "passed": true, "evidence": "Phase: Proof, Tactic: present"},
+        {"text": "Meta-line declares phase as Label", "passed": false, "evidence": "'Phase: Proof' — wrong phase; jumped to Proof without Labeling"},
+        {"text": "Does not drop a quantified NexusPoint result", "passed": false, "evidence": "'cut manual work by 70%' — case study dropped immediately after pain disclosure"},
+        {"text": "Does not ask for a call or meeting", "passed": false, "evidence": "'Would you be open to a quick 20-minute call?'"},
+        {"text": "Does not pitch NexusPoint services", "passed": false, "evidence": "'At NexusPoint, we specialize in building exactly these kinds of automation systems'"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "None present"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Label reframes or sharpens what Priya said", "passed": false, "evidence": "Restates her situation without sharpening it"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "scenario-b-peer-agency-owner",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body (excluding meta-line) is under 1000 characters", "passed": true, "evidence": "~340 chars"},
+        {"text": "Contains at least one Voss label", "passed": true, "evidence": "'It looks like you're operating more at the strategy and advisory layer...'"},
+        {"text": "Does not pitch NexusPoint services as if Steven is a prospective client", "passed": true, "evidence": "No pitch — describes Aleem's work briefly as peer context"},
+        {"text": "Does not ask Steven to 'hop on a call' as a prospective buyer", "passed": true, "evidence": "No call ask of any kind"},
+        {"text": "Frames the conversation as peer-to-peer / partnership territory", "passed": true, "evidence": "'do you handle the technical implementation yourself, or bring in specialists?'"},
+        {"text": "Meta-line flags that this is a peer/referral-partner track", "passed": true, "evidence": "'Phase: Qualify (peer track)' and Tactic explicitly says 'treats him as a peer builder, not a sales prospect'"},
+        {"text": "Output includes Phase: and Tactic: meta-line", "passed": true, "evidence": "Both fields present"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "Plain hyphens only"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Contains a calibrated question that surfaces the nature of his build-side setup", "passed": true, "evidence": "'do you handle the technical implementation yourself, or bring in specialists for that side?'"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "scenario-b-peer-agency-owner",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 8,
+        "failed": 2,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Message body (excluding meta-line) is under 1000 characters", "passed": true, "evidence": "~380 chars"},
+        {"text": "Contains at least one Voss label", "passed": true, "evidence": "'It sounds like we're working in pretty similar territory'"},
+        {"text": "Does not pitch NexusPoint services as if Steven is a prospective client", "passed": true, "evidence": "No sales pitch to Steven as buyer"},
+        {"text": "Does not ask Steven to 'hop on a call' as a prospective buyer", "passed": true, "evidence": "Call framed as peer/collaboration, not sales"},
+        {"text": "Frames the conversation as peer-to-peer / partnership territory", "passed": true, "evidence": "'potential to collaborate - referrals, subcontracting, or staying in each other's network'"},
+        {"text": "Meta-line flags that this is a peer/referral-partner track", "passed": false, "evidence": "'Phase: Qualify' with no peer-track qualifier — doesn't explicitly flag the peer track"},
+        {"text": "Output includes Phase: and Tactic: meta-line", "passed": true, "evidence": "Both fields present"},
+        {"text": "Contains no em dashes", "passed": true, "evidence": "Plain hyphens only"},
+        {"text": "Contains no emoji characters", "passed": true, "evidence": "None present"},
+        {"text": "Contains a calibrated question that surfaces the nature of his build-side setup", "passed": false, "evidence": "'Would you be open to a quick call' is a yes/no call ask — doesn't surface build-side structure"}
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": null, "stddev": null, "min": null, "max": null},
+      "tokens": {"mean": null, "stddev": null, "min": null, "max": null}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.613, "stddev": 0.144, "min": 0.4, "max": 0.8},
+      "time_seconds": {"mean": null, "stddev": null, "min": null, "max": null},
+      "tokens": {"mean": null, "stddev": null, "min": null, "max": null}
+    },
+    "delta": {
+      "pass_rate": "+0.387",
+      "time_seconds": "N/A",
+      "tokens": "N/A"
+    }
+  },
+  "notes": [
+    "With-skill achieves 100% pass rate across all 5 evals — perfect score. The three structural rules (Voss label, no call in DM 2, no pitch in DM 2) are the clearest differentiators.",
+    "Without-skill highest at Eval 5 (peer/agency owner, 80%) — natural peer framing is accessible without the skill. The Voss label incidentally appeared ('It sounds like') but the build-side calibrated question and peer-track phase label were absent.",
+    "Without-skill lowest at Eval 4 (pain disclosed, 40%) — the phase-skipping behavior (Label -> Proof, dropping a case study and call ask immediately) is the most common natural mistake and the skill prevents it cleanly.",
+    "The 'circling back' failure in Eval 2 without-skill is a concrete example of banned language the skill explicitly blacklists — validates that assertion.",
+    "No assertions appear non-discriminating: every assertion that passes in without-skill also fails at least once, and vice versa. The eval set has good discriminating power.",
+    "Scenario A evals (DM sequence) show larger deltas (+0.333, +0.30) than Scenario B peer track (+0.20) — the sequence rules are more constraining and harder to follow without the reference structure."
+  ]
+}

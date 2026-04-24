@@ -1,0 +1,55 @@
+{
+  "reviews": [
+    {
+      "run_id": "scenario-a-dm2-lean-saas-with_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-a-dm2-lean-saas-without_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-a-dm4-agency-coo-with_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-a-dm4-agency-coo-without_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-b-opener-reply-with_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-b-opener-reply-without_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-b-pain-disclosed-with_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-b-pain-disclosed-without_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-b-peer-agency-owner-with_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    },
+    {
+      "run_id": "scenario-b-peer-agency-owner-without_skill",
+      "feedback": "",
+      "timestamp": "2026-04-23T03:50:21.328Z"
+    }
+  ],
+  "status": "complete"
+}

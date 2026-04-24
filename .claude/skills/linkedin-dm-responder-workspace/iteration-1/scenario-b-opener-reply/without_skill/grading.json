@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Message body (excluding meta-line) is under 1000 characters",
+      "passed": true,
+      "evidence": "Message body (before ---) is approximately 400 characters — under 1000."
+    },
+    {
+      "text": "Contains at least one Voss label",
+      "passed": false,
+      "evidence": "No Voss label present. 'It sounds like', 'It looks like', 'It seems like', 'It feels like' all absent."
+    },
+    {
+      "text": "Contains a calibrated question starting with 'how' or 'what' — not a yes/no question",
+      "passed": false,
+      "evidence": "'Are you open to a quick 15-minute call this week?' is a yes/no question, not a calibrated 'how' or 'what' question."
+    },
+    {
+      "text": "Output includes the meta-line with 'Phase:' and 'Tactic:' fields",
+      "passed": true,
+      "evidence": "Meta-line present: 'Phase: Qualify' and 'Tactic: Answered their direct question...'"
+    },
+    {
+      "text": "Meta-line declares phase as Qualify (not Label, Proof, Pull, or Call)",
+      "passed": true,
+      "evidence": "'Phase: Qualify'"
+    },
+    {
+      "text": "Does not drop a quantified NexusPoint result (70%, 80%, hours-to-minutes, etc.) — too early",
+      "passed": false,
+      "evidence": "'cutting manual follow-up time by 80%' and 'reducing client onboarding work by 70%' — two quantified results dropped in the Qualify phase. Too early."
+    },
+    {
+      "text": "Does not ask for a call, Zoom, or meeting",
+      "passed": false,
+      "evidence": "'Are you open to a quick 15-minute call this week?' — direct call ask."
+    },
+    {
+      "text": "Contains no em dashes",
+      "passed": true,
+      "evidence": "No em dashes. Plain hyphens used."
+    },
+    {
+      "text": "Contains no emoji characters",
+      "passed": true,
+      "evidence": "No emoji characters present."
+    },
+    {
+      "text": "Reply is short/medium, not a 4-paragraph pitch (they sent one line — Aleem should not respond with a wall of text)",
+      "passed": false,
+      "evidence": "Four-paragraph response to James's one-line message: intro + pitch paragraph + case study paragraph + CTA paragraph. This is a wall of text."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 5,
+    "total": 10,
+    "pass_rate": 0.5
+  },
+  "claims": [],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "No suggestions. All five failures are real problems: pitch dump, case studies too early, call ask before earning it, no Voss label, wall of text."
+  }
+}
