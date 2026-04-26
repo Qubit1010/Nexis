@@ -6,7 +6,7 @@ const execFileAsync = promisify(execFile);
 
 const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
 // Direct path to gws JS entry point — avoids .cmd wrapper PATH issues on Windows
-const GWS_SCRIPT = "C:/Users/qubit/AppData/Roaming/npm/node_modules/@googleworkspace/cli/run-gws.js";
+const GWS_SCRIPT = "C:/Users/qubit/AppData/Roaming/npm/node_modules/@googleworkspace/cli/run.js";
 
 interface SaveRequest {
   briefDate: string;

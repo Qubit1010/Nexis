@@ -1,0 +1,2 @@
+https://topaustinseo.com	Firecrawl HTTP 500: {"success":false,"code":"SCRAPE_SITE_ERROR","error":"The URL failed to load in the browser with error code \"ERR_CONNECTION_CLOSED\". The connection was closed unexpectedly by the server. Please verif
+https://www.genspark.ai	Site returned HTTP 403

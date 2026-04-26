@@ -19,7 +19,7 @@ function findGwsInvocation(): { exe: string; prefix: string[] } {
     "node_modules",
     "@googleworkspace",
     "cli",
-    "run-gws.js"
+    "run.js"
   );
   if (existsSync(gwsJs)) {
     return { exe: process.execPath, prefix: [gwsJs] };

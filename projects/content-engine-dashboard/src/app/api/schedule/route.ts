@@ -15,7 +15,7 @@ function findGwsInvocation(): { exe: string; prefix: string[] } {
   const appData = process.env.APPDATA || "";
   const npmDir = path.join(appData, "npm");
 
-  const gwsJs = path.join(npmDir, "node_modules", "@googleworkspace", "cli", "run-gws.js");
+  const gwsJs = path.join(npmDir, "node_modules", "@googleworkspace", "cli", "run.js");
   if (existsSync(gwsJs)) {
     return { exe: process.execPath, prefix: [gwsJs] };
   }
