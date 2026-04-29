@@ -1,0 +1,22 @@
+[
+  {"query": "We just signed FintechCo for an AI automation build", "should_trigger": true},
+  {"query": "Onboard Acme Corp, web design project, $5K", "should_trigger": true},
+  {"query": "Set up onboarding for Sarah Chen at sarah@acme.com", "should_trigger": true},
+  {"query": "Kick off the Scalelogix project", "should_trigger": true},
+  {"query": "Spin up the folder for the new client", "should_trigger": true},
+  {"query": "We just closed the deal with Holloway Construction, set them up", "should_trigger": true},
+  {"query": "Onboard the client from this proposal: https://docs.google.com/document/d/1abc/edit", "should_trigger": true},
+  {"query": "Create the project kit for the AI automation build we just signed", "should_trigger": true},
+  {"query": "We signed Greenfield Legal yesterday, get them going", "should_trigger": true},
+  {"query": "Client onboarding for Holloway", "should_trigger": true},
+  {"query": "Create a proposal for Acme Corp", "should_trigger": false},
+  {"query": "Draft a proposal for the Scalelogix discovery call", "should_trigger": false},
+  {"query": "Prep me for a discovery call with FintechCo tomorrow", "should_trigger": false},
+  {"query": "What AI use cases should I pitch to Acme Corp", "should_trigger": false},
+  {"query": "Audit acme.com and write a cold email", "should_trigger": false},
+  {"query": "Generate a brief on AI news today", "should_trigger": false},
+  {"query": "Send today's cold outreach batch", "should_trigger": false},
+  {"query": "Write a LinkedIn DM to follow up with Sarah", "should_trigger": false},
+  {"query": "Find me 50 founder leads on LinkedIn", "should_trigger": false},
+  {"query": "What should I post on LinkedIn today", "should_trigger": false}
+]

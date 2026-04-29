@@ -49,7 +49,7 @@ export async function GET() {
     // Columns: Date Saved, Title, Channel, URL, Views, Likes, Eng Rate, Duration, Published Date, Status
     const rows = values.slice(1);
     const videos = rows
-      .filter((r) => r[1]) // must have a title
+      .filter((r) => r[1] && (r[9] ?? "").toLowerCase() === "new")
       .map((r) => ({
         dateSaved: r[0] ?? "",
         title: r[1] ?? "",

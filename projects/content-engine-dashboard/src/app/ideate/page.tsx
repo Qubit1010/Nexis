@@ -123,12 +123,19 @@ export default function IdeatePage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/pull-ideas");
-      if (!res.ok) throw new Error(`Request failed: ${res.status}`);
-      const json: PullIdeasOutput = await res.json();
+      const [ideasRes, bookmarkedRes] = await Promise.all([
+        fetch("/api/pull-ideas"),
+        fetch("/api/youtube-bookmarked"),
+      ]);
+      if (!ideasRes.ok) throw new Error(`Request failed: ${ideasRes.status}`);
+      const json: PullIdeasOutput = await ideasRes.json();
       setData(json);
       setIdeas(buildScoredIdeas(json));
       setSavedAt(Date.now());
+      if (bookmarkedRes.ok) {
+        const { videos } = await bookmarkedRes.json() as { videos: YouTubeBookmarkedVideo[] };
+        if (Array.isArray(videos)) setBookmarkedVideos(videos);
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
     } finally {
@@ -161,7 +168,7 @@ export default function IdeatePage() {
       {/* Source status */}
       {data && (
         <div className="mb-5 space-y-1.5">
-          <SourceStatus data={data} />
+          <SourceStatus data={data} ytBookmarkedCount={bookmarkedVideos.length} />
           {savedAt && (
             <p className="text-[11px] text-[#444]">
               Last pulled {formatAge(savedAt)} · saved to DB

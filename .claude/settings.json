@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(python .claude/skills/deep-research/research.py*)",
-      "Bash(*python .claude/skills/proposal-generator/scripts/create_proposal_doc.py*)"
+      "Bash(*python .claude/skills/proposal-generator/scripts/create_proposal_doc.py*)",
+      "Bash(python .claude/skills/client-onboarding-workflow/scripts/*)",
+      "Bash(cd * && python *)",
+      "Bash(mkdir*)",
+      "Write(.claude/skills/client-onboarding-workflow-workspace/*)"
     ]
   }
 }
