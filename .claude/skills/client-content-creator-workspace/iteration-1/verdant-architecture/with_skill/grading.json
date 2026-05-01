@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "The skill correctly extracted business info from inline text (no files provided)",
+      "passed": true,
+      "evidence": "Cover note confirms: 'Extracted from inline text: sustainable residential architecture, biophilic design, natural materials, 50-year build horizon, tri-state audience.' All key brand fields populated correctly."
+    },
+    {
+      "text": "The blog post is between 500 and 700 words",
+      "passed": true,
+      "evidence": "Blog word count is ~561 words. Within the 500-700 range."
+    },
+    {
+      "text": "The blog post contains zero em dashes (—)",
+      "passed": true,
+      "evidence": "No em dashes found. All connective punctuation uses commas or periods."
+    },
+    {
+      "text": "The blog or social post topics relate to sustainable design, biophilic architecture, or building longevity",
+      "passed": true,
+      "evidence": "Blog covers biophilic design principles and the 50-year build philosophy. Instagram and LinkedIn posts are both about biophilic design. All pieces directly in scope."
+    },
+    {
+      "text": "The voice is thoughtful and considered — not punchy or trend-focused",
+      "passed": true,
+      "evidence": "Opening: 'Most people can recall a room they did not want to leave.' Long, considered sentences. No trend references. LinkedIn uses formal full sentences and academic framing ('perform measurably better for their occupants')."
+    },
+    {
+      "text": "The carousel includes exactly 8 slides with visual concepts referencing forest green or warm sand tones",
+      "passed": true,
+      "evidence": "8 slides present. Visual directions reference: 'Forest green palette' (Slide 1), 'Warm sand wall' (Slide 2), 'forest green through glass, warm sand stone floor' (Slide 1), forest green (#2D4A3E) and warm sand (#C4A882) throughout."
+    },
+    {
+      "text": "The reel concept is present with at least 6 scenes",
+      "passed": true,
+      "evidence": "7 scenes with explicit time codes (0:00-0:08 through 0:51-0:58)."
+    },
+    {
+      "text": "The LinkedIn post is distinct from the Instagram caption",
+      "passed": true,
+      "evidence": "LinkedIn is 4 paragraphs of professional analytical writing, opens differently ('The most well-designed rooms most people have been in did not feel designed.'), cites performance data, discusses specifications. Structurally and tonally distinct."
+    },
+    {
+      "text": "No generic design phrases like 'breathtaking', 'stunning', or 'transform your space'",
+      "passed": true,
+      "evidence": "None of these phrases appear. Language throughout is precise and functional: 'The untraceability is the point', 'built spaces perform measurably better'."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  }
+}

@@ -191,7 +191,7 @@ export interface ResearchOutput {
 
 export const SCHEDULE_COLUMNS = [
   "Date", "Day", "Platform", "Post Type", "Media Type", "Content Theme",
-  "Topic / Idea", "Post Description", "Video/Post Script", "Video Prompt",
+  "Topic / Idea", "Post Description", "Design Template", "Video/Post Script", "Video Prompt",
   "Image Prompt", "Reference Images", "Thumbnail", "Audio", "Draft",
   "Final Video/Post", "Reference", "Hashtags", "Publish Time", "Status", "Editor",
 ] as const;
@@ -207,6 +207,7 @@ export interface ScheduleRow {
   contentTheme: string;
   topic: string;
   description: string;
+  designTemplate: string;
   videoScript: string;
   videoPrompt: string;
   imagePrompt: string;

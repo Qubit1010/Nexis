@@ -1,0 +1,17 @@
+{
+  "eval_id": 2,
+  "eval_name": "copper-ground",
+  "prompt": "I just onboarded a new client, Copper & Ground — a specialty coffee shop in Brooklyn. Their brand brief is at .claude/skills/client-content-creator/evals/files/coffee-brand-brief.md. Generate their full content package. For the blog, focus on the topic: why light-roast coffee tastes completely different from what most people expect.",
+  "assertions": [
+    "The blog post topic is specifically about light-roast coffee expectations/reality",
+    "The blog post is between 500 and 700 words",
+    "The blog post contains zero em dashes (—)",
+    "The Instagram caption uses a hook line in the first sentence (not context, not backstory)",
+    "The Instagram caption includes hashtags",
+    "The reel concept references the brand's copper or cream color palette",
+    "The carousel includes exactly 8 slides",
+    "The content does not use the word 'artisanal'",
+    "The LinkedIn post takes a thought-leadership angle, not just a copy of the Instagram post",
+    "Brand alignment notes section is present at the end"
+  ]
+}

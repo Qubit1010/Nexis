@@ -1,0 +1,17 @@
+{
+  "eval_id": 1,
+  "eval_name": "apex-fitness",
+  "prompt": "Here's a new client brief. Read the file at .claude/skills/client-content-creator/evals/files/fitness-brand-brief.md and create a full content package for Apex Strength. No topic preference — ideate based on the business.",
+  "assertions": [
+    "The blog post is between 500 and 700 words",
+    "The blog post opens with a specific scene, moment, or claim — not a definition or backstory paragraph",
+    "The blog post contains zero em dashes (—)",
+    "The Instagram caption is between 130 and 200 words (not counting hashtags)",
+    "The Instagram caption includes at least 8 hashtags",
+    "A LinkedIn post is present and distinct from the Instagram caption",
+    "The carousel section includes exactly 8 slides with headings and sub-text",
+    "The reel concept includes at least 6 scenes with time codes",
+    "The output does not use the phrase 'transform your body' or 'melt fat'",
+    "The writing reflects Apex's direct, practical voice — not generic motivational language"
+  ]
+}

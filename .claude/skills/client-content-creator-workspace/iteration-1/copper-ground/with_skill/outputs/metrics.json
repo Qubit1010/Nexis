@@ -1,0 +1,8 @@
+{
+  "tool_calls": {"Read": 2, "Write": 1},
+  "total_tool_calls": 3,
+  "total_steps": 5,
+  "files_created": ["content-package.md"],
+  "errors_encountered": 0,
+  "output_chars": 10200
+}
