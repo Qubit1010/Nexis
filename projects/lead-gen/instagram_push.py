@@ -443,6 +443,8 @@ def main():
             "title":      title,
             "company":    company,
             "bio":        bio,
+            "followers":  followers_raw,
+            "username":   username,
         }
 
         touch1_dm = generate_touch1_dm(lead)

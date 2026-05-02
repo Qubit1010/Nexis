@@ -221,16 +221,25 @@ If the script fails, note the error and continue with Drive upload of the markdo
 
 ### Drive upload
 
+Note: `gws drive files create --upload` ignores the `name` param — the file uploads as "Untitled". Use a two-step approach: upload first, then rename.
+
 ```bash
-# Upload PDF (or markdown if PDF failed)
+# Step 1: Upload
 cd "[directory-containing-the-file]"
-gws drive files create --upload "[filename.pdf]" --params '{"name": "[Client Name] — Content Package — [Date]"}'
+gws drive files create --upload "[filename.pdf]"
 ```
 
-Save the file ID from the response. Then get a shareable link:
+Save the `id` from the response. Then rename and get the link:
+
 ```bash
+# Step 2: Rename
+gws drive files update --params '{"fileId": "[FILE_ID]", "resource": {"name": "[Client Name] - Content Package - [Date]"}}'
+
+# Step 3: Get shareable link
 gws drive files get --params '{"fileId": "[FILE_ID]", "fields": "webViewLink"}'
 ```
+
+If the rename command also fails (gws version-dependent), tell the user: "File uploaded — please rename it manually in Drive to '[Client Name] — Content Package — [Date]'." Then report the link.
 
 Report the Drive link to the user.
 

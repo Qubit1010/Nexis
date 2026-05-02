@@ -1,0 +1,98 @@
+{
+  "skill_name": "instagram-dm-responder",
+  "evals": [
+    {
+      "id": 1,
+      "name": "scenario-a-touch2-content-signal",
+      "prompt": "I need Touch 2 for a prospect who got my opening DM 4 days ago but hasn't replied. Here's their info:\n\nName: Maya Torres\nUsername: @mayatorres.builds\nBio: bootstrapped founder | building an e-comm ops tool for small brands | learning in public\nFollowers: 3,200\nRecent post caption: 'spent my whole Sunday reconciling orders in Shopify instead of working on the product. something has to change.'\n\nTouch 1 I sent (Day 0):\n'Hey Maya - it looks like you're betting on the productized ops angle, which is a different move than most e-comm founders I see. What made you go that direction instead of staying fully custom?'\n\nWrite Touch 2 for Day 3-4.",
+      "expected_output": "A Scenario A Touch 2 output: message only, no preamble. Under 400 chars. Opens with 'not looking for a reply' framing or equivalent. References her recent Shopify Sunday post specifically (not just generic ops pain). Contains a Voss label ('It looks like', 'It sounds like', etc.). No NexusPoint mention. No call ask. No case study or percentage result. No sign-off. No emojis. No em dashes. Does not repeat Touch 1 phrasing ('betting on the productized ops angle').",
+      "assertions": [
+        {"name": "under_400_chars", "description": "Message body is under 400 characters"},
+        {"name": "no_ask_opener", "description": "Opens with 'not looking for a reply' or equivalent — signals no reply expected"},
+        {"name": "references_content_signal", "description": "References her specific Shopify Sunday post or the specific pain she described publicly — not just generic 'ops is hard'"},
+        {"name": "contains_voss_label", "description": "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'"},
+        {"name": "no_nexuspoint_mention", "description": "Does not mention NexusPoint or pitch any services — Touch 2 is value-only"},
+        {"name": "no_call_ask", "description": "Does not ask for a call, meeting, chat, or DM conversation"},
+        {"name": "no_results_with_percentages", "description": "Does not drop a case study or quantified result (70%, 80%, etc.)"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes (—)"},
+        {"name": "no_sign_off", "description": "Does not end with '- Aleem' or any formal sign-off"},
+        {"name": "does_not_repeat_touch1", "description": "Does not repeat Touch 1's exact phrasing like 'betting on the productized ops angle' or 'went that direction'"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "scenario-a-touch3-agency-ops",
+      "prompt": "I need Touch 3 for a prospect. No replies to Touch 1 (Day 0) or Touch 2 (Day 4). It's now Day 9. Here's their profile:\n\nName: Marcus Ellery\nUsername: @marcus.northwind\nBio: COO @northwindcollective | ops-first agency | 20+ people | B2B SaaS clients\nFollowers: 1,800\n\nTouch 2 I sent referenced the pattern of manual handoffs breaking between tools at the 20-person mark.\n\nWrite Touch 3 for Day 8-10.",
+      "expected_output": "A Scenario A Touch 3 output: message only, no preamble. Under 400 chars. Opens with honest directness ('I'll be straight', 'I'll cut to it', or similar). Names NexusPoint explicitly. Drops exactly one result from the results bank with a number. Ask is low-friction DM or walkthrough — NOT a straight discovery call booking ('worth a quick DM chat?', 'would it help if I sent you a breakdown?'). No sign-off. No emojis. No em dashes.",
+      "assertions": [
+        {"name": "under_400_chars", "description": "Message body is under 400 characters"},
+        {"name": "honest_opener", "description": "Opens with a directness signal: 'I'll be straight', 'I'll cut to it', 'I've been roundabout so here it is', or equivalent"},
+        {"name": "names_nexuspoint", "description": "Names NexusPoint explicitly"},
+        {"name": "exactly_one_result", "description": "Drops exactly one NexusPoint result — not zero, not two or more"},
+        {"name": "result_has_number", "description": "The result includes a specific number or percentage (70%, 80%, 3 handoffs, etc.)"},
+        {"name": "dm_ask_not_call_ask", "description": "The ask is for a DM chat, quick walkthrough, or low-friction next step — NOT a direct calendar link or 'let's hop on a 20-min call'"},
+        {"name": "no_yes_oriented_ask", "description": "Does not use yes-oriented framing like 'do you want to', 'can we schedule', 'are you free for a call'"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes"},
+        {"name": "no_sign_off", "description": "Does not end with '- Aleem' or any formal sign-off"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "scenario-a-touch4-breakup",
+      "prompt": "Write Touch 4 for a prospect who never replied to any of Touches 1, 2, or 3. It's Day 15. Here's their profile:\n\nName: Carlos Reyes\nUsername: @carlosreyes.agency\nBio: founder | growth agency | 12 people | obsessed with systems\nFollowers: 4,100\nContent: regularly posts about agency operations and building scalable client delivery\n\nTouch 3 dropped the lead-to-outreach pipeline result (80% follow-up time cut).\n\nWrite Touch 4 for Day 15.",
+      "expected_output": "A Scenario A Touch 4 output: message only, no preamble. Under 300 chars ideal (400 hard cap). Signals this is the last message ('will stop reaching out', 'last one from me', or similar). No call ask — Touch 4 is an exit, not a CTA. Soft door open framed around his specific situation. Optional genuine closer about his work — skip if it would feel forced. No guilt-framing. No sign-off. No emojis. No em dashes.",
+      "assertions": [
+        {"name": "under_400_chars", "description": "Message body is under 400 characters"},
+        {"name": "exit_signal_present", "description": "Contains an exit signal: 'will stop reaching out', 'last one from me', 'won't keep going', or equivalent"},
+        {"name": "no_call_ask_in_touch4", "description": "Does not ask for a call, DM chat, walkthrough, or meeting — Touch 4 is a breakup"},
+        {"name": "soft_door_open", "description": "Leaves a door open for future reconnection without pressure, framed around his specific context"},
+        {"name": "no_guilt_framing", "description": "Does not guilt-trip the lack of reply or imply effort was wasted"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes"},
+        {"name": "no_sign_off", "description": "Does not end with '- Aleem' or a formal sign-off"},
+        {"name": "no_following_up_phrases", "description": "Does not contain 'just following up', 'circling back', 'bumping this'"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "scenario-b-casual-reply-label-phase",
+      "prompt": "A prospect replied to my Touch 1. What do I send back?\n\nConversation:\n[Me, Touch 1]: Hey Priya - it looks like you're scaling Lumen to the point where everything can't still run through you. What's the most painful part of that transition right now?\n\n[Priya, same day]: lol honestly the client onboarding is killing us. every new client is like starting from scratch - different questions, different setup, nothing templated\n\nProfile: Priya Sharma, @primasharma.lumen, Founder/CEO, Lumen (22-person B2B SaaS, HR tech). 2,900 followers.",
+      "expected_output": "A Scenario B output with the reply + meta-line (Phase / Tactic). This is the Label phase — she disclosed real pain casually, Aleem should mirror it back in slightly sharper language. At least one Voss label. Match her casual register (she said 'lol honestly' — don't respond stiffly). Should NOT drop a case study yet. Should NOT ask for a call. Should NOT pitch NexusPoint. Reply under 400 chars. Meta-line phase = Label or Deepen.",
+      "assertions": [
+        {"name": "under_400_chars", "description": "Message body (excluding meta-line) is under 400 characters"},
+        {"name": "contains_voss_label", "description": "Contains at least one Voss label: 'It sounds like', 'It looks like', 'It seems like', or 'It feels like'"},
+        {"name": "matches_casual_register", "description": "Matches Priya's casual tone — does not respond with stiff professional language when she's texting informally"},
+        {"name": "includes_meta_line", "description": "Output includes Phase: and Tactic: fields after a separator (---)"},
+        {"name": "phase_is_label_or_deepen", "description": "Meta-line declares phase as Label or Deepen — not Proof, Warm Ask, or Call"},
+        {"name": "no_case_study_yet", "description": "Does not drop a quantified NexusPoint result — she hasn't asked for proof yet"},
+        {"name": "no_call_ask", "description": "Does not ask for a call, meeting, or DM walkthrough"},
+        {"name": "no_nexuspoint_pitch", "description": "Does not pitch NexusPoint services or say 'I can build this for you'"},
+        {"name": "label_sharpens_disclosure", "description": "The label reframes or sharpens what Priya said — not a verbatim repeat of her exact words"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes"},
+        {"name": "no_sign_off", "description": "Does not end with '- Aleem' or a formal sign-off"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "scenario-b-peer-consultant",
+      "prompt": "This prospect looks like they're in the same space as me. What do I reply?\n\nConversation:\n[Me, Touch 1]: Hey Jordan - it looks like you're doing interesting work at the intersection of AI and agency ops. What's the part of the build work you enjoy most?\n\n[Jordan, same day]: Hey! Yeah I'm deep in that space. Mostly help agencies set up their AI workflows and automations. Looks like you're in similar territory - what are you building lately?\n\nProfile: Jordan Blake, @jordanblake.ai, solo AI automation consultant, 5,200 followers. Bio: AI workflow design | helping agencies automate client delivery | Austin.",
+      "expected_output": "A Scenario B output with peer-track framing. Jordan does what Aleem does — he's not a client prospect. Aleem should NOT pitch services. Should treat Jordan as a peer and ask a calibrated question that surfaces build-side structure or partnership fit ('do you handle all the builds yourself or bring in specialists?'). Reply under 400 chars. Contains a Voss label. Meta-line phase = Open (peer track). Meta-line tactic flags the peer pivot explicitly.",
+      "assertions": [
+        {"name": "under_400_chars", "description": "Message body (excluding meta-line) is under 400 characters"},
+        {"name": "contains_voss_label", "description": "Contains at least one Voss label"},
+        {"name": "no_client_pitch", "description": "Does not pitch NexusPoint services as if Jordan is a prospective client"},
+        {"name": "no_client_call_ask", "description": "Does not ask Jordan to 'hop on a call' as a buyer"},
+        {"name": "peer_or_partnership_framing", "description": "Frames the conversation as peer-to-peer or partnership territory — asks about build-side setup, overflow work, or collaboration model"},
+        {"name": "calibrated_question_present", "description": "Contains a calibrated question (how/what) that surfaces Jordan's build-side setup or potential collaboration fit"},
+        {"name": "includes_meta_line", "description": "Output includes Phase: and Tactic: fields after a separator"},
+        {"name": "meta_flags_peer_track", "description": "Meta-line (Phase or Tactic) explicitly flags this is a peer/referral track, not a direct-client track"},
+        {"name": "no_emojis", "description": "Contains no emoji characters"},
+        {"name": "no_em_dashes", "description": "Contains no em dashes"},
+        {"name": "no_sign_off", "description": "Does not end with '- Aleem' or a formal sign-off"}
+      ]
+    }
+  ]
+}

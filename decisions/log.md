@@ -19,3 +19,7 @@ Format: [YYYY-MM-DD] DECISION: ... | REASONING: ... | CONTEXT: ...
 [2026-04-24] DECISION: Audit uses Google PageSpeed Insights public API rather than local Lighthouse or a headless browser | REASONING: Same Lighthouse output, no browser install, free without a key for low volume - keeps the skill portable across Aleem's machines with no setup beyond env vars | CONTEXT: .claude/skills/website-audit-system/scripts/pagespeed.py
 
 [2026-04-24] DECISION: Audit skill defers CRM/Sheets logging to v2 | REASONING: Coupling audit output to the cold-outreach Sheets now would overbuild before we know how Aleem actually uses the output - revisit after 10-20 real runs | CONTEXT: .claude/skills/website-audit-system
+
+[2026-05-01] DECISION: Built client-content-creator as a separate skill from content-engine | REASONING: Client content and personal brand content have different inputs (client brief vs. news/topics), tone, and destinations (client Drive folder vs. Aleem's Sheets/Docs) - collapsing them would create confusion and reduce reusability | CONTEXT: .claude/skills/client-content-creator
+
+[2026-05-01] DECISION: Added eval framework with 3 test clients and grading rubrics before shipping client-content-creator | REASONING: Content quality is subjective and hard to catch in code review - a benchmark iteration lets us validate output and detect regressions when the skill is modified | CONTEXT: .claude/skills/client-content-creator/evals

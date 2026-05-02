@@ -117,6 +117,13 @@ def main():
         default=100,
         help="Max number of leads to process (default: 100)",
     )
+    parser.add_argument(
+        "--date-filter",
+        type=str,
+        default=None,
+        metavar="YYYY-MM-DD",
+        help="Only regenerate leads added on this date (overrides --overwrite filter for that date)",
+    )
     args = parser.parse_args()
 
     api_key = os.getenv("OPENAI_API_KEY")
@@ -135,7 +142,13 @@ def main():
         print("No leads in CRM. Run scrape_leads.py first.")
         return
 
-    if args.overwrite:
+    if args.date_filter:
+        to_process = [
+            l for l in all_leads
+            if l.get("Instagram URL") and l.get("Date Added", "").startswith(args.date_filter)
+        ]
+        print(f"Date filter: {args.date_filter} — found {len(to_process)} leads")
+    elif args.overwrite:
         to_process = [l for l in all_leads if l.get("Instagram URL")]
     else:
         to_process = [
