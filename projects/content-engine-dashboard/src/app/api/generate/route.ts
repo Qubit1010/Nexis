@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 import type { ResearchOutput, ContentMode, PillarKey } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -228,26 +229,50 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) {
+    const anthropicKey = process.env.ANTHROPIC_API_KEY;
+    const openaiKey = process.env.OPENAI_API_KEY;
+
+    if (!anthropicKey && !openaiKey) {
       return NextResponse.json(
-        { error: "ANTHROPIC_API_KEY is not set in .env.local" },
+        { error: "No API keys configured. Set ANTHROPIC_API_KEY or OPENAI_API_KEY in .env.local" },
         { status: 500 }
       );
     }
 
     const prompt = buildPrompt(platform, format, topic, research ?? null, context, contentMode, selectedPillars);
 
-    const anthropic = new Anthropic({ apiKey });
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 1200,
-      messages: [{ role: "user", content: prompt }],
-    });
+    let content = "";
+    let usedFallback = false;
 
-    const content = message.content[0]?.type === "text" ? message.content[0].text : "";
+    if (anthropicKey) {
+      try {
+        const anthropic = new Anthropic({ apiKey: anthropicKey });
+        const message = await anthropic.messages.create({
+          model: "claude-sonnet-4-6",
+          max_tokens: 1200,
+          messages: [{ role: "user", content: prompt }],
+        });
+        content = message.content[0]?.type === "text" ? message.content[0].text : "";
+      } catch (anthropicErr) {
+        if (!openaiKey) throw anthropicErr;
+        console.warn("Anthropic API failed, falling back to OpenAI:", anthropicErr instanceof Error ? anthropicErr.message : anthropicErr);
+        usedFallback = true;
+      }
+    } else {
+      usedFallback = true;
+    }
 
-    return NextResponse.json({ content });
+    if (usedFallback && openaiKey) {
+      const openai = new OpenAI({ apiKey: openaiKey });
+      const completion = await openai.chat.completions.create({
+        model: "gpt-4o",
+        max_tokens: 1200,
+        messages: [{ role: "user", content: prompt }],
+      });
+      content = completion.choices[0]?.message?.content ?? "";
+    }
+
+    return NextResponse.json({ content, ...(usedFallback && { provider: "openai" }) });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: message }, { status: 500 });
