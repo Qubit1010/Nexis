@@ -118,18 +118,20 @@ _COL_ALIASES = {
 def _find_gws():
     import os
     npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
-    gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run-gws.js"
-    if gws_js.exists():
-        for candidate in [
-            npm_dir / "node.exe",
-            Path(os.environ.get("ProgramFiles", "C:\\Program Files")) / "nodejs" / "node.exe",
-            Path(os.environ.get("ProgramFiles(x86)", "C:\\Program Files (x86)")) / "nodejs" / "node.exe",
-        ]:
-            if candidate.exists():
-                return ([str(candidate), str(gws_js)], False)
-        node = shutil.which("node")
-        if node:
-            return ([node, str(gws_js)], False)
+    # Check both run.js and run-gws.js (gws CLI package uses run.js)
+    for js_name in ("run.js", "run-gws.js"):
+        gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / js_name
+        if gws_js.exists():
+            for candidate in [
+                npm_dir / "node.exe",
+                Path(os.environ.get("ProgramFiles", "C:\\Program Files")) / "nodejs" / "node.exe",
+                Path(os.environ.get("ProgramFiles(x86)", "C:\\Program Files (x86)")) / "nodejs" / "node.exe",
+            ]:
+                if candidate.exists():
+                    return ([str(candidate), str(gws_js)], False)
+            node = shutil.which("node")
+            if node:
+                return ([node, str(gws_js)], False)
     gws = shutil.which("gws")
     if gws:
         return ([gws], True)

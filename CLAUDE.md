@@ -45,6 +45,7 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 - **Content Engine** (`.claude/skills/content-engine/`) — Full content creation system for Instagram, LinkedIn, and blog. Pulls ideas from 3 sources (daily-news-brief, YouTube brief, saved topics sheet), scores with opportunity scores, researches with OpenAI web search, writes finished content, and repurposes via flywheel (Blog -> LinkedIn + Instagram). Logs to Google Sheets + saves to Google Docs. Say "content ideas", "what should I post", "create content", "write a blog", "full content run", "repurpose this"
 - **Lead Gen** (`projects/lead-gen/`) — High-quality lead intelligence pipeline. Discovers prospects via LinkedIn Jobs/Profiles, Product Hunt, and Google Search — scores them with a 5-layer ICP system, enriches with website intel + email + Proxycurl + Perplexity, generates personalized outreach via Claude, and exports to all 3 CRMs. Say "generate leads", "run lead gen", "find me leads", "score leads", "enrich leads", "export leads", "pipeline stats", "build my prospect list"
 - **Website Audit System** (`.claude/skills/website-audit-system/`) — Crawls a prospect's site via Firecrawl, runs AI analysis across UX, SEO, performance (PageSpeed Insights), and conversion gaps, outputs a formatted Google Doc + ready-to-send cold outreach email. Two modes: quick (homepage, 3-5 findings + hook email — for outreach) and deep (multi-page crawl, scored per-dimension report — for paid deliverables). Say "audit this website", "quick audit of [URL]", "deep audit of [URL]", "audit [company]'s site"
+- **Client Onboarding Workflow** (`.claude/skills/client-onboarding-workflow/`) — Spins up the full kit when a deal closes: Drive folder structure (NexusPoint Clients / [Client] / 5 subfolders), onboarding Google Doc, project checklist Google Sheet tailored to project type, and Gmail draft of the welcome email (saved as draft for review, never auto-sent). Reads a prior proposal/discovery Doc to pre-fill, or takes inline intake. Say "onboard [client]", "we just signed [client]", "set up onboarding for…", "kick off the [project]", "spin up the folder for [client]", or paste a proposal Doc URL with "set them up"
 
 ### Skills to Build (Backlog)
 
@@ -70,7 +71,7 @@ Build as needed. Organized by domain:
 14. Session closeout (summarize session, surface decisions, update priorities)
 15. Weekly business review (outreach stats + content + leads + revenue snapshot)
 16. Project scoping template generator
-17. Client onboarding workflow (Drive folder + onboarding doc + welcome email)
+17. ~~Client onboarding workflow~~ (built — see Active Skills)
 18. Invoice & payment tracker (Google Sheets-backed)
 19. Client communication drafter
 

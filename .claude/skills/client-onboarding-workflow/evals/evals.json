@@ -1,0 +1,26 @@
+{
+  "skill_name": "client-onboarding-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "name": "doc-driven-onboarding",
+      "prompt": "Onboard the client from this proposal: https://docs.google.com/document/d/1wV3CGVM_VhlZEc9y9rztm445G8Xse3IEVrW0yhcLHD0/edit. Their contact email is jordan@scalelogix.ai.",
+      "expected_output": "Skill calls extract_proposal.py with the doc ID, parses out client/scope/project type, builds the full spec (doc + checklist + email), and pipes to create_onboarding.py. Final report includes 4 URLs (folder, doc, sheet) and confirms Gmail draft saved.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "inline-intake-web-design",
+      "prompt": "Set up onboarding for Acme Corp. Web design project, 4 weeks, $5K, contact is Sarah Chen at sarah@acmecorp.com. Scope is a 5-page marketing site rebuild with a booking integration.",
+      "expected_output": "Skill skips the doc extraction (no URL given), uses the provided fields, picks the web-design checklist template, generates an onboarding doc with project overview / scope / timeline / comms / what-we-need / next-steps, generates checklist with web-design stages plus booking-integration row in Build, and drafts a sub-200-word welcome email with no em dashes.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "sparse-input-clarification",
+      "prompt": "We just signed FintechCo for an AI automation build.",
+      "expected_output": "Skill recognizes inputs are insufficient (no contact email, no scope detail) and asks 4-5 targeted intake questions before doing anything. Does NOT generate placeholder content or guess.",
+      "files": []
+    }
+  ]
+}

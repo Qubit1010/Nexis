@@ -11,7 +11,7 @@ const TAB = "Youtube bookmarked";
 function findGwsInvocation(): { exe: string; prefix: string[] } {
   const appData = process.env.APPDATA || "";
   const npmDir = path.join(appData, "npm");
-  const gwsJs = path.join(npmDir, "node_modules", "@googleworkspace", "cli", "run-gws.js");
+  const gwsJs = path.join(npmDir, "node_modules", "@googleworkspace", "cli", "run.js");
   if (existsSync(gwsJs)) return { exe: process.execPath, prefix: [gwsJs] };
   const gwsCmd = path.join(npmDir, "gws.cmd");
   if (existsSync(gwsCmd)) return { exe: gwsCmd, prefix: [] };
@@ -49,7 +49,7 @@ export async function GET() {
     // Columns: Date Saved, Title, Channel, URL, Views, Likes, Eng Rate, Duration, Published Date, Status
     const rows = values.slice(1);
     const videos = rows
-      .filter((r) => r[1]) // must have a title
+      .filter((r) => r[1] && (r[9] ?? "").toLowerCase() === "new")
       .map((r) => ({
         dateSaved: r[0] ?? "",
         title: r[1] ?? "",

@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "The blog post topic is specifically about light-roast coffee expectations/reality",
+      "passed": true,
+      "evidence": "Entire blog is about light roast: 'Light Roast Probably Isn't What You Think It Is'. Covers the expectation gap (bitter/weak) vs. reality (fruity, origin-forward)."
+    },
+    {
+      "text": "The blog post is between 500 and 700 words",
+      "passed": true,
+      "evidence": "Blog word count is ~564 words. Within the 500-700 range."
+    },
+    {
+      "text": "The blog post contains zero em dashes (—)",
+      "passed": true,
+      "evidence": "No em dashes found. Connective punctuation uses commas, periods, and short sentences."
+    },
+    {
+      "text": "The Instagram caption uses a hook line in the first sentence (not context, not backstory)",
+      "passed": true,
+      "evidence": "First line: 'Your first light roast might taste like blueberries. That's not a mistake.' — bold, specific, earns the second line."
+    },
+    {
+      "text": "The Instagram caption includes hashtags",
+      "passed": true,
+      "evidence": "12 hashtags: #specialtycoffee #lightroast #brooklyncoffee #singleorigincoffee #pourover #coffeeculture #brooklynnyc #coffeeeducation #thirdwavecoffee #coffeeshop #espresso #caffeinated"
+    },
+    {
+      "text": "The reel concept references the brand's copper or cream color palette",
+      "passed": true,
+      "evidence": "Reel aesthetic section explicitly states: 'Cream (#F9F4EC) and Copper (#B87333) as warm base' and individual scenes reference copper kettle, cream surface, and cream background for the brand close."
+    },
+    {
+      "text": "The carousel includes exactly 8 slides",
+      "passed": true,
+      "evidence": "8 slides present: Slide 1 (Hook) through Slide 8 (Close + CTA)."
+    },
+    {
+      "text": "The content does not use the word 'artisanal'",
+      "passed": true,
+      "evidence": "Word 'artisanal' does not appear anywhere in the content package."
+    },
+    {
+      "text": "The LinkedIn post takes a thought-leadership angle, not just a copy of the Instagram post",
+      "passed": true,
+      "evidence": "LinkedIn opens with 'Most people's frame for what coffee tastes like was set by dark roast.' — analytical, longer, no casual address. Mentions subscription for remote teams. Structurally distinct from Instagram."
+    },
+    {
+      "text": "Brand alignment notes section is present at the end",
+      "passed": true,
+      "evidence": "'Brand Alignment Notes' section present at end of document, explaining palette use, typography choices, and content-to-community connection."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10,
+    "pass_rate": 1.0
+  }
+}

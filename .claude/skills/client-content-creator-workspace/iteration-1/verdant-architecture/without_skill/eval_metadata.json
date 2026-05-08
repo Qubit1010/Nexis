@@ -1,0 +1,16 @@
+{
+  "eval_id": 3,
+  "eval_name": "verdant-architecture",
+  "prompt": "Client just sent me their info inline — no file. Here it is:\n\nBusiness: Verdant Architecture Studio, NYC\nWhat we do: Sustainable residential architecture and interior design. We design homes that are energy-efficient, biophilic (lots of natural materials, plants, light), and built to last 50+ years. Projects are mostly in the $800K-$3M range.\nAudience: Wealthy homeowners in the tri-state area, 38-60 years old, environmentally conscious, appreciate craft and quality over trend.\nVoice: Thoughtful, considered, unhurried. We don't chase trends. We believe good design is invisible — it just feels right. Slightly academic but never exclusionary.\nColors: Forest green #2D4A3E, Warm sand #C4A882, Off-white #F2EDE6, Charcoal #3A3A3A\nFonts: headings in Freight Display, body in Gill Sans\nCreate a content package, ideate the topics.",
+  "assertions": [
+    "The skill correctly extracted business info from inline text (no files provided)",
+    "The blog post is between 500 and 700 words",
+    "The blog post contains zero em dashes (—)",
+    "The blog or social post topics relate to sustainable design, biophilic architecture, or building longevity",
+    "The voice is thoughtful and considered — not punchy or trend-focused",
+    "The carousel includes exactly 8 slides with visual concepts referencing forest green or warm sand tones",
+    "The reel concept is present with at least 6 scenes",
+    "The LinkedIn post is distinct from the Instagram caption",
+    "No generic design phrases like 'breathtaking', 'stunning', or 'transform your space'"
+  ]
+}

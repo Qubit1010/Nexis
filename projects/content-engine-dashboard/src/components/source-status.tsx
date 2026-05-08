@@ -3,6 +3,7 @@ import type { PullIdeasOutput } from "@/lib/types";
 
 interface SourceStatusProps {
   data: PullIdeasOutput | null;
+  ytBookmarkedCount?: number;
 }
 
 function formatAge(dateStr: string | null): string {
@@ -57,7 +58,7 @@ function StatusBadge({ label, available, date, count }: BadgeProps) {
   );
 }
 
-export function SourceStatus({ data }: SourceStatusProps) {
+export function SourceStatus({ data, ytBookmarkedCount }: SourceStatusProps) {
   if (!data) return null;
 
   const newsCount = data.news_brief.ideas?.length ?? 0;
@@ -90,6 +91,11 @@ export function SourceStatus({ data }: SourceStatusProps) {
         label="Saved Articles"
         available={data.saved_articles?.available ?? false}
         count={articlesCount}
+      />
+      <StatusBadge
+        label="YT Bookmarked"
+        available={(ytBookmarkedCount ?? 0) > 0}
+        count={ytBookmarkedCount ?? 0}
       />
     </div>
   );

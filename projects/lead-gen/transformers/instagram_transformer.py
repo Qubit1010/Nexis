@@ -19,6 +19,31 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 
+_TOUCH1_SYSTEM_PROMPT = """\
+You write opening Instagram DMs for Aleem Ul Hassan. Goal: start a real conversation, not pitch.
+This is Touch 1 of 4. No pitch, no ask, no mention of NexusPoint — ever.
+
+RULES:
+- Under 300 characters. Instagram DMs must feel like they came from a real person, not a template.
+- Start with "Hey [FirstName]" — casual, not formal.
+- Use cold reading: make an observation rooted in what's genuinely observable (their role, company size,
+  niche, bio content, what they're building). It should feel personal but not fake.
+- Use a Voss tactical empathy label: "It looks like...", "It seems like...", or "It sounds like..."
+- End with ONE genuine question about their business or journey — from real curiosity, not as a setup.
+- Mirror their tone. If their bio is casual, be casual. If they're concise, be concise.
+- NO fake compliments ("I love what you're doing!", "Your content is amazing!")
+- NO generic openers ("I came across your profile and was impressed...", "came across your profile and it caught my attention")
+- NO pitch. NO services. NO NexusPoint. Sound like a curious peer, not a vendor.
+
+PERSONALIZATION HIERARCHY (use whichever is available, in this order):
+1. Something specific from their bio (a phrase they used, their model, their niche)
+2. Their company size + what that signals about their challenges
+3. Their industry + role stage (founder at 2-person agency vs 50-person team = different realities)
+
+Return ONLY the DM message. No quotes. No explanation. No extra text.\
+"""
+
+
 def _generate_touch1_dm_gpt(lead: dict) -> str | None:
     """Generate a personalized Touch 1 DM via GPT-4o-mini.
 
@@ -37,40 +62,38 @@ def _generate_touch1_dm_gpt(lead: dict) -> str | None:
         title = (lead.get("title") or "").strip()
         company = (lead.get("company") or "").strip()
         bio = (lead.get("bio") or "").strip()
+        followers = str(lead.get("followers") or "").strip()
+        username = (lead.get("username") or "").strip().lstrip("@")
 
-        context_parts = []
-        if bio:
-            context_parts.append(f"Bio: {bio[:150]}")
+        context_parts = [f"- Name: {first_name}"]
+        if username:
+            context_parts.append(f"- Instagram username: @{username}")
         if title:
-            context_parts.append(f"Title: {title}")
+            context_parts.append(f"- Role/title: {title}")
         if company:
-            context_parts.append(f"Company: {company}")
-        context = "\n".join(context_parts) if context_parts else "No additional context."
+            context_parts.append(f"- Company/brand: {company}")
+        if followers:
+            context_parts.append(f"- Followers: {followers}")
+        if bio:
+            context_parts.append(f"- Bio: {bio[:150]}")
+        else:
+            context_parts.append("- Bio: not available")
 
-        prompt = f"""Write a cold Instagram DM to this person:
-
-Name: {first_name}
-{context}
-
-Rules:
-- Casual Instagram tone, not business email language
-- Start with: Hey {first_name} -
-- One specific observation about their work, content, or bio (1 sentence) — rooted in what's visible, not generic praise
-- End with ONE open question that invites a reply (not a pitch)
-- No CTA, no services mention, no ask to book a call
-- Max 200 characters total
-- No emojis, no symbols
-
-Output ONLY the message. No quotes, no explanation."""
+        user_prompt = "Lead info:\n" + "\n".join(context_parts) + "\n\nWrite the opening DM."
 
         response = client.chat.completions.create(
             model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=80,
-            temperature=0.9,
+            messages=[
+                {"role": "system", "content": _TOUCH1_SYSTEM_PROMPT},
+                {"role": "user", "content": user_prompt},
+            ],
+            max_tokens=150,
+            temperature=0.85,
         )
         note = response.choices[0].message.content.strip().replace("\n", " ").replace("  ", " ")
-        return note[:200] if note else None
+        if note.startswith('"') and note.endswith('"'):
+            note = note[1:-1].strip()
+        return note[:300] if note else None
     except Exception:
         return None
 

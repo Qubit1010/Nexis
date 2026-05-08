@@ -1,0 +1,99 @@
+﻿{
+  "client_name": "ScaleLogix AI",
+  "project_name": "Embedded AI Delivery Engine",
+  "contact_name": "Jordan",
+  "contact_email": "jordan@scalelogix.ai",
+  "doc": {
+    "title": "ScaleLogix AI -- Onboarding",
+    "sections": [
+      {
+        "heading": "Project overview",
+        "level": 1,
+        "body": "NexusPoint is stepping in as ScaleLogix AIs embedded delivery partner for AI automation. You sell AI-driven workflows to SMB clients (HVAC, real estate, legal, medical) and the bottleneck is building and handing them off fast enough. We own the build-to-handoff pipeline: production-grade automations in Make.com, n8n, and Zapier; AI integrations via OpenAI and Claude APIs; CRM setup in GoHighLevel and HubSpot; and live client-facing calls so your customers actually understand what we build. Goal is 3-4 client automation projects shipped per month at steady state."
+      },
+      {
+        "heading": "Scope summary",
+        "level": 1,
+        "bullets": [
+          "Full-stack automation builds in Make.com, n8n, and Zapier (lead nurture, appointment booking, CRM-triggered follow-ups, AI intake systems)",
+          "AI integration and prompt engineering using OpenAI API, Claude API, and Voiceflow",
+          "CRM configuration and pipeline automation in GoHighLevel and HubSpot",
+          "Client-facing delivery: Zoom onboarding calls, workflow walkthroughs, plain-language explanations for non-technical owners",
+          "Workflow documentation library: architecture diagrams, usage guides, Loom video walkthroughs for every build",
+          "Reusable template vault: every workflow templatized for redeployment on future similar clients",
+          "Proactive monthly optimization reports on live automations"
+        ]
+      },
+      {
+        "heading": "Timeline",
+        "level": 1,
+        "table": {
+          "headers": ["Phase", "Owner", "Start", "End"],
+          "rows": [
+            ["Onboarding: tool access, system review, first client assignment", "Aleem", "Week 1", "Week 1"],
+            ["First Delivery Cycle: 2-3 automations built, tested, and presented to ScaleLogix AI", "Aleem + Muhammad Usman", "Week 2", "Week 4"],
+            ["Steady State: 3-4 client projects per month, ongoing delivery", "Aleem + Muhammad Usman", "Month 2", "Ongoing"],
+            ["Template Compounding: reusable templates reduce build time by 40%+", "Aleem", "Month 3", "Ongoing"]
+          ]
+        }
+      },
+      {
+        "heading": "Communication",
+        "level": 1,
+        "bullets": [
+          "Primary channel: WhatsApp for async updates, email for formal project handoffs",
+          "Weekly check-in: Friday async update covering projects shipped, in-flight work, and any blockers",
+          "Response time: within 24 hours on weekdays",
+          "Point of contact: Aleem (NexusPoint) for all project and delivery questions"
+        ]
+      },
+      {
+        "heading": "What we need from you",
+        "level": 1,
+        "bullets": [
+          "Access to your Make.com or n8n account (read-only is fine to start)",
+          "Access to GoHighLevel or HubSpot so we can review your current CRM setup",
+          "Your first client assignment: client name, industry, what they need automated, and any tools or data already in place",
+          "A brief on how you currently scope and hand off projects to clients, so we fit into your existing flow without disruption"
+        ]
+      },
+      {
+        "heading": "Next steps",
+        "level": 1,
+        "body": "Kicking off with a 45-minute call this week. We will review your tool stack, confirm the first client assignment, and set the rhythm for the Week 2-4 delivery cycle. From there, a Friday async update every week. The project checklist tracks every stage from now through steady-state delivery."
+      }
+    ]
+  },
+  "checklist": {
+    "title": "ScaleLogix AI -- Project Checklist",
+    "headers": ["Stage", "Task", "Owner", "Due", "Status", "Notes"],
+    "rows": [
+      ["Discovery", "Kickoff call (45 min): tool stack review, first client assignment, delivery flow", "Aleem", "", "Not started", ""],
+      ["Discovery", "Map ScaleLogix AI current workflow: how projects are scoped, built, and handed off", "Aleem", "", "Not started", ""],
+      ["Discovery", "Identify automation boundaries: what NexusPoint builds vs what ScaleLogix AI handles", "Aleem", "", "Not started", ""],
+      ["Discovery", "Confirm access: Make.com or n8n, GoHighLevel or HubSpot, client API keys if any", "Aleem", "", "Not started", ""],
+      ["Workflow Map", "Diagram target workflow for first client automation assignment", "Aleem", "", "Not started", ""],
+      ["Workflow Map", "Define triggers, branches, and edge cases for first build", "Aleem", "", "Not started", ""],
+      ["Workflow Map", "ScaleLogix AI review and sign-off on workflow map before build starts", "Aleem", "", "Not started", ""],
+      ["Build", "Build lead nurture or appointment booking automation in Make.com or n8n", "Muhammad Usman", "", "Not started", ""],
+      ["Build", "Wire integrations and credentials for first client (CRM, email, calendar APIs)", "Muhammad Usman", "", "Not started", ""],
+      ["Build", "AI layer: OpenAI or Claude API prompt architecture for intelligent routing or intake", "Aleem", "", "Not started", ""],
+      ["Build", "Add error handling, notifications, and retry logic", "Muhammad Usman", "", "Not started", ""],
+      ["Build", "Add logging for visibility into automation runs", "Muhammad Usman", "", "Not started", ""],
+      ["Test", "Dry run tests with sample data across all branches", "Aleem", "", "Not started", ""],
+      ["Test", "Live test with low-volume real data from first client", "Aleem", "", "Not started", ""],
+      ["Test", "ScaleLogix AI UAT: walkthrough call with Jordan to review before client handoff", "Aleem", "", "Not started", ""],
+      ["Handoff", "Deploy automation to client account", "Muhammad Usman", "", "Not started", ""],
+      ["Handoff", "Loom walkthrough video of how the workflow runs (for the end client)", "Aleem", "", "Not started", ""],
+      ["Handoff", "Documentation: architecture diagram, credentials map, retry logic notes", "Aleem", "", "Not started", ""],
+      ["Handoff", "Templatize workflow for reuse on similar future clients", "Aleem", "", "Not started", ""],
+      ["Handoff", "14-day monitoring window post-deployment", "Muhammad Usman", "", "Not started", ""],
+      ["Handoff", "Monthly optimization report on live automations", "Aleem", "", "Not started", ""],
+      ["Handoff", "Invoice for first month", "Aleem", "", "Not started", ""]
+    ]
+  },
+  "email": {
+    "subject": "Welcome to NexusPoint, ScaleLogix AI kickoff",
+    "body": "Hi Jordan,\n\nThanks for the trust on the embedded delivery partnership. The client delivery bottleneck you described is exactly what this engagement is built to solve.\n\nEverything for the project lives here:\n\n- Project folder: [FOLDER_URL]\n- Onboarding doc: [DOC_URL]\n- Project checklist: [SHEET_URL]\n\nTo get the first automation into build this week, we need three things from you:\n\n- Access to your Make.com or n8n account (read-only to start)\n- Access to GoHighLevel or HubSpot so I can review your current CRM setup\n- Your first client assignment: who they are, what they need automated, and any tools or data already in place\n\nCan you do a 45-minute kickoff call this week? I am free Wednesday or Thursday afternoon, Pakistan Standard Time (UTC+5). Or send me a time that works on your end.\n\nLet us get the first build shipped before end of next week.\n\nAleem"
+  }
+}

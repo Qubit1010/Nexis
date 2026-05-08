@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "The blog post is between 500 and 700 words",
+      "passed": true,
+      "evidence": "Blog word count is ~587 words (counted from 'The program was eight weeks old...' to '[Book a call at apexstrengthcoaching.com]')"
+    },
+    {
+      "text": "The blog post opens with a specific scene, moment, or claim — not a definition or backstory paragraph",
+      "passed": true,
+      "evidence": "Opens mid-scene: 'The program was eight weeks old and Marcus had skipped four of the last seven sessions.' — drops reader into a specific moment with a named person."
+    },
+    {
+      "text": "The blog post contains zero em dashes (—)",
+      "passed": true,
+      "evidence": "No em dashes found in the blog post. All connective punctuation uses commas or periods."
+    },
+    {
+      "text": "The Instagram caption is between 130 and 200 words (not counting hashtags)",
+      "passed": true,
+      "evidence": "Caption is ~172 words (not counting the hashtag line). Within the 130-200 range."
+    },
+    {
+      "text": "The Instagram caption includes at least 8 hashtags",
+      "passed": true,
+      "evidence": "12 hashtags provided: #strengthtraining #personaltraining #austinfitness #strengthcoach #smallgrouptraining #onlinecoaching #nutritioncoaching #progressiveoverload #fitnessprogram #gymlife #austintexas #powerlifting"
+    },
+    {
+      "text": "A LinkedIn post is present and distinct from the Instagram caption",
+      "passed": true,
+      "evidence": "LinkedIn post is present (section 2B) and takes a thought-leadership angle with full sentences, professional framing, and a different structure from the Instagram caption."
+    },
+    {
+      "text": "The carousel section includes exactly 8 slides with headings and sub-text",
+      "passed": true,
+      "evidence": "8 slides present: Slide 1 (Hook) through Slide 8 (Close + CTA). Each has a Heading and Sub-text field."
+    },
+    {
+      "text": "The reel concept includes at least 6 scenes with time codes",
+      "passed": true,
+      "evidence": "7 scenes with explicit time codes (0:00-0:06, 0:06-0:13, 0:13-0:21, 0:21-0:29, 0:29-0:38, 0:38-0:46, 0:46-0:55)."
+    },
+    {
+      "text": "The output does not use the phrase 'transform your body' or 'melt fat'",
+      "passed": true,
+      "evidence": "Neither phrase appears anywhere in the content package."
+    },
+    {
+      "text": "The writing reflects Apex's direct, practical voice — not generic motivational language",
+      "passed": true,
+      "evidence": "Blog uses evidence-backed language ('Neuromuscular coordination, tissue remodeling...'). No motivational poster phrases. IG caption ends with 'something about the approach needs to change, not you' — direct and specific."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10,
+    "pass_rate": 1.0
+  }
+}

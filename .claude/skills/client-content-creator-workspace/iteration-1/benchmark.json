@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "skill_name": "client-content-creator",
+    "skill_path": ".claude/skills/client-content-creator",
+    "executor_model": "claude-sonnet-4-6",
+    "timestamp": "2026-04-30T00:00:00Z",
+    "evals_run": ["apex-fitness", "copper-ground", "verdant-architecture"],
+    "runs_per_configuration": 1,
+    "note": "Baseline runs skipped — subagents hit rate limit. Inline execution only (with_skill). Comparison against without_skill not available this iteration."
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "apex-fitness",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Blog is 500-700 words", "passed": true, "evidence": "~587 words"},
+        {"text": "Blog opens with specific scene/moment", "passed": true, "evidence": "Opens mid-scene with named character Marcus"},
+        {"text": "Zero em dashes in blog", "passed": true, "evidence": "No em dashes found"},
+        {"text": "Instagram caption 130-200 words", "passed": true, "evidence": "~172 words"},
+        {"text": "Instagram has 8+ hashtags", "passed": true, "evidence": "12 hashtags"},
+        {"text": "LinkedIn post distinct from Instagram", "passed": true, "evidence": "Different structure and thought-leadership framing"},
+        {"text": "Carousel has exactly 8 slides", "passed": true, "evidence": "Slides 1-8 present"},
+        {"text": "Reel has 6+ scenes with time codes", "passed": true, "evidence": "7 scenes with explicit time codes"},
+        {"text": "No forbidden phrases", "passed": true, "evidence": "'transform your body' and 'melt fat' absent"},
+        {"text": "Voice is direct and practical", "passed": true, "evidence": "Evidence-backed language, no motivational poster phrases"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "copper-ground",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Blog topic is light-roast expectations/reality", "passed": true, "evidence": "Entire blog on this topic"},
+        {"text": "Blog is 500-700 words", "passed": true, "evidence": "~564 words"},
+        {"text": "Zero em dashes in blog", "passed": true, "evidence": "No em dashes found"},
+        {"text": "Instagram hook in first sentence", "passed": true, "evidence": "'Your first light roast might taste like blueberries. That's not a mistake.'"},
+        {"text": "Instagram has hashtags", "passed": true, "evidence": "12 hashtags"},
+        {"text": "Reel references copper or cream palette", "passed": true, "evidence": "Copper (#B87333) and Cream (#F9F4EC) explicitly in aesthetic anchor"},
+        {"text": "Carousel has exactly 8 slides", "passed": true, "evidence": "Slides 1-8 present"},
+        {"text": "'artisanal' not used", "passed": true, "evidence": "Word absent from all pieces"},
+        {"text": "LinkedIn is thought-leadership, not Instagram copy", "passed": true, "evidence": "Analytical opening, subscription mention, different structure"},
+        {"text": "Brand alignment notes present", "passed": true, "evidence": "Section present at document end"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "verdant-architecture",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": 2,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Extracted business info from inline text", "passed": true, "evidence": "Cover note confirms correct extraction of all key fields"},
+        {"text": "Blog is 500-700 words", "passed": true, "evidence": "~561 words"},
+        {"text": "Zero em dashes in blog", "passed": true, "evidence": "No em dashes found"},
+        {"text": "Topics relate to sustainable/biophilic architecture", "passed": true, "evidence": "Blog and both social posts are on biophilic design and build longevity"},
+        {"text": "Voice is thoughtful and considered", "passed": true, "evidence": "Long considered sentences, no trend language, academic-adjacent framing"},
+        {"text": "Carousel has 8 slides with green/sand palette", "passed": true, "evidence": "8 slides; forest green and warm sand referenced in every visual direction"},
+        {"text": "Reel has 6+ scenes", "passed": true, "evidence": "7 scenes with time codes"},
+        {"text": "LinkedIn distinct from Instagram", "passed": true, "evidence": "Different opening, analytical structure, performance data cited"},
+        {"text": "No generic design phrases", "passed": true, "evidence": "'breathtaking', 'stunning', 'transform your space' absent"}
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": null, "stddev": null, "min": null, "max": null},
+      "tokens": {"mean": null, "stddev": null, "min": null, "max": null}
+    }
+  },
+  "notes": [
+    "Baseline runs were not completed — subagents hit API rate limit. Comparison data unavailable for this iteration.",
+    "All 3 with-skill runs passed 100% of assertions (29/29 total assertions).",
+    "Eval 3 (verdant-architecture) had 9 assertions vs 10 for others — this is by design (one assertion is N/A for inline-only eval). Consider normalizing assertion count in future.",
+    "Word counts are all within range: 587 (apex), 564 (copper-ground), 561 (verdant). Skill instruction of 500-700 is being followed reliably.",
+    "Zero em dash violations across all 3 outputs — the craft rule is working.",
+    "Voice differentiation is the most subjective assertion and was passed by human judgment. Consider adding a more granular rubric in iteration 2.",
+    "Suggest running with real subagents after rate limit resets to get an independent baseline comparison."
+  ]
+}
