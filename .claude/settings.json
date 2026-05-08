@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(python .claude/skills/deep-research/research.py*)",
-      "Bash(*python .claude/skills/proposal-generator/scripts/create_proposal_doc.py*)"
+      "Bash(*python .claude/skills/proposal-generator/scripts/create_proposal_doc.py*)",
+      "Bash(python3 .claude/skills/content-engine/scripts/pull_ideas.py)",
+      "Bash(Get-Content \"C:\\\\Users\\\\Aleem\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Aleem-OneDrive-Documents-Nexis\\\\843e9be4-d7b4-4b60-ad2b-8f1078ad2a69\\\\tasks\\\\bqdti09kh.output\" -Wait)",
+      "Bash(Select-String --line-buffered \"ready|error|Error|localhost|failed|ENOENT\")",
+      "Bash(Get-Content \"C:\\\\Users\\\\Aleem\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Aleem-OneDrive-Documents-Nexis\\\\843e9be4-d7b4-4b60-ad2b-8f1078ad2a69\\\\tasks\\\\b78djjq2e.output\" -Wait)",
+      "Bash(Select-String \"ready|localhost|error|Error|failed|ENOENT|cannot\")"
     ]
   }
 }
