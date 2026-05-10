@@ -33,3 +33,7 @@ Format: [YYYY-MM-DD] DECISION: ... | REASONING: ... | CONTEXT: ...
 [2026-05-10] DECISION: Scaffolded Browser Automation project using Playwright | REASONING: Enables JS-rendered page scraping and browser-level automation beyond what Firecrawl handles — potential use in lead gen, advanced website auditing, and client automation deliverables | CONTEXT: projects/browser-automation/
 
 [2026-05-10] DECISION: Added LightRAG (HKUDS graph-based RAG framework) as a project | REASONING: Graph-based retrieval gives meaningfully better results than naive vector RAG for knowledge-dense queries — being evaluated as a component for NexusPoint AI automation client offerings | CONTEXT: projects/lightrag/
+
+[2026-05-10] DECISION: Loom script generation added as a separate API endpoint (/api/generate-loom-script) rather than extending the existing /api/generate route | REASONING: Keeps proposal generation logic completely untouched and lets both outputs load independently — one failure doesn't break the other | CONTEXT: projects/upwork-proposal-dashboard
+
+[2026-05-10] DECISION: Upwork Proposal Dashboard upgraded to parallel tab architecture — Proposal and Loom Script tabs both fire simultaneously via Promise.all on Generate click | REASONING: Loom scripts are only useful if they're ready at the same time as the proposal; sequential loading would add friction and discourage use of the Loom feature | CONTEXT: projects/upwork-proposal-dashboard/src/app/page.tsx
