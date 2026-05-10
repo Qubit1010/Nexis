@@ -89,6 +89,15 @@ Use the exact base scripts from the results bank below for each job type.
 
 Output a fully personalized script with all variable sections filled in based on the job post. Use [BRACKETS] only for things Aleem genuinely needs to fill in himself (like client name if not provided, or on-screen choice).
 
+**Opening rules for Green scripts:**
+- NEVER open with "Hey I'm Aleem" or any greeting-first opener
+- Open with THEIR problem or a pattern interrupt — then introduce in one sentence after
+- Pick the opener that fits best:
+  - Problem-first: "[CLIENT NAME], most proposals you're seeing right now are going to describe what they'd build. I recorded this to show you."
+  - Direct specificity: "[CLIENT NAME] — your post mentioned [SPECIFIC DETAIL]. That told me exactly where the friction is. Let me show you what I'd do."
+  - Shared-pain (automation/AI): "The reason this kind of project usually fails isn't the tech — it's that no one [maps the edge cases / audits the stack / defines the use case tightly] before they start. Here's how I handle that."
+- After the opener, introduce in ONE sentence only: "I'm Aleem — founder of NexusPoint. We've done this for 90+ clients."
+
 Format:
 
 ```
@@ -97,10 +106,13 @@ JOB TYPE: [Web Dev / Marketing Automation / AI Services]
 
 PERSONALIZED LOOM SCRIPT
 
-[0:00-0:10 — Face on webcam]
-[Personalized hook using specific job detail]
+[0:00-0:08 — Face on webcam]
+[Pattern interrupt or problem-first opener — NOT a greeting]
 
-[0:10-0:25 — Face, then switch to screen share]
+[0:08-0:12 — Still face]
+"I'm Aleem — founder of NexusPoint. We've done this for 90+ clients."
+
+[0:12-0:25 — Face, then switch to screen share]
 [Personalized label using their specific pain]
 
 [0:25-0:55 — Screen share | SHOW: DESCRIPTION OF WHAT TO SHOW]
@@ -132,7 +144,7 @@ PERSONALIZED LOOM SCRIPT
 ### Web Dev Base
 
 [0:00-0:10 — Face on webcam]
-"Hey — I'm Aleem from NexusPoint. This is a quick walkthrough of how I work on web projects before anyone jumps on a call."
+"In the next 90 seconds I'm going to show you exactly how I approach web projects — so you know what working with me actually looks like before we talk. I'm Aleem, founder of NexusPoint. 90+ projects delivered."
 
 [Switch to screen share: open tradinghunters.com or ringo.media in browser]
 
@@ -151,7 +163,7 @@ PERSONALIZED LOOM SCRIPT
 ### Marketing Automation Base
 
 [0:00-0:10 — Face on webcam]
-"Hey — I'm Aleem from NexusPoint. You're looking at automating something that's currently eating manual time. Here's how I'd approach that."
+"The reason automation projects fail isn't the tech — it's that nobody audits what actually needs automating before they start building. Here's how I do it differently. I'm Aleem, founder of NexusPoint."
 
 [Switch to screen share: open Make.com or n8n with a scenario visible]
 
@@ -170,7 +182,7 @@ PERSONALIZED LOOM SCRIPT
 ### AI Services Base
 
 [0:00-0:10 — Face on webcam]
-"Hey — I'm Aleem from NexusPoint. If you're building something with AI, this is a quick walkthrough of how I approach it so it actually works in production — not just in a demo."
+"Most AI builds look great in demos and break in production. The difference is almost always how edge cases are handled before a single line gets written. I'm Aleem, founder of NexusPoint — here's my approach."
 
 [Switch to screen share: OpenAI Playground with a prompt visible, or a Make.com scenario with an AI module]
 
