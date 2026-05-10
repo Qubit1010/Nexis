@@ -1,0 +1,23 @@
+{
+  "name": "browser-automation",
+  "version": "1.0.0",
+  "description": "Playwright browser automation scripts and E2E tests",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:headed": "npx playwright test --headed",
+    "test:watch": "npx playwright test --project=chromium-slow --headed",
+    "screenshot": "npx ts-node scripts/screenshot.ts",
+    "scrape": "npx ts-node scripts/scrape.ts",
+    "codegen": "npx playwright codegen"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

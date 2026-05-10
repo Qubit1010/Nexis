@@ -23,3 +23,13 @@ Format: [YYYY-MM-DD] DECISION: ... | REASONING: ... | CONTEXT: ...
 [2026-05-01] DECISION: Built client-content-creator as a separate skill from content-engine | REASONING: Client content and personal brand content have different inputs (client brief vs. news/topics), tone, and destinations (client Drive folder vs. Aleem's Sheets/Docs) - collapsing them would create confusion and reduce reusability | CONTEXT: .claude/skills/client-content-creator
 
 [2026-05-01] DECISION: Added eval framework with 3 test clients and grading rubrics before shipping client-content-creator | REASONING: Content quality is subjective and hard to catch in code review - a benchmark iteration lets us validate output and detect regressions when the skill is modified | CONTEXT: .claude/skills/client-content-creator/evals
+
+[2026-05-10] DECISION: NotebookLM skill built as a CLI wrapper around notebooklm-py (v0.4.0) rather than direct API calls | REASONING: No official NotebookLM API exists; the CLI provides full feature parity including audio generation not available elsewhere. Commands must run via PowerShell since Python is not on the Bash PATH | CONTEXT: .claude/skills/notebooklm
+
+[2026-05-10] DECISION: Content Engine Dashboard max_tokens bumped from 1200 to 2500 and temperature set to 0.8 | REASONING: 1200 tokens was truncating longer content types (carousels, video scripts); flat temperature was producing repetitive outputs flagged as too generic | CONTEXT: projects/content-engine-dashboard/src/app/api/generate/route.ts
+
+[2026-05-10] DECISION: Added AutoResearch (Karpathy's autonomous ML training experiment) as an exploration project | REASONING: Autonomous AI research agent that self-modifies train.py and iterates overnight — relevant to Aleem's BSAI work and NexusPoint's AI positioning; kept separate from client projects as pure R&D | CONTEXT: autoresearch/
+
+[2026-05-10] DECISION: Scaffolded Browser Automation project using Playwright | REASONING: Enables JS-rendered page scraping and browser-level automation beyond what Firecrawl handles — potential use in lead gen, advanced website auditing, and client automation deliverables | CONTEXT: projects/browser-automation/
+
+[2026-05-10] DECISION: Added LightRAG (HKUDS graph-based RAG framework) as a project | REASONING: Graph-based retrieval gives meaningfully better results than naive vector RAG for knowledge-dense queries — being evaluated as a component for NexusPoint AI automation client offerings | CONTEXT: projects/lightrag/

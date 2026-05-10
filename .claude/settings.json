@@ -8,7 +8,13 @@
       "Bash(cd * && python *)",
       "Bash(mkdir*)",
       "Write(.claude/skills/client-onboarding-workflow-workspace/*)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(git clone *)",
+      "Bash(notebooklm --version)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(py --version)",
+      "Bash(py -3 --version)"
     ]
   }
 }
