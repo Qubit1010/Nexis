@@ -33,7 +33,7 @@ def find_gws():
     the cmd.exe 8191-char command line limit. Falls back to gws.cmd with shell.
     """
     npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
-    gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run-gws.js"
+    gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run.js"
 
     if gws_js.exists():
         # Find node.exe
