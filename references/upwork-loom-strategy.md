@@ -42,7 +42,7 @@ Embed in **paragraph 2**, not at the bottom as a CTA. Clients skim proposals in 
 2. **First 5 seconds = hook, not hello.** The viewer decides to keep watching in the first sentence.
 3. **Outcome language, not feature language.** "I eliminate manual handoffs" beats "I build automations."
 4. **Specificity creates trust.** One specific reference to THEIR post > three generic claims.
-5. **After the hook, introduce in one sentence only:** "I'm Aleem — founder of NexusPoint. We've done this for 90+ clients." Done. Move on.
+5. **After the hook, introduce in one sentence — make it adaptive, not generic.** Tie the credential to their specific problem or stack. Examples below.
 
 ### Opener Variants (pick by situation)
 
@@ -74,7 +74,11 @@ Variant D: "[CLIENT NAME] — your post mentioned [SPECIFIC DETAIL]. That told m
 
 **[0:08-0:12 — Still face]**
 
-"I'm Aleem — founder of NexusPoint. We've done this for 90+ clients."
+Adaptive intro — pick the form that fits the job:
+- Web Dev: "I'm Aleem — I've shipped 90+ sites, including [Framer/Webflow/Next.js] builds like this."
+- Automation: "I'm Aleem — I've eliminated this exact bottleneck for [SaaS ops teams / e-commerce brands / agencies] before."
+- AI: "I'm Aleem — I've built production AI systems handling [their use case] for real businesses."
+- Fallback: "I'm Aleem — founder of NexusPoint. I've solved this exact problem before."
 
 ---
 

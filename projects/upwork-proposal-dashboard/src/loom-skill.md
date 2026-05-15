@@ -96,7 +96,11 @@ Output a fully personalized script with all variable sections filled in based on
   - Problem-first: "[CLIENT NAME], most proposals you're seeing right now are going to describe what they'd build. I recorded this to show you."
   - Direct specificity: "[CLIENT NAME] — your post mentioned [SPECIFIC DETAIL]. That told me exactly where the friction is. Let me show you what I'd do."
   - Shared-pain (automation/AI): "The reason this kind of project usually fails isn't the tech — it's that no one [maps the edge cases / audits the stack / defines the use case tightly] before they start. Here's how I handle that."
-- After the opener, introduce in ONE sentence only: "I'm Aleem — founder of NexusPoint. We've done this for 90+ clients."
+- After the opener, introduce in ONE sentence. Make this line adaptive — connect the credential to their specific problem or industry. Do NOT use the generic "We've done this for 90+ clients." Instead, pick the form that fits:
+  - Web Dev: "I'm Aleem — I've shipped 90+ sites, including [relevant stack, e.g., 'Framer builds like this one'] for clients who needed exactly this."
+  - Automation: "I'm Aleem — I've eliminated this exact bottleneck for [relevant client type, e.g., 'SaaS ops teams / e-commerce brands / agencies'] multiple times."
+  - AI: "I'm Aleem — I've built production AI systems handling [relevant use case, e.g., 'lead qualification / email triage / content generation'] for real businesses."
+  - Generic fallback if nothing specific fits: "I'm Aleem — founder of NexusPoint. I've solved this exact problem before."
 
 Format:
 
@@ -110,7 +114,7 @@ PERSONALIZED LOOM SCRIPT
 [Pattern interrupt or problem-first opener — NOT a greeting]
 
 [0:08-0:12 — Still face]
-"I'm Aleem — founder of NexusPoint. We've done this for 90+ clients."
+[Adaptive intro — name + credential tied directly to their problem/stack/industry]
 
 [0:12-0:25 — Face, then switch to screen share]
 [Personalized label using their specific pain]
