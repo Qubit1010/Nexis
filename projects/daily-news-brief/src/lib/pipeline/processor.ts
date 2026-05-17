@@ -55,7 +55,7 @@ function parseJSON<T>(text: string, context: string): T {
   }
 }
 
-async function callWithFallback(
+export async function callWithFallback(
   prompt: string,
   context: string,
   openaiModel: string,

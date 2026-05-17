@@ -38,3 +38,7 @@ context/
 # Datasets & ML runs (large files)
 datasets/
 ml-runs/
+
+# landing-rebuild skill outputs (generated Next.js apps + extractions, large)
+projects/nexuspoint-landing/
+projects/*-landing/

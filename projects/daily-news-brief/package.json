@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate": "tsx scripts/daily-cron.ts"
+    "generate": "tsx scripts/daily-cron.ts",
+    "generate:tools": "tsx scripts/daily-tools.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.90.0",

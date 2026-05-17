@@ -19,6 +19,7 @@ import {
   Sparkles,
   CalendarDays,
   X,
+  Wrench,
 } from "lucide-react";
 import {
   isToday,
@@ -70,7 +71,9 @@ function groupByDate(dates: BriefDate[]): DateGroup[] {
 
 export function Sidebar() {
   const [dates, setDates] = useState<BriefDate[]>([]);
+  const [toolDates, setToolDates] = useState<BriefDate[]>([]);
   const [generating, setGenerating] = useState(false);
+  const [generatingTools, setGeneratingTools] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -83,11 +86,18 @@ export function Sidebar() {
   const currentDate = pathname.startsWith("/brief/")
     ? pathname.split("/brief/")[1]
     : null;
+  const currentToolDate = pathname.startsWith("/tools/")
+    ? pathname.split("/tools/")[1]
+    : null;
 
   useEffect(() => {
     fetch("/api/briefs")
       .then((r) => r.json())
       .then(setDates)
+      .catch(() => {});
+    fetch("/api/tool-briefs")
+      .then((r) => r.json())
+      .then(setToolDates)
       .catch(() => {});
   }, [pathname]);
 
@@ -125,6 +135,22 @@ export function Sidebar() {
       // minimal error handling for personal tool
     } finally {
       setGenerating(false);
+    }
+  }
+
+  async function handleGenerateTools() {
+    setGeneratingTools(true);
+    try {
+      const res = await fetch("/api/generate-tools", { method: "POST" });
+      const data = await res.json();
+      if (data.date) {
+        router.push(`/tools/${data.date}`);
+        router.refresh();
+      }
+    } catch {
+      // minimal error handling
+    } finally {
+      setGeneratingTools(false);
     }
   }
 
@@ -174,24 +200,43 @@ export function Sidebar() {
           </div>
         </div>
 
-        {/* Generate button */}
-        <Button
-          className="w-full h-11 text-[15px] font-medium bg-amber-500 hover:bg-amber-400 text-[#0a0f1a] transition-all duration-200 hover:shadow-[0_0_24px_rgba(245,158,11,0.25)] cursor-pointer"
-          onClick={handleGenerate}
-          disabled={generating}
-        >
-          {generating ? (
-            <span className="flex items-center gap-2">
-              <Loader2 className="w-4 h-4 animate-spin" />
-              Generating...
-            </span>
-          ) : (
-            <span className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4" />
-              Generate Brief
-            </span>
-          )}
-        </Button>
+        {/* Generate buttons */}
+        <div className="space-y-2">
+          <Button
+            className="w-full h-11 text-[15px] font-medium bg-amber-500 hover:bg-amber-400 text-[#0a0f1a] transition-all duration-200 hover:shadow-[0_0_24px_rgba(245,158,11,0.25)] cursor-pointer"
+            onClick={handleGenerate}
+            disabled={generating}
+          >
+            {generating ? (
+              <span className="flex items-center gap-2">
+                <Loader2 className="w-4 h-4 animate-spin" />
+                Generating...
+              </span>
+            ) : (
+              <span className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4" />
+                Generate Brief
+              </span>
+            )}
+          </Button>
+          <Button
+            className="w-full h-10 text-[14px] font-medium bg-teal-500/15 text-teal-400 border border-teal-500/30 hover:bg-teal-500/25 hover:border-teal-500/50 transition-all duration-200 cursor-pointer"
+            onClick={handleGenerateTools}
+            disabled={generatingTools}
+          >
+            {generatingTools ? (
+              <span className="flex items-center gap-2">
+                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                Generating tools...
+              </span>
+            ) : (
+              <span className="flex items-center gap-2">
+                <Wrench className="w-3.5 h-3.5" />
+                Generate Tools Brief
+              </span>
+            )}
+          </Button>
+        </div>
 
         {/* Action buttons */}
         <div className="space-y-1">
@@ -280,11 +325,39 @@ export function Sidebar() {
         </>
       )}
 
+      {/* Tools & Tutorials section */}
+      {toolDates.length > 0 && (
+        <>
+          <div className="px-5 pt-4 pb-2">
+            <p className="text-[11px] font-semibold text-zinc-600 uppercase tracking-[0.1em] mb-3 inline-flex items-center gap-1.5">
+              <Wrench className="w-3 h-3 text-teal-500/70" />
+              Tools & Tutorials
+            </p>
+            <div className="space-y-0.5">
+              {toolDates.slice(0, 7).map((tb) => (
+                <button
+                  key={tb.date}
+                  onClick={() => router.push(`/tools/${tb.date}`)}
+                  className={`w-full text-left text-[13px] py-1.5 px-2.5 rounded-lg transition-all duration-200 ${
+                    currentToolDate === tb.date
+                      ? "bg-teal-500/10 text-teal-400 font-semibold shadow-[inset_0_0_0_1px_rgba(20,184,166,0.2)]"
+                      : "text-zinc-500 hover:bg-white/[0.04] hover:text-zinc-300"
+                  }`}
+                >
+                  {formatDate(tb.date)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="h-px bg-white/[0.06] mx-4" />
+        </>
+      )}
+
       {/* Calendar date picker */}
       <div className="px-5 pt-4 pb-2">
         <div className="flex items-center justify-between mb-3">
           <p className="text-[11px] font-semibold text-zinc-600 uppercase tracking-[0.1em]">
-            Past Briefs
+            News Briefs
           </p>
           <Popover open={calendarOpen} onOpenChange={setCalendarOpen}>
             <PopoverTrigger
