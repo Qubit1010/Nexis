@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 import fs from "fs";
 import path from "path";
 
@@ -14,9 +15,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "scenario must be A or B" }, { status: 400 });
     }
 
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json({ error: "ANTHROPIC_API_KEY is not set in .env.local" }, { status: 500 });
+    const anthropicKey = process.env.ANTHROPIC_API_KEY;
+    const openaiKey = process.env.OPENAI_API_KEY;
+    const useOpenAI = !anthropicKey && !!openaiKey;
+
+    if (!anthropicKey && !openaiKey) {
+      return NextResponse.json({ error: "No API key set. Add ANTHROPIC_API_KEY or OPENAI_API_KEY to .env.local" }, { status: 500 });
     }
 
     // Load skill files as system prompt
@@ -78,15 +82,29 @@ Tactic: [one line naming the move used]
 Start with the reply message directly. Do not include any analysis, explanation, or preamble before the message.`;
     }
 
-    const anthropic = new Anthropic({ apiKey });
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 1024,
-      system: systemPrompt,
-      messages: [{ role: "user", content: userMessage }],
-    });
+    let raw = "";
 
-    const raw = message.content[0]?.type === "text" ? message.content[0].text : "";
+    if (useOpenAI) {
+      const openai = new OpenAI({ apiKey: openaiKey });
+      const completion = await openai.chat.completions.create({
+        model: "gpt-4o",
+        max_tokens: 1024,
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userMessage },
+        ],
+      });
+      raw = completion.choices[0]?.message?.content ?? "";
+    } else {
+      const anthropic = new Anthropic({ apiKey: anthropicKey });
+      const message = await anthropic.messages.create({
+        model: "claude-sonnet-4-6",
+        max_tokens: 1024,
+        system: systemPrompt,
+        messages: [{ role: "user", content: userMessage }],
+      });
+      raw = message.content[0]?.type === "text" ? message.content[0].text : "";
+    }
 
     if (scenario === "B") {
       // Split on --- divider to separate the DM from Phase/Tactic metadata
