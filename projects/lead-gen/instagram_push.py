@@ -38,6 +38,15 @@ CRM_TAB         = "Leads"
 
 MIN_FOLLOWERS   = 100
 
+# Instagram URL substrings that indicate topic/discovery pages, not real profiles.
+# Real profile URLs are instagram.com/<handle> — anything routing through these
+# segments is a search/topic/explore/single-post card from the scraper.
+# (/reels/ is excluded — it's a profile sub-view; URL normalizer strips it.)
+INVALID_URL_PATTERNS = [
+    "/popular/", "/explore/", "/topics/", "/tags/",
+    "/search/", "/p/",
+]
+
 SOUTH_ASIA_KEYWORDS = [
     "pakistan", "india", "bangladesh", "sri lanka", "nepal",
     "bhutan", "maldives", "afghanistan",
@@ -230,27 +239,38 @@ def _is_south_asia(location: str) -> bool:
 
 
 def _parse_followers(raw: str) -> int | None:
-    """Parse follower count from strings like '1,234', '500+', '24.8K+', etc."""
+    """Parse follower count from '3.9K+ followers', '1,234', '57.7K+', '1.2M', etc.
+    Returns None for empty input or URL strings (sometimes the scraper dumps a URL here)."""
     if not raw:
         return None
-    cleaned = raw.strip().lower().replace(",", "").replace("+", "").replace(" ", "")
-    if cleaned.endswith("k"):
-        try:
-            return int(float(cleaned[:-1]) * 1000)
-        except ValueError:
-            return None
-    try:
-        return int(float(cleaned))
-    except ValueError:
+    s = raw.strip().lower()
+    if s.startswith("http"):
         return None
+    m = re.search(r'(\d+(?:[.,]\d+)?)\s*([km])?', s)
+    if not m:
+        return None
+    num = float(m.group(1).replace(",", ""))
+    unit = m.group(2) or ""
+    if unit == "k":
+        return int(num * 1000)
+    if unit == "m":
+        return int(num * 1_000_000)
+    return int(num)
 
 
 def _normalize_instagram_url(url: str) -> str:
-    """Normalize Instagram URL for dedup comparison."""
+    """Normalize Instagram URL for dedup comparison.
+    Folds alt subdomains to www.instagram.com and strips path suffixes
+    after the handle so '/handle/reels/' and '/handle/' dedupe together."""
     url = url.strip().lower().rstrip("/")
     if "?" in url:
         url = url.split("?")[0]
-    return url
+    for alt in ("secure.instagram.com",
+                "www-fallback.instagram.com",
+                "www.latest.instagram.com"):
+        url = url.replace(alt, "www.instagram.com")
+    m = re.match(r'^(https?://www\.instagram\.com/[^/]+)(/.*)?$', url)
+    return m.group(1) if m else url
 
 
 _BUSINESS_WORDS = {
@@ -294,6 +314,29 @@ def _parse_name_and_username(raw_name: str) -> tuple[str, str]:
     username = "@" + match.group(1) if match else ""
     clean_name = re.sub(r'\s*\(@[^)]+\)', '', raw_name).strip()
     return clean_name, username
+
+
+def _split_url_and_name(row: list, col_map: dict) -> tuple[str, str]:
+    """Return (url, display_name) regardless of which column holds which.
+
+    The Instant Data Scraper source sheet has flipped column ordering between
+    scraping sessions — some rows have the URL in 'Name' and the title in
+    'Link', others have it the other way around. Pick whichever cell starts
+    with http:// as the URL.
+    """
+    name_idx = col_map.get("full_name")
+    link_idx = col_map.get("instagram_url")
+    cells = []
+    for idx in (name_idx, link_idx):
+        if idx is not None and idx < len(row):
+            cells.append(row[idx].strip())
+        else:
+            cells.append("")
+    if cells[0].lower().startswith("http"):
+        return cells[0], cells[1]
+    if cells[1].lower().startswith("http"):
+        return cells[1], cells[0]
+    return "", cells[0] or cells[1]
 
 # ---------------------------------------------------------------------------
 # Main
@@ -373,7 +416,10 @@ def main():
 
     # 3. Process each source row
     kept_rows = []
-    stats = {"kept": 0, "dup": 0, "low_followers": 0, "south_asia": 0, "blank": 0}
+    stats = {
+        "kept": 0, "dup": 0, "low_followers": 0, "south_asia": 0, "blank": 0,
+        "invalid_url": 0, "bad_followers": 0,
+    }
     writeback = {}  # {row_idx: status string}
 
     for row_idx, row in enumerate(data_rows):
@@ -383,9 +429,9 @@ def main():
             writeback[row_idx] = ""
             continue
 
-        # Parse fields
-        raw_name       = _get(row, col_map, "full_name")
-        instagram_url  = _get(row, col_map, "instagram_url")
+        # Parse fields — auto-detect which of name/link cells holds the URL
+        # (Instant Data Scraper produced two flipped layouts in this sheet)
+        instagram_url, raw_name = _split_url_and_name(row, col_map)
         followers_raw  = _get(row, col_map, "followers")
         bio            = _get(row, col_map, "bio")
         title          = _get(row, col_map, "title")
@@ -422,13 +468,25 @@ def main():
                 writeback[row_idx] = "Dropped - Duplicate"
                 continue
 
-        # Filter: low followers
-        if followers_raw:
-            count = _parse_followers(followers_raw)
-            if count is not None and count < MIN_FOLLOWERS:
-                stats["low_followers"] += 1
-                writeback[row_idx] = "Dropped - Low Followers"
+        # Filter: junk URL (topic/discovery/post page, not a real profile)
+        if instagram_url:
+            url_lower = instagram_url.lower()
+            if any(p in url_lower for p in INVALID_URL_PATTERNS):
+                stats["invalid_url"] += 1
+                writeback[row_idx] = "Dropped - Invalid URL"
                 continue
+
+        # Filter: followers must be present AND parseable as an integer
+        # (Catches rows where the scraper put a URL or junk in the followers cell)
+        count = _parse_followers(followers_raw)
+        if count is None:
+            stats["bad_followers"] += 1
+            writeback[row_idx] = "Dropped - Bad Followers"
+            continue
+        if count < MIN_FOLLOWERS:
+            stats["low_followers"] += 1
+            writeback[row_idx] = "Dropped - Low Followers"
+            continue
 
         # Filter: South Asian location/designation
         check_loc = location or title
@@ -482,6 +540,8 @@ def main():
     print(f"\n--- Filter Results ---")
     print(f"  Kept:           {stats['kept']}")
     print(f"  Duplicate:      {stats['dup']}")
+    print(f"  Invalid URL:    {stats['invalid_url']}")
+    print(f"  Bad followers:  {stats['bad_followers']} (unparseable)")
     print(f"  Low followers:  {stats['low_followers']} (< {MIN_FOLLOWERS})")
     print(f"  South Asia:     {stats['south_asia']}")
     print(f"  Blank/skipped:  {stats['blank']}")
