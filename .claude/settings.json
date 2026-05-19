@@ -24,7 +24,8 @@
       "Bash(npx tsx *)",
       "Bash(where python.exe)",
       "Bash(where py *)",
-      "Bash(where python3 *)"
+      "Bash(where python3 *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000)"
     ]
   }
 }
