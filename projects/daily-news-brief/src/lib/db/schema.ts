@@ -74,3 +74,95 @@ export const contentIdeas = sqliteTable("content_ideas", {
   relatedTrendSlugs: text("related_trend_slugs").notNull(), // JSON array
   sortOrder: integer("sort_order").notNull().default(0),
 });
+
+// ============================================================
+// Tool Briefs — "AI Tools for Business" educational section
+// ============================================================
+
+export const toolBriefs = sqliteTable("tool_briefs", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  date: text("date").notNull().unique(),
+  totalTools: integer("total_tools").default(0),
+  sourcesUsed: integer("sources_used").default(0),
+  topPickToolId: integer("top_pick_tool_id"),
+  crossDomainInsight: text("cross_domain_insight"),
+  createdAt: text("created_at")
+    .notNull()
+    .default(sql`(datetime('now'))`),
+});
+
+export const toolCategories = sqliteTable("tool_categories", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => toolBriefs.id, { onDelete: "cascade" }),
+  name: text("name").notNull(),
+  slug: text("slug").notNull(),
+  summary: text("summary").notNull(),
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+export const tools = sqliteTable("tools", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  categoryId: integer("category_id")
+    .notNull()
+    .references(() => toolCategories.id, { onDelete: "cascade" }),
+  name: text("name").notNull(),
+  url: text("url").notNull(),
+  source: text("source").notNull(),
+  sourceOrigin: text("source_origin"),
+  oneLiner: text("one_liner").notNull(),
+  bestUseCase: text("best_use_case").notNull(),
+  howToSteps: text("how_to_steps").notNull(), // JSON array of 3 strings
+  audienceHook: text("audience_hook").notNull(),
+  pricingTier: text("pricing_tier"),
+  tags: text("tags").notNull(), // JSON array
+  upvotes: integer("upvotes").default(0),
+  relevanceScore: integer("relevance_score"),
+  isBestInDomain: integer("is_best_in_domain").notNull().default(0),
+  bestInDomainReason: text("best_in_domain_reason"),
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+export const workflowRecipes = sqliteTable("workflow_recipes", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => toolBriefs.id, { onDelete: "cascade" }),
+  title: text("title").notNull(),
+  subtitle: text("subtitle").notNull(),
+  scenario: text("scenario").notNull(), // 2-3 sentence business scenario
+  agent: text("agent").notNull(), // "Claude Code" | "Codex" | "Cursor" | "MCP server" | etc.
+  toolsUsed: text("tools_used").notNull(), // JSON array of strings
+  steps: text("steps").notNull(), // JSON array of {step, command/prompt, expectedOutcome}
+  timeSaved: text("time_saved"), // e.g. "~3 hours/week"
+  difficulty: text("difficulty"), // "beginner" | "intermediate" | "advanced"
+  audienceHook: text("audience_hook").notNull(),
+});
+
+export const toolTrends = sqliteTable("tool_trends", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => toolBriefs.id, { onDelete: "cascade" }),
+  title: text("title").notNull(),
+  slug: text("slug").notNull(),
+  summary: text("summary").notNull(),
+  toolNames: text("tool_names").notNull(), // JSON array of tool names
+  contentPotential: integer("content_potential"),
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+export const toolContentIdeas = sqliteTable("tool_content_ideas", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => toolBriefs.id, { onDelete: "cascade" }),
+  title: text("title").notNull(),
+  angle: text("angle").notNull(),
+  format: text("format").notNull(), // "tutorial" | "carousel" | "reel" | "thread" | "blog"
+  hook: text("hook").notNull(),
+  keyPoints: text("key_points").notNull(), // JSON array
+  relatedToolNames: text("related_tool_names").notNull(), // JSON array
+  sortOrder: integer("sort_order").notNull().default(0),
+});

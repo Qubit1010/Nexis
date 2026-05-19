@@ -60,10 +60,10 @@ export const CATEGORIES: Category[] = [
     name: "AI Automation & Workflows",
     slug: "ai-automation-workflows",
     keywords: [
-      "agent", "MCP", "n8n", "Zapier", "Make", "workflow", "automation",
-      "orchestration", "RPA", "agentic", "tool use", "function calling",
+      "agent", "MCP", "Claude Code", "Codex", "Cursor", "workflow", "automation",
+      "orchestration", "agentic", "tool use", "function calling",
       "AI agent", "autonomous", "multi-agent", "crew", "langchain",
-      "langgraph", "autogen", "trigger", "pipeline", "no-code",
+      "langgraph", "autogen", "coding agent", "browser agent", "computer use",
     ],
     newsApiQuery:
       '"AI agent" OR "AI automation" OR "agentic AI" OR "workflow automation" OR "AI workflow" OR "MCP" OR "function calling"',
