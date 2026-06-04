@@ -1,5 +1,20 @@
 # Touch Sequence Structure
 
+> **UPDATED 2026-06 — Sales Playbook integration:**
+> The canonical, source-cited Instagram sequence with reply-rate data and templates is in
+> `.claude/skills/sales-playbook/scripts/instagram-cold-dm-sequence.md`.
+>
+> Key updates from the research:
+> - **Cadence tightened:** Touch 2 = Day 3 (was 3-4), Touch 3 = Day 5 (was 8-10), Touch 4 = Day 7 or 14 (was 15)
+> - **Touch 2 requires a caption hook** — if no caption captured, skip Touch 2 rather than fall back to generic bio observation. The `instagram-outreach` skill now captures Recent Caption automatically.
+> - **Touch 3 CTA replaced:** "Worth a quick DM chat?" → anchored Ops Teardown ("I screen-share your stack, tell you the exact first thing I'd automate")
+> - **Lead offer:** AI automation as wedge (`sales-playbook/offer/ai-automation-positioning.md`)
+> - **Speed-to-Lead rule:** Reply within 1 min of any prospect message = +391% conversion (CreatorFlow data). Set phone notifications.
+> - **Pre-warm rule:** Follow + engage with prospect for 3-5 days before Touch 1 → +40-50% delivery rate
+> - **Daily limit:** 30-50 DMs/day (established accounts), 150 max. Space 2-5 min apart. Never copy-paste identical messages (#1 shadowban trigger).
+> - **Objections in conversation:** branch to `sales-playbook/frameworks/objection-riffs.md`
+> - **Live conversation routing:** `sales-playbook/scripts/live-conversation-playbook.md`
+
 Loaded in Scenario A (sequence follow-up). Covers the no-reply follow-up sequence
 after Touch 1 has been manually sent on Instagram.
 

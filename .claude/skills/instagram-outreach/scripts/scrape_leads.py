@@ -227,8 +227,12 @@ def extract_leads_from_hashtag_results(results, limit):
         role = infer_role_from_bio(bio)
         company = infer_company_from_bio(bio, owner)
 
-        # Use caption as bio context when biography isn't available
+        # Bio (from biography field if present, fallback to caption)
         display_bio = (profile["biography"] or profile["caption"])[:300]
+        # Recent Caption — store separately so generators can use post-specific signal
+        # for archetype matching (sales-playbook/frameworks/opener-archetypes.md).
+        # Caption is the most-specific personalization signal we have on IG.
+        recent_caption = profile["caption"][:500] if profile["caption"] else ""
 
         leads.append({
             "Name": full_name,
@@ -238,6 +242,7 @@ def extract_leads_from_hashtag_results(results, limit):
             "Instagram URL": profile["profileUrl"],
             "Followers": str(profile["followersCount"]) if profile["followersCount"] else "",
             "Bio": display_bio,
+            "Recent Caption": recent_caption,
         })
 
         if len(leads) >= limit:
@@ -348,6 +353,7 @@ def main():
         [
             l["Name"], l["Username"], l["Company"], l["Role"],
             l["Instagram URL"], l["Followers"], l["Bio"],
+            l.get("Recent Caption", ""),
             "", "New", today,
         ]
         for l in new_leads

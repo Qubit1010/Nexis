@@ -1,5 +1,13 @@
 # Conversation Playbook
 
+> **UPDATED 2026-06 — Sales Playbook integration:**
+> - **Expanded 6-phase flow** (adds objection branch before warm ask): `.claude/skills/sales-playbook/scripts/live-conversation-playbook.md`
+> - **15 cited calibrated questions + 9 labels**: `.claude/skills/sales-playbook/frameworks/voss-calibrated-questions.md`
+> - **10 cited objection responses**: `.claude/skills/sales-playbook/frameworks/objection-riffs.md`
+> - **Discovery call script when prospect agrees**: `.claude/skills/sales-playbook/scripts/discovery-call-script.md`
+> - The 6 phases below still apply; the playbook now formally inserts Phase 5 (Objection Branch) before the Warm Ask.
+> - **Speed-to-Lead:** reply within 1 min = +391% conversion (CreatorFlow data)
+
 Loaded in Scenario B (live reply drafter). This is how to read an active Instagram
 DM conversation and pick the right next move.
 

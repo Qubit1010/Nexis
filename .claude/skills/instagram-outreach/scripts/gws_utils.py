@@ -11,7 +11,7 @@ TAB_LEADS = "Leads"
 
 LEADS_HEADERS = [
     "Name", "Username", "Company", "Role", "Instagram URL",
-    "Followers", "Bio", "Touch 1 Message", "Status", "Date Added",
+    "Followers", "Bio", "Recent Caption", "Touch 1 Message", "Status", "Date Added",
 ]
 
 SKILL_DIR = Path(__file__).parent.parent

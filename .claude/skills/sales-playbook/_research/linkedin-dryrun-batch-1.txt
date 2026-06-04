@@ -1,0 +1,36 @@
+﻿Generating messages for 10 leads using gpt-4o-mini...
+(DRY RUN — not saving to sheet)
+
+[1/10] Mit Shah @ Method [anti_pitch]
+  246 chars: Probably not a fit but had to ask  -  what if there was a way to reclaim 10+ hours per week from manual ops work? NexusPoint helps founders like you streamline operations with tailored AI workflows. Not sure if it's a fit but figured I'd flag it.
+
+[2/10] Kaushik Mukherjee [trigger_zero_ask]
+  231 chars: Congrats on sharing your insights about building SUGAR Cosmetics, Kaushik. As the founder of an AI automation company focused on streamlining operations, I appreciate your journey. Following your updates from over here in Pakistan.
+
+[3/10] Phil Libin [specific_signal_peer]
+  269 chars: Phil - saw your recent post about demo videos. Founders creating engaging content often juggle many operational tasks, pulling focus from innovation. A similar CEO reclaimed 12+ hours each week with AI workflows in just 14 days. Worth a 12-min call Tuesday or Thursday?
+
+[4/10] Gagan Biyani @ Maven [no_pitch_connection]
+  232 chars: Hi Gagan, your recent post on influencer leadership caught my attention, especially the part about empowering teams. I've seen similar patterns with other CEO's at innovative education companies. Would be great to connect. No pitch.
+
+[5/10] Nick Frosst @ Cohere [specific_signal_peer]
+  215 chars: Nick - saw your recent post about AI innovation. Founders scaling like you often find themselves bogged down by manual ops. A peer took back 12+ hours/week within two weeks using AI workflows. Worth comparing notes?
+
+[6/10] Alex Goode @ Palm [specific_signal_peer]
+  253 chars: Alex - saw your recent post about helping small businesses. Founders often face the struggle of manual ops that eat into their time. A peer took 12+ hrs/week off a similar founder with AI workflows. Mind if I send you the build playbook? No demo needed.
+
+[7/10] Eric Ly @ KarmaCheck [anti_pitch]
+  248 chars: Probably not a fit, but had to ask - many founders are saving 10+ hours a week with AI workflows that take manual ops off their plates. I saw your post about innovation and thought it might resonate. Not sure if it's a fit, but figured I'd flag it.
+
+[8/10] Patrick Lee [specific_signal_peer]
+  264 chars: Patrick - saw your post about Rotten Tomatoes yesterday. Founders in the entertainment sector often struggle with manual ops as they scale. A peer took 12+ hours off their plate within 14 days after implementing AI workflows. Mind if I send you the build playbook?
+
+[9/10] Michael Stocker [no_pitch_connection]
+  207 chars: Hi Michael, saw your recent post about scaling at Way and the insights on team dynamics struck a chord. Many co-founders are finding AI workflows help reclaim their time. Would be great to connect. No pitch.
+
+[10/10] Joanne Mercaldi @ BLOOM [trigger_zero_ask]
+  206 chars: Congrats on pushing the envelope in workplace well-being, Joanne. As an AI automation founder based in Pakistan, I admire what BLOOM is achieving in this space. Following your journey from here in PKT time.
+
+
+Dry run complete. 10 messages previewed.
+Remove --dry-run to save them to the sheet.

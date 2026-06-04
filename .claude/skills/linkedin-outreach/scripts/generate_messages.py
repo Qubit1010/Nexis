@@ -11,6 +11,7 @@ Usage:
 
 import argparse
 import os
+import random
 import sys
 import time
 from pathlib import Path
@@ -23,30 +24,144 @@ from gws_utils import get_or_create_sheet, read_all_rows, update_cell
 # OpenAI model — gpt-4o-mini is fast, cheap, and good enough for 300-char messages
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
-SYSTEM_PROMPT = """\
-You write LinkedIn connection request notes for Aleem Ul Hassan.
+# Anti-cadence rotation: 5 documented opener archetypes from sales-playbook/frameworks/opener-archetypes.md
+# Each prospect gets ONE archetype based on available signal. Never use the same archetype twice
+# back-to-back. Source: NotebookLM research (Justin Welsh, Becc Holland, Josh Braun, Outbound Squad).
 
-HARD LIMIT: 300 characters total — LinkedIn rejects longer notes. Count carefully.
+ARCHETYPE_PROMPTS = {
+    "trigger_zero_ask": """\
+Use the TRIGGER-AWARE ZERO-ASK archetype (Justin Welsh's documented passive DM).
+- Reference a SPECIFIC recent trigger from their profile (post, hire, funding, launch)
+- Congratulate or react genuinely
+- State Aleem's one-line credibility (AI automation founder, Pakistan-based)
+- ZERO ask. ZERO pitch. End on a "following from over here" type close.
+- Sourced example: "Congrats on the recent round, [Name]. I'm a healthcare technology veteran (ZocDoc/PatientPop) and love what you're doing. Following you all from way over here in Los Angeles."
+""",
+    "specific_signal_peer": """\
+Use the SPECIFIC SIGNAL + NAMED PEER archetype (Becc Holland's trigger-aware Day 0).
+- Reference a SPECIFIC trigger event
+- Connect it to a problem Aleem solves (manual ops, AI workflows)
+- Reference a peer result generically (since we don't have real names yet): e.g., "took 12+ hrs/week off a similar founder"
+- VARY THE CLOSE - pick ONE of these phrasings at random, do not default to the first:
+   a) "Worth a 12-min call Tuesday or Thursday?"
+   b) "Worth comparing notes?"
+   c) "Mind if I send you the build playbook? No demo needed."
+   d) "Open to swapping notes briefly next week?"
+   e) "Want me to walk you through how it was wired? Loom or live, your call."
+   f) [no close — end on the proof statement, let curiosity pull them]
+- Sourced example: "[Name] - saw [specific trigger] yesterday. Companies hitting that milestone in [segment] typically face [specific pain] inside 60 days. [Peer 1] and [Peer 2] solved it with [outcome]. Worth comparing notes?"
+""",
+    "no_pitch_connection": """\
+Use the NO-PITCH CONNECTION REQUEST archetype (highest-converting LinkedIn note format).
+- Reference their post or recent activity with specificity
+- State what pattern you see in similar teams
+- End EXPLICITLY with "No pitch." or "Not pitching."
+- Sourced example: "Hi [name], came across your post on [topic], the point about [specific detail] matched what I'm seeing with [similar company type] teams. Would be useful to be connected. No pitch."
+""",
+    "anti_pitch": """\
+Use the LAID-BACK ANTI-PITCH archetype (Josh Braun).
+- Open with a disqualifier ("Probably not a fit but had to ask...")
+- Drop a specific value claim (AI workflow, 10+ hrs/week saved)
+- Close with low-pressure curiosity ("Not sure if it's a fit but figured I'd flag it")
+- Sourced example: "We show info product creators like yourself a lesser-known approach to reach salespeople who miss your posts on LinkedIn, ultimately driving more sales of your guide. Not sure if it's a fit, but I thought you might be interested."
+""",
+    "post_connection_question": """\
+Use the POST-CONNECTION GENUINE QUESTION archetype.
+- Open with "Thanks for connecting" or "Appreciate the connect"
+- Ask ONE specific operational question about their stack/workflow
+- Reference a pattern Aleem sees in similar [role]s
+- NO CTA. NO pitch. Just a peer question.
+- Sourced example: "Thanks for connecting, [first name]. Genuine question: how is your team handling [specific operational problem] right now? I keep running into [similar role] who are doing X but say Y is still broken. Curious where you've landed."
+""",
+}
 
-RULES:
-- Start with: Hey [FirstName],
-- Use cold reading: reference something specific and observable — their recent post topic, their company
-  stage, their role + industry challenge, or what their growth trajectory signals. Not generic praise.
-- Apply shared identity: acknowledge the founder/operator journey they're on. Reference struggles
-  or realities they'd recognize, not compliments they've heard before.
-- Zero pitch, zero ask — just a genuine human reason to connect.
-- Sound like someone who actually read their profile for 30 seconds, not a bot with a template.
-- End naturally — no CTA, no "let me know if...", no "I'd love to chat", no "Would love to connect"
-  (unless it fits naturally within the char limit).
-- NO fake compliments ("Your work is truly inspiring!")
-- NO generic openers ("I came across your profile and was really impressed...")
+# Banned phrases (from sales-playbook/references/what-not-to-do.md, Tier 1-3 cadence-smell)
+BANNED_PHRASES_LIST = """\
+- "Hey [Name], hope this finds you well"
+- "I came across your profile"
+- "I noticed you're in [industry]"
+- "Love your content" / "Love the shit you're doing"
+- "Your work is truly inspiring"
+- "I'd love to learn more about your business"
+- "Just following up" / "circling back" / "bumping this"
+- "Did I catch you at a bad time?"
+- "How are you today?"
+- "I know you're busy, but..."
+- "Let me know..." / "I'd be happy to..."
+- "Does that make sense?"
+- "We are the #1 provider..."
+- "Worth a quick chat?" / "Open to a 15-min call?" / "Hop on a quick call"
+- Any em-dash (—)
+- Any formal sign-off ("Best regards," / "Cheers,")
+- "Bro" (kill on sight)
+"""
 
-Return ONLY the connection note. No quotes. No explanation. No extra text.\
+SYSTEM_PROMPT_BASE = """\
+You write LinkedIn cold outreach for Aleem Ul Hassan, founder of NexusPoint.
+
+POSITIONING (locked):
+NexusPoint builds AI workflows that take manual ops work off founder/CEO plates.
+The lead one-liner: "AI workflows that take the manual ops work off founder plates — 10+ hours per week back, usually inside 14 days."
+Never lead with web dev. Web is the upsell, not the wedge.
+
+HARD CONSTRAINT: 280-character maximum (LinkedIn caps at 300; leave buffer). Count carefully.
+
+ARCHETYPE FOR THIS MESSAGE:
+{archetype_instruction}
+
+UNIVERSAL RULES (apply on top of archetype):
+- Reference at least one SPECIFIC detail about this prospect — not generic ("you're scaling" applies to everyone, "your post about [exact topic]" is specific).
+- Sound like a real human wrote it at 11pm to a peer — not a tool generating 30 messages.
+- No more than 2 instances of "I" / "we" / "my" / "our" — make it about them.
+- No emojis.
+- No em-dashes (—). Use hyphens with spaces ( - ) or commas.
+- Aleem is Pakistan-based (PKT timezone). Don't fake American slang.
+
+BANNED PHRASES (instant rewrite if any appear):
+{banned_phrases}
+
+OUTPUT:
+Return ONLY the connection note text. No quotes. No explanation. No "Here is the note:". Just the message.
 """
 
 
+def pick_archetype(lead):
+    """Select archetype based on available signal for this prospect.
+
+    Logic (per sales-playbook/frameworks/opener-archetypes.md rotation rules):
+    - If recent post available → favor specific_signal_peer or no_pitch_connection
+    - If limited signal → favor anti_pitch (works with minimal data)
+    - Always include some trigger_zero_ask variety
+    - post_connection_question is reserved for DM responder, not for cold connection notes here
+    """
+    has_post = bool(lead.get("Recent Post"))
+
+    if has_post:
+        # Weight toward signal-using archetypes
+        return random.choices(
+            ["specific_signal_peer", "no_pitch_connection", "anti_pitch", "trigger_zero_ask"],
+            weights=[4, 4, 2, 2],
+            k=1,
+        )[0]
+    else:
+        # No post signal — fall back to archetypes that work with minimal data
+        return random.choices(
+            ["anti_pitch", "trigger_zero_ask", "specific_signal_peer"],
+            weights=[5, 3, 2],
+            k=1,
+        )[0]
+
+
+def build_system_prompt(archetype):
+    """Inject the archetype-specific instruction into the base prompt."""
+    return SYSTEM_PROMPT_BASE.format(
+        archetype_instruction=ARCHETYPE_PROMPTS[archetype],
+        banned_phrases=BANNED_PHRASES_LIST,
+    )
+
+
 def generate_message(client, lead):
-    """Call OpenAI to generate a single LinkedIn connection note."""
+    """Call OpenAI to generate a single LinkedIn connection note using rotated archetypes."""
     first_name = (
         lead.get("First Name")
         or (lead.get("Name", "").split()[0] if lead.get("Name") else "there")
@@ -56,7 +171,9 @@ def generate_message(client, lead):
     recent_post = lead.get("Recent Post", "")
     location = lead.get("Location", "")
 
-    # Build the context for this lead
+    archetype = pick_archetype(lead)
+    system_prompt = build_system_prompt(archetype)
+
     context_parts = [f"- First Name: {first_name}"]
     if company:
         context_parts.append(f"- Company: {company}")
@@ -69,29 +186,30 @@ def generate_message(client, lead):
     else:
         context_parts.append("- Recent post/activity: not available")
 
-    user_prompt = "Lead info:\n" + "\n".join(context_parts) + "\n\nWrite the connection note."
+    user_prompt = "Lead info:\n" + "\n".join(context_parts) + "\n\nWrite the connection note following the archetype instructions."
 
     response = client.chat.completions.create(
         model=OPENAI_MODEL,
         messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
         ],
         max_tokens=120,
-        temperature=0.85,  # Slightly creative for variety across many leads
+        temperature=0.9,  # Higher temp for archetype variety
     )
 
     message = response.choices[0].message.content.strip()
-    # Strip surrounding quotes if OpenAI added them
     if message.startswith('"') and message.endswith('"'):
         message = message[1:-1].strip()
 
+    # Strip em-dashes (banned per what-not-to-do.md)
+    message = message.replace("—", " - ").replace("–", " - ")
+
     # Enforce 300-char hard limit
     if len(message) > 300:
-        # Truncate at last word boundary before 297
         message = message[:297].rsplit(" ", 1)[0] + "..."
 
-    return message
+    return message, archetype
 
 
 def main():
@@ -172,16 +290,16 @@ def main():
         label = f"{name} @ {company}" if company else name
 
         try:
-            message = generate_message(client, lead)
+            message, archetype = generate_message(client, lead)
             char_count = len(message)
 
             if args.dry_run:
-                print(f"[{i}/{len(to_process)}] {label}")
+                print(f"[{i}/{len(to_process)}] {label} [{archetype}]")
                 print(f"  {char_count} chars: {message}")
                 print()
             else:
                 update_cell(sheet_id, lead["_row"], "Connection Message", message)
-                print(f"[{i}/{len(to_process)}] {label} ({char_count} chars)")
+                print(f"[{i}/{len(to_process)}] {label} [{archetype}] ({char_count} chars)")
                 generated += 1
 
             # Avoid OpenAI rate limits

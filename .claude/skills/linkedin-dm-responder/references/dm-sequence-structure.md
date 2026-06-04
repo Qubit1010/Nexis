@@ -1,5 +1,20 @@
 # 4-DM Sequence Structure
 
+> **UPDATED 2026-06 — Sales Playbook integration:**
+> This file is the skill-loaded reference for Scenario A in the linkedin-dm-responder skill.
+> The canonical, source-cited sequence with documented reply rates and templates lives in
+> `.claude/skills/sales-playbook/scripts/linkedin-cold-dm-sequence.md`.
+>
+> Key updates from the research:
+> - **DM 3 ask:** "Happy to send a walkthrough?" replaced by the anchored call-ask
+>   ("20-min Ops Teardown — screen-share your stack, show you the first thing I'd automate")
+> - **DM 4 ask:** "Would it be off base to grab 20 min?" → keep, but anchor on a deliverable
+> - **Lead offer:** AI automation as wedge, not web (per `sales-playbook/offer/ai-automation-positioning.md`)
+> - **Objections in conversation:** branch to `sales-playbook/frameworks/objection-riffs.md`
+> - **Live conversation routing:** when prospect replies, use `sales-playbook/scripts/live-conversation-playbook.md`
+> - **Calibrated questions + labels:** pull from `sales-playbook/frameworks/voss-calibrated-questions.md`
+> - **Banned phrases:** filter through `sales-playbook/references/what-not-to-do.md`
+
 Loaded in Scenario A (sequence follow-up). This is the day-cadenced sequence
 that runs after a LinkedIn connection is accepted when the prospect hasn't
 replied yet.

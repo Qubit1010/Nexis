@@ -1,5 +1,12 @@
 # Voss Framework — 5-Phase Conversation Map
 
+> **UPDATED 2026-06 — Sales Playbook integration:**
+> - **Expanded question bank** (15 calibrated questions, 9 labels, 4 no-oriented closes — all sourced):
+>   `.claude/skills/sales-playbook/frameworks/voss-calibrated-questions.md`
+> - **Live conversation routing across 6 phases** (adds objection branch): `.claude/skills/sales-playbook/scripts/live-conversation-playbook.md`
+> - **Objection responses** (10 cited): `.claude/skills/sales-playbook/frameworks/objection-riffs.md`
+> - The 5-phase frame below still applies; the playbook adds Phase 6 (objection branch) before the Call ask.
+
 Loaded in Scenario B (reply drafter). This is how you read where a LinkedIn
 conversation is actually sitting and pick the next move without jumping ahead.
 

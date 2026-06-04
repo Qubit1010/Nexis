@@ -12,6 +12,7 @@ Usage:
 
 import argparse
 import os
+import random
 import sys
 import time
 from pathlib import Path
@@ -23,33 +24,123 @@ from gws_utils import get_or_create_sheet, read_all_rows, update_cell
 
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
-SYSTEM_PROMPT = """\
-You write opening Instagram DMs for Aleem Ul Hassan. Goal: start a real conversation, not pitch.
-This is Touch 1 of 4. No pitch, no ask, no mention of NexusPoint — ever.
+# Anti-cadence rotation: opener archetypes from sales-playbook/frameworks/opener-archetypes.md
+# Instagram-specific tone: lowercase OK, contractions required, no sign-offs, 1-3 emojis MAX (often zero).
+# Source: NotebookLM research synthesis (CreatorFlow IG benchmarks, Jotform templates, Josh Braun, Becc Holland).
 
-RULES:
-- Under 300 characters. Instagram DMs must feel like they came from a real person, not a template.
-- Start with "Hey [FirstName]" — casual, not formal.
-- Use cold reading: make an observation rooted in what's genuinely observable (their role, company size,
-  niche, bio content, what they're building). It should feel personal but not fake.
-- Use a Voss tactical empathy label: "It looks like...", "It seems like...", or "It sounds like..."
-- End with ONE genuine question about their business or journey — from real curiosity, not as a setup.
-- Mirror their tone. If their bio is casual, be casual. If they're concise, be concise.
-- NO fake compliments ("I love what you're doing!", "Your content is amazing!")
-- NO generic openers ("I came across your profile and was impressed...")
-- NO pitch. NO services. NO NexusPoint. Sound like a curious peer, not a vendor.
+IG_ARCHETYPE_PROMPTS = {
+    "observation_specific": """\
+Use the OBSERVATION (Touch 1) archetype, IG-native voice.
+- Open with a SPECIFIC observation about something they posted/wrote (a reel, a post caption, a story).
+- State why it caught Aleem's attention (one line).
+- NO ask. NO CTA. NO mention of NexusPoint.
+- Sourced example: "Hey [Name], saw the post about [specific thing]. That's the exact pattern I just helped another [niche] founder automate. Wanted to flag it. No ask."
+""",
+    "anti_pitch_casual": """\
+Use the LAID-BACK ANTI-PITCH archetype, IG-casual.
+- Open with a soft disqualifier ("probably not a fit but...", "no pitch, just...").
+- Drop a specific value claim about AI workflow / hours saved for similar founders.
+- Close with low-pressure curiosity.
+- Sourced example: "probably not a fit but had to ask - is the manual [specific task] still on your plate or did you guys automate it already? asking because most [role] at your stage haven't and I'm trying to figure out the pattern."
+""",
+    "peer_pattern": """\
+Use the PEER PATTERN archetype.
+- Reference a pattern Aleem sees in their niche based on real conversations.
+- Ask if they hit the same thing.
+- NO ask for a call. Just curiosity.
+- Sourced example: "every [niche] founder I've talked to this month is stuck doing [specific manual thing] by hand. wondering if you're hitting the same or if you've figured out a way around it."
+""",
+    "quantified_peer": """\
+Use the QUANTIFIED PEER RESULT archetype.
+- Lead with a specific number from a peer build (hours/week, days saved).
+- Connect it to the prospect's likely pain.
+- End with "same problem here?" type question.
+- Sourced example: "took 12 hrs/week off another [niche] founder by wiring [tool] into [tool]. same bottleneck on your end or already solved?"
+""",
+}
 
-PERSONALIZATION HIERARCHY (use whichever is available, in this order):
-1. Something specific from their bio (a phrase they used, their model, their niche)
-2. Their company size + what that signals about their challenges
-3. Their industry + role stage (founder at 2-person agency vs 50-person team = different realities)
+# Banned phrases (Instagram-specific from sales-playbook/references/what-not-to-do.md Tier 4)
+IG_BANNED_PHRASES_LIST = """\
+- "Love your content" / "Love the shit you're doing" - #1 copy-paste tell
+- "Bro" - kill on sight, especially DMing women
+- "Thank you for your inquiry regarding..." - robotic
+- "I came across your profile" / "I noticed you're in..."
+- "Hey [Name], hope this finds you well"
+- "I'd love to chat" / "Worth a quick call?" / "Open to a 15-min chat?"
+- "Free money" / "Limited time offer" / "Click here" - spam triggers
+- Any em-dash (-, em-dash character)
+- Any formal sign-off (no "- Aleem", no "Cheers", no "Best regards")
+- 3+ URLs in single DM - spam trigger
+- ALL CAPS WORDS
+- Excessive emojis (10+)
+- Repeated punctuation (!!!)
+"""
 
-Return ONLY the DM message. No quotes. No explanation. No extra text.\
+SYSTEM_PROMPT_BASE = """\
+You write Instagram cold Touch 1 DMs for Aleem Ul Hassan, founder of NexusPoint.
+
+POSITIONING (locked):
+NexusPoint builds AI workflows that take manual ops work off founder/CEO plates.
+Lead positioning: AI automation as premium wedge - never lead with web dev.
+The one-liner (use rarely, only in archetypes that allow it): "AI workflows that take 10+ hrs/week off founder plates, usually inside 14 days."
+
+INSTAGRAM-NATIVE VOICE:
+- Lowercase OK (like real DMs)
+- Contractions required (you're, I'm, here's)
+- Casual peer tone - not professional, not corporate
+- ZERO sign-offs (no "- Aleem", no closing)
+- Under 100 words STRICT (CreatorFlow data: 30% reply drop past 200 words)
+- 1-2 emojis MAX, often zero. Never 10+.
+- Touch 1 has ZERO ASK. NO CTA. Just observation/question/value-drop.
+
+ARCHETYPE FOR THIS MESSAGE:
+{archetype_instruction}
+
+UNIVERSAL RULES:
+- Reference ONE specific detail about this prospect (post, caption, bio phrase)
+- Sound like a real human at 11pm DMing a peer
+- Max 2 instances of "I" / "we" / "my" - make it about them
+- No em-dashes (use hyphens with spaces or commas)
+
+BANNED PHRASES (instant rewrite if any appear):
+{banned_phrases}
+
+OUTPUT:
+Return ONLY the DM text. No quotes. No explanation. No header. Just the message.
 """
 
 
+def pick_ig_archetype(lead):
+    """Pick archetype based on signal available.
+
+    If recent post caption is available - favor observation_specific or peer_pattern.
+    If only bio - fall back to anti_pitch_casual.
+    """
+    has_post = bool(lead.get("Recent Post") or lead.get("Recent Caption"))
+
+    if has_post:
+        return random.choices(
+            ["observation_specific", "peer_pattern", "quantified_peer", "anti_pitch_casual"],
+            weights=[5, 3, 2, 2],
+            k=1,
+        )[0]
+    else:
+        return random.choices(
+            ["anti_pitch_casual", "peer_pattern", "quantified_peer"],
+            weights=[5, 3, 2],
+            k=1,
+        )[0]
+
+
+def build_ig_system_prompt(archetype):
+    return SYSTEM_PROMPT_BASE.format(
+        archetype_instruction=IG_ARCHETYPE_PROMPTS[archetype],
+        banned_phrases=IG_BANNED_PHRASES_LIST,
+    )
+
+
 def generate_message(client, lead):
-    """Call OpenAI to generate a single Instagram Touch 1 DM."""
+    """Call OpenAI to generate a single Instagram Touch 1 DM with rotated archetypes."""
     full_name = lead.get("Name", "")
     username = lead.get("Username", "").lstrip("@")
     first_name = full_name.split()[0] if full_name and full_name != username else username
@@ -57,6 +148,10 @@ def generate_message(client, lead):
     role = lead.get("Role", "")
     bio = lead.get("Bio", "")
     followers = lead.get("Followers", "")
+    recent_caption = lead.get("Recent Caption") or lead.get("Recent Post", "")
+
+    archetype = pick_ig_archetype(lead)
+    system_prompt = build_ig_system_prompt(archetype)
 
     context_parts = [f"- Name: {first_name}"]
     if username:
@@ -71,28 +166,35 @@ def generate_message(client, lead):
         context_parts.append(f"- Bio: {bio}")
     else:
         context_parts.append("- Bio: not available")
+    if recent_caption:
+        context_parts.append(f"- Recent post/caption: {recent_caption}")
+    else:
+        context_parts.append("- Recent post/caption: not available")
 
-    user_prompt = "Lead info:\n" + "\n".join(context_parts) + "\n\nWrite the opening DM."
+    user_prompt = "Lead info:\n" + "\n".join(context_parts) + "\n\nWrite the opening DM following the archetype instructions."
 
     response = client.chat.completions.create(
         model=OPENAI_MODEL,
         messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
         ],
-        max_tokens=150,
-        temperature=0.85,
+        max_tokens=180,
+        temperature=0.9,
     )
 
     message = response.choices[0].message.content.strip()
     if message.startswith('"') and message.endswith('"'):
         message = message[1:-1].strip()
 
-    # Soft cap — Instagram DMs have no hard limit but long openers get ignored
-    if len(message) > 400:
-        message = message[:397].rsplit(" ", 1)[0] + "..."
+    # Strip em-dashes (banned per what-not-to-do.md)
+    message = message.replace("—", " - ").replace("–", " - ")
 
-    return message
+    # Soft cap — IG data: 30% reply drop past 200 words (~1200 chars)
+    if len(message) > 500:
+        message = message[:497].rsplit(" ", 1)[0] + "..."
+
+    return message, archetype
 
 
 def main():
@@ -184,16 +286,16 @@ def main():
         label = f"{name} ({username})" if username else name
 
         try:
-            message = generate_message(client, lead)
+            message, archetype = generate_message(client, lead)
             char_count = len(message)
 
             if args.dry_run:
-                print(f"[{i}/{len(to_process)}] {label}")
+                print(f"[{i}/{len(to_process)}] {label} [{archetype}]")
                 print(f"  {char_count} chars: {message}")
                 print()
             else:
                 update_cell(sheet_id, lead["_row"], "Touch 1 Message", message)
-                print(f"[{i}/{len(to_process)}] {label} ({char_count} chars)")
+                print(f"[{i}/{len(to_process)}] {label} [{archetype}] ({char_count} chars)")
                 generated += 1
 
             if i < len(to_process):

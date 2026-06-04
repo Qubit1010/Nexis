@@ -21,11 +21,20 @@ opening DMs using OpenAI — ready for Aleem to review and send manually from In
 **Important:** Never automate the actual DM sending. Instagram bans bot activity.
 This system only generates messages and tracks status. All sending is manual.
 
+> **Updated 2026-06 — Sales Playbook integration:**
+> - Generator now uses **archetype rotation** from `sales-playbook/frameworks/opener-archetypes.md` (Observation-Specific, Anti-Pitch Casual, Peer Pattern, Quantified Peer)
+> - **Captures `Recent Caption` per lead** — the missing personalization signal. Touch 1 messages now reference post-specific content, not generic bio
+> - **Lead offer locked to AI automation** (`sales-playbook/offer/ai-automation-positioning.md`) — never lead with web
+> - **Banned-phrase filter** from `sales-playbook/references/what-not-to-do.md` applied at generation
+> - Once prospect replies → handoff to `instagram-dm-responder` skill or read `sales-playbook/scripts/live-conversation-playbook.md`
+
 ## CRM Location
 
 **Sheet name:** NexusPoint Instagram Outreach CRM
 **Tab:** Leads
-**Columns:** Name | Username | Company | Role | Instagram URL | Followers | Bio | Touch 1 Message | Status | Date Added
+**Columns:** Name | Username | Company | Role | Instagram URL | Followers | Bio | **Recent Caption** | Touch 1 Message | Status | Date Added
+
+⚠ **New column "Recent Caption" added between Bio and Touch 1 Message.** If you have an existing sheet, add this column manually before running the updated scraper, OR delete `.sheet_id` to force a fresh sheet (you'll lose existing lead data).
 
 Sheet ID is cached in `.sheet_id` in the skill root directory.
 

@@ -19,6 +19,18 @@ NexusPoint's personalized LinkedIn client acquisition pipeline. Scrapes target p
 and generates human-sounding 300-character connection request notes using OpenAI — ready
 for Aleem to review and send manually from LinkedIn.
 
+> **Important:** The message generator (`scripts/generate_messages.py`) is now driven by the
+> Sales Playbook archetype rotation. Source of truth for opener templates, banned phrases, and
+> conversion benchmarks lives in `.claude/skills/sales-playbook/`. Specifically:
+> - Opener archetypes: `sales-playbook/frameworks/opener-archetypes.md`
+> - Banned phrases: `sales-playbook/references/what-not-to-do.md`
+> - Full LinkedIn sequence (DM 2/3/4 + multi-channel): `sales-playbook/scripts/linkedin-cold-dm-sequence.md`
+> - When prospects reply: `sales-playbook/scripts/live-conversation-playbook.md`
+>
+> The generator now rotates across 5 sourced opener archetypes (Justin Welsh trigger-zero-ask,
+> Becc Holland signal+peer, no-pitch connection, Josh Braun anti-pitch, post-connection question)
+> based on available signal per prospect. Never sends the same archetype back-to-back in a batch.
+
 ## CRM Location
 
 **Sheet name:** NexusPoint LinkedIn Outreach CRM

@@ -1,0 +1,1137 @@
+{
+  "notebook_id": "f5ad3db7-87ee-4e2d-b674-3f977e797bb2",
+  "notebook_title": "NexusPoint Sales Playbook Research",
+  "sources": [
+    {
+      "index": 1,
+      "id": "6fc96bd2-7de3-4651-9f9f-87ad42c63739",
+      "title": "2 steps to handle ANY objection - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/shorts/JKbXwaLWQvI",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 2,
+      "id": "03a7608c-3c47-4dfb-8e79-4268bc028bc0",
+      "title": "25 Best Cold Call Opening Lines for 2026 That Convert - Martal Group",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://martal.ca/cold-calling-opening-lines-lb/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 3,
+      "id": "2c41ce6e-75f9-4ff3-80c2-64e8bdc89b40",
+      "title": "25 Best Cold Call Opening Lines for 2026 That Convert - Martal Group",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://martal.ca/cold-calling-opening-lines-lb/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 4,
+      "id": "7e0537b8-f7f6-4443-b633-ac01520b435e",
+      "title": "25 Instagram DM Automation Templates That Convert Buyers - CreatorFlow",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://creatorflow.so/blog/instagram-dm-automation-templates/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 5,
+      "id": "83c5846a-efd7-4ed4-ae59-be90f00999ac",
+      "title": "25 Instagram DM Automation Templates That Convert Buyers - CreatorFlow",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://creatorflow.so/blog/instagram-dm-automation-templates/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 6,
+      "id": "004add9e-9e9a-4b6f-8429-f34add369d20",
+      "title": "25 best Instagram DM examples for sales, outreach, and engagement | The Jotform Blog",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.jotform.com/ai/instagram-dm-template/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 7,
+      "id": "aa15581d-2a38-4d9b-82eb-b5aac18befda",
+      "title": "25 best Instagram DM examples for sales, outreach, and engagement | The Jotform Blog",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.jotform.com/ai/instagram-dm-template/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 8,
+      "id": "32538c5c-3d42-44e1-9d22-80c30f5d9ec8",
+      "title": "4 Simple Steps to Close ANY Deal - Closers.io",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://closers.io/4-simple-steps-to-close-any-deal/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 9,
+      "id": "32b6e588-fd89-4d4a-b7b0-d547bfb6181e",
+      "title": "59 cold outreach statistics and trends for 2026 - Sopro.io",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://sopro.io/resources/blog/cold-outreach-statistics/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 10,
+      "id": "a8cb9b3e-91dd-45da-b88e-38a8dc7ec8b2",
+      "title": "60 Minutes of Objection Handling That'll Explode Your Sales in 2026 - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=uvFvEZyk-q4",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 11,
+      "id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "title": "Advanced Conversational Architectures in High-Ticket Closing: Integrating Tactical Empathy, Diagnostic Disqualification, and Mathematical Value Models",
+      "type": "SourceType.MARKDOWN",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 12,
+      "id": "0569f5f5-5c54-4da1-a740-e877f93187a0",
+      "title": "Advanced Outbound Architecture 2025-2026: Empirical Benchmarks, Conversational Engineering, and Multi-Channel Frameworks",
+      "type": "SourceType.MARKDOWN",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 13,
+      "id": "4a2ddcc0-01fb-4e35-aa5e-ba6c93952301",
+      "title": "Advanced Outbound Architecture 2025-2026: Empirical Benchmarks, Conversational Engineering, and Multi-Channel Frameworks",
+      "type": "SourceType.MARKDOWN",
+      "url": null,
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 14,
+      "id": "2465b6c5-4d38-4ef8-9d4a-1210759349bd",
+      "title": "Alex Hormozi's Value Equation Explained (and How to Use It to Monetize an App)",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://quantumbyte.ai/articles/alex-hormozi-value-equation-app-monetization",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 15,
+      "id": "f82b67ba-c4fe-4124-b95d-3c4c171c0f57",
+      "title": "An effective cold call script you can learn in 45 seconds - Josh Braun",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://joshbraun.com/coldcall/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 16,
+      "id": "c6211b42-01fe-4278-9d12-279ff9fd9434",
+      "title": "Average Cold Email Response Rates 2026 - Mailforge",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.mailforge.ai/blog/average-cold-email-response-rates",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 17,
+      "id": "aeccbfc1-8042-4e6a-8297-ccf60946d9b2",
+      "title": "Break-the-Script-Using-Pattern-Interrupts - Sandler",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://go.sandler.com/praxis/insights/blog/categories/sales-process/break-the-script-using-pattern-interrupts/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 18,
+      "id": "34b5a911-8fc7-47e7-a811-e311ef8a2b95",
+      "title": "Chris Walker: Grow Your Organic Inbound Leads Through This New Approach to Content",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.spicymargarita.co/archive/content-strategy-inbound-demand-guide-chris-walker/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 19,
+      "id": "eb283e94-a4c2-4ea6-b85f-1a9162628ac9",
+      "title": "Chris Walker: Grow Your Organic Inbound Leads Through This New Approach to Content",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.spicymargarita.co/archive/content-strategy-inbound-demand-guide-chris-walker/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 20,
+      "id": "d3a815ca-0795-41b8-a4ae-e18bef0ec649",
+      "title": "Close Any Deal Without Objections: The 7-Belief Framework - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=cqVzAbRUI30",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 21,
+      "id": "d7c631a0-7b9f-4dba-bb37-676044ffaec3",
+      "title": "Cold Email Statistics 2026 | Open Rates, Reply Rates & Best Practices - Searchlab",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://searchlab.nl/en/statistics/cold-email-statistics-2026",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 22,
+      "id": "8acaa2c2-c601-4a8c-af83-8367bb154a85",
+      "title": "Cold Email vs LinkedIn Outreach 2026 - GetReplies",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://getreplies.ai/blog/cold-email-vs-linkedin-outreach-2026/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 23,
+      "id": "fc6af961-a425-4c9a-94c2-3c8484b9d500",
+      "title": "Consulting Sales Letter from Frank Kern - Swiped.co",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://swiped.co/file/consulting-sales-letter-from-frank-kern/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 24,
+      "id": "8b57adfd-efc9-4428-964c-ac4f1c2c1ee5",
+      "title": "FBI Negotiator's Secret Technique: Master The Art of Handling Sales Objections - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/shorts/59sv3CMBEzY",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 25,
+      "id": "368bc18f-73a1-48db-8fa5-460a8a959335",
+      "title": "Flip The Script: Emails (ft. Becc Holland) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=VeiQFhr-1Oc",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 26,
+      "id": "a6c607e7-3510-46de-86ef-b001c92bc412",
+      "title": "Flip The Script: Emails (ft. Becc Holland) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=VeiQFhr-1Oc",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 27,
+      "id": "1ccc19b1-7a63-4919-b1b6-333f46f5ba07",
+      "title": "Frank Kern \u00bb Swipe File Archive | Marketing & Copywriting Examples",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://swiped.co/person/frank-kern/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 28,
+      "id": "e29fe14f-2f21-4a4f-9445-a2c8cb05ca73",
+      "title": "Frank Kern's book summary: Simple formula to convert. : r/copywriting - Reddit",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.reddit.com/r/copywriting/comments/15hk9w3/frank_kerns_book_summary_simple_formula_to_convert/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 29,
+      "id": "e2f558b4-8042-4ad7-a17a-dda742a47fee",
+      "title": "Frank Kern: 7 Direct Response Copywriting Tips to Double Sal - Jeremy Mac",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.jeremymac.com/blogs/news/frank-kern-s-top-7-direct-response-copywriting-tips-to-double-sales",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 30,
+      "id": "11b46850-d007-4cc7-89b8-56fcb365f289",
+      "title": "Handle ANY Sales Objection with this Simple Framework - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=Xg0UekY7IJA",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 31,
+      "id": "1da01db8-4bfa-4239-91e7-c61de1859bcb",
+      "title": "HighLevel + Frank Kern Special Offer - GoHighLevel",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.gohighlevel.com/frank-kern",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 32,
+      "id": "0d80bfd5-2a44-418c-ba21-4ab76736d460",
+      "title": "How To Handle ANY Objection - Remote Closing Training w/Cole Gordon - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=NWfPXWXg-5A",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 33,
+      "id": "ae5a3763-151a-4bf8-bc35-7091730938b0",
+      "title": "How To Personalize At Scale - PersistIQ",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.persistiq.com/how-to-personalize-at-scale/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 34,
+      "id": "eb62057d-6f4a-4955-bab9-6cce1117afc9",
+      "title": "How To Personalize At Scale - PersistIQ",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.persistiq.com/how-to-personalize-at-scale/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 35,
+      "id": "5e30e2c0-69db-4706-8214-0be863e17aec",
+      "title": "How To UNFCK Your Sales In 15 Minutes or Less! - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=yTF3qQUXiDE",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 36,
+      "id": "b336f738-79bb-4fa9-b06b-36357101e806",
+      "title": "How To Use Calibrated Questions In A Negotiation - Nate Anglin",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.nateanglin.com/blog/how-to-use-calibrated-questions-in-a-negotiation",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 37,
+      "id": "e0b32971-1dc8-4939-9ae2-29bab72a8643",
+      "title": "How to Become a MASTER Closer with Cole Gordon: An EOFire Classic from 2022",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.eofire.com/podcast/colegordon/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 38,
+      "id": "aa0fd6d8-a29d-4c65-b869-e8f408c31469",
+      "title": "How to Build a Top 1% Sales Team | Cole Gordon Sales Team Training - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=f8yqA6usp00",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 39,
+      "id": "27cf5244-753e-41c2-859d-4d60b465418e",
+      "title": "How to Close Sales with Chris Voss's FBI Negotiation Secrets ...",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.badgermapping.com/blog/how-to-close-sales-chris-voss-negotiation/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 40,
+      "id": "b03321d0-c09a-47f3-bdf6-4edb9bbe4408",
+      "title": "How to Create Your Own Cold Email Template Using the REPLY ...",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://gtmnow.com/cold-email-template/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 41,
+      "id": "f767ac94-1884-4545-b244-25c2fae1340b",
+      "title": "How to Find More Customers on LinkedIn | Justin Welsh",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.justinwelsh.me/newsletter/how-to-find-more-customers-on-linkedin",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 42,
+      "id": "047c3588-195f-4f7a-851d-25da056044c0",
+      "title": "How to Increase LinkedIn Followers in 11 Steps (And Monetize Your Audience) in 2026",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.justinwelsh.me/article/guide-grow-monetize-linkedin",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 43,
+      "id": "b8a6581d-daac-4701-90a4-a8245a4c9e37",
+      "title": "How to Increase LinkedIn Followers in 11 Steps (And Monetize Your Audience) in 2026",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.justinwelsh.me/article/guide-grow-monetize-linkedin",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 44,
+      "id": "f52b112e-1570-4c9f-be98-1d8868f3f66f",
+      "title": "How to Use Calibrated Questions to Negotiate Strategically - 2026 - MasterClass",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.masterclass.com/articles/how-to-use-calibrated-questions-to-negotiate-strategically",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 45,
+      "id": "993e5aca-8567-4787-89b7-3ff67ac5ed14",
+      "title": "How to Win Your Negotiation Battle Using Calibrated Questions - Psychotactics",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.psychotactics.com/negotiation-battle/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 46,
+      "id": "0fb0d8a6-32e1-470f-8a9d-3ccb268a541d",
+      "title": "How to Write a (Successful) Cold DM \u2014 Justin Welsh",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://justinwelsh.me/essays/how-to-write-a-successful-cold-dm",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 47,
+      "id": "a483382e-78f1-4be2-9c43-681d240c0408",
+      "title": "I stopped selling marketing and started diagnosing. Here's how the Value Equation looks when you flip it : r/alexhormozi - Reddit",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.reddit.com/r/alexhormozi/comments/1qz6c5v/i_stopped_selling_marketing_and_started/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 48,
+      "id": "646e1765-8b1b-489d-847b-0f9722122f16",
+      "title": "Instagram DM Outreach Script Guide | InfluenceFlow",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://influenceflow.io/resources/instagram-dm-outreach-script-the-complete-guide-for-creators-in-2026/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 49,
+      "id": "7e28317d-773e-45bd-aed6-5e1dbb1e48b7",
+      "title": "Instagram DM Outreach Template Guide | InfluenceFlow",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://influenceflow.io/resources/instagram-dm-outreach-template-the-complete-guide-for-creators-brands-in-2026/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 50,
+      "id": "f85b46e1-2ff2-4ba1-b142-71975472fc5a",
+      "title": "Instagram DM Outreach Template Guide | InfluenceFlow",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://influenceflow.io/resources/instagram-dm-outreach-template-the-complete-guide-for-creators-brands-in-2026/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 51,
+      "id": "05257fbb-e93a-4fc4-9168-c49e25ca0aee",
+      "title": "Instagram DM Statistics 2026: 15 Numbers That Reveal Why DMs Are the Most Valuable Sales Channel | LeadResponse",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://leadresponse.co/blog/instagram-dm-statistics",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 52,
+      "id": "14b22a50-0926-4105-8498-fd883b772bf8",
+      "title": "Instagram DM Statistics 2026: 15 Numbers That Reveal Why DMs Are the Most Valuable Sales Channel | LeadResponse",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://leadresponse.co/blog/instagram-dm-statistics",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 53,
+      "id": "a31d4cfa-e1a1-43ed-87c6-f2ea13070b01",
+      "title": "Interview with Chris Walker, a marketer with a no-bullshit approach to inbound demand generation: why marketers are doing it wrong, how marketers should be assessed, how to ensure content ACTUALLY brings in qualified leads, and the best metrics to measure content performance. - Reddit",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.reddit.com/r/marketing/comments/gd7pd4/interview_with_chris_walker_a_marketer_with_a/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 54,
+      "id": "e202d566-f07c-4976-89d9-49ee5f1ab397",
+      "title": "Interview with Chris Walker, a marketer with a no-bullshit approach to inbound demand generation: why marketers are doing it wrong, how marketers should be assessed, how to ensure content ACTUALLY brings in qualified leads, and the best metrics to measure content performance. - Reddit",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.reddit.com/r/marketing/comments/gd7pd4/interview_with_chris_walker_a_marketer_with_a/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 55,
+      "id": "983f90ee-e4ae-4a79-bdc2-9adb318d1094",
+      "title": "Jason Bay's Cold Calling Coaching Framework - Predictable Revenue",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://predictablerevenue.com/blog/jason-bays-cold-calling-coaching-framework/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 56,
+      "id": "8eef4499-caf4-4211-84ad-0eff0ae55236",
+      "title": "Justin Welsh's Secret to LinkedIn Growth? He Uses This Tool. - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=qvfm0zU1P2c",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 57,
+      "id": "c63dbdd4-5d3d-43c4-8440-e0d8e9945255",
+      "title": "Justin Welsh's Secret to LinkedIn Growth? He Uses This Tool. - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=qvfm0zU1P2c",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 58,
+      "id": "48ffa531-4485-4851-bf59-09e8f8ec8738",
+      "title": "Key Instagram DM Metrics That Matter for Sales - CreatorFlow",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://creatorflow.so/blog/instagram-dm-metrics-that-matter/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 59,
+      "id": "9ab3632a-2752-4fd4-808e-f436cbde23c9",
+      "title": "LinkedIn Outreach Benchmarks 2026: 13.2M Data Points - Expandi",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://expandi.io/blog/linkedin-outreach-benchmarks-2026/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 60,
+      "id": "5d4c67a2-c705-49fa-8d0e-533b349c8b74",
+      "title": "Mastering Outbound Prospecting - Visualize, Inc.",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://visualize.com/mastering-outbound-prospecting/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 61,
+      "id": "b8831c1f-7482-48b1-a318-67ec87b0a4ad",
+      "title": "Mastering Outbound Prospecting - Visualize, Inc.",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://visualize.com/mastering-outbound-prospecting/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 62,
+      "id": "90b6dce4-df8f-4ce7-84e0-625ba1ee2dd1",
+      "title": "Mastering Personalized Sales Outreach: Chris Voss's Approach - CallSine",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://callsine.com/blog/mastering-personalized-sales-outreach-chris-voss-s-approach",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 63,
+      "id": "9f5347c1-bc53-4080-b18d-6201549c2ed4",
+      "title": "My 8-Step Process to Closing Your Next Deal - The Sales Evangelist",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://thesalesevangelist.com/episode1575/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 64,
+      "id": "b6ef6805-7079-41e6-bf4c-1f8e584f2e42",
+      "title": "Pattern Interrupt Cold Call: 7 Openers That Book Meetings - Prospeo",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://prospeo.io/s/pattern-interrupt-cold-call",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 65,
+      "id": "00212ebf-afbc-4bf5-97d7-fd8c38adfd1a",
+      "title": "Pattern Interruption in Sales - C-Level Partners",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://c-levelpartners.com/pattern-interruption-in-sales/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 66,
+      "id": "ddcf9f35-db6d-45e5-8a83-2910c5dc3052",
+      "title": "Personalization At Scale - Becc Holland, Chorus.ai.key - HubSpot",
+      "type": "SourceType.PDF",
+      "url": "https://cdn2.hubspot.net/hubfs/5192515/Customer%20Summit%20Decks/Personalization%20At%20Scale%20-%20Becc%20Holland,%20Chorus.pdf",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 67,
+      "id": "479377e2-005b-4a20-ac75-2810c25f0f8a",
+      "title": "Podcast 88: KISS (Keep It Simple Sequencing) - Outbound Squad",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://outboundsquad.com/podcast/jason-bay",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 68,
+      "id": "d9dd7c7e-d1e3-476f-a932-93758dd3d638",
+      "title": "Podcast 88: KISS (Keep It Simple Sequencing) - Outbound Squad",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://outboundsquad.com/podcast/jason-bay",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 69,
+      "id": "83de2faa-3b93-40ef-82b3-7a8cffb1b2da",
+      "title": "Prospecting: Getting Inside their Mind with Jason Bay - Future-Proof Selling",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://futureproofselling.libsyn.com/getting-inside-the-prospects-mind-with-jason-bay",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 70,
+      "id": "c80c437d-d804-472a-8c41-85873bcbac45",
+      "title": "Prospecting: Getting Inside their Mind with Jason Bay - Future-Proof Selling",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://futureproofselling.libsyn.com/getting-inside-the-prospects-mind-with-jason-bay",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 71,
+      "id": "dfe038f8-02c6-4cba-bba0-ee9d7e8bbce4",
+      "title": "Report and Stats - State of LinkedIn Outreach in 2026 - Expandi",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://expandi.io/blog/state-of-li-outreach-h1-2026/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 72,
+      "id": "5782a2e1-cb07-4fa1-9a14-1097455b4a84",
+      "title": "Sales Tip 137: Writing Cold Emails Using the REPLY Method - Jason Bay",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://top1.fm/DailySalesTips/sales-tip-137-writing-cold-emails-using-the-reply-method-jason-bay/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 73,
+      "id": "b5a45955-a7a8-459e-9862-420e486c59bd",
+      "title": "Sales Tip 137: Writing Cold Emails Using the REPLY Method - Jason Bay",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://top1.fm/DailySalesTips/sales-tip-137-writing-cold-emails-using-the-reply-method-jason-bay/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 74,
+      "id": "cf917fa0-d180-499f-82d0-5f0ad5ac0b4e",
+      "title": "Sandler Pain Funnel: 8 Questions, 5 Minutes to Pain - Skipcall",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://skipcall.io/en/blog/sandler-pain-funnel",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 75,
+      "id": "0e634fb7-62fe-4194-b8f7-6b1ca81cf319",
+      "title": "Sandler Sales Methodology: A Buyer-Focused Framework - Highspot",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.highspot.com/blog/sandler-sales-methodology/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 76,
+      "id": "09eba430-6db8-4460-8eef-b107f2833d88",
+      "title": "Sandler Selling System: Principles, Steps, and Examples - Salesmotion",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://salesmotion.io/blog/sandler",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 77,
+      "id": "fdb6048c-c3cf-4114-8a03-f17812a91406",
+      "title": "Stop \"pitching\" in a cold call - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=k_msAHwnCCY",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 78,
+      "id": "5ec27daf-31b7-4c73-89c5-d566926485d3",
+      "title": "The #1 LinkedIn Branding Tip from Justin Welsh (That Doubled My Followers!) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=AJinaz2C74k",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 79,
+      "id": "d9b64989-bac7-4389-a329-5b865197498a",
+      "title": "The #1 LinkedIn Branding Tip from Justin Welsh (That Doubled My Followers!) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=AJinaz2C74k",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 80,
+      "id": "1a2f6f49-aff7-4160-9e5d-da1bd53bca57",
+      "title": "The 6 Buckets of Personalization - Flip the Script",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.flipthescript.com/6-buckets-of-personalization",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 81,
+      "id": "92cff362-008b-4279-bc0f-5cb9175d3619",
+      "title": "The 6 Buckets of Personalization - Flip the Script",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.flipthescript.com/6-buckets-of-personalization",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 82,
+      "id": "248da8e0-86b1-4cb5-9141-eda6b8d9fc21",
+      "title": "The 6 Buckets of Personalization | JustCall x FliptheScript - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=VyImcrNOrss",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 83,
+      "id": "2bc78eba-06da-4015-aca7-b3c9921350fe",
+      "title": "The 6 Buckets of Personalization | JustCall x FliptheScript - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=VyImcrNOrss",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 84,
+      "id": "c0010cf4-7453-4bba-8247-c7c70fd3624d",
+      "title": "The Best Non-salesy Cold Call Opener (Ft. Josh Braun) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=OJ2VUIlpJfQ",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 85,
+      "id": "8512f032-16cb-4b23-8d48-f82ee6d0557c",
+      "title": "The Dark Funnel in Marketing with Chris Walker - Landbot",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://landbot.io/ungated-conversations/measure-marketing-dark-funnel-chris-walker",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 86,
+      "id": "ce20ecc6-817d-4548-b76f-293c6b476c2f",
+      "title": "The Dark Funnel in Marketing with Chris Walker - Landbot",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://landbot.io/ungated-conversations/measure-marketing-dark-funnel-chris-walker",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 87,
+      "id": "26aafde8-e1dd-471c-87ed-207b61fa0484",
+      "title": "The Data-Backed Cold Email Formula (The Exact Words & Length) | Sales Newsletter",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.30mpc.com/newsletter/the-data-backed-cold-email-formula-the-exact-words-length",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 88,
+      "id": "89028e49-370f-4110-89d4-567bad356277",
+      "title": "The Hormozi Value Equation: Unlocking Extraordinary Business Value - MobiGym",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.mobigym.lu/blog/our-blog-1/the-hormozi-value-equation-unlocking-extraordinary-business-value-18",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 89,
+      "id": "240f3475-3947-455b-afc4-29b09f47ba58",
+      "title": "The Permission-Based Cold Call Opener (With A Twist) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=vkj_1-NB8YQ",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 90,
+      "id": "b72e2d3d-5209-423f-990d-465125a53114",
+      "title": "The Permission-Based Cold Call Opener (With A Twist) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=vkj_1-NB8YQ",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 91,
+      "id": "8763fc34-4c36-4e37-84b6-4252b61ea405",
+      "title": "The Sandler Pain Funnel: Complete Breakdown - Gong",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.gong.io/blog/sandler-pain-funnel",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 92,
+      "id": "2704954e-4bee-44d5-adf8-175d1ad91c63",
+      "title": "The Sandler Pain Funnel: How to Uncover Buyer Pain Points and Close More Sales",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://go.sandler.com/ayon/insights/blog/categories/sales-process/the-sandler-pain-funnel-a-powerful-sales-techniq/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 93,
+      "id": "eee3d9c9-5e83-411f-860b-252486d6b493",
+      "title": "The Simple Cold Call Framework No One Talks About (Ft. Josh Braun) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=d9tgc7o3-qQ",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 94,
+      "id": "f7f5d6b8-8c93-439e-ad03-3378f29f3edb",
+      "title": "The Simple Cold Call Framework No One Talks About (Ft. Josh Braun) - YouTube",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.youtube.com/watch?v=d9tgc7o3-qQ",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 95,
+      "id": "ee2fd923-1e13-4eed-83f3-41608e292429",
+      "title": "The Trigger Event Selling Reboot \u2014 60-Min Training \u2014 Pulse Sales ...",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://pulserevops.com/sales-trainings/st194",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 96,
+      "id": "b21ea058-fca1-4327-a4f8-e36e221a0da5",
+      "title": "Top Lessons from Frank Kern that I Use to Sell High Ticket Consulting Services",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.createyourconsultingoffer.com/blog/lessons-from-frank-kern",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 97,
+      "id": "6fd76bdb-a003-4e71-9a07-605ec1e29d13",
+      "title": "Using Calibrated Questions\u2122\ufe0f to Win More Deals - The Black Swan Group",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.blackswanltd.com/newsletter/using-calibrated-questions%EF%B8%8F-to-win-more-deals",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 98,
+      "id": "13c14b22-74f5-4fa2-9a0e-1bd2feea3d10",
+      "title": "Webinars - Flip the Script",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.flipthescript.com/webinars",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 99,
+      "id": "4cf6c9e0-920f-4766-a0a4-d9876f001134",
+      "title": "Webinars - Flip the Script",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://www.flipthescript.com/webinars",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 100,
+      "id": "2de31263-690a-4205-9f38-a5eefc0a05f8",
+      "title": "Your New 3-Part Framework for Cold Calling with Jason Bay - GTMnow",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://gtmnow.com/cold-calling-jason-bay/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 101,
+      "id": "b1755c03-b053-4e02-94f2-80438ef7794c",
+      "title": "Your New 3-Part Framework for Cold Calling with Jason Bay - GTMnow",
+      "type": "SourceType.WEB_PAGE",
+      "url": "https://gtmnow.com/cold-calling-jason-bay/",
+      "status": "ready",
+      "status_id": 2,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 102,
+      "id": "0088c8be-458e-4ebb-adb0-3454f27ed69b",
+      "title": "https://medium.com/illumination/alex-hormozis-value-equation-is-a-true-revelation-b887363cc6b6",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 103,
+      "id": "9cb5ef66-b4ab-40c1-bc3a-1a1fb1e08054",
+      "title": "https://www.outboundview.com/episode-9-revenue-engine-optimization-with-chris-walker-refine-labs/",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 104,
+      "id": "cf1a1fa4-dfe1-4cd2-bf12-7c42fdaeb1b6",
+      "title": "https://www.outboundview.com/episode-9-revenue-engine-optimization-with-chris-walker-refine-labs/",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 105,
+      "id": "606aac5a-7798-4d70-95fb-d55d07c33c4c",
+      "title": "https://www.scribd.com/document/1011942583/The-Ultimate-Cold-Email-Data-Report",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 106,
+      "id": "b8373f9f-7f40-42ac-b508-f256eeba7084",
+      "title": "https://www.scribd.com/document/1011942583/The-Ultimate-Cold-Email-Data-Report",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 107,
+      "id": "62c9b772-34f5-4fb5-81d1-e3c01728276f",
+      "title": "https://www.scribd.com/document/194267983/Frank-Kern-s-Slides",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 108,
+      "id": "6cc70882-142c-4743-a6c4-b0df92a673ce",
+      "title": "https://www.scribd.com/document/322617071/Cheat-Sheet-by-Frank-kern",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 109,
+      "id": "b23720d7-ee26-4663-9c67-440fa48fd999",
+      "title": "https://www.scribd.com/document/470685041/Frank-Kern-List-Control-Swipe-File",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:37:16"
+    },
+    {
+      "index": 110,
+      "id": "290758ce-eb24-46e5-a9ef-03e8953ba05f",
+      "title": "https://www.scribd.com/document/686153898/Cold-Email-Personalization-at-Scale-Becc-Holland",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:39:55"
+    },
+    {
+      "index": 111,
+      "id": "9f7b2e67-50df-4e75-a49a-29f4e55e7f84",
+      "title": "https://www.scribd.com/document/686153898/Cold-Email-Personalization-at-Scale-Becc-Holland",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 112,
+      "id": "6538100e-a8da-4472-9427-567569beda6e",
+      "title": "https://www.scribd.com/document/990363975/COLD-DM-Script",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:39:19"
+    },
+    {
+      "index": 113,
+      "id": "bd6a917b-573d-43a9-9c2f-7ec212348a3a",
+      "title": "https://www.scribd.com/document/990363975/COLD-DM-Script",
+      "type": "SourceType.WEB_PAGE",
+      "url": null,
+      "status": "error",
+      "status_id": 3,
+      "created_at": "2026-06-04T22:39:55"
+    }
+  ],
+  "count": 113
+}

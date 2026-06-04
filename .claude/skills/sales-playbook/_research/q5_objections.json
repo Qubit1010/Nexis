@@ -1,0 +1,192 @@
+{
+  "answer": "Based on the sources provided, here are the answers to your questions:\n\n**1. Documented Responses for the 10 Common B2B Sales Objections**\n\n*   **a. 'Too expensive' / 'It's too much money':** Chris Voss advises using a calibrated question: **\"How am I supposed to do that?\"** [1]. Cole Gordon structures financial objections by performing mental math on the spot, offering the highest viable tier (pay-in-full) and then dropping to a two-pay or three-pay plan to manage fear [2]. \n*   **b. 'I need to think about it':** **Not in sources**.\n*   **c. 'I need to talk to my partner / team / wife':** Cole Gordon handles this using a \"double tie-down\" to isolate uncertainty from logistics: **\"Hey, no problem. That aside, how do you feel about the process? Do you feel like what we covered is essentially what you need to scale your GTM team and fix the leak? ... Got it. So, setting the [Partner/CFO] approval aside for a moment, it sounds like you are completely aligned. If we can structure this so there is no financial risk to the organization, are you ready to get started?\"** [3].\n*   **d. 'We're already working with someone' (or 'We have a vendor'):** Becc Holland advises correcting the instinct to criticize the competitor: **\"Praise the existing setup, then highlight your differences.\"** [4]. Sandler methodologies use Negative Reverse Selling: **\"It sounds like you might already have a solution in place\u2014is this even worth exploring?\"** [5].\n*   **e. 'We're not the right fit':** **Not in sources**. *(Note: The sources mention using an upfront qualifier like \"If that's not something on your plate, let me know and I won't waste your time\" [6], but do not provide a specific response for when the prospect raises this objection.)*\n*   **f. 'Send me more info / email me' (the brush-off):** When a prospect asks, \"Can you just send me a proposal?\", Sandler training dictates you reply with a gentle **\"Reversing\"** question to find the intent behind the brush-off [7]. *(Note: The exact phrasing of this specific reverse question is **not in sources**)*.\n*   **g. 'Not a priority right now / bad timing':** For follow-up fatigue or stalled priorities, Sandler suggests a pattern interrupt: **\"It seems like this may have dropped in priority\u2014should we pause for now or revisit later?\"** [8].\n*   **h. 'We tried something like this before and it didn't work':** Cole Gordon's \"Mistake ABC\" framework addresses this by building trust in your methodology: **\"One of the biggest mistakes people make in this area is ABC. The problem with ABC is that it leads to these consequences. Instead, our solution uses this specific feature...\"** [9].\n*   **i. 'What if it doesn't work / no guarantee':** Frank Kern and Alex Hormozi utilize a Risk Reversal. Kern's exact script is: **\"If you feel I wasted your time, I will send you a check for $1,500\"** [10].\n*   **j. 'Just curious, how much does it cost?' (early in call):** Sandler recommends reversing the question to avoid making assumptions: **\"That's a fair question. Usually, our clients find the budget once they're fully convinced of the value. Are we at that point yet?\"** [11]. If they push for price while resisting discovery, Chris Voss labels it to weed out fake opportunities: **\"Seems like you've done a lot of research already.\"** [12, 13].\n\n**2. Voss's 'How am I supposed to do that?' Objection Handler**\n*   **When to use it:** Use this when a prospect demands a discount or puts you in a tight position in a negotiation [1].\n*   **How to use it:** Deliver it with a soft, curious tone\u2014*not* a sarcastic one [1]. \n*   **Why it works:** It forces the prospect to empathize with your position and shifts the burden of solving the problem back onto them, all while letting them maintain the illusion of control [1, 14].\n\n**3. The Sandler Pain Funnel Sequence**\nThe canonical 8-step sequence designed to escalate a surface complaint into an emotional, quantified pain is:\n1. **\"Tell me more about that.\"** [15]\n2. **\"Can you be more specific, give me an example.\"** [16]\n3. **\"How long has that been a problem.\"** [16]\n4. **\"What have you tried to do about it.\"** [16]\n5. **\"Did that work.\"** [17]\n6. **\"How much do you think this has cost you.\"** [18]\n7. **\"How do you feel about that.\"** [18]\n8. **\"Have you given up trying to fix it.\"** [19]\n\n**4. Objection vs. CONDITION (Sandler)**\n**Not in sources.** The provided texts do not contain Sandler's distinction between an objection and a condition. *(Note: The texts do document Cole Gordon distinguishing between \"Uncertainty Objections\" and \"Logistical Objections\" [20], but \"condition\" is not mentioned).*\n\n**5. The Documented BEST No-Oriented Closing Question**\nWhile the exact phrase \"best closing question\" is not explicitly designated in the text, Chris Voss heavily relies on framing commitments around \"no\" because it makes the prospect feel safe [21]. The primary no-oriented questions documented in the closing/commitment phases are:\n*   **\"Does this seem like a bad idea?\"** [21, 22].\n*   **\"Would it offend you if I asked a few quick questions to align our implementation timeline?\"** [14, 23].",
+  "conversation_id": "6c2f32ab-41ec-422b-a5bd-b5768875a542",
+  "turn_number": 1,
+  "is_follow_up": true,
+  "references": [
+    {
+      "source_id": "27cf5244-753e-41c2-859d-4d60b465418e",
+      "citation_number": 1,
+      "cited_text": "Why It Works: \u201cThat's right\u201d signals understanding, clearing their head and opening their ears. It's a Stephen Covey principle - understand first, then be understood - adapted for sales.",
+      "start_char": 7697,
+      "end_char": 7884,
+      "chunk_id": "ab249411-150b-4db9-91e0-bd4d8f19264c"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 2,
+      "cited_text": "Once uncertainty is eliminated, the closer manages logistical objections.[26, 27] Financial objections are structured around the prospect's actual financial parameters.[19] The closer performs \"mental math\" on the spot: if the prospect has $10,000 cash, $2,000 credit, and $3,000 cash flow next month, the closer evaluates whether to offer a pay-in-full option or drop down to a two-pay or three-pay plan, always starting with the highest viable tier to manage fear.[19]",
+      "start_char": 14557,
+      "end_char": 15027,
+      "chunk_id": "2052725a-a785-471e-8e75-4dd800bbcbd1"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 3,
+      "cited_text": "Prospect: \"I really want to move forward, but I need to clear this with our CFO.\" [26]",
+      "start_char": 24745,
+      "end_char": 24831,
+      "chunk_id": "ba213b6e-d634-48c6-8cc0-4df168d39977"
+    },
+    {
+      "source_id": "0569f5f5-5c54-4da1-a740-e877f93187a0",
+      "citation_number": 4,
+      "cited_text": "Correcting the Seven Deadly Sins of Messaging",
+      "start_char": 17515,
+      "end_char": 17560,
+      "chunk_id": "c6cfc882-75d9-412a-84e6-5671b629c957"
+    },
+    {
+      "source_id": "aeccbfc1-8042-4e6a-8297-ccf60946d9b2",
+      "citation_number": 5,
+      "cited_text": "\u2705 Core Pattern Interrupt Techniques",
+      "start_char": 4008,
+      "end_char": 4043,
+      "chunk_id": "71edd8f1-3c28-40df-9232-3ee5dd5b7050"
+    },
+    {
+      "source_id": "2c41ce6e-75f9-4ff3-80c2-64e8bdc89b40",
+      "citation_number": 6,
+      "cited_text": "\u201cHey [Name], I'll be upfront \u2014 this call is about [solving X problem]. If that's not something on your plate, let me know and I won't waste your time.\u201d",
+      "start_char": 55713,
+      "end_char": 55864,
+      "chunk_id": "cf8c2108-a5ec-42d5-a405-0ad4981a7827"
+    },
+    {
+      "source_id": "09eba430-6db8-4460-8eef-b107f2833d88",
+      "citation_number": 7,
+      "cited_text": "Mastering the Core Techniques Through Practice",
+      "start_char": 18292,
+      "end_char": 18338,
+      "chunk_id": "b08dfc2d-54a3-47ed-88fd-e9bc134ec2c9"
+    },
+    {
+      "source_id": "aeccbfc1-8042-4e6a-8297-ccf60946d9b2",
+      "citation_number": 8,
+      "cited_text": "Why it works: It creates mutual respect and removes uncertainty.",
+      "start_char": 5110,
+      "end_char": 5174,
+      "chunk_id": "8d2722f3-65ef-4a69-ba43-f791e679cc03"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 9,
+      "cited_text": "To establish Trust in Method, the closer structures the pitch using the \"Mistake ABC\" sequence.[24] The closer explains: \"One of the biggest mistakes people make in this area is ABC.[24] The problem with ABC is that it leads to these consequences.[24] Instead, our solution uses this specific feature, which allows you to realize this benefit, and ultimately, the benefit of that benefit\u2014which is an asset that produces income independent of your time\".[24] This sequence appeals to the universal desire for time freedom and financial leverage, creating deep certainty in the methodology.[24, 25]",
+      "start_char": 13362,
+      "end_char": 13958,
+      "chunk_id": "d212eb3e-dde9-47cd-b752-d7586cadb968"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 10,
+      "cited_text": "This conversational approach is complemented by Frank Kern's collaborative closing sequence:",
+      "start_char": 15412,
+      "end_char": 15504,
+      "chunk_id": "a9f5e841-124f-4e92-906f-b3636c171e7f"
+    },
+    {
+      "source_id": "09eba430-6db8-4460-8eef-b107f2833d88",
+      "citation_number": 11,
+      "cited_text": "Maintaining Momentum With Reversing",
+      "start_char": 12192,
+      "end_char": 12227,
+      "chunk_id": "ed25895e-e811-46c5-a57a-6e0d3d528125"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 12,
+      "cited_text": "Labeling is highly effective when managing negative emotions and operational friction.[10, 11] When a prospect displays frustration or skepticism, the GTM practitioner addresses the issue directly using labels such as, \"It seems like you are frustrated with me,\" or \"It seems like you are under a massive amount of pressure\".[10] This approach resolves stalled negotiations and de-escalates conflict by validating the prospect\u2019s emotional reality.[10, 12]",
+      "start_char": 3710,
+      "end_char": 4165,
+      "chunk_id": "c61e1f50-4b84-40db-83b5-202716d114f0"
+    },
+    {
+      "source_id": "27cf5244-753e-41c2-859d-4d60b465418e",
+      "citation_number": 13,
+      "cited_text": "Spot Fake Opportunities: If prospects only want pricing without dialogue, it's a red flag. Voss suggests labeling their preparation, \u201cSeems like you've done a lot of research already.\u201d If they gush about their process, they might be open. But if they clam up, it's likely \u201cThey're looking for data only.\u201d",
+      "start_char": 4867,
+      "end_char": 5171,
+      "chunk_id": "9d123f80-a68a-47c0-9797-9d512bb1f147"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 14,
+      "cited_text": "To maintain rapport, the closer must avoid the \"You're right\" trap.[10] In high-ticket sales, when a prospect says \"You're right,\" they are often disengaged and attempting to end the conversation.[10] The closer must pivot using a label like, \"It seems like there is more on your mind,\" to guide the prospect toward \"That's right\"\u2014a phrase that indicates deep cognitive agreement.[10, 13]",
+      "start_char": 4664,
+      "end_char": 5052,
+      "chunk_id": "70b0315a-b418-43b0-b4bd-d3c198447d55"
+    },
+    {
+      "source_id": "cf917fa0-d180-499f-82d0-5f0ad5ac0b4e",
+      "citation_number": 15,
+      "cited_text": "The funnel is mechanically simple and conversationally demanding. Each transition requires the rep to listen for the specific word or phrase the prospect just used and use it as the bridge to the next question.",
+      "start_char": 8091,
+      "end_char": 8301,
+      "chunk_id": "155bdb9d-8ab2-4e26-a613-fc64dc7f145e"
+    },
+    {
+      "source_id": "cf917fa0-d180-499f-82d0-5f0ad5ac0b4e",
+      "citation_number": 16,
+      "cited_text": "02",
+      "start_char": 8661,
+      "end_char": 8663,
+      "chunk_id": "a5a500f7-baaa-49b3-a709-1ccc8b84807f"
+    },
+    {
+      "source_id": "cf917fa0-d180-499f-82d0-5f0ad5ac0b4e",
+      "citation_number": 17,
+      "cited_text": "Surfaces the prospect's prior investment in solving the problem. Strong signal is named programs with named owners; weak signal is \u201cwe haven't really done anything yet\u201d, which often means the problem is not as painful as the surface complaint suggested.",
+      "start_char": 9183,
+      "end_char": 9436,
+      "chunk_id": "11c3129e-db67-4f06-be8a-8a677c2ad784"
+    },
+    {
+      "source_id": "cf917fa0-d180-499f-82d0-5f0ad5ac0b4e",
+      "citation_number": 18,
+      "cited_text": "06",
+      "start_char": 9709,
+      "end_char": 9711,
+      "chunk_id": "e4e10a51-8fd2-479e-9c77-0b719bb17aad"
+    },
+    {
+      "source_id": "cf917fa0-d180-499f-82d0-5f0ad5ac0b4e",
+      "citation_number": 19,
+      "cited_text": "08",
+      "start_char": 10396,
+      "end_char": 10398,
+      "chunk_id": "88873e8a-cb73-4f53-bcf1-cb5527db68cb"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 20,
+      "cited_text": "Pre-Emptive Objection Prevention and the Collaborative Close",
+      "start_char": 13958,
+      "end_char": 14018,
+      "chunk_id": "b2fbe29d-21a8-402d-9da5-3cd9e7f2ba70"
+    },
+    {
+      "source_id": "27cf5244-753e-41c2-859d-4d60b465418e",
+      "citation_number": 21,
+      "cited_text": "Frame For No: Swap \u201cHave you got a few minutes?\u201d with \u201cIs now a bad time to talk?\u201d If they say no, they'll often qualify it (\u201cNo, I've got 15 minutes\u201d), giving you an opening.",
+      "start_char": 6257,
+      "end_char": 6432,
+      "chunk_id": "71cd7330-93b0-4d55-9292-860c19a8952c"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 22,
+      "cited_text": "To establish conversational control, the closer executes the UFC.[3] A comprehensive UFC covers five key elements: the session's Purpose, the Prospect's Agenda, the Seller's Agenda, Time constraints, and the expected Outcome.[3] This agreement is reinforced with no-oriented framing, such as \"Does this seem like a bad idea?\" or \"Would it offend you if I shared some solutions?\", which allows the prospect to say \"no\" and feel secure in their autonomy.[10, 13]",
+      "start_char": 6422,
+      "end_char": 6882,
+      "chunk_id": "d80f3f45-37ab-4fca-99e4-0fb3aa554473"
+    },
+    {
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "citation_number": 23,
+      "cited_text": "Once this is in place, you will have an asset that automatically routes leads, independent of manual oversight.[24] Do you agree with this approach?\" [25]",
+      "start_char": 24134,
+      "end_char": 24288,
+      "chunk_id": "a31e1f57-eee3-4ef3-b58e-ccdb02d05cb6"
+    }
+  ]
+}
