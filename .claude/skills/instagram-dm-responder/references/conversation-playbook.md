@@ -96,14 +96,16 @@ Examples:
 **They look like:** asked what you do, asked how you'd fix it, or asked a specific
 question about your work.
 
-**Your move:** one result from the results bank. The single closest match to the
-pain they described. One. Not a list.
+**Your move:** one named peer from the proof bank. The single closest match to the
+pain they described. One. Not a list. (Steve / Andrey / Mikey from
+`sales-playbook/offer/proof-bank.md`.)
 
-- Their pain: manual onboarding → "Built a client onboarding pipeline that cut manual work by 70%."
-- Their pain: lead follow-up → "Built a lead-to-outreach pipeline that cut follow-up time by 80% and removed 3 handoffs."
-- Their pain: CRM/email lag → "Built an AI email + CRM workflow that cut response time from hours to minutes."
+- Their pain: content + social posting → "Built Steve's AI content + posting setup (agency owner) - 10+ hrs/week off his team."
+- Their pain: lead routing / reporting / scattered tools → "Built Andrey's lead routing + client reporting (agency operator) - 10+ hrs/week back."
+- Their pain: wants ongoing support → "Mikey's on an ongoing retainer with me - one new workflow a month."
+- No clean peer match → anonymized fallback from the same file ("a team like yours - 10+ hrs/week off their plate").
 
-Frame it as a story, not a stat dump. "Built X for a team like yours, it did Y" lands
+Frame it as a story, not a stat dump. "Built it for Andrey, it did Y" lands
 better than "our solution achieves Y."
 
 **Do not:** ask for the call immediately after proof. Let them pull.
@@ -142,9 +144,9 @@ starting look like").
 start with *Would it be off base...*, *Is it a bad idea...*, *Would it be crazy...*
 They give the feeling of control — saying no is easy, which paradoxically makes yes easy.
 
-- "Would it be off base to grab 20 minutes so I can show you what that pipeline looks like end-to-end?"
-- "Is it a bad idea to hop on a quick call and map this against your specific setup?"
-- "Would it be crazy to do a short 20-min call this week and see if there's a fit?"
+- "Would it be off base to do a 20-min Ops Teardown? I screen-share your stack and show you the first thing I'd automate."
+- "Is it a bad idea to do a quick teardown and map this against your specific setup?"
+- "Would it be crazy to do a 20-min Teardown this week and see if there's a fit?"
 
 **Do not:** apologize, hedge, or give them 3 time options in the first ask. One
 sentence, one clean question.
@@ -239,17 +241,17 @@ your time as the first one - like the process hasn't turned into a system yet."
 it manual - what's the step that takes the longest each time?"
 
 **Them:** "probably the setup calls, like explaining the same stuff every time"
-**You (Proof):** "Built a client onboarding pipeline for a similar team that cut
-that manual work by 70% - the core move was turning those setup calls into a
-system the tool runs instead."
+**You (Proof):** "Built the same kind of setup for a similar team and it took 10+
+hrs/week off them - the core move was turning those setup calls into a system the
+tool runs instead."
 
 **Them:** "interesting, how long did something like that take?"
 **You (Warm Ask):** "About 3 weeks. Happy to walk you through how it was built here
 in DMs if that's useful - easier to show than explain."
 
 **Them:** "yeah that'd be great actually"
-**You (Call):** "Would it be off base to grab 20 minutes on a call so I can show
-you the whole thing end-to-end and see if the same shape fits your setup?"
+**You (Call):** "Would it be off base to do a 20-min Ops Teardown so I can look at
+your stack and show you the first thing I'd automate?"
 
 Six messages. Real rapport first. Call ask lands after they've already said yes to
 a smaller step.

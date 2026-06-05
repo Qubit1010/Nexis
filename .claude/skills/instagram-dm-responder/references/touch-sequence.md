@@ -36,17 +36,20 @@ is almost always better.
 | Touch | Day | Purpose | NexusPoint named? | Ask? |
 |-------|-----|---------|-------------------|------|
 | 1 | 0 | Warm opener — Voss label + one genuine question | No | No |
-| 2 | 3-4 | Value drop — observation grounded in their content | No | No |
-| 3 | 8-10 | Soft intro + proof + DM ask | Yes | Yes — DM chat or quick walkthrough, not a full call |
-| 4 | 15 | Honest exit | Optional | No |
+| 2 | 3 | Value drop — observation grounded in their content | No | No |
+| 3 | 5 | Soft intro + named-peer proof + anchored Teardown ask | Yes | Yes — anchored Ops Teardown |
+| 4 | 7 or 14 | Honest exit | Optional | No |
 
-The call ask doesn't happen in the no-reply sequence. That's for Scenario B
-(live conversations). The goal of the sequence is to generate a reply — not to
-book a call directly from a cold DM.
+Touch 3 carries the only ask in the sequence, and it's anchored to the Ops
+Teardown deliverable ("I screen-share your stack and tell you the first thing
+I'd automate"), never a bare "quick chat". A soft anchored ask still does the
+job of generating a reply — the Teardown framing is low-pressure because the
+prospect gets value just by showing up. Full sequence + cadence rationale:
+`sales-playbook/scripts/instagram-cold-dm-sequence.md`.
 
 ---
 
-## Touch 2 — Day 3-4 — Value drop
+## Touch 2 — Day 3 — Value drop
 
 **What it does:** shows you actually read their profile and thought about their
 situation. Not a follow-up. Not a pitch. A useful thing a peer would send.
@@ -104,63 +107,64 @@ thing that starts quietly eating the team's time - not the tools themselves.
 
 ---
 
-## Touch 3 — Day 8-10 — Soft intro, proof, and DM ask
+## Touch 3 — Day 5 — Soft intro, named-peer proof, and anchored Teardown ask
 
-**What it does:** names who Aleem is and what he does, drops one concrete result,
-and asks for a low-friction next step. The ask is for a DM conversation or a quick
-walkthrough — NOT a direct discovery call booking. The call comes later, after
-they've engaged.
+**What it does:** names who Aleem is and what he does, drops one named-peer
+result, and makes the one ask in the sequence — anchored to the Ops Teardown
+deliverable. The Teardown framing keeps it low-pressure even though it's a call
+ask: the prospect gets value (the first thing Aleem would automate) just by
+showing up.
 
 **Structure:**
 1. **Honest opener** — "I'll be straight" or "I've been roundabout so here it is."
    Signals you're done being subtle. People respect this.
 2. **One-line NexusPoint intro** — what Aleem does, framed around their specific
    problem type.
-3. **One result from the results bank** — the single closest match to their pain.
-   Use the number if the result has one (70%, 80%, "3 handoffs").
-4. **DM ask** — low-friction. "Worth a quick chat about this in DMs?" or "Would it
-   help if I sent you a quick breakdown of how that was built?" Not a calendar link.
-   Not "let's hop on a call."
-
-**Why not a call ask at Touch 3:** this is still a cold sequence. They haven't
-replied. The goal of Touch 3 is to get them to reply — then have a real DM
-conversation — then move to a call. Asking for a call from someone who's never
-responded is skipping the rapport step Instagram requires.
+3. **One named peer from the proof bank** — the single closest match to their
+   pain (Steve / Andrey / Mikey from `sales-playbook/offer/proof-bank.md`). Lead
+   with the peer + the hours-saved number. No clean match → anonymized fallback
+   from the same file.
+4. **Anchored Teardown ask** — "Want a 20-min Ops Teardown? I look at your stack
+   and tell you the first thing I'd automate, you decide if it's worth building."
+   Never "worth a quick DM chat" / "hop on a call".
 
 **Hard rules:**
-- Exactly one result. Never list multiple.
-- Number-forward if possible — "80%" lands harder than "significantly."
-- DM ask must be low-friction. Not "book a 20-minute call."
+- Exactly one peer. Never list multiple.
+- Lead with the named peer + the number, not adjectives.
+- The ask is the anchored Ops Teardown, framed low-pressure. Never a bare
+  "quick chat" or calendar-link dump.
 - Under 400 chars
 - No sign-off
 
-**Example — e-comm founder, continuing with Maya:**
+**Example — e-comm founder, continuing with Maya (Shopify pain, no clean named peer → anonymized DTC fallback):**
 
 ```
-Hey Maya - I'll be straight. I run NexusPoint, we build automations that take
-the manual ops work off founders' plates.
+Hey Maya - I'll be straight. I run NexusPoint, we take the manual ops work off
+founders' plates.
 
-Built a Shopify + HubSpot workflow for a similar team that removed 3 manual
-handoffs entirely.
+Built a Shopify reconciliation workflow for a DTC brand that killed 4 hrs of
+Sunday recon a week.
 
-Worth a quick DM chat to see if there's anything useful here?
+Want a 20-min Ops Teardown? I look at your stack and tell you the first thing
+I'd automate, you decide if it's worth it.
 ```
 
-**Example — agency ops lead:**
+**Example — agency ops lead (Andrey is a clean named-peer match):**
 
 ```
-Hey Marcus - I've been roundabout so here it is. I run NexusPoint, we help
-agency ops teams cut the manual work that slows delivery.
+Hey Marcus - I've been roundabout so here it is. I run NexusPoint, we take the
+manual ops work off agency plates.
 
-Built a lead pipeline for an agency ops team that cut follow-up time by 80%
-and removed 3 handoffs.
+Built the lead routing + client reporting for Andrey (agency operator) - 10+
+hrs/week back.
 
-Would it help if I sent you a quick breakdown of how that was structured?
+Want a 20-min Ops Teardown? I screen-share your stack and show you the first
+thing I'd automate.
 ```
 
 ---
 
-## Touch 4 — Day 15 — Honest exit
+## Touch 4 — Day 7 or 14 — Honest exit
 
 **What it does:** closes the loop cleanly. Signals you're done reaching out. No
 guilt, no fake urgency, no last-ditch pitch. Leaves the door open in a way that
@@ -219,8 +223,8 @@ each. Each at its own char limit. Make them read as a coherent arc:
 | Over 400 chars | Instagram is mobile. Long DMs get skimmed or ignored. |
 | "Just following up" / "bumping this" | Instant BDR smell. The goal is to feel like a peer, not a sales sequence. |
 | NexusPoint in Touch 2 | Touch 2 is pure value. Naming the company too early triggers sales-mode. |
-| Call ask before they've replied | Skips the rapport step. Ask for a DM chat first, call second. |
-| Multiple results in Touch 3 | One number lands. Three feel like a pitch deck. |
+| Unanchored ask ("worth a quick chat?") | Burned line, instant sales-smell. Anchor the Touch 3 ask to the Ops Teardown deliverable. |
+| Multiple peers in Touch 3 | One named peer lands. Three feel like a pitch deck. |
 | Emojis or em dashes | Breaks the founder-peer tone. |
 | Generic closer in Touch 4 | If you can't say something genuine about what they're building, leave it out. |
 | Repeating phrasing from previous touch | Signals copy-paste, not thought. |

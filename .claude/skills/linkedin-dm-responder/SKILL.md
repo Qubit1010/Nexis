@@ -24,6 +24,15 @@ connection-request stages are already covered by `linkedin-outreach`. This skill
 takes over after a connection is accepted — drafting sequence follow-ups and
 replies that convert accepted connections into booked calls.
 
+> **Sales Playbook integration (source of truth):** This skill is downstream of
+> the `sales-playbook` skill. Pull from it instead of improvising:
+> - Proof for any message → `sales-playbook/offer/proof-bank.md` (named peers Steve / Andrey / Mikey + anonymized fallbacks)
+> - Banned phrases — scan before returning anything → `sales-playbook/references/what-not-to-do.md`
+> - Live reply flow (6 phases + objection branch) → `sales-playbook/scripts/live-conversation-playbook.md`
+> - Objection responses (10 cited) → `sales-playbook/frameworks/objection-riffs.md`
+> - Calibrated questions + labels → `sales-playbook/frameworks/voss-calibrated-questions.md`
+> - Full worked example (cold DM → reply → call → close) → `sales-playbook/references/worked-example-linkedin.md`
+
 Two scenarios. Detect which one from the input shape, then load the matching
 reference file.
 
@@ -54,17 +63,22 @@ Load only the reference file you need. Do not load both.
 
 ---
 
-## Shared results bank (use one per message when proof is earned)
+## Proof bank (use one per message when proof is earned)
 
-Pick the single most relevant one. Never list multiple. Never fabricate numbers.
+Pick the single most relevant peer. Match by industry first, then stack, then
+pain pattern. Never list multiple. Never fabricate numbers. Full bank +
+anonymized fallbacks (for prospects no named peer fits) live in
+`sales-playbook/offer/proof-bank.md` — pull from there.
 
-- Automated client onboarding pipeline — reduced manual work by 70%
-- Lead-to-outreach pipeline — cut manual follow-up time by 80%, eliminated 3 human handoffs
-- AI-powered email + CRM workflow (OpenAI + Zapier) — cut response time from hours to minutes
-- Multi-step e-commerce automation (Shopify + HubSpot + Slack) — removed 3 manual handoffs
-- AI lead gen pipeline — raw data in, scored and enriched prospects out, zero manual review
-- AI content engine — brief in, finished LinkedIn + Instagram post out, logged automatically
-- Responsive web builds: tradinghunters.com, ringo.media, inboxapp.framer.website
+The three real named peers (all public, usable by name):
+
+- **Steve** — marketing/social agency. Built AI content + scheduled social posting (n8n + ChatGPT). 10+ hrs/week off his team. Repeat client. *Best for: content-heavy agencies, creators with a team.*
+- **Andrey** — agency ops. Multi-tool ops suite: lead routing + client reporting + workflow glue (ChatGPT/Zapier/n8n/Make). 10+ hrs/week saved. *Best for: scattered-tools ops, reporting pain.*
+- **Mikey** — agency owner on an ongoing AI ops retainer, new workflow per month, 10+ hrs/week each. *Best for: the retainer pitch.*
+
+If no named peer fits the prospect's world, use an anonymized industry template
+from `proof-bank.md` ("Built [workflow] for an [N]-person [industry] team…").
+Only ever claim what Aleem can stand behind.
 
 ---
 
@@ -95,6 +109,10 @@ LinkedIn.
 - No em dashes (use plain hyphens or commas)
 - No pitch in DM 2. DM 2 is value only.
 - No call ask before DM 4 in Scenario A.
+- DM 4's call ask must be anchored to a deliverable (the Ops Teardown: "I
+  screen-share your stack and show you the first thing I'd automate"), never a
+  bare "grab 20 minutes" or "worth a quick chat". See
+  `sales-playbook/scripts/live-conversation-playbook.md`.
 - If they gave the previous DM, don't repeat its opener, its label, or its core
   observation.
 
@@ -132,6 +150,8 @@ reply itself is what he pastes.
 - Don't drop proof until they've disclosed a pain point or asked what you do
 - Don't ask for the call until they've shown pull (asked for specifics, asked
   about availability, engaged with a result)
+- When you do ask for the call, anchor it to the Ops Teardown deliverable, not a
+  generic "hop on a call" / "worth a quick chat"
 - Never mention price, rate, or "how much"
 - If they're a peer / agency owner / AI consultant themselves, flag it and
   pivot: they're a referral partner, not a direct client. Framing becomes

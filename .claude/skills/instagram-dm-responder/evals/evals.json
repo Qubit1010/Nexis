@@ -24,15 +24,15 @@
       "id": 2,
       "name": "scenario-a-touch3-agency-ops",
       "prompt": "I need Touch 3 for a prospect. No replies to Touch 1 (Day 0) or Touch 2 (Day 4). It's now Day 9. Here's their profile:\n\nName: Marcus Ellery\nUsername: @marcus.northwind\nBio: COO @northwindcollective | ops-first agency | 20+ people | B2B SaaS clients\nFollowers: 1,800\n\nTouch 2 I sent referenced the pattern of manual handoffs breaking between tools at the 20-person mark.\n\nWrite Touch 3 for Day 8-10.",
-      "expected_output": "A Scenario A Touch 3 output: message only, no preamble. Under 400 chars. Opens with honest directness ('I'll be straight', 'I'll cut to it', or similar). Names NexusPoint explicitly. Drops exactly one result from the results bank with a number. Ask is low-friction DM or walkthrough — NOT a straight discovery call booking ('worth a quick DM chat?', 'would it help if I sent you a breakdown?'). No sign-off. No emojis. No em dashes.",
+      "expected_output": "A Scenario A Touch 3 output: message only, no preamble. Under 400 chars. Opens with honest directness ('I'll be straight', 'I'll cut to it', or similar). Names NexusPoint explicitly. Drops exactly one named peer from the proof bank (Steve/Andrey/Mikey — for an agency ops lead, Andrey is the clean match) with the hours-saved number. Ask is the anchored Ops Teardown ('I look at your stack and tell you the first thing I'd automate'), framed low-pressure — NEVER a bare 'worth a quick DM chat' or 'hop on a call'. No sign-off. No emojis. No em dashes.",
       "assertions": [
         {"name": "under_400_chars", "description": "Message body is under 400 characters"},
         {"name": "honest_opener", "description": "Opens with a directness signal: 'I'll be straight', 'I'll cut to it', 'I've been roundabout so here it is', or equivalent"},
         {"name": "names_nexuspoint", "description": "Names NexusPoint explicitly"},
-        {"name": "exactly_one_result", "description": "Drops exactly one NexusPoint result — not zero, not two or more"},
-        {"name": "result_has_number", "description": "The result includes a specific number or percentage (70%, 80%, 3 handoffs, etc.)"},
-        {"name": "dm_ask_not_call_ask", "description": "The ask is for a DM chat, quick walkthrough, or low-friction next step — NOT a direct calendar link or 'let's hop on a 20-min call'"},
-        {"name": "no_yes_oriented_ask", "description": "Does not use yes-oriented framing like 'do you want to', 'can we schedule', 'are you free for a call'"},
+        {"name": "exactly_one_named_peer", "description": "Drops exactly one named peer from the proof bank (Steve/Andrey/Mikey, or a labeled anonymized fallback) — not zero, not two or more"},
+        {"name": "peer_has_number", "description": "The proof includes the specific hours-saved number (10+ hrs/week)"},
+        {"name": "anchored_teardown_ask", "description": "The ask is the anchored Ops Teardown (screen-share the stack, name the first thing to automate) — NOT a bare 'worth a quick DM chat', 'hop on a call', or a raw calendar link"},
+        {"name": "no_banned_chat_phrase", "description": "Does not contain 'worth a quick DM chat', 'worth a quick chat', or 'hop on a call'"},
         {"name": "no_emojis", "description": "Contains no emoji characters"},
         {"name": "no_em_dashes", "description": "Contains no em dashes"},
         {"name": "no_sign_off", "description": "Does not end with '- Aleem' or any formal sign-off"}
@@ -41,7 +41,7 @@
     {
       "id": 3,
       "name": "scenario-a-touch4-breakup",
-      "prompt": "Write Touch 4 for a prospect who never replied to any of Touches 1, 2, or 3. It's Day 15. Here's their profile:\n\nName: Carlos Reyes\nUsername: @carlosreyes.agency\nBio: founder | growth agency | 12 people | obsessed with systems\nFollowers: 4,100\nContent: regularly posts about agency operations and building scalable client delivery\n\nTouch 3 dropped the lead-to-outreach pipeline result (80% follow-up time cut).\n\nWrite Touch 4 for Day 15.",
+      "prompt": "Write Touch 4 for a prospect who never replied to any of Touches 1, 2, or 3. It's Day 15. Here's their profile:\n\nName: Carlos Reyes\nUsername: @carlosreyes.agency\nBio: founder | growth agency | 12 people | obsessed with systems\nFollowers: 4,100\nContent: regularly posts about agency operations and building scalable client delivery\n\nTouch 3 named Andrey (agency operator) - lead routing + client reporting, 10+ hrs/week back.\n\nWrite Touch 4 for Day 14.",
       "expected_output": "A Scenario A Touch 4 output: message only, no preamble. Under 300 chars ideal (400 hard cap). Signals this is the last message ('will stop reaching out', 'last one from me', or similar). No call ask — Touch 4 is an exit, not a CTA. Soft door open framed around his specific situation. Optional genuine closer about his work — skip if it would feel forced. No guilt-framing. No sign-off. No emojis. No em dashes.",
       "assertions": [
         {"name": "under_400_chars", "description": "Message body is under 400 characters"},

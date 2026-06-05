@@ -29,6 +29,15 @@ file.
 **Platform note:** All Instagram DMs are sent manually by Aleem. Never suggest
 automating the send — Instagram bans bot activity. This skill drafts messages only.
 
+> **Sales Playbook integration (source of truth):** This skill is downstream of
+> the `sales-playbook` skill. Pull from it instead of improvising:
+> - Proof for any message → `sales-playbook/offer/proof-bank.md` (named peers Steve / Andrey / Mikey + anonymized fallbacks)
+> - Banned phrases — scan before returning anything → `sales-playbook/references/what-not-to-do.md`
+> - IG cold sequence (cadence, pre-warm, speed-to-lead) → `sales-playbook/scripts/instagram-cold-dm-sequence.md`
+> - Live reply flow (6 phases + objection branch) → `sales-playbook/scripts/live-conversation-playbook.md`
+> - Objection responses (10 cited) → `sales-playbook/frameworks/objection-riffs.md`
+> - Full worked example (pre-warm → DM → reply → call → close) → `sales-playbook/references/worked-example-instagram.md`
+
 ---
 
 ## Mode Detection
@@ -55,17 +64,21 @@ sequence position = Scenario A. Load only the reference file you need.
 
 ---
 
-## Shared results bank (use one per message when proof is earned)
+## Proof bank (use one per message when proof is earned)
 
-Pick the single most relevant. Never list multiple. Never fabricate numbers.
+Pick the single most relevant peer. Match by industry first, then stack, then
+pain pattern. Never list multiple. Never fabricate numbers. Full bank +
+anonymized fallbacks live in `sales-playbook/offer/proof-bank.md` — pull from
+there. On Instagram, frame proof as a quick story, not a stat dump.
 
-- Automated client onboarding pipeline — reduced manual work by 70%
-- Lead-to-outreach pipeline — cut manual follow-up time by 80%, eliminated 3 human handoffs
-- AI-powered email + CRM workflow (OpenAI + Zapier) — cut response time from hours to minutes
-- Multi-step e-commerce automation (Shopify + HubSpot + Slack) — removed 3 manual handoffs
-- AI lead gen pipeline — raw data in, scored and enriched prospects out, zero manual review
-- AI content engine — brief in, finished LinkedIn + Instagram post out, logged automatically
-- Responsive web builds: tradinghunters.com, ringo.media, inboxapp.framer.website
+The three real named peers (all public, usable by name):
+
+- **Steve** — marketing/social agency. AI content + scheduled social posting (n8n + ChatGPT). 10+ hrs/week off his team. Repeat client. *Best for: content-heavy agencies, creators with a team.*
+- **Andrey** — agency ops. Lead routing + client reporting + workflow glue (ChatGPT/Zapier/n8n/Make). 10+ hrs/week saved. *Best for: scattered-tools ops, reporting pain.*
+- **Mikey** — agency owner on an ongoing AI ops retainer, new workflow per month. *Best for: the retainer pitch.*
+
+If no named peer fits, use an anonymized industry template from `proof-bank.md`.
+Only ever claim what Aleem can stand behind.
 
 ---
 
@@ -157,13 +170,14 @@ it manually is a week it doesn't get turned into a system.
 ### Scenario A — Touch 3 (agency ops lead, no replies to Touch 1 or 2)
 
 ```
-Hey Marcus - I'll be straight. I run NexusPoint, we help agency ops teams cut the
-manual work slowing delivery down.
+Hey Marcus - I'll be straight. I run NexusPoint, we take the manual ops work off
+agency plates.
 
-Built a lead pipeline for an agency that cut follow-up time by 80% and removed 3
-handoffs.
+Built the lead routing + client reporting setup for Andrey (agency operator) -
+10+ hrs/week back.
 
-Worth a quick DM chat to see if there's any overlap?
+Want a 20-min Ops Teardown? I look at your stack and tell you the first thing I'd
+automate, you decide if it's worth building.
 ```
 
 ### Scenario B — they replied casually after Touch 1 ("lol yeah that's exactly it")

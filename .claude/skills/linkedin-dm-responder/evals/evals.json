@@ -22,15 +22,15 @@
     {
       "id": 2,
       "name": "scenario-a-dm4-agency-coo",
-      "prompt": "I need DM 4 (the final one) for a LinkedIn prospect. They accepted the connection 16 days ago, I sent DM 2 on Day 4 and DM 3 on Day 9, no reply to any of them. Profile:\n\nName: Marcus Ellery\nRole: COO\nCompany: Northwind Collective (20-person marketing agency, specializes in B2B SaaS client work)\nBased in Austin, TX\nCompany size: 20\n\nDM 3 (Day 9) referenced our lead-to-outreach pipeline that cut manual follow-up time by 80%.\n\nWrite DM 4 for Day 16.",
-      "expected_output": "A Scenario A DM 4 output: under 1000 chars, direct but no-oriented call ask, includes a Voss label, permission-framed ('would it be off base', 'is it a bad idea', 'would it be crazy'), specific short duration (15-20 min), graceful exit option ('if it's not the right time, no worries'), signs off with '- Aleem' or nothing. No em dashes, no emojis.",
+      "prompt": "I need DM 4 (the final one) for a LinkedIn prospect. They accepted the connection 16 days ago, I sent DM 2 on Day 4 and DM 3 on Day 9, no reply to any of them. Profile:\n\nName: Marcus Ellery\nRole: COO\nCompany: Northwind Collective (20-person marketing agency, specializes in B2B SaaS client work)\nBased in Austin, TX\nCompany size: 20\n\nDM 3 (Day 9) named Andrey (agency operator) - lead routing + client reporting, 10+ hrs/week back.\n\nWrite DM 4 for Day 16.",
+      "expected_output": "A Scenario A DM 4 output: under 1000 chars, direct but no-oriented call ask, includes a Voss label, permission-framed ('would it be off base', 'is it a bad idea', 'would it be crazy'). The ask is anchored to the Ops Teardown deliverable (screen-share the stack, name the first thing to automate) at a specific short duration (20 min) — never a bare 'grab 20 minutes' or 'worth a quick chat'. Graceful exit option ('if it's not the right time, no worries'). Signs off with '- Aleem' or nothing. No em dashes, no emojis.",
       "files": [],
       "assertions": [
         {"name": "under_1000_chars", "description": "Message body is under 1000 characters"},
         {"name": "contains_voss_label", "description": "Contains at least one Voss label"},
         {"name": "no_oriented_ask", "description": "Contains a no-oriented ask phrase: 'would it be off base', 'is it a bad idea', 'would it be crazy', 'is this the worst timing', or similar"},
         {"name": "not_yes_oriented", "description": "Does not use yes-oriented framing like 'do you want to', 'can we schedule', 'are you free'"},
-        {"name": "specific_duration", "description": "Specifies a short duration like '15 minutes' or '20 minutes'"},
+        {"name": "anchored_teardown_ask", "description": "The ask is anchored to the Ops Teardown deliverable (screen-share the stack, name the first thing to automate) at ~20 min — not a bare 'grab 20 minutes', 'worth a quick chat', or 'hop on a call'"},
         {"name": "graceful_exit_offered", "description": "Offers a low-friction no option ('if not, no worries', 'if it's a bad time, all good', or similar)"},
         {"name": "no_em_dashes", "description": "Contains no em dashes"},
         {"name": "no_emojis", "description": "Contains no emoji characters"},

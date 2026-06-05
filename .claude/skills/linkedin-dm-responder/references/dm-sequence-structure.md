@@ -107,25 +107,28 @@ concrete result. Still no direct call ask.
 **Structure:**
 1. **Short re-anchor** — one sentence referencing the space or pain you
    labeled in DM 2, without literally repeating the words.
-2. **One result from the results bank** — the single most relevant one. Use
-   a number if the result has one (70%, 80%, hours-to-minutes, etc.).
+2. **One named peer from the proof bank** — the single closest match
+   (`sales-playbook/offer/proof-bank.md`: Steve / Andrey / Mikey). Match by
+   pain pattern; use the hours-saved number. If no peer fits the prospect's
+   world, use an anonymized industry template from the same file with a
+   "similar team" framing.
 3. **Soft hook** — "happy to share how it was built if that's useful" /
    "can send over a quick walkthrough if it's relevant."
 
 **Hard rules:**
-- Exactly one result. Never list multiple.
-- Number-forward if possible — specificity lands harder than adjectives.
+- Exactly one peer. Never list multiple.
+- Lead with the named peer + the number — specificity lands harder than adjectives.
 - Still no call ask. This DM earns the right to DM 4's ask.
 - Under 1000 chars
 
-**Example (continuing with Sarah from DM 2):**
+**Example (continuing with Sarah from DM 2 — lean SaaS, no clean agency peer, so anonymized fallback):**
 ```
 Hey Sarah, one more thought on the ops side at your stage.
 
-We built a client onboarding pipeline for a similar-sized SaaS team
-recently that cut their manual onboarding work by 70% - most of the gain
-came from turning tribal knowledge into a system the tool runs, not a
-checklist a human runs.
+Built the integration layer for a similar-sized team recently - the manual
+glue between their tools - and it took 10+ hrs/week off the founder's plate.
+Most of the gain came from turning tribal knowledge into a system the tool
+runs, not a checklist a human runs.
 
 Happy to send a short walkthrough of how it's structured if you're curious
 what it looked like under the hood.
@@ -133,13 +136,14 @@ what it looked like under the hood.
 - Aleem
 ```
 
-**Example (James, Salesforce handoff theme):**
+**Example (James, Salesforce handoff theme — Andrey is a clean named-peer match):**
 ```
 Hey James, circling on the handoff theme from last week.
 
-We built a lead-to-outreach pipeline for an ops team dealing with exactly
-this - cut manual follow-up time by 80% and removed three human handoffs
-that were quietly costing them deals.
+Built the lead routing + workflow glue for Andrey, an agency operator dealing
+with exactly this - data scattered across tools with no clean handoff layer.
+Took 10+ hrs/week off the team and killed the manual handoffs that were
+quietly costing them.
 
 If it'd help, I can send a quick breakdown of how the handoff layer was
 architected. No pitch, just the shape of what worked.
@@ -175,9 +179,9 @@ this creates honest urgency without fake scarcity.
 Hey Sarah, last note from me on this one.
 
 It seems like this kind of ops automation could be a genuine lift for a
-team at your stage - would it be off base to grab 20 minutes this week so
-I can show you what the onboarding pipeline looked like end-to-end and we
-can figure out if the same shape would map to Growlio?
+team at your stage - would it be off base to do a 20-min Ops Teardown this
+week? I screen-share, look at your stack, and tell you the first thing I'd
+automate at Growlio. You decide if it's worth building.
 
 If it's not the right timing, all good - I'll leave this alone and just
 stay in the network.
@@ -190,9 +194,9 @@ stay in the network.
 Hey James, last message from me on this - don't want to camp in your
 inbox.
 
-Would it be off base to do a 15-minute call this week so I can walk you
-through how the handoff layer was structured and see if there's anything
-worth mapping to your stack?
+Would it be off base to do a 20-min Ops Teardown this week? I screen-share
+your stack and show you the first thing I'd automate around that handoff
+layer. You decide if it's worth building.
 
 If it's a bad time, no worries - I'll catch you around the feed.
 

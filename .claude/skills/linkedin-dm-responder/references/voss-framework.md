@@ -80,22 +80,25 @@ End the message on the label or on a short follow-up calibrated question.
 like "what do you actually do?" or "how would you fix that?" or volunteered
 more detail about the problem.
 
-**Your move:** one result from Aleem's work that maps to their specific
+**Your move:** one named peer from the proof bank that maps to their specific
 pain. One. Not a list. Not a portfolio dump.
 
-Use the results bank in SKILL.md. Pick the single closest match.
+Use the proof bank in SKILL.md (Steve / Andrey / Mikey) — full bank +
+anonymized fallbacks in `sales-playbook/offer/proof-bank.md`. Pick the single
+closest match by pain pattern.
 
-- Their pain: manual onboarding → "Built a client onboarding pipeline for a
-  SaaS team that cut manual work by 70%."
-- Their pain: lead follow-up eating the week → "Built a lead-to-outreach
-  pipeline that cut manual follow-up time by 80% and removed 3 human
-  handoffs."
-- Their pain: slow email/CRM handling → "Built an AI-powered email + CRM
-  workflow that cut response time from hours to minutes."
+- Their pain: manual content + social posting → "Built the AI content + posting
+  workflow for Steve (agency owner) - took 10+ hrs/week off his team."
+- Their pain: lead routing / reporting / scattered tools → "Built the lead
+  routing + client reporting for Andrey (agency operator) - 10+ hrs/week back."
+- Their pain: wants ongoing build support → "Mikey's on an ongoing retainer with
+  me - one new workflow a month, 10+ hrs/week each."
+- No clean peer match → anonymized fallback: "Built the same setup for a
+  similar-sized team - 10+ hrs/week off their plate."
 
-**Why this works:** one specific, quantified, relevant result lands harder
-than a paragraph of capabilities. The brain remembers numbers. The brain
-remembers specificity. "70%" sticks. "We help with automation" doesn't.
+**Why this works:** one named peer plus a number lands harder than a paragraph
+of capabilities. The brain remembers specificity. "Andrey, 10+ hrs/week back"
+sticks. "We help with automation" doesn't.
 
 **Do not:** ask for the call immediately after proof. Let them pull.
 
@@ -143,12 +146,12 @@ questions start with *Would it be off base...*, *Is it a bad idea...*,
 other person the feeling of control — saying no is easy, which paradoxically
 makes saying yes easy too.
 
-- "Would it be off base to grab 15 minutes this week so I can show you
-  exactly what that onboarding automation looks like end-to-end?"
-- "Is it a bad idea to hop on a short call so I can map this against your
-  specific flow before scoping anything?"
-- "Would it be crazy to do a 20-minute scope conversation this week and
-  see if there's actually a fit?"
+- "Would it be off base to do a 20-min Ops Teardown this week? I screen-share
+  your stack and show you the first thing I'd automate."
+- "Is it a bad idea to do a quick teardown so I can map this against your
+  specific flow and tell you what I'd build first?"
+- "Would it be crazy to do a 20-min Teardown this week and see if there's
+  actually a fit?"
 
 **Why this works:** "yes-oriented" asks ("Do you want to jump on a call?")
 create pressure and trigger a polite-no reflex. "No-oriented" asks feel
@@ -245,19 +248,20 @@ re-learns what the last one figured out. That's the expensive version of
 the problem."
 
 **Them:** "Exactly. How would you even fix that?"
-**You (Proof):** "Built a client onboarding pipeline for a SaaS team
-recently that cut their manual onboarding work by 70% — the core move was
-turning the tribal knowledge into a structured flow the system runs,
-instead of leaving it in people's heads."
+**You (Proof):** "Built the workflow glue for Andrey, an agency operator with
+the same problem - took 10+ hrs/week off the team by turning the tribal
+knowledge into a structured flow the system runs, instead of leaving it in
+people's heads."
 
 **Them:** "Interesting. How long did something like that take?"
 **You (Pull):** "About 3 weeks. Most of the time was mapping what they
-actually did versus what they thought they did — the build itself went
+actually did versus what they thought they did, the build itself went
 fast once the flow was clear."
 
 **Them:** "That's exactly what we need. When could we talk?"
-**You (Call):** "Would it be off base to grab 20 minutes this week so I
-can map it against your specific onboarding flow before scoping anything?"
+**You (Call):** "Would it be off base to do a 20-min Ops Teardown this week? I
+screen-share your stack and show you the first thing I'd automate, you decide
+if it's worth building."
 
 Five messages. Clean progression. No pitch dump, no pressure, no
 corporate tone.
