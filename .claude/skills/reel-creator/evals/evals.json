@@ -1,0 +1,27 @@
+{
+  "skill_name": "reel-creator",
+  "notes": "Tests the Phase A authoring path (script + content.json) — the part automatable without the manual ElevenLabs step. The render is Phase B and needs a real voiceover.mp3, so it isn't covered by these evals. Each run should produce a content.json that passes scripts/validate_content.mjs.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "rag-chunking-technical-with-stats",
+      "prompt": "Make a reel from this LinkedIn post. Caption: \"Your RAG pipeline is probably retrieving garbage. The fix is boring: fix your chunking. I switched from fixed 512-token chunks to semantic chunking with overlap and re-ranking, and retrieval quality jumped. Most teams never touch this and blame the model.\" Source: my own experiment on a 12k-doc internal knowledge base — semantic chunking + 15% overlap + a cross-encoder re-ranker. Measured: 38% better retrieval precision, 26% fewer hallucinated answers, 19% lower token spend per query. No infographic yet, I'll add it before rendering.",
+      "expected_output": "A content.json at projects/reel-engine/public/reels/<slug>/ with a 90-130 word first-person voiceScript (hook in first sentence), 6 scenes in order whose voiceText concatenates to voiceScript exactly, stats[] = 38/26/19 with suffixes/labels matching the spoken order, topic-appropriate problem chips (or none), no em dashes, no agency/university mention. Passes scripts/validate_content.mjs. The script should be handed to the user as a copy-paste block.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "cold-email-nontechnical-qualitative",
+      "prompt": "Turn this Instagram post into a reel. Caption: \"3 reasons your cold emails get ignored. 1) You lead with your company instead of their problem. 2) Your subject line sounds like every other pitch. 3) You ask for a 30-minute call from a total stranger. Fix those three and replies go up.\" Source: patterns from running outreach for months — first line should mirror the prospect's world, subject lines under 4 words win, and a soft yes/no ask beats a calendar link. No hard percentages on this one. Infographic is in the folder already.",
+      "expected_output": "A content.json with a tight first-person voiceScript. Because there are no hard numbers, the stats scene uses 2-3 qualitative cards (or the script reframes into a 3-point list); problem chips fit the email topic (e.g. 'no reply', 'spam', 'ignored') or are omitted rather than left as code commands. No em dashes, no agency/university mention, voiceText concatenation equals voiceScript. Passes the validator.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "ai-agent-memory-render-phase",
+      "prompt": "The voiceover for the agent-memory reel is ready, I dropped voiceover.mp3 and infographic.png in the folder. Render it.",
+      "expected_output": "Recognizes this is Phase B (not authoring). Runs node scripts/prepare.mjs <slug> to transcribe + align, then npx remotion render Reel out/<slug>.mp4 with the slug prop. Reports the output path and flags if the length is outside 40-50s. Does NOT re-author the script.",
+      "files": []
+    }
+  ]
+}
