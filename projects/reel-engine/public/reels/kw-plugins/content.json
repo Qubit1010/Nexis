@@ -1,0 +1,65 @@
+{
+  "slug": "kw-plugins",
+  "platform": "linkedin",
+  "title": "Anthropic Knowledge Work Plugins",
+  "voiceScript": "What if AI worked like an org chart for your whole team, not just a chat window? Most people paste generic prompts into a box. It forgets your context and drifts from how you actually work. Anthropic's open-source Knowledge Work Plugins fix that. Role-based packages of skills, slash commands, tool connectors, and sub-agents, one tuned per job. It ships with 11 ready-made roles, four building blocks each, and it is completely free. AI should make every person an expert in their domain, not sit there as a toy. Start with one workflow, not everything at once. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if AI worked like an org chart for your whole team, not just a chat window?",
+      "headline": "An *org chart* for your AI",
+      "sub": "AI Workflows"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Most people paste generic prompts into a box. It forgets your context and drifts from how you actually work.",
+      "headline": "Generic prompts *drift* fast",
+      "sub": "and forget your context",
+      "chips": ["prompt bloat", "no context", "drift"],
+      "problemVariant": "glitch"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "Anthropic's open-source Knowledge Work Plugins fix that. Role-based packages of skills, slash commands, tool connectors, and sub-agents, one tuned per job.",
+      "headline": "Zero to an *operating system*",
+      "asset": "infographic.png",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Context", "goal": "Define boundaries" },
+        { "name": "Fire", "goal": "Trigger workflows" },
+        { "name": "Extend", "goal": "Wire in your tools" },
+        { "name": "Scale", "goal": "Build the org chart" }
+      ],
+      "cursorTarget": 2,
+      "callouts": [{ "text": "MCP connectors", "at": 2 }]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "It ships with 11 ready-made roles, four building blocks each, and it is completely free.",
+      "headline": "Open Source",
+      "stats": [
+        { "value": 11, "label": "roles, ready to use" },
+        { "value": 4, "label": "building blocks per plugin" },
+        { "value": 0, "prefix": "$", "label": "open source, Apache 2.0" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "AI should make every person an expert in their domain, not sit there as a toy.",
+      "headline": "Make everyone an *expert*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Start with one workflow, not everything at once. Follow for more.",
+      "cta": "Ready to make AI your operating system?"
+    }
+  ],
+  "source": "Anthropic Knowledge Work Plugins - open-source (Apache 2.0) role-specific packages for Claude Cowork and Claude Code. Turns agent setup into a team-distributed operating system / 'org chart for agents' via file-based markdown + JSON config. Each plugin = 4 components: Skills (domain workflows), Commands (slash commands like /sales:call-prep), Connectors (MCP servers into tools), Sub-agents (fan-out work). 11 out-of-the-box roles (Productivity, Sales, Customer Support, Product, Marketing, Legal, Finance, Data, Enterprise Search, Bio Research, Plugin Mgmt). 12-step roadmap across 4 phases: Context -> Fire -> Extend -> Scale. Best practice: start small, one narrow skill per job, review like code diffs, prune stale skills to avoid prompt bloat."
+}

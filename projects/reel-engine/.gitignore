@@ -1,0 +1,13 @@
+node_modules/
+out/
+whisper.cpp/
+tmp.json
+
+# Audio/video intermediates and scratch (keep voiceover.mp3 + infographic.png)
+public/reels/**/*.wav
+public/reels/**/voiceover_*.mp3
+
+# Large third-party reference clip (not needed to run the engine)
+public/reels/Motion-Video-Example.mp4
+
+.DS_Store

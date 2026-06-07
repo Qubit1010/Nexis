@@ -1,0 +1,64 @@
+{
+  "slug": "omnivoice",
+  "platform": "instagram",
+  "title": "OmniVoice",
+  "voiceScript": "What if your spokesperson could speak 646 languages overnight? Going global used to mean hiring a voice actor for every market, or settling for robotic text to speech. So I started using OmniVoice. You clone your voice from one short clip, then generate it in hundreds of languages, free from a Google Colab notebook. The edge is real. 646 languages from a single model, 97% accuracy that beats ElevenLabs, and zero dollars to use commercially. Your brand should sound human in every language, not robotic in just one. If you market across borders, this one is worth a weekend. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if your spokesperson could speak 646 languages overnight?",
+      "headline": "Your voice in *646* languages",
+      "sub": "AI Voiceovers"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Going global used to mean hiring a voice actor for every market, or settling for robotic text to speech.",
+      "headline": "Robotic AI *loses* audiences",
+      "sub": "and human actors cost a fortune",
+      "chips": ["robotic voices", "actor fees", "one language"],
+      "problemVariant": "crossout"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I started using OmniVoice. You clone your voice from one short clip, then generate it in hundreds of languages, free from a Google Colab notebook.",
+      "headline": "Built for *growth* marketers",
+      "asset": "infographic.png",
+      "visual": "funnel",
+      "funnel": [
+        { "name": "Awareness", "goal": "Get discovered" },
+        { "name": "Consideration", "goal": "Educate prospects" },
+        { "name": "Intent", "goal": "Production + integration" },
+        { "name": "Conversion", "goal": "Move users to paid" },
+        { "name": "Retention & Scale", "goal": "Scale, stay compliant" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The edge is real. 646 languages from a single model, 97% accuracy that beats ElevenLabs, and zero dollars to use commercially.",
+      "headline": "The Edge",
+      "stats": [
+        { "value": 646, "label": "languages, one model" },
+        { "value": 97, "suffix": "%", "label": "accuracy, beats ElevenLabs" },
+        { "value": 0, "prefix": "$", "label": "to use commercially" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Your brand should sound human in every language, not robotic in just one.",
+      "headline": "Sound *human* in every market",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If you market across borders, this one is worth a weekend. Follow for more.",
+      "cta": "Ready to take your brand global?"
+    }
+  ],
+  "source": "OmniVoice - open-source AI voice generator (text-to-speech + zero-shot voice cloning + text-driven voice design, one unified model). 646 languages/dialects, 2.85% Word Error Rate on multilingual benchmarks (beats ElevenLabs). Cross-lingual cloning from a 5-10s English clip into hundreds of languages. Direct delivery with intentional punctuation + expressive tags ([laugh],[sigh]). Free via Google Colab T4 GPU + Gradio; Apache 2.0 (free commercial use). Export 48kHz/24-bit WAV. Drawback: more technical onboarding, no built-in mixing suite, GDPR care when cloning real voices."
+}

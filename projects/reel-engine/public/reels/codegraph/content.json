@@ -1,0 +1,54 @@
+{
+  "slug": "codegraph",
+  "platform": "instagram",
+  "title": "CodeGraph",
+  "voiceScript": "What if you could cut your AI coding agent's workload by 58%? When I run AI agents on a large codebase, they burn time and tokens blindly scanning files. Every grep, glob, and read adds up fast. So I started using CodeGraph. It pre-indexes your whole codebase into a single map the agent can query in one shot, instead of crawling file by file. The gains were real. 58% fewer tool calls, 47% fewer tokens, and problems solved 22% faster. It even auto-syncs as I code, so the agent is never out of date. Here is why it matters. Your AI should drive outcomes, not quietly inflate your bill. If your agents feel slow and expensive, this one is worth a look. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if you could cut your AI coding agent's workload by 58%?",
+      "headline": "Cut your AI's workload by *58%*",
+      "sub": "AI Coding Agents"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "When I run AI agents on a large codebase, they burn time and tokens blindly scanning files. Every grep, glob, and read adds up fast.",
+      "headline": "AI agents *blindly* scan your code",
+      "sub": "burning time and tokens",
+      "chips": ["grep", "glob", "read", "grep", "read", "glob"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I started using CodeGraph. It pre-indexes your whole codebase into a single map the agent can query in one shot, instead of crawling file by file.",
+      "headline": "One pre-indexed *map* of your code",
+      "asset": "infographic.png"
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The gains were real. 58% fewer tool calls, 47% fewer tokens, and problems solved 22% faster. It even auto-syncs as I code, so the agent is never out of date.",
+      "headline": "Real benchmark gains",
+      "stats": [
+        { "value": 58, "suffix": "%", "label": "fewer tool calls" },
+        { "value": 47, "suffix": "%", "label": "fewer tokens used" },
+        { "value": 22, "suffix": "%", "label": "faster problem solving" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Here is why it matters. Your AI should drive outcomes, not quietly inflate your bill.",
+      "headline": "AI should drive *outcomes*"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If your agents feel slow and expensive, this one is worth a look. Follow for more.",
+      "cta": "Ready to make your AI faster and leaner?"
+    }
+  ],
+  "source": "CodeGraph - open-source pre-indexed knowledge graph for AI coding agents (symbols, call graphs, imports, inheritance). Benchmarks across 7 OSS repos: 58% fewer tool calls, 47% fewer tokens, 16% cheaper, 22% faster exploration. Local SQLite, no API keys, MCP integration, codegraph affected for CI."
+}

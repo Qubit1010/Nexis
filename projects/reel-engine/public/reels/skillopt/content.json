@@ -1,0 +1,65 @@
+{
+  "slug": "skillopt",
+  "platform": "linkedin",
+  "title": "SkillOpt",
+  "voiceScript": "What if your AI agent could teach itself, no fine-tuning needed? Most people improve agents by hand-tweaking prompts or retraining the whole model. It's slow, costly, and a black box. SkillOpt treats one text skill file like trainable parameters. A coach model proposes tiny edits, and each must prove it helps before it sticks. Best or tied in all 52 settings, a 60 point jump ported to a new agent, and the skill stays near 920 tokens. Real expertise shouldn't be locked in model weights. Put it in text you can read. If you build AI agents, this changes everything. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if your AI agent could teach itself, no fine-tuning needed?",
+      "headline": "Your AI can *train itself*",
+      "sub": "Agent Skills"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Most people improve agents by hand-tweaking prompts or retraining the whole model. It's slow, costly, and a black box.",
+      "headline": "Prompt tweaks don't *scale*",
+      "sub": "and weights are a black box",
+      "chips": ["hand-tweak prompts", "retrain the model", "black-box weights"],
+      "problemVariant": "crossout"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "SkillOpt treats one text skill file like trainable parameters. A coach model proposes tiny edits, and each must prove it helps before it sticks.",
+      "headline": "An optimizer for *plain text*",
+      "asset": "infographic.png",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Bounded Edits", "goal": "Small, safe diffs" },
+        { "name": "Validation Gate", "goal": "Keep only wins" },
+        { "name": "Reject Buffer", "goal": "Learn from misses" },
+        { "name": "Slow Update", "goal": "Lock in lessons" }
+      ],
+      "cursorTarget": 1,
+      "callouts": [{ "text": "the key stabilizer", "at": 1 }]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "Best or tied in all 52 settings, a 60 point jump ported to a new agent, and the skill stays near 920 tokens.",
+      "headline": "Proven, Portable",
+      "stats": [
+        { "value": 52, "label": "settings won or tied" },
+        { "value": 60, "prefix": "+", "label": "points on a new agent" },
+        { "value": 920, "label": "tokens, the whole skill" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Real expertise shouldn't be locked in model weights. Put it in text you can read.",
+      "headline": "Skills you can *read*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If you build AI agents, this changes everything. Follow for more.",
+      "cta": "Ready to let your agents train themselves?"
+    }
+  ],
+  "source": "SkillOpt - treats a natural-language skill document (a Markdown file, median ~920 tokens) as the trainable parameters of a 'frozen' AI agent. Optimization loop borrowed from neural net training, with a student (target) model + coach (optimizer) model. Mechanisms: Bounded Edits (textual learning rate, ~4-8 edits/step), Validation Gate (accept edit only if it strictly improves on held-out set), Rejected-Edit Buffer (log failures as in-context negative feedback), Epoch-Level Momentum (slow updates consolidate slow-state lessons). Best or tied-best in all 52 evaluated settings. Cross-harness portability: a skill trained in Codex dropped into Claude Code boosted performance ~60 points with zero retraining. Economics: use an expensive optimizer (GPT-5.5) offline, deploy best_skill.md to cheap small models (4B Qwen). Auditable: output is human-readable Markdown, change-controllable. Main hurdle: needs reliable automated verifiers / scalar reward; works for procedural tasks (spreadsheets, coding), struggles on subjective open-ended tasks."
+}

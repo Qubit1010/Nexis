@@ -1,0 +1,65 @@
+{
+  "slug": "ai-goals",
+  "platform": "instagram",
+  "title": "7 Steps to Manage AI Goals Better",
+  "voiceScript": "Most people give AI a vague goal and wonder why it runs in circles. No measurable outcome, no scope, no handshake between you and the agent. Claude Code's goal feature solves this. It loops the agent until your exact criteria is met, not until it gets bored. You define binary goals. The system maps human and agentic actions in parallel. While you record the video, the AI builds the opt-in engine. Three rules: goals must be measurable, scoped to roughly 20 turns, and self-served. Break any one and the loop collapses. AI shouldn't run in circles. Engineer the handshake. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Most people give AI a vague goal and wonder why it runs in circles.",
+      "headline": "AI *runs in circles* without this",
+      "sub": "Agentic Automation"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "No measurable outcome, no scope, no handshake between you and the agent.",
+      "headline": "Vague goals *break the loop*",
+      "sub": "and nothing ships",
+      "chips": ["no scope", "vague goals", "no handshake"],
+      "problemVariant": "glitch"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "Claude Code's goal feature solves this. It loops the agent until your exact criteria is met, not until it gets bored. You define binary goals. The system maps human and agentic actions in parallel. While you record the video, the AI builds the opt-in engine.",
+      "headline": "7 steps to *ship missions*",
+      "asset": "infographic.png",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Define Goals", "goal": "Binary, measurable, scoped" },
+        { "name": "Map Handshake", "goal": "Human + agentic split" },
+        { "name": "Execute", "goal": "Run in parallel" },
+        { "name": "Loop", "goal": "Until criteria is met" }
+      ],
+      "cursorTarget": 1,
+      "callouts": [{ "text": "real-world handshake", "at": 1 }]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "Three rules: goals must be measurable, scoped to roughly 20 turns, and self-served.",
+      "headline": "Goal Rules",
+      "stats": [
+        { "value": 3, "label": "criteria every goal must meet" },
+        { "value": 20, "label": "max turns per scoped sprint" },
+        { "value": 4, "label": "weeks to ship a mid-term mission" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Break any one and the loop collapses. AI shouldn't run in circles. Engineer the handshake.",
+      "headline": "Engineer the *handshake*",
+      "punchVariant": "rule"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Follow for more.",
+      "cta": "Ready to ship your first binary goal?"
+    }
+  ],
+  "source": "Claude Code /goal feature (also called Ralph loop) - loops agent until exact criteria met. Standard goals: measurable, scoped to ~20 turns, self-served. Mid-term goals: 3-4 weeks, definitive binary deliverable (e.g. 5-day email course with 500 signups in a month). Managed via Agentic OS with Mission Control dashboard. Real-world handshakes = parallel human tasks (record videos) + agentic technical sprints (build opt-in engine, Firecrawl research). System asks clarifying questions instead of guessing. 7-step framework: Define Binary Goals, Audit Local Context, Clarify System Constraints, Map the Handshake, Execute Human Actions, Launch Technical Sprints, Loop Until Complete."
+}

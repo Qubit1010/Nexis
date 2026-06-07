@@ -1,0 +1,66 @@
+{
+  "slug": "multica",
+  "platform": "linkedin",
+  "title": "Multica Managed Agents",
+  "voiceScript": "What if you could assign work to AI the way you assign it to your team? Most people treat AI like a tool. Endless back-and-forth in a chat, and every useful answer gets lost in the logs. Multica treats AI agents as real teammates. Five layers turn a local daemon into named agents, a task board, squads, and scheduled autopilots. It runs five AI runtimes, retries failed tasks twice on its own, and it is completely free. AI is not a sidekick. It is part of the team. Stop chatting with your AI and start assigning to it. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if you could assign work to AI the way you assign it to your team?",
+      "headline": "Assign AI like a *teammate*",
+      "sub": "Managed AI Agents"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Most people treat AI like a tool. Endless back-and-forth in a chat, and every useful answer gets lost in the logs.",
+      "headline": "AI as a *tool* falls short",
+      "sub": "knowledge dies in the chat logs",
+      "chips": ["back-and-forth chats", "lost in the logs", "siloed knowledge"],
+      "problemVariant": "crossout"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "Multica treats AI agents as real teammates. Five layers turn a local daemon into named agents, a task board, squads, and scheduled autopilots.",
+      "headline": "Five layers, one *team*",
+      "asset": "infographic.png",
+      "visual": "layers",
+      "layers": [
+        { "name": "Runtime", "goal": "Local daemon + config" },
+        { "name": "Identity", "goal": "Persistent named agents" },
+        { "name": "Execution", "goal": "Task lifecycle" },
+        { "name": "Delegation", "goal": "Squads + skills" },
+        { "name": "Automation", "goal": "Scheduled autopilots" }
+      ],
+      "cursorTarget": 4,
+      "callouts": [{ "text": "runs on cron", "at": 4 }]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "It runs five AI runtimes, retries failed tasks twice on its own, and it is completely free.",
+      "headline": "Why it works",
+      "stats": [
+        { "value": 5, "label": "AI runtimes supported" },
+        { "value": 2, "label": "auto-retries on failure" },
+        { "value": 0, "prefix": "$", "label": "open source" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "AI is not a sidekick. It is part of the team.",
+      "headline": "AI is part of the *team*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Stop chatting with your AI and start assigning to it. Follow for more.",
+      "cta": "Ready to put your agents on the team?"
+    }
+  ],
+  "source": "Multica - open-source managed agents platform that treats AI coding agents as first-class assignable teammates (Linear/Jira-style Kanban surface) instead of chat interfaces. Core model: Workspaces, Agents (persistent identities bound to a runtime + provider: Claude Code, Codex, GitHub Copilot CLI, Cursor Agent, Gemini), Runtimes (local daemon auto-detects installed agent CLIs). 5 layers: Runtime (daemon+config, injects CLAUDE.md/AGENTS.md) -> Identity (persistent agents) -> Execution (task lifecycle: Queued/Dispatched/Running/Completed-Failed, WebSocket progress, auto-retry up to 2x) -> Delegation (Squads under a leader agent + reusable Skills bundles) -> Automation (Autopilots on cron). Early production (v0.2.x); lacks deep governance/enterprise integrations; some known bugs (importing skills with binary assets)."
+}
