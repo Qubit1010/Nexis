@@ -456,7 +456,7 @@ Move immediately. Do not wait. The gap between verbal yes and signed paperwork i
 |-------------------|-------|
 | Research a prospect before the call | `discovery-call-prep` skill |
 | Generate AI use cases for the pitch phase | `ai-use-case-generator` skill |
-| Draft the next DM in the sequence | `linkedin-dm-responder` or `instagram-dm-responder` skill |
+| Draft the next DM in the sequence | `sales-playbook` skill, or the Sales Playbook Dashboard (`projects/sales-playbook-dashboard/`) |
 | Decide when to pitch or push for the call | This playbook, Section 2 |
 | Run the discovery call | This playbook, Section 4 |
 | Write the proposal after the call | `proposal-generator` skill |

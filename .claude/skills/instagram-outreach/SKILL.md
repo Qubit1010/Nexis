@@ -26,7 +26,7 @@ This system only generates messages and tracks status. All sending is manual.
 > - **Captures `Recent Caption` per lead** — the missing personalization signal. Touch 1 messages now reference post-specific content, not generic bio
 > - **Lead offer locked to AI automation** (`sales-playbook/offer/ai-automation-positioning.md`) — never lead with web
 > - **Banned-phrase filter** from `sales-playbook/references/what-not-to-do.md` applied at generation
-> - Once prospect replies → handoff to `instagram-dm-responder` skill or read `sales-playbook/scripts/live-conversation-playbook.md`
+> - Once prospect replies → read `sales-playbook/scripts/live-conversation-playbook.md` (or draft the reply in the Sales Playbook Dashboard, `projects/sales-playbook-dashboard/`)
 
 ## CRM Location
 
