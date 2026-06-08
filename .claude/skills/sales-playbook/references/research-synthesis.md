@@ -304,3 +304,21 @@ While the exact phrase "best closing question" is not explicitly designated in t
 
 ---
 
+## Live Query Additions
+
+Findings from on-demand live queries to the **NexusPoint Sales Playbook Research** NotebookLM notebook (the same corpus this synthesis was built from), captured when the original Q1-Q5 synthesis didn't fully answer a specific question. Each entry is dated and tagged to the relevant Q section. Procedure: `notebook-live-query.md`. New live-query results get appended here (this is the growing source of truth - scan it before re-querying).
+
+### [2026-06-07] (Q5 - Re-engaging a ghosted prospect)
+
+Re-engaging a B2B prospect who showed interest then went silent:
+- **Give an easy exit (pattern interrupt), don't beg.** Sandler follow-up-fatigue line: *"It seems like this may have dropped in priority - should we pause for now or revisit later?"* Or: *"[Name] - should I park this? Totally fine if the timing isn't right. If it is, [peer] cut [metric] by [%] within [timeframe] after their [same trigger]."*
+- **Remove friction + soft urgency:** if they went quiet after a "maybe," send exact deliverables/pricing plus a real deadline ("finalizing our roster for [month], ideally confirm by [date]").
+- **Never "just following up":** that language performs **~48% worse** than a fresh value/content hook.
+- **Breakup, then archive:** final "last ping, promise" message; if still silent, archive and return in 6-12 months.
+- **Cadence (warm lead):** first follow-up ~**48 hours** after silence, then **1-2 weeks**; email sequences **3-5 follow-ups**, spacing 2-4 days then 5-7 days. Best mid-morning (9-10am) Tue/Thu. Following up <24h cuts replies **23%**; waiting >7 days drops them **14%**.
+- **Why follow-ups matter (data):** **55% of replies come after the 2nd+ email**; 2-3 follow-ups can lift response **up to 65.8%**; first follow-up = **+40-49%**; **84% of positive replies land within the first 4 emails**; after 5 follow-ups lift flattens to ~0% and spam risk spikes.
+
+Source: NexusPoint Sales Playbook Research notebook (live query, within the locked corpus; 15 citations mapping to the cold-outreach / follow-up sources behind Q1 + Q5). Cross-ref `scripts/live-conversation-playbook.md` + `frameworks/objection-riffs.md`.
+
+---
+

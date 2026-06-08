@@ -1,0 +1,63 @@
+{
+  "slug": "ai-workspace",
+  "platform": "instagram",
+  "title": "The Dawn of AI-Powered Workspaces",
+  "voiceScript": "AI isn't just another tool in your workspace. It's a silent partner. And 77% of companies already run on it. Most teams just bolt AI on as a plug-and-play add-on, then wonder why nothing changes. So I stopped bolting it on and started embedding it. Three levels: a basic assistant, woven into your workflows, then autonomous agents. And the payoff is real. 48% less time on busywork, 72% of teams adopting it, up to 10x more output. Done right, AI goes invisible. Like electricity, quietly powering everything you do. If your AI still feels bolted on, you're leaving real gains behind. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "AI isn't just another tool in your workspace. It's a silent partner. And 77% of companies already run on it.",
+      "headline": "AI is your *silent partner*",
+      "sub": "AI Workspaces"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Most teams just bolt AI on as a plug-and-play add-on, then wonder why nothing changes.",
+      "headline": "Most teams just *bolt it on*",
+      "sub": "and nothing really changes",
+      "problemVariant": "crossout",
+      "chips": ["Plug-and-play add-on", "A separate tool", "Replacing humans"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I stopped bolting it on and started embedding it. Three levels: a basic assistant, woven into your workflows, then autonomous agents.",
+      "headline": "From assistant to *autonomous*",
+      "visual": "funnel",
+      "asset": "infographic.png",
+      "funnel": [
+        { "name": "Ad-Hoc AI", "goal": "Basic assistant" },
+        { "name": "Embedded AI", "goal": "Into your workflows" },
+        { "name": "Agentic Ops", "goal": "Autonomous agents" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "And the payoff is real. 48% less time on busywork, 72% of teams adopting it, up to 10x more output.",
+      "headline": "The payoff",
+      "stats": [
+        { "value": 48, "suffix": "%", "label": "less time on busywork" },
+        { "value": 72, "suffix": "%", "label": "of teams adopting AI" },
+        { "value": 10, "suffix": "x", "label": "more strategic output" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Done right, AI goes invisible. Like electricity, quietly powering everything you do.",
+      "headline": "Invisible, like *electricity*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If your AI still feels bolted on, you're leaving real gains behind. Follow for more.",
+      "cta": "Ready to embed AI, not bolt it on?"
+    }
+  ],
+  "source": "Post: 'The Dawn of AI-Powered Workspaces'. Stats: 77% of businesses leveraging AI; 72% of professionals using AI at work by 2025 (up from 48% prior year); McKinsey 30% productivity gain; Forrester 51% cite poor data quality; logistics client 40% cost cut. Infographic ('The AI-Powered Workspace') is a 3-stage funnel: Ad-Hoc AI (non-tech, standalone assistant) -> Embedded AI (mid, woven into infrastructure) -> Agentic Operations (advanced, autonomous multi-step agents), with 48% time saved / 72% workforce adoption / 10x strategic innovation. Core thesis: embed AI, don't bolt it on; augment humans, don't replace them; done right it goes invisible like electricity. Agency name + academic references stripped from spoken script per personal-brand rule.",
+  "handle": "@nexuspoint"
+}

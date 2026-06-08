@@ -1,75 +1,121 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import OpenAI from "openai";
-import type { ResearchOutput, ContentMode, PillarKey } from "@/lib/types";
+import type { ContentMode, PillarKey } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
+// Spec mirrors .claude/skills/content-engine/references/platform-formats.md (2026 research
+// from marketing-advisor). Keep the two in sync when either changes.
 const PLATFORM_SPECS: Record<string, string> = {
-  "LinkedIn Text Post": `200-400 words MAX. Strong 3-line hook (each line is its own paragraph).
-Body: 3-4 short insight paragraphs, each 1-2 sentences. Specific and personal.
-End with an open question. No headers. Lots of white space. Cut every sentence that doesn't add new information.
-After the closing question, add these two lines exactly as written (on their own lines):
-♻ Repost this to help modernize leadership
-👋 Follow Aleem Ul Hassan career growth, AI, leadership, and mindset strategies`,
+  "LinkedIn Text Post": `150-300 words. The hook is the first 125-150 characters (what shows before "see more") — a bold claim, a number, or a specific moment. Each of the first 3 lines is its own short paragraph. Never waste line 1 on context.
+Body: 3-4 short insight paragraphs, 1-2 sentences each. Specific and personal. Write to be read slowly — dwell time is the #1 ranking signal.
+NO link in the body (an external link cuts reach 50-70%). If a link is essential, end with "link's in the comments" instead.
+No headers, no emojis, no em dashes. Lots of white space, one idea per line.
+End with ONE specific question that invites a real reply. Do NOT add a generic "follow me" or "repost" line — the close must be a value-native question, a "save this", or a comment-to-DM trigger.
+Hashtags: 1-2 relevant, or none.`,
 
-  "LinkedIn Article": `600-900 words. SEO-friendly H1 title (use primary_keyword if available).
-Intro: hook + problem statement. Body: 2-3 sections with H2 headers. Specific data from research.
-Conclusion: key takeaway + CTA.`,
+  "LinkedIn Carousel": `LinkedIn document (PDF) carousel — the #1 organic format on LinkedIn (6.6-7% engagement rate). 6-12 slides. For EACH slide output exactly this structure (no deviations):
+
+Slide N Visual Concept: [One sentence describing the layout/visual treatment — clean, high-contrast]
+Headline Text: [Bold, punchy text, max 10 words]
+Subtext: [1-2 supporting sentences]
+
+Slide 1 (cover): a strong standalone hook that works as a thumbnail (max 8 words headline), high contrast.
+Slides 2 to N-1: one insight, step, or argument per slide, consistent layout.
+Last slide: a value-native CTA + handle ("Save this" or a comment-to-DM trigger — NOT a generic "follow me").
+
+After the slides, add:
+Post text: 50-150 words of context to post alongside the document. Hook first, no link in the body.`,
+
+  "LinkedIn Article": `600-1200 words. SEO-friendly H1 (use primary_keyword if available). Open with a bold claim or a specific moment — zero throat-clearing.
+Body: 2-3 H2 sections (H2 every 200-300 words), specific data from research.
+Conclusion: framework/lesson + one value-native CTA (not a generic follow ask). Write at least 600 words.`,
 
   "LinkedIn Newsletter": `400-600 words. Conversational tone. Intro: why this matters now.
-Body: 2-3 main insights with examples. End: one actionable takeaway.`,
+Body: 2-3 main insights with examples. End: one actionable takeaway. No "follow me" boilerplate.`,
 
-  "Instagram Carousel": `5-8 slides. For EACH slide output exactly this structure (no deviations):
+  "Instagram Carousel": `6-8 slides. For EACH slide output exactly this structure (no deviations):
 
 Slide N Visual Concept: [One sentence describing the background, visual element, or graphic treatment]
 Headline Text: [The bold, punchy text on the slide — max 10 words]
 Subtext: [1-2 supporting sentences that expand the headline]
 
-Slide 1: STOP-SCROLL HOOK — shocking stat, bold claim, or counter-intuitive statement (max 8 words headline).
+Slide 1: STOP-SCROLL HOOK — shocking stat, bold claim, or counter-intuitive statement (max 8 words headline). The cover must stand alone as a thumbnail.
 Slide 2: Set up the problem or context.
-Slides 3-5: One insight, step, or argument per slide.
-Slide 6 (optional): Bonus tip or contrarian take.
-Last slide: CTA — "Follow for more" or "Save this."
+Slides 3-6: One insight, step, or argument per slide.
+Last slide: value-native CTA — "Save this if you're building one" or a comment-to-DM trigger (NOT a bare "Follow for more").
 
 After all slides, add:
-Caption: 100-250 chars, hooks the scroll, max 2 emojis.
-Hashtags: use research hashtags if available.`,
+Caption: 100-250 chars, hooks the scroll, ends with a question or save prompt, max 2 emojis.
+Hashtags: 3-5 niche tags (use research hashtags if available — never a 30-tag wall).`,
 
-  "Instagram Caption": `Standalone Instagram caption (no slides, no script).
+  "Instagram Caption": `Standalone Instagram caption (no slides, no script). 125-250 words.
 Structure:
 - Line 1: STOP-SCROLL hook — bold claim, counter-intuitive statement, or provocative question. This line must work standalone.
 - Lines 2-6: Build the argument. Short punchy sentences. Each line earns the next. Use personal experience, specific numbers, or a concrete insight. No fluff.
-- Line 7-8: Zoom out — the broader principle or why this matters.
-- Final line: CTA or open question that invites a reply or save.
-Length: 150-300 words (not chars). Enough depth to earn engagement, short enough to not lose them.
-Line breaks: one blank line between each section for Instagram readability.
+- Then zoom out: the broader principle or why this matters.
+- Final line: a value-native CTA — an open question, "save this", or a comment-to-DM trigger. NOT a bare "follow me".
+Line breaks: one blank line between each section for readability.
 Max 2 emojis, placed where they add emphasis — not as decoration at the end.
-Before hashtags, add these two lines exactly as written (on their own lines):
-♻ Repost this to help modernize leadership
-👋 Follow Aleem Ul Hassan career growth, AI, leadership, and mindset strategies
-Hashtags (on a new line after those two lines): 3-4 highly relevant tags only. Quality over quantity.`,
+Hashtags (on a new line): 3-5 highly relevant niche tags only. Quality over quantity.`,
 
-  "Instagram Reel": `Short-form video script. Hook (0-3s): visual + spoken hook.
-Body (3-30s): 3-5 punchy points, one per scene. Outro (30-45s): CTA.
-Include [B-ROLL] notes. Keep spoken lines under 10 words each.`,
+  "Instagram Reel": `Short-form video script, 15-30 seconds (completion beats length). COLD OPEN — drop straight into the climax, motion in the first frame, NO "hey guys / today I want to talk about".
+Hook (0-3s): spoken AND on-screen text — win this or lose 50% of viewers.
+Body (3-25s): 3-5 punchy beats, one per scene, spoken lines under 10 words. Include [B-ROLL] notes.
+Close (final 2-5s): one value-native CTA (often comment-to-DM).
+Note at the top that kinetic captions are mandatory (most watch on mute) and to optimize for saves + sends, not likes.`,
 
-  "Instagram Short Video": `45-90 second video script. Hook + problem + 3 insights + CTA.
-Format: [SCENE] descriptions + spoken dialogue.`,
+  "Instagram Short Video": `45-90 second video script. Cold-open hook + problem + 3 insights + value-native CTA.
+Format: [SCENE] descriptions + spoken dialogue. Include [B-ROLL]. Kinetic captions mandatory.`,
 
-  "Blog Article": `700-1200 words. SEO-optimized. Use primary_keyword in H1 title.
-Intro: hook + problem + what you'll learn (no "In today's landscape" openings).
-Body: 2-3 H2 sections. Embed 2 data_points from research naturally.
-Conclusion: summary + actionable next step + soft CTA.`,
+  "Blog Article": `800-1500 words. SEO + AI-citable: use primary_keyword in a natural H1 (under 60 chars), put a crisp definition/summary near the top, and write self-contained factual sentences (AI engines like ChatGPT/Perplexity should be able to quote you).
+Intro: hook + problem + what you'll learn (NO "In today's landscape" openings).
+Body: 4-6 H2 sections (H2 every 200-350 words; that many sections is how you reach 800+ words). Embed 2 data_points from research naturally with inline citation; answer 1-2 people_also_ask questions as their own H2s.
+Conclusion: zoom out to the universal pattern + one clear next step.
+When the topic allows, prefer a comparison ("X vs Y") or customer-voiced angle, which convert far better.
+Write the FULL 800-1500 words. Do not stop short of 800 words; if you are short, deepen an example or add a sub-section.`,
 
   "Blog Tutorial": `Step-by-step guide. 600-1000 words. H1: "How I [did X]" format.
-Intro: why this matters + quick result. Steps: numbered, specific, with code/examples if relevant.
+Intro: why this matters + quick result. Steps: numbered, specific, with code/examples if relevant. Show one failure mode.
 End: result + what to try next.`,
 
   "Blog Opinion": `400-700 words. Strong POV. H1: contrarian statement.
 Intro: the popular belief you're challenging (use a fresh phrase each time — e.g. "what most people think", "the standard advice", "what everyone assumes", "the default take", "the accepted playbook" — never repeat the same phrase). Body: why it's wrong + your experience.
 End: what you actually believe + invite disagreement.`,
 };
+
+// Hardcoded CTA footer appended above the hashtags on standalone social posts.
+// Deliberately post-processed (not prompted) because the prompt forbids "follow me"/"repost"
+// lines, so the model will never produce this on its own.
+const CTA_FOOTER =
+  "♻ Repost this to help modernize leadership\n\n" +
+  "👋 Follow Aleem Ul Hassan career growth, AI, leadership, and mindset strategies";
+
+// Only the standalone post formats that end in a bare hashtag block.
+const CTA_FOOTER_FORMATS = new Set(["LinkedIn Text Post", "Instagram Caption"]);
+
+function injectCtaFooter(content: string, platform: string, format: string): string {
+  if (!CTA_FOOTER_FORMATS.has(`${platform} ${format}`)) return content;
+
+  const lines = content.replace(/\s+$/, "").split("\n");
+  // Walk up from the bottom over trailing blank lines and hashtag lines.
+  let boundary = lines.length;
+  while (boundary > 0) {
+    const t = lines[boundary - 1].trim();
+    if (t === "" || t.startsWith("#")) boundary--;
+    else break;
+  }
+
+  if (boundary === lines.length) {
+    // No trailing hashtag block — just append the footer.
+    return `${lines.join("\n")}\n\n${CTA_FOOTER}`;
+  }
+
+  const body = lines.slice(0, boundary).join("\n").replace(/\s+$/, "");
+  const hashtags = lines.slice(boundary).join("\n").trim();
+  return `${body}\n\n${CTA_FOOTER}\n\n${hashtags}`;
+}
 
 function getFormatSpec(platform: string, format: string): string {
   const key = `${platform} ${format}`;
@@ -78,6 +124,13 @@ function getFormatSpec(platform: string, format: string): string {
     PLATFORM_SPECS[`${platform} ${Object.keys(PLATFORM_SPECS).find((k) => k.includes(format)) || ""}`] ||
     `Write a complete ${format} for ${platform}. 300-600 words. Hook first, specific details, end with CTA.`
   );
+}
+
+// Long-form formats need more output headroom so they don't truncate (1200 tokens ~= 900 words).
+function getMaxTokens(platform: string, format: string): number {
+  const key = `${platform} ${format}`;
+  const longForm = new Set(["LinkedIn Article", "LinkedIn Newsletter", "Blog Article", "Blog Tutorial"]);
+  return longForm.has(key) ? 2400 : 1400;
 }
 
 const PILLAR_DEFINITIONS: Record<PillarKey, string> = {
@@ -123,35 +176,11 @@ function buildPrompt(
   platform: string,
   format: string,
   topic: string,
-  research: ResearchOutput | null,
   context?: string,
   contentMode?: ContentMode,
   selectedPillars?: PillarKey[]
 ): string {
   const spec = getFormatSpec(platform, format);
-  const hasResearch = research?.available && research.primary_keyword;
-
-  let researchBlock = "";
-  if (hasResearch) {
-    researchBlock = `
-RESEARCH DATA (use this to make the content specific and credible):
-- Primary keyword: ${research!.primary_keyword}
-- Secondary keywords: ${research!.secondary_keywords?.join(", ") || "none"}
-- Content gap (your differentiated angle): ${research!.content_gap || "none"}
-${
-  research!.data_points?.length
-    ? `- Data points to use:\n${research!.data_points
-        .slice(0, 3)
-        .map((d) => `  • ${d.fact} (${d.source})`)
-        .join("\n")}`
-    : ""
-}
-${
-  research!.hashtags?.length && platform === "Instagram"
-    ? `- Hashtags: ${research!.hashtags.join(" ")}`
-    : ""
-}`;
-  }
 
   const modeBlock = contentMode ? `\n${MODE_INSTRUCTIONS[contentMode]}\n` : "";
 
@@ -174,12 +203,12 @@ If any element is missing, rewrite until all four are present.
 ${pillarsBlock}
 
 CONTENT LADDER — aim for level 7+ only, never below 5:
-FORBIDDEN: AI summaries / SEO blogs / generic tutorials / neutral explainers
+FORBIDDEN: AI summaries / generic SEO filler / generic tutorials / neutral explainers (SEO done WITH a strong POV and real experience is encouraged for blogs)
 REQUIRED: Case studies, essays with POV, personal frameworks, original theories, public thinking in real time
 
-GOLDEN PATTERN (for long-form and LinkedIn):
+GOLDEN PATTERN (for blog long-form and LinkedIn text posts/articles ONLY, never carousels or video):
 Real problem -> Naive/wrong approach -> Discovery -> Mistake made -> Insight extracted -> Extractable principle
-Example: Start with the problem you actually faced. Show your wrong first instinct. Reveal what you learned. End with a principle that generalises beyond your specific case.
+This shapes the narrative arc ONLY. Never use the step names ("Discovery", "Mistake Made", "Insight Extracted", "The Principle") as literal headlines, slide titles, or section labels. Carousel slide headlines must be punchy content, not framework labels.
 
 ANTI-PATTERNS — never produce any of these:
 - "Here are [N] ways to..." with no personal stake
@@ -190,12 +219,12 @@ ANTI-PATTERNS — never produce any of these:
 
 VOICE RULES — apply without exception:
 - Write as Aleem in first person: "I", "my", "I built", "I tried", "I noticed"
-- No em dashes — use commas or short sentences instead
+- PUNCTUATION: no em dashes or en dashes (use commas, periods, or short sentences). Use only straight ASCII apostrophes (') and quotes ("), never curly or smart quotes. Smart punctuation corrupts when the text is saved or pasted.
 - No emojis for LinkedIn or Blog; maximum 2 emojis for Instagram
 - Specific > vague: replace "many companies" with actual numbers from the research data
-- Hook first — never bury the lead
+- Hook first, never bury the lead
 - Short sentences. White space. No corporate filler.
-- BREVITY: Stay within the word count. Cut ruthlessly. If a sentence doesn't add new information, delete it. Do not pad, summarize, or repeat points already made.
+- LENGTH DISCIPLINE: hit the target word count in the format spec. At least the minimum, never over the maximum. If you are under the minimum, add another concrete example, data point, or sub-point, never filler. Every sentence must add new information. Do not stop short of the minimum.
 
 ALEEM'S CONTEXT (use this to inform voice — but do NOT name the agency or reference school/university/being-a-student in the output):
 - 25-year-old founder building AI automation systems from Islamabad, Pakistan
@@ -204,7 +233,6 @@ ALEEM'S CONTEXT (use this to inform voice — but do NOT name the agency or refe
 - Interests beyond tech: Philosophy, Science, Stoicism, History, systems thinking, gym discipline
 - Audience: startup founders, tech entrepreneurs, developers, AI-curious builders
 - Core message: AI as a business outcome driver, not a tech toy. Chatbots are v1. Agents are v2.
-${researchBlock}
 ${context ? `\nSOURCE MATERIAL (use facts, quotes, and specifics from this to ground the content — do not summarize it, extract what's useful and make it Aleem's own):\n${context}\n` : ""}
 PLATFORM: ${platform}
 FORMAT: ${format}
@@ -213,17 +241,16 @@ TOPIC: ${topic}
 FORMAT SPECIFICATIONS:
 ${spec}
 
-Write the complete, finished, publish-ready content. Output ONLY the content — no intro like "Here's the post:", no commentary, no markdown headers around the piece itself. Just the content.`;
+Write the complete, finished, publish-ready content that meets the minimum word count. Output ONLY the content, no intro like "Here's the post:", no commentary, no markdown wrapper around the piece. Use straight ASCII quotes and apostrophes, and no em dashes.`;
 }
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { topic, platform, format, research, context, contentMode, selectedPillars } = body as {
+    const { topic, platform, format, context, contentMode, selectedPillars } = body as {
       topic: string;
       platform: string;
       format: string;
-      research?: ResearchOutput;
       context?: string;
       contentMode?: ContentMode;
       selectedPillars?: PillarKey[];
@@ -246,7 +273,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const prompt = buildPrompt(platform, format, topic, research ?? null, context, contentMode, selectedPillars);
+    const prompt = buildPrompt(platform, format, topic, context, contentMode, selectedPillars);
+    const maxTokens = getMaxTokens(platform, format);
 
     let content = "";
     let usedFallback = false;
@@ -256,7 +284,7 @@ export async function POST(req: NextRequest) {
         const anthropic = new Anthropic({ apiKey: anthropicKey });
         const message = await anthropic.messages.create({
           model: "claude-sonnet-4-6",
-          max_tokens: 1200,
+          max_tokens: maxTokens,
           messages: [{ role: "user", content: prompt }],
         });
         content = message.content[0]?.type === "text" ? message.content[0].text : "";
@@ -273,12 +301,14 @@ export async function POST(req: NextRequest) {
       const openai = new OpenAI({ apiKey: openaiKey });
       const completion = await openai.chat.completions.create({
         model: "gpt-4o",
-        max_tokens: 2500,
+        max_tokens: Math.max(maxTokens, 2000),
         temperature: 0.8,
         messages: [{ role: "user", content: prompt }],
       });
       content = completion.choices[0]?.message?.content ?? "";
     }
+
+    content = injectCtaFooter(content, platform, format);
 
     return NextResponse.json({ content, ...(usedFallback && { provider: "openai" }) });
   } catch (err) {

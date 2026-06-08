@@ -19,20 +19,20 @@ export const KineticHeadline: React.FC<{
   const { fps } = useVideoConfig();
 
   // Parse *accent* spans that may cover multiple words (e.g. "*org chart*").
-  // A word is accented if it sits inside an asterisk-delimited span; the
-  // asterisks themselves are stripped from the rendered text.
+  // A word is accented if any of its characters sit inside an asterisk-delimited
+  // span; every asterisk is stripped, even when adjacent to punctuation
+  // (e.g. "*workflow*," → blue "workflow," and the accent closes correctly).
   let inAccent = false;
   const words = text.split(" ").map((raw) => {
-    let word = raw;
+    let word = "";
     let accent = inAccent;
-    if (word.startsWith("*")) {
-      accent = true;
-      inAccent = true;
-      word = word.slice(1);
-    }
-    if (word.endsWith("*")) {
-      word = word.slice(0, -1);
-      inAccent = false;
+    for (const ch of raw) {
+      if (ch === "*") {
+        inAccent = !inAccent;
+        accent = accent || inAccent;
+        continue;
+      }
+      word += ch;
     }
     return { word, accent };
   });

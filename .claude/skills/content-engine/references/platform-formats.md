@@ -1,101 +1,138 @@
-# Platform Format Specifications
+# Platform Format Specifications (2026)
 
-Use these specs as a checklist when writing content. Every piece should hit all the
-structural requirements for its platform before it goes out.
+Use these specs as a checklist when writing content. Every piece must hit its platform's
+structural requirements before it goes out.
+
+**Source basis:** Aligned to the 2026 research in `marketing-advisor/references/` -
+`linkedin-playbook.md`, `instagram-reels-playbook.md`, `content-strategy-playbook.md`,
+`channel-benchmarks.md`, `what-not-to-do.md`. These are the canonical word counts and
+rules; the dashboard's `generate/route.ts` PLATFORM_SPECS mirrors this file - keep them in
+sync. Numbers are targets to beat, measured against real performance.
 
 ---
 
 ## Instagram
 
-### Carousel
-- **Slides:** 5-8 total
-- **Slide 1 (Cover):** Hook only. Max 8 words. This is the scroll-stopper — if it doesn't
-  grab attention instantly, nobody sees the rest.
-- **Slides 2-6:** One idea per slide. Single sentence label + 1-sentence elaboration.
-  Keep it skimmable — people swipe fast.
-- **Final slide:** CTA. Examples: "Follow for more AI automation tips" or
-  "DM me 'automate' for the workflow template"
-- **Caption:** 100-300 characters. Expand slightly on the hook. End with a question to
-  drive comments.
-- **Hashtags:** 2-4 from research output. No spam hashtag walls.
-- **Tone:** Personal. "I noticed / I built / I tried" — not generic advice.
-- **Optimal posting:** Tue-Fri, 6-9am or 6-9pm PKT
-
-### Reel Script
-- **Duration:** 30-60 seconds
+### Reel Script (highest-reach format - 55% of views from non-followers)
+- **Duration:** 15-30 seconds is the sweet spot. Completion beats length: a 15s reel at 80%
+  completion outperforms a 60s reel at 20%. Go longer only if retention holds.
+- **Cold open:** Drop straight into the climax. NO "hey guys / today I want to talk about."
+  Motion must be in the very first frame (a static-looking frame gets swiped past).
 - **Structure:**
-  - Hook (0-3s): Must be spoken AND visible as on-screen text
-  - Problem (3-10s): Why this matters
-  - Insight/Solution (10-40s): The actual value
-  - CTA (40-60s): One specific ask
-- **Write as spoken dialogue** — not prose. Short sentences. Natural pauses.
-- **Tone:** Casual, direct, energetic
+  - Hook (0-3s): spoken AND on-screen. Win this or lose 50% of viewers. Use "you", a number,
+    a contrarian claim, or a direct question.
+  - Payoff (3-25s): 3-5 punchy beats, one idea each. Short spoken lines (<10 words).
+  - Close (final 2-5s): one value-native CTA (see CTA rules), often comment-to-DM.
+- **Kinetic captions are mandatory** (60-85% watch on mute; captions add ~25% retention).
+- **Write as spoken dialogue**, include [B-ROLL] notes. Optimize for **saves + sends**, not likes.
+- **Cadence:** 3-5 Reels/week.
 
-### Single Image Caption
-- **Length:** 100-300 characters
-- **First sentence:** Hook
-- **Second sentence:** Value or observation
-- **End:** Question or soft CTA
-- **Hashtags:** 2-4
+### Carousel (MOFU - drives saves/trust)
+- **Slides:** 6-8 total.
+- **Slide 1 (Cover):** Hook only, max 8 words. Must stand alone as a thumbnail and stop the scroll.
+- **Slides 2-7:** One idea per slide. Single label + 1-sentence elaboration. Skimmable.
+- **Final slide:** value-native CTA (e.g. "Save this if you're building one" or a comment-to-DM trigger).
+- **Caption:** 100-250 characters. Expand the hook, end with a question or save prompt.
+- **Hashtags:** 3-5 niche tags (never 30 - that is a spam penalty).
+- **Tone:** Personal. "I noticed / I built / I tried", not generic advice.
 
-### Story
-- Max 2 sentences
-- Quick behind-the-scenes observation or reaction
-- Optional: question sticker for engagement
+### Standalone Caption (single image/text post)
+- **Length:** 125-250 words.
+- Line 1 = standalone STOP-SCROLL hook. Lines 2-6 build the argument (short, specific, personal).
+  Then zoom out to the broader principle. Final line = value-native CTA or open question.
+- **Line breaks** every 1-2 sentences. Max 2 emojis, only where they add emphasis.
+- **Hashtags:** 3-5 niche.
+
+### Story (BOFU - direct, low-reach)
+- Max 2 sentences. Quick behind-the-build or reaction. Optional question/poll sticker.
+
+### Instagram funnel
+Reels (awareness) -> Carousels (saves/trust) -> Stories (direct). Reels rarely convert
+directly; their job is reach. Capture leads with **comment-to-DM** ("comment X and I'll send it"),
+which hands the DM conversation to the sales-playbook skill.
+
+### Posting
+- 3-5 posts/week. Best windows (local): 7-9am, 11am-1pm, 7-10pm. Post 15-30 min before a peak.
 
 ---
 
 ## LinkedIn
 
+### Document Carousel (PDF) - THE #1 organic format (6.6-7% engagement rate)
+Default to this for educational/framework content - it out-performs text and video.
+- **Slides:** 6-12. One insight per slide, consistent layout.
+- **Cover:** strong hook, high contrast, works as a standalone thumbnail.
+- **Final slide:** value-native CTA + handle.
+- **Accompanying post text:** 50-150 words of context before they open the doc.
+
 ### Text Post
-- **Length:** 300-800 words
-- **Hook (lines 1-3):** Must earn the "see more" click. The first 3 lines are all
-  most people see — open with a bold statement, a number, or a personal story moment.
-  Never waste line 1 on context-setting.
-- **Body structure:**
-  Hook -> Context (why this matters) -> 3-5 value bullets or numbered insights -> Resolution/lesson
-- **CTA:** End with one specific question to drive comments. Not "let me know your
-  thoughts" — something like "What's the biggest automation win you've had this year?"
-- **No emojis**
-- **No em dashes** — use commas or short sentences
-- **Spacing:** Single-line sentences separated by blank lines. Never a wall of text.
-  LinkedIn rewards scannable formatting.
-- **Tone:** Authoritative + personal. Founder perspective, not corporate voice.
-- **Optimal posting:** Tue-Thu, 9am-12pm or 5-6pm PKT
+- **Length:** 150-300 words (sweet spot). Narrative/story posts may run to ~500 words
+  (1,300-3,000 chars, which perform ~38% better) only if the formatting is flawless.
+- **Hook:** the first 125-150 characters (the part shown before "see more") decide everything.
+  Bold claim, number, or a specific moment. Never waste line 1 on context. Contrarian hooks
+  lift reach ~49%.
+- **Body:** Hook -> why it matters -> 2-4 short insight beats -> resolution/principle.
+- **No external link in the body** (cuts reach 50-70%). If you must link, tell the reader it
+  is in the comments and add it 30-60 min after posting.
+- **CTA:** one specific question that invites a real reply. Never "Follow me for more."
+- **No emojis. No em dashes.** One idea per line, blank lines between. Write to be *read*
+  (dwell time is the #1 signal: a 61s+ read earns ~13x the engagement of a 3s skim).
+- **Hashtags:** 1-2 relevant, or none (3-5 cuts reach ~29%).
 
-### Carousel (Document Post)
-- **Slides:** 5-10
-- **Cover:** Must work as a standalone thumbnail. Strong hook, high contrast.
-- **Body slides:** One insight per slide, consistent format throughout
-- **Final slide:** CTA + handle (@aleem or profile link)
-- **Accompanying caption:** 50-150 words to give context before they open the doc
+### Article (long-form)
+- **Length:** 600-1200 words. H2 every 200-300 words. Open with a bold claim or a moment,
+  zero throat-clearing. Claim -> evidence -> framework/lesson -> CTA.
 
-### Article (LinkedIn Long-form)
-- **Length:** 600-1200 words
-- **H2 headers:** Every 200-300 words
-- **Opening:** Bold claim or personal story — zero preamble, zero throat-clearing
-- **Structure:** Claim -> Evidence -> Framework or lesson -> CTA
+### Newsletter
+- **Length:** 400-600 words. Conversational. Why this matters now -> 2-3 insights with
+  examples -> one actionable takeaway. (Newsletters bypass the feed, 40-60% open rates.)
+
+### Distribution mechanics (apply to every LinkedIn post)
+- **Golden Hour:** the first 60 min on 2-5% of your network decides reach; it needs ~5%+
+  engagement to expand. Reply to every comment in that window. A 10+ word comment from you
+  carries 5-7x the weight of a like.
+- **Engage before you post:** comment on 5-10 niche posts in the 15 min before publishing.
+- **Cadence:** 3-5 posts/week, Tue-Thu, 7-9am / 12-1pm / 2-4pm local. Personal profile only
+  (8x the reach of a company page). Don't edit in the first 10-15 min (resets evaluation).
 
 ---
 
 ## Blog (Website)
 
 ### Long-form Article
-- **Length:** 800-2000 words
-- **SEO title:** Use `primary_keyword` from research output. Under 60 characters.
-  Should read naturally, not keyword-stuffed.
-- **H2 headers:** Every 200-350 words. Include `secondary_keywords` naturally in H2s
-  where they fit — don't force it.
-- **Opening paragraph:** State the problem and the promise in 3 sentences. No filler.
-  Reader should know exactly what they'll learn before hitting the first H2.
-- **Structure:**
-  Problem -> Context -> Solution/framework -> Examples with real data -> Takeaways
-- **Data:** Embed 2-3 statistics from research `data_points` as supporting evidence.
-  Cite the source inline.
-- **People Also Ask:** Address 1-2 questions from research `people_also_ask` as H2
-  subheadings. This boosts featured snippet potential.
-- **Closing:** 2-sentence summary + one clear CTA (follow for more, DM for a resource,
-  or link to a related post)
-- **Internal linking:** Reference other blog posts or tools when genuinely relevant
-- **Never start with:** "In today's rapidly evolving AI landscape..." or any variation.
-  Start with the problem or the story.
+- **Length:** 800-1500 words.
+- **SEO + AI-citability:** use `primary_keyword` in a natural title under 60 chars. Structure
+  for machines too - clear H2s, a crisp definition/summary near the top, and self-contained
+  factual sentences. AI-search referrals (ChatGPT/Perplexity) convert ~3.49% (a 22% lift over
+  organic), so being *quotable by an AI engine* is now a ranking goal.
+- **H2 headers:** every 200-350 words (roughly 4-6 sections for an 800-1500 word piece); weave `secondary_keywords` in naturally.
+- **Opening:** state the problem and the promise in ~3 sentences. Never "In today's rapidly
+  evolving AI landscape" or any variant. Start with the problem or the story.
+- **Structure:** Problem -> context -> solution/framework -> examples with real data -> takeaways.
+- **Data:** embed 2-3 statistics from research `data_points`, cited inline.
+- **People Also Ask:** answer 1-2 `people_also_ask` questions as H2s (featured-snippet + AI-cite bait).
+- **Close:** 2-sentence zoom-out to the universal pattern + one clear next step.
+- **Internal links:** to related posts/tools when genuinely relevant.
+
+### Tutorial ("How I" format)
+- **Length:** 600-1000 words. H1 "How I [did X]". Why it matters + quick result -> numbered,
+  specific steps (with code/examples if relevant) -> result + what to try next. Show one failure mode.
+
+### Opinion / POV
+- **Length:** 400-700 words. H1 = a contrarian statement. Name the belief you reject (fresh
+  phrasing each time, never "conventional wisdom") -> why it's wrong + your experience ->
+  what you actually believe + invite disagreement.
+
+### High-converting blog angles (prioritize)
+- **Comparison "X vs Y"** pages convert ~3.2x feature pages.
+- **Customer-voiced stories** (in the client's own words) beat polished case studies ~3:1.
+Use these angles when the topic allows - they drive business outcomes, not just reads.
+
+---
+
+## Brand constraints (all platforms)
+- Personal-brand content NEVER names the agency or references university/degree/student status
+  or classrooms (hard rule). Reframe as "in my own work / from what I've shipped / building real systems."
+- Hit the word-count floor: long-form (blog, LinkedIn article) must reach the minimum, not stop short.
+  If under, deepen an example or add a sub-section, never filler.
+- Every piece must pass the Unswappable Formula and voice rules in `voice-principles.md`.

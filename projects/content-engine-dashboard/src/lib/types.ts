@@ -166,25 +166,27 @@ export interface ScoredIdea {
   date?: string;
 }
 
-// ---- research_topic.py output types ----
+// ---- research_notebooklm.py output types ----
 
-export interface DataPoint {
-  fact: string;
-  source: string;
+export interface NLMSource {
+  id: string;
+  title: string;
+  url: string;
 }
 
-export interface ResearchOutput {
-  topic: string;
+export interface NotebookLMSourcesOutput {
   available: boolean;
+  topic: string;
   error?: string;
-  primary_keyword?: string;
-  secondary_keywords?: string[];
-  data_points?: DataPoint[];
-  competing_angles?: string[];
-  content_gap?: string;
-  people_also_ask?: string[];
-  hashtags?: string[];
-  searched_at?: string;
+  notebook_id?: string;
+  notebook_url?: string;
+  sources?: NLMSource[];
+}
+
+export interface NotebookLMAskOutput {
+  available: boolean;
+  answer?: string;
+  error?: string;
 }
 
 // ---- Weekly Schedule columns (shared between API route and modal) ----

@@ -66,11 +66,14 @@ NexusPoint is a digital agency helping startups and businesses scale through web
 
 | Channel | Status | Notes |
 |---------|--------|-------|
-| Upwork/Fiverr | Active | Primary revenue source, platform-dependent, must reduce reliance |
-| Cold email | Building | 300+ leads scraped, pipeline being set up |
-| LinkedIn | Not yet active | Highest priority new channel for B2B positioning |
-| Content/social | Not yet active | Planned for audience building and thought leadership |
+| Upwork/Fiverr | Active | Still a revenue source; reduce reliance over time |
+| Cold email | Live | Pipeline built (cold-outreach skill); bottleneck is consistency + conversion, not setup |
+| LinkedIn | Live | Outreach + organic both running; founder-led content is the priority lever |
+| Instagram | Live | Outreach pipeline live; Reels for personal-brand reach |
+| Content/social | Live (inconsistent) | Engine + dashboard built; gap is publishing 3-5x/week consistently |
 | Referrals | Organic only | No structured referral program yet |
+
+> Channel tactics are now research-backed for 2026. See `channel-benchmarks.md` (the scoreboard) and the per-channel playbooks (`linkedin-playbook.md`, `instagram-reels-playbook.md`, `email-marketing-playbook.md`, `content-strategy-playbook.md`). Full evidence: `research-synthesis.md`.
 
 ---
 

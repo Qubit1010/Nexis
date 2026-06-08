@@ -6,15 +6,17 @@ import { Search, Loader2, Wand2, Link, FileText } from "lucide-react";
 import { ResearchPanel } from "@/components/research-panel";
 import { ContentOutput } from "@/components/content-output";
 import { LogPostModal } from "@/components/log-post-modal";
-import type { ResearchOutput, ContentMode, PillarKey } from "@/lib/types";
+import type { ContentMode, PillarKey, NLMSource, NotebookLMSourcesOutput, NotebookLMAskOutput } from "@/lib/types";
 
 type Platform = "LinkedIn" | "Instagram" | "Blog";
 type FormatMap = Record<Platform, string[]>;
+type ResearchPhase = "idle" | "fetching-sources" | "selecting" | "fetching-response" | "response";
+type ResearchDepth = "light" | "medium" | "deep";
 
 const PLATFORMS: Platform[] = ["LinkedIn", "Instagram", "Blog"];
 
 const FORMATS: FormatMap = {
-  LinkedIn: ["Text Post", "Article", "Newsletter"],
+  LinkedIn: ["Text Post", "Carousel", "Article", "Newsletter"],
   Instagram: ["Carousel", "Reel", "Short Video", "Caption"],
   Blog: ["Article", "Tutorial", "Opinion"],
 };
@@ -65,8 +67,14 @@ function CreatePageInner() {
   const [contentMode, setContentMode] = useState<ContentMode>("opinion");
   const [selectedPillars, setSelectedPillars] = useState<PillarKey[]>(MODE_DEFAULTS.opinion);
 
-  const [research, setResearch] = useState<ResearchOutput | null>(null);
-  const [researching, setResearching] = useState(false);
+  // NotebookLM research state
+  const [researchDepth, setResearchDepth] = useState<ResearchDepth>("medium");
+  const [researchPhase, setResearchPhase] = useState<ResearchPhase>("idle");
+  const [nlmSources, setNlmSources] = useState<NLMSource[]>([]);
+  const [nlmNotebookId, setNlmNotebookId] = useState<string>("");
+  const [nlmNotebookUrl, setNlmNotebookUrl] = useState<string>("");
+  const [selectedSourceIds, setSelectedSourceIds] = useState<Set<string>>(new Set());
+  const [nlmResponse, setNlmResponse] = useState<string>("");
   const [researchError, setResearchError] = useState<string | null>(null);
 
   const [generatedContent, setGeneratedContent] = useState("");
@@ -74,7 +82,6 @@ function CreatePageInner() {
   const [generateError, setGenerateError] = useState<string | null>(null);
   const [showLogModal, setShowLogModal] = useState(false);
 
-  // When platform changes, reset format to first option
   useEffect(() => {
     setFormat(FORMATS[platform][0]);
   }, [platform]);
@@ -113,22 +120,85 @@ function CreatePageInner() {
 
   async function runResearch() {
     if (!topic.trim()) return;
-    setResearching(true);
+    setResearchPhase("fetching-sources");
     setResearchError(null);
-    setResearch(null);
+    setNlmSources([]);
+    setSelectedSourceIds(new Set());
+    setNlmResponse("");
     try {
       const res = await fetch("/api/research", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ topic: topic.trim() }),
+        body: JSON.stringify({ topic: topic.trim(), depth: researchDepth }),
       });
-      const data: ResearchOutput = await res.json();
-      setResearch(data);
+      const data: NotebookLMSourcesOutput = await res.json();
+      if (!data.available) {
+        setResearchError(data.error ?? "Research unavailable");
+        setResearchPhase("idle");
+        return;
+      }
+      const sources = data.sources ?? [];
+      setNlmSources(sources);
+      setNlmNotebookId(data.notebook_id ?? "");
+      setNlmNotebookUrl(data.notebook_url ?? "");
+      // All sources are topic-scoped from a fresh research pass — pre-select all.
+      setSelectedSourceIds(new Set(sources.map((s) => s.id)));
+      setResearchPhase("selecting");
     } catch (err) {
       setResearchError(err instanceof Error ? err.message : String(err));
-    } finally {
-      setResearching(false);
+      setResearchPhase("idle");
     }
+  }
+
+  function toggleSource(id: string) {
+    setSelectedSourceIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function selectAll() {
+    setSelectedSourceIds(new Set(nlmSources.map((s) => s.id)));
+  }
+
+  function deselectAll() {
+    setSelectedSourceIds(new Set());
+  }
+
+  async function fetchResponse() {
+    if (selectedSourceIds.size === 0) return;
+    setResearchPhase("fetching-response");
+    setResearchError(null);
+    try {
+      const res = await fetch("/api/research/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic: topic.trim(), notebookId: nlmNotebookId, sourceIds: [...selectedSourceIds] }),
+      });
+      const data: NotebookLMAskOutput = await res.json();
+      if (!data.available) {
+        setResearchError(data.error ?? "No response from NotebookLM");
+        setResearchPhase("selecting");
+        return;
+      }
+      setNlmResponse(data.answer ?? "");
+      setResearchPhase("response");
+    } catch (err) {
+      setResearchError(err instanceof Error ? err.message : String(err));
+      setResearchPhase("selecting");
+    }
+  }
+
+  function useAsContext() {
+    setContextMode("text");
+    setPastedText(nlmResponse);
+  }
+
+  function backToSources() {
+    setResearchPhase("selecting");
+    setResearchError(null);
   }
 
   async function generateContent() {
@@ -145,7 +215,7 @@ function CreatePageInner() {
       const res = await fetch("/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ topic: topic.trim(), platform, format, research, context, contentMode, selectedPillars }),
+        body: JSON.stringify({ topic: topic.trim(), platform, format, context, contentMode, selectedPillars }),
       });
       const data = await res.json() as { content?: string; error?: string };
       if (data.error) throw new Error(data.error);
@@ -156,6 +226,8 @@ function CreatePageInner() {
       setGenerating(false);
     }
   }
+
+  const isBusy = researchPhase === "fetching-sources" || researchPhase === "fetching-response";
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-8">
@@ -297,7 +369,7 @@ function CreatePageInner() {
               <textarea
                 value={pastedText}
                 onChange={(e) => setPastedText(e.target.value)}
-                placeholder="Paste an article, notes, or any source material..."
+                placeholder="Paste an article, notes, or research context... (or use Run Research → Use as Context)"
                 rows={5}
                 className="w-full px-4 py-3 rounded-xl bg-[#111111] border border-[rgba(255,255,255,0.08)] text-[13px] text-white placeholder-[#444] focus:outline-none focus:border-[rgba(32,142,199,0.4)] transition-colors resize-none"
               />
@@ -334,15 +406,39 @@ function CreatePageInner() {
             )}
           </div>
 
+          {/* Research depth */}
+          <div>
+            <p className="text-[12px] font-semibold text-[#555] uppercase tracking-wide mb-2">Research Depth</p>
+            <div className="flex gap-2">
+              {(["light", "medium"] as const).map((d) => {
+                const meta = { light: { label: "Light", hint: "8-12 sources" }, medium: { label: "Medium", hint: "20-25 sources" } };
+                return (
+                  <button
+                    key={d}
+                    onClick={() => setResearchDepth(d)}
+                    className={`flex-1 flex flex-col items-center py-2 rounded-lg text-[12px] font-medium border transition-all duration-150 ${
+                      researchDepth === d
+                        ? "bg-[rgba(32,142,199,0.12)] text-[#208ec7] border-[rgba(32,142,199,0.3)]"
+                        : "bg-[#111111] text-[#666] border-[rgba(255,255,255,0.06)] hover:text-white hover:border-[rgba(255,255,255,0.12)]"
+                    }`}
+                  >
+                    <span>{meta[d].label}</span>
+                    <span className={`text-[10px] mt-0.5 ${researchDepth === d ? "text-[#4a9bc7]" : "text-[#444]"}`}>{meta[d].hint}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           {/* Action buttons */}
           <div className="flex gap-3">
             <button
               onClick={runResearch}
-              disabled={researching || !topic.trim()}
+              disabled={isBusy || !topic.trim()}
               className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#111111] border border-[rgba(32,142,199,0.2)] text-[#208ec7] text-[13px] font-semibold hover:bg-[rgba(32,142,199,0.08)] disabled:opacity-40 transition-all duration-150"
             >
-              {researching ? (
-                <><Loader2 className="w-4 h-4 animate-spin" />Researching…</>
+              {researchPhase === "fetching-sources" ? (
+                <><Loader2 className="w-4 h-4 animate-spin" />Searching…</>
               ) : (
                 <><Search className="w-4 h-4" />Run Research</>
               )}
@@ -362,7 +458,7 @@ function CreatePageInner() {
 
           {researchError && (
             <div className="rounded-xl border border-[rgba(255,100,100,0.2)] bg-[rgba(255,100,100,0.05)] p-3">
-              <p className="text-[12px] text-[#e05c5c]">Research error: {researchError}</p>
+              <p className="text-[12px] text-[#e05c5c]">Research: {researchError}</p>
             </div>
           )}
           {generateError && (
@@ -382,7 +478,7 @@ function CreatePageInner() {
             />
           )}
 
-          {/* Log post button — shown once content is generated */}
+          {/* Log post button */}
           {generatedContent && !generating && (
             <button
               onClick={() => setShowLogModal(true)}
@@ -393,27 +489,22 @@ function CreatePageInner() {
           )}
         </div>
 
-        {/* Right col — research panel */}
+        {/* Right col — NotebookLM research panel */}
         <div>
-          {!research && !researching && (
-            <div className="flex flex-col items-center justify-center h-64 rounded-xl border border-dashed border-[rgba(32,142,199,0.15)] text-center p-6">
-              <Search className="w-8 h-8 text-[#333] mb-3" />
-              <p className="text-[14px] text-[#444] font-medium">No research yet</p>
-              <p className="text-[12px] text-[#333] mt-1">
-                Run Research first to get keywords, data points, and hashtags. The Generate button works without it too.
-              </p>
-            </div>
-          )}
-
-          {researching && (
-            <div className="flex flex-col items-center justify-center h-64 rounded-xl border border-[rgba(32,142,199,0.1)] bg-[#111111] text-center p-6">
-              <Loader2 className="w-8 h-8 text-[#208ec7] animate-spin mb-3" />
-              <p className="text-[13px] text-[#666]">Searching the web…</p>
-              <p className="text-[11px] text-[#444] mt-1">Powered by OpenAI web search</p>
-            </div>
-          )}
-
-          {research && !researching && <ResearchPanel data={research} />}
+          <ResearchPanel
+            phase={researchPhase}
+            sources={nlmSources}
+            notebookUrl={nlmNotebookUrl}
+            selectedSourceIds={selectedSourceIds}
+            response={nlmResponse}
+            error={researchError}
+            onToggleSource={toggleSource}
+            onSelectAll={selectAll}
+            onDeselectAll={deselectAll}
+            onGetResponse={fetchResponse}
+            onUseAsContext={useAsContext}
+            onBackToSources={backToSources}
+          />
         </div>
       </div>
 

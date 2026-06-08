@@ -416,6 +416,28 @@ def insert_tables(doc_id, table_locations):
                 print(f"Warning: Failed to populate table cells: {e}", file=sys.stderr)
 
 
+_SMART_QUOTE_TABLE = str.maketrans({
+    "‘": "'",   # left single quotation mark
+    "’": "'",   # right single quotation mark / apostrophe
+    "“": '"',   # left double quotation mark
+    "”": '"',   # right double quotation mark
+    "—": " - ", # em dash
+    "–": "-",   # en dash
+    "…": "...", # ellipsis
+})
+
+
+def normalize_text(value):
+    """Recursively replace smart quotes, em/en dashes with ASCII equivalents."""
+    if isinstance(value, str):
+        return value.translate(_SMART_QUOTE_TABLE)
+    if isinstance(value, dict):
+        return {k: normalize_text(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [normalize_text(item) for item in value]
+    return value
+
+
 def validate_content(content):
     if not isinstance(content, dict):
         error_exit("Input must be a JSON object")
@@ -441,6 +463,7 @@ def main():
         error_exit(f"Invalid JSON input: {e}")
 
     validate_content(content)
+    content = normalize_text(content)
 
     title = content["title"]
     sections = content["sections"]

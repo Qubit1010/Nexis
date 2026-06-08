@@ -1,161 +1,107 @@
-# Content Strategy Playbook
+# Content Strategy Playbook 2026
 
-Distilled from Alex Hormozi's $100M Leads and applied to NexusPoint's agency context.
+**Source basis:** Rebuilt research-first from `references/research-synthesis.md` Q5 + Q2/Q3 (234-source NotebookLM synthesis). Citations map to `_research/sources.json`. Replaces the prior Hormozi-only version; the timeless ideas (give value free, "How I" not "How to," repurpose) survive because the 2026 data backs them. Used by the **content-engine** skill for `create`/`full` modes and by marketing-advisor for content planning.
 
----
-
-## Core Philosophy
-
-- **Give away your secrets for free.** Show people how you solve problems so they trust you enough to hire you to do it for them.
-- Content is 1-to-many warm audience building. It scales trust without scaling your time.
-- Your free stuff should be better than your competitors' paid stuff.
-- "Give in public, ask in private." Let your audience self-select when they're ready to buy.
-- Switch from "How to" to "How I." Share what you did, not what people should do. No one argues with your experience.
+**Brand rule (NexusPoint):** Aleem's personal-brand content does NOT mention the agency name or his university/BSAI background. Lead with personal experience, a strong opinion, a cross-domain insight, and a clear identity (the "unswappable" format). No emojis unless asked; no em dashes in external copy.
 
 ---
 
-## Hook-Retain-Reward Framework
+## Core philosophy (still true, now evidenced)
 
-Every piece of content is a "Content Unit" with three required components:
-
-### Hook (Grab Attention)
-The first line, image, or frame that stops the scroll. Use news-style triggers:
-
-| Trigger | Example |
-|---------|---------|
-| Recency | "We just automated a client's entire lead pipeline in 3 days" |
-| Relevancy | "If you're a SaaS founder spending 10+ hours on manual ops..." |
-| Conflict | "Most agencies sell you a website. That's the wrong product." |
-| Unusual | "We replaced a 4-person data entry team with a Python script" |
-
-Format the hook to match the platform (text-first on LinkedIn, visual-first on Instagram).
-
-### Retain (Keep Attention)
-Once they click, keep them consuming. Drive retention through curiosity:
-- **Lists:** "5 automations every startup needs" (they want to see all 5)
-- **Steps:** "Here's exactly how we did it" (they want the full process)
-- **Stories:** "A client came to us with..." (they want the resolution)
-
-### Reward (Deliver Value)
-Satisfy the promise of your hook. Deliver high value per second of attention.
-- The metric: if your audience is growing, your reward is working. If not, your content isn't rewarding enough.
-- End with a clear CTA (comment, DM, link) but keep the give:ask ratio extremely high.
+- **Give away the strategy for free.** Helpful, unpromoted content converts; Reddit/forum help converts **3-4x** vs search traffic, and customer-voiced stories beat polished case studies **3:1** [s201].
+- **"How I" beats "How to."** Share what you did, not what people should do - no one argues with your experience. In 2026 this also reads as authentic (AI can't fake your specific story), which the algorithms now reward.
+- **Authentic personal brands are the differentiator against AI noise** - but it takes **12-24 months** of consistency to hit compounding inbound [s110]. Set that expectation.
 
 ---
 
-## Content Types for Agencies
+## Hook -> Retain -> Reward, with 2026 retention data
 
-| Type | Description | Example |
-|------|-------------|---------|
-| Case studies / BAB | Before-After-Bridge transformation stories | "Client was losing $8K/month on manual processes. We built X. Now they save 20hrs/week." |
-| Behind-the-scenes | Show the build process, tools, decisions | "Here's the n8n workflow I built this morning" |
-| Quick tips / educational | One actionable insight per post | "The #1 thing killing your website conversions" |
-| Hot takes | Contrarian opinions on industry trends | "AI won't replace agencies. But agencies using AI will replace those that don't." |
-| Client wins / social proof | Results, testimonials, metrics | Screenshot of client message + context |
-| Tool breakdowns | Tech stack reveals, tool comparisons | "Why we switched from X to Y (and the results)" |
-| Building in public | Share progress on internal projects | "Week 3 of building our cold email system. Here's what's working." |
+Every piece is still Hook / Retain / Reward, but the margins are brutal now.
 
----
+**Hook (win the first 3 seconds):** up to **50% scroll past short-form in 3s** = 71% of all drop-off; if you don't hook by 15s, retention falls below 45% [s69]. Proven hook formulas [s3]:
+- **Mystery:** "Did you know [surprising fact]?" (hooks with 22M+ views)
+- **Mistake:** "3 mistakes everyone makes about X" (doubles engagement)
+- **Exclusivity:** "Only 1% of [audience] know this" (+80% shareability)
+- **Transformation:** "How I went from [bad] to [result] in [timeframe]" (+217% lead acquisition)
 
-## Platform-Specific Tactics
+**Retain:** dynamic cuts every **2-4s**, a scene/pattern change every ~3 sentences, **~75 words per 30s** of script. 60-85% watch on mute, so **kinetic captions are mandatory (+25% retention)** [s69, s175]. On text platforms, retention = dwell time (LinkedIn rewards 61s+ dwell at 13x the ER of a 3s skim) [s186].
 
-### LinkedIn (Priority 1 for B2B)
-
-| Element | Recommendation |
-|---------|---------------|
-| Best formats | Text posts (storytelling), carousels (educational), document posts |
-| Posting frequency | 3-5x/week minimum. Daily is better. |
-| Hook patterns | Start with a bold statement, number, or question. First line must earn the "...see more" click. |
-| Comment strategy | Comment on 10-20 posts from ICPs daily before posting your own content |
-| Give:Ask ratio | 10:1 minimum. Most posts are pure value. Rare CTAs. |
-| Profile optimization | Headline = who you help + what outcome. Banner = social proof or offer. Featured = case study or lead magnet. |
-
-### Instagram
-
-| Element | Recommendation |
-|---------|---------------|
-| Best formats | Reels (reach), carousels (saves/engagement), stories (nurturing) |
-| Visual style | Clean, minimal, consistent color palette. No stock photos. |
-| Hashtag strategy | 5-10 niche-specific hashtags. Mix broad and narrow. |
-| Bio | One line on what you do, one line on who you help, CTA to link/DM |
-
-### Twitter/X
-
-| Element | Recommendation |
-|---------|---------------|
-| Best formats | Threads (educational), single tweets (hot takes), quote tweets (engagement) |
-| Engagement | Reply to 20+ relevant tweets daily. Add value, not "great post!" |
-| Building in public | Share metrics, lessons, progress updates. Authenticity wins. |
+**Reward:** satisfy the hook's promise with real value. The metric: if your audience is growing and saves/sends are climbing, the reward is working.
 
 ---
 
-## Give:Ask Strategy
+## What drives revenue vs vanity (spend your time here)
 
-Two approaches (use one or combine):
+| Drives revenue | Drives vanity (deprioritize) |
+|----------------|------------------------------|
+| Comparison / "X vs Y" content (3.2x conversion vs feature pages) [s201] | Generic "Future of the Industry" thought leadership (≈0 buyer interest) |
+| Customer-voiced stories (3:1 vs polished case studies) | Static infographics (high shares, ≈0 conversion) |
+| Helpful forum/Reddit participation (3-4x vs search) | Viral shorts with no offer (<0.1% conversion) |
+| Behavior-triggered email (45% open vs 18%) | Raw reach / likes as a goal |
 
-| Approach | How It Works | Example |
-|----------|-------------|---------|
-| **Integrated** | Every post has value + tiny CTA | 58 minutes of giving in a podcast, 1.5-minute ask at end |
-| **Intermittent** | 10 pure value posts, then 1 promotional post | Post value content all week, one "we're taking 2 clients" post on Friday |
+For NexusPoint content types that map to this: "how I built X" automation stories, before/after ops teardowns, tool breakdowns, contrarian takes on AI/agencies, client wins (quantified, customer-voiced). Source: also `nexuspoint-positioning.md`.
 
 ---
 
-## Content Calendar Template
+## Platform-native rules (don't copy-paste across platforms)
 
-| Day | Content Type | Platform Focus |
-|-----|-------------|----------------|
-| Monday | Case study / client win | LinkedIn + Twitter |
-| Tuesday | Educational tip / how-I | LinkedIn + Instagram carousel |
-| Wednesday | Behind-the-scenes / build | Twitter + Instagram story |
-| Thursday | Hot take / industry opinion | LinkedIn + Twitter |
-| Friday | Tool breakdown / tech stack | LinkedIn + Instagram |
-| Weekend | Repurpose best performer into other formats | Cross-platform |
+Repurposing is **structural translation**, not copy-paste: a blog idea becomes an opinionated POV on LinkedIn and a fast cold-open narrative on a Reel [s33].
 
-### Batch Creation Workflow
-1. Block 2-3 hours once per week for content creation
-2. Write 5-7 LinkedIn posts in one sitting
-3. Design carousels/visuals in batch (delegate to Areeba)
-4. Schedule using Buffer/Hootsuite or native scheduling
-5. Spend 15-20 min daily on engagement (comments, DMs, replies)
+- **LinkedIn:** carousels (6.6-7% ER, highest) + "how I" text posts (150-300 words) + native video. 3-5x/week, Tue-Thu. No links in body. Full detail: `linkedin-playbook.md`.
+- **Instagram/Reels:** 15-30s, cold-open hook, captions, 3-5 niche hashtags, 3-5/week. Reels = TOFU -> carousels = MOFU -> stories = BOFU. Full detail: `instagram-reels-playbook.md`.
+- **YouTube:** 1 long-form/week + 3-5 Shorts/week to funnel discovery into depth [s220].
+- **Blog:** pillar pieces that feed the flywheel + comparison/bottom-funnel pages that actually convert.
 
-### Repurposing Chain
-1 long-form piece (case study, thread) becomes:
-- 1 LinkedIn text post
-- 1 Instagram carousel
-- 1 Twitter thread
+---
+
+## The repurposing flywheel (the leverage move)
+
+One "hero" asset = **20-30 derivative pieces** (a 3,000-word pillar or a 45-60 min webinar holds 12-15 "knowledge atoms") [s33]. AI-assisted repurposing cuts per-piece cost from $150-300 to **$40-80** and delivers a **3.2x cross-channel impression multiplier** [s33].
+
+**NexusPoint repurposing chain** (1 pillar ->):
+- 1 LinkedIn carousel + 1-2 LinkedIn text posts
+- 1-2 Instagram Reels (use the **reel-creator** skill) + 1 carousel
 - 3-5 story slides
-- 1 short-form video script (future)
+- 1 email edition (to the nurture list)
+- 1 short-form video script
 
 ---
 
-## Scaling Content (Width then Depth)
+## Cadence & consistency (per platform, 2026)
 
-Per Hormozi's model:
-1. Start posting regularly on one platform (LinkedIn for B2B)
-2. Before maxing out volume on that platform, expand to the next (Twitter/X)
-3. Continue adding platforms while maintaining existing ones
-4. Once on all relevant platforms, maximize volume and quality across all
+- Instagram (feed/Reels): **3-5/week** (1->3-5 = +12% reach/post, 2x follower growth) [s98]
+- TikTok: **2-5/week** (1->2-5 = +17% views/post) [s175]
+- LinkedIn: **3-5/week** (daily with low engagement throttles you) [s146]
+- YouTube: **1 long-form + 3-5 Shorts/week** [s220]
 
----
-
-## Metrics to Track
-
-| Metric | What It Tells You | Target |
-|--------|------------------|--------|
-| Engagement rate | Content quality and relevance | >3% on LinkedIn, >5% on Instagram |
-| Follower growth | Reward quality (audience grows = content is rewarding) | Consistent week-over-week growth |
-| DM conversations | Content-to-pipeline conversion | 3-5 inbound DMs/week |
-| Link clicks | CTA effectiveness | Track per post type |
-| Content-to-client | Full funnel attribution | Tag leads by source |
+High-frequency mediocre content **hurts** standing - consistency of quality beats volume [s201].
 
 ---
 
-## 7 Content Rules (Hormozi)
+## Build-from-scratch routines (small following)
 
-1. Say "How I" not "How to" -- share experience, not lectures
-2. Repeat core messages -- most people never saw your last post
-3. Start narrow (puddle), expand later (pond, lake, ocean)
-4. Consistency beats bursts -- Rule of 100 (100 minutes/day on content)
-5. Your free content should be better than competitors' paid content
-6. Long-form content is just multiple content units strung together
-7. If your audience isn't growing, your content isn't rewarding enough
+- **10-minute daily method:** 5 min AM replying to comments + engaging 3-5 niche posts; 5 min PM posting batched content [s110].
+- **5/5/5 rule (active days):** 5 thoughtful comments on niche pages, 5 likes on potential-client posts, 5 outbound DMs to aligned accounts [s110].
+- **Build in public:** document wins, failures, and lessons ("here's what worked and 3 things that flopped") - beats humble-bragging for trust [s110].
+
+---
+
+## Realistic conversion expectations
+
+Median site conversion **2.35%** (top 10%: 11.45%); B2B lead-gen landing pages **4.1%**; AI-search referrals (ChatGPT/Perplexity) convert **3.49%**, a 22% lift over organic - so being citable by AI engines now matters [s71]. Full table: `channel-benchmarks.md`.
+
+---
+
+## Content calendar template (weekly, founder-led)
+
+| Day | Content | Platform focus |
+|-----|---------|----------------|
+| Mon | Client win / "how I" build story (quantified) | LinkedIn + IG carousel |
+| Tue | Educational carousel (one automation/AI-for-ops idea) | LinkedIn (doc post) |
+| Wed | Behind-the-build / native video or Reel | IG Reel + LinkedIn video |
+| Thu | Contrarian take / industry POV | LinkedIn text post |
+| Fri | Tool breakdown / comparison content | LinkedIn + blog |
+| Daily | 10-15 min substantive engagement (comments/DMs) | All |
+| Weekend | Repurpose the week's best performer | Cross-platform |
+
+Batch: block 2-3 hrs once a week, write 5-7 posts, batch-design carousels (delegate visuals to Areeba), schedule, then 15-20 min/day on engagement. Idea sourcing + finished drafts: **content-engine** skill.

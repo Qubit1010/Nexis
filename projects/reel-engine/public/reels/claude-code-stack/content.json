@@ -1,0 +1,65 @@
+{
+  "slug": "claude-code-stack",
+  "platform": "instagram",
+  "title": "The Claude Code Production Stack",
+  "voiceScript": "Most people leave 60% of Claude Code on the table. Not because they're lazy. The defaults were never built for production. By default, it scans with screenshots, burns tokens on big docs, trusts its own code. So I stopped treating it like a chatbot and built a stack. Playwright for browsing, Light RAG for docs, NotebookLM for analysis. The shift was real. 60% sits unused by default, 10 tools turn it into infrastructure, and the open-source core costs $0. Claude Code isn't a chatbot. It's infrastructure, and defaults are just the start. Still running it stock? You're leaving most on the table. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Most people leave 60% of Claude Code on the table. Not because they're lazy. The defaults were never built for production.",
+      "headline": "You're leaving *60%* on the table",
+      "sub": "Claude Code"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "By default, it scans with screenshots, burns tokens on big docs, trusts its own code.",
+      "headline": "Stock setup quietly *wastes* it",
+      "sub": "the defaults aren't built for production",
+      "problemVariant": "crossout",
+      "chips": ["Screenshot scraping", "Token bloat on big docs", "Self-graded code"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I stopped treating it like a chatbot and built a stack. Playwright for browsing, Light RAG for docs, NotebookLM for analysis.",
+      "headline": "Build a real *stack* around it",
+      "visual": "layers",
+      "asset": "infographic.png",
+      "layers": [
+        { "name": "Playwright CLI", "goal": "Browser via a11y tree" },
+        { "name": "Light RAG", "goal": "Massive doc sets" },
+        { "name": "NotebookLM", "goal": "Offload analysis" },
+        { "name": "Codex review", "goal": "Outside code check" },
+        { "name": "Skill Creator", "goal": "A/B test skills" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The shift was real. 60% sits unused by default, 10 tools turn it into infrastructure, and the open-source core costs $0.",
+      "headline": "What the stack changes",
+      "stats": [
+        { "value": 60, "suffix": "%", "label": "unused by default" },
+        { "value": 10, "suffix": "", "label": "tools in the stack" },
+        { "value": 0, "prefix": "$", "label": "for the open-source core" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Claude Code isn't a chatbot. It's infrastructure, and defaults are just the start.",
+      "headline": "It's *infrastructure*, not a chatbot",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Still running it stock? You're leaving most on the table. Follow for more.",
+      "cta": "Running Claude Code at full power yet?"
+    }
+  ],
+  "source": "LinkedIn/IG post + 'April 2026 top 10 Claude Code skills/plugins/CLIs' list: Codex review plugin, Obsidian + skills, Auto Research, awesomedesign.mmd, Firecrawl CLI, Playwright CLI (a11y tree, cheaper than Chrome ext), NotebookLM Pine (offloads analysis to Google, cuts token use), Skill Creator (A/B tests skills), Light RAG (graph RAG for thousands of docs), GWS. Core thesis: Claude Code is infrastructure, not a chatbot; defaults leave ~60% of capability unused; several core tools are free/open-source.",
+  "handle": "@nexuspoint"
+}

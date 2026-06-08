@@ -84,7 +84,9 @@ sales-playbook/
 │   ├── ai-automation-positioning.md        # The AI wedge — one-liner + 3 sub-offers
 │   └── proof-bank.md                       # Results by industry/pain
 └── references/
-    └── what-not-to-do.md                   # Banned phrases + patterns
+    ├── research-synthesis.md               # Cited Q1-Q5 research + Live Query Additions
+    ├── what-not-to-do.md                   # Banned phrases + patterns
+    └── notebook-live-query.md              # LIVE FALLBACK: ask the sales notebook on a miss
 ```
 
 ## How to use this skill in a request
@@ -97,3 +99,7 @@ When Aleem asks for any sales asset:
 5. If a call ask is involved, use the anchored-deliverable phrasing from `discovery-call-script.md`
 
 Don't paraphrase the bans or the call-ask templates — copy them verbatim. They were chosen for specific psychological reasons documented in their files.
+
+## When the playbook doesn't have it (live fallback)
+
+For a sales KNOWLEDGE question (an opener/reply/closing benchmark, an objection nuance, a discovery-call detail, "what does the research say about X") that the framework/script files and `references/research-synthesis.md` don't confidently answer: **query the live sales NotebookLM notebook before guessing.** Follow `references/notebook-live-query.md` — ask the notebook, present the cited answer, then append the finding to `references/research-synthesis.md` under its "Live Query Additions" section so it's reusable next time. Only after a genuine notebook miss do you say the corpus doesn't cover it. (This is for facts/knowledge — generating the actual DM/script still works from the archetypes + scripts above.)

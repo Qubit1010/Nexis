@@ -28,7 +28,8 @@ const PYTHON_BIN = resolvePythonBin();
 export function runScript(
   scriptName: string,
   args: string[] = [],
-  env?: Record<string, string>
+  env?: Record<string, string>,
+  timeoutMs: number = 120_000
 ): Promise<string> {
   return new Promise((resolve, reject) => {
     const scriptPath = path.join(SCRIPTS_DIR, scriptName);
@@ -38,7 +39,7 @@ export function runScript(
       [scriptPath, ...args],
       {
         cwd: REPO_ROOT,
-        timeout: 120_000, // 2 minutes max
+        timeout: timeoutMs,
         maxBuffer: 10 * 1024 * 1024, // 10MB stdout buffer
         env: {
           ...process.env,

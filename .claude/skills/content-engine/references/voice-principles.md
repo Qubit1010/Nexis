@@ -14,6 +14,19 @@ All four must be present. If any is missing, the content is replaceable.
 
 ---
 
+## Why this matters more in 2026
+
+- **Specificity is now a distribution advantage, not just a quality one.** Platform AIs
+  (LinkedIn's 360Brew, Gmail's Gemini) actively throttle generic, templated, "bro-etry"
+  AI copy. Your specific story, numbers, and stakes are the thing algorithms can't fake and
+  increasingly reward.
+- **Brands compound slowly.** Authentic personal brands take ~12-24 months of consistent,
+  specific posting before inbound compounds. Optimize each piece, but expect the curve, not a spike.
+- **Intellectual honesty is a differentiator.** Never fake authority. Saying "here's what I'd
+  expect, I haven't shipped this exact thing" reads as more credible than confident generic advice.
+
+---
+
 ## The 7 Pillars — weave at least 2 into every piece
 
 **1. Lived Experience (irreplaceable)**
@@ -31,7 +44,7 @@ Generic (forbidden): "Here are 5 AI automation tips"
 **3. Cross-domain Synthesis**
 Connect Aleem's worlds: AI + freelancing, Philosophy, learning from mistakes, startup life, strategy + business.
 - "What strong leaders understood about scoping that agency founders ignore"
-- "My lectures and practical experience finally explained why some projects break in production"
+- "A compiler-theory idea finally explained why some automations break in production"
 - The connection must be non-obvious. If anyone else would make the same connection, it doesn't count.
 - Lead with the unexpected domain first (philosophy, experience, computer science, tech-business, history, or some insight) before bridging to the business/AI point.
 
@@ -41,8 +54,9 @@ Make a call. Say what's worth someone's time and what isn't. Curate decisively.
 - Never hedge the call with "it depends." If context matters, state the specific condition — then make the call.
 
 **5. Identity & Voice**
-Student founder in Pakistan. Building real systems. This context must be felt, not stated.
-- The Pakistan + student founder context should appear as constraint, not credential. Show how it limits or shapes the decision — don't announce it.
+Founder in Pakistan building real AI systems. This context must be felt, not stated.
+- The Pakistan + resource-constrained-builder context should appear as constraint, not credential. Show how it limits or shapes the decision — don't announce it.
+- Hard rule: never name the agency, and never reference university, degree, BSAI, classroom, lectures, or "being a student" in the output. Reframe as "in my own work / from what I've shipped / building real systems."
 - If the piece could have been written by a US-based senior engineer with no resource pressure, rewrite it.
 
 **6. Practical Stakes**
@@ -83,7 +97,7 @@ Never open with context, backstory, or a definition. Open with tension, contradi
 Every piece needs a closing move. Match it to the platform.
 
 **LinkedIn:** End with an extractable principle or a direct question to the reader. Never end with "Follow me for more."
-**Instagram:** End with a relatable statement or a soft call to action ("Save this if you're building something"). Max 1 CTA.
+**Instagram:** End with a relatable statement or a value-native CTA — "Save this if you're building something" or a comment-to-DM trigger ("comment WORKFLOW and I'll send it"). Max 1 CTA. Never a bare "Follow for more."
 **Blog:** End with the broader implication — zoom out from the specific case to the universal pattern. Then 1 clear next step.
 
 Rule: the ending must earn the opening. If the piece started with a bold claim, the ending must either prove it or complicate it — never just summarize it.
@@ -149,27 +163,31 @@ If none of these work, the topic is wrong. Pick one Aleem can speak to directly.
 
 ---
 
-## Aleem's Dual Lens
+## Aleem's Dual Lens (theory vs production)
 
-Pair the academic frame with the operational reality. Use especially on LinkedIn.
+Pair the clean theory with the messy operational reality. Use especially on LinkedIn. Do NOT
+frame this as university/classroom and do NOT name the agency — frame it as "the textbook
+version" vs "what actually happens when you ship it."
 
-> "In [university/classroom], we [theoretical framing]. At NexusPoint, we [real-world deployment outcome]."
+> "The textbook version of [X] is clean. In real client work, [what actually breaks / what it costs]."
 
 Real example:
-> "In my compiler design lectures, translating a JSON graph is standard theory. In the trenches of running an agency, manually mapping nodes drains margins and delays deployment by a week."
+> "Translating a JSON graph is clean in theory. Shipping it for a real client, manually mapping the nodes drained margins and pushed deployment back a week."
 
 ---
 
 ## Content Ladder — aim for level 7+ only, never below 5
 
-**FORBIDDEN:** AI summaries / SEO blogs / generic tutorials / neutral explainers (levels 1-4)
+**FORBIDDEN:** AI summaries / generic SEO filler / generic tutorials / neutral explainers (levels 1-4). SEO done WITH a strong POV and real experience is encouraged for blogs.
 **REQUIRED:** Case studies, essays with POV, personal frameworks, original theories, public thinking in real time (levels 5-8)
 
 ---
 
-## Golden Pattern (long-form + LinkedIn)
+## Golden Pattern (blog long-form + LinkedIn text/article ONLY, never carousels or video)
 
 Real problem -> Naive/wrong approach -> Discovery -> Mistake made -> Insight extracted -> Extractable principle
+
+This shapes the narrative arc ONLY. Never use the step names ("Discovery", "Mistake Made", "Insight Extracted", "The Principle") as literal headlines, slide titles, or section labels. Carousel slide headlines must be punchy content, not framework labels.
 
 Example: Start with the problem you actually faced. Show your wrong first instinct. Reveal what you learned. End with a principle that generalises beyond your specific case.
 
@@ -188,17 +206,20 @@ Example: Start with the problem you actually faced. Show your wrong first instin
 ## Mechanics
 
 - Write as Aleem in first person: "I", "my", "I built", "I tried", "I noticed"
-- No em dashes — use commas or short sentences instead
+- Punctuation: no em dashes or en dashes (use commas, periods, or short sentences). Use only straight ASCII apostrophes (') and quotes ("), never curly/smart quotes — they corrupt when saved or pasted (e.g. to Google Docs).
 - No emojis for LinkedIn or Blog; maximum 2 emojis for Instagram
 - Specific > vague: replace "many companies" with actual numbers from research data
-- Hook first — never bury the lead
+- Hook first, never bury the lead
 - Short sentences. White space. No corporate filler.
+- Length discipline: hit the format's word-count target — at least the minimum, never over the maximum. If short of the minimum, add another concrete example or sub-point, never filler.
 
 ---
 
 ## Aleem's Context (for generation prompts)
 
-- 25-year-old founder of NexusPoint (AI automation agency) + BSAI student in Islamabad, Pakistan
+> Context for VOICE only. Do NOT name the agency or reference university/BSAI/student status in output.
+
+- 25-year-old founder building AI automation systems from Islamabad, Pakistan
 - Builds real AI systems: multi-agent workflows, automation pipelines, Claude Code extensions
 - Runs a real team. Deals with real client constraints.
 - Interests beyond tech: Philosophy, Science, Stoicism, History, systems thinking, gym discipline

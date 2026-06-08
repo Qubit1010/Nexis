@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { runScript } from "@/lib/run-script";
-import type { NotebookLMSourcesOutput } from "@/lib/types";
+import type { NotebookLMAskOutput } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
@@ -8,23 +8,29 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const topic: string = body.topic;
-    const depth: string = ["light", "medium", "deep"].includes(body.depth) ? body.depth : "medium";
+    const notebookId: string = body.notebookId;
+    const sourceIds: string[] = body.sourceIds ?? [];
 
     if (!topic || typeof topic !== "string") {
       return NextResponse.json({ error: "topic is required" }, { status: 400 });
     }
+    if (!notebookId || typeof notebookId !== "string") {
+      return NextResponse.json({ error: "notebookId is required" }, { status: 400 });
+    }
+    if (!Array.isArray(sourceIds) || sourceIds.length === 0) {
+      return NextResponse.json({ error: "sourceIds must be a non-empty array" }, { status: 400 });
+    }
 
-    // Fresh web research can take minutes (deep most of all). Give the script room.
-    const timeoutMs = depth === "deep" ? 1_800_000 : depth === "medium" ? 1_080_000 : 480_000;
+    const sourcesArg = sourceIds.join(",");
 
     try {
       const stdout = await runScript(
         "research_notebooklm.py",
-        ["--topic", topic, "--depth", depth],
+        ["--topic", topic, "--notebook", notebookId, "--sources", sourcesArg],
         undefined,
-        timeoutMs
+        300_000
       );
-      const data: NotebookLMSourcesOutput = JSON.parse(stdout);
+      const data: NotebookLMAskOutput = JSON.parse(stdout);
       return NextResponse.json(data);
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
@@ -32,7 +38,6 @@ export async function POST(req: NextRequest) {
       if (isAuthError) {
         return NextResponse.json({
           available: false,
-          topic,
           error: "NotebookLM session expired — run: notebooklm login",
         });
       }

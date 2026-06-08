@@ -19,18 +19,21 @@ argument-hint: [ideate | create <platform> <topic> | repurpose | plan | full]
 
 Pulls today's AI/tech intelligence from 3 sources, scores ideas with opportunity scores,
 runs web research before writing, and produces finished content for Instagram, LinkedIn,
-and the blog. The repurposing flywheel (Blog -> LinkedIn -> Instagram) is the core of
-the `full` mode — one topic becomes three platform-native pieces.
+and the blog. The repurposing flywheel (Blog -> LinkedIn + Instagram + story + email) is the core
+of the `full` mode — one topic becomes several platform-native pieces.
 
 ## Context to Load First
 
-Always load: `context/me.md`
+Always load: `context/me.md`, `references/platform-formats.md`, `references/content-pillars.md`
 
-For `create` and `full` modes, also load:
-- `.claude/skills/marketing-advisor/references/content-strategy-playbook.md`
-- `.claude/skills/marketing-advisor/references/nexuspoint-positioning.md`
-- `.claude/skills/content-engine/references/platform-formats.md`
-- `.claude/skills/content-engine/references/content-pillars.md`
+For `create` and `full` modes, also load the 2026 research for the target platform(s) — load
+only what the request needs (platform-formats.md is the distilled checklist; the
+marketing-advisor playbooks are the deeper, cited 2026 source):
+- LinkedIn -> `.claude/skills/marketing-advisor/references/linkedin-playbook.md`
+- Instagram / Reels -> `.claude/skills/marketing-advisor/references/instagram-reels-playbook.md`
+- Blog / cross-platform -> `.claude/skills/marketing-advisor/references/content-strategy-playbook.md`
+- Always -> `.claude/skills/marketing-advisor/references/nexuspoint-positioning.md` (ICP/positioning)
+- Consult as needed -> `marketing-advisor/references/channel-benchmarks.md` (targets) + `what-not-to-do.md` (kill list)
 
 ---
 
@@ -81,9 +84,17 @@ Score each idea on these dimensions (Claude computes):
 | Pillar fit: strong match | 2 |
 | Pillar fit: moderate | 1 |
 | Pillar fit: off-brand | 0 |
+| Conversion potential: comparison / customer-story / teardown / "how I" | 2 |
+| Conversion potential: opinion / news / educational | 1 |
+| Conversion potential: pure viral-bait / vanity (reach only, no business outcome) | 0 |
 | Saved topics bonus | +1 |
 
-Max = 10. Labels: 9-10 = "Strong opportunity", 7-8 = "Good pick", 5-6 = "Decent", <=4 = "Skip"
+Max = 12. Labels: 11-12 = "Strong opportunity", 8-10 = "Good pick", 5-7 = "Decent", <=4 = "Skip"
+
+Conversion potential reflects the 2026 revenue-vs-vanity research: comparison/"X vs Y",
+customer-voiced stories, teardowns, and "how I" pieces drive business outcomes; generic
+thought-leadership and pure viral-bait drive vanity reach. Flag a high-reach/low-conversion
+idea as "VIRAL-BAIT — reach only, pair with a direct offer or rank lower."
 
 Display ranked list of top 5-8 ideas in this format:
 
@@ -123,16 +134,21 @@ calendar, or `full` to run the repurposing flywheel."
 #### create mode
 
 1. Parse platform + topic from user input. Platform is required — ask if missing.
-2. For Blog or LinkedIn posts, run research to get fresh data and find the content gap:
+2. For Blog or LinkedIn posts, run research to get fresh, topic-scoped sources. This does a
+   live web-research pass into a clean NotebookLM notebook, then synthesizes from selected sources:
    ```bash
-   python .claude/skills/content-engine/scripts/research_topic.py --topic "[topic]"
+   # Mode A — fresh web research on the topic, returns the imported sources + notebook_id
+   python .claude/skills/content-engine/scripts/research_notebooklm.py --topic "[topic]" --depth light|medium|deep
+   # Mode B — synthesize prose from the chosen sources (ids from Mode A output)
+   python .claude/skills/content-engine/scripts/research_notebooklm.py --topic "[topic]" --notebook "[notebook_id]" --sources "id1,id2,..."
    ```
+   Depth maps to research effort: light (~8-12 sources, fast), medium (~20-25, deep), deep (~100-120, deep).
+   Sources are topic-scoped by construction (fresh web search), so there's no static corpus to filter.
 3. Internally form a content brief (don't show unless user asks):
    - Goal: infer from pillar + platform context, or ask
-   - Target keyword: from research `primary_keyword` (blogs only)
-   - Angle: use `content_gap` from research as the differentiated perspective
+   - Angle: the differentiated perspective, drawn from the synthesized research prose
    - Hook: refine using research insights
-   - Key points: source key_points augmented with 2-3 `data_points` from research
+   - Key points: source key_points augmented with specifics from the Mode B synthesis
    - CTA: matched to goal
 4. Write the complete finished piece following `platform-formats.md` specs and voice rules.
    Do not produce an outline — write the actual content.
@@ -147,13 +163,14 @@ calendar, or `full` to run the repurposing flywheel."
 Takes content the user pastes. Ask "Which platforms do you want this repurposed for?" if
 not stated.
 
-Repurposing rules:
-- Blog -> LinkedIn text post: extract core argument, sharpen hook for LinkedIn, 300-800 words
-- Blog -> Instagram carousel: break into 5-8 slides, visual-first, slide 1 = stop-scroll hook
-- Long LinkedIn post -> Instagram caption: distill to 1-2 sentences + hook
-- Any insight -> Instagram carousel cover + caption
+Repurposing rules (2026 — follow `platform-formats.md`):
+- Blog -> LinkedIn **doc carousel** (primary, 6-12 slides, standalone cover) OR text post (150-300 words, hook in first 125-150 chars, no link in body)
+- Blog -> Instagram **Reel** (15-30s cold-open script, kinetic captions, [B-ROLL]) and/or carousel (6-8 slides)
+- Blog / long LinkedIn post -> Instagram standalone caption (125-250 words, value-native close)
+- Any insight -> carousel cover + caption, or a story
 
-Rewrite fully for each platform's tone. Maintain the core insight but don't just paste.
+Rewrite fully for each platform's tone and 2026 rules. Maintain the core insight but don't
+just paste. Structural translation, not copy-paste.
 
 ---
 
@@ -194,15 +211,22 @@ Offer: "Want me to save this calendar to Google Docs?"
 
 #### full mode — Repurposing Flywheel
 
-The most powerful mode. Pick the highest-scoring idea, write it as a blog, then derive
-the social pieces from the blog content. All 3 pieces share the same core insight but are
-native to their platform.
+The most powerful mode. Pick the highest-scoring idea, write it as a blog, then derive the
+platform pieces from the blog. All pieces share the core insight but are native to their
+platform and follow the 2026 rules in `platform-formats.md`.
 
 1. Internal ideation: pick top-scoring idea (don't display the scoring process)
-2. Run research: `research_topic.py --topic "[chosen topic]"`
-3. Write Blog (800-2000 words, SEO-optimized, embed research data naturally)
-4. Repurpose Blog -> LinkedIn text post (extract core argument, sharpen for LinkedIn)
-5. Repurpose Blog -> Instagram carousel (visual-first, 5-8 slides from blog insights)
+2. Run research: `research_notebooklm.py --topic "[chosen topic]" --depth medium` (Mode A), then
+   `research_notebooklm.py --topic "[chosen topic]" --notebook "[id]" --sources "id1,id2"` (Mode B) to synthesize
+3. Write Blog (800-1500 words, SEO + AI-citable, embed research data naturally)
+4. Derive the platform pieces from the blog:
+   - LinkedIn **doc carousel** (6-12 slides, standalone cover) — the #1 LinkedIn format
+   - LinkedIn **text post** (150-300 words, hook in first 125-150 chars, no body link)
+   - Instagram **Reel script** (15-30s cold-open, kinetic captions, [B-ROLL])
+   - Instagram **carousel** (6-8 slides)
+   - **Story** (2-3 slides teasing the piece)
+   - **Email** newsletter edition (120-200 words) — optional, if a list is in play
+5. comment-to-DM CTAs feed inbound to the **sales-playbook** skill; render Reels with the **reel-creator** skill.
 
 Output structure:
 ```
@@ -211,22 +235,37 @@ Output structure:
 
 ---
 
+## LinkedIn — Document Carousel (repurposed from blog)
+Slide 1 (cover): [standalone hook]
+Slide 2-N: [one insight each]
+Final slide: [value-native CTA + handle]
+Post text: [50-150 words]
+
+---
+
 ## LinkedIn — Text Post (repurposed from blog)
-[Post]
+[150-300 word post, hook first, no body link]
+
+---
+
+## Instagram — Reel Script (repurposed from blog)
+Hook (0-3s): [cold open, spoken + on-screen]
+[beats 3-25s, <10 words each, with [B-ROLL]]
+Close: [value-native CTA]
+Captions: [kinetic caption note]
 
 ---
 
 ## Instagram — Carousel (repurposed from blog)
 Slide 1: [hook — max 8 words]
-Slide 2: [insight]
 ...
-Slide N: [CTA]
-Caption: [100-300 chars]
-Hashtags: [from research]
+Slide N: [value-native CTA]
+Caption: [100-250 chars]
+Hashtags: [3-5 niche, from research]
 ```
 
-After all 3: "Want me to save all three to Google Docs and log them?"
-Save = 3 separate docs. Log = 3 rows in Content Log.
+After all pieces: "Want me to save these to Google Docs and log them?"
+Save = one doc per piece. Log = one row per piece in Content Log.
 
 ---
 
@@ -271,7 +310,7 @@ If the save script fails, output the content inline with a note to copy manually
 |----------|--------|
 | `pull_ideas.py` fails entirely | Ask user to run `/daily-brief` first, then retry |
 | Only 1-2 sources available | Proceed with what exists, note what's missing |
-| `research_topic.py` fails | Proceed without research, note it, still write content |
+| `research_notebooklm.py` fails or NotebookLM auth expired (`notebooklm login`) | Proceed without research, note it, still write content |
 | User creates content off-brief | Accept it — briefs are the default source, not required |
 | Save script fails | Output content inline: "Save failed — copy this manually." |
 | Briefs are >1 day old | Note the date, ask if they want to regenerate first |
