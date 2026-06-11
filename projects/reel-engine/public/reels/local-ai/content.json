@@ -1,0 +1,57 @@
+{
+  "slug": "local-ai",
+  "platform": "linkedin",
+  "title": "Local AI vs Cloud APIs",
+  "voiceScript": "Every time your AI answers a question, your data leaves your network. Medical records, client documents, internal workflows, all sent to someone else's servers, exposed to GDPR risk and data breaches. So we moved everything local. Local AI isn't a privacy compromise, it's a capability unlock. NPUs now run inference 10 to 40 times more efficiently than a CPU, latency drops to sub-second, and per-token billing disappears completely. Every centralized platform you depend on for something critical is control you're renting, not owning. The real era of AI personalization starts when the model lives in your infrastructure and answers only to you. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Every time your AI answers a question, your data leaves your network.",
+      "headline": "Your AI is *leaking* data",
+      "sub": "Local AI"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Medical records, client documents, internal workflows, all sent to someone else's servers, exposed to GDPR risk and data breaches.",
+      "headline": "Cloud APIs *expose* everything",
+      "sub": "GDPR risk, real liability",
+      "problemVariant": "crossout",
+      "chips": ["Medical records", "Client documents", "Internal workflows"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So we moved everything local. Local AI isn't a privacy compromise, it's a capability unlock.",
+      "headline": "Local AI is a *capability unlock*",
+      "asset": "infographic.png"
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "NPUs now run inference 10 to 40 times more efficiently than a CPU, latency drops to sub-second, and per-token billing disappears completely.",
+      "headline": "The Hardware Shift",
+      "stats": [
+        { "value": 40, "suffix": "x", "label": "more efficient NPU inference" },
+        { "value": 1, "prefix": "<", "suffix": "s", "label": "response latency" },
+        { "value": 0, "prefix": "$", "label": "per-token fees" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Every centralized platform you depend on for something critical is control you're renting, not owning.",
+      "headline": "Stop *renting* control",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "The real era of AI personalization starts when the model lives in your infrastructure and answers only to you. Follow for more.",
+      "cta": "Cloud APIs or local AI, where's your stack headed?"
+    }
+  ],
+  "source": "LinkedIn post on local AI vs cloud APIs: cloud prompts leave the network (GDPR/HIPAA exposure for medical records, client docs, internal workflows); local AI is a capability unlock not a compromise; NPUs from Qualcomm/Apple/Intel run inference 10-40x more efficiently than CPU; no network round-trip means sub-second latency; no per-token billing flips the cost model (pay once, run forever); broader principle: dependence on centralized platforms for critical workflows is renting control.",
+  "handle": "@nexuspoint"
+}

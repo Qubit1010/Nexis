@@ -38,9 +38,12 @@ sync. Numbers are targets to beat, measured against real performance.
 
 ### Standalone Caption (single image/text post)
 - **Length:** 125-250 words.
-- Line 1 = standalone STOP-SCROLL hook. Lines 2-6 build the argument (short, specific, personal).
-  Then zoom out to the broader principle. Final line = value-native CTA or open question.
-- **Line breaks** every 1-2 sentences. Max 2 emojis, only where they add emphasis.
+- Line 1 = standalone STOP-SCROLL hook that lands inside the first ~125 characters (the caption
+  truncates at "... more"). After it, one idea per line - short, specific, personal lines with a
+  blank line between them, never dense paragraph blocks. Then zoom out to the broader principle.
+  Final line = value-native CTA or open question (not a bare "follow me").
+- **Optimize for saves + sends** (a send is worth 3-5x a like, a save ~3x), not likes.
+- **No emojis. No em dashes.**
 - **Hashtags:** 3-5 niche.
 
 ### Story (BOFU - direct, low-reach)
@@ -68,15 +71,20 @@ Default to this for educational/framework content - it out-performs text and vid
 ### Text Post
 - **Length:** 150-300 words (sweet spot). Narrative/story posts may run to ~500 words
   (1,300-3,000 chars, which perform ~38% better) only if the formatting is flawless.
-- **Hook:** the first 125-150 characters (the part shown before "see more") decide everything.
-  Bold claim, number, or a specific moment. Never waste line 1 on context. Contrarian hooks
-  lift reach ~49%.
-- **Body:** Hook -> why it matters -> 2-4 short insight beats -> resolution/principle.
+- **Line 1 (the hook):** the first 125-150 characters (the part shown before "see more")
+  decide everything. Bold claim, number, or a specific moment. Never waste it on context.
+  Contrarian hooks lift reach ~49%.
+- **Line 2 (the fold break):** one short tease line that earns the "see more" click. Most
+  posts die at this fold.
+- **Body: one idea per line.** Single-sentence lines with a blank line between every line.
+  Do NOT write 3-4 sentence paragraph blocks - dense blocks get skimmed and kill dwell time
+  (the #1 ranking signal: a 61s+ read earns ~13x the engagement of a 3s skim). White space
+  IS the format. Arc: hook -> why it matters -> 2-4 short beats -> resolution/principle.
 - **No external link in the body** (cuts reach 50-70%). If you must link, tell the reader it
   is in the comments and add it 30-60 min after posting.
-- **CTA:** one specific question that invites a real reply. Never "Follow me for more."
-- **No emojis. No em dashes.** One idea per line, blank lines between. Write to be *read*
-  (dwell time is the #1 signal: a 61s+ read earns ~13x the engagement of a 3s skim).
+- **CTA:** one specific question that invites a real reply. Never "Follow me", "repost", or
+  "share this".
+- **No emojis. No em dashes.**
 - **Hashtags:** 1-2 relevant, or none (3-5 cuts reach ~29%).
 
 ### Article (long-form)

@@ -1,0 +1,51 @@
+{
+  "skill_name": "claude-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A client wants to automate their invoice-processing workflow (PDFs come in by email, data gets pulled into a sheet, then a payment reminder goes out). Can I build that in Claude Code, or is something else a better fit for it?",
+      "expected_output": "Feasibility answer first (yes, with caveats), recommends the best surface (Claude Code via Agent SDK / headless, or API) with a rough build shape, and names when Cowork or a no-code automation would be the better call. Grounded in surface-comparison, no invented features.",
+      "files": [],
+      "expectations": [
+        "Answers feasibility (can it be done) before anything else",
+        "Recommends a specific Claude surface and explains why",
+        "Mentions at least one alternative surface and when it would be better",
+        "Does not invent a Claude Code feature that isn't in the references"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "im about to rewrite a batch of like 2000 product descriptions and i don't want to overspend. opus, sonnet, or haiku for this? whats the cost difference",
+      "expected_output": "Recommends a model (likely Haiku or Sonnet for high-volume rewriting) with the per-token price rationale, mentions batch processing for cost savings, and gives the tradeoff vs Opus. Prices/model names traceable to the corpus, not invented.",
+      "files": [],
+      "expectations": [
+        "Recommends a specific model with a reason tied to cost/volume",
+        "Cites concrete 2026 pricing or relative cost, not vague claims",
+        "Mentions a cost-saving mechanism (e.g. batch) or hands API specifics to claude-api",
+        "Does not state a price it cannot ground in the references or notebook"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "whats the actual difference between claude code and claude cowork? when would i use one over the other",
+      "expected_output": "Clear distinction between Claude Code (developer/terminal, code-centric) and Claude Cowork (agentic teammate for multi-step non-dev tasks), with concrete when-to-use-which guidance. Current as of 2026, grounded in the cowork/code references or a live notebook query.",
+      "files": [],
+      "expectations": [
+        "Clearly distinguishes Claude Code from Claude Cowork",
+        "Gives concrete when-to-use-which guidance for each",
+        "Uses current 2026 detail (references or live notebook query), not generic guesses"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "what are the best plugins and MCP servers actually worth installing for claude code right now?",
+      "expected_output": "Names specific, real plugins/MCP servers with what each does and why it's worth it, pointing to where to find more (marketplaces, awesome-lists). Tools traceable to the ecosystem reference or a live query, nothing fabricated.",
+      "files": [],
+      "expectations": [
+        "Names specific real tools (not placeholders) with their purpose",
+        "Points to where to discover more (marketplace or awesome-list)",
+        "Flags any tool it could not verify rather than fabricating one"
+      ]
+    }
+  ]
+}

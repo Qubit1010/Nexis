@@ -1,0 +1,138 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/robotis/protos/RobotisLds01.proto"
+
+WorldInfo {
+  info [
+    "Autonomous LiDAR navigation. A TurtleBot3 Burger with a 360-degree laser"
+    "scanner crosses a two-room obstacle environment to a goal beacon using a"
+    "potential-field controller with local-minimum escape."
+  ]
+  title "LiDAR Autonomous Navigation"
+  basicTimeStep 32
+}
+Viewpoint {
+  orientation -0.5773 0.5773 0.5773 2.0944
+  position 2.6 -2.6 2.9
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+  floorTileSize 0.5 0.5
+  wallThickness 0.05
+  wallHeight 0.3
+}
+# ===========================================================================
+# Room structure: a dividing wall across the middle (y = 0.2) with a doorway
+# around x = 0.35 splits the arena into two rooms, plus a short stub wall near
+# the start. Walls are height 0.3 so the laser plane hits them.
+# ===========================================================================
+Solid {
+  translation -0.65 0.2 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.7 0.68 0.62 roughness 1 metalness 0 } geometry Box { size 1.5 0.05 0.3 } } ]
+  name "wall_divider_left"
+  boundingObject Box { size 1.5 0.05 0.3 }
+}
+Solid {
+  translation 1.0 0.2 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.7 0.68 0.62 roughness 1 metalness 0 } geometry Box { size 0.8 0.05 0.3 } } ]
+  name "wall_divider_right"
+  boundingObject Box { size 0.8 0.05 0.3 }
+}
+Solid {
+  translation -0.5 -1.05 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.7 0.68 0.62 roughness 1 metalness 0 } geometry Box { size 0.05 0.8 0.3 } } ]
+  name "wall_stub"
+  boundingObject Box { size 0.05 0.8 0.3 }
+}
+# ===========================================================================
+# Obstacle pillars (cylinders and boxes, height 0.3). Lower room and upper room,
+# leaving the doorway approach clear.
+# ===========================================================================
+Solid {
+  translation -0.9 -0.5 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 } geometry Cylinder { radius 0.13 height 0.3 } } ]
+  name "obs_1"
+  boundingObject Cylinder { radius 0.13 height 0.3 }
+}
+Solid {
+  translation -0.15 -0.9 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 } geometry Cylinder { radius 0.13 height 0.3 } } ]
+  name "obs_2"
+  boundingObject Cylinder { radius 0.13 height 0.3 }
+}
+Solid {
+  translation 0.3 -0.5 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.5 0.4 0.35 roughness 1 metalness 0 } geometry Box { size 0.25 0.25 0.3 } } ]
+  name "obs_3"
+  boundingObject Box { size 0.25 0.25 0.3 }
+}
+Solid {
+  translation 0.85 -0.9 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 } geometry Cylinder { radius 0.13 height 0.3 } } ]
+  name "obs_4"
+  boundingObject Cylinder { radius 0.13 height 0.3 }
+}
+Solid {
+  translation 0.95 -0.3 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 } geometry Cylinder { radius 0.13 height 0.3 } } ]
+  name "obs_5"
+  boundingObject Cylinder { radius 0.13 height 0.3 }
+}
+Solid {
+  translation -0.7 0.7 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 } geometry Cylinder { radius 0.13 height 0.3 } } ]
+  name "obs_6"
+  boundingObject Cylinder { radius 0.13 height 0.3 }
+}
+Solid {
+  translation -0.05 0.75 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.5 0.4 0.35 roughness 1 metalness 0 } geometry Box { size 0.25 0.25 0.3 } } ]
+  name "obs_7"
+  boundingObject Box { size 0.25 0.25 0.3 }
+}
+Solid {
+  translation 0.6 0.7 0.15
+  children [ Shape { appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 } geometry Cylinder { radius 0.13 height 0.3 } } ]
+  name "obs_8"
+  boundingObject Cylinder { radius 0.13 height 0.3 }
+}
+# --- Goal beacon: tall bright post (no collision; the controller stops by GPS).
+#     DEF GOAL lets the supervisor read its live position, so you can drag it
+#     anywhere and the robot will navigate to the new spot. ---
+DEF GOAL Solid {
+  translation 1.2 1.2 0.3
+  children [ Shape { appearance PBRAppearance { baseColor 0.9 0.1 0.6 roughness 1 metalness 0 emissiveColor 0.5 0.0 0.3 } geometry Cylinder { radius 0.08 height 0.6 } } ]
+  name "goal"
+}
+# --- The robot: TurtleBot3 Burger. The extensionSlot keeps the real LiDAR
+#     (RobotisLds01, name "LDS-01") and adds a GPS, IMU and trail Pen. ---
+TurtleBot3Burger {
+  translation -1.2 -1.2 0
+  rotation 0 0 1 0.785
+  name "tb3"
+  controller "lidar_nav"
+  supervisor TRUE
+  extensionSlot [
+    RobotisLds01 {
+    }
+    GPS {
+    }
+    InertialUnit {
+      name "imu"
+    }
+    Pen {
+      inkColor 0.1 0.3 0.9
+      inkDensity 1
+      leadSize 0.015
+      maxDistance 0.35
+    }
+  ]
+}

@@ -8,12 +8,15 @@ export const dynamic = "force-dynamic";
 // Spec mirrors .claude/skills/content-engine/references/platform-formats.md (2026 research
 // from marketing-advisor). Keep the two in sync when either changes.
 const PLATFORM_SPECS: Record<string, string> = {
-  "LinkedIn Text Post": `150-300 words. The hook is the first 125-150 characters (what shows before "see more") — a bold claim, a number, or a specific moment. Each of the first 3 lines is its own short paragraph. Never waste line 1 on context.
-Body: 3-4 short insight paragraphs, 1-2 sentences each. Specific and personal. Write to be read slowly — dwell time is the #1 ranking signal.
+  "LinkedIn Text Post": `150-300 words (a narrative post may run to ~500 only if the formatting is flawless).
+Line 1 = a standalone STOP-SCROLL hook inside the first 125-150 characters (the part shown before "see more"): a bold claim, a number, or a specific moment. Never waste it on context or warm-up.
+Line 2 = a short "fold break", a one-line tease that makes the reader click "see more". Most posts die at this fold, so earn the click.
+Body: ONE idea per line. Single-sentence lines with a BLANK line between every line. Do NOT write 3-4 sentence paragraph blocks — dense blocks get skimmed and kill dwell time, which is the #1 ranking signal (a 61s+ read earns ~13x the engagement of a 3s skim). The white space IS the format; the post should be easy to read top to bottom.
+Keep every line short, specific, and personal: real experience, real numbers, concrete detail. No filler line.
 NO link in the body (an external link cuts reach 50-70%). If a link is essential, end with "link's in the comments" instead.
-No headers, no emojis, no em dashes. Lots of white space, one idea per line.
-End with ONE specific question that invites a real reply. Do NOT add a generic "follow me" or "repost" line — the close must be a value-native question, a "save this", or a comment-to-DM trigger.
-Hashtags: 1-2 relevant, or none.`,
+No headers, no emojis, no em dashes.
+End with ONE specific question that invites a real reply. Do NOT add a "follow me", "repost", or "share this" line — the close must be a value-native question, a "save this", or a comment-to-DM trigger.
+Hashtags: 1-2 relevant, or none (3-5 cuts reach ~29%).`,
 
   "LinkedIn Carousel": `LinkedIn document (PDF) carousel — the #1 organic format on LinkedIn (6.6-7% engagement rate). 6-12 slides. For EACH slide output exactly this structure (no deviations):
 
@@ -52,12 +55,12 @@ Hashtags: 3-5 niche tags (use research hashtags if available — never a 30-tag 
 
   "Instagram Caption": `Standalone Instagram caption (no slides, no script). 125-250 words.
 Structure:
-- Line 1: STOP-SCROLL hook — bold claim, counter-intuitive statement, or provocative question. This line must work standalone.
-- Lines 2-6: Build the argument. Short punchy sentences. Each line earns the next. Use personal experience, specific numbers, or a concrete insight. No fluff.
+- Line 1: STOP-SCROLL hook — bold claim, counter-intuitive statement, or provocative question. It must work standalone AND land inside the first ~125 characters, because the caption truncates at "... more".
+- Body: ONE idea per line, short punchy single-sentence lines with a blank line between them. Each line earns the next. Use personal experience, specific numbers, or a concrete insight. No dense paragraph blocks, no fluff.
 - Then zoom out: the broader principle or why this matters.
 - Final line: a value-native CTA — an open question, "save this", or a comment-to-DM trigger. NOT a bare "follow me".
-Line breaks: one blank line between each section for readability.
-Max 2 emojis, placed where they add emphasis — not as decoration at the end.
+Optimize for saves and sends (a send is worth 3-5x a like, a save ~3x), not likes.
+No emojis, no em dashes.
 Hashtags (on a new line): 3-5 highly relevant niche tags only. Quality over quantity.`,
 
   "Instagram Reel": `Short-form video script, 15-30 seconds (completion beats length). COLD OPEN — drop straight into the climax, motion in the first frame, NO "hey guys / today I want to talk about".
@@ -84,38 +87,6 @@ End: result + what to try next.`,
 Intro: the popular belief you're challenging (use a fresh phrase each time — e.g. "what most people think", "the standard advice", "what everyone assumes", "the default take", "the accepted playbook" — never repeat the same phrase). Body: why it's wrong + your experience.
 End: what you actually believe + invite disagreement.`,
 };
-
-// Hardcoded CTA footer appended above the hashtags on standalone social posts.
-// Deliberately post-processed (not prompted) because the prompt forbids "follow me"/"repost"
-// lines, so the model will never produce this on its own.
-const CTA_FOOTER =
-  "♻ Repost this to help modernize leadership\n\n" +
-  "👋 Follow Aleem Ul Hassan career growth, AI, leadership, and mindset strategies";
-
-// Only the standalone post formats that end in a bare hashtag block.
-const CTA_FOOTER_FORMATS = new Set(["LinkedIn Text Post", "Instagram Caption"]);
-
-function injectCtaFooter(content: string, platform: string, format: string): string {
-  if (!CTA_FOOTER_FORMATS.has(`${platform} ${format}`)) return content;
-
-  const lines = content.replace(/\s+$/, "").split("\n");
-  // Walk up from the bottom over trailing blank lines and hashtag lines.
-  let boundary = lines.length;
-  while (boundary > 0) {
-    const t = lines[boundary - 1].trim();
-    if (t === "" || t.startsWith("#")) boundary--;
-    else break;
-  }
-
-  if (boundary === lines.length) {
-    // No trailing hashtag block — just append the footer.
-    return `${lines.join("\n")}\n\n${CTA_FOOTER}`;
-  }
-
-  const body = lines.slice(0, boundary).join("\n").replace(/\s+$/, "");
-  const hashtags = lines.slice(boundary).join("\n").trim();
-  return `${body}\n\n${CTA_FOOTER}\n\n${hashtags}`;
-}
 
 function getFormatSpec(platform: string, format: string): string {
   const key = `${platform} ${format}`;
@@ -307,8 +278,6 @@ export async function POST(req: NextRequest) {
       });
       content = completion.choices[0]?.message?.content ?? "";
     }
-
-    content = injectCtaFooter(content, platform, format);
 
     return NextResponse.json({ content, ...(usedFallback && { provider: "openai" }) });
   } catch (err) {

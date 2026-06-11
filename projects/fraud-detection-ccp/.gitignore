@@ -1,0 +1,11 @@
+# Regenerable raw data (run: python src/data_loader.py)
+data/raw/*.csv
+data/raw/.synthetic
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db

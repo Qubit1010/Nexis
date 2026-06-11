@@ -1,0 +1,20 @@
+# Fraud Detection CCP - Python dependencies
+# Lean stack: no TensorFlow. ANN + Autoencoder are implemented with
+# scikit-learn (MLPClassifier / MLPRegressor) to keep the environment light.
+
+pandas>=2.2
+numpy>=2.0
+scikit-learn>=1.5
+imbalanced-learn>=0.12      # SMOTE, ADASYN, hybrid samplers (Task 4)
+xgboost>=2.1               # gradient boosting (Task 5)
+shap>=0.46                 # explainability - SHAP (Task 6)
+lime>=0.2                  # explainability - LIME (Task 6)
+matplotlib>=3.8
+seaborn>=0.13
+joblib>=1.4               # model persistence
+reportlab>=4.0            # report.md -> report.pdf
+
+# Notebook assembly / execution (Tasks 2-9 deliverable)
+nbformat>=5.9
+nbconvert>=7.0
+ipykernel>=6.0

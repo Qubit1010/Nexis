@@ -1,0 +1,4 @@
+Method,Precision@k,Recall@contam,AUC
+Isolation Forest,0.0,0.0,0.7268
+Local Outlier Factor,0.5738,0.5738,0.8694
+DBSCAN,0.0184,0.082,0.5365

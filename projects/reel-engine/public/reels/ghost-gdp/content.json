@@ -1,0 +1,56 @@
+{
+  "slug": "ghost-gdp",
+  "platform": "linkedin",
+  "title": "Ghost GDP",
+  "voiceScript": "GDP is growing and wages are shrinking, at the same time. Output climbs, earnings climb, but the income reaching people who spend it contracts. Gains go to capital, not the workers replaced. Here's what most builders miss. The winners aren't just replacing labor. They ask what role they play when the middle class has less to spend. The top 20 percent of earners drive 59 percent of consumer spending, the workers most exposed to displacement by 2027. You can't sell to people whose income disappeared. That's not politics, it's product strategy. So are you building for demand-side risk, or just efficiency? Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "GDP is growing and wages are shrinking, at the same time.",
+      "headline": "GDP up. Wages *down*.",
+      "sub": "The AI Economy"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Output climbs, earnings climb, but the income reaching people who spend it contracts. Gains go to capital, not the workers replaced.",
+      "headline": "They call it *Ghost GDP*",
+      "sub": "gains go to capital, not workers",
+      "problemVariant": "glitch"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "Here's what most builders miss. The winners aren't just replacing labor. They ask what role they play when the middle class has less to spend.",
+      "headline": "Build for the *demand side*",
+      "asset": "infographic.png"
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The top 20 percent of earners drive 59 percent of consumer spending, the workers most exposed to displacement by 2027.",
+      "headline": "The Concentration Problem",
+      "stats": [
+        { "value": 20, "suffix": "%", "label": "of earners" },
+        { "value": 59, "suffix": "%", "label": "of all consumer spending" },
+        { "value": 2027, "label": "white-collar tipping point" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "You can't sell to people whose income disappeared. That's not politics, it's product strategy.",
+      "headline": "No income, no *customers*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "So are you building for demand-side risk, or just efficiency? Follow for more.",
+      "cta": "Building for demand-side risk, or just efficiency?"
+    }
+  ],
+  "source": "LinkedIn post on 'Ghost GDP': GDP/corporate earnings/productivity grow while consumption-relevant income contracts because productivity gains accrue to capital, not displaced workers. Displacement spiral: firms substitute AI for labor, cutting aggregate labor income and consumer demand. Consumption concentration: top 20% of US earners drive ~59% of consumer spending, and they're the white-collar knowledge workers most exposed to near-term AI displacement (Mo Gawdat warns of a tipping point by 2027). J-curve: AI adoption drops productivity first, then surges; most firms quit before the surge. Author builds the displacement systems (automation pipelines, multi-agent workflows) and argues demand-side collapse is a product strategy question, not a political one: you can't sell to people whose income disappeared.",
+  "handle": "@nexuspoint"
+}

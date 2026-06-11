@@ -1,0 +1,5 @@
+band,count,frauds,fraud_rate
+Low,49886,3,0.01
+Medium,1,0,0.0
+High,5,3,60.0
+Critical,108,94,87.04

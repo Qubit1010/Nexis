@@ -1,0 +1,157 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+  info [
+    "Swarm flocking. Five e-puck robots all run the same swarm_flock controller."
+    "Each robot is a Supervisor and reads the live positions and headings of all"
+    "others directly from the scene tree. Reynolds Boids rules — separation,"
+    "cohesion, alignment — combine with proximity-sensor wall avoidance to keep"
+    "the group together without collisions."
+  ]
+  title "Swarm Flocking - Reynolds Boids"
+}
+Viewpoint {
+  orientation -0.2247839673960035 0.17641012723126034 0.9583066497796846 1.851946274036163
+  position 0.3573081245917474 -4.5812660504590745 2.3912539299643694
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 4 4
+  wallThickness 0.05
+  wallHeight 0.15
+}
+Solid {
+  translation 0.7 0.6 0.08
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.3 0.3
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.16
+        radius 0.1
+      }
+    }
+  ]
+  name "obs_1"
+  boundingObject Cylinder {
+    height 0.16
+    radius 0.1
+  }
+}
+Solid {
+  translation -0.6 -0.5 0.08
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.4 0.55
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.16
+        radius 0.1
+      }
+    }
+  ]
+  name "obs_2"
+  boundingObject Cylinder {
+    height 0.16
+    radius 0.1
+  }
+}
+DEF ROBOT_0 E-puck {
+  hidden position_0_0 306.1103446904862
+  hidden position_0_1 301.9111664095575
+  hidden linearVelocity_0 -0.015043388459250455 -0.04036544325691145 -0.00025990370307111437
+  hidden angularVelocity_0 0.6711544456192976 -0.22741708603191893 -2.4615084195634798
+  hidden rotation_1 0 1 0 4.517449945866065
+  hidden linearVelocity_1 -0.03838511749195979 -0.10245178301603139 -4.528014030050001e-06
+  hidden angularVelocity_1 5.344399003829116 -2.0075512203440415 -2.495640619639688
+  hidden rotation_2 0 1 0 0.3182716649373449
+  hidden linearVelocity_2 0.00697513436995351 0.015802127066280598 -5.885456057096836e-05
+  hidden angularVelocity_2 -1.0613478469588338 0.446508560159006 -2.4578227853737458
+  translation 1.3808980815735268 -0.04674851058995989 -9.421643717655304e-05
+  rotation 0.00575262550846154 0.004833217361202397 -0.9999717732564749 1.9954046064768833
+  name "robot_0"
+  controller "swarm_flock"
+  supervisor TRUE
+}
+DEF ROBOT_1 E-puck {
+  hidden position_0_0 305.8897037685341
+  hidden position_0_1 282.4862302231047
+  hidden linearVelocity_0 0.004536153401275901 -0.046386082151600644 5.8398544739551175e-05
+  hidden angularVelocity_0 -1.4931471007864063 -0.13841896484660354 -0.5793469417631045
+  hidden rotation_1 0 0.9999999999999999 0 4.296809023913954
+  hidden linearVelocity_1 0.003386935581867812 -0.052903438188048824 -6.0460126178767034e-05
+  hidden angularVelocity_1 2.704054213076522 0.17835527170540325 -0.5704721053516018
+  hidden rotation_2 0 1 0 6.026076707202908
+  hidden linearVelocity_2 0.004320578983340451 -0.024165505424094 -8.632546590880402e-05
+  hidden angularVelocity_2 1.1469380361300598 0.20988288586931386 -0.5463867607874016
+  translation 1.5063089175244644 0.16997929316819702 -8.013119677343326e-05
+  rotation -0.01780119906412969 -0.021443842885388198 -0.9996115640158362 1.4914679007767142
+  name "robot_1"
+  controller "swarm_flock"
+  supervisor TRUE
+}
+DEF ROBOT_2 E-puck {
+  hidden position_0_0 361.0835607200359
+  hidden position_0_1 344.5675648534832
+  hidden linearVelocity_0 -0.038756485018709694 -0.058165319984625714 2.093323068390208e-06
+  hidden angularVelocity_0 -0.0030935806739266648 0.0035350708930666657 0.07598139617631063
+  hidden rotation_1 0 -1 0 3.3411870963801107
+  hidden linearVelocity_1 -0.03768171287406658 -0.05650608979573059 3.141218718413495e-07
+  hidden angularVelocity_1 2.817795702534378 -1.8790915366079173 0.06827437057576985
+  hidden rotation_2 0 1 0 5.275558265785521
+  hidden linearVelocity_2 -0.039822536880873026 -0.05983289224431574 -3.49733606958311e-07
+  hidden angularVelocity_2 2.997594986182593 -1.9964014241178456 0.07057840112353625
+  translation 1.6241726305846984 -0.840179265018674 -6.655397912034428e-05
+  rotation -7.324220804097128e-05 0.0001769453977698862 -0.9999999816629525 2.1537195300483534
+  name "robot_2"
+  controller "swarm_flock"
+  supervisor TRUE
+}
+DEF ROBOT_3 E-puck {
+  hidden position_0_0 319.69714600434776
+  hidden position_0_1 285.72056941326196
+  hidden linearVelocity_0 -0.018837386103834536 -0.06667322533419173 8.4568421012226e-05
+  hidden angularVelocity_0 0.0015491685120748464 7.647871785086712e-05 -0.32399293760362335
+  hidden rotation_1 0 1 0 5.537880645368434
+  hidden linearVelocity_1 -0.021391959606992087 -0.07506013453382213 -1.8120082212399814e-05
+  hidden angularVelocity_1 3.791521969014278 -1.0800566783314232 -0.35489974433656385
+  hidden rotation_2 0 -1 0 3.305954716999022
+  hidden linearVelocity_2 -0.016376465168079193 -0.05875410599224017 -4.723198753547283e-06
+  hidden angularVelocity_2 2.8982343240077997 -0.8257060964802988 -0.330977991008622
+  translation 1.7456905579578994 0.09814472241758267 -9.87600114050833e-05
+  rotation -0.0005489351077018008 0.0005283607359867125 -0.9999997097525479 1.8524155494637626
+  name "robot_3"
+  controller "swarm_flock"
+  supervisor TRUE
+}
+DEF ROBOT_4 E-puck {
+  hidden position_0_0 306.8186691029817
+  hidden position_0_1 283.1147602167153
+  hidden linearVelocity_0 -0.00409396549579323 -0.04631254023346073 -0.00019111750520703434
+  hidden angularVelocity_0 0.020874337869608437 -0.013860103427854776 1.962323825975163
+  hidden rotation_1 0 1 0 5.225774358361536
+  hidden linearVelocity_1 -0.0007743014556535204 0.0045132157622974865 -4.3286336769066076e-05
+  hidden angularVelocity_1 -0.4533754829564383 -0.017161505937365068 1.9588704050261438
+  hidden rotation_2 0 -1 0 5.911763913545681
+  hidden linearVelocity_2 -0.007723968066435584 -0.096007061856269 5.497251861450119e-06
+  hidden angularVelocity_2 5.007524282245139 -0.3920667286625324 1.988687298058347
+  translation 1.6201680337932762 -0.11840553141048972 -8.190821126013124e-05
+  rotation 0.0005169555115765587 0.0007358248235410418 0.9999995956593324 -1.6033930452700416
+  name "robot_4"
+  controller "swarm_flock"
+  supervisor TRUE
+}

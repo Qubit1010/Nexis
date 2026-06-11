@@ -1,0 +1,22 @@
+[
+  {"query": "wait whats the actual difference between claude code and that new cowork thing? when would i use one vs the other", "should_trigger": true},
+  {"query": "a client wants to automate their invoice processing (pdfs in by email, data into a sheet, reminder out). can i build that in claude code or is something else better?", "should_trigger": true},
+  {"query": "im about to rewrite ~2000 product descriptions and dont wanna overspend. opus sonnet or haiku for this and whats the cost difference", "should_trigger": true},
+  {"query": "which claude plan should i get, im a solo dev coding most of the day, is pro enough or do i need max", "should_trigger": true},
+  {"query": "whats the best way to explain to a non-technical client what claude can actually do for their business", "should_trigger": true},
+  {"query": "what are the best plugins and mcp servers actually worth installing for claude code right now", "should_trigger": true},
+  {"query": "is claude better than chatgpt or gemini for a business that does a lot of legal and compliance writing", "should_trigger": true},
+  {"query": "how do people use claude to be more productive, like real workflows not hype", "should_trigger": true},
+  {"query": "should i build our customer support bot on the claude api directly or just use one of their products", "should_trigger": true},
+  {"query": "can claude generate images or video like dall-e and sora, or is that not a thing with claude", "should_trigger": true},
+  {"query": "write me the exact anthropic python sdk call to stream a response with tool use and prompt caching headers", "should_trigger": false},
+  {"query": "my PreToolUse hook in claude code isnt firing, heres my settings.json, whats wrong with it", "should_trigger": false},
+  {"query": "which ml model should i use for image classification on a small dataset, resnet or a vision transformer", "should_trigger": false},
+  {"query": "write me a cold linkedin DM to a saas founder pitching our ai automation service", "should_trigger": false},
+  {"query": "draft a proposal for this upwork job posting i just got for a shopify build", "should_trigger": false},
+  {"query": "scrape me 50 instagram leads of agency owners and generate the touch 1 DMs", "should_trigger": false},
+  {"query": "build me a react dashboard component with tailwind that shows our outreach stats", "should_trigger": false},
+  {"query": "turn this infographic post into a 45 second reel with a voiceover", "should_trigger": false},
+  {"query": "whats a good cold email reply rate benchmark in 2026 and how do i improve mine", "should_trigger": false},
+  {"query": "explain the difference between an LSTM and a transformer for my BSAI assignment", "should_trigger": false}
+]
