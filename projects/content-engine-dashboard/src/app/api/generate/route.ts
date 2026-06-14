@@ -271,7 +271,7 @@ export async function POST(req: NextRequest) {
     if (usedFallback && openaiKey) {
       const openai = new OpenAI({ apiKey: openaiKey });
       const completion = await openai.chat.completions.create({
-        model: "gpt-4o",
+        model: "gpt-5.2",
         max_tokens: Math.max(maxTokens, 2000),
         temperature: 0.8,
         messages: [{ role: "user", content: prompt }],

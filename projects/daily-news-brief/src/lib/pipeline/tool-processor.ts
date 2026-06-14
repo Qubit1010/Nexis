@@ -78,7 +78,7 @@ export async function synthesizeToolBrief(
   const responseText = await callWithFallback(
     prompt,
     "tool-synthesis",
-    "gpt-4o",
+    "gpt-5.2",
     "claude-sonnet-4-6",
     8192
   );
