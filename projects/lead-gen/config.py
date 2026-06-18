@@ -244,7 +244,7 @@ ENRICHMENT = {
 # ---------------------------------------------------------------------------
 
 PERSONALIZATION = {
-    "model": "gpt-4o-mini",
+    "model": "gpt-5.2",
     "tiers": ["HOT", "STRONG"],  # WARM gets template-based hooks only
     "max_tokens": 1500,
 }

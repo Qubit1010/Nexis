@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 import fs from "fs";
 import path from "path";
+
+// Primary model (Anthropic). OpenAI is the fallback if Anthropic errors or is unkeyed.
+const ANTHROPIC_MODEL = "claude-sonnet-4-6";
+const OPENAI_FALLBACK_MODEL = "gpt-5.2";
 
 export const dynamic = "force-dynamic";
 
@@ -75,6 +80,62 @@ function buildSystemPrompt(platform: Platform, mode: Mode): string {
   return parts.join("\n\n");
 }
 
+// Generate the draft. Tries Anthropic first; on any error (or if no Anthropic key)
+// falls back to OpenAI. Returns the raw text plus which provider produced it.
+async function generateDraft(
+  systemPrompt: string,
+  userMessage: string
+): Promise<{ raw: string; provider: "anthropic" | "openai" }> {
+  const anthropicKey = process.env.ANTHROPIC_API_KEY;
+  const openaiKey = process.env.OPENAI_API_KEY;
+
+  if (!anthropicKey && !openaiKey) {
+    throw new Error(
+      "No API key set. Add ANTHROPIC_API_KEY (and optionally OPENAI_API_KEY as fallback) to .env.local (see README)."
+    );
+  }
+
+  let anthropicError: unknown = null;
+
+  if (anthropicKey) {
+    try {
+      const anthropic = new Anthropic({ apiKey: anthropicKey });
+      const message = await anthropic.messages.create({
+        model: ANTHROPIC_MODEL,
+        max_tokens: 1024,
+        system: systemPrompt,
+        messages: [{ role: "user", content: userMessage }],
+      });
+      const raw = message.content[0]?.type === "text" ? message.content[0].text : "";
+      if (raw.trim()) return { raw, provider: "anthropic" };
+      throw new Error("Anthropic returned an empty response");
+    } catch (err) {
+      anthropicError = err;
+      // Fall through to OpenAI if we have a key; otherwise rethrow below.
+    }
+  }
+
+  if (openaiKey) {
+    const openai = new OpenAI({ apiKey: openaiKey });
+    const completion = await openai.chat.completions.create({
+      model: OPENAI_FALLBACK_MODEL,
+      max_tokens: 1024,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userMessage },
+      ],
+    });
+    const raw = completion.choices[0]?.message?.content ?? "";
+    if (raw.trim()) return { raw, provider: "openai" };
+    throw new Error("OpenAI fallback returned an empty response");
+  }
+
+  // Anthropic was the only provider and it failed.
+  throw anthropicError instanceof Error
+    ? anthropicError
+    : new Error(String(anthropicError));
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -86,14 +147,6 @@ export async function POST(req: NextRequest) {
     }
     if (!mode || !["opener", "followup", "reply"].includes(mode)) {
       return NextResponse.json({ error: "mode must be 'opener', 'followup', or 'reply'" }, { status: 400 });
-    }
-
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json(
-        { error: "ANTHROPIC_API_KEY is not set. Add it to .env.local (see README)." },
-        { status: 500 }
-      );
     }
 
     const systemPrompt = buildSystemPrompt(platform, mode);
@@ -182,15 +235,7 @@ Tactic: <one line naming the move>
 Why: <one line — why this is the right next step in the thread>`;
     }
 
-    const anthropic = new Anthropic({ apiKey });
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 1024,
-      system: systemPrompt,
-      messages: [{ role: "user", content: userMessage }],
-    });
-
-    const raw = message.content[0]?.type === "text" ? message.content[0].text : "";
+    const { raw, provider } = await generateDraft(systemPrompt, userMessage);
 
     // Split the message from the meta block.
     const parts = raw.split(/\n-{3,}\n/);
@@ -215,7 +260,7 @@ Why: <one line — why this is the right next step in the thread>`;
       why: grab("Why"),
     };
 
-    return NextResponse.json({ message: msg, meta });
+    return NextResponse.json({ message: msg, meta, provider });
   } catch (err) {
     const m = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: m }, { status: 500 });

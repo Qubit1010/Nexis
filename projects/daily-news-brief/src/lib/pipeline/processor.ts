@@ -146,7 +146,7 @@ export async function synthesizeBrief(
   const responseText = await callWithFallback(
     prompt,
     "synthesis",
-    "gpt-4o",
+    "gpt-5.2",
     "claude-sonnet-4-6",
     8192
   );
