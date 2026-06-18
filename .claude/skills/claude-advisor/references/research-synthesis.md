@@ -182,3 +182,84 @@ Full detail: `references/building-with-claude.md`. For exact request params/SDK 
 - **Step 5 - Schedule recurring work:** inside an active task type `/schedule`, set cadence (daily/weekly/monthly); manage them under **Scheduled** in the left sidebar. Only fires if the machine is awake + app open at the time.
 - **Step 6 - Dispatch (mobile remote control):** Desktop = Cowork tab > **Dispatch** > "Get started", toggle keep-awake, grant file/connector access. Mobile = send instructions in the Dispatch thread; the desktop does the heavy lifting locally and pushes you a notification when done or when it needs approval.
 - Source: live query to the notebook (22 citations; primary source "Get started with Claude Cowork" [s145/s146] plus the Desktop app and Dispatch docs). Within the locked corpus.
+
+---
+
+> **Source note for the 2026-06-16 entries below:** These findings come from a batch of ~47 practitioner YouTube videos added to the notebook on 2026-06-16 (creator tutorials: Dan Martell, the "7 Levels" series, "All 35 Claude Code Concepts," tool round-ups, integration walkthroughs, Cowork courses, etc.). Treat as **current practitioner consensus, not Anthropic documentation** - the level frameworks, tool names, and tactics are creator opinion and move fast. Verify any specific command, plan limit, or product name against the live notebook or official docs before quoting to a client. Captured to support the lead-magnet guide build.
+
+### [2026-06-16] (Q3 - Claude Code) The "Levels of Mastery" framing (the guide's new spine)
+
+Multiple videos independently frame Claude mastery as a **ladder**, not a feature list. The general progression (synthesized from Martell's "Full Claude Guide" + "Every Level Explained"):
+
+1. **Amateur** - Claude as a stateless search bar; one-off questions, start from zero each time.
+2. **Regular** - Projects as persistent workspaces; preloaded reference docs; a Master Prompt (role/context "ingredients") + System Prompt (the "recipe"); have Claude interview you to write them.
+3. **Integrator** - connect Claude to where work lives: Connectors (Gmail, Drive, Slack, Notion), Artifacts, Claude in Chrome; Cowork for desktop autonomy.
+4. **Operator** - doer -> director; if you do a workflow 3x/week, turn it into a Skill; chain skills; schedule them in Cowork.
+5. **Builder** - Claude Code to build apps/tools even without coding; Plan Mode (`/pl`), remote control from phone.
+6. **Architect / Orchestrator** - self-running systems, human-on-the-loop; cloud routines, subagents, memory consolidation.
+
+Domain-specific **"7 Levels" ladders** (same escalation pattern):
+- **Web design:** prompt-only ("AI slop") -> design-education skills (UIUX Pro Max) -> visual director (screenshots from Awwwards/Dribbble) -> cloner (teardown HTML/CSS) -> custom components -> external tools (Figma/Stitch, glassmorphism) -> 3D/WebGL.
+- **Content:** AI slop -> voice injector (`CLAUDE.md` with banned words/approved phrasing) -> research pipelines -> multimodal carousels -> content cascade (1 asset -> many platforms) -> cron automation -> autonomous agent (trap: losing brand identity).
+- **Memory/RAG:** automemory -> `CLAUDE.md` rulebook -> state files & chunking (index pattern) -> **Obsidian vault (the "99% solution" for solo users)** -> naive RAG (vector, "crappy search engine" trap) -> Graph RAG (LightRAG) -> agentic/multimodal RAG (orchestrator routes queries).
+- Source: live notebook queries (Q1/Q4 of the 2026-06-16 batch); creator sources.
+
+### [2026-06-16] (Q3 - Claude Code) New/2026 workflow features
+
+- **Routines (Cloud routines):** scheduled tasks that run on Anthropic's cloud (machine can be OFF). Create via Desktop "Scheduled" tab, `claude.ai/code`, or CLI; configure name + prompt + model + env; **must link a GitHub repo** for deliverables. Triggers: schedule, API call, or GitHub event. Max plan ~15 runs/24h.
+- **Dynamic Workflows / Ultra Code (`/workflows`, `/deep research`, `/ultracode`):** Claude writes a JS execution script and spawns hundreds of parallel subagents, validates with an adversarial "devil's advocate" agent, merges results. Ultra Code auto-elevates effort to "extra high" and decides if a prompt warrants a workflow. **Can cost ~50x tokens** - reserve for big parallelizable jobs (large migrations, codebase-wide bug hunts).
+- **The Dashboard (`claude agents`, `/bg`):** unified view of parallel sessions in three columns - Needs Input / Working / Completed. Spacebar to peek/reply, Ctrl+X to delete, `/bg` to push a task to background.
+- **Managed Agents (Claude Console):** Anthropic-hosted agent builder; guided 5-step UI (task, tools, guardrails, model); deploys to a cloud sandbox triggered by an API endpoint. For building agents ~10x faster without local infra. For heartbeat/constant-check agents, custom Agent SDK + Trigger.dev may still be better.
+- Source: live notebook query (B2 of the 2026-06-16 batch); creator sources.
+
+### [2026-06-16] (Q3 - Claude Code) Non-coder onboarding: concepts + beginner hacks
+
+- **Mindset:** treat Claude as an "infinitely patient tutor"; don't be an "accept monkey" - read output, ask "what is this?/why did you do that?"
+- **WAT framework:** Workflows (plain-language SOPs) + Agent (Claude, the brain) + Tools (code exec, terminal). Core mental model for automation.
+- **Core concepts:** the IDE (VS Code = file explorer + terminal where the agent lives); `CLAUDE.md` = the project "brain"/system prompt, keep lean (<150-200 lines); context window + context rot; Skills (progressive disclosure); **CLIs vs MCPs** (CLIs live in the terminal, faster + far more token-efficient than MCP servers); permissions (`--dangerously-skip-permissions` for full autonomy).
+- **Hacks:** Plan Mode (Shift+Tab); `/init` (auto-generate a `CLAUDE.md` from your codebase); `/btw` (sidebar chat that does NOT add to context tokens); custom status line (`/status line`) to show context-usage %; the screenshot loop (feed UI screenshots back for visual iteration); load the front-end-design skill + tag brand assets to beat "AI slop"; Obsidian as a free second brain.
+- Source: live notebook query (B1 of the 2026-06-16 batch); creator sources.
+
+### [2026-06-16] (Q3 - Claude Code) Subagents, 24/7 agents, and the "Agentic OS"
+
+- **Subagents (`/agents`):** main session = project manager dispatching to isolated, fresh-context workers that return only final output (keeps main context clean). Subagents do NOT talk to each other (vs "agent teams" which debate). Generates a markdown file in `.claude/agents` with YAML front matter. Best practices: trim the description (progressive disclosure), enforce read-only where possible, route heavy reads to Haiku, only delegate independent/parallelizable tasks.
+- **24/7 remote agents:** built on cloud routines; stateless per run but keeps the full agentic loop (can reason, use tools, self-correct). Write "one-shot" prompts, store secrets in env vars (never in the prompt/repo), audit failure logs.
+- **Agentic OS:** solves 3 gaps - memory, consistency, accessibility. Stack = Claude Code (engine) + Obsidian vault (structured memory: raw / wiki / index folders) + Skills (reusable SOPs) + a dashboard for non-technical teammates. Avoid bloated `CLAUDE.md`; treat skills as living docs; package workflows by domain (marketing pack, research pack).
+- Source: live notebook query (B3 of the 2026-06-16 batch); creator sources.
+
+### [2026-06-16] (Q6 - Ecosystem) Expanded practitioner toolkit (named tools + what each does)
+
+- **CLIs:** CLI Anything (auto-generate a CLI for any OSS program, by LightRAG makers); NotebookLM-CLI (offload analysis to Google's servers, free); Stripe; FFmpeg (video/audio/subtitles); GitHub; Vercel (frontend deploy); Supabase (DB/auth); Playwright (browser automation, faster/cheaper than the MCP); LLM Fit (pick the right local model for your machine); GWS (Google Workspace, 100+ workflow recipes).
+- **Open-source repos:** Auto Research (Karpathy - "ML algorithm in a box," runs optimization experiments); OpenSpace (MCP tracking skill performance); Claude Peers (multiple sessions talk via MCP + SQLite); Claude Obsidian (auto-build an Obsidian wiki from raw sources).
+- **Plugins:** Superpowers (14-skill TDD methodology dispatcher); GSD/Get Shit Done (fresh-context subagents + quality gates); Graphify (codebase -> knowledge graph, fewer tokens, can export Obsidian); Official Codex plugin (OpenAI adversarial review / "Codex rescue"); Impeccable 3.0 (23 commands, live in-browser UI editing, beats "AI slop"); Context Mode (filters verbose shell logs, SQLite session restore); Claude Mem (cross-session memory in a local SQLite vector DB); Higgsfield (AI image/video); n8n MCP server (build + validate n8n flows).
+- **Skills:** Skill Creator (official - drafts, tests, benchmarks, packages a skill); Caveman (strips filler, ~75% token savings, can improve accuracy); Grill Me / Grill with Docs (+ Codex variants: adversarial plan review, up to 5 rounds); Karpathy's Guidelines (4-rule lean `CLAUDE.md`: think first, simplicity, surgical changes, goal-driven); Memory OS + Wrap-up (3-bucket memory: archive / immutable knowledge / current strategy); Official Front-End Design.
+- Source: live notebook query (B4 of the 2026-06-16 batch); creator sources. Some overlap with the locked corpus (Caveman [s33], Superpowers [s32], Context7); the rest are net-new from these creator videos - directional.
+
+### [2026-06-16] (Q6 - Ecosystem) Integration combos ("X + Y = superpower")
+
+- **Claude Code + Firecrawl:** reliable scraping at scale; schema -> clean JSON/Markdown instead of raw HTML; bypasses anti-bot + JS-heavy sites. Use: competitor pricing, market research, lead-gen directory scraping.
+- **Claude Code + NotebookLM:** "infinite" persistent memory at ~zero token cost; offloads analysis to Google; can generate NotebookLM audio/video assets; pair with a "Wrap-up" skill to save whole sessions into a "brain" notebook.
+- **Claude Code + Playwright:** end-to-end browser automation (navigate, click, fill forms, test logged-in sessions); CLI is more token-efficient than the MCP. Use: automated QA, web task execution.
+- **Graphify + Obsidian:** maps a codebase/docs into a knowledge graph, exports linked Markdown into an Obsidian vault = structured second brain; search big repos without context rot.
+- Source: live notebook query (B5 of the 2026-06-16 batch); creator sources.
+
+### [2026-06-16] (Q4 - Cowork) Cowork full business playbook
+
+- **Setup:** write a `business_brain.md` (audience, revenue, brand voice, workflows) in a "Sandbox" folder; set Global Instructions to always check it for strategic questions; authenticate Connectors (Calendar, Gmail, Notion, Slack, Canva, Apify, etc.).
+- **Marketing workflows:** X/Grok trend intelligence (recency + authority + velocity matrix, then `/schedule` daily); Apify competitor scraping (20k+ scrapers - e.g. last 5 competitor reels into a table); content repurposer plugin (YouTube URL -> brand-voiced posts -> Notion calendar); Canva batch design (master brand template -> 10 fresh slides).
+- **Ops workflows:** morning brief + inbox triage (Chief of Staff); financial/revenue dashboards (Mercury/Stripe -> P&L -> HTML chart, monthly recurring); Computer Use for legacy portals without APIs (takes over mouse/keyboard); automated invoicing via Projects + template.
+- Source: live notebook query (B6 of the 2026-06-16 batch); creator sources.
+
+### [2026-06-16] (Q5 - Business) Concrete money-making workflows + the "6 AI skills"
+
+- **Web design:** Stitch 2.0 workflow (design in Stitch -> export code -> refine in Claude Code with 21st.dev); client CMS workflow (scrape inspiration via Firecrawl/blueprint-extractor -> generate site -> push to Vercel via GitHub -> build a client-editable CMS dashboard).
+- **Local SEO (the "50,000 clicks/mo" case):** GMB optimization via a setup markdown + Semrush "money keywords"; automated GMB posting via make.com with voice files (`humor.md`, `tone.md`, `vocabulary.md`); service + city keyword-cluster pages (SSR); Lighthouse -> paste report -> Claude fixes technical SEO toward 100.
+- **Content:** content gap analysis (scrape competitor titles/views); Callaway Desire hooks (visual/spoken/text from an ICP language library + swipe file); content cascade (1 YouTube URL -> LinkedIn/Facebook/Reddit/X + a Gumroad HTML page); carousel fix (Higgsfield/GPT Images 2 cover + HTML body slides + browser "tweak loop").
+- **The 6 AI skills (career framing):** (1) become "the AI person" in your current role; (2) taste & judgment (build an examples library, feed corrections back); (3) context engineering (never a blank chat - feed proprietary context like a new intern); (4) iteration speed (define "done" as one business metric); (5) build your own Jarvis (background agents that ping you); (6) know when NOT to use AI (deterministic "vending machine" beats a non-deterministic "slot machine" agent for predictable tasks).
+- Source: live notebook query (B7 of the 2026-06-16 batch); creator sources.
+
+### [2026-06-16] (Q3/Q7 - Deploy + OS) Deploying automations (3 methods) + the AI Operating System
+
+- **3 deployment methods:** (1) **Local loops / internal cron** (`cron create/list/delete`) - zero setup, full agentic loop, but machine + terminal must stay on; (2) **Scheduled tasks + Cloud routines** - runs on Anthropic's cloud 24/7, machine can be off, triggers by schedule/API/GitHub event, local tasks can "play catch-up" on missed runs; (3) **External cloud (Modal / Trigger.dev)** - Python/TS scripts on cron/webhooks for deterministic jobs; add the **Agent SDK** ("the brain plus the hands") for the full agentic experience on external servers.
+- **AI Operating System (Opus 4.8 as your "second brain"):** mindset shift = do everything inside Claude Code / VS Code first (stop opening Chrome/SaaS apps), which naturally builds a local knowledge base. **Four C's framework: Context, Connections, Capabilities, Cadence.** Steps: context over model ("context is king" - dump transcripts/emails/posts in); everything as files/folders (`decisions`, `audits`, `archives`, "other worlds" sub-projects); connect apps via APIs/MCP; manage tokens like money (isolate tasks to avoid polluting the main session).
+- Source: live notebook queries (Q3/Q5 of the first 2026-06-16 batch); creator sources.

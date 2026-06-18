@@ -49,7 +49,7 @@ Auto-detect the mode, then load the corresponding references.
 | **ecosystem** | "best plugins", "MCP servers", "Claude tools on GitHub", "plugin marketplace", "useful add-ons", "awesome claude" | `ecosystem-plugins.md` |
 | **building** | "Claude API", "Agent SDK", "tool use", "function calling", "prompt caching", "build a custom agent", "build vs buy" | `building-with-claude.md` (+ hand off deep specifics to `claude-api` skill) |
 | **plans** | "which plan", "Pro vs Max", "Team / Enterprise", "pricing", "usage limits", "Claude vs ChatGPT/Gemini" | `plans-and-pricing.md` |
-| **guide** (DEFERRED) | "build the lead magnet", "make the free Claude guide", "the giveaway guide" | reserved - confirm structure with Aleem first, then assemble via `scripts/save_guide.py` |
+| **guide** (BUILT) | "build the lead magnet", "make the free Claude guide", "the giveaway guide", "update the playbook" | The lead magnet is shipped: `references/The-Practical-Claude-Playbook-FULL.pdf`. To revise, edit the section files + rerun `build_full_playbook.py` (see "Lead magnet" below) |
 | **advise** (default) | anything Claude-related not clearly matched | `surface-comparison.md` + the 1-2 most relevant references |
 
 If ambiguous between two modes, pick the more specific one. If the ask spans two modes, handle the primary first, then offer the second.
@@ -160,6 +160,11 @@ Creates a formatted Google Doc in the "NexusPoint Guides" folder and returns the
 
 Avoid em dashes and special unicode in the JSON (plain hyphens) to keep Google Docs encoding clean. If the script fails, output the guide inline and note the failure.
 
-## Lead magnet (DEFERRED)
+## Lead magnet (BUILT - 2026-06-17)
 
-Aleem will define how the free lead-magnet guide should be structured (audience, length, sections, gating, branding). Until then: the `guide` mode and `save_guide.py` are the hooks it will plug into. When he specs it, assemble the guide content from `research-synthesis.md` + the reference files, render it via `save_guide.py`, and export to PDF for distribution. Do not finalize the lead-magnet structure unprompted.
+**"The Practical Claude Playbook"** is the shipped lead magnet: a 66-page PDF at `references/The-Practical-Claude-Playbook-FULL.pdf` (front matter + Table of Contents + 30 sections, 10 each across Beginner / Intermediate / Advanced), CTA -> https://nexus-point.co/.
+
+- **Structure:** 3 tiers x 10 sections. Beginner = what Claude is + the surfaces + prompting + use cases + plans/safety. Intermediate = Cowork, models, connectors, Skills, scheduling/routines, the Four C's assistant. Advanced = Claude Code, custom workflows/subagents, orchestration, plugins/CLI/MCP, integration combos, building systems, the business operating system, real-business workflows.
+- **Source of truth:** content is grounded in `references/research-synthesis.md` (including the 2026-06-16 "Live Query Additions" from ~47 practitioner-YouTube sources). Keep honesty flags on version/price-sensitive claims; no em dashes; clean encoding.
+- **Build tooling (not in this repo, lives in C:\tmp):** `playbook_pdf.py` (reusable reportlab engine), `section_01.py`..`section_30.py` (per-section content), `build_frontmatter_pdf.py`, and `build_full_playbook.py` (merges + adds the TOC + continuous page numbers). To revise: edit a section file, re-run it, then re-run `build_full_playbook.py`.
+- Note: built with a bespoke PDF generator rather than `save_guide.py` (which targets Google Docs) because Aleem wanted a styled, branded PDF. `save_guide.py` + the `guide` mode remain available for a Google Docs version if needed.

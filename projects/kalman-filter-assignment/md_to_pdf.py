@@ -6,6 +6,7 @@ Handles: H1/H2/H3 headings, paragraphs, bullet lists, numbered lists,
 
 import re
 import os
+import sys
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import cm
@@ -20,8 +21,12 @@ from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_JUSTIFY
 # Source / output paths
 # ----------------------------------------------------------------
 BASE = os.path.dirname(os.path.abspath(__file__))
-INPUT  = os.path.join(BASE, "report.md")
-OUTPUT = os.path.join(BASE, "report.pdf")
+# Optional CLI args: python md_to_pdf.py [input.md] [output.pdf]
+INPUT  = sys.argv[1] if len(sys.argv) > 1 else os.path.join(BASE, "report.md")
+if len(sys.argv) > 2:
+    OUTPUT = sys.argv[2]
+else:
+    OUTPUT = os.path.splitext(INPUT)[0] + ".pdf"
 
 # ----------------------------------------------------------------
 # Read markdown

@@ -42,3 +42,11 @@ ml-runs/
 # landing-rebuild skill outputs (generated Next.js apps + extractions, large)
 projects/nexuspoint-landing/
 projects/*-landing/
+
+# Webots robotics projects (large, generated worlds/archives)
+webots-projects/
+webots-projects.rar
+
+# Claude Playbook lead-magnet: ignore the 30 individual section PDFs (build artifacts).
+# Keep the front-matter PDF and the merged The-Practical-Claude-Playbook-FULL.pdf.
+.claude/skills/claude-advisor/references/playbook-*.pdf
