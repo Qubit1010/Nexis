@@ -1,0 +1,22 @@
+[
+  {"query": "ok I just scraped a fresh batch of agency owners into the Instant Instagram Leads sheet, push the new ones into the CRM with messages", "should_trigger": true},
+  {"query": "run the linkedin push for me", "should_trigger": true},
+  {"query": "sync my instagram leads to the outreach CRM", "should_trigger": true},
+  {"query": "any new leads to push to the CRM today?", "should_trigger": true},
+  {"query": "the instagram outreach CRM has a ton of duplicate rows from old runs, can you clean it up?", "should_trigger": true},
+  {"query": "fill in the blank Touch 1 messages for the new leads in the instagram CRM", "should_trigger": true},
+  {"query": "I scraped some facebook leads into a sheet, how do I get them into a CRM the same way as instagram?", "should_trigger": true},
+  {"query": "move the new rows from Instant LinkedIn Leads into the NexusPoint LinkedIn Outreach CRM and write the connection notes", "should_trigger": true},
+  {"query": "push leads to crm", "should_trigger": true},
+  {"query": "generate the personalized touch 1 DMs for my scraped instagram prospects and add them to the CRM", "should_trigger": true},
+  {"query": "draft a reply to this DM thread, the prospect just asked what my pricing is", "should_trigger": false},
+  {"query": "write me a 4-email cold sequence to send to SaaS founders about AI automation", "should_trigger": false},
+  {"query": "what's a good acceptance rate for LinkedIn connection requests in 2026?", "should_trigger": false},
+  {"query": "scrape 200 agency owners off instagram for me", "should_trigger": false},
+  {"query": "set up a Google Sheet to track my client invoices and flag overdue ones", "should_trigger": false},
+  {"query": "prep me for my discovery call with Loop & Co tomorrow", "should_trigger": false},
+  {"query": "how should I follow up with a lead who went cold after my first DM?", "should_trigger": false},
+  {"query": "add a column to my leads spreadsheet that calculates days since last contact", "should_trigger": false},
+  {"query": "find me the email addresses for these 50 companies I'm targeting", "should_trigger": false},
+  {"query": "what should I post on LinkedIn this week to get more inbound?", "should_trigger": false}
+]

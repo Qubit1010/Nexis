@@ -1,0 +1,57 @@
+{
+  "slug": "ai-tools-tier-list",
+  "platform": "instagram",
+  "title": "AI Tools Tier List for Agencies 2026",
+  "voiceScript": "Most agencies in 2026 are paying for AI tools that belong in the trash tier. There are thousands now, and every week a new one promises everything. So you keep subscribing, keep switching, and nothing sticks. So I ranked the tools that actually run an agency this year, from daily drivers down to the ones you can skip. I sorted 20 tools across 4 tiers, and only 5 earned the top spot. Your edge was never the tool. It's the small stack you commit to and master. Stop collecting tools and start compounding one stack. DM list and I will send you the list. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Most agencies in 2026 are paying for AI tools that belong in the trash tier.",
+      "headline": "Most tools belong in the *trash tier*",
+      "sub": "AI Tools for Agencies"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "There are thousands now, and every week a new one promises everything. So you keep subscribing, keep switching, and nothing sticks.",
+      "headline": "A new tool *every week*",
+      "sub": "and none of them stick",
+      "problemVariant": "chips",
+      "chips": ["new tool weekly", "more subscriptions", "nothing sticks"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I ranked the tools that actually run an agency this year, from daily drivers down to the ones you can skip.",
+      "headline": "The 2026 *tier list*",
+      "asset": "infographic.png"
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "I sorted 20 tools across 4 tiers, and only 5 earned the top spot.",
+      "headline": "How they ranked",
+      "stats": [
+        { "value": 20, "suffix": "", "label": "tools ranked" },
+        { "value": 4, "suffix": "", "label": "tiers, S to C" },
+        { "value": 5, "suffix": "", "label": "made the S-tier" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Your edge was never the tool. It's the small stack you commit to and master.",
+      "headline": "Master the *stack*, not the tool",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Stop collecting tools and start compounding one stack. DM list and I will send you the list. Follow for more.",
+      "cta": "DM 'list' for the full tier list"
+    }
+  ],
+  "source": "Infographic: 'AI Tools Tier List for Agencies 2026'. S-tier: ChatGPT v2, Manus, Claude, Codex, Claude Code. A-tier: Cursor, Gemini 3.1 Pro, Kling 3.0, Airtable, Nano Banana Pro 2. B-tier: n8n, Clay, Openclaw, Notion, Manychat. C-tier: Grok, Gamma, Chatdoc, Synthesia, Deepseek. 20 tools, 4 tiers, 5 per tier. Accompanying source article on the 2026 AI landscape: separating apps from models; generalist models (GPT 5.2, Gemini 3.1 Pro w/ 2M context, Claude Opus 4.6 w/ 1M context + non-sycophantic tone, Grok 4 real-time X); open-source/local movement (Llama 4 up to 400B params + 10M context, DeepSeek R1 cheap reasoning, Qwen 3.5, Kimi K2.5); aggregators (Perplexity/Sonar); generative modalities (Midjourney, Flux, Sora 2, Runway, Kling, Suno V5); and the shift to AI agents ('like interns', need oversight). Reel angle: agencies are drowning in tools; commit to a small S-tier stack instead of chasing the new thing.",
+  "handle": "@nexuspoint"
+}

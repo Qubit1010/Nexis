@@ -272,8 +272,7 @@ export async function POST(req: NextRequest) {
       const openai = new OpenAI({ apiKey: openaiKey });
       const completion = await openai.chat.completions.create({
         model: "gpt-5.2",
-        max_tokens: Math.max(maxTokens, 2000),
-        temperature: 0.8,
+        max_completion_tokens: Math.max(maxTokens, 2000),
         messages: [{ role: "user", content: prompt }],
       });
       content = completion.choices[0]?.message?.content ?? "";

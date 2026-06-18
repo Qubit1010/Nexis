@@ -17,8 +17,8 @@ Activate this skill when the user says:
 
 | Mode | When to Use | Model | Cost |
 |------|-------------|-------|------|
-| **Deep** | Open-ended, comparative, strategic, or multi-faceted topics | OpenAI gpt-4o | $$$ |
-| **Quick** | Single factual answer, moderate lookup | OpenAI gpt-4o-mini | $$ |
+| **Deep** | Open-ended, comparative, strategic, or multi-faceted topics | OpenAI gpt-5 | $$$ |
+| **Quick** | Single factual answer, moderate lookup | OpenAI gpt-4.1-mini | $$ |
 | **Lite** | Simple lookups, factual questions, cheap research | Claude Haiku (subagent) | $ |
 
 **Auto-select logic:**

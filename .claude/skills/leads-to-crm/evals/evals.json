@@ -1,0 +1,30 @@
+{
+  "skill_name": "leads-to-crm",
+  "notes": "This skill writes to live Google Sheets CRMs, so functional evals are run by Aleem/Claude via --dry-run rather than by subagents writing to production. These prompts are primarily for description-trigger testing and as a record of intended behavior.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just finished scraping a fresh batch of agency owners into the Instant Instagram Leads sheet. Push the new ones into the CRM with messages.",
+      "expected_output": "Triggers leads-to-crm. Runs push.py --channel instagram (dry-run first), classifies rows, generates Touch 1 messages for genuinely new handles, appends to the Instagram Outreach CRM, stamps source rows Added.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Run the linkedin push for me",
+      "expected_output": "Triggers leads-to-crm. Runs push.py --channel linkedin: reads Instant LinkedIn Leads, dedups by /in/ slug, pushes new leads to the LinkedIn Outreach CRM with connection notes.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "The instagram CRM has a bunch of duplicate rows from earlier runs, can you clean it up?",
+      "expected_output": "Triggers leads-to-crm. Runs push.py --channel instagram --dedup (dry-run first) to remove duplicate rows by handle, keeping the first occurrence.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "How do I get the new facebook leads I scraped into a CRM the same way as instagram?",
+      "expected_output": "Triggers leads-to-crm. Explains the add-a-channel steps (new Channel subclass in channels.py with identity functions + register in CHANNELS), since Facebook is the intended next extension.",
+      "files": []
+    }
+  ]
+}

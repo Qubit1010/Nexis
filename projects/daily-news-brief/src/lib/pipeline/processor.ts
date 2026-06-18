@@ -66,12 +66,20 @@ export async function callWithFallback(
   if (process.env.OPENAI_API_KEY) {
     try {
       const openai = getOpenAIClient();
+      const params: OpenAI.Chat.Completions.ChatCompletionCreateParamsNonStreaming = {
+        model: openaiModel,
+        messages: [{ role: "user", content: prompt }],
+      };
+      // The gpt-5 family uses max_completion_tokens + reasoning_effort and rejects
+      // the old max_tokens param (400 error), so branch on it.
+      if (openaiModel.startsWith("gpt-5")) {
+        params.max_completion_tokens = maxTokens;
+        params.reasoning_effort = "low";
+      } else {
+        params.max_tokens = maxTokens;
+      }
       const message = await withRetry(() =>
-        openai.chat.completions.create({
-          model: openaiModel,
-          max_tokens: maxTokens,
-          messages: [{ role: "user", content: prompt }],
-        })
+        openai.chat.completions.create(params)
       );
       return message.choices[0]?.message?.content ?? "";
     } catch (err) {
@@ -115,7 +123,7 @@ export async function processCategoryPass1(
   const responseText = await callWithFallback(
     prompt,
     categoryName,
-    "gpt-4o-mini",
+    "gpt-5.4-mini",
     "claude-haiku-4-5-20251001",
     2048
   );

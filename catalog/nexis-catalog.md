@@ -17,20 +17,10 @@ These are the skills built specifically for NexusPoint. Each is invoked by speak
 **What it does:** Source-cited opener archetypes (Welsh, Holland, Braun), Voss calibrated questions, Hormozi value equation, Sandler pain funnel, Cole Gordon / Frank Kern closing frameworks, LinkedIn + Instagram cold sequences, a live conversation playbook with objection branches, the full 30-minute Discovery Call (Ops Teardown) script, and 10 cited objection responses. All claims trace to a 77-source NotebookLM research synthesis. The lead offer is AI automation as the premium wedge, never web dev.
 **How to use:** "draft a DM", "how do I respond to [objection]", "prep me for a sales call", "write a discovery call script", "pitch my AI automation offer", "convert this lead", "what's my opener", or paste a live DM thread and ask "what now".
 
-### Cold Outreach
-**Problem it solves:** Getting clients off Upwork/Fiverr requires a repeatable cold email machine, and paid tools are expensive.
-**What it does:** Runs the full free cold email pipeline end to end. Apify (free tier) scrapes leads, Python finds and verifies emails, Gmail (via gws) sends, and Google Sheets is the CRM. Saves about $112/month versus paid tools. Manages scraping, email finding, sending today's batch, and reply tracking.
-**How to use:** "scrape leads", "find emails", "send emails", "send today's batch", "check replies", "outreach status", "run the pipeline".
-
-### LinkedIn Outreach
-**Problem it solves:** LinkedIn is a top channel for founders/ops buyers, but personalizing connection notes at scale is slow.
-**What it does:** Scrapes founder/COO/ops leads via Apify, stores them in a Google Sheets CRM, and generates personalized 300-character connection request notes with OpenAI.
-**How to use:** "scrape linkedin leads", "generate connection messages", "run linkedin pipeline", "linkedin outreach", "how many linkedin leads".
-
-### Instagram Outreach
-**Problem it solves:** Instagram has founder/CEO leads but bans bots, so sending must stay manual while sourcing and personalization are automated.
-**What it does:** Scrapes founder/CEO/ops profiles via Apify hashtag search, stores them in a Google Sheets CRM, and generates personalized Touch 1 DMs with OpenAI (GPT-4o-mini). All sending is manual.
-**How to use:** "scrape instagram leads", "generate instagram DMs", "run instagram pipeline", "instagram outreach", "instagram CRM status".
+### Leads to CRM
+**Problem it solves:** Aleem manually scrapes Instagram/LinkedIn leads into "Instant ... Leads" sheets and needs the new ones pushed into the right CRM with a personalized opener, without dropping new rows or duplicating ones already sent (the two bugs in the old pipeline).
+**What it does:** Reads the per-channel source sheet, identifies genuinely-new leads via identity-based dedup (Instagram @handle, LinkedIn /in/ slug), generates a Touch 1 message with Claude Haiku, and appends them to the matching "NexusPoint ... Outreach CRM". Idempotent (re-running pushes nothing new) and channel-config-driven (Instagram + LinkedIn now, Facebook next). Replaces the archived cold-outreach / linkedin-outreach / instagram-outreach skills and the lead-gen push pipeline.
+**How to use:** "push leads to CRM", "sync my instagram leads", "run the linkedin push", "any new leads to push", "dedup the CRM", "fill the blank messages". Runs via `.claude/skills/leads-to-crm/scripts/push.py --channel instagram|linkedin` (start with `--dry-run`).
 
 ### Marketing Advisor
 **Problem it solves:** You need marketing decisions grounded in current data, not aging frameworks or opinions.
@@ -144,11 +134,6 @@ These are the skills built specifically for NexusPoint. Each is invoked by speak
 Projects are runnable codebases under `projects/`. Grouped by purpose.
 
 ## A. Client Acquisition Systems
-
-### Lead Gen (`projects/lead-gen`)
-**Problem it solves:** Outreach is only as good as the lead list; you need high-quality, scored, enriched prospects across channels.
-**What it does:** End-to-end lead intelligence pipeline. Discovers prospects via LinkedIn Jobs/Profiles, Product Hunt, and Google Search, scores them with a 5-layer ICP system, enriches with website intel + email + Proxycurl + Perplexity, generates personalized outreach via Claude, and exports to all 3 CRMs.
-**How to use:** Say "generate leads", "run lead gen", "score leads", "enrich leads", "export leads", "pipeline stats". (Has its own SKILL.md wrapper; runs via `main.py`.)
 
 ### Sales Playbook Dashboard (`projects/sales-playbook-dashboard`)
 **Problem it solves:** Drafting on-brand LinkedIn/Instagram DMs from the playbook needs a fast UI, and the old dashboards drifted into AI-sounding copy.

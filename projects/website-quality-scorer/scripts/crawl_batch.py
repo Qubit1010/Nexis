@@ -1,8 +1,8 @@
 """Batch crawler — builds data/labeled/dataset.csv for ML training.
 
 Pulls URLs from 3 sources:
-  1. projects/lead-gen/data/leads.db  (company_website column)
-  2. projects/lead-gen/data/cold_email_touch1_2026-04-09.csv  (domain from email)
+  1. archives/outreach-skills-2026-06-18/lead-gen/data/leads.db  (company_website column)
+  2. archives/outreach-skills-2026-06-18/lead-gen/data/cold_email_touch1_2026-04-09.csv
   3. Curated hardcoded list  (SaaS, e-commerce, portfolios, dev-infra)
 
 Usage:
@@ -39,8 +39,10 @@ from ml.heuristic_label import heuristic_score_detailed
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-LEADS_DB = _ROOT.parent / "lead-gen" / "data" / "leads.db"
-LEADS_CSV = _ROOT.parent / "lead-gen" / "data" / "cold_email_touch1_2026-04-09.csv"
+# lead-gen was archived 2026-06-18 → archives/outreach-skills-2026-06-18/lead-gen
+_LEADGEN = _ROOT.parent.parent / "archives" / "outreach-skills-2026-06-18" / "lead-gen" / "data"
+LEADS_DB = _LEADGEN / "leads.db"
+LEADS_CSV = _LEADGEN / "cold_email_touch1_2026-04-09.csv"
 OUT_CSV = _ROOT / "data" / "labeled" / "dataset.csv"
 FAILED_LOG = _ROOT / "data" / "raw" / "failed_urls.txt"
 
