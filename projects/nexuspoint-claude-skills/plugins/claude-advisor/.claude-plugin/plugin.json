@@ -1,0 +1,11 @@
+{
+  "name": "claude-advisor",
+  "description": "A research-backed guide to everything Claude: the surfaces (Claude.ai chat, Claude Code, Claude Cowork), model selection (Opus vs Sonnet vs Haiku), the ecosystem (plugins, MCP servers, tools), building with the API, plans and pricing, and a clear 'which one should I use for this task' decision framework. Every load-bearing claim is grounded in a NotebookLM synthesis of 237 cited 2026 sources.",
+  "version": "1.0.0",
+  "author": {
+    "name": "NexusPoint",
+    "url": "https://nexus-point.co/"
+  },
+  "homepage": "https://nexus-point.co/",
+  "keywords": ["claude", "claude-code", "claude-cowork", "anthropic", "model-selection", "advisor"]
+}

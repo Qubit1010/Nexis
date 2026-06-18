@@ -1,0 +1,29 @@
+{
+  "name": "nexuspoint-claude-skills",
+  "owner": {
+    "name": "NexusPoint",
+    "url": "https://nexus-point.co/"
+  },
+  "metadata": {
+    "description": "Free, research-backed Claude skills from NexusPoint.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-advisor",
+      "source": "./plugins/claude-advisor",
+      "description": "A research-backed guide to everything Claude: the surfaces (chat, Code, Cowork), model selection (Opus/Sonnet/Haiku), the ecosystem, the API, plans/pricing, and a 'which should I use for this task' decision framework. Grounded in a 237-source 2026 research synthesis.",
+      "version": "1.0.0",
+      "category": "knowledge",
+      "keywords": ["claude", "claude-code", "claude-cowork", "anthropic", "models", "advisor", "guide"]
+    },
+    {
+      "name": "marketing-advisor",
+      "source": "./plugins/marketing-advisor",
+      "description": "A research-backed marketing advisor for agencies and founders: ICP targeting, LinkedIn/Instagram strategy, content calendars, cold email, offer positioning and pricing, paid ads, and automation. Grounded in a 234-source 2026 synthesis with a live channel-benchmark scoreboard.",
+      "version": "1.0.0",
+      "category": "marketing",
+      "keywords": ["marketing", "lead-generation", "linkedin", "content-strategy", "cold-email", "pricing", "benchmarks"]
+    }
+  ]
+}
