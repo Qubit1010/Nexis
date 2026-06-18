@@ -1,0 +1,11 @@
+{
+  "name": "marketing-advisor",
+  "description": "A research-backed marketing advisor for agencies and founders: ICP targeting, LinkedIn and Instagram/Reels strategy, content calendars, cold email, offer positioning and pricing, paid ads, and marketing automation. Every recommendation is grounded in a NotebookLM synthesis of 234 cited 2026 sources, with a scoreboard of current channel benchmarks.",
+  "version": "1.0.0",
+  "author": {
+    "name": "NexusPoint",
+    "url": "https://nexus-point.co/"
+  },
+  "homepage": "https://nexus-point.co/",
+  "keywords": ["marketing", "lead-generation", "linkedin", "content-strategy", "cold-email", "pricing", "benchmarks"]
+}
