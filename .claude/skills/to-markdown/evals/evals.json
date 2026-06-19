@@ -1,0 +1,23 @@
+{
+  "skill_name": "to-markdown",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Convert this PDF to markdown: C:/tmp/sample-report.pdf",
+      "expected_output": "Runs scripts/convert.py on the PDF, writes C:/tmp/sample-report.md next to the source with the extracted text as clean markdown (headings, lists, and tables preserved where present), and reports the output path back to the user.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Turn this into a markdown file:\n\nProject Kickoff Notes\nGoals: ship v1 by Friday, get sign-off from client.\nRisks - scope creep, late assets.\nNext steps: 1) finalize wireframes 2) set up repo 3) book the review call",
+      "expected_output": "Recognizes this is raw pasted text (no file path), structures it into clean markdown with a heading and proper lists/sub-points, and writes it to a .md file (named by the user or a sensible default like C:/tmp/<slug>.md), then confirms the saved path. Does not require running the script.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I have a Word doc at C:/tmp/proposal.docx - can you give me the markdown version?",
+      "expected_output": "Runs scripts/convert.py on the DOCX via markitdown, writes C:/tmp/proposal.md alongside the source, and reports the path. If markitdown is not installed, surfaces the install hint (pip install \"markitdown[all]\") and asks the user to install it.",
+      "files": []
+    }
+  ]
+}

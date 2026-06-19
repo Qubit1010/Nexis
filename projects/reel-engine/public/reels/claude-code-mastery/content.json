@@ -1,0 +1,63 @@
+{
+  "slug": "claude-code-mastery",
+  "platform": "instagram",
+  "title": "Mastering Claude Code",
+  "voiceScript": "You don't need a smarter model to win with Claude Code. You need a sharper workflow. Most people fire vague prompts, dump everything into one chat, and let it code before it understands the task. So now I run it like a loop. Plan before it codes, keep context lean, delegate to subagents, and verify before it's done. Three numbers anchor it. Ninety five percent confidence before it codes. Memory file under two hundred lines. Compact at sixty percent, then clear. Mastery was never about the model. It's how you drive it. Get the workflow right and it stops fighting you. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "You don't need a smarter model to win with Claude Code. You need a sharper workflow.",
+      "headline": "Same tool, different *results*",
+      "sub": "Claude Code"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Most people fire vague prompts, dump everything into one chat, and let it code before it understands the task.",
+      "headline": "Bad workflow *wastes* the model",
+      "sub": "vague, bloated, unplanned",
+      "problemVariant": "chips",
+      "chips": ["vague prompts", "one giant chat", "no plan"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So now I run it like a loop. Plan before it codes, keep context lean, delegate to subagents, and verify before it's done.",
+      "headline": "Run it like a *loop*",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Plan First", "goal": "Plan before code" },
+        { "name": "Guard Context", "goal": "Keep it lean" },
+        { "name": "Delegate", "goal": "Subagents + skills" },
+        { "name": "Verify", "goal": "Self-check the work" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "Three numbers anchor it. Ninety five percent confidence before it codes. Memory file under two hundred lines. Compact at sixty percent, then clear.",
+      "headline": "Three levers that matter",
+      "stats": [
+        { "value": 95, "suffix": "%", "label": "confidence before it codes" },
+        { "value": 200, "suffix": " lines", "label": "keep your memory lean" },
+        { "value": 60, "suffix": "%", "label": "compact, then clear" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Mastery was never about the model. It's how you drive it.",
+      "headline": "It's how you *drive* it",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Get the workflow right and it stops fighting you. Follow for more.",
+      "cta": "Driving Claude Code, or fighting it?"
+    }
+  ],
+  "source": "Carousel/listicle: '15 Essential Strategies for Mastering Claude Code'. Tips cluster into a workflow loop: setup + memory (/init, lean CLAUDE.md 150-200 lines max, route config to linked files), context discipline (status line, keep context small, /context to diagnose bloat, compact at ~60% then clear between tasks), planning + reasoning (plan mode first, treat Claude like a junior dev, force it to ask questions until 95% confident, bake self-checks into todos at 95% confidence), and scaling (deploy subagents for parallel work, use cheaper models like Haiku for subagents, build custom reusable skills). Reel angle = workflow discipline beats a smarter model (distinct from the claude-code-stack reel's tooling angle).",
+  "handle": "@nexuspoint"
+}

@@ -31,6 +31,8 @@ Skills live in `.claude/skills/`. Each skill gets its own folder with a `SKILL.m
 
 Skills are built organically -- when a workflow gets repeated, we turn it into a skill.
 
+**Creating new skills:** See `.claude/rules/skill-creation.md`. When Aleem asks to create a new skill without explicitly naming the skill-creator, ask whether to build it with the `skill-creator` workflow before proceeding.
+
 ### Active Skills
 - **Sales Playbook** (`.claude/skills/sales-playbook/`) — Master sales asset. Source-cited opener archetypes (Welsh, Holland, Braun), Voss calibrated questions, Hormozi value equation, Sandler pain funnel, Cole Gordon/Frank Kern closing frameworks, LinkedIn + Instagram cold sequences, live conversation playbook, full 30-min Discovery Call (Ops Teardown) script, 10 cited objection responses. All claims sourced from 77-source NotebookLM research synthesis (`references/research-synthesis.md`). Existing LI/IG outreach + responder skills now reference this. Say "draft a DM", "how do I respond to [objection]", "prep me for a sales call", "write a discovery call script", "pitch my AI automation offer", "convert this lead", "what's my opener", or paste a live DM thread and ask "what now"
 - **Deep Research** (`.claude/skills/deep-research/`) — Context-aware research via OpenAI. Say "research [topic]" or force mode with "deep research..." / "quick search..." / "lite research..."
@@ -48,6 +50,32 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 - **UI Design System** (`.claude/skills/ui-design-system/`) — Toolkit for design tokens, component documentation, responsive design calculations, and developer handoff. Use when creating design systems, maintaining visual consistency, or facilitating design-dev collaboration.
 - **Reel Creator** (`.claude/skills/reel-creator/`) — Turns an infographic post (caption + source + image) into a 40-50s vertical motion-graphics reel with an ElevenLabs voiceover synced to brand animation, via the `projects/reel-engine/` Remotion codebase. Two phases: authors the voice script + scene `content.json` (validated for brand voice, length, sync), then after the user records the voiceover, transcribes with Whisper, aligns scenes, and renders the mp4. Say "make a reel", "turn this post into a reel", "reel from this infographic", "render the [slug] reel", "the voiceover is ready"
 - **Claude Advisor** (`.claude/skills/claude-advisor/`) — The go-to, research-backed guide to everything Claude. Explains how Claude works, the difference between the surfaces (Claude.ai chat, Claude Code, Claude Cowork) plus Desktop/mobile/API, and gives a "which one is best for this task" decision framework. Covers Claude Code intricacies + productivity (hooks, MCP, subagents, skills, plugins, Agent SDK), business + creative use cases, the ecosystem (best plugins, MCP servers, GitHub tools), API building, model selection (Opus/Sonnet/Haiku), and the Free/Pro/Max/Team/Enterprise plans. Grounded in a NotebookLM synthesis of cited 2026 sources with a live-query fallback; mirrors the `marketing-advisor` pattern. Doubles as the basis for a free lead-magnet guide (structure TBD). Hands off deep API specifics to the `claude-api` skill and granular Claude Code mechanics to the `claude-code-guide` agent. Say "what's the difference between Claude chat and Claude Code", "which Claude should I use for X", "can I build this in Claude Code", "Opus vs Sonnet for this", "what is Claude Cowork", "best Claude Code plugins", "how are businesses using Claude", or "explain Claude to a client"
+- **To Markdown** (`.claude/skills/to-markdown/`) — Converts a PDF, document, or any text into a clean markdown `.md` file via Microsoft's `markitdown`. Handles PDF, DOCX, PPTX, XLSX, HTML, CSV, JSON, plain text, and raw pasted text; writes `<basename>.md` next to the source (pasted text goes to a named/`C:/tmp` file). Plain-text inputs pass through directly; everything else runs `scripts/convert.py`. Say "convert this to markdown", "pdf to md", "turn this PDF into markdown", "convert [file] to .md", "save this as markdown", or paste text and ask for a `.md`. Needs `pip install "markitdown[all]"`.
+
+### Installed Skills, Collections & Plugins (not built here — use when relevant)
+
+These are third-party skills and plugins installed into Nexis. **Reach for them before building from scratch** whenever a task matches. The ones built in-house above always take priority for agency/sales/content/outreach work; the installed ones cover general engineering, science, and productivity.
+
+**Skill collections (routers — invoke the router, it picks the sub-skill):**
+- **Scientific Agent Skills** (`.claude/skills/scientific-agent-skills/`) — Router for 147 scientific/research skills from K-Dense-AI. Covers ML/DL (PyTorch, scikit-learn, SHAP), data science (Polars, Dask, EDA), single-cell/omics (scanpy, anndata, bulk RNA-seq, pydeseq2), bioinformatics (Biopython, Nextflow, phylogenetics), chemistry/drug discovery (RDKit, DeepChem, molecular docking, MD), quantum (Qiskit, Cirq, PennyLane), lab automation (Opentrons, Benchling), documents (**pdf**, docx, pptx, LaTeX posters, infographics), research/literature (literature review, peer review, citations, paper lookup), viz (matplotlib), clinical/medical, geospatial, and simulation. Trigger on any tool name, library, or scientific/research task.
+- **Awesome Claude Skills** (`.claude/skills/awesome-claude-skills/`) — Router for 26 productivity/dev skills from ComposioHQ. Useful here: `lead-research-assistant`, `competitive-ads-extractor`, `content-research-writer`, `webapp-testing` (Playwright), `mcp-builder`, `changelog-generator`, `tailored-resume-generator`, `invoice-organizer`, `file-organizer`, `domain-name-brainstormer`, `twitter-algorithm-optimizer`, `image-enhancer`, `meeting-insights-analyzer`, `langsmith-fetch`, `connect`/`connect-apps` (Composio — real actions across 500+ apps, needs a free API key).
+
+**Installed individual skills (engineering & design):**
+- `senior-architect`, `senior-backend`, `senior-frontend` — system design, API/DB/backend, and modern frontend (React/Next/TS/Tailwind) implementation and review.
+- `code-reviewer` — multi-language PR review, security scan, review checklists.
+- `agent-development` — authoring Claude Code subagents (frontmatter, triggering, tools).
+- `frontend-design`, `ui-ux-pro-max`, `canvas-design` — distinctive production UI, deep UI/UX design intelligence (styles/palettes/fonts/charts/stacks), and static visual art (PNG/PDF).
+- `brainstorming` — structured intent/requirements exploration before building.
+- `remotion-best-practices` — Remotion/React video patterns (pairs with `reel-creator` + `projects/reel-engine`).
+- `skill-creator` — the standard skill-authoring/eval workflow (see `.claude/rules/skill-creation.md`).
+
+**Installed plugins (global, user scope):**
+- `superpowers` — large workflow/skill toolkit.
+- `andrej-karpathy-skills` — Karpathy's engineering/ML skill pack.
+- `understand-anything` — explain/learn-anything workflows.
+- `impeccable` — code-quality / polish workflows.
+
+**MCP servers & CLI** are documented in `.claude/rules/tool-integrations.md` (Google Workspace `gws` CLI; GitHub, Firecrawl, Stitch, NotebookLM, Canva, Gmail, Calendar, Drive, Upwork MCP).
 
 ### Skills to Build (Backlog)
 
