@@ -52,9 +52,9 @@ webots-projects.rar
 .claude/skills/claude-advisor/references/playbook-*.pdf
 
 # Personal/sensitive files
-context.rar
-nexuspoint-landing-page-copy.md
-daily-os.md
+**/context.rar
+**/nexuspoint-landing-page-copy.md
+**/daily-os.md
 references/Upwork/
 references/marketing-books-notes/
 .claude/rules/agency-operations.md
