@@ -1,6 +1,6 @@
 # NexusPoint Claude Skills
 
-Free, research-backed [Claude Code](https://docs.claude.com/en/docs/claude-code) skills from [NexusPoint](https://nexus-point.co/). Two installable skills, each grounded in a NotebookLM synthesis of cited 2026 sources, no API keys or accounts required.
+Free [Claude Code](https://docs.claude.com/en/docs/claude-code) skills from [NexusPoint](https://nexus-point.co/). Two research-backed advisor skills grounded in NotebookLM syntheses of cited 2026 sources (no API keys or accounts needed), plus a hands-on outreach automation (`leads-to-crm`) you point at your own Google Sheets.
 
 ## claude-advisor
 
@@ -26,6 +26,16 @@ A **research-backed marketing advisor** for agencies and founders. Strategy and 
 
 Grounded in a **NotebookLM synthesis of 234 cited 2026 sources**. Strategy only - it frames the plan; the actual outreach copy is a separate pass.
 
+## leads-to-crm
+
+A **hands-on outreach automation** for agencies and teams. It moves manually-scraped leads from your per-channel source Google Sheets into the matching outreach CRM, writing a personalized **Touch 1 message** for each genuinely new lead:
+
+- **Identity-based dedup** on the @handle / LinkedIn slug, so it only adds new rows and never duplicates ones already sent.
+- **Instagram + LinkedIn** today, built to extend to more channels with one config block.
+- **Touch 1 messages** via OpenAI (`gpt-5.4-mini`) with a Claude Haiku fallback, or run with blank messages to fill later.
+
+Unlike the advisor skills, this one **does things in your accounts**, so it needs a little setup: point it at your own sheets with environment variables (`LEADS_IG_SOURCE_SHEET_ID`, `LEADS_IG_CRM_SHEET_ID`, `LEADS_LI_SOURCE_SHEET_ID`, `LEADS_LI_CRM_SHEET_ID`), the [`gws` Google Workspace CLI](https://nexus-point.co/) authenticated to your Google account, and optionally `OPENAI_API_KEY` / `ANTHROPIC_API_KEY`. Full details in its `SKILL.md`.
+
 ## Install
 
 In Claude Code, add the marketplace once, then install either or both:
@@ -34,6 +44,7 @@ In Claude Code, add the marketplace once, then install either or both:
 /plugin marketplace add Qubit1010/nexuspoint-claude-skills
 /plugin install claude-advisor
 /plugin install marketing-advisor
+/plugin install leads-to-crm
 ```
 
 The skills activate automatically when you ask a matching question.
@@ -46,11 +57,12 @@ Each skill folder also works as an uploadable Skill on Claude.ai (Settings -> Ca
 
 ```
 plugins/
-├── claude-advisor/skills/claude-advisor/      # SKILL.md + 11 references + 237-source index + local export script
-└── marketing-advisor/skills/marketing-advisor/ # SKILL.md + 11 references + 234-source index + local export script
+├── claude-advisor/skills/claude-advisor/       # SKILL.md + 11 references + 237-source index + local export script
+├── marketing-advisor/skills/marketing-advisor/ # SKILL.md + 11 references + 234-source index + local export script
+└── leads-to-crm/skills/leads-to-crm/           # SKILL.md + message archetypes + channel-config pipeline scripts
 ```
 
-No API keys, no Google account, no external auth required.
+The two advisor skills need no API keys, Google account, or external auth. `leads-to-crm` is the exception: it acts in your accounts, so it needs the `gws` CLI and your own sheet IDs (see its setup above).
 
 ---
 

@@ -1,0 +1,11 @@
+{
+  "name": "leads-to-crm",
+  "description": "An outreach lead router for agencies and teams: pushes manually-scraped leads from per-channel source Google Sheets into the matching outreach CRM, generating a personalized Touch 1 message (OpenAI gpt-5.4-mini with a Claude Haiku fallback) for each new lead. Identity-based dedup on the @handle / LinkedIn slug means it only adds genuinely new rows and never duplicates ones already sent. Handles Instagram and LinkedIn, built to extend to more channels. Point it at your own sheets via environment variables.",
+  "version": "1.0.0",
+  "author": {
+    "name": "NexusPoint",
+    "url": "https://nexus-point.co/"
+  },
+  "homepage": "https://nexus-point.co/",
+  "keywords": ["crm", "outreach", "lead-generation", "instagram", "linkedin", "google-sheets", "automation"]
+}
