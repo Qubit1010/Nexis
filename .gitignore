@@ -50,3 +50,11 @@ webots-projects.rar
 # Claude Playbook lead-magnet: ignore the 30 individual section PDFs (build artifacts).
 # Keep the front-matter PDF and the merged The-Practical-Claude-Playbook-FULL.pdf.
 .claude/skills/claude-advisor/references/playbook-*.pdf
+
+# Personal/sensitive files
+context.rar
+nexuspoint-landing-page-copy.md
+daily-os.md
+references/Upwork/
+references/marketing-books-notes/
+.claude/rules/agency-operations.md
