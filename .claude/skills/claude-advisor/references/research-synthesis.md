@@ -263,3 +263,82 @@ Domain-specific **"7 Levels" ladders** (same escalation pattern):
 - **3 deployment methods:** (1) **Local loops / internal cron** (`cron create/list/delete`) - zero setup, full agentic loop, but machine + terminal must stay on; (2) **Scheduled tasks + Cloud routines** - runs on Anthropic's cloud 24/7, machine can be off, triggers by schedule/API/GitHub event, local tasks can "play catch-up" on missed runs; (3) **External cloud (Modal / Trigger.dev)** - Python/TS scripts on cron/webhooks for deterministic jobs; add the **Agent SDK** ("the brain plus the hands") for the full agentic experience on external servers.
 - **AI Operating System (Opus 4.8 as your "second brain"):** mindset shift = do everything inside Claude Code / VS Code first (stop opening Chrome/SaaS apps), which naturally builds a local knowledge base. **Four C's framework: Context, Connections, Capabilities, Cadence.** Steps: context over model ("context is king" - dump transcripts/emails/posts in); everything as files/folders (`decisions`, `audits`, `archives`, "other worlds" sub-projects); connect apps via APIs/MCP; manage tokens like money (isolate tasks to avoid polluting the main session).
 - Source: live notebook queries (Q3/Q5 of the first 2026-06-16 batch); creator sources.
+
+---
+
+> **Source note for the 2026-06-20 entries below:** Findings from new YouTube sources added to the notebook covering Claude second-brain, Obsidian, Graphify, LLM Wiki (Karpathy), and the 5-level memory framework (Nate Herk / Chase AI). Queried via 7 targeted `ask --json` calls (Q_SB1-Q_SB7). Full synthesized reference in `references/claude-second-brain.md`. Same practitioner-consensus caveat as the 2026-06-16 batch - not Anthropic documentation.
+
+### [2026-06-20] (Q3/memory - Second Brain) What is a Claude second-brain and how it differs from regular chat
+
+- A Claude second-brain (AI OS) = always-on infrastructure linking Claude to a **structured local file system**. The AI reads, writes, and maintains its own memory. "Knows what is going on in your world better than you do" - recalls meeting notes, strategies, relationships, decisions without re-explaining.
+- **The amnesia problem:** regular AI chat = stateless disposable threads; once context window fills or new chat starts, Claude forgets everything. Second-brain = persistent, self-updating memory.
+- **Key components (2026 full stack):**
+  - Engine: **Claude Code** or **Claude Cowork** (the AI agent running locally, using Opus 4.8 or Fable 5)
+  - Visual layer: **Obsidian** (free markdown app; visualizes the interconnected knowledge graph Claude Code builds)
+  - Architecture: **Karpathy LLM Wiki** (3 layers: Raw Sources / The Wiki / The Schema `CLAUDE.md`)
+  - Knowledge mapping: **Graphify** (turns files/repos into a knowledge graph; ~60k GitHub stars)
+  - Long-term RAG: **Pinecone** / **NotebookLM CLI** (semantic search through massive unstructured archives without burning Claude's token limits)
+  - Session memory: **Context Mode** + **Claude Mem** (35.9k stars; SQLite vector DB, cross-session capture)
+  - Data extraction: **"Grill Me" skill** (Claude interviews you with 15-25 questions and auto-populates your rule files); **Wrap-up skill** (summarizes session + archives insights into long-term vault)
+- **Token efficiency:** querying a pre-built wiki uses up to 95% fewer tokens than re-reading raw transcripts per query.
+- Full detail: `references/claude-second-brain.md`
+
+### [2026-06-20] (Q3/memory - Second Brain) The 5 Levels of an AI second-brain (Nate Herk / Chase AI)
+
+- **Level 1 - Exact Match Retrieval:** folder structure + exact keyword search; Claude Code **automemory** (auto-generates `.claude/memory/` notes); lean `CLAUDE.md` as a router pointing to directories. Tools: Claude Code native.
+- **Level 2 - Topic Aggregation (The LLM Wiki):** Claude reads raw sources, autonomously writes and links summarized wiki pages; index files for navigation. Tools: **Obsidian** (visual layer) + **Andrej Karpathy's LLM Wiki** (`raw/` / `wiki/` / `CLAUDE.md` 3-folder structure). 95% fewer tokens vs re-reading raw docs.
+- **Level 3 - Semantic Search (Vector RAG):** meaning-based search (X ~ Y even if exact word absent); good for vast unstructured archives (email, Slack history). Tools: **Pinecone**, **Supabase** vector databases.
+- **Level 4 - Knowledge Graphs:** maps relationships and traces logical chains ("Project A -> Tool B -> Person C"); requires extracting tacit knowledge from your own head. Tools: **Graphify**, **LightRAG**, **Microsoft GraphRAG**; **"Grill Me" skill** for knowledge extraction.
+- **Level 5 - Autonomous AI OS:** 24/7 continuous sync; a "Top-of-Funnel" AI router decides whether a query needs markdown lookup vs vector search vs graph traversal; multimodal (video, images, tables). Tools: **GBrain** (Gary Tan/YC concept), **Hermes** (always-on persistent agent), **Gemini embedding 2** for video indexing.
+- Source: live query Q_SB2 (2026-06-20); Nate Herk "5 Levels" + Chase AI "7 Levels" series.
+
+### [2026-06-20] (Q3/memory - Second Brain) Obsidian: what it is and how it integrates with Claude
+
+- Free, local-first markdown app. Data = plain `.md` files in a local "vault." You own all data. **Graph view** maps how notes connect via internal links.
+- In a second-brain setup: Claude Code runs in the terminal *inside* your Obsidian vault folder. Claude writes and maintains the wiki; Obsidian visualizes it.
+- **Integrations:** Terminal Plugin (run `claude` without leaving Obsidian); Obsidian Markdown Skill (trains Claude on wiki-links `[[note]]`, tags, callouts); Obsidian Web Clipper (browser extension saves articles into `/raw` as markdown); Graphify `graphify-obsidian` command (auto-generates a linked Obsidian vault from any repo); Filesystem MCP (Cowork/non-terminal path: read/write Obsidian folders from Claude Desktop).
+- **What you can do:** drop a 50-page PDF into `/raw` -> Claude ingests, extracts key ideas, updates concept pages, links in graph view; build a full "command center" AI OS with dashboards; store client profiles + meeting transcripts so Claude acts as an executive assistant with perfect recall.
+- Source: live query Q_SB3 (2026-06-20); creator sources.
+
+### [2026-06-20] (Q3/memory - Second Brain) Graphify: the knowledge graph builder
+
+- Open-source, **~60,000 GitHub stars**. Turns any codebase, repo, or document collection into a dynamic knowledge graph. Solves Claude's amnesia + token expense: without it, Claude greps (rescans) the codebase every query; with it, Claude queries a pre-built relationship map.
+- **3-pass system:** (1) tree-sitter deterministically parses code structure (no LLM, no API cost); (2) Faster Whisper transcribes audio/video into the graph; (3) LLM extracts concepts from PDFs/images.
+- **Output:** nodes (concepts/files) + edges (relationships) + communities (clusters) + "god nodes" (critical load-bearing files).
+- **Token savings:** reliable **40% reduction** in real-world tests (some users claim 70x). `graphify hook install` = git hook that rebuilds the graph after every commit at zero API cost.
+- **vs alternatives:** Traditional RAG uses vector embeddings, good for policy PDFs, bad for code relationships. Graphify has NO vector embeddings - optimized for architectural wiring. Obsidian alone requires manual linking; Graphify automates it and can generate the vault.
+- **Commands:** `graphify hook install` (auto-rebuild); `/graphify obsidian` (generate linked Obsidian vault from graph).
+- Source: live query Q_SB4 (2026-06-20); Graphify GitHub + creator sources.
+
+### [2026-06-20] (Q3/memory - Second Brain) LLM Wiki: Karpathy's memory architecture
+
+- Coined by **Andrej Karpathy** (OpenAI founding member, former Tesla AI Director). Analogy: Obsidian = IDE, LLM = programmer, wiki = codebase.
+- **Beats standard RAG:** RAG re-reads raw docs every query and forgets the answer. LLM Wiki pre-computes: when a new source is added, AI reads once, updates 10-15 interconnected markdown pages, logs changes. Future queries hit pre-built summaries. Uses actual markdown `[[wiki-links]]`, not vector similarity - deterministic relationship tracing.
+- **3-folder structure:** `/raw` (read-only intake; AI never modifies) / `/wiki` (AI-written knowledge base; interlinked concept pages) / `CLAUDE.md` at root (the rulebook/schema).
+- **Core tracking files inside `/wiki`:** `index.md` (master catalog for navigation) + `log.md` (operation history of every AI change).
+- **Ingestion workflow:** add file to `/raw` -> "read this and update the wiki" -> Claude extracts concepts, creates/updates 10-15 wiki pages, flags contradictions with existing knowledge.
+- **Linting workflow:** periodically "lint the wiki" -> Claude scans for orphaned pages, broken links, stale claims, missing data.
+- No vector databases needed at this level. 95% fewer tokens vs re-reading raw transcripts.
+- Source: live query Q_SB5 (2026-06-20); Karpathy's LLM Wiki writings + creator implementations.
+
+### [2026-06-20] (Q3/memory - Second Brain) Step-by-step Claude second-brain setup
+
+- **Install:** Claude Code (`irm https://claude.ai/install.ps1 | iex` on Windows) + Obsidian (free download) + optional Graphify.
+- **Create vault:** open Obsidian -> new Vault (local folder) -> open folder in terminal -> `claude` -> create `raw/`, `wiki/`, `templates/` subfolders.
+- **Configure CLAUDE.md:** run `/init` for base file, then add: architecture definition (where `raw/` and `wiki/` are), ingest workflow, page formatting rules, routing rules. **Hard limit: keep under 150-200 lines.** Claude reads CLAUDE.md on every prompt - bloating it burns thousands of tokens per interaction.
+- **Feed the system:** drag files into `raw/` -> "I just added a new source to the raw folder. Please read it and update the wiki."
+- **Maintain health:** `/compact` at ~60% context; AutoDream (mid-2026 background sub-agent) prunes contradictions + merges duplicates + updates temporal refs between sessions; `/handoff` to transfer session state cleanly.
+- **Critical pitfalls:** context rot (use `/compact` and `/clear` at 200k tokens); overstuffed CLAUDE.md; ingesting noisy/volatile data (daily Slack threads); privacy risk (sensitive client data to Enterprise ZDR tier only).
+- Full setup: `references/claude-second-brain.md` (Step 1-6 with commands).
+
+### [2026-06-20] (Q5/memory - Second Brain) Agency/freelancer Claude second-brain setup
+
+- **Folder structure (LLM Wiki + Four C's):** `/context` (brand_voice.md + icp_and_offer.md) / `/projects/[Client Name]/` (brief, transcripts, deliverables) / `/skills` (SOP markdown files: content_cascade.md, proposal.md, onboarding.md) / `/raw` (staging area) / `/wiki` (auto-maintained knowledge base) / `/decisions` (running strategy log).
+- **CLAUDE.md schema:** keep lean (<200 lines); routing rules pointing to folders (not full content); role definition; operating principles (think before executing, maintain brand voice, surgical changes).
+- **Key workflows:**
+  - Client management: Claude scans call transcript -> updates HubSpot CRM via MCP connector -> drafts personalized follow-up email referencing specific pain points.
+  - Proposals: drop RFP + past proposals + client brief -> Claude synthesizes + generates structured proposal draft (40% less drafting time).
+  - Content Cascade: one YouTube transcript/meeting note -> blog post + LinkedIn carousel + Twitter thread, all in brand voice -> Canva integration for on-brand graphics.
+  - SOP execution (WAT framework: Workflows + Agent + Tools): write recurring tasks as Skills; `/schedule` in Cowork to run automatically (e.g. Friday SEO audit -> PDF report -> left in client folder).
+- **Advanced:** NotebookLM CLI as "infinite memory" MCP - massive archives (every client email, SOP, deliverable) stored in NotebookLM, Claude semantically retrieves only exact insights needed. Mobile Dispatch: dictate idea on phone -> Cowork processes on desktop -> draft ready when you arrive.
+- Full agency setup: `references/claude-second-brain.md` (Agency section with example CLAUDE.md schema).

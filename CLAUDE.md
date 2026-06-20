@@ -140,6 +140,14 @@ Memory + context files + decision log = your assistant gets smarter over time wi
 
 Active workstreams live in `projects/`. Each project gets a folder with a `README.md`.
 
+## Second Brain (Agency AI OS)
+
+NexusPoint has a dedicated **second brain** — a standalone Obsidian vault + Karpathy-style LLM Wiki + Graphify knowledge graph, separate from this repo. Built 2026-06-20.
+
+- **Location:** `C:\Users\qubit\OneDrive\Documents\agency-brain` (its own vault, with its own `CLAUDE.md`, `context/`, `decisions/`, `raw/`, `wiki/`, `skills/`, `clients/`).
+- **What it holds:** distilled, evergreen agency knowledge — overview, offer/positioning, services, proposals, Upwork keywords, portfolio, team, strategy, and a 73-project case-study log. Live/sensitive data (CRMs, finances, content calendars) is deliberately kept OUT and queried via MCP instead.
+- **Reusable build SOP:** `references/sops/build-a-second-brain.md` — the step-by-step playbook (also in the vault at `agency-brain/skills/build-a-second-brain.md`). Use it to spin up a brain for a **client** or **team member** (each gets its own scoped vault). Captures the Graphify gotchas (`--backend openai`, exclude `.obsidian/plugins/`, the dead global Anthropic key).
+
 ## Templates
 
 Reusable templates live in `templates/`. Currently available:
