@@ -100,6 +100,19 @@ _STYLE = {
             "280). Professional but human, no emojis. No formal sign-off."
         ),
     },
+    "fb_dm": {
+        # These leads are founders/CEOs who introduced themselves in business groups,
+        # so the bio/note is strong signal: lean on specific_observation.
+        "with_signal": [("specific_observation", 5), ("genuine_question", 3), ("anti_pitch", 2)],
+        "no_signal": [("anti_pitch", 5), ("genuine_question", 4)],
+        "max_chars": 600,
+        "channel_rules": (
+            "Channel: Facebook DM to a founder/CEO who posted an intro in a business group. "
+            "Conversational and human, like a peer messaging on Facebook. Under 100 words. "
+            "At most 1 emoji, only if it fits. Reference the specific thing they shared in their "
+            "intro. Start with 'Hey [FirstName]' or a direct line if no name."
+        ),
+    },
 }
 
 _SYSTEM = """You write the opening outreach message for Aleem Ul Hassan, founder of an AI \

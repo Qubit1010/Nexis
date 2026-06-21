@@ -1,4 +1,4 @@
-import type { RawTool } from "./sources/tool-types";
+import type { PracticalItem, Mover } from "./sources/practical-index";
 
 export interface ToolAnalysisResult {
   summary: string;
@@ -57,51 +57,53 @@ export interface ToolSynthesisResult {
   crossDomainInsight: string;
 }
 
-function formatToolForPrompt(t: RawTool, i: number): string {
-  let line = `${i + 1}. [idx:${i}] "${t.name}" (${t.source})`;
-  if (t.upvotes) line += ` [${t.upvotes} upvotes/likes]`;
-  line += `\n   Tagline: ${t.tagline || "(none)"}`;
-  if (t.description && t.description !== t.tagline) {
-    line += `\n   Description: ${t.description.slice(0, 400)}`;
-  }
-  line += `\n   URL: ${t.url}`;
+function formatEvidenceForPrompt(item: PracticalItem, i: number): string {
+  let line = `${i + 1}. [idx:${i}] "${item.title}" (${item.source})`;
+  const sig: string[] = [];
+  if (item.engagementScore) sig.push(`${item.engagementScore} upvotes/likes`);
+  if (item.commentCount) sig.push(`${item.commentCount} comments`);
+  if (item.sourceCount && item.sourceCount > 1) sig.push(`${item.sourceCount} sources`);
+  if (sig.length) line += ` [${sig.join(", ")}]`;
+  if (item.tool) line += `\n   About tool: ${item.tool}`;
+  if (item.description) line += `\n   Detail: ${item.description.slice(0, 400)}`;
+  line += `\n   URL: ${item.url}`;
   return line;
 }
 
 export function buildToolAnalysisPrompt(
   categoryName: string,
   audienceLens: string,
-  tools: RawTool[]
+  items: PracticalItem[]
 ): string {
-  const toolList = tools.map((t, i) => formatToolForPrompt(t, i)).join("\n\n");
+  const evidence = items.map((t, i) => formatEvidenceForPrompt(t, i)).join("\n\n");
 
-  return `You are a hands-on AI operator who teaches business owners how to actually use new AI tools. You write for a content creator whose audience is small business owners, founders, freelancers, and operators who want to use AI to grow their business.
+  return `You are a hands-on AI operator who teaches small business owners how to actually USE AI tools to solve real business problems. Your audience is SMB owners, founders, freelancers, and operators - not engineers chasing news.
 
-You are reviewing today's new AI tools in the "${categoryName}" category.
+You are looking at recent updates, releases, and community discussions in the "${categoryName}" domain. Your job is to extract the TOOLS and WORKFLOWS worth using, and exactly how to apply them.
 
 AUDIENCE LENS: ${audienceLens}
 
-TOOLS TO REVIEW:
-${toolList}
+EVIDENCE (updates + discussions):
+${evidence}
 
 INSTRUCTIONS:
-1. Write a 2-3 sentence "summary" of what's new in this domain today and why a business owner should care.
-2. Pick the SINGLE BEST tool in this domain for a business audience and put it in "bestInDomain":
+1. Write a 2-3 sentence "summary" of what's genuinely new or useful in this domain right now and why an SMB owner should care.
+2. Pick the SINGLE BEST tool/workflow in this domain for a business audience and put it in "bestInDomain":
    - "name" MUST match one of the tool names you return below
    - "reason" must be 1-2 sentences explaining WHY this beats the rest (specific advantage, not generic praise)
    - If there is genuinely nothing useful in this batch, set bestInDomain to null.
-3. For each tool you keep, produce:
-   - originalIndex (the idx number from the listing)
-   - name (clean tool name)
-   - oneLiner: a crisp single sentence in plain English (no marketing fluff)
-   - bestUseCase: 1-2 sentences naming WHO should use it and for WHAT specific business outcome
-   - howToSteps: EXACTLY 3 short, concrete steps to start using it today. Include URLs, signup actions, first-prompt examples where possible.
+3. The evidence is discussions/updates, NOT a product list - so EXTRACT and NAME the actual tool or workflow being discussed. For each one worth surfacing, produce:
+   - originalIndex (the idx of the evidence item it came from)
+   - name (clean tool or workflow name, e.g. "Claude Code", "n8n + Apollo workflow")
+   - oneLiner: a crisp single sentence in plain English - what it is / what's new
+   - bestUseCase: 1-2 sentences naming WHO should use it and for WHAT specific business outcome in this domain
+   - howToSteps: EXACTLY 3 short, concrete steps to apply it to a business problem today. Include URLs, commands, or first-prompt examples where possible.
    - audienceHook: ONE social-ready opening line (no em dashes, use plain hyphens)
    - pricingTier: "free", "freemium", "paid", or "unknown"
    - tags: 2-4 short tags
-   - relevanceScore: 1-10 — how useful for a typical business owner? Penalize toys, duplicates of well-known tools, and overly technical-only releases.
-4. Skip tools that are toys, vapourware, or that you cannot describe usefully. Return only the tools worth surfacing.
-5. Order tools by relevanceScore descending. Cap at 6 tools per category.
+   - relevanceScore: 1-10 - how useful for a typical SMB owner solving a ${categoryName.toLowerCase()} problem? Penalize hype, pure news with no actionable use, and engineer-only minutiae.
+4. Skip items that are just news, drama, or that you cannot turn into a concrete business use. Deduplicate tools mentioned across multiple evidence items into one card.
+5. Order by relevanceScore descending. Cap at 6 cards per domain.
 
 Return your response as valid JSON with this exact structure:
 {
@@ -145,14 +147,15 @@ export function buildToolsSynthesisPrompt(
       upvotes?: number;
     }>;
   }>,
-  date: string
+  date: string,
+  movers: Mover[] = []
 ): string {
   const categorySummaries = categoryResults
     .map(
       (cat) => `
 ### ${cat.categoryName} (${cat.tools.length} tools)
 **Summary:** ${cat.summary}
-**Best in domain:** ${cat.bestInDomain ? `${cat.bestInDomain.name} — ${cat.bestInDomain.reason}` : "(none)"}
+**Best in domain:** ${cat.bestInDomain ? `${cat.bestInDomain.name} - ${cat.bestInDomain.reason}` : "(none)"}
 **Top tools:**
 ${cat.tools
   .slice(0, 5)
@@ -164,9 +167,17 @@ ${cat.tools
     )
     .join("\n");
 
-  return `You are a strategic content advisor for a business-facing AI content creator named Aleem. Today is ${date}. Below are new AI tools categorized across 4 business operations domains. Each domain has a chosen "best in domain" tool. Your job is to synthesize this into a daily "AI tools for business" brief that helps Aleem teach his audience.
+  const moversBlock = movers.length
+    ? `\nWHAT'S SURGING RIGHT NOW (GitHub trending + new models):\n${movers
+        .slice(0, 12)
+        .map((m) => `- ${m.name} (${m.signal})${m.blurb ? ` - ${m.blurb}` : ""}`)
+        .join("\n")}\n`
+    : "";
+
+  return `You are the strategic advisor behind "Practical AI" - a daily brief that teaches small business owners how to use AI tools and workflows to solve real business problems. Today is ${date}. Below are tools and workflows surfaced across 4 business-problem domains (Marketing, Sales, Managing & Scaling, Online Presence), each with a "best in domain" pick. Your job is to synthesize a practical, builder-minded brief - what to actually use and how.
 
 ${categorySummaries}
+${moversBlock}
 
 PRODUCE THE FOLLOWING:
 

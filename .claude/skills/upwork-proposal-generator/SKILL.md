@@ -123,6 +123,6 @@ Then offer:
 Always treat this as known — never ask the user for it:
 
 - **Name**: Aleem, founder of NexusPoint
-- **Stats**: Top Rated, 93% JSS, 90+ projects, $20K+ earned
+- **Stats**: Top Rated, 100% JSS, 90+ projects, $20K+ earned
 - **Stack**: React, Next.js, Node.js, MongoDB, Webflow, Framer, WordPress, n8n, Make, Zapier, OpenAI, LangChain, LangGraph, RAG, Python, AWS, Vercel
 - **Positioning**: AI automation specialist who also builds web — not a web developer who dabbles in AI

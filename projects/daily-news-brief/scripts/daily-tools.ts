@@ -6,12 +6,14 @@ config({ path: resolve(__dirname, "..", ".env") });
 import { generateToolsBrief } from "../src/lib/pipeline/tool-run";
 
 async function main() {
-  const date = process.argv[2];
+  const args = process.argv.slice(2);
+  const depth = args.includes("--full") || args.includes("--deep") ? "full" : "lean";
+  const date = args.find((a) => !a.startsWith("--"));
   console.log(
-    `[${new Date().toISOString()}] Starting tools brief generation${date ? ` for ${date}` : ""}...`
+    `[${new Date().toISOString()}] Starting Practical AI brief generation${date ? ` for ${date}` : ""} (${depth})...`
   );
 
-  const result = await generateToolsBrief(date);
+  const result = await generateToolsBrief(date, depth);
 
   if (result.success) {
     console.log(

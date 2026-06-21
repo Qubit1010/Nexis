@@ -1,0 +1,64 @@
+{
+  "slug": "claude-cowork",
+  "platform": "instagram",
+  "title": "Claude Cowork",
+  "voiceScript": "There's a Claude mode most people haven't tried. It works on your actual files, not just in chat. Knowledge work piles up. Messy folders, half-built decks, reports pulled every week. So I tested Cowork. Type a goal in plain English, it plans the steps and executes inside a sandboxed folder you choose. A cleanup that took me an hour, it handled in minutes. One sentence to start. Three cadences: daily, weekly, or monthly. Six steps total. Your AI shouldn't just answer questions. It should do the work. If you're still doing this manually, this is worth a look. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "There's a Claude mode most people haven't tried. It works on your actual files, not just in chat.",
+      "headline": "AI that works on *your files*",
+      "sub": "Claude Cowork"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Knowledge work piles up. Messy folders, half-built decks, reports pulled every week.",
+      "headline": "Manual work *never ends*",
+      "sub": "the tasks that eat your time",
+      "chips": ["messy folders", "manual reports", "half-built decks"],
+      "problemVariant": "crossout"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I tested Cowork. Type a goal in plain English, it plans the steps and executes inside a sandboxed folder you choose. A cleanup that took me an hour, it handled in minutes.",
+      "headline": "Zero to *autonomous* in 4 steps",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Install + Open", "goal": "Desktop app only" },
+        { "name": "Connect Folder", "goal": "Grant access" },
+        { "name": "Set Permissions", "goal": "Ask or auto-run" },
+        { "name": "Run + Schedule", "goal": "Type your goal" }
+      ],
+      "asset": "infographic.png"
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "One sentence to start. Three cadences: daily, weekly, or monthly. Six steps total.",
+      "headline": "How simple it actually is",
+      "stats": [
+        { "value": 1, "label": "sentence to start any task" },
+        { "value": 3, "label": "cadences: daily, weekly, monthly" },
+        { "value": 6, "label": "steps, install to automation" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Your AI shouldn't just answer questions. It should do the work.",
+      "headline": "AI should *do the work*",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If you're still doing this manually, this is worth a look. Follow for more.",
+      "cta": "Ready to stop doing this manually?"
+    }
+  ],
+  "source": "Anthropic Claude Cowork tutorial 2026. Cowork is an autonomous desktop agent for non-technical knowledge work inside the Claude Desktop app (Chat/Cowork/Code modes). Sandboxed folder access, Ask-before-acting permission mode, /schedule for recurring tasks, Dispatch for mobile control.",
+  "handle": "@nexuspoint"
+}

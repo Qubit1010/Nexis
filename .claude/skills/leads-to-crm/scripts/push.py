@@ -97,6 +97,11 @@ def run_push(channel, dry_run=False, no_messages=False, limit=None,
     col_map = ch.build_col_map(header, channel.source_aliases)
     print(f"Source: {len(data_rows)} rows | tab '{channel.source_tab}' | columns {list(col_map.keys())}")
 
+    # Optional per-channel preprocessing (Facebook resolves group-post authors here).
+    # Instagram/LinkedIn don't define preprocess(), so their flow is unchanged.
+    if hasattr(channel, "preprocess"):
+        channel.preprocess(data_rows, col_map, dry_run=dry_run)
+
     # Status column ("Include to CRM" in both sheets today)
     status_idx = sheets.header_index(header, channel.status_header_names)
     if status_idx is None:

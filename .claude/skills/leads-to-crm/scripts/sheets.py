@@ -46,24 +46,43 @@ def _find_gws():
 _GWS_CMD, _GWS_SHELL = _find_gws()
 
 
-def run_gws(args, json_body=None):
-    """Run a gws command and return parsed JSON (or {} / {"raw": ...})."""
+_TRANSIENT_MARKERS = (
+    "http request failed", "request failed", "timeout", "timed out", "econnreset",
+    "socket hang up", "etimedout", "enotfound", "503", "502", "500", "rate limit",
+    "temporarily", "eai_again", "network",
+)
+
+
+def run_gws(args, json_body=None, retries=3):
+    """Run a gws command and return parsed JSON (or {} / {"raw": ...}).
+
+    Retries transient network/HTTP failures (the gws CLI occasionally returns
+    'HTTP request failed' mid-batch, which previously caused partial appends).
+    """
     cmd = _GWS_CMD + args
     if json_body is not None:
         cmd += ["--json", json.dumps(json_body)]
-    result = subprocess.run(
-        cmd, capture_output=True, text=True, timeout=120,
-        shell=_GWS_SHELL, encoding="utf-8", errors="replace",
-    )
-    if result.returncode != 0:
-        raise RuntimeError(result.stderr.strip() or "gws error")
-    stdout = result.stdout.strip()
-    if not stdout:
-        return {}
-    try:
-        return json.loads(stdout)
-    except json.JSONDecodeError:
-        return {"raw": stdout}
+    last_err = "gws error"
+    for attempt in range(retries):
+        result = subprocess.run(
+            cmd, capture_output=True, text=True, timeout=120,
+            shell=_GWS_SHELL, encoding="utf-8", errors="replace",
+        )
+        if result.returncode == 0:
+            stdout = result.stdout.strip()
+            if not stdout:
+                return {}
+            try:
+                return json.loads(stdout)
+            except json.JSONDecodeError:
+                return {"raw": stdout}
+        last_err = result.stderr.strip() or "gws error"
+        if attempt < retries - 1 and any(m in last_err.lower() for m in _TRANSIENT_MARKERS):
+            import time
+            time.sleep(2 * (attempt + 1))
+            continue
+        break
+    raise RuntimeError(last_err)
 
 
 # ---------------------------------------------------------------------------
@@ -142,6 +161,43 @@ def update_column(sheet_id, tab, col_letter_str, start_row, values):
     except RuntimeError as e:
         print(f"  ERROR updating column {col_letter_str}: {e}", flush=True)
         return False
+
+
+def update_range(sheet_id, a1_range, values_2d):
+    """Overwrite a rectangular A1 range with a 2D list of values (RAW)."""
+    try:
+        run_gws(
+            ["sheets", "spreadsheets", "values", "update",
+             "--params", json.dumps({
+                 "spreadsheetId": sheet_id,
+                 "range": a1_range,
+                 "valueInputOption": "RAW",
+             })],
+            json_body={"values": values_2d},
+        )
+        return True
+    except RuntimeError as e:
+        print(f"  ERROR updating range {a1_range}: {e}", flush=True)
+        return False
+
+
+def update_rows(sheet_id, tab, start_row, values_2d, ncols, batch_size=25):
+    """Overwrite consecutive rows starting at start_row (1-based), in batches.
+
+    Batched because the whole 2D array as one CLI arg blows past Windows' command
+    line length limit (same reason append_rows batches).
+    """
+    if not values_2d:
+        return True
+    last_col = col_letter(ncols - 1)
+    for i in range(0, len(values_2d), batch_size):
+        chunk = values_2d[i:i + batch_size]
+        r0 = start_row + i
+        r1 = r0 + len(chunk) - 1
+        a1 = f"{tab}!A{r0}:{last_col}{r1}"
+        if not update_range(sheet_id, a1, chunk):
+            return False
+    return True
 
 
 def append_rows(sheet_id, tab, rows, batch_size=10):

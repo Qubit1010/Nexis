@@ -1,8 +1,10 @@
 import { db } from "../db";
-import { briefs, categories, articles, trends, contentIdeas } from "../db/schema";
+import { briefs, categories, articles, trends } from "../db/schema";
 import { eq, and, gte } from "drizzle-orm";
 import { CATEGORIES } from "./categories";
 import { fetchAllSources } from "./sources";
+import type { BriefMode } from "./topics";
+import type { Depth } from "./sources/last30days";
 import { deduplicateArticles } from "./deduplicator";
 import { categorizeArticles } from "./categorizer";
 import {
@@ -20,19 +22,40 @@ interface BriefResult {
   errors: string[];
 }
 
+export interface BriefOptions {
+  /** "daily" = broad curated AI-news sweep; "topic" = single user-named topic. */
+  mode?: BriefMode;
+  /** Required when mode === "topic". */
+  topic?: string;
+  /** Lookback window in days. Defaults to 2 (last 1-2 days of news). */
+  days?: number;
+  /** "lean" (free/cheap) or "full" (adds paid social sources). Defaults to "lean". */
+  depth?: Depth;
+}
+
 export async function generateDailyBrief(
-  date?: string
+  date?: string,
+  opts: BriefOptions = {}
 ): Promise<BriefResult> {
   const targetDate = date || new Date().toISOString().split("T")[0];
+  const mode = opts.mode ?? "daily";
+  const days = opts.days ?? 2;
+  const depth = opts.depth ?? "lean";
   const errors: string[] = [];
 
   console.log(`\n========================================`);
   console.log(`  Generating brief for ${targetDate}`);
+  console.log(`  mode=${mode}${mode === "topic" ? ` topic="${opts.topic}"` : ""} days=${days} depth=${depth}`);
   console.log(`========================================\n`);
 
-  // --- Step 1: Fetch from all sources ---
-  console.log("[Step 1/6] Fetching from all sources...");
-  const rawArticles = await fetchAllSources(CATEGORIES);
+  // --- Step 1: Fetch evidence via the last30days engine ---
+  console.log("[Step 1/6] Fetching + ranking evidence...");
+  const rawArticles = await fetchAllSources({
+    mode,
+    topic: opts.topic,
+    days,
+    depth,
+  });
 
   if (rawArticles.length === 0) {
     return {
@@ -194,7 +217,7 @@ export async function generateDailyBrief(
         .run();
 
       // Store trends with multi-day tracking
-      console.log("\n[Step 6/6] Storing trends and content ideas...");
+      console.log("\n[Step 6/6] Storing trends...");
       for (let i = 0; i < synthesis.trends.length; i++) {
         const trend = synthesis.trends[i];
 
@@ -231,26 +254,7 @@ export async function generateDailyBrief(
           .run();
       }
 
-      // Store content ideas
-      for (let i = 0; i < synthesis.contentIdeas.length; i++) {
-        const idea = synthesis.contentIdeas[i];
-        db.insert(contentIdeas)
-          .values({
-            briefId: brief.id,
-            title: idea.title,
-            angle: idea.angle,
-            format: idea.format,
-            hook: idea.hook,
-            keyPoints: JSON.stringify(idea.keyPoints),
-            timeliness: idea.timeliness,
-            relatedTrendSlugs: JSON.stringify(idea.relatedTrends),
-            sortOrder: i,
-          })
-          .run();
-      }
-
       console.log(`  ${synthesis.trends.length} trends stored`);
-      console.log(`  ${synthesis.contentIdeas.length} content ideas stored`);
       console.log(`  Sentiment: ${synthesis.overallSentiment.label}`);
     } catch (error) {
       const msg =

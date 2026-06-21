@@ -35,15 +35,6 @@ export interface SynthesisResult {
     label: "bullish" | "cautious" | "mixed" | "bearish";
     summary: string;
   };
-  contentIdeas: Array<{
-    title: string;
-    angle: string;
-    format: "thread" | "blog" | "newsletter";
-    hook: string;
-    keyPoints: string[];
-    timeliness: "breaking" | "trending" | "evergreen";
-    relatedTrends: string[];
-  }>;
   topTakeaway: string;
 }
 
@@ -66,18 +57,18 @@ export function buildPass1Prompt(
     .map((a, i) => formatArticleForPrompt(a, i))
     .join("\n\n");
 
-  return `You are a senior AI/tech analyst writing a daily intelligence brief for a content creator. Analyze the following articles for the category "${categoryName}" (${categoryDescription}).
+  return `You are a senior AI industry analyst writing a daily intelligence brief for an operator who runs an AI automation agency and needs to stay current on where the industry is heading. Analyze the following articles for the category "${categoryName}" (${categoryDescription}).
 
 ARTICLES:
 ${articleList}
 
 INSTRUCTIONS:
-1. Write a 2-3 sentence "So What?" insight identifying the overarching trend or theme. Be opinionated, forward-looking, and specific. What does this mean for someone creating AI/tech content?
+1. Write a 2-3 sentence "So What?" insight identifying the overarching trend or theme. Be opinionated, forward-looking, and specific. What does this signal about where the AI industry is going?
 2. For each article, provide:
    - The originalIndex (the number after [idx:] in the article listing)
    - A 1-2 sentence TL;DR capturing the key takeaway
    - A sentiment tag: "excited" (positive/optimistic), "neutral" (factual/informational), "concerned" (cautious/worried), or "skeptical" (doubtful/critical)
-   - A relevance score from 1-10 (how relevant is this for an AI/tech content creator?)
+   - A relevance score from 1-10 (how important is this for understanding where the AI industry is heading?)
 3. Identify 2-3 emerging themes or keywords you see across these articles.
 
 ${engagementContext(articles)}
@@ -140,44 +131,26 @@ ${cat.topArticles
     )
     .join("\n");
 
-  return `You are a strategic AI/tech content advisor. Today is ${date}. Below are analyzed summaries from ${categoryResults.length} AI/tech news categories. Your job is to synthesize this into actionable intelligence for a content creator who makes social threads and blog/newsletter content about AI and AI automation.
+  return `You are a strategic AI industry analyst. Today is ${date}. Below are analyzed summaries from ${categoryResults.length} AI/tech news categories. Your job is to synthesize this into a sharp daily intelligence read for an operator who runs an AI automation agency and needs to understand where the industry is moving — what the big labs are doing, what is being funded, and how policy/safety is shifting. This is industry awareness, NOT a content plan.
 
 ${categorySummaries}
 
 PRODUCE THE FOLLOWING:
 
-1. **TRENDS** (exactly 5): Cross-category trends you see emerging. For each:
+1. **TRENDS** (exactly 5): Cross-category industry developments you see emerging. For each:
    - Title: short, punchy name
    - Slug: kebab-case version
-   - Summary: 2-3 sentences explaining the trend and why it matters
+   - Summary: 2-3 sentences explaining the development and why it matters for the industry
    - Momentum: "rising" (accelerating), "steady" (ongoing), or "cooling" (fading)
    - Categories: which category slugs this trend spans
    - Source count: how many distinct stories feed this trend
-   - Content potential score: 1-10 rating of how good this would be for content (consider audience interest, freshness, depth of angle available)
+   - Content potential score: 1-10 rating of how significant/noteworthy this development is
 
-2. **OVERALL SENTIMENT**: What's the AI space feeling like today?
+2. **OVERALL SENTIMENT**: What's the AI industry feeling like today?
    - Label: "bullish" (excited/optimistic), "cautious" (careful/measured), "mixed" (split opinions), or "bearish" (worried/negative)
    - Summary: 2-3 sentences capturing the mood
 
-3. **CONTENT IDEAS** (exactly 10): Actionable content suggestions. Selection rules — follow these strictly:
-   - Include ALL stories where the underlying articles have 200+ upvotes or 50+ comments (high community signal)
-   - Include at least 2 "breaking" timeliness ideas — these are the freshest angles from today's news
-   - Include at least 1 idea connecting to the highest content_potential_score trend
-   - Cover at least 3 different category slugs across the 10 ideas — no single category dominates
-   - Prefer ideas with a UNIQUE angle that hasn't been covered to death — skip generic "AI is growing" takes
-   - If two ideas are on the same topic, keep only the one with the stronger hook and more specific angle
-   - Fill remaining slots with the highest-potential ideas ranked by: engagement signal > timeliness > uniqueness of angle
-
-   For each idea:
-   - Title: compelling content title
-   - Angle: the specific perspective or argument (1-2 sentences)
-   - Format: "thread" (social media thread), "blog" (blog post or article), or "newsletter" (newsletter edition)
-   - Hook: the opening line that grabs attention
-   - Key points: 3-5 bullet points to cover
-   - Timeliness: "breaking" (must publish today), "trending" (this week), or "evergreen" (anytime)
-   - Related trends: which trend slugs this idea connects to
-
-4. **TOP TAKEAWAY**: One sentence. If the reader sees nothing else today, what should they know?
+3. **TOP TAKEAWAY**: One sentence. If the reader sees nothing else today, what should they know about the state of the AI industry?
 
 Return your response as valid JSON with this exact structure:
 {
@@ -188,17 +161,12 @@ Return your response as valid JSON with this exact structure:
     "label": "bullish|cautious|mixed|bearish",
     "summary": "..."
   },
-  "contentIdeas": [
-    { "title": "...", "angle": "...", "format": "thread|blog|newsletter", "hook": "...", "keyPoints": ["...", "..."], "timeliness": "breaking|trending|evergreen", "relatedTrends": ["trend-slug"] }
-  ],
   "topTakeaway": "..."
 }
 
 IMPORTANT:
 - Return ONLY valid JSON, no markdown code fences or extra text
-- Be specific and opinionated — generic advice is useless
-- Content ideas should be things the creator can actually make TODAY
-- Follow the selection rules for content ideas exactly — do not ignore high-engagement stories
-- Think like a content strategist: what would get clicks, shares, and discussion?
-- No filler ideas — every one of the 10 must have a clear, differentiated angle`;
+- Be specific and opinionated — generic observations are useless
+- Focus on what genuinely shifts the industry, not hype
+- Weight high-engagement stories (upvotes/comments) as signals of what matters`;
 }

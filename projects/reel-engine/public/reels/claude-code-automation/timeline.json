@@ -1,0 +1,38 @@
+{
+  "fps": 30,
+  "durationInFrames": 1351,
+  "durationMs": 45030,
+  "aligned": true,
+  "scenes": [
+    {
+      "sceneId": "intro",
+      "startFrame": 0,
+      "endFrame": 124
+    },
+    {
+      "sceneId": "problem",
+      "startFrame": 124,
+      "endFrame": 470
+    },
+    {
+      "sceneId": "solution",
+      "startFrame": 470,
+      "endFrame": 788
+    },
+    {
+      "sceneId": "stats",
+      "startFrame": 788,
+      "endFrame": 1090
+    },
+    {
+      "sceneId": "punch",
+      "startFrame": 1090,
+      "endFrame": 1208
+    },
+    {
+      "sceneId": "outro",
+      "startFrame": 1208,
+      "endFrame": 1351
+    }
+  ]
+}

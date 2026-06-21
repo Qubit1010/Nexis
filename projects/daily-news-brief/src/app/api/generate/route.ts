@@ -1,4 +1,4 @@
-import { generateDailyBrief } from "@/lib/pipeline/run";
+import { generateDailyBrief, type BriefOptions } from "@/lib/pipeline/run";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
@@ -15,7 +15,16 @@ export async function POST(request: Request) {
     const body = await request.json().catch(() => ({}));
     const date = body.date as string | undefined;
 
-    const result = await generateDailyBrief(date);
+    // Optional on-demand topic mode: { topic, days, depth }
+    const opts: BriefOptions = {};
+    if (typeof body.topic === "string" && body.topic.trim()) {
+      opts.mode = "topic";
+      opts.topic = body.topic.trim();
+    }
+    if (typeof body.days === "number") opts.days = body.days;
+    if (body.depth === "full" || body.depth === "lean") opts.depth = body.depth;
+
+    const result = await generateDailyBrief(date, opts);
 
     return NextResponse.json(result, {
       status: result.success ? 200 : 207, // 207 = partial success

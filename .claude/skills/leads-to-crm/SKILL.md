@@ -38,8 +38,12 @@ The current NexusPoint outreach loop, end to end:
    run skips it.
 
 One engine (`scripts/push.py`) runs every channel off a config block in
-`scripts/channels.py`. Adding a channel (Facebook next) is a config + one identity
-function, not new pipeline code.
+`scripts/channels.py`. **Instagram, LinkedIn, and Facebook** are live. Adding a
+channel is a config + one identity function, not new pipeline code.
+
+Facebook adds one extra step the other channels don't need: a **preprocessing pass**
+that resolves *who* posted before the push (many Facebook leads are group posts whose
+URL holds the group, not the author). See "Facebook: group-post resolution" below.
 
 ## When to use
 
@@ -82,6 +86,9 @@ invariant is what keeps the CRM clean.
   runs and leaves Touch 1 blank (recoverable; see `--no-messages`).
 - Python with `openai` and/or `anthropic` installed (`pip install openai anthropic`).
   A missing package just disables that provider; it never crashes the push.
+- **Facebook only:** `FIRECRAWL_API_KEY` + `firecrawl-py` (`pip install firecrawl-py`)
+  for the optional author-link backup. Both are optional — without them, Facebook
+  resolution falls back to LLM extraction from the scraped Note text.
 
 ## How to run
 
@@ -96,6 +103,14 @@ Then the live run:
 ```bash
 python .claude/skills/leads-to-crm/scripts/push.py --channel instagram
 python .claude/skills/leads-to-crm/scripts/push.py --channel linkedin
+python .claude/skills/leads-to-crm/scripts/push.py --channel facebook
+```
+
+For Facebook the push auto-runs the author-resolution pass first. You can also run it
+standalone to preview/build the cache before pushing:
+
+```bash
+python .claude/skills/leads-to-crm/scripts/facebook_resolve.py --dry-run --limit 15
 ```
 
 Flags:
@@ -124,35 +139,74 @@ The summary printed at the end counts each bucket. In a healthy run after the
 first sync, most rows are "skipped (Added)" or "reconciled", and only the truly
 new handles get pushed.
 
+**Facebook adds one CRM-side status:** a group-post lead whose author name we got
+but whose profile URL we couldn't resolve is still pushed (so nothing is lost), with
+a **blank URL** and **Status = "Find Profile"** in the CRM. Aleem grabs the profile
+link before sending. The source "Include to CRM" is still stamped "Added", so re-runs
+skip it (the "Find Profile" flag lives only in the CRM).
+
 ## Sheet shapes (confirmed live, 2026-06)
 
 Source "Instant ... Leads" (tab `Raw`, status column **"Include to CRM"**):
 - Instagram: `Name ("Name (@handle)") | Link | Followers | Note | Location/Designation | Include to CRM`
 - LinkedIn: `Link | Name | Followers | Note | Designation | Location | Company Name | Include to CRM`
 
+- Facebook: `Link | Name | Followers | Note | Designation | Location | Company Name | Include to CRM`
+  (tab `Sheet1`; the `Designation`/`Location`/`Company Name` columns are noisy for
+  group posts — the resolver trusts LLM-extracted role/company instead.)
+
 CRM "NexusPoint ... Outreach CRM" (tab `Leads`, 13 columns). The skill writes by
 **header name**, not position, so a column reorder won't corrupt it:
 - Instagram: `Name | Username | Company | Role | Instagram URL | Followers | Bio | Touch 1-4 | Status | Date Added`
 - LinkedIn: `Name | First Name | Company | Role | LinkedIn URL | Location | Recent Post | Touch 1-4 | Status | Date Added`
+- Facebook: `Name | First Name | Company | Role | URL | Location | Recent Post | Touch 1-4 | Status | Date Added` (tab `Sheet1`; note the generic `URL` header)
 
 Column detection is by header, with the Instant-Data-Scraper Name/Link column-flip
 handled in `channels.split_url_and_name`. If a sheet's tab name ever changes, the
 engine falls back to the first tab automatically.
 
-## Adding a new channel (e.g. Facebook)
+## Facebook: group-post resolution
 
-1. In `scripts/channels.py`, add a `FacebookChannel(Channel)` subclass: set the
-   sheet IDs/tabs, the `source_aliases` header map, and the `message_style`.
-2. Implement `parse_row`, `identity`, `crm_identity`, `crm_record` — model them on
-   `InstagramChannel`. The identity function is the important part: pick the most
-   stable per-profile key Facebook gives you (page slug or numeric id), normalized
-   the same way for source and CRM.
-3. Register it in the `CHANNELS` dict at the bottom.
-4. Add `"facebook"` to the message-style map in `scripts/messages.py` if its tone
-   differs from Instagram's.
+Facebook leads come in three URL shapes, classified in `scripts/facebook_resolve.py`:
+
+| URL shape | Author / identity |
+|---|---|
+| `facebook.com/<slug>/` | the slug |
+| `facebook.com/profile.php?id=<n>` | `id:<n>` |
+| `facebook.com/<slug>/posts\|videos\|photos/...` | the slug (the page IS the author) |
+| `facebook.com/groups/<g>/posts/<id>/` | **resolved author** → else `name:<name>` → else `post:<g>/<id>` |
+
+For group/page posts the author isn't in the URL, so a preprocessing pass resolves it:
+
+1. **LLM-extract** `{name, first_name, role, company, location, profile_url}` from the
+   already-scraped `Name` (post title) + `Note` (self-intro) text. OpenAI `gpt-5.4-mini`
+   primary → Claude `claude-haiku-4-5` fallback. This is the workhorse — most group
+   intros say "Hi, I'm Mary, I run a digital marketing agency...".
+2. **Firecrawl** the post URL as a backup to recover the real profile link. Note:
+   Firecrawl **blanket-blocks facebook.com** ("Website Not Supported"), so this almost
+   always returns nothing; the run detects that and disables it after the first hit to
+   avoid burning calls. Pass `--no-firecrawl` to skip it entirely.
+
+Results are cached in `scripts/.cache/facebook_resolved.json` keyed by source URL, so
+the LLM work runs **once per URL** (idempotent; re-runs reuse the cache, `--refresh`
+rebuilds). The push reads the cache via `FacebookChannel.preprocess()`.
+
+Because Firecrawl can't see Facebook, a large share of group leads resolve to a **name
+but no profile URL** → those are pushed as `Status = "Find Profile"` (see the decision
+table). Real-profile and page-post leads push as normal `New`. The dedup invariant still
+holds: `matt.capala/` (profile) and `matt.capala/videos/...` both key to `matt.capala`.
+
+## Adding another channel
+
+1. In `scripts/channels.py`, add a `<Name>Channel(Channel)` subclass: sheet IDs/tabs,
+   the `source_aliases` header map, the `message_style`, and implement `parse_row`,
+   `identity`, `crm_identity`, `crm_record` (model on `InstagramChannel`/`LinkedinChannel`).
+2. Register it in the `CHANNELS` dict.
+3. Add a style to `_STYLE` in `scripts/messages.py` if its tone differs.
+4. If the channel needs a resolution/enrichment step (like Facebook), give the channel a
+   `preprocess(data_rows, col_map, dry_run=False)` method — `push.py` calls it
+   automatically if present. Channels without it are untouched.
 5. Test with `--dry-run` before the first live push.
-
-No changes to `push.py` are needed — that's the point of the config split.
 
 ## Message generation
 

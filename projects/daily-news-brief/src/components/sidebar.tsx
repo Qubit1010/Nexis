@@ -72,8 +72,12 @@ function groupByDate(dates: BriefDate[]): DateGroup[] {
 export function Sidebar() {
   const [dates, setDates] = useState<BriefDate[]>([]);
   const [toolDates, setToolDates] = useState<BriefDate[]>([]);
+  const [lookups, setLookups] = useState<
+    { id: number; tool: string; days: number }[]
+  >([]);
   const [generating, setGenerating] = useState(false);
   const [generatingTools, setGeneratingTools] = useState(false);
+  const [elapsed, setElapsed] = useState(0);
   const [searchOpen, setSearchOpen] = useState(false);
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -89,6 +93,9 @@ export function Sidebar() {
   const currentToolDate = pathname.startsWith("/tools/")
     ? pathname.split("/tools/")[1]
     : null;
+  const currentLookup = pathname.startsWith("/practical/lookup/")
+    ? pathname.split("/practical/lookup/")[1]
+    : null;
 
   useEffect(() => {
     fetch("/api/briefs")
@@ -98,6 +105,10 @@ export function Sidebar() {
     fetch("/api/tool-briefs")
       .then((r) => r.json())
       .then(setToolDates)
+      .catch(() => {});
+    fetch("/api/practical/lookups")
+      .then((r) => r.json())
+      .then(setLookups)
       .catch(() => {});
   }, [pathname]);
 
@@ -111,6 +122,17 @@ export function Sidebar() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
+
+  // Tick an elapsed-seconds counter while a generation is running so the long
+  // (3-5 min) synchronous request clearly looks alive, not frozen.
+  useEffect(() => {
+    if (!generating && !generatingTools) {
+      setElapsed(0);
+      return;
+    }
+    const t = setInterval(() => setElapsed((e) => e + 1), 1000);
+    return () => clearInterval(t);
+  }, [generating, generatingTools]);
 
   // Close mobile sidebar on outside click
   const handleBackdropClick = useCallback(() => {
@@ -210,7 +232,7 @@ export function Sidebar() {
             {generating ? (
               <span className="flex items-center gap-2">
                 <Loader2 className="w-4 h-4 animate-spin" />
-                Generating...
+                Generating... {elapsed}s
               </span>
             ) : (
               <span className="flex items-center gap-2">
@@ -227,15 +249,22 @@ export function Sidebar() {
             {generatingTools ? (
               <span className="flex items-center gap-2">
                 <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                Generating tools...
+                Generating Practical AI... {elapsed}s
               </span>
             ) : (
               <span className="flex items-center gap-2">
                 <Wrench className="w-3.5 h-3.5" />
-                Generate Tools Brief
+                Generate Practical AI
               </span>
             )}
           </Button>
+
+          {(generating || generatingTools) && (
+            <p className="text-[11px] leading-snug text-zinc-500 px-1 pt-0.5">
+              Fetching sources and analyzing with AI. This takes 3-5 minutes,
+              keep this tab open.
+            </p>
+          )}
         </div>
 
         {/* Action buttons */}
@@ -286,7 +315,6 @@ export function Sidebar() {
             <nav className="space-y-0.5 mb-4">
               {[
                 { slug: "trending", label: "Trending Now", icon: "#" },
-                { slug: "content-ideas", label: "Content Ideas", icon: "!" },
                 { slug: "sentiment", label: "Sentiment", icon: "~" },
                 { slug: "most-discussed", label: "Most Discussed", icon: "\u2191" },
               ].map((item) => (
@@ -331,7 +359,7 @@ export function Sidebar() {
           <div className="px-5 pt-4 pb-2">
             <p className="text-[11px] font-semibold text-zinc-600 uppercase tracking-[0.1em] mb-3 inline-flex items-center gap-1.5">
               <Wrench className="w-3 h-3 text-teal-500/70" />
-              Tools & Tutorials
+              Practical AI
             </p>
             <div className="space-y-0.5">
               {toolDates.slice(0, 7).map((tb) => (
@@ -345,6 +373,35 @@ export function Sidebar() {
                   }`}
                 >
                   {formatDate(tb.date)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="h-px bg-white/[0.06] mx-4" />
+        </>
+      )}
+
+      {/* Practical AI tool lookups */}
+      {lookups.length > 0 && (
+        <>
+          <div className="px-5 pt-4 pb-2">
+            <p className="text-[11px] font-semibold text-zinc-600 uppercase tracking-[0.1em] mb-3 inline-flex items-center gap-1.5">
+              <Search className="w-3 h-3 text-teal-500/70" />
+              Tool Lookups
+            </p>
+            <div className="space-y-0.5">
+              {lookups.slice(0, 6).map((l) => (
+                <button
+                  key={l.id}
+                  onClick={() => router.push(`/practical/lookup/${l.id}`)}
+                  className={`w-full text-left text-[13px] py-1.5 px-2.5 rounded-lg transition-all duration-200 truncate ${
+                    currentLookup === String(l.id)
+                      ? "bg-teal-500/10 text-teal-400 font-semibold shadow-[inset_0_0_0_1px_rgba(20,184,166,0.2)]"
+                      : "text-zinc-500 hover:bg-white/[0.04] hover:text-zinc-300"
+                  }`}
+                >
+                  {l.tool}{" "}
+                  <span className="text-zinc-600">· {l.days}d</span>
                 </button>
               ))}
             </div>
