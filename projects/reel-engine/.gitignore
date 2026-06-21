@@ -3,6 +3,12 @@ out/
 whisper.cpp/
 tmp.json
 
+# OmniVoice (cloned-voice TTS) python env + reference clip
+.venv/
+voice/*.wav
+voice/*.mp3
+voice/*.m4a
+
 # Audio/video intermediates and scratch (keep voiceover.mp3 + infographic.png)
 public/reels/**/*.wav
 public/reels/**/voiceover_*.mp3

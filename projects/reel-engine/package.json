@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "studio": "remotion studio",
+    "voice": ".venv/Scripts/python.exe scripts/generate_voice.py",
     "prepare-reel": "node scripts/prepare.mjs",
     "render": "remotion render Reel",
     "still": "remotion still Reel"

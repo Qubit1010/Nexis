@@ -5,38 +5,43 @@ description: >-
   motion-graphics reel with a brand-styled, voice-synced animation via the Remotion
   reel-engine. Use this whenever Aleem wants to convert a post, carousel, or
   infographic into a short video/reel, repurpose a static post into motion, or
-  generate the ElevenLabs voice script + scene data for a reel. Trigger on
-  "make a reel", "turn this post into a reel", "reel from this infographic",
-  "convert my post to a video", "animate this post", "voiceover script for a reel",
-  or when the user drops an infographic + caption + source and asks for a reel.
-  Also use it to render a reel once the user has recorded the voiceover ("render
-  the <slug> reel", "the voiceover is ready"). Handles both phases: writing the
-  script + content.json, and driving transcription + render after the mp3 exists.
+  generate the voice script + scene data for a reel. The voiceover is generated
+  automatically in a cloned voice (OmniVoice), with manual ElevenLabs as a
+  fallback. Trigger on "make a reel", "turn this post into a reel", "reel from
+  this infographic", "convert my post to a video", "animate this post",
+  "voiceover script for a reel", or when the user drops an infographic + caption
+  + source and asks for a reel. Also use it to render a reel ("render the <slug>
+  reel", "generate the voiceover"). Handles both phases: writing the script +
+  content.json, and generating the voice + driving transcription + render.
 ---
 
 # Reel Creator
 
-Converts a NexusPoint infographic post into a 9:16 motion-graphics reel with an
-ElevenLabs voiceover synced to brand animation. It is the generator/orchestrator
-in front of the `projects/reel-engine/` Remotion codebase — this skill writes the
-script and scene data, the engine renders the video.
+Converts a NexusPoint infographic post into a 9:16 motion-graphics reel with a
+voiceover synced to brand animation. It is the generator/orchestrator in front of
+the `projects/reel-engine/` Remotion codebase — this skill writes the script and
+scene data, the engine renders the video.
 
 Aleem has 130+ infographic posts that underperform as static images. The job is to
 turn any of them into a punchy reel **fast and repeatably**, on brand, with the
 voice exactly synced to the visuals.
 
-## The split: one ElevenLabs step is manual
+## The flow: end-to-end, no manual handoff
 
-The voice is recorded by Aleem in the ElevenLabs UI, so the workflow has a human
-handoff in the middle. The skill therefore runs in **two phases**:
+The voiceover is generated automatically in a **cloned voice** via OmniVoice, so
+the whole pipeline runs without leaving the skill. Two phases, both done here:
 
-- **Phase A — Author** (you do this): write the voice script + `content.json`,
-  validate it, and hand Aleem the script to paste into ElevenLabs.
-- **Phase B — Render** (you do this once the mp3 exists): transcribe + align +
-  render the mp4.
+- **Phase A — Author**: write the voice script + `content.json`, validate it.
+- **Phase B — Voice + Render**: generate the cloned-voice voiceover, transcribe +
+  align, render the mp4.
+
+ElevenLabs is a **fallback**: if Aleem wants hand-tuned studio delivery for a
+given reel, he drops a `voiceover.mp3` into the reel folder and `prepare.mjs`
+prefers it. See `references/voice-cloning.md`.
 
 Figure out which phase you're in from what the user gives you. A new post (image +
-caption + source) → Phase A. "The voiceover is ready / render the X reel" → Phase B.
+caption + source) → Phase A then straight into B. "Render the X reel / regenerate
+the voiceover" → Phase B.
 
 ## Inputs you need (Phase A)
 
@@ -120,31 +125,36 @@ It checks: voiceText concatenation equals voiceScript, no em dashes, no agency/
 university mention in spoken text, word count in the 90-130 range, valid scene
 types/order, and that stats are numeric. Fix anything it flags before handing off.
 
-### Step 5. Hand the script to Aleem for ElevenLabs
+### Step 5. Drop in the infographic, then go to Phase B
 
-Give him the final `voiceScript` as a clean copy-paste block, plus the two files to
-drop in `projects/reel-engine/public/reels/<slug>/`:
-
-- `voiceover.mp3` — exported from ElevenLabs after pasting the script.
-- `infographic.png` — the post image (if not already added).
-
-Tell him to come back with "the <slug> voiceover is ready" to trigger Phase B. If
-he wants to preview the look before recording, he can run `npm run studio` and set
-the composition's `slug` prop (timing is estimated from word counts until aligned).
+Make sure `infographic.png` (the post image) is in
+`projects/reel-engine/public/reels/<slug>/` if it wasn't added already. No manual
+recording is needed — Phase B generates the voiceover. If you want to preview the
+look first, run `npm run studio` and set the composition's `slug` prop (timing is
+estimated from word counts until aligned).
 
 ---
 
-## Phase B — Transcribe, align, render
-
-Run once `voiceover.mp3` (and ideally `infographic.png`) are in the reel folder.
+## Phase B — Generate voice, align, render
 
 ```bash
 cd projects/reel-engine
-node scripts/prepare.mjs <slug>          # transcribe + align; writes captions.json + timeline.json
+python scripts/generate_voice.py <slug>       # FINISHED cloned-voice voiceover.wav (baked recipe); see references/voice-cloning.md
+node scripts/prepare.mjs <slug> --model medium.en   # transcribe + align; medium.en = better captions on the processed voice
 npx remotion render Reel out/<slug>.mp4 --props='{"slug":"<slug>"}'
 ```
 
-`prepare.mjs` converts the mp3 to 16kHz wav, runs Whisper for word-level
+`generate_voice.py` outputs the finished voice (per-scene chunking for natural
+pauses, heavy+warm profile baked in) — no separate audio step. Tune or disable
+via flags (`--pitch-semitones`, `--bass-db`, `--no-post`, `--speed`); see
+`references/voice-cloning.md`.
+
+`generate_voice.py` synthesizes `voiceScript` in the cloned reference voice
+(`projects/reel-engine/voice/aleem-ref.wav`) and writes `voiceover.wav`. For a
+studio-quality reel instead, skip that step and drop a manual `voiceover.mp3` in
+the folder — `prepare.mjs` is **mp3-first** and uses it over the generated wav.
+
+`prepare.mjs` converts the voiceover to 16kHz wav, runs Whisper for word-level
 timestamps, writes the captions, and anchors each scene to the first two words of
 its `voiceText`. The render reads the aligned `timeline.json` and sets duration
 from it. First `prepare.mjs` run downloads Whisper + model (a few minutes, once);
@@ -152,14 +162,14 @@ first render downloads a headless Chromium (once).
 
 After render, verify before declaring done:
 
-- **Length** is in the 40-50s target. If the VO came back long (the CodeGraph one
-  ran 59s), offer to either tighten the script and re-record, or speed the audio
-  ~1.1-1.2x with pitch preserved before re-running prepare:
-  `ffmpeg -i voiceover.mp3 -filter:a "atempo=1.15" -y voiceover.mp3`
+- **Length** target 40-50s. Default speed is 0.82 (per-scene reads a bit tight, ~36s
+  for ~95 words). To stretch, regenerate at a lower speed (`--speed 0.78`); if a long
+  script runs over 50s, raise it (`--speed 0.95`) or trim the script.
 - **Sync** — spoken words land on the matching captions/scene cuts (scrub a few points).
-- **Whisper mis-hears** — it occasionally mistranscribes a word (it turned
-  "auto-syncs" into "sinks" on CodeGraph). If a caption word is wrong, fix it in
-  `captions.json` (preserve the timing fields) and re-render; no need to re-run Whisper.
+- **Whisper mis-hears** — more frequent on the heavier/processed voice. Run prepare
+  with `--model medium.en` first; then fix any wrong caption word in `captions.json`
+  (preserve the timing fields) and re-render — no need to re-run Whisper. Common
+  ones: "Claude"→"Cloud", number words, or a filler word at a scene gap.
 
 Deliver the path to `out/<slug>.mp4` and a one-line summary (length, that it's
 brand-styled + synced).
@@ -174,6 +184,9 @@ brand-styled + synced).
 - `references/content-json.md` — the `content.json` schema: every scene type, its
   fields, the `*accent*` headline syntax, the voiceText-equals-voiceScript rule, and
   a complete annotated example. **Read in Phase A before writing the JSON.**
+- `references/voice-cloning.md` — the OmniVoice cloned-voice voiceover: setup, the
+  reference clip, `generate_voice.py` flags, length tuning, and the ElevenLabs
+  mp3 fallback. **Read in Phase B before generating the voice.**
 
 ## Gotchas worth knowing
 
