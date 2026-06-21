@@ -62,6 +62,9 @@ archives/
 # Decision log (private/sensitive)
 decisions/
 
+# University files (assignments, coursework, private)
+university/
+
 # Personal/sensitive files
 **/context.rar
 **/nexuspoint-landing-page-copy.md
