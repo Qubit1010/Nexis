@@ -9,6 +9,14 @@ voice/*.wav
 voice/*.mp3
 voice/*.m4a
 
+# Background music tracks (binary/licensed) - keep README + manifest, not audio
+background-music/*.mp3
+background-music/*.wav
+background-music/*.m4a
+background-music/*.flac
+background-music/*.ogg
+background-music/*.aac
+
 # Audio/video intermediates and scratch (keep voiceover.mp3 + infographic.png)
 public/reels/**/*.wav
 public/reels/**/voiceover_*.mp3

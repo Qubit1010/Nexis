@@ -142,7 +142,14 @@ cd projects/reel-engine
 python scripts/generate_voice.py <slug>       # FINISHED cloned-voice voiceover.wav (baked recipe); see references/voice-cloning.md
 node scripts/prepare.mjs <slug> --model medium.en   # transcribe + align; medium.en = better captions on the processed voice
 npx remotion render Reel out/<slug>.mp4 --props='{"slug":"<slug>"}'
+node scripts/add_music.mjs <slug>             # mix background music under the voice at 25% -> out/<slug>-music.mp4
 ```
+
+**Background music is standard on reels.** After render, run `add_music.mjs` to mix
+a track from `background-music/` under the voice at **25%** (voice stays full, 0.8s
+fade-in + 2s fade-out). Default picks the first track; pass a name to choose
+(`node scripts/add_music.mjs <slug> gr0za`) or `--volume` to adjust. The
+voice-only `out/<slug>.mp4` is kept; the deliverable is `out/<slug>-music.mp4`.
 
 `generate_voice.py` outputs the finished voice (per-scene chunking for natural
 pauses, heavy+warm profile baked in) — no separate audio step. Tune or disable
