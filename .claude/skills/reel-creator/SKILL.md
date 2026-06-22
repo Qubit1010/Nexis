@@ -135,51 +135,56 @@ estimated from word counts until aligned).
 
 ---
 
-## Phase B — Generate voice, align, render
+## Phase B — Generate voice, align, render, add music
+
+Four steps, all run here. The voice and music settings are **locked house defaults**
+(tuned + approved 2026-06-22) — just run the commands; only reach for flags to deviate.
 
 ```bash
 cd projects/reel-engine
-python scripts/generate_voice.py <slug>       # FINISHED cloned-voice voiceover.wav (baked recipe); see references/voice-cloning.md
-node scripts/prepare.mjs <slug> --model medium.en   # transcribe + align; medium.en = better captions on the processed voice
+python scripts/generate_voice.py <slug>             # finished cloned-voice voiceover.wav (baked recipe)
+node scripts/prepare.mjs <slug> --model medium.en   # transcribe + align -> captions.json + timeline.json
 npx remotion render Reel out/<slug>.mp4 --props='{"slug":"<slug>"}'
-node scripts/add_music.mjs <slug>             # mix background music under the voice at 25% -> out/<slug>-music.mp4
+node scripts/add_music.mjs <slug>                   # mix background music at 25% -> out/<slug>-music.mp4
 ```
 
-**Background music is standard on reels.** After render, run `add_music.mjs` to mix
-a track from `background-music/` under the voice at **25%** (voice stays full, 0.8s
-fade-in + 2s fade-out). Default picks the first track; pass a name to choose
-(`node scripts/add_music.mjs <slug> gr0za`) or `--volume` to adjust. The
-voice-only `out/<slug>.mp4` is kept; the deliverable is `out/<slug>-music.mp4`.
+**1. Voice — `generate_voice.py`.** Synthesizes `voiceScript` in Aleem's cloned
+voice (`voice/aleem-ref.wav`) and writes the FINISHED `voiceover.wav`. The tuned
+recipe is baked into the defaults: per-scene chunking (natural period pauses, and
+it avoids the phantom filler words + clipped onsets that per-sentence chunking
+caused), 0.82 speed, 48 steps, onset-protected seams, and a heavy+warm
+post-process (−0.6 st pitch + low-shelf + loudness). Tune via `--speed`,
+`--pitch-semitones`, `--bass-db`, or `--no-post`. **ElevenLabs fallback:** drop a
+manual `voiceover.mp3` in the folder and `prepare.mjs` (mp3-first) uses it instead.
+Full detail in `references/voice-cloning.md`.
 
-`generate_voice.py` outputs the finished voice (per-scene chunking for natural
-pauses, heavy+warm profile baked in) — no separate audio step. Tune or disable
-via flags (`--pitch-semitones`, `--bass-db`, `--no-post`, `--speed`); see
-`references/voice-cloning.md`.
+**2. Align — `prepare.mjs`.** Converts the voiceover to 16kHz wav, runs Whisper for
+word-level timestamps, writes `captions.json`, and anchors each scene to the first
+two words of its `voiceText` → `timeline.json` (drives duration + scene cuts). Use
+`--model medium.en` (more accurate on the processed voice). First run downloads
+Whisper + model; first render downloads a headless Chromium.
 
-`generate_voice.py` synthesizes `voiceScript` in the cloned reference voice
-(`projects/reel-engine/voice/aleem-ref.wav`) and writes `voiceover.wav`. For a
-studio-quality reel instead, skip that step and drop a manual `voiceover.mp3` in
-the folder — `prepare.mjs` is **mp3-first** and uses it over the generated wav.
+**3. Render.** `npx remotion render` reads `timeline.json` for duration + cuts.
 
-`prepare.mjs` converts the voiceover to 16kHz wav, runs Whisper for word-level
-timestamps, writes the captions, and anchors each scene to the first two words of
-its `voiceText`. The render reads the aligned `timeline.json` and sets duration
-from it. First `prepare.mjs` run downloads Whisper + model (a few minutes, once);
-first render downloads a headless Chromium (once).
+**4. Music — `add_music.mjs` (standard on every reel).** Mixes a `background-music/`
+track UNDER the voice at **25%** (voice full, 0.8s fade-in + 2s fade-out) →
+`out/<slug>-music.mp4`. Default picks the first track; pass a name to choose
+(`add_music.mjs <slug> gr0za`) or `--volume`. The voice-only `out/<slug>.mp4` is kept.
+See [[feedback_reel_background_music]].
 
-After render, verify before declaring done:
+Verify before declaring done:
 
-- **Length** target 40-50s. Default speed is 0.82 (per-scene reads a bit tight, ~36s
-  for ~95 words). To stretch, regenerate at a lower speed (`--speed 0.78`); if a long
-  script runs over 50s, raise it (`--speed 0.95`) or trim the script.
+- **Length** target 40-50s. Default speed 0.82 reads a bit tight (~36s for ~95 words).
+  To stretch, lower it (`--speed 0.78`); if a long script runs over 50s, raise it
+  (`--speed 0.95`) or trim the script.
 - **Sync** — spoken words land on the matching captions/scene cuts (scrub a few points).
-- **Whisper mis-hears** — more frequent on the heavier/processed voice. Run prepare
-  with `--model medium.en` first; then fix any wrong caption word in `captions.json`
-  (preserve the timing fields) and re-render — no need to re-run Whisper. Common
-  ones: "Claude"→"Cloud", number words, or a filler word at a scene gap.
+- **Whisper mis-hears** — more frequent on the heavier/processed voice. Use
+  `--model medium.en`, then fix any wrong caption word in `captions.json` (preserve
+  the timing fields) and re-render. Common: "Claude"→"Cloud", number words, a filler
+  word at a scene gap.
 
-Deliver the path to `out/<slug>.mp4` and a one-line summary (length, that it's
-brand-styled + synced).
+Deliver `out/<slug>-music.mp4` (the music version is the final) plus a one-line
+summary (length, brand-styled + voice-synced + background music).
 
 ---
 
