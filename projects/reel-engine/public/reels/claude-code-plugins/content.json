@@ -1,0 +1,63 @@
+{
+  "slug": "claude-code-plugins",
+  "platform": "linkedin",
+  "title": "The Anti-Regression Stack",
+  "voiceScript": "I cut Claude Code's token burn by 35 percent on a client repo. Not with better prompts. Most people run Claude like a chatbox, then blame the model when it ships chaos. It edits the wrong file and burns tokens debugging itself. The fix is the stack, not the prompt. Graphify maps the codebase so it stops guessing. I force alignment before code, and a guardrail keeps changes surgical. The results were real. 35 percent fewer tokens, a five round review on every risky plan, and far fewer regressions. Planning without interrogation is just hallucination with a checklist. Stop chasing output, chase fewer regressions. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "I cut Claude Code's token burn by 35 percent on a client repo. Not with better prompts.",
+      "headline": "Cut token burn by *35%*",
+      "sub": "The Claude Code Stack"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Most people run Claude like a chatbox, then blame the model when it ships chaos. It edits the wrong file and burns tokens debugging itself.",
+      "headline": "It just ships *chaos*",
+      "sub": "wrong files, failed tests, wasted tokens",
+      "problemVariant": "glitch"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "The fix is the stack, not the prompt. Graphify maps the codebase so it stops guessing. I force alignment before code, and a guardrail keeps changes surgical.",
+      "headline": "My anti-regression *stack*",
+      "visual": "layers",
+      "asset": "infographic.png",
+      "layers": [
+        { "name": "Graphify", "goal": "Maps the codebase" },
+        { "name": "Grill Me", "goal": "Align before code" },
+        { "name": "claw.md", "goal": "Think first, stay surgical" },
+        { "name": "Codex Review", "goal": "Adversarial second eyes" },
+        { "name": "Claude Obsidian", "goal": "Persistent context" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The results were real. 35 percent fewer tokens, a five round review on every risky plan, and far fewer regressions.",
+      "headline": "What it actually did",
+      "stats": [
+        { "value": 35, "suffix": "%", "label": "fewer tokens burned" },
+        { "value": 5, "label": "round adversarial plan review" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Planning without interrogation is just hallucination with a checklist.",
+      "headline": "Hallucination with a *checklist*",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Stop chasing output, chase fewer regressions. Follow for more.",
+      "cta": "Which plugin would you add?"
+    }
+  ],
+  "source": "LinkedIn post + source brief: cutting Claude Code token burn ~35% on a client repo via the right plugin/workflow stack, not 'better prompts'. Thesis: most run Claude like a chatbox then blame the model for chaos (edits wrong module, tests fail, pay tokens to debug its own confusion); a multi-agent workflow once refactored a shared util and silently broke three services. The stack: Graphify (builds a visual knowledge graph of the codebase so Claude stops re-reading files + guessing deps; deterministic post-commit rebuild, no LLM tokens; can generate an Obsidian vault). Grill Me / Grill with Docs (Matt PCO - advanced 'plan mode', interrogates you to kill dev-AI misalignment before coding). Grill Me Codex (adds OpenAI Codex adversarial review in a read-only sandbox; the two models debate up to 5 rounds until a 'thumbs up'). Official Codex Plugin by OpenAI (targeted adversarial reviews / 'Codex rescue'; free tier). Karpathy's claw.md (guardrail file: think before coding, simplicity first, surgical changes, goal-driven). Claude Obsidian (auto-structures source materials, hot cache so sessions restart with context). Impeccable (23-command front-end tool; 'live mode' point-and-edit on the running app). Notebook LMPI (offload heavy reading/slides to NotebookLM = token cost hack). Official N8N MCP Server (ship client automations without the canvas). Punch line: planning without interrogation is just hallucination with a checklist. Optimize for fewer regressions, not more output.",
+  "handle": "@nexuspoint"
+}

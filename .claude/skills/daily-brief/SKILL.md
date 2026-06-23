@@ -104,6 +104,25 @@ Path overrides (optional, set in `.env` if running outside the project root): `L
 5. **AI Content & Creator Economy** — Creator tools, generative media, content AI
 6. **AI Ethics, Safety & Regulation** — Safety research, regulation, policy
 
+## Practical AI: "Look up any tool" (NotebookLM-grounded)
+
+The dashboard's Practical AI page has a **"Look up any tool"** search (e.g. "Claude Code", "n8n", "Cursor"). It is grounded on **NotebookLM**, not the news pipeline:
+
+1. Creates a throwaway notebook (`Tool Lookup: <tool> (date)`).
+2. Runs fast web research (`source add-research ... --import-all`) — imports real docs, blogs, YouTube, GitHub, Reddit.
+3. Removes any blocklisted sources from the notebook (`removeIgnoredSources`).
+4. Asks a grounded question for a cited synthesis, then formats it into the lookup JSON via `callWithFallback` (gpt-5.2 primary, Claude fallback).
+5. Stores a `practical_lookups` row (in `data/news.db`) including a `notebook_url`, then redirects to `/practical/lookup/[id]`.
+
+The notebook **persists** so the result page shows a **"Grounded via NotebookLM"** link to verify the search; it is only deleted if the lookup fails. If NotebookLM is unavailable (see auth note below), it **falls back** to GitHub-star-ranked + Firecrawl web + last30days community sources — usable, but ungrounded and with no notebook link.
+
+**Source blocklist** (`src/lib/pipeline/sources/notebooklm.ts`):
+- `IGNORED_URLS` — exact URLs to drop.
+- `IGNORED_DOMAINS` — whole hostnames to drop (currently `code.claude.com`; covers every path under it).
+- `isIgnoredUrl` checks both, and the filter applies to both the NotebookLM and fallback paths. Add new blocks to whichever set fits.
+
+**NotebookLM auth expires every few hours.** When it does, lookups silently fall back (no "Grounded via NotebookLM" badge = it fell back). Re-authenticate with `notebooklm login` (see the `reference-notebooklm-setup` memory for the exe path and login command). Code + ops detail: see the `project-practical-lookup-notebooklm` memory.
+
 ## After Generating
 
 Once the brief is generated, offer to:
@@ -122,4 +141,6 @@ Once the brief is generated, offer to:
 | A source shows errors but run completes | Expected — the engine + wrapper fail open per source/topic |
 | No social sources in output | Social only runs on `--full`; needs `SCRAPECREATORS_API_KEY` / `XAI_API_KEY` |
 | "No articles fetched" | Every topic failed — check internet, Python, and the engine keys |
+| Tool lookup returns weak sources / no "Grounded via NotebookLM" badge | NotebookLM session expired and it fell back — run `notebooklm login`, then re-run the lookup |
+| Lookup shows a source you want gone | Add the URL to `IGNORED_URLS` or its host to `IGNORED_DOMAINS` in `src/lib/pipeline/sources/notebooklm.ts` |
 | Build errors after changes | Run `npm run build` to check TypeScript errors |

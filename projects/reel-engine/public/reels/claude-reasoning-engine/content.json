@@ -1,0 +1,56 @@
+{
+  "slug": "claude-reasoning-engine",
+  "platform": "linkedin",
+  "title": "Claude is a Reasoning Engine",
+  "voiceScript": "Stop treating Claude like Google, and you'll ship wrong work faster. The instinct is to ask a question and trust the answer. I let it confirm a metric from memory, and it was confidently wrong. Claude isn't a search engine, it's a reasoning engine. It shines when I feed it real context, a messy SOP, a broken codebase, then ask for a decision. The engine is strong. It holds a million tokens of context, scores about 87 percent on coding benchmarks, and reaches you through six doors, one brain. Claude is a powerful assistant, not an oracle. It rewards context plus verification. Stop calling it a chatbot. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Stop treating Claude like Google, and you'll ship wrong work faster.",
+      "headline": "Stop treating Claude like *Google*",
+      "sub": "How to Use Claude"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "The instinct is to ask a question and trust the answer. I let it confirm a metric from memory, and it was confidently wrong.",
+      "headline": "It was *confidently* wrong",
+      "sub": "and my dashboard drifted for a week",
+      "problemVariant": "glitch"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "Claude isn't a search engine, it's a reasoning engine. It shines when I feed it real context, a messy SOP, a broken codebase, then ask for a decision.",
+      "headline": "A *reasoning* engine, not search",
+      "asset": "infographic.png"
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The engine is strong. It holds a million tokens of context, scores about 87 percent on coding benchmarks, and reaches you through six doors, one brain.",
+      "headline": "Why it's not a chatbot",
+      "stats": [
+        { "value": 1, "suffix": "M", "label": "tokens of context" },
+        { "value": 87, "suffix": "%", "label": "on coding benchmarks" },
+        { "value": 6, "label": "doors, one brain" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Claude is a powerful assistant, not an oracle. It rewards context plus verification.",
+      "headline": "An assistant, not an *oracle*",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Stop calling it a chatbot. Follow for more.",
+      "cta": "What should it do for your business?"
+    }
+  ],
+  "source": "LinkedIn post + guide section 'What Claude Actually Is (and Isn't)'. Core thesis: Claude is a reasoning engine, not a search engine or chatbot; it rewards context + verification, not blind trust. Failure mode: let it confirm a metric definition from memory, sounded confident but was wrong, dashboard logic drifted a week. Right way: feed exact inputs (messy SOP, long client thread, half-broken codebase), ask for assumptions, force citations, verify names/numbers/sources before client workflows. One engine, many doors: chat (drafting/thinking), coding tools (shipping fixes), tool-using/agent mode (acting inside guardrails). Real numbers from source: holds up to 1M tokens of context (~several thick books); ~87% on a standard real-world engineering benchmark (SWE-bench); 2026 long-form factuality test = hallucinates far less than a leading competitor; 6 surfaces/'doors' (chat web, desktop app, phone app, coding tool, autonomous desktop agent, developer interface). Limits: knowledge cutoff (not a live index), confident hallucination, non-deterministic answers.",
+  "handle": "@nexuspoint"
+}

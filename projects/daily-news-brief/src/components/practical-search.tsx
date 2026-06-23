@@ -84,7 +84,19 @@ export function PracticalSearch() {
           Fetching fresh updates and how people use it. This takes a minute or two.
         </p>
       )}
-      {error && <p className="text-[12px] text-red-400/80 mt-2">{error}</p>}
+      {error && (
+        <p
+          className={`text-[12px] mt-2 ${
+            error.startsWith("No evidence found")
+              ? "text-muted-foreground/60"
+              : "text-red-400/80"
+          }`}
+        >
+          {error.startsWith("No evidence found")
+            ? `${error}. Try a more specific name like "Claude Code", "n8n", or "Cursor".`
+            : error}
+        </p>
+      )}
     </div>
   );
 }

@@ -41,10 +41,24 @@ After `content.json` passes the validator:
 ```bash
 cd projects/reel-engine
 node scripts/validate_content.mjs <slug>          # gate first
-python scripts/generate_voice.py <slug>           # writes public/reels/<slug>/voiceover.wav
-node scripts/prepare.mjs <slug>                   # transcribe + align (prefers mp3, else wav)
-npx remotion render Reel out/<slug>.mp4 --props='{"slug":"<slug>"}'
+python scripts/generate_voice.py <slug>           # writes voiceover.wav + chunks.json
+node scripts/prepare.mjs <slug>                   # transcribe (prefers mp3, else wav)
+.venv/Scripts/python.exe scripts/preflight.py <slug> --fix   # QA gate: fix + must PASS
+node scripts/render.mjs <slug>                    # gated render
 ```
+
+`generate_voice.py` also writes `public/reels/<slug>/chunks.json` (per-scene audio
+spans) which preflight uses for exact scene anchoring + seam-phantom windows.
+
+### Pronunciation map (say hard words right at the source)
+
+`generate_voice.py` respells mapped words for the **TTS input only** before
+synthesis, so the clone pronounces them correctly (the cloned voice otherwise says
+"Claude" as "code/cloud" and collapses "Claude Code" into "code code"). Display text
+and captions keep the real spelling. The map is built-in `{"Claude":"Clawd"}` merged
+with `scripts/pronunciation.json` — add an entry there for any new word the clone
+mangles, then regenerate. `validate_content.mjs` warns when the script contains a
+mapped word so you know it'll be respelled.
 
 (`npm run voice -- <slug>` is a shortcut for the python call.)
 

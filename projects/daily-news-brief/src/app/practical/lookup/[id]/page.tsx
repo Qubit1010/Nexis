@@ -65,6 +65,18 @@ export default async function LookupPage({ params }: PageProps) {
                 minute: "2-digit",
               })}
             </span>
+            {row.notebookUrl && (
+              <a
+                href={row.notebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1.5 rounded-full hover:bg-violet-500/20 transition-colors"
+              >
+                <Sparkles className="w-3 h-3" />
+                Grounded via NotebookLM
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            )}
           </div>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-2xl pt-1">
             {row.summary}

@@ -178,6 +178,7 @@ export const practicalLookups = sqliteTable("practical_lookups", {
   whatsNew: text("whats_new").notNull(), // JSON: [{title, detail, url}]
   howPeopleSolve: text("how_people_solve").notNull(), // JSON: [{problem, approach, tools[], steps[]}]
   sources: text("sources").notNull(), // JSON: [{title, url, source}]
+  notebookUrl: text("notebook_url"), // NotebookLM notebook link (grounded path only)
   createdAt: text("created_at")
     .notNull()
     .default(sql`(datetime('now'))`),

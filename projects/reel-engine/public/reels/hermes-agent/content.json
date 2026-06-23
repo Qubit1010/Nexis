@@ -1,0 +1,65 @@
+{
+  "slug": "hermes-agent",
+  "platform": "linkedin",
+  "title": "Hermes Agent",
+  "voiceScript": "Most AI forgets everything the second you close the chat. This one rewrites itself to get smarter. You re-explain the same context, fix the same bug, repeat the same task. Every session starts from zero. So I started running Hermes, an open source agent that writes its own skills. Solve a hard problem once, and it never relearns it. The setup is wild. It unifies over 20 messaging platforms, runs on a five dollar server, and curates its own skills every seven days. Your AI should compound like an employee, not reset like a tool. If your agents still feel like chatbots, this one is worth a look. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Most AI forgets everything the second you close the chat. This one rewrites itself to get smarter.",
+      "headline": "AI that *rewrites* itself",
+      "sub": "Self-Improving Agents"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "You re-explain the same context, fix the same bug, repeat the same task. Every session starts from zero.",
+      "headline": "Every session starts from *zero*",
+      "sub": "no memory, no progress",
+      "problemVariant": "crossout",
+      "chips": ["Re-explain context", "Fix the same bug", "Repeat the task"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I started running Hermes, an open source agent that writes its own skills. Solve a hard problem once, and it never relearns it.",
+      "headline": "An agent that *upgrades* itself",
+      "visual": "layers",
+      "asset": "infographic.png",
+      "layers": [
+        { "name": "Self-Learning", "goal": "Writes its own skills" },
+        { "name": "Memory", "goal": "Recall across sessions" },
+        { "name": "Deployment", "goal": "Laptop to cloud" },
+        { "name": "Gateway", "goal": "20+ chat apps" },
+        { "name": "Tools", "goal": "Search, image, voice" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The setup is wild. It unifies over 20 messaging platforms, runs on a five dollar server, and curates its own skills every seven days.",
+      "headline": "Why it's different",
+      "stats": [
+        { "value": 20, "suffix": "+", "label": "messaging platforms unified" },
+        { "value": 5, "prefix": "$", "label": "to run it on a VPS" },
+        { "value": 7, "suffix": "-day", "label": "auto skill cleanup cycle" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Your AI should compound like an employee, not reset like a tool.",
+      "headline": "AI should *compound*, not reset",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If your agents still feel like chatbots, this one is worth a look. Follow for more.",
+      "cta": "Ready to move past chatbots?"
+    }
+  ],
+  "source": "LinkedIn/overview post on Hermes Agent by Nous Research (open-source, MIT, early 2026). Self-improving autonomous agent: closed learning loop that writes its own reusable skills (procedural memory), FTS5 cross-session persistent memory, universal deployment (local terminal, Docker, $5 VPS, Modal/Daytona serverless), multi-platform gateway across 20+ messaging apps (Telegram, Discord, Slack, WhatsApp, WeChat, Teams), Nous Tool Gateway (Firecrawl search, FAL/FLUX image, OpenAI TTS, Browser Use). Releases: v0.12 Curator (autonomous skill grading/pruning on a 7-day cycle), v0.13 multi-agent Kanban boards, v0.15 -76% codebase + promptware defense, v0.16 native desktop app. Pairs with Nous Hermes 3 (Llama 3.1 8B/70B/405B). Positioned as a no-code alternative to n8n.",
+  "handle": "@nexuspoint"
+}

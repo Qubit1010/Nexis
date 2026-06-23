@@ -1,0 +1,63 @@
+{
+  "slug": "agent-economy",
+  "platform": "linkedin",
+  "title": "The Agent Economy",
+  "voiceScript": "We're at the edge of AI that doesn't just talk, it acts. For years, AI only generated text. You still clicked through every app and every task by hand. Now agents execute the whole workflow. You commission a specialized agent instead of buying software seats, and it runs the job across your apps. And the shift is fast. By 2027, fifty percent of AI companies will run agents. On your own device, they run up to thirteen times faster. This is the agent economy. AI stops being a tool and becomes a partner. Ignore this and you get left behind. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "We're at the edge of AI that doesn't just talk, it acts.",
+      "headline": "AI that *acts*, not talks",
+      "sub": "The Agent Economy"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "For years, AI only generated text. You still clicked through every app and every task by hand.",
+      "headline": "AI that only *talks*",
+      "sub": "you still do all the clicking",
+      "problemVariant": "crossout",
+      "chips": ["Just generates text", "Click every app", "Software by the seat"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "Now agents execute the whole workflow. You commission a specialized agent instead of buying software seats, and it runs the job across your apps.",
+      "headline": "From talk to *autonomous*",
+      "visual": "roadmap",
+      "asset": "infographic.png",
+      "roadmap": [
+        { "name": "AI that Talks", "goal": "Generates text" },
+        { "name": "AI that Acts", "goal": "Executes tasks" },
+        { "name": "Agent Economy", "goal": "Hire agents, not seats" },
+        { "name": "Agentic OS", "goal": "Goals, zero clicks" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "And the shift is fast. By 2027, fifty percent of AI companies will run agents. On your own device, they run up to thirteen times faster.",
+      "headline": "The shift is already here",
+      "stats": [
+        { "value": 50, "suffix": "%", "label": "of AI firms run agents by 2027" },
+        { "value": 13, "suffix": "x", "label": "faster running on-device" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "This is the agent economy. AI stops being a tool and becomes a partner.",
+      "headline": "A partner, not a *tool*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Ignore this and you get left behind. Follow for more.",
+      "cta": "Ready for AI co-workers?"
+    }
+  ],
+  "source": "LinkedIn post + source brief on the shift from 'AI that talks' to 'AI that acts' and the Agent Economy. Core trends: (1) LLMs -> Large Action Models (LAMs) that translate intent into executable actions; Agent Economy = digital labor as a service, businesses commission agents instead of buying SaaS seats; spawns Agent-to-Agent (A2A) machine marketplaces. (2) Vertical AI agents trained on proprietary industry data + regulatory constraints (HIPAA, GDPR) for healthcare, finance, law; Gartner: operational maturity 2027-2029. (3) On-device 'local-first' execution via NVIDIA RTX Spark / Microsoft Aion = 4x-13x speed advantage over cloud + keeps data private; 'hybrid by default' routing. (4) Agentic Operating Systems (AOS) by 2028 with Zero-UI command centers; long-horizon agents that persist hours/days/weeks self-correcting. (5) Consumer 'Life Agents' / digital twins by 2030 (calendar, health, micro-trades, travel); enterprise shifts to hybrid human-agent teams + roles like Chief AI Officer. (6) Security pivot from data theft to 'hijacked agency': agent impersonation, cryptographic zero-trust identity wallets, Guardian Agents, human-on-the-loop. Headline numbers: 50%+ of AI-using companies deploy autonomous agents by 2027; routine knowledge work largely automated by 2030; 4x-13x local speed.",
+  "handle": "@nexuspoint"
+}

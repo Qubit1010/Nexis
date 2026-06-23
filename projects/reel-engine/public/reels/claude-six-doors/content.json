@@ -1,0 +1,66 @@
+{
+  "slug": "claude-six-doors",
+  "platform": "linkedin",
+  "title": "One Claude, Six Doors",
+  "voiceScript": "I shipped better automations the day I stopped treating Claude like one app. My failure mode was forcing everything through web chat. Tasks stalled, context leaked, and I blamed the model instead of my workflow. It's not one app, it's one intelligence with six doors. Chat to think, Cowork for hands-off desktop work, Code to build, and the API to run unattended. The rule is simple. One intelligence, six doors, two questions: who does the work, and how much should it act alone. Choose the right interface for the right autonomy level. Pick the door, not the panic. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "I shipped better automations the day I stopped treating Claude like one app.",
+      "headline": "Stop treating Claude like *one app*",
+      "sub": "The Six Doors"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "My failure mode was forcing everything through web chat. Tasks stalled, context leaked, and I blamed the model instead of my workflow.",
+      "headline": "One door for *everything*",
+      "sub": "tasks stall and context leaks",
+      "problemVariant": "chips",
+      "chips": ["tasks stall", "context leaks", "model blamed"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "It's not one app, it's one intelligence with six doors. Chat to think, Cowork for hands-off desktop work, Code to build, and the API to run unattended.",
+      "headline": "One brain, *six* doors",
+      "visual": "layers",
+      "asset": "infographic.png",
+      "layers": [
+        { "name": "Claude Chat", "goal": "Write + brainstorm" },
+        { "name": "Desktop", "goal": "Your daily home" },
+        { "name": "Mobile", "goal": "Approve on the go" },
+        { "name": "Cowork", "goal": "Desktop work, no code" },
+        { "name": "Claude Code", "goal": "Build + fix software" },
+        { "name": "API", "goal": "Runs unattended" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The rule is simple. One intelligence, six doors, two questions: who does the work, and how much should it act alone.",
+      "headline": "The whole decision",
+      "stats": [
+        { "value": 1, "label": "intelligence" },
+        { "value": 6, "label": "doors to choose from" },
+        { "value": 2, "label": "questions decide it" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Choose the right interface for the right autonomy level.",
+      "headline": "Right door, right *autonomy*",
+      "punchVariant": "rule"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Pick the door, not the panic. Follow for more.",
+      "cta": "Which door fits your work?"
+    }
+  ],
+  "source": "LinkedIn post + guide section 2 'The Claude Universe: Every Way to Use It'. Core idea: one Claude intelligence reached through six doors - Claude.ai web chat (writing/analysis/brainstorm; Projects + Artifacts), Desktop app (daily home, hosts Cowork + Code), Mobile (quick Qs + remote approve), Cowork (autonomous agent that does file/spreadsheet/deck work on your desktop, no code), Claude Code (terminal/editor, builds + fixes software across files), API (developer plumbing, unattended automations). Pick the door by TWO questions: who does the work (you steering vs Claude acting) and how much autonomy (low = chat, high = Cowork/Code/API). Failure mode = forcing everything through web chat: tasks stall, context leaks, inconsistent outputs, blaming the model not the workflow. Right way = tasks start in chat for clarity, then graduate to Cowork or Code once scope is stable, API only when it must run unattended. Systems thinking: right interface for the right autonomy level. Post CTA: comment DOORS for the decision checklist.",
+  "handle": "@nexuspoint"
+}

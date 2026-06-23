@@ -56,6 +56,12 @@ DEFAULT_PITCH_SEMITONES = -0.6   # slight drop = heavier voice
 DEFAULT_BASS_DB = 3.8            # low-shelf depth/warmth
 DEFAULT_LOUDNESS_LUFS = -14.5    # normalized loudness
 
+# Pronunciation map: words the cloned voice mis-says, respelled phonetically for the
+# TTS ONLY (display text + captions keep the real spelling). "Claude" otherwise comes
+# out as "code/cloud" and collapses "Claude Code" into "code code". Extend by editing
+# scripts/pronunciation.json (merged over these built-in defaults).
+DEFAULT_PRONUNCIATION = {"Claude": "Clawd"}
+
 
 def smooth_chunk(wav, sr, lead_pad_ms, fade_out_ms):
     """Prepend a silent pad and fade it in (protects the word onset), fade the tail out."""
@@ -76,6 +82,28 @@ ROOT = Path(__file__).resolve().parent.parent
 def _ffmpeg_bin():
     cand = ROOT / "node_modules" / "ffmpeg-static" / ("ffmpeg.exe" if os.name == "nt" else "ffmpeg")
     return str(cand) if cand.exists() else "ffmpeg"
+
+
+def load_pronunciation():
+    """Built-in defaults merged with scripts/pronunciation.json (if present)."""
+    mapping = dict(DEFAULT_PRONUNCIATION)
+    p = Path(__file__).resolve().parent / "pronunciation.json"
+    if p.exists():
+        try:
+            data = json.loads(p.read_text(encoding="utf-8"))
+            if isinstance(data, dict):
+                mapping.update({str(k): str(v) for k, v in data.items()})
+        except Exception as e:  # noqa: BLE001
+            log(f"  ⚠ could not read pronunciation.json ({e}); using built-in defaults")
+    return mapping
+
+
+def apply_pronunciation(text, mapping):
+    """Respell mapped words (whole-word, case-insensitive) for the TTS input only."""
+    out = text
+    for key, val in mapping.items():
+        out = re.sub(rf"\b{re.escape(key)}\b", val, out, flags=re.IGNORECASE)
+    return out
 
 
 def post_process(wav_path, pitch_semitones, bass_db, loudness_lufs):
@@ -235,15 +263,27 @@ def main():
     if args.temperature is not None:
         gen_kwargs["class_temperature"] = args.temperature
 
+    pron = load_pronunciation()
     chunks = build_chunks(content, args.chunk)
+    # Scene ids parallel to the chunks (scene mode only), so we can emit chunks.json
+    # mapping each scene to its exact audio span — preflight uses it for rock-solid
+    # scene anchoring + seam-gap windows.
+    scene_ids = None
+    if args.chunk == "scene":
+        ids = [s["id"] for s in content["scenes"] if s.get("voiceText", "").strip()]
+        if len(ids) == len(chunks):
+            scene_ids = ids
     log(f"→ Synthesizing {len(chunks)} chunk(s) in cloned voice (ref: {Path(ref_audio).name}, transcript: {'auto' if not ref_text else 'provided'})...")
 
     gap = np.zeros(int(SAMPLE_RATE * max(0.0, args.gap)), dtype=np.float32)
     pieces = []
+    offsets = []  # (start_sample, end_sample) per chunk in the pre-post concatenation
+    cursor = 0
     for i, chunk in enumerate(chunks, 1):
         log(f"   [{i}/{len(chunks)}] {chunk[:60]}{'...' if len(chunk) > 60 else ''}")
+        spoken = apply_pronunciation(chunk, pron)  # respell hard words for the TTS only
         audio = model.generate(
-            text=chunk,
+            text=spoken,
             language=args.language,
             ref_audio=ref_audio,
             ref_text=ref_text,
@@ -255,17 +295,42 @@ def main():
         # the next word's onset; fade-out decays cleanly into the silent gap.
         if len(chunks) > 1:
             wav = smooth_chunk(wav, SAMPLE_RATE, args.lead_pad_ms, args.fade_out_ms)
+        start = cursor
         pieces.append(wav)
+        cursor += len(wav)
+        offsets.append((start, cursor))
         if i < len(chunks):
             pieces.append(gap)
+            cursor += len(gap)
 
     full = np.concatenate(pieces) if len(pieces) > 1 else pieces[0]
+    pre_post_frames = len(full)
     out_path = reel_dir / "voiceover.wav"
     sf.write(str(out_path), full, SAMPLE_RATE)
 
     if not args.no_post:
         log(f"→ Post-processing (pitch {args.pitch_semitones:+g} st, bass +{args.bass_db}dB, {args.loudness_lufs} LUFS)...")
         post_process(out_path, args.pitch_semitones, args.bass_db, args.loudness_lufs)
+
+    # Emit chunks.json: exact per-scene audio spans (scene mode). Post-process is
+    # duration-preserving (atempo cancels asetrate), but scale by the measured
+    # ratio just in case so the offsets stay valid against the final wav.
+    if scene_ids:
+        final_frames = sf.info(str(out_path)).frames
+        scale = (final_frames / pre_post_frames) if pre_post_frames else 1.0
+        chunk_meta = []
+        for sid, (s0, s1) in zip(scene_ids, offsets):
+            a, b = int(round(s0 * scale)), int(round(s1 * scale))
+            chunk_meta.append({
+                "sceneId": sid,
+                "startSample": a, "endSample": b,
+                "startMs": round(a / SAMPLE_RATE * 1000, 1),
+                "endMs": round(b / SAMPLE_RATE * 1000, 1),
+            })
+        (reel_dir / "chunks.json").write_text(
+            json.dumps({"sampleRate": SAMPLE_RATE, "gapMs": round(args.gap * 1000, 1), "scenes": chunk_meta}, indent=2),
+            encoding="utf-8",
+        )
 
     info = sf.info(str(out_path))
     dur = info.frames / info.samplerate

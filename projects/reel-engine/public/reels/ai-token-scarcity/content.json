@@ -1,0 +1,65 @@
+{
+  "slug": "ai-token-scarcity",
+  "platform": "linkedin",
+  "title": "The AI Token Scarcity Era",
+  "voiceScript": "Uber reportedly burned its entire 2026 AI budget in just four months. Flat-rate AI is dead. Agentic models run multi-step tasks, burning 10 to 100 times more tokens per job. Old forecasts are useless. So smart teams treat tokens like money. They route simple jobs to cheaper models, run code instead of tool calls, compress context, and cache repeats. And the wins are huge. Routing simple queries to cheaper models cuts costs up to 98 percent. Code execution shrinks tokens up to 99.9 percent. Lean formats save 60 percent more. Optimize every token. Engineer smarter, not harder. If your AI bill is exploding, this is the shift. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Uber reportedly burned its entire 2026 AI budget in just four months.",
+      "headline": "AI budget gone in *4 months*",
+      "sub": "AI Tokenomics"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Flat-rate AI is dead. Agentic models run multi-step tasks, burning 10 to 100 times more tokens per job. Old forecasts are useless.",
+      "headline": "Flat-rate AI is *dead*",
+      "sub": "agents burn 10 to 100x more tokens",
+      "problemVariant": "crossout",
+      "chips": ["Flat-rate plans", "Cost forecasts", "Seat licenses"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So smart teams treat tokens like money. They route simple jobs to cheaper models, run code instead of tool calls, compress context, and cache repeats.",
+      "headline": "The token *efficiency* stack",
+      "visual": "layers",
+      "asset": "infographic.png",
+      "layers": [
+        { "name": "Model Routing", "goal": "Cheap model first" },
+        { "name": "Code Execution", "goal": "Run code, not tools" },
+        { "name": "Context Compression", "goal": "Cut the noise" },
+        { "name": "Lean Formats", "goal": "CSV over JSON" },
+        { "name": "Caching", "goal": "Reuse past answers" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "And the wins are huge. Routing simple queries to cheaper models cuts costs up to 98 percent. Code execution shrinks tokens up to 99.9 percent. Lean formats save 60 percent more.",
+      "headline": "The savings are real",
+      "stats": [
+        { "value": 98, "suffix": "%", "label": "saved by model routing" },
+        { "value": 99.9, "suffix": "%", "label": "fewer tokens via code execution" },
+        { "value": 60, "suffix": "%", "label": "less with lean formats" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Optimize every token. Engineer smarter, not harder.",
+      "headline": "Optimize *every* token",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If your AI bill is exploding, this is the shift. Follow for more.",
+      "cta": "How will you survive token scarcity?"
+    }
+  ],
+  "source": "LinkedIn post + source brief on the shift from the 'AI subsidy era' to the 'token scarcity era'. Flat-rate/subsidized model pricing (power users pulling thousands of $ of compute from a $200 plan) broke once agentic AI went mainstream: multi-step tasks + autonomous tool use + continuous inference burn 1-2 orders of magnitude (10-100x) more tokens per task, making old cost forecasts obsolete. Uber reportedly burned its entire 2026 AI budget in 4 months. Providers (Anthropic, GitHub Copilot, Google Gemini) moving to usage-based/prepaid billing. AI Tokenomics = FinOps for AI: tokens are the atomic unit of cost+value; measure 'goodput' (tokens meeting an SLO) not raw volume; CFO lens on obfuscated, distributed AI spend. AI Factory: compute/power-constrained, structural shortage (SpaceX became a neo-cloud supplying Anthropic via Colossus). Engineering levers + real numbers: model routing/cascading saves 85-98%; code execution over direct tool calls cuts tokens up to 99.9%; context compression (e.g. text->SQL); token-efficient formats (CSV/TOON) use 30-60% fewer tokens than JSON; semantic caching bypasses the model.",
+  "handle": "@nexuspoint"
+}

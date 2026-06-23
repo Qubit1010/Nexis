@@ -135,17 +135,21 @@ estimated from word counts until aligned).
 
 ---
 
-## Phase B — Generate voice, align, render, add music
+## Phase B — Generate voice, align, preflight (QA gate), render, add music
 
-Four steps, all run here. The voice and music settings are **locked house defaults**
+Five steps, all run here. The voice and music settings are **locked house defaults**
 (tuned + approved 2026-06-22) — just run the commands; only reach for flags to deviate.
+The **preflight gate** (added 2026-06-22) auto-fixes the caption/audio/timeline defects
+that used to need hand-fixing after render, and **blocks the render** until the reel
+passes — so don't skip it and don't render with raw `remotion render`; use `render.mjs`.
 
 ```bash
 cd projects/reel-engine
-python scripts/generate_voice.py <slug>             # finished cloned-voice voiceover.wav (baked recipe)
-node scripts/prepare.mjs <slug> --model medium.en   # transcribe + align -> captions.json + timeline.json
-npx remotion render Reel out/<slug>.mp4 --props='{"slug":"<slug>"}'
-node scripts/add_music.mjs <slug>                   # mix background music at 25% -> out/<slug>-music.mp4
+python scripts/generate_voice.py <slug>                       # cloned-voice voiceover.wav + chunks.json (scene offsets)
+node scripts/prepare.mjs <slug>                               # transcribe -> captions.json + PROVISIONAL timeline (medium.en)
+.venv/Scripts/python.exe scripts/preflight.py <slug> --fix    # QA GATE: fix captions/audio/timeline; must print PASSED
+node scripts/render.mjs <slug>                                # render (refuses unless preflight PASSED) -> out/<slug>.mp4
+node scripts/add_music.mjs <slug>                             # mix background music at 25% -> out/<slug>-music.mp4
 ```
 
 **1. Voice — `generate_voice.py`.** Synthesizes `voiceScript` in Aleem's cloned
@@ -159,29 +163,52 @@ manual `voiceover.mp3` in the folder and `prepare.mjs` (mp3-first) uses it inste
 Full detail in `references/voice-cloning.md`.
 
 **2. Align — `prepare.mjs`.** Converts the voiceover to 16kHz wav, runs Whisper for
-word-level timestamps, writes `captions.json`, and anchors each scene to the first
-two words of its `voiceText` → `timeline.json` (drives duration + scene cuts). Use
-`--model medium.en` (more accurate on the processed voice). First run downloads
-Whisper + model; first render downloads a headless Chromium.
+word-level timestamps, writes `captions.json`, and a **provisional** `timeline.json`
+(`aligned:false`). It **defaults to `--model medium.en`** (more accurate on the
+processed cloned voice). preflight writes the authoritative timeline. First run
+downloads Whisper + model; first render downloads a headless Chromium.
 
-**3. Render.** `npx remotion render` reads `timeline.json` for duration + cuts.
+**3. Preflight — `preflight.py --fix` (the QA gate).** This replaces the old manual
+caption/audio cleanup. It aligns the ground-truth script (`voiceScript`) against the
+Whisper transcript and: **rebuilds captions from the script** (so spelling/casing are
+always right — fixes "Claude"→"Cloud", "AI" splits, "Cowork"→"car work", CODCODES,
+lowercasing in one move), **trims audible phantom words** at the head/seams (drops the
+silent hallucinations like "Yes"/"Thus"/"The"), **restores a dropped "Follow for more"
+tail** and extends the timeline so it isn't clipped, and **recomputes scene cuts from
+`chunks.json`** (exact). It **triple-checks** text+audio+sync and writes `preflight.json`
+(the gate marker); it exits non-zero (blocking the render) if anything is unresolved.
+A suspected **garbled first word** ("Ahh" onset) is auto-trimmed only when unambiguous,
+otherwise flagged — pass `--fix-head` to force the trim. Use `--dry-run` to preview
+mutations, `--restore` to revert from `.bak`. Pronunciation of hard words ("Claude"→
+"Clawd") is handled upstream by `scripts/pronunciation.json` at synthesis time, so the
+audio is right and captions keep the real spelling. See [[reference_reel_preflight_gate]].
 
-**4. Music — `add_music.mjs` (standard on every reel).** Mixes a `background-music/`
+**4. Render — `render.mjs` (gated).** Refuses to render unless `preflight.json` says
+PASSED and the on-disk captions/timeline/wav still match what preflight passed
+(sha256). Use this, not raw `remotion render`. Reads `timeline.json` for duration+cuts.
+On success it stamps `out/<slug>.render.json` with the input hashes it built from.
+
+**5. Music — `add_music.mjs` (standard on every reel).** Mixes a `background-music/`
 track UNDER the voice at **25%** (voice full, 0.8s fade-in + 2s fade-out) →
 `out/<slug>-music.mp4`. Default picks the first track; pass a name to choose
 (`add_music.mjs <slug> gr0za`) or `--volume`. The voice-only `out/<slug>.mp4` is kept.
+It auto-**ducks the music to 15% during voice-silent scene gaps** (via ffmpeg
+`silencedetect`, padded ±0.28s) so a music phrase never pops out when the narration
+pauses — that exposed-music swell is the "weird sound before the next word", and it
+lives in the music layer, so a re-render won't fix it (re-run `add_music`). It also
+**refuses to mux onto a stale video** (the render stamp must match `preflight.json`).
 See [[feedback_reel_background_music]].
 
-Verify before declaring done:
+Verify before declaring done (preflight now enforces most of this automatically):
 
 - **Length** target 40-50s. Default speed 0.82 reads a bit tight (~36s for ~95 words).
   To stretch, lower it (`--speed 0.78`); if a long script runs over 50s, raise it
   (`--speed 0.95`) or trim the script.
-- **Sync** — spoken words land on the matching captions/scene cuts (scrub a few points).
-- **Whisper mis-hears** — more frequent on the heavier/processed voice. Use
-  `--model medium.en`, then fix any wrong caption word in `captions.json` (preserve
-  the timing fields) and re-render. Common: "Claude"→"Cloud", number words, a filler
-  word at a scene gap.
+- **Preflight PASSED** — if it FAILs, read the report: a mid-speech voiced phantom means
+  a real word is missing from the script; a no-speech tail means the script/audio drift.
+  Fix the cause and re-run; never bypass the gate by editing the marker.
+- **New hard-to-say word** mis-pronounced by the clone → add it to
+  `scripts/pronunciation.json` (e.g. `"Anthropic":"An-thropic"`) and regenerate the voice.
 
 Deliver `out/<slug>-music.mp4` (the music version is the final) plus a one-line
 summary (length, brand-styled + voice-synced + background music).

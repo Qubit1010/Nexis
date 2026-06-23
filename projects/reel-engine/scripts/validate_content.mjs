@@ -90,6 +90,20 @@ else if (wc > 105) warn(`voiceScript is ${wc} words — near the 50s ceiling. Co
 if (/[—―]/.test(script)) err("voiceScript contains an em dash. Use commas or periods.");
 if (/–/.test(script)) warn("voiceScript contains an en dash (–). Prefer a comma or period.");
 
+// 6b. hard-to-pronounce words covered by scripts/pronunciation.json (FYI: they'll be
+// respelled for the TTS at synthesis time; display + captions keep the real spelling).
+try {
+  const pronPath = path.join(__dirname, "pronunciation.json");
+  if (fs.existsSync(pronPath)) {
+    const pron = JSON.parse(fs.readFileSync(pronPath, "utf8"));
+    for (const key of Object.keys(pron)) {
+      if (new RegExp(`\\b${key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(script)) {
+        warn(`voiceScript contains "${key}" — will be spoken via the pronunciation map as "${pron[key]}" (captions stay "${key}").`);
+      }
+    }
+  }
+} catch { /* non-fatal */ }
+
 // 7. no agency / academia mentions in spoken text
 const lower = script.toLowerCase();
 const hardBanned = ["nexuspoint", "nexus point", "iqra", "bsai"];

@@ -2,7 +2,7 @@ export interface RawArticle {
   title: string;
   url: string;
   source: string; // e.g. "TechCrunch", "Ars Technica", "Reddit", "GitHub"
-  sourceOrigin: "newsapi" | "hackernews" | "rss" | "last30days";
+  sourceOrigin: "newsapi" | "hackernews" | "rss" | "last30days" | "github-search" | "web-search" | "notebooklm";
   publishedAt: string;
   description: string;
   engagementScore?: number;
