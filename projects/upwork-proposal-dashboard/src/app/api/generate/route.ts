@@ -44,7 +44,7 @@ async function generateWithOpenAI(systemPrompt: string, jobPost: string): Promis
   const openai = new OpenAI({ apiKey });
   const completion = await openai.chat.completions.create({
     model: "gpt-5.2",
-    max_tokens: 1024,
+    max_completion_tokens: 1024,
     messages: [
       { role: "system", content: systemPrompt },
       { role: "user", content: jobPost },

@@ -6,7 +6,7 @@ import {
 } from "./tool-prompts";
 import { callWithFallback } from "./processor";
 import { extractJSON } from "./utils";
-import type { RawTool } from "./sources/tool-types";
+import type { PracticalItem, Mover } from "./sources/practical-index";
 
 function parseJSON<T>(text: string, context: string): T {
   try {
@@ -39,16 +39,17 @@ export interface ToolCategoryPass1Output {
 export async function analyzeToolCategory(
   categoryName: string,
   audienceLens: string,
-  tools: RawTool[]
+  items: PracticalItem[]
 ): Promise<ToolAnalysisResult> {
-  if (tools.length === 0) {
+  if (items.length === 0) {
     return {
-      summary: "No new tools found in this category today.",
+      summary: "No notable updates in this domain today.",
+      bestInDomain: null,
       tools: [],
     };
   }
 
-  const prompt = buildToolAnalysisPrompt(categoryName, audienceLens, tools);
+  const prompt = buildToolAnalysisPrompt(categoryName, audienceLens, items);
   const responseText = await callWithFallback(
     prompt,
     categoryName,
@@ -62,7 +63,8 @@ export async function analyzeToolCategory(
 
 export async function synthesizeToolBrief(
   categoryResults: ToolCategoryPass1Output[],
-  date: string
+  date: string,
+  movers: Mover[] = []
 ): Promise<ToolSynthesisResult> {
   const prompt = buildToolsSynthesisPrompt(
     categoryResults.map((c) => ({
@@ -72,7 +74,8 @@ export async function synthesizeToolBrief(
       bestInDomain: c.bestInDomain,
       tools: c.tools,
     })),
-    date
+    date,
+    movers
   );
 
   const responseText = await callWithFallback(

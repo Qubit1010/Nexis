@@ -415,6 +415,12 @@
       "skillPath": "skills/lamindb/SKILL.md",
       "computedHash": "d995d7e630d42ea14c08f997ecf5fc98c23e543ce14feab0ee314c7d61e06a5b"
     },
+    "last30days": {
+      "source": "mvanhorn/last30days-skill",
+      "sourceType": "github",
+      "skillPath": "skills/last30days/SKILL.md",
+      "computedHash": "b64fe83c7621de8a73e6ff294b7f582e68774caaeefcf175cfd85b1e61f71f88"
+    },
     "latchbio-integration": {
       "source": "K-Dense-AI/scientific-agent-skills",
       "sourceType": "github",

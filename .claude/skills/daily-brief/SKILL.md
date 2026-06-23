@@ -16,18 +16,25 @@ Generate a comprehensive daily intelligence brief covering AI and tech news from
 
 The brief runs a 6-step pipeline:
 
-1. **Fetch** from 3 source types (NewsAPI, Hacker News top 150, 5 RSS feeds)
+1. **Fetch + rank** evidence via the **last30days engine** (multi-source: Reddit, Hacker News, GitHub, Web, + optional social), with RRF fusion, cross-source corroboration, and graceful per-source degradation. Replaces the old brittle NewsAPI/RSS sweep.
 2. **Deduplicate** via fuzzy title matching, merge engagement scores
 3. **Categorize** into 6 AI/tech categories using keyword scoring
 4. **Analyze** each category with Claude Haiku (TL;DRs, sentiment, relevance scores)
 5. **Synthesize** across categories with Claude Sonnet (trends, content ideas, overall sentiment)
 6. **Store** in SQLite database for the dashboard
 
-**Cost:** ~$0.06 per run (Haiku handles bulk, Sonnet only for final synthesis).
+The engine does deterministic **fetch + rank** (no LLM key required — it falls back to local RRF scoring; with a key it uses a cheap rerank). daily-brief's Haiku/Sonnet still do all the **analysis**. Topics drive *what is fetched*; the 6 categories drive *how it is displayed*.
+
+**Cost:** ~$0.06 per run for analysis (Haiku bulk + Sonnet synthesis) + cheap web-search calls from the engine. Social sources (`--full`) add paid ScrapeCreators/xAI calls.
+
+## Two run modes
+
+- **Daily mode (default):** a broad sweep of the **last 1-2 days of AI news** across all 6 categories, driven by the curated theme list in `src/lib/pipeline/themes.ts` **plus** up to 2 live breaking topics auto-derived from today's headlines (on by default; disable with `DAILY_BRIEF_DERIVE_TOPICS=0`).
+- **On-demand topic mode:** name a **specific topic** + **timeline** to fetch just that, deeper.
 
 ## How to Run
 
-### Generate a brief
+### Generate the daily brief (last 1-2 days, all categories)
 
 ```bash
 cd projects/daily-news-brief && npx tsx scripts/daily-cron.ts
@@ -37,6 +44,22 @@ For a specific date:
 ```bash
 cd projects/daily-news-brief && npx tsx scripts/daily-cron.ts 2026-03-19
 ```
+
+### On-demand: a specific topic over a specific timeline
+
+```bash
+cd projects/daily-news-brief && npx tsx scripts/daily-cron.ts --topic "Claude Code" --days 7
+```
+
+### Deep mode (adds paid social sources: X, TikTok, YouTube, Instagram, Threads, Polymarket)
+
+```bash
+# add --full (or --deep) to either run
+npx tsx scripts/daily-cron.ts --full
+npx tsx scripts/daily-cron.ts --topic "AI agents" --days 7 --full
+```
+
+Flags: `--topic "<topic>"` (on-demand mode), `--days N` (timeline, default 2), `--full`/`--deep` (depth, default lean). No flags = daily lean sweep over the last 2 days.
 
 ### View the dashboard
 
@@ -51,16 +74,26 @@ Then open http://localhost:3000
 cd projects/daily-news-brief
 npm install
 cp .env.example .env
-# Fill in ANTHROPIC_API_KEY and NEWSAPI_KEY
+# Fill in OPENAI_API_KEY + ANTHROPIC_API_KEY
 npx drizzle-kit push
 ```
 
 ## Prerequisites
 
-The `.env` file in `projects/daily-news-brief/` must contain:
-- `ANTHROPIC_API_KEY` — for Claude Haiku + Sonnet analysis
-- `NEWSAPI_KEY` — get one free at https://newsapi.org
+**Python:** the last30days engine needs Python 3.12+. The wrapper invokes `LAST30DAYS_PYTHON` (defaults to the local `python3.14.exe`).
+
+**Keys** — the project `.env` (`projects/daily-news-brief/.env`) needs:
+- `OPENAI_API_KEY` — Pass 1 analysis + the engine's cheap rerank
+- `ANTHROPIC_API_KEY` — analysis fallback (Sonnet synthesis)
 - `BRIEF_AUTH_TOKEN` (optional) — protects the HTTP generate endpoint
+
+The engine's **source keys** live in the **repo-root `.env`** (loaded automatically by the wrapper; single source of truth):
+- `PARALLEL_API_KEY` — web search (used by the default lean source set)
+- `SCRAPECREATORS_API_KEY`, `XAI_API_KEY` — social sources (only hit on `--full` runs)
+
+Reddit, Hacker News and GitHub work keyless. NewsAPI is no longer used.
+
+Path overrides (optional, set in `.env` if running outside the project root): `LAST30DAYS_DIR` (engine scripts dir), `LAST30DAYS_ENV` (repo-root .env path), `LAST30DAYS_PYTHON` (interpreter). Live headline auto-derive is on by default — `DAILY_BRIEF_DERIVE_TOPICS=0` disables it, `DAILY_BRIEF_MAX_DERIVED` tunes the count (default 2).
 
 ## 6 News Categories
 
@@ -84,9 +117,9 @@ Once the brief is generated, offer to:
 | Issue | Fix |
 |-------|-----|
 | "ANTHROPIC_API_KEY is not set" | Add key to `projects/daily-news-brief/.env` |
-| "NEWSAPI_KEY not set, skipping" | Add NewsAPI key to `.env` (free tier works) |
-| NewsAPI returns 426 error | Free tier only works on localhost, not deployed |
-| HN fetch fails | Transient — pipeline has retry logic, run again |
-| RSS feed timeout | Some feeds are slow — pipeline continues with available sources |
-| "No articles fetched" | All sources failed — check internet connection and API keys |
+| "last30days requires Python 3.12+" | Install Python 3.12+ and point `LAST30DAYS_PYTHON` at it |
+| "last30days exited N" / non-JSON | Check the engine path (`LAST30DAYS_DIR`) and that the repo-root `.env` has `PARALLEL_API_KEY` |
+| A source shows errors but run completes | Expected — the engine + wrapper fail open per source/topic |
+| No social sources in output | Social only runs on `--full`; needs `SCRAPECREATORS_API_KEY` / `XAI_API_KEY` |
+| "No articles fetched" | Every topic failed — check internet, Python, and the engine keys |
 | Build errors after changes | Run `npm run build` to check TypeScript errors |

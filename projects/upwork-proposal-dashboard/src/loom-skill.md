@@ -57,7 +57,9 @@ TIER: Yellow
 JOB TYPE: [Web Dev / Marketing Automation / AI Services]
 
 PERSONALIZED INTRO LINE (speak this before starting the base video):
-"Before I dive in — I noticed you mentioned [SPECIFIC DETAIL FROM THEIR POST]. That's directly relevant to what I cover here."
+One sentence that connects their specific situation to why the video is worth watching. Do NOT use "Before I dive in" or "I noticed you mentioned" — those are filler. Instead, name the specific detail and make it clear upfront why it matters:
+- Holland-style: "[SPECIFIC DETAIL FROM POST] is exactly the kind of setup this video was made for — give it 90 seconds."
+- Braun-style: "Not every [role] needs [solution], but if you're dealing with [SPECIFIC DETAIL], what I'm about to show you is going to be relevant."
 
 ---
 
@@ -117,7 +119,7 @@ PERSONALIZED LOOM SCRIPT
 [Adaptive intro — name + credential tied directly to their problem/stack/industry]
 
 [0:12-0:25 — Face, then switch to screen share]
-[Personalized label using their specific pain]
+[Voss label using their specific pain — this is the right place for labeling in a video context. Use: "It sounds like you've already tried [X] and run into [Y]" or "It seems like the core issue isn't [surface problem] — it's [deeper problem]." Make it feel like you've diagnosed their situation before they said a word.]
 
 [0:25-0:55 — Screen share | SHOW: DESCRIPTION OF WHAT TO SHOW]
 [Personalized approach — name their tools, their workflow, their situation]
@@ -162,7 +164,7 @@ PERSONALIZED LOOM SCRIPT
 "Clients typically go from approved brief to launched in 2-3 weeks. I protect that timeline aggressively."
 
 [1:12-1:20 — Face on webcam]
-"If you want to see how I'd approach your specific build, just reply to the proposal. I'll sketch it out."
+"Would it be off base to hop on a 15-minute call this week so I can show you exactly how I'd approach your build before we commit to anything?"
 
 ### Marketing Automation Base
 
@@ -181,7 +183,7 @@ PERSONALIZED LOOM SCRIPT
 "One example: a lead-to-outreach pipeline I built cut a client's follow-up time by 80% and eliminated three manual handoffs between sales and ops."
 
 [1:12-1:20 — Face on webcam]
-"Reply and tell me which part of your process is causing the most friction — I'll tell you honestly whether automation is the right fix."
+"Would it be a bad time to spend 15 minutes mapping your current flow together, before either of us commits to anything?"
 
 ### AI Services Base
 
@@ -200,7 +202,7 @@ PERSONALIZED LOOM SCRIPT
 "For one client I built an AI email triage and CRM update workflow — AI drafted replies, flagged priority items, updated records automatically. Zero manual data entry. Hours to minutes."
 
 [1:12-1:20 — Face on webcam]
-"If you're trying to figure out whether what you're imagining is actually buildable right now — reply and tell me what you want the AI to do. I'll give you a straight answer before we go further."
+"Would it be off base to jump on a 15-minute call this week so I can tell you honestly whether what you're imagining is buildable right now, before either of us commits?"
 
 ---
 
@@ -211,6 +213,7 @@ PERSONALIZED LOOM SCRIPT
 - For Green scripts: fill in as much as possible from the job post. Use [CLIENT NAME] only if not determinable from the post.
 - Never fabricate results — only use the results bank above
 - No em dashes (use commas or hyphens instead)
+- CTA must always be a Voss no-oriented close ("Would it be off base to...", "Would it be a bad time to...", "Is it crazy to think...") — never "just reply", "let me know", or "feel free to reach out"
 - Output must be plain text, ready to read from a teleprompter or notes doc
 
 After the script, on new lines, add:

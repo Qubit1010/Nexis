@@ -59,7 +59,7 @@ export function ToolsBriefHeader({
           <div className="space-y-3">
             <p className="text-xs font-semibold text-teal-500 uppercase tracking-[0.15em] inline-flex items-center gap-2">
               <Wrench className="w-3.5 h-3.5" />
-              AI Tools for Business
+              Practical AI
             </p>
             <h1 className="text-2xl sm:text-4xl font-bold tracking-tight">
               {formatted}

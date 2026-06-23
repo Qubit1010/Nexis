@@ -86,6 +86,7 @@ export const toolBriefs = sqliteTable("tool_briefs", {
   sourcesUsed: integer("sources_used").default(0),
   topPickToolId: integer("top_pick_tool_id"),
   crossDomainInsight: text("cross_domain_insight"),
+  moversJson: text("movers_json"), // JSON: Mover[] (GitHub trending + OpenRouter)
   createdAt: text("created_at")
     .notNull()
     .default(sql`(datetime('now'))`),
@@ -165,4 +166,19 @@ export const toolContentIdeas = sqliteTable("tool_content_ideas", {
   keyPoints: text("key_points").notNull(), // JSON array
   relatedToolNames: text("related_tool_names").notNull(), // JSON array
   sortOrder: integer("sort_order").notNull().default(0),
+});
+
+// Practical AI live search: a saved per-tool lookup (tool + timeline -> what's new
+// + how people solve business problems with it).
+export const practicalLookups = sqliteTable("practical_lookups", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  tool: text("tool").notNull(),
+  days: integer("days").notNull().default(7),
+  summary: text("summary").notNull(),
+  whatsNew: text("whats_new").notNull(), // JSON: [{title, detail, url}]
+  howPeopleSolve: text("how_people_solve").notNull(), // JSON: [{problem, approach, tools[], steps[]}]
+  sources: text("sources").notNull(), // JSON: [{title, url, source}]
+  createdAt: text("created_at")
+    .notNull()
+    .default(sql`(datetime('now'))`),
 });

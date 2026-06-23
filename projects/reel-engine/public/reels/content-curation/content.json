@@ -1,0 +1,64 @@
+{
+  "slug": "content-curation",
+  "platform": "linkedin",
+  "title": "Automated Content Curation",
+  "voiceScript": "What if content curation stopped eating your whole week? I used to burn hours sifting through articles just to keep my feed fresh. Tiring, slow, easy to fall behind. So I built a curation pipeline in Claude Code. It captures, filters, and sorts the best content into one searchable place. The shift was real. Five hours a week saved, one tool running everything, a hundred percent on brand. Automation isn't about doing less. It's about doing better with your time. Point your AI at the boring work, spend your time where it counts. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if content curation stopped eating your whole week?",
+      "headline": "Curate a week in *minutes*",
+      "sub": "Content Automation"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "I used to burn hours sifting through articles just to keep my feed fresh. Tiring, slow, easy to fall behind.",
+      "headline": "Manual curation *drains* your week",
+      "sub": "hours you never get back",
+      "problemVariant": "crossout",
+      "chips": ["Endless scrolling", "Tabs everywhere", "Always behind"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I built a curation pipeline in Claude Code. It captures, filters, and sorts the best content into one searchable place.",
+      "headline": "A pipeline that *curates* for you",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Install", "goal": "Set up Claude Code" },
+        { "name": "Capture", "goal": "Auto-save web content" },
+        { "name": "Script", "goal": "Automate the sorting" },
+        { "name": "Run weekly", "goal": "Fresh feed, hands-off" }
+      ],
+      "asset": "infographic.png"
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The shift was real. Five hours a week saved, one tool running everything, a hundred percent on brand.",
+      "headline": "What changed",
+      "stats": [
+        { "value": 5, "suffix": " hrs", "label": "saved every week" },
+        { "value": 1, "suffix": " tool", "label": "runs the pipeline" },
+        { "value": 100, "suffix": "%", "label": "on brand" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Automation isn't about doing less. It's about doing better with your time.",
+      "headline": "Do *better*, not less",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Point your AI at the boring work, spend your time where it counts. Follow for more.",
+      "cta": "What will you automate this week?"
+    }
+  ],
+  "source": "Post: Automate weekly content curation with Claude Code. Workflow: install + configure Claude Code -> set up automatic web content saving -> create a script to automate content capture -> run weekly so content is captured and stored in a searchable knowledge base. Narrative: naive full-automation produced off-brand posts; teaching the system brand voice + quality made it curate well; automation is about doing better with your time, not doing less.",
+  "handle": "@nexuspoint"
+}

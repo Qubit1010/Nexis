@@ -335,197 +335,134 @@ class LinkedinChannel(Channel):
 # Facebook
 # ---------------------------------------------------------------------------
 #
-# Facebook is different from IG/LI in one structural way: the source sheet's
-# first column ("Link") holds the group POST url, not the person. The author's
-# PROFILE url lives in the "Profile URL" column, filled by the facebook-lead-nav
-# skill. So identity keys off Profile URL, and a row that still only has a post
-# link (not yet enriched) resolves to '' -> "Needs Review" (i.e. run
-# facebook-lead-nav first). Older rows that predate the post-link workflow store
-# a profile url directly in "Link"; parse_row falls back to that.
-
-_FB_SYSTEM = {
-    "groups", "photo", "photo.php", "watch", "reel", "reels", "marketplace",
-    "events", "gaming", "story.php", "permalink.php", "pages", "profile.php",
-    "people", "pg", "help", "policies", "login", "sharer", "media", "notes",
-    "bookmarks", "friends", "saved", "settings", "messages",
-}
-
-
-def _fb_id(url):
-    """Stable Facebook identity from a profile url. '' if it isn't a person.
-
-    'facebook.com/jane.doe.7'           -> 'slug:jane.doe.7'
-    'facebook.com/profile.php?id=12345'  -> 'id:12345'
-    a group/post link, or empty          -> '' (unresolvable)
-    """
-    if not url:
-        return ""
-    u = url.strip()
-    if not u.lower().startswith("http"):
-        return ""
-    if re.search(r"/groups/[^/]+/(posts|permalink)/", u, re.I):
-        return ""                      # a post, not a profile
-    m = re.search(r"profile\.php\?id=(\d+)", u, re.I)
-    if m:
-        return "id:" + m.group(1)
-    m = re.search(r"(?:facebook|fb)\.com/([^/?#]+)", u, re.I)
-    if not m:
-        return ""
-    slug = m.group(1).strip().lower().rstrip("/")
-    if not slug or slug in _FB_SYSTEM:
-        return ""
-    return "slug:" + slug
-
-
-def _fb_profile_from_link(link):
-    """Best-effort profile URL from a Facebook link, no browser needed.
-
-    Timeline posts carry the author's slug in the path, so they're trivially
-    extractable by truncating everything after the slug:
-      facebook.com/{slug}/posts/123    -> https://www.facebook.com/{slug}/
-      facebook.com/{slug}/photos/123   -> https://www.facebook.com/{slug}/
-      facebook.com/profile.php?id=N/.. -> https://www.facebook.com/profile.php?id=N
-    Group posts and videos are 'hard' (author not reliably in the url, handled
-    elsewhere) -> '' so they fall through to Needs Review for later/manual work.
-    """
-    if not link:
-        return ""
-    u = link.strip()
-    if not u.lower().startswith("http"):
-        return ""
-    if re.search(r"/groups/", u, re.I):
-        return ""                                   # group post -> facebook-lead-nav
-    if re.search(r"facebook\.com/(watch|reel|reels|story\.php|events|marketplace)\b", u, re.I):
-        return ""
-    if re.search(r"facebook\.com/[^/?#]+/videos/", u, re.I):
-        return ""                                   # videos: hard, leave for later
-    m = re.search(r"profile\.php\?id=(\d+)", u, re.I)
-    if m:
-        return "https://www.facebook.com/profile.php?id=" + m.group(1)
-    m = re.search(r"facebook\.com/([^/?#]+)", u, re.I)
-    if not m:
-        return ""
-    slug = m.group(1).strip().rstrip("/")
-    if not slug or slug.lower() in _FB_SYSTEM:
-        return ""
-    return "https://www.facebook.com/" + slug + "/"
-
-
-def _looks_like_snippet(text):
-    """True if a 'name' cell is really post text, not a person/brand name."""
-    if not text:
-        return True
-    if len(text.split()) > 4:
-        return True
-    if re.search(r"[#:]|\.\.\.$|[!?]$", text):
-        return True
-    if re.search(r"[\U0001F000-\U0001FAFF☀-➿←-⇿]", text):
-        return True                                 # emoji / arrows
-    return False
-
-
-def _fb_name_from_slug(profile_url):
-    """A display name guessed from a vanity slug. '' for id-only profiles.
-
-    'CameronJGomezBroker' -> 'Cameron J Gomez Broker'
-    'chris.salem.773'     -> 'Chris Salem'
-    'forestryrealestate'  -> 'Forestryrealestate'  (best effort)
-    """
-    m = re.search(r"facebook\.com/([^/?#]+)", profile_url or "")
-    if not m:
-        return ""
-    slug = m.group(1)
-    if slug.lower().startswith("profile.php"):
-        return ""
-    slug = re.sub(r"\.?\d+$", "", slug).strip("._")     # drop trailing numeric id
-    if "." in slug or "_" in slug:
-        parts = [p for p in re.split(r"[._]+", slug) if p]
-    else:
-        parts = re.findall(r"[A-Z]?[a-z]+|[A-Z]+(?![a-z])", slug) or [slug]
-    return " ".join(p[:1].upper() + p[1:] for p in parts if p).strip()
-
+# Facebook needs a preprocessing pass the other channels don't: many rows are
+# *group posts* whose URL holds the group, not the author, so the person has to
+# be resolved from the scraped Name+Note text (and a Firecrawl backup). That
+# logic lives in facebook_resolve.py and writes an idempotent cache keyed by the
+# source URL. This channel reads that cache; preprocess() builds/refreshes it.
 
 class FacebookChannel(Channel):
     key = "facebook"
     label = "Facebook"
-    source_sheet_id = "1ao7_Aam6bsI6D4xk-Mfc-EM54WZYivN9petcZU2P68U"   # Instant Facebook Leads
+    source_sheet_id = "1ao7_Aam6bsI6D4xk-Mfc-EM54WZYivN9petcZU2P68U"
     source_tab = "Sheet1"
-    crm_sheet_id = "1GkbzCclQsg83P_l5EgKxjceW-Y_7fQ1lByJUGH1aaNg"      # NexusPoint Facebook Outreach CRM
-    crm_tab = "Leads"
+    crm_sheet_id = "1h4QcK1yPwHVRfvasB1mjPWgXl84XSpcQKeIL3L3Dp8A"
+    crm_tab = "Sheet1"
     message_style = "fb_dm"
     source_aliases = {
-        "link": "post_link", "post": "post_link", "post url": "post_link", "post link": "post_link",
-        "profile url": "profile_url_col", "profile link": "profile_url_col", "profile": "profile_url_col",
-        "lead name": "lead_name",
-        "name": "raw_name", "full name": "raw_name",
+        "name": "full_name", "full name": "full_name",
+        "link": "source_url", "facebook url": "source_url", "facebook": "source_url",
+        "url": "source_url", "profile url": "source_url", "profile link": "source_url",
         "followers": "followers", "follower count": "followers",
-        "note": "bio", "bio": "bio", "notes": "bio",
-        "designation": "title", "title": "title", "role": "title", "position": "title", "headline": "title",
-        "location": "location", "city": "location", "country": "location",
-        "company name": "company", "company": "company", "organization": "company",
-        "date added": "date_added",
+        "note": "bio", "bio": "bio", "notes": "bio", "recent post": "bio",
+        "designation": "title", "title": "title", "role": "title", "position": "title",
+        "location": "location",
+        "company": "company", "company name": "company", "organization": "company",
     }
+
+    def __init__(self):
+        self._cache = None
+
+    def _load_cache(self):
+        if self._cache is None:
+            import facebook_resolve as fr
+            self._cache = fr.load_cache()
+        return self._cache
+
+    def preprocess(self, data_rows, col_map, dry_run=False):
+        """Build/refresh the URL->author resolution cache before the push loop.
+
+        The cache is always persisted (it's read-derived memoization, idempotent),
+        even on a push --dry-run, so a preview doesn't re-resolve all ~300 rows via
+        the LLM every time. The push's dry_run still controls sheet/CRM writes only.
+        """
+        import facebook_resolve as fr
+        print("Resolving Facebook authors (group-post preprocessing)...")
+        self._cache = fr.build_cache(dry_run=False, verbose=True)
 
     def parse_row(self, row, col_map):
         if not any(c.strip() for c in row):
             return None
-        post_link = cell(row, col_map, "post_link")
-        # Profile url: enriched "Profile URL" column wins; else extract from the
-        # Link. Timeline /posts/ and /photos/ carry the slug (easy); group posts
-        # and /videos/ resolve to '' -> identity '' -> Needs Review (handle later).
-        profile_url = cell(row, col_map, "profile_url_col") or _fb_profile_from_link(post_link)
+        import facebook_resolve as fr
+        url, raw_name = split_url_and_name(row, col_map)
+        if not url and not raw_name:
+            return None
+        cache = self._load_cache()
+        rec = cache.get(url)
+        if rec is None:
+            # Cache miss (resolver not run for this URL): fall back to a no-network
+            # classify so clean profiles/pages still work and nothing errors.
+            rec = self._classify_uncached(url, raw_name, row, col_map, fr)
 
-        # Name: enriched "Lead Name" wins; else the "Name" cell unless it's really
-        # a post snippet, in which case guess a name from the profile slug.
-        lead_name = cell(row, col_map, "lead_name")
-        name_cell = cell(row, col_map, "raw_name")
-        if lead_name:
-            raw_name = lead_name
-        elif name_cell and not _looks_like_snippet(name_cell):
-            raw_name = name_cell
-        else:
-            raw_name = _fb_name_from_slug(profile_url)
-        clean_name = re.split(r"\s+[|\-–—]\s+", raw_name)[0].strip() if raw_name else ""
-
-        clean_profile = profile_url.split("?")[0] if (profile_url and "profile.php" not in profile_url) else profile_url
-        is_post = bool(re.search(r"/(posts|permalink|photos|videos)/", post_link, re.I))
+        identity = rec.get("identity", "")
+        name = rec.get("name") or raw_name
+        if not name and not identity:
+            return None
         return {
             "channel": "facebook",
-            "_profile_url": profile_url,          # '' here -> identity '' -> Needs Review
-            "name": clean_name,
-            "first_name": first_name_of(clean_name),
-            "company": cell(row, col_map, "company"),
-            "title": cell(row, col_map, "title"),
-            "location": cell(row, col_map, "location"),
-            "profile_url": clean_profile,
-            "post_link": post_link if is_post else "",
-            "followers": cell(row, col_map, "followers"),
-            "bio": cell(row, col_map, "bio"),
+            "_identity": identity,
+            "_status": rec.get("status", "New"),
+            "name": name,
+            "first_name": rec.get("first_name", "") or first_name_of(name),
+            "company": rec.get("company", "") or cell(row, col_map, "company"),
+            "title": rec.get("role", "") or cell(row, col_map, "title"),
+            "location": rec.get("location", "") or cell(row, col_map, "location"),
+            "profile_url": rec.get("profile_url", ""),
+            "followers": "",
+            "bio": rec.get("note", "") or cell(row, col_map, "bio"),
         }
 
+    def _classify_uncached(self, url, raw_name, row, col_map, fr):
+        kind = fr.fb_classify(url)
+        if kind in ("profile", "page_post", "profile_id"):
+            ident = fr.fb_profile_id(url) if kind == "profile_id" else fr.fb_slug(url)
+            name = re.sub(r"\s*\(@[^)]+\)", "", raw_name or "").strip()
+            return {"type": kind, "identity": ident,
+                    "profile_url": fr.profile_url_from_identity(ident) or url,
+                    "name": name, "first_name": "", "company": "", "role": "",
+                    "location": "", "note": cell(row, col_map, "bio"), "status": "New"}
+        if kind == "group_post":
+            return {"type": kind, "identity": fr.fb_group_key(url), "profile_url": "",
+                    "name": raw_name, "first_name": "", "company": "", "role": "",
+                    "location": "", "note": cell(row, col_map, "bio"), "status": "Find Profile"}
+        return {"type": "unknown", "identity": "", "profile_url": "", "name": raw_name,
+                "first_name": "", "company": "", "role": "", "location": "",
+                "note": cell(row, col_map, "bio"), "status": "Needs Review"}
+
     def identity(self, lead):
-        return _fb_id(lead.get("_profile_url", ""))
+        return lead.get("_identity", "")
 
     def crm_identity(self, crm_row, crm_cols):
-        for n in ("profile url", "facebook url", "profile", "url"):
+        import facebook_resolve as fr
+        for n in ("url", "facebook url", "facebook", "profile url"):
             i = crm_cols.get(n)
             if i is not None and i < len(crm_row):
-                ident = _fb_id(crm_row[i])
+                val = crm_row[i].strip()
+                if not val:
+                    continue
+                ident = fr.fb_profile_id(val) or fr.fb_slug(val) or fr.fb_group_key(val)
                 if ident:
                     return ident
+        # No URL (a "Find Profile" lead) -> fall back to the name-based key so the
+        # same name doesn't get re-pushed.
+        for n in ("name",):
+            i = crm_cols.get(n)
+            if i is not None and i < len(crm_row) and crm_row[i].strip():
+                nm = crm_row[i].strip().lower()
+                return "name:" + re.sub(r"[^a-z0-9]+", "-", nm).strip("-")
         return ""
 
     def crm_record(self, lead, message, today):
         return {
             "Name": lead["name"],
-            "Profile URL": lead["profile_url"],
+            "First Name": lead["first_name"],
             "Company": lead["company"],
             "Role": lead["title"],
+            "URL": lead["profile_url"],
             "Location": lead["location"],
-            "Source Post": lead["post_link"],
-            "Bio": lead["bio"],
+            "Recent Post": lead["bio"],
             "Touch 1 Message": message,
-            "Status": "New",
+            "Status": lead.get("_status", "New"),
             "Date Added": today,
         }
 

@@ -4,14 +4,12 @@ import {
   categories,
   articles,
   trends,
-  contentIdeas,
 } from "@/lib/db/schema";
 import { eq, asc, desc } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import { BriefHeader } from "@/components/brief-header";
 import { SentimentPulse } from "@/components/sentiment-pulse";
 import { TrendingNow } from "@/components/trending-now";
-import { ContentOpportunities } from "@/components/content-opportunities";
 import { HotTakes } from "@/components/hot-takes";
 import { Keynotes } from "@/components/keynotes";
 import { FilterableCoverage } from "@/components/filterable-coverage";
@@ -69,18 +67,6 @@ export default async function BriefPage({ params }: BriefPageProps) {
       categorySlugs: JSON.parse(t.categorySlugs) as string[],
     }));
 
-  const briefContentIdeas = db
-    .select()
-    .from(contentIdeas)
-    .where(eq(contentIdeas.briefId, brief.id))
-    .orderBy(asc(contentIdeas.sortOrder))
-    .all()
-    .map((idea) => ({
-      ...idea,
-      keyPoints: JSON.parse(idea.keyPoints) as string[],
-      relatedTrendSlugs: JSON.parse(idea.relatedTrendSlugs) as string[],
-    }));
-
   // Get top HN articles by engagement
   const allArticles = catsWithArticles.flatMap((c) => c.articles);
   const hotArticles = allArticles
@@ -127,11 +113,11 @@ export default async function BriefPage({ params }: BriefPageProps) {
     };
   });
 
-  // Source breakdown counts
-  const sourceCounts = { newsapi: 0, hackernews: 0, rss: 0 };
+  // Source breakdown counts — keyed by display source label (Reddit, GitHub, Web, ...)
+  const sourceCounts: Record<string, number> = {};
   for (const a of allArticles) {
-    const origin = a.sourceOrigin as keyof typeof sourceCounts;
-    if (origin in sourceCounts) sourceCounts[origin]++;
+    const label = a.source || "Other";
+    sourceCounts[label] = (sourceCounts[label] || 0) + 1;
   }
 
   return (
@@ -166,13 +152,6 @@ export default async function BriefPage({ params }: BriefPageProps) {
         </CollapsibleSection>
       </div>
 
-      {/* Content Opportunities */}
-      <div className="mt-8" id="content-ideas">
-        <CollapsibleSection id="content-ideas" label="Content Opportunities">
-          <ContentOpportunities ideas={briefContentIdeas} briefDate={date} />
-        </CollapsibleSection>
-      </div>
-
       {/* Most Discussed */}
       {hotArticles.length > 0 && (
         <div className="mt-8" id="most-discussed">
@@ -191,7 +170,7 @@ export default async function BriefPage({ params }: BriefPageProps) {
 
       {/* Source Breakdown */}
       <div className="mt-8">
-        <SourceBreakdown {...sourceCounts} />
+        <SourceBreakdown counts={sourceCounts} />
       </div>
 
       {/* Divider */}
