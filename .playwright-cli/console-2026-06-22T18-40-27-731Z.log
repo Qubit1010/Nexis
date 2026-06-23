@@ -1,0 +1,32 @@
+[  -38006ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.facebook.com/:0
+[  -36757ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.facebook.com/:0
+[  -36658ms] [LOG] 
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black; @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:246
+[  -36658ms] [LOG] 
+%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px;  @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:246
+[  -36658ms] [LOG] 
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px;  @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:246
+[  -36658ms] [LOG] 
+%c  @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:246
+[   12468ms] [ERROR] ErrorUtils caught an error:
+
+terminate stream because StartStreamFailure with msg : UNAUTHENTICATED [Caught in: Subscription error in preprocessResponse]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. {column: 180, clientTime: 1782153640, extra: Object, guardList: Array(0), hash: 5emstp} @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:79
+[   12493ms] [LOG] 
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black; @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:246
+[   12493ms] [LOG] 
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px;  @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:246
+[   12493ms] [LOG] 
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px;  @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:246
+[   12493ms] [LOG] 
+%c  @ https://static.xx.fbcdn.net/rsrc.php/v4/yU/r/d9uXmcyM4jX.js:246
+[  114208ms] [ERROR] Permissions policy violation: unload is not allowed in this document. @ https://static.xx.fbcdn.net/rsrc.php/v4/yE/r/-MiLwDFVI2F.js:322
+[  115404ms] [LOG] 
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black; @ https://static.xx.fbcdn.net/rsrc.php/v4iWYR4/yI/l/en_US-j/Qy0b2d-xGvEhPUkUsHO5Y2VfortLzGqOYlJk7XOF2C0TZW5p7_WurV5FbrZ-OzE10oXcgcWUruCBXfsKjFW824VXoE-9MnZEgONc7vjjGWggiPQLPZkwt52vcSIu_wq0Igd6YvQvwC_3_bp-KlHau0oeUETnsosJcA3Da93GgYLWLlL99USAbvAcgAZakTHMVGsROym0AlPbqZWoXK-eJ3g2etCab6wWMSXM9OS_fA75LmxJDd.js:1651
+[  115404ms] [LOG] 
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px;  @ https://static.xx.fbcdn.net/rsrc.php/v4iWYR4/yI/l/en_US-j/Qy0b2d-xGvEhPUkUsHO5Y2VfortLzGqOYlJk7XOF2C0TZW5p7_WurV5FbrZ-OzE10oXcgcWUruCBXfsKjFW824VXoE-9MnZEgONc7vjjGWggiPQLPZkwt52vcSIu_wq0Igd6YvQvwC_3_bp-KlHau0oeUETnsosJcA3Da93GgYLWLlL99USAbvAcgAZakTHMVGsROym0AlPbqZWoXK-eJ3g2etCab6wWMSXM9OS_fA75LmxJDd.js:1651
+[  115404ms] [LOG] 
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px;  @ https://static.xx.fbcdn.net/rsrc.php/v4iWYR4/yI/l/en_US-j/Qy0b2d-xGvEhPUkUsHO5Y2VfortLzGqOYlJk7XOF2C0TZW5p7_WurV5FbrZ-OzE10oXcgcWUruCBXfsKjFW824VXoE-9MnZEgONc7vjjGWggiPQLPZkwt52vcSIu_wq0Igd6YvQvwC_3_bp-KlHau0oeUETnsosJcA3Da93GgYLWLlL99USAbvAcgAZakTHMVGsROym0AlPbqZWoXK-eJ3g2etCab6wWMSXM9OS_fA75LmxJDd.js:1651
+[  115404ms] [LOG] 
+%c  @ https://static.xx.fbcdn.net/rsrc.php/v4iWYR4/yI/l/en_US-j/Qy0b2d-xGvEhPUkUsHO5Y2VfortLzGqOYlJk7XOF2C0TZW5p7_WurV5FbrZ-OzE10oXcgcWUruCBXfsKjFW824VXoE-9MnZEgONc7vjjGWggiPQLPZkwt52vcSIu_wq0Igd6YvQvwC_3_bp-KlHau0oeUETnsosJcA3Da93GgYLWLlL99USAbvAcgAZakTHMVGsROym0AlPbqZWoXK-eJ3g2etCab6wWMSXM9OS_fA75LmxJDd.js:1651

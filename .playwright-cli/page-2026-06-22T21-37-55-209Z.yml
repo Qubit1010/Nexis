@@ -1,0 +1,973 @@
+- generic [ref=e5]:
+  - banner:
+    - generic [ref=e6]:
+      - button "Close" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+      - link "Facebook" [ref=e12] [cursor=pointer]:
+        - /url: /
+        - img [ref=e13]
+    - navigation [ref=e19]:
+      - list [ref=e20]:
+        - listitem [ref=e21]:
+          - link [ref=e25] [cursor=pointer]:
+            - /url: /
+            - img [ref=e27]
+        - listitem [ref=e29]:
+          - link [ref=e32] [cursor=pointer]:
+            - /url: /friends/
+            - img [ref=e34]
+        - listitem [ref=e36]:
+          - link [ref=e39] [cursor=pointer]:
+            - /url: /professional_dashboard/?ref=tab_bar
+            - img [ref=e41]
+        - listitem [ref=e44]:
+          - link [ref=e47] [cursor=pointer]:
+            - /url: /marketplace/?ref=app_tab
+            - img [ref=e49]
+        - listitem [ref=e51]:
+          - link [ref=e54] [cursor=pointer]:
+            - /url: /groups/
+            - img [ref=e56]
+    - navigation "Account Controls and Settings" [ref=e59]:
+      - button "Facebook menu" [ref=e63] [cursor=pointer]:
+        - img [ref=e64]
+      - button "Messenger" [ref=e70] [cursor=pointer]:
+        - img [ref=e71]
+      - generic [ref=e76]:
+        - button "Notifications, 2 unread" [ref=e77] [cursor=pointer]:
+          - img [ref=e78]
+        - button [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]:
+            - generic [ref=e82]: Number of unread notifications
+            - generic [ref=e83]: "2"
+      - button "Your profile" [ref=e86] [cursor=pointer]:
+        - generic [ref=e87]:
+          - img "Your profile" [ref=e88]
+          - img [ref=e95]
+  - generic [ref=e103]:
+    - navigation [ref=e104]:
+      - generic [ref=e107]:
+        - heading [level=2] [ref=e108]: Facebook Menu
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - list [ref=e113]:
+                - listitem [ref=e114]:
+                  - link [ref=e118] [cursor=pointer]:
+                    - /url: https://www.facebook.com/aleemulhassan17
+                    - generic [ref=e120]:
+                      - img [ref=e123]
+                      - generic [ref=e132]: Aleem Ul Hassan
+                - listitem [ref=e133]:
+                  - link [ref=e137] [cursor=pointer]:
+                    - /url: https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.meta.ai%2F%3Futm_source%3Dfacebook_bookmarks%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExTWNaZ0VIczRkQnRobG9RVHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5cfJbIL5OxhFhmoH9MWGRkTBm3DMTp5ymbQ3tUKDR-HubypkqxVIAbV2lGVg_aem_mKELlMEVtjeNTv0K2bOpPg&h=AUC523M8IKz0sb_G1Z0NMN4e5_GAF1n8hLQzx1bKUZ9PRvF661sAEoCePwUihZJesCv9JKDNTLPpd6YLF_3EOzFAWhCzdb91rD7Bn9bsz03HY6yup1YC5QVx77kOIKKcUdDSQQ
+                    - generic [ref=e148]: Meta AI
+                - listitem [ref=e149]:
+                  - link [ref=e153] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e164]: Manus AI
+                - listitem [ref=e165]:
+                  - link [ref=e169] [cursor=pointer]:
+                    - /url: https://www.facebook.com/friends/
+                    - generic [ref=e180]: Friends
+                - listitem [ref=e181]:
+                  - link [ref=e185] [cursor=pointer]:
+                    - /url: https://www.facebook.com/professional_dashboard/?ref=bookmark
+                    - generic [ref=e196]: Professional dashboard
+                - listitem [ref=e197]:
+                  - link [ref=e201] [cursor=pointer]:
+                    - /url: https://www.facebook.com/onthisday/?source=bookmark
+                    - generic [ref=e212]: Memories
+                - listitem [ref=e213]:
+                  - link [ref=e217] [cursor=pointer]:
+                    - /url: https://www.facebook.com/saved/?cref=28
+                    - generic [ref=e228]: Saved
+                - listitem [ref=e229]:
+                  - link [ref=e233] [cursor=pointer]:
+                    - /url: https://www.facebook.com/groups/?ref=bookmarks
+                    - generic [ref=e244]: Groups
+                - listitem [ref=e245]:
+                  - link [ref=e249] [cursor=pointer]:
+                    - /url: https://www.facebook.com/reel/?s=tab
+                    - generic [ref=e260]: Reels
+              - button [ref=e264] [cursor=pointer]:
+                - generic [ref=e266]:
+                  - img [ref=e269]
+                  - generic [ref=e276]: See more
+              - separator [ref=e277]
+            - generic [ref=e278]:
+              - heading [level=3] [ref=e288]:
+                - generic [ref=e290]: Your shortcuts
+              - list [ref=e291]:
+                - listitem [ref=e292]:
+                  - link [ref=e296] [cursor=pointer]:
+                    - /url: https://www.facebook.com/61589294451802/
+                    - generic [ref=e298]:
+                      - img [ref=e301]
+                      - generic [ref=e310]: NexusPoint
+          - contentinfo [ref=e312]:
+            - list [ref=e314]:
+              - listitem [ref=e315]:
+                - link [ref=e316] [cursor=pointer]:
+                  - /url: /privacy/policy/?entry_point=comet_dropdown
+                  - text: Privacy
+                - generic [ref=e317]: ·
+              - listitem [ref=e319]:
+                - link [ref=e320] [cursor=pointer]:
+                  - /url: /policies?ref=pf
+                  - text: Terms
+                - generic [ref=e321]: ·
+              - listitem [ref=e323]:
+                - link [ref=e324] [cursor=pointer]:
+                  - /url: /business/
+                  - text: Advertising
+                - generic [ref=e325]: ·
+              - listitem [ref=e327]:
+                - link [ref=e328] [cursor=pointer]:
+                  - /url: /help/568137493302217
+                  - text: Ad Choices
+                  - img [ref=e330]
+                - generic [ref=e333]: ·
+              - listitem [ref=e335]:
+                - link [ref=e336] [cursor=pointer]:
+                  - /url: /policies/cookies/
+                  - text: Cookies
+                - generic [ref=e337]: ·
+              - listitem [ref=e339]:
+                - button [ref=e340] [cursor=pointer]: More
+    - heading [level=1] [ref=e341]: Home
+    - main [ref=e342]:
+      - generic [ref=e345]:
+        - link:
+          - /url: /?should_open_composer=false&wp_discovery_redirect=true
+        - generic [ref=e347]:
+          - generic [ref=e352]:
+            - generic [ref=e353]:
+              - img [ref=e355]
+              - button [ref=e361] [cursor=pointer]:
+                - img [ref=e362]
+            - generic [ref=e365]:
+              - heading [level=3] [ref=e367]:
+                - generic [ref=e368]: Remember Password
+              - generic [ref=e370]: Next time you log in on this browser, just click your profile picture instead of typing a password.
+            - generic [ref=e372]:
+              - button [ref=e374] [cursor=pointer]:
+                - generic [ref=e377]: OK
+              - button [ref=e379] [cursor=pointer]:
+                - generic [ref=e382]: Not Now
+          - region [ref=e386]:
+            - generic [ref=e387]:
+              - heading [level=3] [ref=e388]: Create a post
+              - link [ref=e389] [cursor=pointer]:
+                - /url: https://www.facebook.com/aleemulhassan17
+                - img [ref=e392]
+              - button [ref=e396] [cursor=pointer]:
+                - generic [ref=e398]: What's on your mind, Aleem?
+              - generic [ref=e399]:
+                - button [ref=e401] [cursor=pointer]
+                - button [ref=e405] [cursor=pointer]
+                - button [ref=e409] [cursor=pointer]
+          - region [ref=e417]:
+            - heading [level=3] [ref=e418]: Stories
+            - generic [ref=e419]:
+              - generic:
+                - button [disabled]:
+                  - img
+              - grid [ref=e421]:
+                - row [ref=e422]:
+                  - generic [ref=e424]:
+                    - gridcell [ref=e425]:
+                      - link [ref=e427] [cursor=pointer]:
+                        - /url: /stories/create/
+                        - generic [ref=e433]:
+                          - img [ref=e436]
+                          - generic:
+                            - generic:
+                              - generic: Create story
+                    - gridcell [ref=e441]:
+                      - link [ref=e445] [cursor=pointer]:
+                        - /url: /stories/102687972201010/UzpfSVNDOjEwMTYwMDIyNTA3OTY5MTc=/?bucket_count=9&source=story_tray
+                        - generic [ref=e451]:
+                          - generic [ref=e452]:
+                            - generic:
+                              - generic:
+                                - img
+                          - generic [ref=e456]:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic: Umair Jan Umair Jan
+                    - gridcell [ref=e457]:
+                      - link [ref=e461] [cursor=pointer]:
+                        - /url: /stories/122106335540867193/UzpfSVNDOjE3MzYwMDI1NDEwNzE0Mzg=/?bucket_count=9&source=story_tray
+                        - generic [ref=e466]:
+                          - generic [ref=e467]:
+                            - generic:
+                              - generic:
+                                - img
+                          - generic [ref=e471]:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic: Raheem Ullah
+                    - gridcell [ref=e472]:
+                      - link [ref=e476] [cursor=pointer]:
+                        - /url: /stories/122097658599215340/UzpfSVNDOjE1OTA1NzcxNjU4MjEwNDQ=/?bucket_count=9&source=story_tray
+                        - generic [ref=e481]:
+                          - generic [ref=e482]:
+                            - generic:
+                              - generic:
+                                - img
+                          - generic [ref=e486]:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic: Amir Nawaz
+              - generic:
+                - button [disabled]:
+                  - img
+          - generic [ref=e488]:
+            - heading [level=3] [ref=e489]: Feed posts
+            - generic [ref=e490]:
+              - generic [ref=e504]:
+                - blockquote [ref=e506]:
+                  - generic [ref=e507]: Facebook
+                - blockquote [ref=e509]:
+                  - generic [ref=e510]: Facebook
+                - blockquote [ref=e512]:
+                  - generic [ref=e513]: Facebook
+                - blockquote [ref=e515]:
+                  - generic [ref=e516]: Facebook
+                - blockquote [ref=e518]:
+                  - generic [ref=e519]: Facebook
+                - blockquote [ref=e521]:
+                  - generic [ref=e522]: Facebook
+                - blockquote [ref=e524]:
+                  - generic [ref=e525]: Facebook
+                - blockquote [ref=e527]:
+                  - generic [ref=e528]: Facebook
+                - blockquote [ref=e530]:
+                  - generic [ref=e531]: Facebook
+                - blockquote [ref=e533]:
+                  - generic [ref=e534]: Facebook
+                - blockquote [ref=e536]:
+                  - generic [ref=e537]: Facebook
+                - generic [ref=e540]:
+                  - blockquote [ref=e542]:
+                    - generic [ref=e543]: Facebook
+                  - blockquote [ref=e545]:
+                    - generic [ref=e546]: Facebook
+                  - blockquote [ref=e548]:
+                    - generic [ref=e549]: Facebook
+                  - blockquote [ref=e551]:
+                    - generic [ref=e552]: Facebook
+                  - blockquote [ref=e554]:
+                    - generic [ref=e555]: Facebook
+                  - blockquote [ref=e557]:
+                    - generic [ref=e558]: Facebook
+                  - blockquote [ref=e560]:
+                    - generic [ref=e561]: Facebook
+                  - blockquote [ref=e563]:
+                    - generic [ref=e564]: Facebook
+                  - blockquote [ref=e566]:
+                    - generic [ref=e567]: Facebook
+                  - blockquote [ref=e569]:
+                    - generic [ref=e570]: Facebook
+                  - blockquote [ref=e572]:
+                    - generic [ref=e573]: Facebook
+                  - blockquote [ref=e575]:
+                    - generic [ref=e576]: Facebook
+                  - blockquote [ref=e578]:
+                    - generic [ref=e579]: Facebook
+                  - blockquote [ref=e581]:
+                    - generic [ref=e582]: Facebook
+                  - blockquote [ref=e584]:
+                    - generic [ref=e585]: Facebook
+                  - blockquote [ref=e587]:
+                    - generic [ref=e588]: Facebook
+                  - blockquote [ref=e590]:
+                    - generic [ref=e591]: Facebook
+                  - blockquote [ref=e593]:
+                    - generic [ref=e594]: Facebook
+                  - blockquote [ref=e596]:
+                    - generic [ref=e597]: Facebook
+                  - blockquote [ref=e599]:
+                    - generic [ref=e600]: Facebook
+                  - blockquote [ref=e602]:
+                    - generic [ref=e603]: Facebook
+                  - blockquote [ref=e605]:
+                    - generic [ref=e606]: Facebook
+                  - generic [ref=e608]:
+                    - link [ref=e612] [cursor=pointer]:
+                      - /url: https://www.facebook.com/profile.php?id=61587322375020&__cft__[0]=AZZ8R1l1chv3dUjmtuZ-OChAFfYvy7K4iwBnVg_1ilH9f-jFcFCO0xJbfn-eBV9_iZiE6wPLvlnWoYqduDOuvynhIn-EG_Gkk1C6Y5koB9eX0Pf9qSrh8Yn2ZV72euknaq0eHBUdGDa3SCRPJEybnnWci8jFxTZU5TWcwXCwuhRXK_bC9U4XHV3X93nwCpsrnfMVJw2VG7qIAMCi99Qlk96U_Y3cNgueO2ETAl0ro7mLvg&__tn__=%3C%3C%2CP-R
+                      - img [ref=e614]
+                    - generic [ref=e619]:
+                      - heading [level=4] [ref=e623]:
+                        - link [ref=e628] [cursor=pointer]:
+                          - /url: https://www.facebook.com/profile.php?id=61587322375020&__cft__[0]=AZZ8R1l1chv3dUjmtuZ-OChAFfYvy7K4iwBnVg_1ilH9f-jFcFCO0xJbfn-eBV9_iZiE6wPLvlnWoYqduDOuvynhIn-EG_Gkk1C6Y5koB9eX0Pf9qSrh8Yn2ZV72euknaq0eHBUdGDa3SCRPJEybnnWci8jFxTZU5TWcwXCwuhRXK_bC9U4XHV3X93nwCpsrnfMVJw2VG7qIAMCi99Qlk96U_Y3cNgueO2ETAl0ro7mLvg&__tn__=-UC%2CP-R
+                          - generic [ref=e629]: Dilbarjan Kundi
+                      - generic [ref=e632]:
+                        - link [ref=e635] [cursor=pointer]:
+                          - /url: "?__cft__[0]=AZZ8R1l1chv3dUjmtuZ-OChAFfYvy7K4iwBnVg_1ilH9f-jFcFCO0xJbfn-eBV9_iZiE6wPLvlnWoYqduDOuvynhIn-EG_Gkk1C6Y5koB9eX0Pf9qSrh8Yn2ZV72euknaq0eHBUdGDa3SCRPJEybnnWci8jFxTZU5TWcwXCwuhRXK_bC9U4XHV3X93nwCpsrnfMVJw2VG7qIAMCi99Qlk96U_Y3cNgueO2ETAl0ro7mLvg&__tn__=%2CO%2CP-R#?fjc"
+                          - generic [ref=e638]:
+                            - generic [ref=e639]: d
+                            - generic [ref=e640]: r
+                            - generic [ref=e641]: "n"
+                            - generic [ref=e642]: s
+                            - generic [ref=e643]: S
+                            - generic [ref=e644]: o
+                            - generic [ref=e645]: p
+                            - generic [ref=e646]: e
+                            - generic [ref=e647]: t
+                            - generic [ref=e648]: o
+                            - generic [ref=e649]: f
+                            - generic [ref=e650]: m
+                            - generic [ref=e651]: "7"
+                            - generic [ref=e652]: "5"
+                            - generic [ref=e653]: "2"
+                            - generic [ref=e654]: "4"
+                            - generic [ref=e655]: g
+                            - generic [ref=e656]: g
+                            - generic [ref=e657]: "6"
+                            - generic [ref=e658]: l
+                            - generic [ref=e659]: "1"
+                            - generic [ref=e660]: "5"
+                            - generic [ref=e661]: "4"
+                            - generic [ref=e662]: "3"
+                            - generic [ref=e663]: m
+                            - generic [ref=e664]: a
+                            - generic [ref=e665]: c
+                            - generic [ref=e666]: "3"
+                            - generic [ref=e667]: "4"
+                            - generic [ref=e668]: "3"
+                            - generic [ref=e669]: "3"
+                            - generic [ref=e670]: c
+                            - generic [ref=e671]: h
+                            - generic [ref=e672]: f
+                            - generic [ref=e673]: "0"
+                            - generic [ref=e674]: "5"
+                            - generic [ref=e675]: h
+                            - generic [ref=e676]: i
+                            - generic [ref=e677]: u
+                            - generic [ref=e678]: c
+                            - generic [ref=e679]: "1"
+                            - generic [ref=e680]: "6"
+                            - generic [ref=e681]: "6"
+                            - generic [ref=e682]: l
+                            - generic [ref=e683]: h
+                            - generic [ref=e684]: "7"
+                            - generic [ref=e685]: l
+                            - generic [ref=e686]: a
+                            - generic [ref=e687]: g
+                            - generic [ref=e688]: "2"
+                            - generic [ref=e689]: "0"
+                            - generic [ref=e690]: "2"
+                            - generic [ref=e691]: g
+                            - generic [ref=e692]: "1"
+                            - generic [ref=e693]: "9"
+                            - generic [ref=e694]: "1"
+                            - generic [ref=e695]: "3"
+                            - generic [ref=e696]: m
+                            - generic [ref=e697]: t
+                            - generic [ref=e698]: m
+                        - generic [ref=e700]: ·
+                        - img [ref=e705]
+                    - button [ref=e710] [cursor=pointer]:
+                      - img [ref=e711]
+                    - link [ref=e715] [cursor=pointer]:
+                      - /url: "#"
+                      - img [ref=e716]
+                  - generic [ref=e721]:
+                    - link [ref=e724] [cursor=pointer]:
+                      - /url: https://www.facebook.com/photo/?fbid=898861193230279&set=a.106376792478727&__cft__[0]=AZZ8R1l1chv3dUjmtuZ-OChAFfYvy7K4iwBnVg_1ilH9f-jFcFCO0xJbfn-eBV9_iZiE6wPLvlnWoYqduDOuvynhIn-EG_Gkk1C6Y5koB9eX0Pf9qSrh8Yn2ZV72euknaq0eHBUdGDa3SCRPJEybnnWci8jFxTZU5TWcwXCwuhRXK_bC9U4XHV3X93nwCpsrnfMVJw2VG7qIAMCi99Qlk96U_Y3cNgueO2ETAl0ro7mLvg&__tn__=EH-y-R
+                      - img [ref=e729]
+                    - generic [ref=e731]:
+                      - link [ref=e735] [cursor=pointer]:
+                        - /url: https://www.facebook.com/muhammad.asim.486938?__cft__[0]=AZZ8R1l1chv3dUjmtuZ-OChAFfYvy7K4iwBnVg_1ilH9f-jFcFCO0xJbfn-eBV9_iZiE6wPLvlnWoYqduDOuvynhIn-EG_Gkk1C6Y5koB9eX0Pf9qSrh8Yn2ZV72euknaq0eHBUdGDa3SCRPJEybnnWci8jFxTZU5TWcwXCwuhRXK_bC9U4XHV3X93nwCpsrnfMVJw2VG7qIAMCi99Qlk96U_Y3cNgueO2ETAl0ro7mLvg&__tn__=%3C%3C%2CP-y-R
+                        - img [ref=e737]
+                      - generic [ref=e741]:
+                        - heading [level=5] [ref=e745]:
+                          - link [ref=e750] [cursor=pointer]:
+                            - /url: https://www.facebook.com/muhammad.asim.486938?__cft__[0]=AZZ8R1l1chv3dUjmtuZ-OChAFfYvy7K4iwBnVg_1ilH9f-jFcFCO0xJbfn-eBV9_iZiE6wPLvlnWoYqduDOuvynhIn-EG_Gkk1C6Y5koB9eX0Pf9qSrh8Yn2ZV72euknaq0eHBUdGDa3SCRPJEybnnWci8jFxTZU5TWcwXCwuhRXK_bC9U4XHV3X93nwCpsrnfMVJw2VG7qIAMCi99Qlk96U_Y3cNgueO2ETAl0ro7mLvg&__tn__=-UC%2CP-y-R
+                            - generic [ref=e751]: Muhammad Asim
+                        - generic [ref=e754]:
+                          - link [ref=e757] [cursor=pointer]:
+                            - /url: "?__cft__[0]=AZZ8R1l1chv3dUjmtuZ-OChAFfYvy7K4iwBnVg_1ilH9f-jFcFCO0xJbfn-eBV9_iZiE6wPLvlnWoYqduDOuvynhIn-EG_Gkk1C6Y5koB9eX0Pf9qSrh8Yn2ZV72euknaq0eHBUdGDa3SCRPJEybnnWci8jFxTZU5TWcwXCwuhRXK_bC9U4XHV3X93nwCpsrnfMVJw2VG7qIAMCi99Qlk96U_Y3cNgueO2ETAl0ro7mLvg&__tn__=%2CO%2CP-y-R#?fhj"
+                            - generic [ref=e760]:
+                              - generic [ref=e761]: d
+                              - generic [ref=e762]: r
+                              - generic [ref=e763]: "n"
+                              - generic [ref=e764]: s
+                              - generic [ref=e765]: S
+                              - generic [ref=e766]: o
+                              - generic [ref=e767]: p
+                              - generic [ref=e768]: e
+                              - generic [ref=e769]: t
+                              - generic [ref=e770]: o
+                              - generic [ref=e771]: f
+                              - generic [ref=e772]: m
+                              - generic [ref=e773]: J
+                              - generic [ref=e774]: "5"
+                              - generic [ref=e775]: "2"
+                              - generic [ref=e776]: "1"
+                              - generic [ref=e777]: "1"
+                              - generic [ref=e778]: g
+                              - generic [ref=e779]: "1"
+                              - generic [ref=e780]: l
+                              - generic [ref=e781]: "1"
+                              - generic [ref=e782]: "5"
+                              - generic [ref=e784]: "3"
+                              - generic [ref=e785]: a
+                              - generic [ref=e786]: a
+                              - generic [ref=e787]: c
+                              - generic [ref=e788]: "3"
+                              - generic [ref=e789]: "3"
+                              - generic [ref=e790]: "3"
+                              - generic [ref=e791]: "3"
+                              - generic [ref=e792]: c
+                              - generic [ref=e793]: h
+                              - generic [ref=e795]: "0"
+                              - generic [ref=e796]: "5"
+                              - generic [ref=e797]: "n"
+                              - generic [ref=e798]: i
+                              - generic [ref=e799]: u
+                              - generic [ref=e800]: u
+                              - generic [ref=e801]: "1"
+                              - generic [ref=e802]: t
+                              - generic [ref=e803]: "6"
+                              - generic [ref=e804]: e
+                              - generic [ref=e805]: M
+                              - generic [ref=e806]: "7"
+                              - generic [ref=e808]: a
+                              - generic [ref=e809]: g
+                              - generic [ref=e810]: "2"
+                              - generic [ref=e811]: "0"
+                              - generic [ref=e812]: "2"
+                              - generic [ref=e813]: g
+                              - generic [ref=e814]: ":"
+                              - generic [ref=e815]: "7"
+                              - generic [ref=e816]: "1"
+                              - generic [ref=e817]: "3"
+                              - generic [ref=e818]: P
+                              - generic [ref=e819]: t
+                          - generic [ref=e822]: ·
+                          - img [ref=e827]
+                    - generic [ref=e833]:
+                      - generic [ref=e841]:
+                        - text: ضلع مہمند کے بااخلاق، مخلص اور متحرک نوجوان سرباز خان قائد جمعیت مولانا فضل الرحمن کی حفاظت پر مامور ہیں۔ وہ اپنی خوش اخلاقی، دیانتداری اور تنظیمی وابستگی کی وجہ سے کار…
+                        - button [ref=e842] [cursor=pointer]: See more
+                      - link [ref=e845] [cursor=pointer]:
+                        - /url: "#"
+                        - text: See translation
+                  - generic [ref=e852]:
+                    - generic [ref=e853]:
+                      - button [ref=e854] [cursor=pointer]:
+                        - generic [ref=e860]: "1"
+                      - button [ref=e861] [cursor=pointer]:
+                        - img [ref=e862]
+                    - button [ref=e865] [cursor=pointer]
+                    - button [ref=e870] [cursor=pointer]
+                    - toolbar [ref=e875]:
+                      - button [ref=e880] [cursor=pointer]
+                - blockquote [ref=e882]:
+                  - generic [ref=e883]: Facebook
+                - blockquote [ref=e885]:
+                  - generic [ref=e886]: Facebook
+                - blockquote [ref=e888]:
+                  - generic [ref=e889]: Facebook
+                - blockquote [ref=e891]:
+                  - generic [ref=e892]: Facebook
+                - blockquote [ref=e894]:
+                  - generic [ref=e895]: Facebook
+                - blockquote [ref=e897]:
+                  - generic [ref=e898]: Facebook
+                - blockquote [ref=e900]:
+                  - generic [ref=e901]: Facebook
+                - blockquote [ref=e903]:
+                  - generic [ref=e904]: Facebook
+                - blockquote [ref=e906]:
+                  - generic [ref=e907]: Facebook
+                - blockquote [ref=e909]:
+                  - generic [ref=e910]: Facebook
+                - blockquote [ref=e912]:
+                  - generic [ref=e913]: Facebook
+              - generic [ref=e915]:
+                - article [ref=e916]:
+                  - status [ref=e917]
+                - article [ref=e930]:
+                  - status [ref=e931]
+    - complementary [ref=e944]:
+      - generic [ref=e950]:
+        - generic [ref=e953]:
+          - heading [level=3] [ref=e962]:
+            - generic [ref=e964]: Sponsored
+          - generic [ref=e965]:
+            - generic [ref=e970]:
+              - link [ref=e971] [cursor=pointer]:
+                - /url: https://l.facebook.com/l.php?u=https%3A%2F%2Fgetstarted.tiktok.com%2Fphase3%2Ftiktokads2025-m%3Fphase%3D3%26lang%3Den%26attr_source%3Dfacebook%26attr_medium%3Dsocial-ad%26attr_ad_id%3D120247048872150264%26creative%3DCouponB_upto6k%2520-%2520Copy%26attr_campaign%3DPK-registration-Conversion%26utm_medium%3Dpaid%26utm_source%3Dfb%26utm_id%3D120239260175520264%26utm_content%3D120247048872150264%26utm_term%3D120246910426730264%26utm_campaign%3D120239260175520264%26fbclid%3DIwZXh0bgNhZW0BMABhZGlkAas0DdVQ7ohicmlkETFNY1pnRUhzNGRCdGhsb1FUc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHici-q7pDFm1Y5guQ4zZ4Mpj5cpb2IRKs_SF3rYZPRJc8TH2mS1QyINuSHpT_aem_sFHJHGbcXVr4K0xJMe3PjQ&h=AUC523M8IKz0sb_G1Z0NMN4e5_GAF1n8hLQzx1bKUZ9PRvF661sAEoCePwUihZJesCv9JKDNTLPpd6YLF_3EOzFAWhCzdb91rD7Bn9bsz03HY6yup1YC5QVx77kOIKKcUdDSQQ&__tn__=*I&c[0]=AUDf6udExfq_Vh1X-1vS1Vy7uGwthHR1X1TWVZr8N3Mp0JGsOU4Q8OlcejJP0OvSDunX5MKNL4kCOU_Prrvw6GsOFG3HuvI7I5gfltl16C2EpwOR6daXhXoH3O8tQieBJAOVb7-T9HWtB7tg6v3m5L_pAdVIWhuXHeHPg9Kyfhu4EYVDzqvr-kkJO18jaIGq8abtw7Ahq-qKCZZ_vk-nsM8
+                - generic [ref=e976]:
+                  - img [ref=e978]
+                  - generic [ref=e980]:
+                    - generic [ref=e983]: Invest in your growth. Claim up to PKR 1,702,500 in TikTok ad credit today.
+                    - generic [ref=e987]: getstarted.tiktok.com
+              - button [ref=e990] [cursor=pointer]:
+                - img [ref=e991]
+            - generic [ref=e998]:
+              - link [ref=e999] [cursor=pointer]:
+                - /url: https://l.facebook.com/l.php?u=https%3A%2F%2Ffreelancingacademy.pk%2F%3Futm_medium%3Dpaid%26utm_source%3Dfb%26utm_id%3D23858407857180791%26utm_content%3D23858488298070791%26utm_term%3D23858407857190791%26utm_campaign%3D23858407857180791%26fbclid%3DIwZXh0bgNhZW0BMABhZGlkAFTDNeH-WZdicmlkETFNY1pnRUhzNGRCdGhsb1FUc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHici-q7pDFm1Y5guQ4zZ4Mpj5cpb2IRKs_SF3rYZPRJc8TH2mS1QyINuSHpT_aem_87D02X3y_bzCNhTSgNuHqw&h=AUC523M8IKz0sb_G1Z0NMN4e5_GAF1n8hLQzx1bKUZ9PRvF661sAEoCePwUihZJesCv9JKDNTLPpd6YLF_3EOzFAWhCzdb91rD7Bn9bsz03HY6yup1YC5QVx77kOIKKcUdDSQQ&__tn__=*I&c[0]=AUDe3Je4tBfRB5itqStANE7jWMqLULe6qFAnDRHQ19rwUurL4dPl9cuMurvoqYhqaiNpSzB_1xfjefOJG8zboG-CONDhPKGpGcarYTnD2JlCE4A10ZhZODn9NwDwwHg3X2AAVawHm1u_1Rcyu7EXjbW26oSLH5iUAb44Lw3vodgWmJbxdbMPBWpavF3Qdk0EBCfXNetRj3CF9J6TqLGZMZI
+                - generic [ref=e1004]:
+                  - img [ref=e1006]
+                  - generic [ref=e1008]:
+                    - generic [ref=e1011]: "Pakistan's #1 Platform to Learn, Build & Freelance"
+                    - generic [ref=e1015]: freelancingacademy.pk
+              - button [ref=e1018] [cursor=pointer]:
+                - img [ref=e1019]
+        - generic [ref=e1023]:
+          - generic [ref=e1030]:
+            - heading [level=3] [ref=e1032]:
+              - generic [ref=e1034]: Friend requests
+            - link [ref=e1039] [cursor=pointer]:
+              - /url: /friends/
+              - generic [ref=e1040]: See all
+          - generic [ref=e1045]:
+            - link [ref=e1047] [cursor=pointer]:
+              - /url: /friends/requests/?profile_id=100026505647148&__tn__=%3C
+              - img [ref=e1049]
+            - generic [ref=e1054]:
+              - generic [ref=e1056]:
+                - generic [ref=e1059]:
+                  - link [ref=e1063] [cursor=pointer]:
+                    - /url: /friends/requests/?profile_id=100026505647148
+                    - text: Mst Tahera Tabassum
+                  - generic [ref=e1068]:
+                    - generic [ref=e1071]: 2d
+                    - generic [ref=e1074]: New friend request notification
+                - button [ref=e1080] [cursor=pointer]: 1 mutual friend
+              - generic [ref=e1083]:
+                - button [ref=e1085] [cursor=pointer]:
+                  - generic [ref=e1088]: Confirm
+                - button [ref=e1090] [cursor=pointer]:
+                  - generic [ref=e1093]: Delete
+  - dialog [ref=e1098]:
+    - dialog "Anonymous participant's Post" [ref=e1101]:
+      - generic [ref=e1104]:
+        - generic [ref=e1105]:
+          - generic [ref=e1106]:
+            - heading "Anonymous participant's Post" [level=2] [ref=e1109]:
+              - generic [ref=e1110]: Anonymous participant's Post
+            - button "Close" [active] [ref=e1112] [cursor=pointer]:
+              - img [ref=e1113]
+          - separator [ref=e1115]
+        - generic [ref=e1131]:
+          - blockquote [ref=e1133]:
+            - generic [ref=e1134]: Facebook
+          - blockquote [ref=e1136]:
+            - generic [ref=e1137]: Facebook
+          - blockquote [ref=e1139]:
+            - generic [ref=e1140]: Facebook
+          - blockquote [ref=e1142]:
+            - generic [ref=e1143]: Facebook
+          - blockquote [ref=e1145]:
+            - generic [ref=e1146]: Facebook
+          - blockquote [ref=e1148]:
+            - generic [ref=e1149]: Facebook
+          - blockquote [ref=e1151]:
+            - generic [ref=e1152]: Facebook
+          - blockquote [ref=e1154]:
+            - generic [ref=e1155]: Facebook
+          - blockquote [ref=e1157]:
+            - generic [ref=e1158]: Facebook
+          - blockquote [ref=e1160]:
+            - generic [ref=e1161]: Facebook
+          - blockquote [ref=e1163]:
+            - generic [ref=e1164]: Facebook
+          - generic [ref=e1167]:
+            - generic:
+              - blockquote [ref=e1169]:
+                - generic [ref=e1170]: Facebook
+              - blockquote [ref=e1172]:
+                - generic [ref=e1173]: Facebook
+              - blockquote [ref=e1175]:
+                - generic [ref=e1176]: Facebook
+              - blockquote [ref=e1178]:
+                - generic [ref=e1179]: Facebook
+              - blockquote [ref=e1181]:
+                - generic [ref=e1182]: Facebook
+              - blockquote [ref=e1184]:
+                - generic [ref=e1185]: Facebook
+              - blockquote [ref=e1187]:
+                - generic [ref=e1188]: Facebook
+              - blockquote [ref=e1190]:
+                - generic [ref=e1191]: Facebook
+              - blockquote [ref=e1193]:
+                - generic [ref=e1194]: Facebook
+              - blockquote [ref=e1196]:
+                - generic [ref=e1197]: Facebook
+              - blockquote [ref=e1199]:
+                - generic [ref=e1200]: Facebook
+              - blockquote [ref=e1202]:
+                - generic [ref=e1203]: Facebook
+              - blockquote [ref=e1205]:
+                - generic [ref=e1206]: Facebook
+              - blockquote [ref=e1208]:
+                - generic [ref=e1209]: Facebook
+              - blockquote [ref=e1211]:
+                - generic [ref=e1212]: Facebook
+              - blockquote [ref=e1214]:
+                - generic [ref=e1215]: Facebook
+              - blockquote [ref=e1217]:
+                - generic [ref=e1218]: Facebook
+              - blockquote [ref=e1220]:
+                - generic [ref=e1221]: Facebook
+              - blockquote [ref=e1223]:
+                - generic [ref=e1224]: Facebook
+              - blockquote [ref=e1226]:
+                - generic [ref=e1227]: Facebook
+              - blockquote [ref=e1229]:
+                - generic [ref=e1230]: Facebook
+              - blockquote [ref=e1232]:
+                - generic [ref=e1233]: Facebook
+            - generic [ref=e1235]:
+              - generic [ref=e1236]:
+                - link [ref=e1239] [cursor=pointer]:
+                  - /url: /groups/489706458893803/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=%3C%3C%2CP-R
+                  - img [ref=e1241]
+                - button [ref=e1250] [cursor=pointer]:
+                  - img [ref=e1254]
+              - generic [ref=e1259]:
+                - heading "Business Owners of Vancouver Join" [level=3] [ref=e1263]:
+                  - generic [ref=e1264]:
+                    - link "Business Owners of Vancouver" [ref=e1267] [cursor=pointer]:
+                      - /url: /groups/489706458893803/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=-UC%2CP-R
+                    - generic [ref=e1268]:
+                      - generic [ref=e1269]: ·
+                      - button "Join" [ref=e1272] [cursor=pointer]:
+                        - generic [ref=e1273]: Join
+                - generic [ref=e1276]:
+                  - button "Anonymous participant" [ref=e1281] [cursor=pointer]
+                  - generic [ref=e1283]: ·
+                  - link "d r n s S o p e t o f m O 5 2 2 2 g b l 1 5 0 3 r a c 3 3 3 c h o 1 5 t i u c 1 6 l 3 7 l a g 2 0 2 g , e 1 3 2 t m" [ref=e1287] [cursor=pointer]:
+                    - /url: "?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=%2CO%2CP-R#?dia"
+                    - generic [ref=e1290]:
+                      - generic [ref=e1291]: d
+                      - generic [ref=e1292]: r
+                      - generic [ref=e1293]: "n"
+                      - generic [ref=e1294]: s
+                      - generic [ref=e1295]: S
+                      - generic [ref=e1296]: o
+                      - generic [ref=e1297]: p
+                      - generic [ref=e1298]: e
+                      - generic [ref=e1299]: t
+                      - generic [ref=e1300]: o
+                      - generic [ref=e1301]: f
+                      - generic [ref=e1302]: m
+                      - generic [ref=e1303]: O
+                      - generic [ref=e1304]: "5"
+                      - generic [ref=e1305]: "2"
+                      - generic [ref=e1306]: "2"
+                      - generic [ref=e1307]: "2"
+                      - generic [ref=e1308]: g
+                      - generic [ref=e1309]: b
+                      - generic [ref=e1310]: l
+                      - generic [ref=e1311]: "1"
+                      - generic [ref=e1312]: "5"
+                      - generic [ref=e1313]: "0"
+                      - generic [ref=e1314]: "3"
+                      - generic [ref=e1315]: r
+                      - generic [ref=e1316]: a
+                      - generic [ref=e1317]: c
+                      - generic [ref=e1318]: "3"
+                      - generic [ref=e1320]: "3"
+                      - generic [ref=e1321]: "3"
+                      - generic [ref=e1322]: c
+                      - generic [ref=e1323]: h
+                      - generic [ref=e1324]: o
+                      - generic [ref=e1325]: "1"
+                      - generic [ref=e1326]: "5"
+                      - generic [ref=e1327]: t
+                      - generic [ref=e1328]: i
+                      - generic [ref=e1329]: u
+                      - generic [ref=e1330]: c
+                      - generic [ref=e1331]: "1"
+                      - generic [ref=e1333]: "6"
+                      - generic [ref=e1334]: l
+                      - generic [ref=e1335]: "3"
+                      - generic [ref=e1336]: "7"
+                      - generic [ref=e1337]: l
+                      - generic [ref=e1338]: a
+                      - generic [ref=e1339]: g
+                      - generic [ref=e1340]: "2"
+                      - generic [ref=e1341]: "0"
+                      - generic [ref=e1342]: "2"
+                      - generic [ref=e1343]: g
+                      - generic [ref=e1344]: ","
+                      - generic [ref=e1345]: e
+                      - generic [ref=e1346]: "1"
+                      - generic [ref=e1347]: "3"
+                      - generic [ref=e1348]: "2"
+                      - generic [ref=e1349]: t
+                      - generic [ref=e1350]: m
+                  - generic [ref=e1352]: ·
+                  - img "Shared with Public group" [ref=e1357]
+              - button "Actions for this post by Anonymous participant" [ref=e1365] [cursor=pointer]:
+                - img [ref=e1366]
+            - generic [ref=e1378]: How did you find your mentor or coach when starting your business? I just completed my image management consulting certification but I don’t know where to start? How did you afford a paid business coaching when you haven’t started making money from your business. Any advice would be appreciated! Thanks!
+            - generic [ref=e1381]:
+              - generic [ref=e1385]:
+                - generic [ref=e1386]:
+                  - button "Like" [ref=e1387] [cursor=pointer]:
+                    - generic [ref=e1393]: "8"
+                  - button "React" [ref=e1394] [cursor=pointer]:
+                    - img [ref=e1395]
+                - button "Leave a comment" [ref=e1398] [cursor=pointer]:
+                  - generic [ref=e1403]: "16"
+                - button "Send this to friends or post it on your profile." [ref=e1405] [cursor=pointer]
+                - toolbar "See who reacted to this" [ref=e1410]:
+                  - 'button "Like: 8 people" [ref=e1415] [cursor=pointer]'
+              - generic [ref=e1416]:
+                - button "Most relevant" [ref=e1419] [cursor=pointer]:
+                  - generic [ref=e1420]:
+                    - text: Most relevant
+                    - img [ref=e1423]
+                - generic [ref=e1425]:
+                  - generic [ref=e1429]:
+                    - article "Comment by Marshall Stern 2 years ago" [ref=e1432]:
+                      - link [ref=e1437] [cursor=pointer]:
+                        - /url: /groups/489706458893803/user/737914601/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                        - img [ref=e1439]
+                      - generic [ref=e1443]:
+                        - generic [ref=e1444]:
+                          - generic [ref=e1447]:
+                            - link "Marshall Stern" [ref=e1451] [cursor=pointer]:
+                              - /url: /groups/489706458893803/user/737914601/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                              - generic [ref=e1453]: Marshall Stern
+                            - generic [ref=e1455]:
+                              - generic [ref=e1457]: As a coach / mentor myself I always suggest when someone is looking for a coach or mentor in the business space to look for one that has been a business owner for a while and that can understand and relate to where you are at. In addition to experience the other really important factor I believe is the connection between the coach and client. So with that said ask around, check out content online to see what resonates and then have a chat with them to see if there is a fit. As for the affordability question some coaches have customizable packages they may fit your budget. It may be more in a group program or something more private. Either way is an investment in yourself and your business. Hope that helps.
+                              - generic [ref=e1459]: Hope that helps. I remember when I started my various businesses, how exciting and overwhelming at the beginning it could be. If you want to have a chat, just let me know.
+                          - button "Hide or report this" [ref=e1464] [cursor=pointer]:
+                            - img [ref=e1465]
+                        - generic [ref=e1467]:
+                          - list [ref=e1468]:
+                            - listitem [ref=e1469]:
+                              - link "2y" [ref=e1472] [cursor=pointer]:
+                                - /url: https://www.facebook.com/groups/businessownersofvancouver/posts/873919257139186/?comment_id=874220053775773&__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                            - listitem [ref=e1473]:
+                              - generic [ref=e1476]:
+                                - button "Like" [ref=e1478] [cursor=pointer]:
+                                  - generic [ref=e1479]: Like
+                                - button "React" [ref=e1480] [cursor=pointer]
+                            - listitem [ref=e1482]:
+                              - button "Reply" [ref=e1484] [cursor=pointer]
+                            - listitem [ref=e1485]:
+                              - button "Share" [ref=e1487] [cursor=pointer]
+                            - listitem [ref=e1488]:
+                              - button "Edited" [ref=e1491] [cursor=pointer]
+                          - button "8 reactions; see who reacted to this" [ref=e1496] [cursor=pointer]:
+                            - generic [ref=e1498]: "8"
+                    - button "View all 5 replies" [ref=e1508] [cursor=pointer]:
+                      - generic [ref=e1510]: View all 5 replies
+                  - generic [ref=e1514]:
+                    - article "Comment by Llyn Foster 2 years ago" [ref=e1517]:
+                      - link [ref=e1522] [cursor=pointer]:
+                        - /url: /groups/489706458893803/user/882725187/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                        - img [ref=e1524]
+                      - generic [ref=e1528]:
+                        - generic [ref=e1529]:
+                          - generic [ref=e1532]:
+                            - link "Llyn Foster" [ref=e1536] [cursor=pointer]:
+                              - /url: /groups/489706458893803/user/882725187/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                              - generic [ref=e1538]: Llyn Foster
+                            - generic [ref=e1542]: Joining a network group and being around other business owners is a great first step.
+                          - button "Hide or report this" [ref=e1547] [cursor=pointer]:
+                            - img [ref=e1548]
+                        - generic [ref=e1550]:
+                          - list [ref=e1551]:
+                            - listitem [ref=e1552]:
+                              - link "2y" [ref=e1555] [cursor=pointer]:
+                                - /url: https://www.facebook.com/groups/businessownersofvancouver/posts/873919257139186/?comment_id=874230370441408&__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                            - listitem [ref=e1556]:
+                              - generic [ref=e1559]:
+                                - button "Like" [ref=e1561] [cursor=pointer]:
+                                  - generic [ref=e1562]: Like
+                                - button "React" [ref=e1563] [cursor=pointer]
+                            - listitem [ref=e1565]:
+                              - button "Reply" [ref=e1567] [cursor=pointer]
+                            - listitem [ref=e1568]:
+                              - button "Share" [ref=e1570] [cursor=pointer]
+                          - button "4 reactions; see who reacted to this" [ref=e1575] [cursor=pointer]:
+                            - generic [ref=e1577]: "4"
+                    - button "View all 2 replies" [ref=e1587] [cursor=pointer]:
+                      - generic [ref=e1589]: View all 2 replies
+                  - article "Comment by Brandi-Nicole Euell 2 years ago" [ref=e1595]:
+                    - link [ref=e1600] [cursor=pointer]:
+                      - /url: /groups/489706458893803/user/100071810564212/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                      - img [ref=e1602]
+                    - generic [ref=e1606]:
+                      - generic [ref=e1607]:
+                        - generic [ref=e1610]:
+                          - link "Brandi-Nicole Euell" [ref=e1614] [cursor=pointer]:
+                            - /url: /groups/489706458893803/user/100071810564212/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                            - generic [ref=e1616]: Brandi-Nicole Euell
+                          - generic [ref=e1620]: I lived off a part time income in a complimentary job. Used any money earned in my business to put back into my business
+                        - button "Hide or report this" [ref=e1625] [cursor=pointer]:
+                          - img [ref=e1626]
+                      - generic [ref=e1628]:
+                        - list [ref=e1629]:
+                          - listitem [ref=e1630]:
+                            - link "2y" [ref=e1633] [cursor=pointer]:
+                              - /url: https://www.facebook.com/groups/businessownersofvancouver/posts/873919257139186/?comment_id=874205077110604&__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                          - listitem [ref=e1634]:
+                            - generic [ref=e1637]:
+                              - button "Like" [ref=e1639] [cursor=pointer]:
+                                - generic [ref=e1640]: Like
+                              - button "React" [ref=e1641] [cursor=pointer]
+                          - listitem [ref=e1643]:
+                            - button "Reply" [ref=e1645] [cursor=pointer]
+                          - listitem [ref=e1646]:
+                            - button "Share" [ref=e1648] [cursor=pointer]
+                        - button "2 reactions; see who reacted to this" [ref=e1653] [cursor=pointer]:
+                          - generic [ref=e1655]: "2"
+                  - generic [ref=e1661]:
+                    - article "Comment by Kenn Burns 2 years ago" [ref=e1664]:
+                      - link [ref=e1669] [cursor=pointer]:
+                        - /url: /groups/489706458893803/user/703580195/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                        - img [ref=e1671]
+                      - generic [ref=e1675]:
+                        - generic [ref=e1676]:
+                          - generic [ref=e1679]:
+                            - link "Kenn Burns" [ref=e1683] [cursor=pointer]:
+                              - /url: /groups/489706458893803/user/703580195/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                              - generic [ref=e1685]: Kenn Burns
+                            - generic [ref=e1689]: I was lucky that mine was in the BNI chapter I was in when I first opened my business and he had several clients there already, so I was able to use the group as a brain trust until I could afford some of his coaching options myself.
+                          - button "Hide or report this" [ref=e1694] [cursor=pointer]:
+                            - img [ref=e1695]
+                        - generic [ref=e1697]:
+                          - list [ref=e1698]:
+                            - listitem [ref=e1699]:
+                              - link "2y" [ref=e1702] [cursor=pointer]:
+                                - /url: https://www.facebook.com/groups/businessownersofvancouver/posts/873919257139186/?comment_id=874224393775339&__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                            - listitem [ref=e1703]:
+                              - generic [ref=e1706]:
+                                - button "Like" [ref=e1708] [cursor=pointer]:
+                                  - generic [ref=e1709]: Like
+                                - button "React" [ref=e1710] [cursor=pointer]
+                            - listitem [ref=e1712]:
+                              - button "Reply" [ref=e1714] [cursor=pointer]
+                            - listitem [ref=e1715]:
+                              - button "Share" [ref=e1717] [cursor=pointer]
+                          - button "2 reactions; see who reacted to this" [ref=e1722] [cursor=pointer]:
+                            - generic [ref=e1724]: "2"
+                    - button "View all 2 replies" [ref=e1733] [cursor=pointer]:
+                      - generic [ref=e1735]: View all 2 replies
+                  - article "Comment by Mạc Quang Đức 2 years ago" [ref=e1741]:
+                    - link [ref=e1746] [cursor=pointer]:
+                      - /url: /groups/489706458893803/user/100082444633494/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                      - img [ref=e1748]
+                    - generic [ref=e1752]:
+                      - generic [ref=e1753]:
+                        - link "Mạc Quang Đức" [ref=e1760] [cursor=pointer]:
+                          - /url: /groups/489706458893803/user/100082444633494/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                          - generic [ref=e1762]: Mạc Quang Đức
+                        - button "Hide or report this" [ref=e1767] [cursor=pointer]:
+                          - img [ref=e1768]
+                      - link "No photo description available." [ref=e1773] [cursor=pointer]:
+                        - /url: https://www.facebook.com/photo.php?fbid=314006228024196&set=p.314006228024196&type=3&__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                        - img "No photo description available." [ref=e1774]
+                      - generic [ref=e1776]:
+                        - list [ref=e1777]:
+                          - listitem [ref=e1778]:
+                            - link "2y" [ref=e1781] [cursor=pointer]:
+                              - /url: https://www.facebook.com/groups/businessownersofvancouver/posts/873919257139186/?comment_id=874411500423295&__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                          - listitem [ref=e1782]:
+                            - generic [ref=e1785]:
+                              - button "Like" [ref=e1787] [cursor=pointer]:
+                                - generic [ref=e1788]: Like
+                              - button "React" [ref=e1789] [cursor=pointer]
+                          - listitem [ref=e1791]:
+                            - button "Reply" [ref=e1793] [cursor=pointer]
+                          - listitem [ref=e1794]:
+                            - button "Share" [ref=e1796] [cursor=pointer]
+                        - button "1 reaction; see who reacted to this" [ref=e1801] [cursor=pointer]:
+                          - generic [ref=e1803]: "1"
+                  - generic [ref=e1809]:
+                    - article "Comment by Elena Bobyreva 2 years ago" [ref=e1812]:
+                      - link [ref=e1817] [cursor=pointer]:
+                        - /url: /groups/489706458893803/user/100078027690528/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                        - img [ref=e1819]
+                      - generic [ref=e1823]:
+                        - generic [ref=e1824]:
+                          - generic [ref=e1827]:
+                            - link "Elena Bobyreva" [ref=e1831] [cursor=pointer]:
+                              - /url: /groups/489706458893803/user/100078027690528/?__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                              - generic [ref=e1833]: Elena Bobyreva
+                            - generic [ref=e1837]: I am starting my image consulting business. Let’s connect to brainstorm ideas
+                          - button "Hide or report this" [ref=e1842] [cursor=pointer]:
+                            - img [ref=e1843]
+                        - list [ref=e1846]:
+                          - listitem [ref=e1847]:
+                            - link "2y" [ref=e1850] [cursor=pointer]:
+                              - /url: https://www.facebook.com/groups/businessownersofvancouver/posts/873919257139186/?comment_id=875309680333477&__cft__[0]=AZbHn8k-h3aWU8UJNzqnfT2fOzv3mAYLvGLfChkYDX26eMPQym9tcWzLSacY9tP4lALXhvoCxUDRcOkD2Z5k9_dMdT14L8kve2TuNzThroMdmECidCiQimpQ6D3LSxNUN_MOfQ_06ZPB-KH2KnQL4cY6dgH1a-9DBfgFvmWE0B1OZA&__tn__=R]-R
+                          - listitem [ref=e1851]:
+                            - generic [ref=e1854]:
+                              - button "Like" [ref=e1856] [cursor=pointer]:
+                                - generic [ref=e1857]: Like
+                              - button "React" [ref=e1858] [cursor=pointer]
+                          - listitem [ref=e1860]:
+                            - button "Reply" [ref=e1862] [cursor=pointer]
+                          - listitem [ref=e1863]:
+                            - button "Share" [ref=e1865] [cursor=pointer]
+                    - button "View 1 reply" [ref=e1872] [cursor=pointer]:
+                      - generic [ref=e1874]: View 1 reply
+          - blockquote [ref=e1876]:
+            - generic [ref=e1877]: Facebook
+          - blockquote [ref=e1879]:
+            - generic [ref=e1880]: Facebook
+          - blockquote [ref=e1882]:
+            - generic [ref=e1883]: Facebook
+          - blockquote [ref=e1885]:
+            - generic [ref=e1886]: Facebook
+          - blockquote [ref=e1888]:
+            - generic [ref=e1889]: Facebook
+          - blockquote [ref=e1891]:
+            - generic [ref=e1892]: Facebook
+          - blockquote [ref=e1894]:
+            - generic [ref=e1895]: Facebook
+          - blockquote [ref=e1897]:
+            - generic [ref=e1898]: Facebook
+          - blockquote [ref=e1900]:
+            - generic [ref=e1901]: Facebook
+          - blockquote [ref=e1903]:
+            - generic [ref=e1904]: Facebook
+          - blockquote [ref=e1906]:
+            - generic [ref=e1907]: Facebook
+        - table [ref=e1919]:
+          - generic [ref=e1922]:
+            - button "Available Voices, switch profile" [ref=e1924] [cursor=pointer]:
+              - generic [ref=e1925]:
+                - img [ref=e1926]
+                - img [ref=e1933]
+            - generic [ref=e1938]:
+              - generic [ref=e1942]:
+                - textbox "Comment as Aleem" [ref=e1943]:
+                  - paragraph [ref=e1944]
+                - generic: Comment as Aleem
+              - list [ref=e1946]:
+                - listitem [ref=e1947]:
+                  - button "Comment with an avatar sticker" [ref=e1949] [cursor=pointer]
+                - listitem [ref=e1951]:
+                  - button "Insert an emoji" [ref=e1953] [cursor=pointer]:
+                    - img [ref=e1954]
+                - listitem [ref=e1957]:
+                  - button "Attach a photo or video" [ref=e1959] [cursor=pointer]
+                - listitem [ref=e1961]:
+                  - button "Comment with a GIF" [ref=e1963] [cursor=pointer]
+                - listitem [ref=e1965]:
+                  - button "Comment with a sticker" [ref=e1967] [cursor=pointer]
+  - button "New message" [ref=e1971] [cursor=pointer]:
+    - img [ref=e1972]
