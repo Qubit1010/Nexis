@@ -100,6 +100,20 @@ _STYLE = {
             "280). Professional but human, no emojis. No formal sign-off."
         ),
     },
+    "fb_dm": {
+        # Facebook leads come from group posts, so there's almost always a signal
+        # (the post/bio). Lean on the specific-observation opener referencing what
+        # they posted, since that's the most natural "fellow group member" angle.
+        "with_signal": [("specific_observation", 5), ("genuine_question", 3), ("anti_pitch", 2)],
+        "no_signal": [("anti_pitch", 5), ("genuine_question", 4)],
+        "max_chars": 400,
+        "channel_rules": (
+            "Channel: Facebook DM / Messenger, between two members of the same group. Warm and "
+            "human, like a real person typing, under 80 words. At most 1 emoji, only if it fits. "
+            "Start with 'Hi [FirstName]' or a direct line if no name. If they posted in the group, "
+            "referencing that post naturally is the strongest opener. No links."
+        ),
+    },
 }
 
 _SYSTEM = """You write the opening outreach message for Aleem Ul Hassan, founder of an AI \

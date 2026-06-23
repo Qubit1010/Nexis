@@ -5,9 +5,10 @@ description: >
   per-channel "Instant ... Leads" Google Sheets into the matching "NexusPoint ...
   Outreach CRM", generating a personalized Touch 1 message (OpenAI gpt-5.4-mini, with a
   Claude Haiku fallback) for each
-  new lead. Handles Instagram and LinkedIn today, built to extend to Facebook and
-  other channels. It only pushes rows that are genuinely new (identity-based dedup
-  on the @handle / LinkedIn slug) and never re-pushes or duplicates rows already in
+  new lead. Handles Instagram, LinkedIn, and Facebook (Facebook profile URLs are
+  sourced upstream by the facebook-lead-nav skill). It only pushes rows that are
+  genuinely new (identity-based dedup on the @handle / LinkedIn slug / Facebook
+  profile slug or id) and never re-pushes or duplicates rows already in
   the CRM, fixing the two long-standing bugs in the old lead-gen pipeline (new rows
   silently dropped, sent rows duplicated). Use this skill whenever Aleem wants to
   move scraped leads into a CRM or run the outreach sync. Trigger on: "push leads to
@@ -69,6 +70,14 @@ If you ever touch the dedup logic, keep `channel.identity()` and
 `channel.crm_identity()` returning the same key for the same person. That single
 invariant is what keeps the CRM clean.
 
+**Self-healing status (`--reconcile-status`, opt-in):** by default a row tagged
+"Added" is skipped on sight. Pass `--reconcile-status` to instead verify each "Added"
+row against the live CRM: a stale "Added" whose identity isn't actually in the CRM
+gets **re-pushed**, and one that no longer resolves is downgraded to "Needs Review".
+Use it to repair a sheet whose tags drifted from the CRM (e.g. a freshly-created CRM,
+or tags left by an older pipeline). It's opt-in because if you've *intentionally
+pruned* leads from the CRM, reconciling would resurrect them — so dry-run it first.
+
 ## Prerequisites
 
 - **gws CLI** (Google Workspace CLI) authenticated as hassanaleem86@gmail.com.
@@ -96,7 +105,13 @@ Then the live run:
 ```bash
 python .claude/skills/leads-to-crm/scripts/push.py --channel instagram
 python .claude/skills/leads-to-crm/scripts/push.py --channel linkedin
+python .claude/skills/leads-to-crm/scripts/push.py --channel facebook
 ```
+
+For **Facebook**, the source rows must already be enriched with a profile URL by the
+`facebook-lead-nav` skill. Rows that still hold only a group post link (no Profile URL)
+resolve to no identity and are flagged **Needs Review** — run `facebook-lead-nav` on them
+first, then re-run this push.
 
 Flags:
 
@@ -126,33 +141,37 @@ new handles get pushed.
 
 ## Sheet shapes (confirmed live, 2026-06)
 
-Source "Instant ... Leads" (tab `Raw`, status column **"Include to CRM"**):
-- Instagram: `Name ("Name (@handle)") | Link | Followers | Note | Location/Designation | Include to CRM`
-- LinkedIn: `Link | Name | Followers | Note | Designation | Location | Company Name | Include to CRM`
+Source "Instant ... Leads" (status column **"Include to CRM"**):
+- Instagram (tab `Raw`): `Name ("Name (@handle)") | Link | Followers | Note | Location/Designation | Include to CRM`
+- LinkedIn (tab `Raw`): `Link | Name | Followers | Note | Designation | Location | Company Name | Include to CRM`
+- Facebook (tab `Sheet1`): `Link (group POST url) | Name (post snippet) | Followers | Note | Designation | Location | Company Name | Include to CRM | Lead Name | Profile URL | Date Added`
+  — the **Profile URL** + **Lead Name** columns are filled upstream by `facebook-lead-nav`; identity keys off Profile URL, not the post Link.
 
-CRM "NexusPoint ... Outreach CRM" (tab `Leads`, 13 columns). The skill writes by
+CRM "NexusPoint ... Outreach CRM" (tab `Leads`). The skill writes by
 **header name**, not position, so a column reorder won't corrupt it:
-- Instagram: `Name | Username | Company | Role | Instagram URL | Followers | Bio | Touch 1-4 | Status | Date Added`
-- LinkedIn: `Name | First Name | Company | Role | LinkedIn URL | Location | Recent Post | Touch 1-4 | Status | Date Added`
+- Instagram (13 cols): `Name | Username | Company | Role | Instagram URL | Followers | Bio | Touch 1-4 | Status | Date Added`
+- LinkedIn (13 cols): `Name | First Name | Company | Role | LinkedIn URL | Location | Recent Post | Touch 1-4 | Status | Date Added`
+- Facebook (13 cols): `Name | Profile URL | Company | Role | Location | Source Post | Bio | Touch 1-4 | Status | Date Added`
 
 Column detection is by header, with the Instant-Data-Scraper Name/Link column-flip
 handled in `channels.split_url_and_name`. If a sheet's tab name ever changes, the
 engine falls back to the first tab automatically.
 
-## Adding a new channel (e.g. Facebook)
+## Channels & adding more
 
-1. In `scripts/channels.py`, add a `FacebookChannel(Channel)` subclass: set the
-   sheet IDs/tabs, the `source_aliases` header map, and the `message_style`.
-2. Implement `parse_row`, `identity`, `crm_identity`, `crm_record` — model them on
-   `InstagramChannel`. The identity function is the important part: pick the most
-   stable per-profile key Facebook gives you (page slug or numeric id), normalized
-   the same way for source and CRM.
-3. Register it in the `CHANNELS` dict at the bottom.
-4. Add `"facebook"` to the message-style map in `scripts/messages.py` if its tone
-   differs from Instagram's.
-5. Test with `--dry-run` before the first live push.
+Three channels are wired: **Instagram**, **LinkedIn**, **Facebook** (in
+`scripts/channels.py`, registered in `CHANNELS`). To add another, add a `Channel`
+subclass — set the sheet IDs/tabs, `source_aliases`, and `message_style`, then
+implement `parse_row` / `identity` / `crm_identity` / `crm_record` (model on the
+closest existing channel). The identity function is the important part: pick the most
+stable per-profile key and normalize it the same way for source rows and CRM rows.
+Register it in `CHANNELS`, add its style to `scripts/messages.py` if the tone differs,
+and test with `--dry-run`. No changes to `push.py` — that's the point of the config split.
 
-No changes to `push.py` are needed — that's the point of the config split.
+**Facebook specifics:** identity is the profile slug/id via `channels._fb_id` (a post
+link with no resolved profile = "Needs Review", i.e. run `facebook-lead-nav` first). The
+message style is `fb_dm` (same-group-member tone). CRM:
+`1GkbzCclQsg83P_l5EgKxjceW-Y_7fQ1lByJUGH1aaNg`.
 
 ## Message generation
 

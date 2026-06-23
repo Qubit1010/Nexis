@@ -1,0 +1,38 @@
+{
+  "skill_name": "facebook-lead-nav",
+  "notes": "This skill drives a live, logged-in Facebook session and writes to a real Google Sheet, so full with-skill/baseline output benchmarks would have side effects (sheet writes, FB requests) and are non-deterministic. The meaningful, safe eval here is TRIGGERING accuracy — does the description fire on the right intents and stay quiet on adjacent ones (leads-to-crm, sales-playbook, Instagram/LinkedIn sourcing). Optimize via scripts/run_loop.py (description improver). The prompts below double as triggering test cases; assertions describe the behavior a correct run should exhibit if executed manually with preflight done.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The Instant Facebook Leads sheet has a bunch of new group post links in column A with no profile URLs yet. Can you go get the profile URLs for the people who posted them?",
+      "expected_output": "Invokes facebook-lead-nav: runs preflight, then a dry-run, then a live enrichment capped at ~15, writing Lead Name + Profile URL + Date Added to new columns on each post row; resume-safe.",
+      "files": [],
+      "assertions": [
+        { "text": "Uses the facebook-lead-nav skill (not leads-to-crm)", "type": "qualitative" },
+        { "text": "Runs preflight before the enrichment", "type": "qualitative" },
+        { "text": "Does a dry-run before any live write", "type": "qualitative" },
+        { "text": "Caps the batch at roughly 10-20 posts", "type": "qualitative" }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "run the facebook lead nav for the next 10 posts",
+      "expected_output": "Invokes facebook-lead-nav with --limit 10 after preflight.",
+      "files": [],
+      "assertions": [
+        { "text": "Uses the facebook-lead-nav skill", "type": "qualitative" },
+        { "text": "Passes a limit of 10", "type": "qualitative" }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "push the facebook leads into the outreach CRM and write their first touch message",
+      "expected_output": "Does NOT invoke facebook-lead-nav. This is leads-to-crm territory (routing + Touch-1 messaging).",
+      "files": [],
+      "assertions": [
+        { "text": "Does NOT use facebook-lead-nav", "type": "qualitative" },
+        { "text": "Routes to leads-to-crm instead", "type": "qualitative" }
+      ]
+    }
+  ]
+}

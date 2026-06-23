@@ -72,7 +72,7 @@ def _parse_followers(raw):
 
 
 def run_push(channel, dry_run=False, no_messages=False, limit=None,
-             filter_followers=0, exclude_geo=False):
+             filter_followers=0, exclude_geo=False, reconcile_status=False):
     today = date.today().isoformat()
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -130,9 +130,17 @@ def run_push(channel, dry_run=False, no_messages=False, limit=None,
         if limit and stats["pushed"] >= limit:
             break
 
-        if existing_status.get(i, "").lower() == "added":
+        was_added = existing_status.get(i, "").lower() == "added"
+        if was_added and not reconcile_status:
+            # Default: trust the "Added" tag and skip on sight (fast, original behavior).
             stats["skipped_added"] += 1
             continue
+        # With --reconcile-status we do NOT trust the tag: parse + resolve identity
+        # and let actual CRM membership decide (below). This makes the run
+        # self-healing — a stale "Added" (tagged before this CRM existed, or for a
+        # different CRM) gets re-pushed instead of skipped forever, and an "Added"
+        # row that no longer resolves is downgraded to "Needs Review". It's opt-in
+        # because re-pushing depends on the CRM not having been intentionally pruned.
 
         lead = channel.parse_row(row, col_map)
         if lead is None:
@@ -142,13 +150,14 @@ def run_push(channel, dry_run=False, no_messages=False, limit=None,
 
         ident = channel.identity(lead)
         if not ident:
+            # unresolvable — flag for review even if it was wrongly marked "Added"
             stats["needs_review"] += 1
             decisions[i] = "Needs Review"
             continue
 
         if ident in existing or ident in seen_this_run:
-            # already in CRM (or a same-run dup) — reconcile, never re-append
-            stats["reconciled"] += 1
+            # genuinely in the CRM (or a same-run dup) — keep "Added", never re-append
+            stats["skipped_added" if was_added else "reconciled"] += 1
             decisions[i] = "Added"
             continue
 
@@ -275,6 +284,9 @@ def main():
     p.add_argument("--limit", type=int, default=0, help="Cap new pushes (handy for a test run)")
     p.add_argument("--filter-followers", type=int, default=0, help="Opt-in min follower count")
     p.add_argument("--exclude-geo", action="store_true", help="Opt-in: skip South Asia rows")
+    p.add_argument("--reconcile-status", action="store_true",
+                   help="Don't trust the 'Added' tag; re-push rows whose identity isn't "
+                        "actually in the CRM (self-heal stale tags). Off by default.")
     args = p.parse_args()
 
     channel = ch.CHANNELS[args.channel]
@@ -283,7 +295,7 @@ def main():
         return
     run_push(channel, dry_run=args.dry_run, no_messages=args.no_messages,
              limit=args.limit, filter_followers=args.filter_followers,
-             exclude_geo=args.exclude_geo)
+             exclude_geo=args.exclude_geo, reconcile_status=args.reconcile_status)
 
 
 if __name__ == "__main__":
