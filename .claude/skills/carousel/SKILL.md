@@ -21,6 +21,12 @@ Reusable design templates live in `references/<Template>/`. Each has a `design-s
   + CTA (deep red/maroon photo) with clean cream dot-grid body slides. Mixed bold-sans + italic-serif
   headlines, hand-drawn arrow annotations, screenshot visuals. Comment-to-DM CTA mechanic.
   Source images in `docs/Instagram-Template-2/`.
+- **Instagram-Template-6** (`references/Instagram-Template-6/`) — resource/tool showcase format.
+  Soft sage-gradient cover with dark forest-green wave. Dark charcoal body slides: device mockup
+  screenshot (upper half) + two structured info cards (name/category/creator + description) + metric
+  pill. Dark-gradient CTA with dotted-border pixelated keyword pill and "Comment -> DM" mechanic.
+  Best for: top-N tool lists, GitHub repo showcases, AI skill packs, plugins, frameworks.
+  Source images in `docs/Instagram-Template-6/`.
 
 When a template fits the user's ask, recommend it: tell them to build the Gem once from `gem.md`
 (attach the 4 Knowledge images), then use `input-prompt.md` per post so Gemini renders the slides
