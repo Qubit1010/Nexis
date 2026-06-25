@@ -33,6 +33,8 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 
 **Creating new skills:** See `.claude/rules/skill-creation.md`. When Aleem asks to create a new skill without explicitly naming the skill-creator, ask whether to build it with the `skill-creator` workflow before proceeding.
 
+**Closeout & push prompt:** See `.claude/rules/closeout-and-push-prompt.md`. After creating a skill, installing a plugin, creating a project, or making significant structural changes — always ask whether to run `/session-closeout` and whether to push to GitHub.
+
 ### Active Skills
 - **Sales Playbook** (`.claude/skills/sales-playbook/`) — Master sales asset. Source-cited opener archetypes (Welsh, Holland, Braun), Voss calibrated questions, Hormozi value equation, Sandler pain funnel, Cole Gordon/Frank Kern closing frameworks, LinkedIn + Instagram cold sequences, live conversation playbook, full 30-min Discovery Call (Ops Teardown) script, 10 cited objection responses. All claims sourced from 77-source NotebookLM research synthesis (`references/research-synthesis.md`). Existing LI/IG outreach + responder skills now reference this. Say "draft a DM", "how do I respond to [objection]", "prep me for a sales call", "write a discovery call script", "pitch my AI automation offer", "convert this lead", "what's my opener", or paste a live DM thread and ask "what now"
 - **Deep Research** (`.claude/skills/deep-research/`) — Context-aware research via OpenAI. Say "research [topic]" or force mode with "deep research..." / "quick search..." / "lite research..."
