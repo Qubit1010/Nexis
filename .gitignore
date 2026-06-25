@@ -65,6 +65,20 @@ decisions/
 # University files (assignments, coursework, private)
 university/
 
+# Client project files (confidential)
+client-projects/
+
+# Model configs (local, not shared)
+.claude/glm/
+.claude/default/
+.claude/deepseek-v4-flash/
+.claude/deepseek-v4-pro/
+.claude/open-models/
+
+# Docs and references (large files, local only)
+/docs/
+/references/
+
 # Personal/sensitive files
 **/context.rar
 **/nexuspoint-landing-page-copy.md

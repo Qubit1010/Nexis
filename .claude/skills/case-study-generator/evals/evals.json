@@ -1,0 +1,23 @@
+{
+  "skill_name": "case-study-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a case study for the Content Engine. It pulls ideas from the daily news brief and YouTube, scores them with opportunity scores, researches with OpenAI web search, writes finished content for LinkedIn, Instagram, and blog, and repurposes via flywheel (Blog -> LinkedIn + Instagram). Built by NexusPoint. Powered by Next.js, OpenAI, Google Workspace, Sheets API. Logs everything to Google Sheets and saves content to Google Docs.",
+      "expected_output": "A complete case study saved to docs/content-engine-case-study.md following the format: title, metadata, 4 numbered problems, what it is, pipeline steps, feature table, cost breakdown, architecture, walkthrough, prospect takeaway, footer. No invented numbers — gaps flagged.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write up the Reel Creator as a case study. It's a skill that turns infographic posts into 40-50s vertical motion-graphics reels with ElevenLabs voiceover synced to brand animation. Built with Remotion (React), Whisper for transcription, ElevenLabs for TTS. Two phases: author voice script + scene content.json, then after voiceover is recorded, transcribe, align scenes, render mp4. Has a preflight QA gate that auto-fixes caption/audio/timeline defects. Built by NexusPoint.",
+      "expected_output": "A complete case study saved to docs/reel-creator-case-study.md following the format. Should handle the 'skill' context (not a standalone project) gracefully. Two-phase pipeline clearly described. QA gate mentioned. No invented numbers.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I need a case study for a client project. We built a real-time inventory dashboard for a retail chain called StockWise. It pulls data from their POS systems, Shopify, and warehouse scanners, runs demand forecasting with a lightweight ML model, and shows low-stock alerts and reorder recommendations. Built by NexusPoint for StockWise. Tech: Python, FastAPI, React, PostgreSQL, Redis for caching. It processes about 50,000 inventory movements per day and reduced stockouts by 34% in the first month. The dashboard updates every 30 seconds. Make it a case study.",
+      "expected_output": "A complete case study saved to docs/stockwise-inventory-dashboard-case-study.md. Client project context handled correctly (Built by NexusPoint for StockWise). Real numbers used (50K movements/day, 34% reduction, 30s updates). Follows the full format including prospect takeaway adapted for client project context.",
+      "files": []
+    }
+  ]
+}

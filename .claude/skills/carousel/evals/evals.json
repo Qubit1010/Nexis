@@ -1,0 +1,23 @@
+{
+  "skill_name": "carousel",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Turn this into a carousel. Description: a punchy post about why most AI automations fail at the handoff between the LLM and the existing tools. Source: an article arguing the bottleneck is rarely the model, it is the brittle glue code connecting the model to the CRM, inbox, and database. Want 6 slides.",
+      "expected_output": "Asks for brand style + slide count via AskUserQuestion, builds a 6-slide brief with a hook-only cover (<=8 words), body slides (<=15 words, one idea each), value-native CTA last, gates on approval, then outputs 6 numbered Gemini prompts at 1080x1350 4:5.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "build an instagram carousel from this. Description: I tried 5 note-taking apps and the one that stuck was the ugliest. Source: my newsletter section about how Notion fatigue is real, Obsidian's local-first model wins for makers, and the lesson is friction beats features. 8 slides.",
+      "expected_output": "Runs the full flow: brand-style question, 8-slide brief with hook cover and personal-tone body (I tried / I noticed), value CTA, approval gate, 8 Gemini prompts. No emojis, no em dashes.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "carousel for this: a framework for saying no to scope creep without losing the client. Source: a Sandler-style pain-funnel post - acknowledge, reframe to the original scope, offer a paid change order. Make it 6 slides.",
+      "expected_output": "Full flow on framework content: brand-style question, 6-slide brief distilling the 3-step framework into one-idea-per-slide, hook cover, paid-change-order CTA, approval gate, 6 Gemini prompts at 1080x1350.",
+      "files": []
+    }
+  ]
+}

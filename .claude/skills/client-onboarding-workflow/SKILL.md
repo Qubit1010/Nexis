@@ -1,11 +1,14 @@
 ---
 name: client-onboarding-workflow
 description: >
-  Spin up a complete client onboarding kit when a NexusPoint deal is signed: a Drive folder
-  structure, an onboarding Google Doc, a project checklist Google Sheet tailored to the
-  project type, and a Gmail draft of the welcome email (saved as draft, not sent). Reads a
-  prior proposal or discovery doc to pre-fill the kit, or takes inline intake when no doc
-  exists.
+  Two phases for running a NexusPoint client. PHASE 1 (Onboarding Kit): spin up a complete
+  onboarding kit when a deal is signed: a Drive folder structure, an onboarding Google Doc,
+  a project checklist Google Sheet tailored to the project type, and a Gmail draft of the
+  welcome email (saved as draft, not sent). Reads a prior proposal or discovery doc to
+  pre-fill the kit, or takes inline intake when no doc exists. PHASE 2 (Project Workspace):
+  a standalone step that processes the client's source docs into a confidential local
+  project command center under `client-projects/<client-slug>/` (overview, what they want,
+  Aleem's role and rules, a live task board, the client's bottlenecks, and improvement ideas).
 
   Use this skill whenever Aleem says or implies "we just closed [client]", "onboard
   [client]", "set up onboarding for [client]", "kick off the [project]", "we signed
@@ -14,6 +17,10 @@ description: >
   "let's get them going". Also trigger when Aleem references a closed deal moving into
   delivery, even if he doesn't use the word "onboarding". Lean toward triggering when in
   doubt: this is the post-close workflow and Aleem won't always name it.
+
+  For PHASE 2 specifically, also trigger on "build the project workspace for [client]",
+  "set up the project board for [client]", "process the [client] docs into a workspace",
+  "make a project command center for [client]", or "turn these client docs into a workspace".
 
   Don't trigger for: prospect research before a deal closes (use discovery-call-prep),
   proposal writing (use proposal-generator), or onboarding existing clients into a
@@ -42,11 +49,27 @@ Read these before generating any artifacts:
   no emojis, under 200 words, 5-beat structure)
 - `context/team.md` — for owner assignments in the timeline table
 - `context/work.md` — for service categories that map to project types
+- `references/project-workspace-templates.md` — Phase 2 only: the local workspace spec
 
 Also recall: Memory `feedback_google_docs_encoding.md` — never use em dashes in any
 Doc/Sheet content (use commas or periods).
 
-## Workflow
+## Two phases
+
+This skill has two phases that run independently:
+
+- **Phase 1: Onboarding Kit** — the day-1 client-facing kit (Drive folders, onboarding Doc,
+  checklist Sheet, welcome email draft). Runs when a deal is signed.
+- **Phase 2: Project Workspace** — a standalone, internal command center for running the
+  engagement, written to the confidential local `client-projects/<client-slug>/` folder.
+  Runs when Aleem is ready to start managing the project, decoupled from signing day.
+
+Route to the phase the request implies. "Onboard [client]" / "we signed [client]" is
+Phase 1. "Build the project workspace / project board for [client]", "process the [client]
+docs into a workspace" is Phase 2. If both are wanted, run Phase 1 first so its Drive URLs
+can be linked from the Phase 2 README.
+
+## Phase 1: Onboarding Kit
 
 ### Step 1: Resolve input
 
@@ -234,6 +257,114 @@ Review the draft in Gmail before sending. The kit is in `NexusPoint Clients / [C
 
 No editorializing, no recap of what was in the proposal. Aleem already knows.
 
+## Phase 2: Project Workspace (standalone)
+
+A standalone phase that turns the client's source docs into a confidential local project
+command center: the strategic layer Aleem actually runs the engagement from. It is separate
+from the Phase 1 Drive kit and runs on its own trigger, not automatically after onboarding.
+
+Output is a multi-file markdown workspace in `client-projects/<client-slug>/`, which is
+gitignored and confidential. Two of the files (bottlenecks, improvements) are internal-only
+and never get pushed to the client Drive. No new script is needed: you author these local
+files directly.
+
+Read `references/project-workspace-templates.md` first. It holds the file layout, the
+per-file skeletons, the authoring rules, the `<client-slug>` rule, and the README hub format.
+
+### Step 1: Resolve client and locate source docs
+
+Identify the client and find their source material. Sources, in order of preference:
+1. A Google Doc URL or ID Aleem points to (proposal, onboarding guide, call transcript).
+2. The client's Drive folder (often under `NexusPoint Clients / [Client]`, or a docs folder
+   Aleem names). Locate the relevant docs inside it.
+
+Pull each doc's text with `python .claude/skills/client-onboarding-workflow/scripts/extract_proposal.py "<url_or_id>"`.
+If you cannot find or read the source docs, ask Aleem where they are before proceeding.
+Do not fabricate the workspace from nothing.
+
+### Step 2: Compute the slug and create the folder
+
+Compute `<client-slug>` per the rule in the templates reference ("Belle & Perry" ->
+`belle-perry`). Create `client-projects/<client-slug>/` if it does not exist. Reuse it if it
+does.
+
+### Step 3: Author the workspace files
+
+Write README.md plus the six `0X-*.md` files using the skeletons in
+`references/project-workspace-templates.md`, synthesizing everything from the source docs.
+
+- Ground every claim in the docs. Mark anything not in the docs as `TBD - confirm on kickoff`.
+- House style: no em dashes, no emojis, direct and specific.
+- Seed `04-task-board.md` from the Phase 1 checklist stages and current reality (kit done,
+  kickoff/access pending, etc.).
+- In README.md, link the Drive kit URLs from the Phase 1 orchestrator output. If Phase 1 has
+  not run for this client, set those three links to `TBD - run onboarding kit` and note it.
+- Keep `05-bottlenecks.md` and `06-improvements.md` internal. Never copy them to the client
+  Drive.
+
+### Step 4: Report
+
+Use the report format at the bottom of `references/project-workspace-templates.md`: list the
+files written, note the folder is gitignored and confidential, and that bottlenecks and
+improvements are internal-only.
+
+## Phase 3: Task Progress (mark done + guide next step)
+
+A lightweight, standalone operation that keeps the local task board and the Drive checklist
+Sheet in sync whenever a task is completed, and tells Aleem what to do next.
+
+Trigger phrases: "we finished [task]", "mark [task] done", "we had the [meeting/call/session]
+and [outcome]", "we got [access/asset]", "done with [task]", "what's my next task for [client]".
+
+### How it runs
+
+**Step 1: Identify what is done.**
+Parse Aleem's message to understand which task(s) have been completed. Match against tasks
+in `client-projects/<client-slug>/04-task-board.md` — fuzzy-match on keywords
+("kickoff call" matches "Schedule and run the kickoff call", "Slack access" matches
+"Get Slack access and channel invites", etc.).
+
+**Step 2: Update the local task board.**
+In `04-task-board.md`:
+- Move each completed task from its current section to the `## Done` section.
+- Change `- [ ]` to `- [x]` on each completed task.
+- If the task was the only item in `## In progress`, promote the first item in `## Next`
+  to `## In progress`.
+- Update `Last updated: YYYY-MM-DD` to today.
+
+**Step 3: Update the Drive checklist Sheet.**
+Read the checklist spreadsheet ID from the README.md Drive kit links (the `checklist_sheet_url`
+line). Row numbers: the Sheet header is row 1, tasks start at row 2. Match the task name
+to the correct row and update column E (Status) to `"Done"` using:
+```
+gws sheets spreadsheets values batchUpdate \
+  --params '{"spreadsheetId":"<ID>"}' \
+  --json '{"valueInputOption":"USER_ENTERED","data":[{"range":"Sheet1!E<ROW>","values":[["Done"]]}]}'
+```
+If the sheet ID is unknown, ask Aleem for the spreadsheet URL before updating.
+
+Also update the README.md **Status** line to reflect the new current state.
+
+**Step 4: Identify and surface the next task.**
+Look at `## In progress` after the update. If it has items, the first one is the active task.
+If `## In progress` is empty, the first item in `## Next` is what should be started now.
+
+Report in this format:
+
+```
+**[Client] task update**
+
+Done:
+- [x] Kickoff call (60 min)
+- [x] Get Slack access and channel invites
+
+Next up: Collect 3-5 real sample transcripts (stage: Discovery)
+[One sentence on what this involves and why it unblocks the rest of Discovery]
+```
+
+Keep the guidance sentence concrete: what to collect, who to ask, or what specifically to do,
+based on what the skill already knows about the client from the workspace docs.
+
 ## Edge cases
 
 - **No proposal doc + sparse intake** ("we signed Acme"): Ask the 5 intake questions
@@ -259,10 +390,19 @@ No editorializing, no recap of what was in the proposal. Aleem already knows.
 
 ## Quality bar
 
-Before reporting back, verify:
+**Phase 1**, before reporting back, verify:
 - The onboarding doc has all 6 sections
 - The checklist has at least 10 rows for web/full-stack/SaaS, at least 8 for CMS/AI/data
 - The email is under 200 words, has no em dashes, no emojis, no "I hope this finds you
   well", and references something specific from the proposal
 - The "What we need from you" section has 3-6 concrete items, not 10+ (overwhelming)
 - All four URLs are real and load
+
+**Phase 2**, before reporting back, verify:
+- `client-projects/<client-slug>/` contains README.md plus the six `0X-*.md` files, all
+  non-empty
+- Every claim is grounded in the source docs. Unknowns read `TBD - confirm on kickoff`, not
+  invented facts
+- No em dashes, no emojis anywhere in the files
+- `client-projects/` is gitignored, and nothing from `05-bottlenecks.md` /
+  `06-improvements.md` is copied to the client Drive
