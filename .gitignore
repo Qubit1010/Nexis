@@ -62,6 +62,9 @@ archives/
 # Decision log (private/sensitive)
 decisions/
 
+# Research source indexes (large, regenerable)
+**/_research/sources.json
+
 # University files (assignments, coursework, private)
 university/
 
