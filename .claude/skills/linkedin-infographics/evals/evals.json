@@ -1,0 +1,20 @@
+{
+  "skill": "linkedin-infographics",
+  "evals": [
+    {
+      "id": "tools-by-use-case",
+      "prompt": "Make a LinkedIn infographic of the top AI tools by use case for marketers. Source: ChatGPT and Claude for copy, Midjourney for images, HeyGen for video, Perplexity for research, Buffer for scheduling, Jasper for ads, Surfer for SEO, Zapier and Make for automation.",
+      "expected_output": "Recommends LinkedIn-Template-1 (bento round-up). Maps the source into 9-12 category cards (each with a 1-3 word pill, 1-3 real-logo tools, and a one-line description), derives an accurate 'N ...' title, marks wide vs narrow cards and one featured teal pill, presents the content map as a numbered list, and stops at the approval gate before emitting any prompt. After approval, outputs exactly ONE Gemini image prompt that renders the whole 1080x1350 infographic in a single image (not a carousel, not multiple prompts), with real brand logos and legible text."
+    },
+    {
+      "id": "framework-to-bento",
+      "prompt": "Turn this 7-step client onboarding framework into a bento infographic: 1 Discovery call, 2 Proposal, 3 Contract, 4 Kickoff, 5 Build, 6 Review, 7 Handoff.",
+      "expected_output": "Uses LinkedIn-Template-1. Maps the 7 steps into 7 cards (pill = step name, body = a short description; logos optional since these are steps not tools), title like '7 Steps to ...', balances the grid with wide/narrow cards, presents the content map, and gates on approval. After approval emits ONE single-image 1080x1350 prompt. Does not fabricate brand logos for non-tool steps. No emojis, no em dashes."
+    },
+    {
+      "id": "onboard-new-template",
+      "prompt": "Here is a new reference infographic in docs/LinkedIn-Template-2/. Extract its design and set it up as a template.",
+      "expected_output": "Enters Phase A (onboard a template). Reads the reference image, extracts design DNA (canvas, title, grid logic, card anatomy, palette hexes, type stack, identity), strips any source handle to @{{HANDLE}}, and creates references/LinkedIn-Template-2/ with the 4 files (design-structure.md, gem.md with single-image OUTPUT FORMAT, input-prompt.md, example-post.md). Adds the new template to the SKILL.md Templates list and leaves the source image in docs/."
+    }
+  ]
+}
