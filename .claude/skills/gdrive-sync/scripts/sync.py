@@ -53,6 +53,7 @@ SYNC_FOLDERS = [
     "client-projects",
     "context",
     "decisions",
+    "docs",
     "logs",
     "references",
 ]

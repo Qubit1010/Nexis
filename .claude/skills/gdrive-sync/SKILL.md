@@ -25,6 +25,7 @@ Two-way sync between Nexis private folders and **Work / Nexis Business Context**
 | `client-projects/` | Nexis Business Context/client-projects/ |
 | `context/` | Nexis Business Context/context/ |
 | `decisions/` | Nexis Business Context/decisions/ |
+| `docs/` | Nexis Business Context/docs/ |
 | `logs/` | Nexis Business Context/logs/ |
 | `references/` | Nexis Business Context/references/ |
 
