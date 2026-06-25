@@ -10,6 +10,19 @@ description: >
 
 # Instagram Carousel
 
+## Templates (preferred path)
+
+Reusable design templates live in `references/<Template>/`. Each has a `design-structure.md`
+(the spec), a `gem.md` (a Gemini Gem to build once), and an `input-prompt.md` (the per-post fill).
+
+- **Instagram-Template-1** (`references/Instagram-Template-1/`) — blue-gradient statue cover +
+  terracotta editorial body slides. Source images in `docs/Instagram-Template-1/`.
+
+When a template fits the user's ask, recommend it: tell them to build the Gem once from `gem.md`
+(attach the 4 Knowledge images), then use `input-prompt.md` per post so Gemini renders the slides
+in that exact look, one slide at a time (cover first, then "next" for each following slide). The inline brief + per-slide prompt flow below (Steps 1-4) is the fallback when
+no template applies or the user wants a one-off custom design.
+
 ## Auto-start on load
 
 When this skill triggers, go straight to Step 1. Do not summarise.
