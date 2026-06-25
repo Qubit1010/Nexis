@@ -65,6 +65,16 @@ decisions/
 # Research source indexes (large, regenerable)
 **/_research/sources.json
 
+# GDrive sync: OAuth token + local folder ID cache (machine-specific)
+**/gdrive_token.json
+**/folder_ids.json
+
+# Eval workspaces (large run outputs, not needed in repo)
+**/*-workspace/
+
+# Impeccable cache files
+**/.impeccable/
+
 # University files (assignments, coursework, private)
 university/
 

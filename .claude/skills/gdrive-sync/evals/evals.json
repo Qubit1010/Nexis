@@ -1,0 +1,165 @@
+{
+  "skill_name": "gdrive-sync",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "sync to Drive",
+      "expected_output": "Claude detects folder_ids.json is missing, runs --setup first, then --push for all 7 folders, reports upload summary.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "runs-setup-when-no-ids",
+          "description": "Runs --setup before --push when folder_ids.json is missing",
+          "type": "contains",
+          "value": "--setup"
+        },
+        {
+          "id": "runs-push-all-folders",
+          "description": "Runs --push to upload all folders",
+          "type": "contains",
+          "value": "--push"
+        },
+        {
+          "id": "covers-all-7-folders",
+          "description": "Mentions or implies all 7 sync folders are covered",
+          "type": "regex",
+          "value": "(all folder|archives|client-projects|decisions)"
+        },
+        {
+          "id": "reports-summary",
+          "description": "Mentions upload counts or a sync summary",
+          "type": "regex",
+          "value": "(uploaded|updated|skipped|synced|summary)"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "back up my decisions and context folders to Drive",
+      "expected_output": "Claude uses --folder flag for both decisions and context specifically, skips --setup (already done), reports per-folder results.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "uses-folder-flag",
+          "description": "Uses --folder to target specific folders rather than pushing everything",
+          "type": "contains",
+          "value": "--folder"
+        },
+        {
+          "id": "targets-decisions",
+          "description": "Explicitly targets the decisions folder",
+          "type": "contains",
+          "value": "decisions"
+        },
+        {
+          "id": "targets-context",
+          "description": "Explicitly targets the context folder",
+          "type": "contains",
+          "value": "context"
+        },
+        {
+          "id": "no-setup-when-ids-exist",
+          "description": "Does NOT run --setup since folder_ids.json exists",
+          "type": "not_contains",
+          "value": "--setup"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "check if Drive has any files I don't have locally",
+      "expected_output": "Claude runs --check, lists the 3 simulated files (2 Drive-only + 1 Drive-newer), distinguishes between the two types, asks whether to pull.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "runs-check-mode",
+          "description": "Uses --check flag (not --push)",
+          "type": "contains",
+          "value": "--check"
+        },
+        {
+          "id": "lists-drive-only-files",
+          "description": "Reports the Drive-only files",
+          "type": "regex",
+          "value": "(Drive-only|only on Drive|not local|missing locally)"
+        },
+        {
+          "id": "reports-drive-newer-file",
+          "description": "Reports the Drive-newer file (context/me.md)",
+          "type": "regex",
+          "value": "(Drive.newer|newer on Drive|Drive version|me\\.md)"
+        },
+        {
+          "id": "asks-to-pull",
+          "description": "Asks user whether to pull the Drive files locally",
+          "type": "regex",
+          "value": "(pull|download|bring.*(local|down)|want me to)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "set up Drive sync for the first time",
+      "expected_output": "Claude runs --setup, describes creating Work/Nexis Business Context structure, confirms IDs are saved, offers initial push.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "runs-setup-command",
+          "description": "Runs --setup command",
+          "type": "contains",
+          "value": "--setup"
+        },
+        {
+          "id": "mentions-drive-folder-name",
+          "description": "Mentions the Nexis Business Context folder name",
+          "type": "contains",
+          "value": "Nexis Business Context"
+        },
+        {
+          "id": "mentions-ids-saved",
+          "description": "Confirms folder IDs are saved locally",
+          "type": "regex",
+          "value": "(folder.id|ids saved|folder_ids)"
+        },
+        {
+          "id": "offers-initial-push",
+          "description": "Offers to run an initial push after setup",
+          "type": "regex",
+          "value": "(initial push|push.*now|sync.*now|want.*push|run.*push)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "set up weekly automatic sync to Drive",
+      "expected_output": "Claude runs --schedule-weekly, confirms NexisGDriveSync task is registered for every Sunday at 9am, mentions --unschedule to remove.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "runs-schedule-weekly",
+          "description": "Uses --schedule-weekly flag",
+          "type": "contains",
+          "value": "--schedule-weekly"
+        },
+        {
+          "id": "mentions-task-name",
+          "description": "Mentions the NexisGDriveSync task name",
+          "type": "contains",
+          "value": "NexisGDriveSync"
+        },
+        {
+          "id": "mentions-sunday-schedule",
+          "description": "Mentions Sunday 9am schedule",
+          "type": "regex",
+          "value": "(Sunday|9am|9:00)"
+        },
+        {
+          "id": "mentions-unschedule",
+          "description": "Mentions --unschedule for removing the job",
+          "type": "contains",
+          "value": "--unschedule"
+        }
+      ]
+    }
+  ]
+}
