@@ -17,6 +17,10 @@ Reusable design templates live in `references/<Template>/`. Each has a `design-s
 
 - **Instagram-Template-1** (`references/Instagram-Template-1/`) — blue-gradient statue cover +
   terracotta editorial body slides. Source images in `docs/Instagram-Template-1/`.
+- **Instagram-Template-2** (`references/Instagram-Template-2/`) — cinematic dark film-grain cover
+  + CTA (deep red/maroon photo) with clean cream dot-grid body slides. Mixed bold-sans + italic-serif
+  headlines, hand-drawn arrow annotations, screenshot visuals. Comment-to-DM CTA mechanic.
+  Source images in `docs/Instagram-Template-2/`.
 
 When a template fits the user's ask, recommend it: tell them to build the Gem once from `gem.md`
 (attach the 4 Knowledge images), then use `input-prompt.md` per post so Gemini renders the slides
