@@ -27,6 +27,14 @@ Reusable design templates live in `references/<Template>/`. Each has a `design-s
   pill. Dark-gradient CTA with dotted-border pixelated keyword pill and "Comment -> DM" mechanic.
   Best for: top-N tool lists, GitHub repo showcases, AI skill packs, plugins, frameworks.
   Source images in `docs/Instagram-Template-6/`.
+- **Instagram-Template-10** (`references/Instagram-Template-10/`) — GitHub repo / plugin showcase
+  format. Two visual registers: cinematic dark navy cover with a large 3D plush mascot + multicolor
+  heavy headline (pink + amber + white); cream dot-grid editorial body slides with ultra-heavy black
+  headline, inline screenshot embed, "Why it matters" body text, two tag pills, and an italic serif
+  punchline quote. Cream CTA with massive stacked all-caps "COMMENT [KEYWORD] FOR THE [PAYOFF]."
+  mechanic. No handle on body or CTA -- identity only on the cover. Best for: curated plugin lists,
+  GitHub repo roundups, open-source tool showcases where each item has a URL and a metric.
+  Source images in `docs/Instagram-Template-10/`.
 
 When a template fits the user's ask, recommend it: tell them to build the Gem once from `gem.md`
 (attach the 4 Knowledge images), then use `input-prompt.md` per post so Gemini renders the slides
