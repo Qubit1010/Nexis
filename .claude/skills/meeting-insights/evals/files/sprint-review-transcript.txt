@@ -1,0 +1,36 @@
+Sprint Review — June 26, 2026
+Attendees: Aleem, Areeba, Muzammil
+
+Aleem: Let's do a quick sprint review. Areeba, how did the portfolio site go?
+
+Areeba: Launched Tuesday. Client is happy but there's a bug — the mobile nav menu doesn't close when you tap outside it. Wasn't blocking launch but I need to fix it.
+
+Aleem: Can you get that done by Tuesday next week?
+
+Areeba: Yeah, no problem.
+
+Aleem: Muzammil, staging environment?
+
+Muzammil: Still not set up. Had some server config issues. I'll have it done Thursday at the latest.
+
+Aleem: Thursday works — we need it for the Acme project kickoff the week after. Okay, tech stack: I've been going back and forth on Framer vs Next.js for the next project. Decision is Next.js going forward. More control, better fit for the AI integrations we're planning.
+
+Areeba: On board with that.
+
+Muzammil: Agreed.
+
+Aleem: Also — the AI chatbot feature scoped for the BrightPath project. Pushing that to v2. The MVP doesn't need it and it would push us past the deadline.
+
+Areeba: Makes sense.
+
+Aleem: Two Upwork proposals went out this week, no responses yet but it's only been 2 days. And just a heads-up — Acme onboarding call is next Monday at 10am. Both of you need to be on it.
+
+Areeba: Confirmed.
+
+Muzammil: I'll be there.
+
+Aleem: That's it. Any questions?
+
+Areeba: None.
+
+Muzammil: All good.

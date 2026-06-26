@@ -1,0 +1,58 @@
+[
+  {
+    "query": "here's the transcript from my call with BrightPath this morning — can you extract the key insights and action items",
+    "should_trigger": true
+  },
+  {
+    "query": "process this meeting transcript",
+    "should_trigger": true
+  },
+  {
+    "query": "log this meeting from today's sprint review",
+    "should_trigger": true
+  },
+  {
+    "query": "turn this into meeting notes",
+    "should_trigger": true
+  },
+  {
+    "query": "I just had a discovery call, here's the recording transcript — summarize it",
+    "should_trigger": true
+  },
+  {
+    "query": "extract action items and decisions from this call",
+    "should_trigger": true
+  },
+  {
+    "query": "meeting notes for the vendor call we just had",
+    "should_trigger": true
+  },
+  {
+    "query": "can you pull the takeaways from this transcript",
+    "should_trigger": true
+  },
+  {
+    "query": "write a blog post about AI automation for small businesses",
+    "should_trigger": false
+  },
+  {
+    "query": "help me write a proposal for a new client",
+    "should_trigger": false
+  },
+  {
+    "query": "what are my top priorities this week",
+    "should_trigger": false
+  },
+  {
+    "query": "create a cold email sequence for SaaS founders",
+    "should_trigger": false
+  },
+  {
+    "query": "audit this website and give me a quick report",
+    "should_trigger": false
+  },
+  {
+    "query": "what should I post on LinkedIn today",
+    "should_trigger": false
+  }
+]

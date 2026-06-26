@@ -1,0 +1,28 @@
+{
+  "skill_name": "meeting-insights",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Process this transcript from my discovery call with Mark at BrightPath Digital today:\n\n[00:00] Aleem: Thanks for the time Mark. Tell me what you're trying to solve.\n\n[00:15] Mark: Our lead intake is completely manual. Someone copies every form submission into a spreadsheet and sends a follow-up email by hand. It takes 3 to 4 hours a day across the team.\n\n[01:02] Aleem: How many leads per day roughly?\n\n[01:10] Mark: Usually 40 to 60. Peak season hits 120 — that's when it breaks down. Leads don't get followed up for 2 or 3 days.\n\n[02:30] Aleem: What's your current stack?\n\n[02:38] Mark: Google Forms for intake, a Google Sheet someone manually updates, and Gmail for follow-ups. No CRM yet — we've been thinking about HubSpot but haven't pulled the trigger.\n\n[03:45] Aleem: I'd automate the whole intake-to-follow-up flow with n8n. Form submission triggers automatic sheet update, lead scoring, and a personalized email — all within 5 minutes. If you go with HubSpot we can push to that too.\n\n[04:30] Mark: What about Salesforce? Our parent company uses it and they've been pushing us to migrate.\n\n[04:45] Aleem: Doable but adds complexity and cost. Worth knowing how firm that requirement is before we scope it.\n\n[05:15] Mark: I'll need to check with HQ. I have a call with them next week.\n\n[05:30] Aleem: I'll send a proposal with two options — one HubSpot, one Salesforce — so you can see the cost difference. I'll have it to you by Thursday.\n\n[06:00] Mark: We'd want this live before end of July. Peak season starts August 1st.\n\n[06:20] Aleem: Tight but doable if we decide quickly. Can you confirm your budget ceiling with your team and come back to me by Friday?\n\n[06:35] Mark: Sure. I'll come back by Friday.\n\n[07:00] Aleem: I'll also need read access to your current Google Sheet so I can understand the data structure before building.\n\n[07:15] Mark: I'll share it after this call.",
+      "expected_output": "A markdown file at docs/meetings/2026-MM-DD-brightpath*.md (or similar slug) with: Client Problem section mentioning manual intake and 3-4 hours, Key Points capturing the volume numbers and stack details, Workflows section describing the current Google Forms to Sheet to Gmail flow, Action Items for both Aleem (send proposal by Thursday) and Mark (share Sheet access + confirm budget by Friday), Open Questions including whether Salesforce is required, and Next Steps. No invented content. No empty sections.",
+      "files": [],
+      "expectations": []
+    },
+    {
+      "id": 2,
+      "prompt": "Log the notes from our sprint review this morning. Transcript is at .claude/skills/meeting-insights/evals/files/sprint-review-transcript.txt",
+      "expected_output": "A markdown file at docs/meetings/2026-06-26-sprint-review.md (or similar). Decisions section includes both decisions (Next.js going forward, AI chatbot pushed to v2). Action items for Areeba (fix mobile nav by Tuesday) and Muzammil (staging environment by Thursday). Key Points captures the Upwork proposals and Acme call. No Client Problem section (internal meeting). No empty sections or None placeholders.",
+      "files": [
+        "evals/files/sprint-review-transcript.txt"
+      ],
+      "expectations": []
+    },
+    {
+      "id": 3,
+      "prompt": "Here are rough notes I jotted during a Make.com vendor call last Tuesday June 24th. Turn these into proper meeting notes:\n\n- Make.com consultation, spoke with James (solutions engineer)\n- They showed the new HTTP module + webhook retry logic — looks solid\n- Pricing: Core $9/mo (10k ops), Pro $16/mo (40k ops), Teams $29/mo\n- Our usage: ~8000 ops/month normally, peaks to ~22k during outreach pushes\n- Pro plan makes more sense at peak, Core covers baseline\n- AI module integrates with OpenAI, Anthropic, Gemini — runs directly in Make, no custom code\n- Could replace some of the lead scoring Python logic\n- James offered a 14-day Pro trial at no cost\n- Need to evaluate: move some n8n flows to Make or keep both running\n- Main question: is Make's error handling good enough for the CRM sync flows we have in n8n?\n- James said they have a dedicated error handling module but I didn't see it\n- Follow-up call with James scheduled next Thursday to demo the error handling module",
+      "expected_output": "A markdown file at docs/meetings/2026-06-24-makecom-vendor-call.md (or similar). Key Points captures the AI module integration and pricing tiers. Next Steps or Action Items includes the follow-up call with James next Thursday. General Notes or Key Points covers the build-vs-buy question about n8n vs Make. Open Questions includes the error handling concern. No invented content beyond what's in the notes. Date should reflect June 24th.",
+      "files": [],
+      "expectations": []
+    }
+  ]
+}
