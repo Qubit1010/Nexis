@@ -1,0 +1,32 @@
+{
+  "skill_name": "podcast-repurposer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Repurpose this podcast into short-form content for Brenda Thompson, all 4 templates, then tell me which method wins. Transcript: docs/Belle & Perry/Transcripts/BT-HSS POD-EP35.md --client brenda-thompson --template all",
+      "expected_output": "Four candidate-set markdown files under output/brenda-thompson/bt-hss-pod-ep35/ (01-04), each with 3-5 segments and per segment: 5 hooks, 3 A/B captions, 3-5 long-form LinkedIn/FB posts, real timestamps, no em dashes/buzzwords/emojis. Plus a comparison.md scoring all 4 on the rubric with a recommended winner/hybrid.",
+      "files": ["docs/Belle & Perry/Transcripts/BT-HSS POD-EP35.md"],
+      "assertions": [
+        {"id": 1, "text": "Produces 4 output files, one per template (01-04)"},
+        {"id": 2, "text": "Each template yields 3-5 segments with real MM:SS timestamps from the transcript"},
+        {"id": 3, "text": "Each segment has exactly 5 hooks, 3 captions, and 3-5 long-form posts"},
+        {"id": 4, "text": "Zero em dashes and zero buzzwords (game-changer/leverage/unlock/dive into/seamlessly) across all output"},
+        {"id": 5, "text": "No emojis (Red knob default OFF)"},
+        {"id": 6, "text": "No 'listen to the full episode' as the only CTA; pieces are self-contained"},
+        {"id": 7, "text": "Template 3 captions/posts genuinely differ across Instagram/LinkedIn/Facebook"},
+        {"id": 8, "text": "comparison.md scores all 4 on the 5 rubric dimensions and names a winner or hybrid"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Run just the marketing-advisor template on docs/Belle & Perry/Transcripts/BT-HSS POD-EP35.md for brenda-thompson.",
+      "expected_output": "One file output/brenda-thompson/bt-hss-pod-ep35/04-marketing-advisor.md following the output spec, with the template-04 signature: target word-count per segment (~75 words/30s) and a suggested tighter 15-45s in-point, hooks using Mystery/Mistake/Exclusivity/Transformation.",
+      "files": ["docs/Belle & Perry/Transcripts/BT-HSS POD-EP35.md"],
+      "assertions": [
+        {"id": 1, "text": "Single template-04 output file produced"},
+        {"id": 2, "text": "Notes target word density and a tighter in-point per segment"},
+        {"id": 3, "text": "Hooks use the research-backed formulas (Mystery/Mistake/Exclusivity/Transformation)"}
+      ]
+    }
+  ]
+}
