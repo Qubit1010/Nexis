@@ -14,6 +14,9 @@ description: >
   - Repurpose any long-form audio/video transcript into platform content at higher volume
   - Onboard a new podcast client into the repurposing system (build their main voice file)
 
+  Also handles: "export to PDF", "convert output to PDF", "save as PDF" — runs scripts/md_to_pdf.py
+  on any output file(s) and writes a .pdf next to each .md.
+
   Always trigger when a podcast/long-form transcript needs to become multiple short-form pieces,
   even if the user doesn't say "skill". This is the text layer (segments, hooks, captions, posts);
   actual clip cutting stays in the editor (Riverside/Canva).
@@ -64,6 +67,23 @@ on a new client, then switch to Template 05 once the method is confirmed.
 - One markdown file per template under `output/<slug>/<episode-slug>/`.
 - When running all 4: also a `comparison.md` with the scorecard + recommendation.
 - `output/` is gitignored (client work).
+
+## Export to PDF
+
+When asked to "export to PDF", "save as PDF", "convert to PDF", or "make a PDF" of any output file(s), run:
+
+```powershell
+python .claude/skills/podcast-repurposer/scripts/md_to_pdf.py <target>
+```
+
+Where `<target>` is one of:
+- A specific file: `output/brenda-thompson/bt-hss-pod-ep35/05-hybrid.md`
+- An episode folder: `output/brenda-thompson/bt-hss-pod-ep35/`
+- A client folder: `output/brenda-thompson/`
+- All outputs: `output/`
+
+The script writes a `.pdf` next to each `.md` file. Requires `fpdf2` (`pip install fpdf2`).
+Run from the skill root: `c:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\podcast-repurposer\`.
 
 ## Onboarding a new client (building a main voice file)
 
