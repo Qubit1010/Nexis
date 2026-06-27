@@ -21,6 +21,7 @@ globs:
 
 ## General Rules
 - No emojis unless explicitly asked
-- No em dashes in external content (use commas or periods instead)
+- No em dashes in paragraph body text (internal or external) — use commas or periods instead
+- Em dashes are allowed in headings and subheadings
 - Concise > comprehensive. If it can be shorter, make it shorter.
 - When presenting options or analysis, lead with the recommendation

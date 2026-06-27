@@ -56,6 +56,7 @@ SYNC_FOLDERS = [
     "docs",
     "logs",
     "references",
+    ".claude/rules",
 ]
 
 WORK_FOLDER_NAME = "Work"

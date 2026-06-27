@@ -9,6 +9,7 @@ After adding or modifying files in any of these folders, ask whether to sync to 
 - `decisions/`
 - `logs/`
 - `references/`
+- `.claude/rules/`
 
 **Question to ask (one line, at the end of the response):**
 
