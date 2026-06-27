@@ -20,6 +20,7 @@ import {
   CalendarDays,
   X,
   Wrench,
+  Youtube,
 } from "lucide-react";
 import {
   isToday,
@@ -72,11 +73,13 @@ function groupByDate(dates: BriefDate[]): DateGroup[] {
 export function Sidebar() {
   const [dates, setDates] = useState<BriefDate[]>([]);
   const [toolDates, setToolDates] = useState<BriefDate[]>([]);
+  const [youtubeDates, setYoutubeDates] = useState<BriefDate[]>([]);
   const [lookups, setLookups] = useState<
     { id: number; tool: string; days: number }[]
   >([]);
   const [generating, setGenerating] = useState(false);
   const [generatingTools, setGeneratingTools] = useState(false);
+  const [generatingYoutube, setGeneratingYoutube] = useState(false);
   const [elapsed, setElapsed] = useState(0);
   const [searchOpen, setSearchOpen] = useState(false);
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
@@ -92,6 +95,9 @@ export function Sidebar() {
     : null;
   const currentToolDate = pathname.startsWith("/tools/")
     ? pathname.split("/tools/")[1]
+    : null;
+  const currentYoutubeDate = pathname.startsWith("/youtube/")
+    ? pathname.split("/youtube/")[1]
     : null;
   const currentLookup = pathname.startsWith("/practical/lookup/")
     ? pathname.split("/practical/lookup/")[1]
@@ -110,6 +116,10 @@ export function Sidebar() {
       .then((r) => r.json())
       .then(setLookups)
       .catch(() => {});
+    fetch("/api/youtube-briefs")
+      .then((r) => r.json())
+      .then(setYoutubeDates)
+      .catch(() => {});
   }, [pathname]);
 
   useEffect(() => {
@@ -126,13 +136,13 @@ export function Sidebar() {
   // Tick an elapsed-seconds counter while a generation is running so the long
   // (3-5 min) synchronous request clearly looks alive, not frozen.
   useEffect(() => {
-    if (!generating && !generatingTools) {
+    if (!generating && !generatingTools && !generatingYoutube) {
       setElapsed(0);
       return;
     }
     const t = setInterval(() => setElapsed((e) => e + 1), 1000);
     return () => clearInterval(t);
-  }, [generating, generatingTools]);
+  }, [generating, generatingTools, generatingYoutube]);
 
   // Close mobile sidebar on outside click
   const handleBackdropClick = useCallback(() => {
@@ -173,6 +183,28 @@ export function Sidebar() {
       // minimal error handling
     } finally {
       setGeneratingTools(false);
+    }
+  }
+
+  async function handleGenerateYoutube() {
+    setGeneratingYoutube(true);
+    try {
+      const res = await fetch("/api/generate-youtube", { method: "POST" });
+      const data = await res.json();
+      // The YouTube pipeline returns { date } even on failure, so only redirect
+      // when it actually wrote a brief — otherwise the page 404s.
+      if (data.success && data.date) {
+        router.push(`/youtube/${data.date}`);
+        router.refresh();
+      } else {
+        alert(
+          `YouTube brief failed:\n${(data.errors || ["unknown error"]).join("\n")}`
+        );
+      }
+    } catch {
+      // minimal error handling
+    } finally {
+      setGeneratingYoutube(false);
     }
   }
 
@@ -258,8 +290,25 @@ export function Sidebar() {
               </span>
             )}
           </Button>
+          <Button
+            className="w-full h-10 text-[14px] font-medium bg-rose-500/15 text-rose-400 border border-rose-500/30 hover:bg-rose-500/25 hover:border-rose-500/50 transition-all duration-200 cursor-pointer"
+            onClick={handleGenerateYoutube}
+            disabled={generatingYoutube}
+          >
+            {generatingYoutube ? (
+              <span className="flex items-center gap-2">
+                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                Scraping YouTube... {elapsed}s
+              </span>
+            ) : (
+              <span className="flex items-center gap-2">
+                <Youtube className="w-3.5 h-3.5" />
+                Generate YouTube Brief
+              </span>
+            )}
+          </Button>
 
-          {(generating || generatingTools) && (
+          {(generating || generatingTools || generatingYoutube) && (
             <p className="text-[11px] leading-snug text-zinc-500 px-1 pt-0.5">
               Fetching sources and analyzing with AI. This takes 3-5 minutes,
               keep this tab open.
@@ -402,6 +451,34 @@ export function Sidebar() {
                 >
                   {l.tool}{" "}
                   <span className="text-zinc-600">· {l.days}d</span>
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="h-px bg-white/[0.06] mx-4" />
+        </>
+      )}
+
+      {/* YouTube Intelligence section */}
+      {youtubeDates.length > 0 && (
+        <>
+          <div className="px-5 pt-4 pb-2">
+            <p className="text-[11px] font-semibold text-zinc-600 uppercase tracking-[0.1em] mb-3 inline-flex items-center gap-1.5">
+              <Youtube className="w-3 h-3 text-rose-500/70" />
+              YouTube Intelligence
+            </p>
+            <div className="space-y-0.5">
+              {youtubeDates.slice(0, 7).map((yb) => (
+                <button
+                  key={yb.date}
+                  onClick={() => router.push(`/youtube/${yb.date}`)}
+                  className={`w-full text-left text-[13px] py-1.5 px-2.5 rounded-lg transition-all duration-200 ${
+                    currentYoutubeDate === yb.date
+                      ? "bg-rose-500/10 text-rose-400 font-semibold shadow-[inset_0_0_0_1px_rgba(244,63,94,0.2)]"
+                      : "text-zinc-500 hover:bg-white/[0.04] hover:text-zinc-300"
+                  }`}
+                >
+                  {formatDate(yb.date)}
                 </button>
               ))}
             </div>

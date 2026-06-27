@@ -183,3 +183,92 @@ export const practicalLookups = sqliteTable("practical_lookups", {
     .notNull()
     .default(sql`(datetime('now'))`),
 });
+
+// ============================================================
+// YouTube Intelligence — daily YouTube channel analysis
+// ============================================================
+
+export const youtubeBriefs = sqliteTable("youtube_briefs", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  date: text("date").notNull().unique(),
+  videoCount: integer("video_count").default(0),
+  channelCount: integer("channel_count").default(0),
+  overallSentiment: text("overall_sentiment"), // JSON: {overall,confidence,reasoning,signals[]}
+  formatDistribution: text("format_distribution"), // JSON: {tutorial:N,...}
+  titlePatternsJson: text("title_patterns_json"), // JSON: [{pattern,count,examples[]}]
+  analyzedAt: text("analyzed_at"),
+  modelUsed: text("model_used"),
+  createdAt: text("created_at")
+    .notNull()
+    .default(sql`(datetime('now'))`),
+});
+
+export const youtubeTrendingTopics = sqliteTable("youtube_trending_topics", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => youtubeBriefs.id, { onDelete: "cascade" }),
+  topic: text("topic").notNull(),
+  mentionCount: integer("mention_count").default(0),
+  channels: text("channels").notNull(), // JSON: string[]
+  sentiment: text("sentiment"), // "bullish"|"cautious"|"neutral"|"hype-driven"
+  summary: text("summary").notNull(),
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+export const youtubeTopVideos = sqliteTable("youtube_top_videos", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => youtubeBriefs.id, { onDelete: "cascade" }),
+  videoId: text("video_id").notNull(),
+  title: text("title").notNull(),
+  channelName: text("channel_name").notNull(),
+  url: text("url").notNull(),
+  thumbnailUrl: text("thumbnail_url"),
+  viewCount: integer("view_count").default(0),
+  publishedDate: text("published_date"),
+  performanceNote: text("performance_note"),
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+export const youtubeChannelStats = sqliteTable("youtube_channel_stats", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => youtubeBriefs.id, { onDelete: "cascade" }),
+  channelName: text("channel_name").notNull(),
+  channelHandle: text("channel_handle"),
+  videosScraped: integer("videos_scraped").default(0),
+  totalViews: integer("total_views").default(0),
+  avgViews: integer("avg_views").default(0),
+  mostCommonFormat: text("most_common_format"),
+  postingFrequency: text("posting_frequency"),
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+export const youtubeContentIdeas = sqliteTable("youtube_content_ideas", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => youtubeBriefs.id, { onDelete: "cascade" }),
+  idea: text("idea").notNull(),
+  reasoning: text("reasoning").notNull(),
+  formatSuggestion: text("format_suggestion"),
+  estimatedInterest: text("estimated_interest"), // "high"|"medium"|"low"
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+export const youtubeSuggestedTopics = sqliteTable("youtube_suggested_topics", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  briefId: integer("brief_id")
+    .notNull()
+    .references(() => youtubeBriefs.id, { onDelete: "cascade" }),
+  topic: text("topic").notNull(),
+  angle: text("angle").notNull(),
+  whyNow: text("why_now").notNull(),
+  targetFormat: text("target_format"),
+  competitionLevel: text("competition_level"), // "low"|"medium"|"high"
+  referenceVideos: text("reference_videos").notNull(), // JSON: string[]
+  sortOrder: integer("sort_order").notNull().default(0),
+});

@@ -1,11 +1,13 @@
 ---
 name: daily-brief
 description: |
-  Generate and manage the daily AI/tech intelligence brief. Use this skill when the user
-  asks to generate a brief, check AI news, see what's happening in AI/tech today, run the
-  news pipeline, or anything related to the daily news digest. Triggers on: "generate brief",
-  "daily brief", "news brief", "what's happening in AI", "AI news today", "tech news",
-  "run the brief", "morning brief", "news update".
+  Generate and manage the daily AI/tech intelligence brief and YouTube Intelligence brief.
+  Use this skill when the user asks to generate a brief, check AI news, see what's happening
+  in AI/tech today, run the news pipeline, or anything related to the daily news digest or
+  YouTube channel analysis. Triggers on: "generate brief", "daily brief", "news brief",
+  "what's happening in AI", "AI news today", "tech news", "run the brief", "morning brief",
+  "news update", "youtube brief", "youtube trends", "what's on youtube", "youtube channels",
+  "scrape youtube", "generate youtube", "youtube intelligence", "what channels are posting".
 ---
 
 # Daily AI/Tech Intelligence Brief
@@ -130,6 +132,36 @@ Once the brief is generated, offer to:
 - **Summarize inline** — Read the brief data from the SQLite database and present key findings
 - **Highlight content ideas** — Pull the 5 content ideas and present them as actionable next steps
 - **Show trends** — Display the 5 cross-category trends with momentum signals
+
+## YouTube Intelligence (3rd Vertical)
+
+A separate daily analysis of 13 AI/automation YouTube channels, integrated into the same dashboard with a rose/red accent.
+
+### How to Run
+
+```bash
+# Standalone
+cd projects/daily-news-brief && npx tsx scripts/youtube-cron.ts
+
+# Via unified cron
+npx tsx scripts/daily-cron.ts --youtube
+
+# Dashboard button
+# Click "Generate YouTube Brief" (rose button) in the sidebar at http://localhost:3000
+```
+
+### Dashboard
+http://localhost:3000/youtube/[date]
+
+### What it shows
+Trending topics, top videos (with thumbnails), content ideas, suggested topics with competition level, per-channel stats, format distribution.
+
+### Prerequisites
+`GOOGLE_API_KEY` + `OPENAI_API_KEY` must be set in `projects/daily-news-brief/.env`. The pipeline is self-contained — the Python scripts live in `.claude/skills/youtube-daily-brief/scripts/` and read keys from the inherited process env.
+
+For full details see the `youtube-daily-brief` skill.
+
+---
 
 ## Troubleshooting
 

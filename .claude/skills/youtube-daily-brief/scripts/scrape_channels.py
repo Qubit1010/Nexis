@@ -1,0 +1,293 @@
+"""
+YouTube Channel Scraper (YouTube Data API v3)
+Scrapes the N most recent videos from each configured channel using the
+Google YouTube Data API. Outputs raw video data to .tmp/raw_videos.json
+and archives to .tmp/history/.
+
+Usage:
+    python scripts/scrape_channels.py
+"""
+
+import json
+import os
+import re
+import sys
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
+from pathlib import Path
+
+from googleapiclient.discovery import build
+
+# Import shared config from the same scripts/ dir
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from config import (
+    CHANNELS,
+    GOOGLE_API_KEY,
+    HISTORY_DIR,
+    HISTORY_DAYS,
+    RAW_VIDEOS_PATH,
+    TRANSCRIPT_MAX_CHARS,
+    VIDEOS_PER_CHANNEL,
+)
+
+TRANSCRIPT_TIMEOUT_SEC = 5   # per-video cap; youtube_transcript_api can hang
+CHANNEL_WORKERS = 5          # concurrent channel scrapes
+
+
+def get_youtube_client():
+    """Build and return a YouTube Data API client."""
+    if not GOOGLE_API_KEY:
+        print("Error: GOOGLE_API_KEY not set.")
+        print("Add GOOGLE_API_KEY to projects/daily-news-brief/.env (or scripts/.env for direct use).")
+        sys.exit(1)
+    return build("youtube", "v3", developerKey=GOOGLE_API_KEY)
+
+
+def resolve_channel_id(youtube, handle: str) -> str | None:
+    """Resolve a @handle to a YouTube channel ID."""
+    query = handle.lstrip("@")
+    try:
+        resp = youtube.channels().list(part="id", forHandle=query).execute()
+        items = resp.get("items", [])
+        if items:
+            return items[0]["id"]
+    except Exception as e:
+        print(f"    Error resolving channel {handle}: {e}")
+    return None
+
+
+def get_uploads_playlist_id(youtube, channel_id: str) -> str | None:
+    """Get the uploads playlist ID for a channel."""
+    try:
+        resp = youtube.channels().list(part="contentDetails", id=channel_id).execute()
+        items = resp.get("items", [])
+        if items:
+            return items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+    except Exception as e:
+        print(f"    Error getting uploads playlist: {e}")
+    return None
+
+
+def get_recent_video_ids(youtube, playlist_id: str, max_results: int = 5) -> list[str]:
+    """Get the most recent video IDs from an uploads playlist."""
+    try:
+        resp = youtube.playlistItems().list(
+            part="contentDetails",
+            playlistId=playlist_id,
+            maxResults=max_results,
+        ).execute()
+        return [item["contentDetails"]["videoId"] for item in resp.get("items", [])]
+    except Exception as e:
+        print(f"    Error fetching playlist items: {e}")
+        return []
+
+
+def get_video_details(youtube, video_ids: list[str]) -> list[dict]:
+    """Fetch full metadata for a batch of video IDs (up to 50)."""
+    if not video_ids:
+        return []
+    try:
+        resp = youtube.videos().list(
+            part="snippet,statistics,contentDetails",
+            id=",".join(video_ids),
+        ).execute()
+        return resp.get("items", [])
+    except Exception as e:
+        print(f"    Error fetching video details: {e}")
+        return []
+
+
+def parse_duration(iso_duration: str) -> tuple[int, str]:
+    """Convert ISO 8601 duration (PT1H2M3S) to seconds and formatted string."""
+    match = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", iso_duration or "")
+    if not match:
+        return 0, "0:00"
+    hours = int(match.group(1) or 0)
+    minutes = int(match.group(2) or 0)
+    seconds = int(match.group(3) or 0)
+    total = hours * 3600 + minutes * 60 + seconds
+    if hours:
+        formatted = f"{hours}:{minutes:02d}:{seconds:02d}"
+    else:
+        formatted = f"{minutes}:{seconds:02d}"
+    return total, formatted
+
+
+def get_transcript(video_id: str) -> str | None:
+    """Try to get captions/transcript for a video, capped at TRANSCRIPT_TIMEOUT_SEC.
+
+    Uses a DAEMON thread, not ThreadPoolExecutor. youtube_transcript_api can block on a
+    network call well past the timeout; a pooled (non-daemon) worker would be joined by
+    concurrent.futures' atexit handler at interpreter shutdown, hanging the whole process
+    indefinitely (this is what made the dashboard run time out at 300s). A daemon thread is
+    abandoned at exit instead, so the script can always terminate.
+    """
+    result: list[str | None] = [None]
+
+    def _fetch():
+        try:
+            from youtube_transcript_api import YouTubeTranscriptApi
+            transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
+            text = " ".join(entry["text"] for entry in transcript_list)
+            result[0] = text[:TRANSCRIPT_MAX_CHARS] if text else None
+        except Exception:
+            result[0] = None
+
+    t = threading.Thread(target=_fetch, daemon=True)
+    t.start()
+    t.join(TRANSCRIPT_TIMEOUT_SEC)
+    return result[0]  # None if it timed out (thread still running) or the fetch failed
+
+
+def scrape_channel(youtube, channel: dict) -> tuple[list[dict], str | None]:
+    """Scrape recent videos from a single channel. Returns (videos, error_msg)."""
+    handle = channel["handle"]
+    name = channel["name"]
+
+    channel_id = resolve_channel_id(youtube, handle)
+    if not channel_id:
+        return [], f"Could not resolve channel ID for {handle}"
+
+    playlist_id = get_uploads_playlist_id(youtube, channel_id)
+    if not playlist_id:
+        return [], f"Could not find uploads playlist for {handle}"
+
+    video_ids = get_recent_video_ids(youtube, playlist_id, VIDEOS_PER_CHANNEL)
+    if not video_ids:
+        return [], f"No videos found for {handle}"
+
+    raw_videos = get_video_details(youtube, video_ids)
+
+    videos = []
+    for item in raw_videos:
+        snippet = item.get("snippet", {})
+        stats = item.get("statistics", {})
+        content = item.get("contentDetails", {})
+        video_id = item["id"]
+
+        duration_sec, duration_fmt = parse_duration(content.get("duration", ""))
+
+        # Skip Shorts (YouTube Shorts are up to 3 minutes)
+        if duration_sec <= 180:
+            continue
+
+        transcript = get_transcript(video_id)
+
+        thumbs = snippet.get("thumbnails", {})
+        thumbnail = (
+            thumbs.get("maxres", {}).get("url")
+            or thumbs.get("high", {}).get("url")
+            or thumbs.get("medium", {}).get("url")
+            or f"https://i.ytimg.com/vi/{video_id}/maxresdefault.jpg"
+        )
+
+        videos.append({
+            "video_id": video_id,
+            "title": snippet.get("title", ""),
+            "channel_name": name,
+            "channel_handle": handle,
+            "url": f"https://www.youtube.com/watch?v={video_id}",
+            "thumbnail_url": thumbnail,
+            "published_date": snippet.get("publishedAt", ""),
+            "view_count": int(stats.get("viewCount", 0)),
+            "like_count": int(stats.get("likeCount", 0)),
+            "comment_count": int(stats.get("commentCount", 0)),
+            "duration_seconds": duration_sec,
+            "duration_formatted": duration_fmt,
+            "description": (snippet.get("description") or "")[:1000],
+            "transcript_snippet": transcript,
+        })
+
+    return videos, None
+
+
+def _channel_worker(args: tuple) -> tuple:
+    """Worker: creates its own YouTube client (googleapiclient is not thread-safe)."""
+    index, channel = args
+    youtube = get_youtube_client()
+    videos, error = scrape_channel(youtube, channel)
+    return index, channel, videos, error
+
+
+def scrape_all_channels() -> dict:
+    """Scrape all configured channels concurrently."""
+    print(f"Scraping {len(CHANNELS)} channels, {VIDEOS_PER_CHANNEL} videos each "
+          f"({CHANNEL_WORKERS} concurrent)...\n")
+
+    all_videos_by_index: dict[int, list[dict]] = {}
+    errors = []
+    channels_succeeded = 0
+
+    with ThreadPoolExecutor(max_workers=CHANNEL_WORKERS) as executor:
+        futures = {
+            executor.submit(_channel_worker, (i, ch)): i
+            for i, ch in enumerate(CHANNELS)
+        }
+        for future in as_completed(futures):
+            index, channel, videos, error = future.result()
+            handle = channel["handle"]
+            name = channel["name"]
+            print(f"[{index+1}/{len(CHANNELS)}] {name} ({handle})")
+            if error:
+                print(f"  WARN: {error}")
+                errors.append({"channel": handle, "error": error})
+            else:
+                print(f"  OK -- {len(videos)} videos scraped")
+                all_videos_by_index[index] = videos
+                channels_succeeded += 1
+
+    # Reassemble in original channel order
+    all_videos = []
+    for i in range(len(CHANNELS)):
+        all_videos.extend(all_videos_by_index.get(i, []))
+
+    return {
+        "scraped_at": datetime.now(timezone.utc).isoformat(),
+        "channels_attempted": len(CHANNELS),
+        "channels_succeeded": channels_succeeded,
+        "errors": errors,
+        "videos": all_videos,
+    }
+
+
+def save_results(data: dict):
+    """Save scraped data to .tmp/ and archive to history."""
+    RAW_VIDEOS_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"\nSaved {len(data['videos'])} videos to {RAW_VIDEOS_PATH}")
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    history_path = HISTORY_DIR / f"{today}.json"
+    history_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Archived to {history_path}")
+
+    history_files = sorted(HISTORY_DIR.glob("*.json"))
+    if len(history_files) > HISTORY_DAYS:
+        for old_file in history_files[:-HISTORY_DAYS]:
+            old_file.unlink()
+            print(f"Cleaned up old snapshot: {old_file.name}")
+
+
+def main():
+    data = scrape_all_channels()
+
+    print(f"\n{'='*50}")
+    print("Scraping complete!")
+    print(f"  Channels: {data['channels_succeeded']}/{data['channels_attempted']} succeeded")
+    print(f"  Videos:   {len(data['videos'])} total")
+    if data["errors"]:
+        print(f"  Errors:   {len(data['errors'])}")
+        for err in data["errors"]:
+            print(f"    - {err['channel']}: {err['error']}")
+
+    save_results(data)
+
+
+if __name__ == "__main__":
+    main()
+    # Guarantee termination: the results file is already written to disk above.
+    # Abandoned daemon transcript threads (stuck network calls) must not keep the
+    # process alive — os._exit skips the atexit thread-join that otherwise hangs it.
+    sys.stdout.flush()
+    sys.stderr.flush()
+    os._exit(0)
