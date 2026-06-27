@@ -448,9 +448,17 @@ def main():
     if args.push:
         cmd_push(svc, ids, folders, args.dry_run)
 
-    if args.check:
+    if args.check or (args.pull and not args.files):
         drive_only, drive_newer = cmd_check(svc, ids, folders)
-        if drive_only or drive_newer:
+        if args.pull and not args.files:
+            # ponytail: blanket pull — skip .pyc (machine-specific bytecode)
+            pull_list = [(f, r, i) for f, r, i in drive_only if not r.endswith(".pyc")]
+            pull_list += [(f, r, i) for f, r, i, _ in drive_newer if not r.endswith(".pyc")]
+            if pull_list:
+                cmd_pull(svc, ids, pull_list)
+            else:
+                print("Nothing to pull.")
+        elif drive_only or drive_newer:
             print("\nRun with --pull to download flagged files, or ask Claude to pull them.")
 
     if args.pull and args.files:

@@ -62,8 +62,13 @@ archives/
 # Decision log (private/sensitive)
 decisions/
 
-# Research source indexes (large, regenerable)
+# Research source indexes and run logs (large, regenerable)
 **/_research/sources.json
+**/_research/sources-raw.json
+**/_research/*.log
+
+# Playwright CLI session logs
+**/.playwright-cli/
 
 # GDrive sync: OAuth token + local folder ID cache (machine-specific)
 **/gdrive_token.json
