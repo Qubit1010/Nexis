@@ -1,0 +1,64 @@
+{
+  "slug": "scientific-agent-skills",
+  "platform": "linkedin",
+  "title": "Scientific Agent Skills",
+  "voiceScript": "What if your AI could pull from 78 scientific databases in a single prompt? When I do research, the real grind isn't thinking. It's scraping data, reading endless papers, and fighting Python setup. So I started using Scientific Agent Skills. It turns your AI agent into a full research assistant, from gathering to publishing. The numbers are wild. 78 databases on tap, 25 structured fields from every paper, and over 30 tools that write your report automatically. Here's why it matters. Your edge isn't doing the work faster, it's spending your time on the thinking. If your research feels like grunt work, this is worth a look. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if your AI could pull from 78 scientific databases in a single prompt?",
+      "headline": "Search *78 databases* in one prompt",
+      "sub": "AI Research"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "When I do research, the real grind isn't thinking. It's scraping data, reading endless papers, and fighting Python setup.",
+      "headline": "Research is *grunt work*",
+      "sub": "before the thinking even starts",
+      "problemVariant": "crossout",
+      "chips": ["scraping data", "reading papers", "setup hell"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I started using Scientific Agent Skills. It turns your AI agent into a full research assistant, from gathering to publishing.",
+      "headline": "Zero to *research synthesis*",
+      "visual": "roadmap",
+      "asset": "infographic.png",
+      "roadmap": [
+        { "name": "Gather", "goal": "Search 78 DBs" },
+        { "name": "Synthesize", "goal": "Brainstorm + scenarios" },
+        { "name": "Communicate", "goal": "Slides, visuals, docs" },
+        { "name": "Deploy", "goal": "Publish + verify" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The numbers are wild. 78 databases on tap, 25 structured fields from every paper, and over 30 tools that write your report automatically.",
+      "headline": "By the numbers",
+      "stats": [
+        { "value": 78, "suffix": "", "label": "scientific databases" },
+        { "value": 25, "suffix": "+", "label": "fields per paper" },
+        { "value": 30, "suffix": "+", "label": "tools to ship reports" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Here's why it matters. Your edge isn't doing the work faster, it's spending your time on the thinking.",
+      "headline": "Spend your time *thinking*",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If your research feels like grunt work, this is worth a look. Follow for more.",
+      "cta": "Want your AI to do the research?"
+    }
+  ],
+  "source": "LinkedIn post + infographic: 'The Scientific Agent Skills Roadmap' (NexusPoint). K-Dense-AI open-source suite (147 skills) turning AI agents (Claude Code, Cursor, Codex, Gemini CLI) into research assistants. 4 phases: Gather (78 unified DBs incl PubChem/ClinicalTrials/USPTO, 10+ academic DBs via Paper Lookup, 25+ structured fields, Parallel Web search w/ citations), Synthesize (Hypothesis Generation, What-If Oracle, Consciousness Council), Communicate (30+ tools: Scientific Slides, PPTX/LaTeX posters, infographics, PDF/DOCX/XLSX processing, Scientific Writing + Citation Mgmt), Deploy & Secure (publication-ready reports, K-Dense BYOK/Web zero-setup, license verification). Prereqs: Python 3.11+, uv. Install: npx skills add <skill-name>.",
+  "handle": "@nexuspoint"
+}

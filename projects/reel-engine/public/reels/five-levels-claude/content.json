@@ -1,0 +1,63 @@
+{
+  "slug": "five-levels-claude",
+  "platform": "linkedin",
+  "title": "The Five Levels of Claude",
+  "voiceScript": "If you still use Claude like a chat box, you are stuck at Level one. Most people never climb. You burn 30 to 60 minutes a day re-explaining context and copying outputs between apps. Those are hours you never get back. There are five levels. Chat box, Projects, Co-work, Claude Code, then always on routines. Each one takes more off your plate. Here is the jump. Five levels, up to 60 minutes a day back, and 50 plus connectors you can wire in. At the top it stops being a tool. It becomes infrastructure that runs while you sleep. Which level are you on, and what task do you push up next? Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "If you still use Claude like a chat box, you are stuck at Level one.",
+      "headline": "Stuck at *Level one*",
+      "sub": "The 5 Levels of Claude"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Most people never climb. You burn 30 to 60 minutes a day re-explaining context and copying outputs between apps. Those are hours you never get back.",
+      "headline": "Leaking hours, *every day*",
+      "sub": "30 to 60 minutes gone",
+      "problemVariant": "glitch"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "There are five levels. Chat box, Projects, Co-work, Claude Code, then always on routines. Each one takes more off your plate.",
+      "headline": "Five levels, *one ladder*",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Chat box", "goal": "A search bar that talks" },
+        { "name": "Projects", "goal": "Context loaded once" },
+        { "name": "Co-work", "goal": "Read/write your machine" },
+        { "name": "Claude Code", "goal": "Plans, tests, worktrees" },
+        { "name": "Routines", "goal": "Always-on infra" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "Here is the jump. Five levels, up to 60 minutes a day back, and 50 plus connectors you can wire in.",
+      "headline": "The climb",
+      "stats": [
+        { "value": 5, "suffix": "", "label": "levels of Claude" },
+        { "value": 60, "suffix": "", "label": "min a day reclaimed" },
+        { "value": 50, "suffix": "+", "label": "connectors available" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "At the top it stops being a tool. It becomes infrastructure that runs while you sleep.",
+      "headline": "It becomes *infrastructure*",
+      "punchVariant": "rule"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Which level are you on, and what task do you push up next? Follow for more.",
+      "cta": "Which level are you on right now?"
+    }
+  ],
+  "source": "LinkedIn post + 'The Five Levels of Claude' breakdown. Progression from chat interface to autonomous system-level infrastructure. L1 Baseline: a search bar that returns paragraphs (~30 min/day saved, the floor). L2 Beginner: Projects (memory spine), 50+ connectors (Slack/Drive/Gmail/Notion), file creation, persistent artifacts, inline visuals, Office add-ins. L3 Intermediate (Co-work): read/write local file access in isolated VM, Skills (markdown workflows), /schedule, mobile Dispatch, Claude Design, computer use. L4 Advanced (Claude Code): terminal/CLI, claude.md, Plan Mode + sub-agents (Opus plan / Sonnet execute), git worktrees (parallel Claudes), MCP, verification loops. L5 Architect: cloud Routines (schedule/API/GitHub PR triggered), Hooks (pre-tool/post-edit/stop), channels + headless, memory consolidation (Autodream), agent teams + task budgets. Final barrier = trust; start with low-stakes deterministic automations.",
+  "handle": "@nexuspoint"
+}

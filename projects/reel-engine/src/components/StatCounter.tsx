@@ -87,6 +87,7 @@ export const StatCounter: React.FC<{ stat: StatItem; delay?: number; index?: num
           textShadow: `0 0 ${30 * glow}px ${COLORS.glow}`,
           minWidth: 360,
           textAlign: "right",
+          whiteSpace: "nowrap", // ponytail: never reflow mid-count; keep suffixes short (units go in label)
         }}
       >
         {stat.prefix ?? ""}

@@ -1,0 +1,63 @@
+{
+  "slug": "superpowers-discipline",
+  "platform": "linkedin",
+  "title": "Superpowers: Disciplined AI Coding",
+  "voiceScript": "Most AI coding agents act like a reckless junior, they skip the plan and rush straight to code. No brainstorming, no tests, no architecture. So you get fast code that breaks, and you spend your night debugging guesswork. Superpowers fixes that. It forces real discipline. Brainstorm first, write a failing test, debug by root cause, then ship through isolated subagents. And it works. On one real library overhaul, that meant a 41 times speed boost, 97% accuracy, across 2,161 files. The lesson is simple. Your AI should think like an engineer, not a reckless intern. If your agent rushes and breaks things, this changes everything. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Most AI coding agents act like a reckless junior, they skip the plan and rush straight to code.",
+      "headline": "AI codes like a *reckless junior*",
+      "sub": "Disciplined AI Coding"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "No brainstorming, no tests, no architecture. So you get fast code that breaks, and you spend your night debugging guesswork.",
+      "headline": "It skips the *fundamentals*",
+      "sub": "fast code that breaks",
+      "problemVariant": "crossout",
+      "chips": ["no plan", "no tests", "no architecture"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "Superpowers fixes that. It forces real discipline. Brainstorm first, write a failing test, debug by root cause, then ship through isolated subagents.",
+      "headline": "Discipline, *enforced*",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Brainstorm", "goal": "Plan before code" },
+        { "name": "TDD", "goal": "Failing test first" },
+        { "name": "Debug", "goal": "Root cause, not guesses" },
+        { "name": "Subagents", "goal": "Parallel, reviewed" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "And it works. On one real library overhaul, that meant a 41 times speed boost, 97% accuracy, across 2,161 files.",
+      "headline": "Proof it works",
+      "stats": [
+        { "value": 41, "suffix": "x", "label": "faster" },
+        { "value": 97, "suffix": "%", "label": "accuracy" },
+        { "value": 2161, "suffix": "", "label": "files covered" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "The lesson is simple. Your AI should think like an engineer, not a reckless intern.",
+      "headline": "Think like an *engineer*",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If your agent rushes and breaks things, this changes everything. Follow for more.",
+      "cta": "What would you fix first?"
+    }
+  ],
+  "source": "LinkedIn post + explainer on Superpowers by obra: an agentic skills framework / disciplined process layer for AI coding agents (Claude Code, Cursor, Codex, OpenCode, Gemini CLI, Copilot CLI). Standard agents act like overenthusiastic junior engineers (skip tests/architecture, rush to code). Superpowers enforces: Brainstorming & Planning (no code until context explored + design approved, 2-5 min tasks), TDD Iron Law (failing test first, verify fail, minimal code, refactor; deletes code written before a test), Systematic Debugging (4-phase root cause before touching code), Subagent-Driven Development (fresh isolated subagents in parallel, two-stage code review). Low-friction setup: /plugin install superpowers@claude-plugins-official; skills auto-trigger. Proof: chardet v7.0.0 overhaul = 41x speed increase, 96.8% accuracy, test suite covering 2,161 files across 99 encodings. Also: writing-skills lets it author new skills; risky refactors isolated to a git worktree. (Reel uses 97% rounded from 96.8% since the count-up renders integers.)",
+  "handle": "@nexuspoint"
+}

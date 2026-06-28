@@ -1,0 +1,61 @@
+{
+  "slug": "code-is-cheap",
+  "platform": "linkedin",
+  "title": "When Code Is Cheap, Discernment Is the Scarcity",
+  "voiceScript": "Code just got cheap. The thing that actually breaks now is you. AI writes faster than ever, so we ship more code, not less. Complexity explodes, debt piles up, and we lose the intent behind what the machine wrote. So I stopped competing on typing. I work in zones. Core logic stays deliberate, standard patterns get AI plus review, and pure boilerplate, I let AI lead. Here's the shape of it. Ten hard lessons, three zones of AI use, and one new scarcity, discernment. Writing code is no longer the skill. Deciding what to build, and proving it behaves, is. Are your agents amplifying your judgment, or just your output? Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Code just got cheap. The thing that actually breaks now is you.",
+      "headline": "What breaks now is *you*",
+      "sub": "Agentic Coding"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "AI writes faster than ever, so we ship more code, not less. Complexity explodes, debt piles up, and we lose the intent behind what the machine wrote.",
+      "headline": "More code, more *chaos*",
+      "sub": "complexity scales exponentially",
+      "problemVariant": "glitch"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I stopped competing on typing. I work in zones. Core logic stays deliberate, standard patterns get AI plus review, and pure boilerplate, I let AI lead.",
+      "headline": "Work in *zones*",
+      "visual": "layers",
+      "layers": [
+        { "name": "Core logic", "goal": "Stay deliberate" },
+        { "name": "Standard patterns", "goal": "AI plus review" },
+        { "name": "Boilerplate", "goal": "Let AI lead" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "Here's the shape of it. Ten hard lessons, three zones of AI use, and one new scarcity, discernment.",
+      "headline": "The new shape",
+      "stats": [
+        { "value": 10, "suffix": "", "label": "lessons for agentic coding" },
+        { "value": 3, "suffix": "", "label": "zones of AI use" },
+        { "value": 1, "suffix": "", "label": "new scarcity: discernment" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Writing code is no longer the skill. Deciding what to build, and proving it behaves, is.",
+      "headline": "Judgment is the *new skill*",
+      "punchVariant": "rule"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Are your agents amplifying your judgment, or just your output? Follow for more.",
+      "cta": "Do your agents amplify judgment or output?"
+    }
+  ],
+  "source": "LinkedIn post + essay on agentic coding when code is cheap. Thesis: as AI drives code-generation cost toward zero, the bottleneck shifts from writing syntax to design, orchestration, verification, and maintenance. The new scarcity is human discernment: deciding what to build and verifying it behaves safely. 10 core lessons (implement to learn, rebuild often, invest in e2e tests, document intent, keep specs in sync, find the hard stuff, automate the easy, develop your taste, agents amplify experience, code is cheap but maintenance/support/security aren't - 'free as in puppies'). Structural shift: writer -> reviewer/orchestrator + verifier. Zone model: core domain logic = stay deliberate (deep mental model), standard patterns = AI + careful review, pure boilerplate = AI leads. Risks: Jevons Paradox of Code (more efficiency = more code = exponential complexity), accountability collapse (lose causal link between human decisions and behaviour), accumulating tech debt (AI introduces code smells/security issues at volume), junior engineer's dilemma (use AI as a Socratic tutor). NOTE: original post names NexusPoint; per house rule the spoken script never says the agency name.",
+  "handle": "@nexuspoint"
+}

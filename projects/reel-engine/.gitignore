@@ -21,6 +21,14 @@ background-music/*.aac
 public/reels/**/*.wav
 public/reels/**/voiceover_*.mp3
 
+# Generated pipeline artifacts (rebuilt by prepare/preflight/render on each run)
+public/reels/**/captions.json
+public/reels/**/captions.json.bak
+public/reels/**/chunks.json
+public/reels/**/preflight.json
+public/reels/**/timeline.json
+public/reels/**/timeline.json.bak
+
 # Large third-party reference clip (not needed to run the engine)
 public/reels/Motion-Video-Example.mp4
 

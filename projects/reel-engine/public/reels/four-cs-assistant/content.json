@@ -1,0 +1,63 @@
+{
+  "slug": "four-cs-assistant",
+  "platform": "linkedin",
+  "title": "The Four C's AI Assistant",
+  "voiceScript": "If your AI assistant lives in a chat tab, it's not an assistant, it's a search box. I learned this the hard way. I wired everything on day one and shipped a mess my team refused to use. It forgot the client and gave me confident nonsense. So now I build it in four layers, in order. Context, then Connections, then Capabilities, then Cadence. The shift is real. Four C's, one layer at a time, zero wrong updates sent. Here's why it matters. One wrong update costs more than a week of setup. If you built yours this week, which C are you missing? Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "If your AI assistant lives in a chat tab, it's not an assistant, it's a search box.",
+      "headline": "Not an assistant, a *search box*",
+      "sub": "AI Assistants"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "I learned this the hard way. I wired everything on day one and shipped a mess my team refused to use. It forgot the client and gave me confident nonsense.",
+      "headline": "Built it all at *once*",
+      "sub": "and it broke in production",
+      "problemVariant": "crossout",
+      "chips": ["forgot context", "wrong doc", "confident nonsense"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So now I build it in four layers, in order. Context, then Connections, then Capabilities, then Cadence.",
+      "headline": "The *Four C's*, in order",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Context", "goal": "Knows your work" },
+        { "name": "Connections", "goal": "Lives in your tools" },
+        { "name": "Capabilities", "goal": "Does the task" },
+        { "name": "Cadence", "goal": "Shows up daily" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The shift is real. Four C's, one layer at a time, zero wrong updates sent.",
+      "headline": "What changes",
+      "stats": [
+        { "value": 4, "suffix": "", "label": "C's, in order" },
+        { "value": 1, "suffix": "", "label": "layer at a time" },
+        { "value": 0, "suffix": "", "label": "wrong updates sent" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Here's why it matters. One wrong update costs more than a week of setup.",
+      "headline": "One bad update costs *more*",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If you built yours this week, which C are you missing? Follow for more.",
+      "cta": "Which C are you missing right now?"
+    }
+  ],
+  "source": "LinkedIn post + 'Section 18: Build Your Personal AI Assistant' guide. The Four C's framework for building a personal AI assistant, in order: Context (Projects, custom instructions, reference docs, memory), Connections (Gmail/Calendar/Drive/Slack/Notion via MCP), Capabilities (Skills + Cowork to execute tasks), Cadence (local schedules + Cloud Routines, e.g. 7:30am morning brief). Build incrementally: one Project, one connection, one Skill, one routine. Failure mode of building everything day one: assistant forgets context, pulls wrong doc, produces confident nonsense, team refuses to use it. The cost of getting it wrong is trust (one wrong client update > a week of setup).",
+  "handle": "@nexuspoint"
+}

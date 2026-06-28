@@ -1,0 +1,63 @@
+{
+  "slug": "ai-agents-business",
+  "platform": "linkedin",
+  "title": "AI Agents in Business Operations",
+  "voiceScript": "What if 60% of your support tickets resolved themselves, for two dollars each? Most teams pay six to twelve dollars per human ticket, and the queue never ends. Same in marketing and supply chain, smart people stuck on repetitive work. AI agents change that. They observe your systems, plan a step, act through your apps, and self correct. Real work, end to end. The numbers are serious. 60% of tickets resolved on day one, content costs down 95%, and 50 times faster. Here's why it matters. This isn't about replacing people, it's a small team supervising agents that never sleep. If your operations feel slow and expensive, this is your edge. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if 60% of your support tickets resolved themselves, for two dollars each?",
+      "headline": "Resolve *60%* of tickets",
+      "sub": "AI Agents at Work"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "Most teams pay six to twelve dollars per human ticket, and the queue never ends. Same in marketing and supply chain, smart people stuck on repetitive work.",
+      "headline": "Humans stuck in the *queue*",
+      "sub": "six to twelve dollars a ticket",
+      "problemVariant": "chips",
+      "chips": ["$6-$12 / ticket", "endless queue", "busywork"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "AI agents change that. They observe your systems, plan a step, act through your apps, and self correct. Real work, end to end.",
+      "headline": "Agents run the *whole loop*",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Observe", "goal": "Read your systems" },
+        { "name": "Plan", "goal": "Pick the next step" },
+        { "name": "Act", "goal": "Run through APIs" },
+        { "name": "Reflect", "goal": "Self-correct" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The numbers are serious. 60% of tickets resolved on day one, content costs down 95%, and 50 times faster.",
+      "headline": "What agents deliver",
+      "stats": [
+        { "value": 60, "suffix": "%", "label": "of tickets resolved" },
+        { "value": 95, "suffix": "%", "label": "lower content costs" },
+        { "value": 50, "suffix": "x", "label": "faster content" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Here's why it matters. This isn't about replacing people, it's a small team supervising agents that never sleep.",
+      "headline": "Supervise, don't *replace*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If your operations feel slow and expensive, this is your edge. Follow for more.",
+      "cta": "Where could agents run your work?"
+    }
+  ],
+  "source": "LinkedIn post + explainer on AI agents in business operations. AI agents = autonomous systems that observe, plan (LLM), act (APIs/enterprise systems), reflect/self-correct; retain memory, follow workflows. Customer service: $3.50 return per $1, AI resolution $0.99-$2.00 vs $6-$12 human, resolve 40-60% of issues initially (up to 80%+ optimized), 24/7 multilingual, cuts churn. Marketing: autonomous campaign optimization; one CPG company cut content costs 95% and 50x speed. Supply chain: vendor selection, real-time logistics, disruption rerouting. Finance/HR: ledger reports, invoicing, recruitment, onboarding. Software/R&D: coding agents that write/test/deploy; biopharma cut lead-gen cycle 25%, drafting efficiency +35%. Future: human-in-the-loop, agents as digital employees, small human teams supervising networks of specialized agents.",
+  "handle": "@nexuspoint"
+}

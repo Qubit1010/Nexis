@@ -1,0 +1,64 @@
+{
+  "slug": "prompting-playbook",
+  "platform": "linkedin",
+  "title": "The Prompting Playbook (R-C-T-F-E)",
+  "voiceScript": "Most bad Claude answers aren't bad models, they're bad briefs. I learned that the expensive way. I used to type one line, write a follow up email, then blame Claude. My team shipped drafts that were off tone, wrong offer, slower to fix than starting over. So now I brief it like a sharp new hire. Role, context, task, format, and a real example of good output. The payoff is real. Six clean moves, a five part skeleton, and two teammates shipping the same quality. Here's the shift. Claude is not a vending machine, it is a new hire on day one. What do you still prompt with a one liner? Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Most bad Claude answers aren't bad models, they're bad briefs. I learned that the expensive way.",
+      "headline": "Bad answers are *bad briefs*",
+      "sub": "Prompting Playbook"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "I used to type one line, write a follow up email, then blame Claude. My team shipped drafts that were off tone, wrong offer, slower to fix than starting over.",
+      "headline": "One-liners stay *generic*",
+      "sub": "off tone, wrong offer",
+      "problemVariant": "chips",
+      "chips": ["off tone", "wrong offer", "more edits"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So now I brief it like a sharp new hire. Role, context, task, format, and a real example of good output.",
+      "headline": "The *R-C-T-F-E* skeleton",
+      "visual": "roadmap",
+      "roadmap": [
+        { "name": "Role", "goal": "Who Claude should be" },
+        { "name": "Context", "goal": "Background and files" },
+        { "name": "Task", "goal": "Exactly what you want" },
+        { "name": "Format", "goal": "Length, structure, tone" },
+        { "name": "Example", "goal": "Show good output" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The payoff is real. Six clean moves, a five part skeleton, and two teammates shipping the same quality.",
+      "headline": "Why it works",
+      "stats": [
+        { "value": 6, "suffix": "", "label": "prompting moves" },
+        { "value": 5, "suffix": "", "label": "part skeleton" },
+        { "value": 2, "suffix": "", "label": "people, same result" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Here's the shift. Claude is not a vending machine, it is a new hire on day one.",
+      "headline": "Not a *vending machine*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "What do you still prompt with a one liner? Follow for more.",
+      "cta": "What do you still prompt as a one-liner?"
+    }
+  ],
+  "source": "LinkedIn post + 'The Beginner's Prompting Playbook'. Core reframe: Claude is not a vending machine, it's a sharp new hire on day one. Most bad answers are bad briefs. 6 moves: (1) context first (biggest lever; upload docs / use a Project), (2) ask it to ask you questions first ('before you answer, ask me anything you need'), (3) set role + format (length, structure, tone, one CTA), (4) show an example to teach your taste ('match this voice'), (5) iterate in the same thread, don't restart (restarting resets its memory of your taste), (6) make it check its work (review for errors/missing details/tone before finalizing). Reusable skeleton R-C-T-F-E: Role + Context + Task + Format + Example, then close with 'ask me questions before you start.' Outcome: hand the same prompt skeleton to two people, both outputs ship with minor edits.",
+  "handle": "@nexuspoint"
+}
