@@ -1,0 +1,146 @@
+[2026-06-28T07:18:38] === IMPORT START notebook=ffcd6d51-673d-4308-9400-c01976e3a849 total=217 already=0 ===
+[2026-06-28T07:18:47] [1/217] OK https://journals.sagepub.com/doi/abs/10.1177/1529100612453266
+[2026-06-28T07:18:59] [2/217] OK https://doi.org/10.3389/feduc.2021.581216
+[2026-06-28T07:19:12] [3/217] OK https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2021.581216/full
+[2026-06-28T07:19:19] [4/217] FAIL rc=1 https://link.springer.com/article/10.1007/s10648-021-09595-9 :: 07:19:18 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.289s
+[2026-06-28T07:19:26] [5/217] FAIL rc=1 https://link.springer.com/article/10.1007/s10648-025-10076-6 :: 07:19:25 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.471s
+[2026-06-28T07:19:40] [6/217] OK https://doi.org/10.31234/osf.io/kzy7u
+[2026-06-28T07:19:49] [7/217] FAIL rc=1 https://link.springer.com/article/10.1007/s10648-025-10035-1 :: 07:19:49 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 3.779s
+[2026-06-28T07:19:57] [8/217] OK https://link.springer.com/article/10.1186/s40594-024-00468-5
+[2026-06-28T07:20:06] [9/217] OK https://pubmed.ncbi.nlm.nih.gov/26173288/
+[2026-06-28T07:20:16] [10/217] OK https://www.frontiersin.org/articles/10.3389/feduc.2021.581216/pdf
+[2026-06-28T07:20:22] [11/217] FAIL rc=1 https://preview-www.nature.com/articles/s44159-022-00089-1 :: 07:20:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.466s
+[2026-06-28T07:20:29] [12/217] FAIL rc=1 https://www.sciencedirect.com/science/article/pii/S1546144023006464 :: 07:20:29 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.006s
+[2026-06-28T07:20:36] [13/217] FAIL rc=1 https://www.scientificamerican.com/article/what-works-what-doesn-t/ :: 07:20:36 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.099s
+[2026-06-28T07:20:46] [14/217] OK https://sc-pan.github.io/pdf/NRP_2022.pdf
+[2026-06-28T07:20:58] [15/217] OK https://gwern.net/doc/psychology/spaced-repetition/2013-dunlosky.pdf
+[2026-06-28T07:21:08] [16/217] OK https://d2tic4wvo1iusb.cloudfront.net/documents/guidance/Cognitive_science_approaches_in_the_classroom_-_A_review_of_the_evidence.pdf
+[2026-06-28T07:21:16] [17/217] OK https://www.researchgate.net/publication/362093173_The_science_of_effective_learning_with_a_focus_on_spacing_and_retrieval_practice
+[2026-06-28T07:21:25] [18/217] OK https://pubmed.ncbi.nlm.nih.gov/41601103/
+[2026-06-28T07:21:36] [19/217] OK https://www.mdpi.com/2076-328X/15/6/771
+[2026-06-28T07:21:45] [20/217] OK https://pmc.ncbi.nlm.nih.gov/articles/PMC9508909/
+[2026-06-28T07:21:54] [21/217] OK https://lsc.cornell.edu/how-to-study/studying-for-and-taking-exams/effective-study-strategies/
+[2026-06-28T07:22:02] [22/217] OK https://www.youtube.com/watch?v=Pjrqc6UMDKM
+[2026-06-28T07:22:11] [23/217] OK https://www.youtube.com/watch?v=Xb3zFeIoVRk
+[2026-06-28T07:22:19] [24/217] OK https://www.youtube.com/watch?v=mJJCfvBqlHk
+[2026-06-28T07:22:29] [25/217] OK https://www.youtube.com/watch?v=Z-zNHHpXoMM
+[2026-06-28T07:22:35] [26/217] FAIL rc=1 https://www.sciencedirect.com/science/article/abs/pii/S0361476X21000849 :: 07:22:35 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.035s
+[2026-06-28T07:22:47] [27/217] OK https://www.mdpi.com/2076-328X/14/9/756
+[2026-06-28T07:22:55] [28/217] OK https://doi.org/10.22215/etd/2023-15838
+[2026-06-28T07:23:05] [29/217] FAIL rc=1 https://link.springer.com/article/10.1007/s10648-024-09914-w :: 07:23:05 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 4.842s
+[2026-06-28T07:23:13] [30/217] FAIL rc=1 https://link.springer.com/article/10.1007/s11145-021-10137-6 :: 07:23:12 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.512s
+[2026-06-28T07:23:26] [31/217] OK https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1219945/full
+[2026-06-28T07:23:34] [32/217] FAIL rc=1 https://link.springer.com/article/10.1007/s10648-019-09468-2 :: 07:23:34 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.318s
+[2026-06-28T07:23:44] [33/217] OK https://pmc.ncbi.nlm.nih.gov/articles/PMC12869716/
+[2026-06-28T07:23:55] [34/217] OK https://doi.org/10.1186/s40862-025-00347-8
+[2026-06-28T07:24:04] [35/217] OK https://pubmed.ncbi.nlm.nih.gov/41646905/
+[2026-06-28T07:24:16] [36/217] OK https://www.wm.edu/offices/studentsuccess/academic-wellbeing/documents/academic_wellbeing_study_techniques_note_taking_strategies_march24.pdf
+[2026-06-28T07:24:27] [37/217] OK https://conceptmapmaker.org/blog/cornell-notes-concept-maps
+[2026-06-28T07:24:35] [38/217] OK https://lsc.cornell.edu/cornell-notetaking-system/
+[2026-06-28T07:24:45] [39/217] OK https://notiq.study/blog/note-taking-methods-compared
+[2026-06-28T07:24:54] [40/217] OK https://thinktank.arizona.edu/sites/default/files/2024-12/Reading-to-Learn-and-Remember-The-SQ3R-Method-updated-2024.pdf
+[2026-06-28T07:25:29] [41/217] FAIL rc=1 https://evernote.com/learn/sq3r-method-vs-other-note-taking-methods-which-fits-your-workflow :: 07:25:29 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 30.230s:
+[2026-06-28T07:25:39] [42/217] OK https://www.atlasworkspace.ai/blog/how-to-take-good-notes
+[2026-06-28T07:25:50] [43/217] OK https://notesmakr.com/blog/cornell-note-taking-method
+[2026-06-28T07:25:58] [44/217] OK https://subjectguides.york.ac.uk/note-taking/cornell
+[2026-06-28T07:26:32] [45/217] FAIL rc=1 https://www.lecturio.com/blog/improve-comprehension-with-the-sq3r-method-example-and-template/ :: 07:26:32 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 30.239s:
+[2026-06-28T07:26:39] [46/217] OK https://www.youtube.com/watch?v=AffuwyJZTQQ
+[2026-06-28T07:26:46] [47/217] OK https://www.youtube.com/watch?v=nX-xshA_0m8
+[2026-06-28T07:26:53] [48/217] OK https://www.youtube.com/watch?v=q-16DPh_VWw
+[2026-06-28T07:27:00] [49/217] OK https://www.youtube.com/watch?v=QUndnWBR0A0
+[2026-06-28T07:27:08] [50/217] OK https://doi.org/10.1016/j.jarmac.2020.08.014
+[2026-06-28T07:27:16] [51/217] FAIL rc=1 https://link.springer.com/article/10.1007/s10648-012-9206-y :: 07:27:16 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 3.159s
+[2026-06-28T07:27:23] [52/217] OK https://doi.org/10.1103/physrevstper.10.010108
+[2026-06-28T07:27:37] [53/217] OK https://www.anastasiyalipnevich.com/wp-content/uploads/2024/09/The-effects-of-practice-testing-and-feedback-on-learners-performance-and-persistence-in-a-massive-open-online-course.pdf
+[2026-06-28T07:27:48] [54/217] OK https://pmc.ncbi.nlm.nih.gov/articles/PMC6415780/
+[2026-06-28T07:28:23] [55/217] FAIL rc=1 https://doi.org/10.3760/cma.j.issn.2095-1485.2011.05.016 :: 07:28:23 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 30.212s:
+[2026-06-28T07:28:40] [56/217] OK https://doi.org/10.3389/fpsyg.2025.1529056
+[2026-06-28T07:28:54] [57/217] OK https://www.nhs.uk/mental-health/children-and-young-adults/help-for-teenagers-young-adults-and-students/tips-on-preparing-for-exams/
+[2026-06-28T07:29:02] [58/217] OK https://revaldoai.com/how-to-study-for-exams
+[2026-06-28T07:29:14] [59/217] OK https://notesmakr.com/blog/how-to-study-for-exams
+[2026-06-28T07:29:21] [60/217] OK https://okti.app/en/blog/create-study-plan-for-exam/
+[2026-06-28T07:29:31] [61/217] OK https://sidetrackedday.com/blog/how-to-study-for-exams
+[2026-06-28T07:29:41] [62/217] OK https://studycardsai.com/blog/how-to-study-for-an-exam
+[2026-06-28T07:29:52] [63/217] OK https://www.learndogrow.org/post/study-techniques-for-exams-the-complete-2026-guide
+[2026-06-28T07:30:02] [64/217] OK https://deckio.app/blog/how-to-study-for-exams
+[2026-06-28T07:30:11] [65/217] OK https://nerdsip.com/blog/how-to-ace-an-exam-science-backed-study-strategies
+[2026-06-28T07:30:21] [66/217] OK https://greentestprep.com/test-anxiety-strategies-to-beat-every-exam/
+[2026-06-28T07:30:29] [67/217] OK https://www.youtube.com/watch?v=Lt54CX9DmS4
+[2026-06-28T07:30:36] [68/217] OK https://www.youtube.com/watch?v=ukLnPbIffxE
+[2026-06-28T07:30:43] [69/217] OK https://www.youtube.com/watch?v=97Rs3oDzEtc
+[2026-06-28T07:30:49] [70/217] OK https://www.youtube.com/watch?v=mLhwdITTrfE
+[2026-06-28T07:30:58] [71/217] OK https://pmc.ncbi.nlm.nih.gov/articles/PMC11297374/
+[2026-06-28T07:31:14] [72/217] OK https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.00962/full
+[2026-06-28T07:31:22] [73/217] OK https://pubmed.ncbi.nlm.nih.gov/30670661/
+[2026-06-28T07:31:32] [74/217] OK https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf
+[2026-06-28T07:31:42] [75/217] OK https://selfdeterminationtheory.org/wp-content/uploads/2020/04/2020_RyanDeci_CEP_PrePrint.pdf
+[2026-06-28T07:31:49] [76/217] FAIL rc=1 https://www.sciencedirect.com/science/article/abs/pii/S0361476X20300254 :: 07:31:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.007s
+[2026-06-28T07:32:05] [77/217] OK https://doi.org/10.35542/osf.io/mbxn4_v1
+[2026-06-28T07:32:13] [78/217] OK https://pubmed.ncbi.nlm.nih.gov/37093695/
+[2026-06-28T07:32:22] [79/217] FAIL rc=1 https://link.springer.com/article/10.1007/s10648-019-09489-x :: 07:32:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.432s
+[2026-06-28T07:32:31] [80/217] OK https://mcgraw.princeton.edu/undergraduates/resources/resource-library/understanding-and-overcoming-procrastination
+[2026-06-28T07:32:41] [81/217] OK https://studentaffairs.lehigh.edu/success/study-skills-resources/motivation-focus-procrastination/stay-motivated
+[2026-06-28T07:32:48] [82/217] OK https://everydaynext.com/how-to-stay-motivated-to-study/
+[2026-06-28T07:32:58] [83/217] OK https://vertechacademy.com/blog/how-to-use-ai-study-subject-you-hate
+[2026-06-28T07:33:12] [84/217] OK https://goalsofpolity.in/make-boring-chapters-interesting-for-students/
+[2026-06-28T07:33:23] [85/217] OK https://www.learnco.ai/blog/how-to-get-motivated-to-study
+[2026-06-28T07:33:32] [86/217] OK https://www.learnco.ai/blog/how-to-stop-procrastinating-studying
+[2026-06-28T07:33:43] [87/217] OK https://www.pmt.education/blog/students/study-motivation-hacks/
+[2026-06-28T07:33:56] [88/217] OK https://athenify.io/blog/how-to-study-no-motivation
+[2026-06-28T07:34:10] [89/217] OK https://netmock.com/how-to-build-study-habits/
+[2026-06-28T07:34:17] [90/217] OK https://www.youtube.com/watch?v=II5h6uJPvvs
+[2026-06-28T07:34:25] [91/217] OK https://www.youtube.com/watch?v=jCcaTfUSgQo
+[2026-06-28T07:34:32] [92/217] OK https://www.youtube.com/watch?v=48jlHaxZnig
+[2026-06-28T07:34:40] [93/217] OK https://www.youtube.com/watch?v=9oWOsocN7qg
+[2026-06-28T07:34:50] [94/217] OK https://neural-digest.com/is-machine-learning-still-a-good-career-choice-in-2026-heres-what-the-data-actually-shows/
+[2026-06-28T07:34:57] [95/217] OK https://www.provieo.com/blog/ai-skills-employers-want-2026
+[2026-06-28T07:35:06] [96/217] OK https://resumeannex.ai/resources/skills-in-demand-2026
+[2026-06-28T07:35:16] [97/217] OK https://www.secondtalent.com/resources/ai-engineer-vs-ml-engineer-vs-data-scientist/
+[2026-06-28T07:35:27] [98/217] OK https://skillenai.com/2026/04/08/data-scientist-vs-ml-engineer-vs-ai-engineer
+[2026-06-28T07:35:38] [99/217] OK https://techstaq.io/ai-engineer-vs-ml-engineer-vs-mlops-engineer/
+[2026-06-28T07:35:50] [100/217] OK https://jobcannon.io/blog/ai-machine-learning-career-roadmap-2026
+[2026-06-28T07:36:01] [101/217] OK https://www.tredence.com/blog/data-science-vs-analytics-vs-ai-vs-ml-vs-data-engineering
+[2026-06-28T07:36:12] [102/217] OK https://letsdatascience.com/blog/data-scientist-vs-ml-engineer-vs-ai-engineer-in-2026
+[2026-06-28T07:36:20] [103/217] OK https://jobsbyculture.com/blog/top-ai-ml-skills-employers-hire-for-2026
+[2026-06-28T07:36:31] [104/217] OK https://www.meritforgeai.com/guides/ai-career-paths/
+[2026-06-28T07:36:40] [105/217] OK https://www.thinkforai.com/ai-careers/
+[2026-06-28T07:36:51] [106/217] OK https://www.dataquest.io/blog/ai-engineer-roadmap/
+[2026-06-28T07:37:00] [107/217] OK https://scrimba.com/articles/how-to-become-an-ai-engineer-a-developers-roadmap-for-2026/
+[2026-06-28T07:37:08] [108/217] OK https://pub.towardsai.net/what-do-you-need-to-learn-to-be-an-ai-engineer-in-2026-where-to-learn-it-what-to-build-with-it-fa1654e62826
+[2026-06-28T07:37:20] [109/217] OK https://www.turingcollege.com/blog/ai-engineer-roadmap-how-to-become-an-ai-engineer
+[2026-06-28T07:37:29] [110/217] OK https://www.examcert.app/blog/ai-engineer-roadmap-2026/
+[2026-06-28T07:37:39] [111/217] OK https://www.simplilearn.com/ai-engineer-roadmap-article
+[2026-06-28T07:37:48] [112/217] OK https://tinkerllm.com/blog/ai-engineer-roadmap-2026/
+[2026-06-28T07:37:57] [113/217] OK https://skilling.pro/ai-engineer-roadmap-skills-projects-and-tools-to-learn-in-2026
+[2026-06-28T07:38:03] [114/217] FAIL rc=1 https://www.youtube.com/watch?v=aAItDrJ8-rE :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=aAItDrJ8-rE" }
+[2026-06-28T07:38:09] [115/217] FAIL rc=1 https://www.youtube.com/watch?v=E3Q4s7x6Qlk :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=E3Q4s7x6Qlk" }
+[2026-06-28T07:38:16] [116/217] FAIL rc=1 https://www.youtube.com/watch?v=qQ51dksl1gA :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=qQ51dksl1gA" }
+[2026-06-28T07:38:23] [117/217] FAIL rc=1 https://www.youtube.com/watch?v=UgYhclWT48I :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=UgYhclWT48I" }
+[2026-06-28T07:38:29] [118/217] FAIL rc=1 https://hai.stanford.edu/ai-index/2026-ai-index-report/economy :: 07:38:29 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.136s
+[2026-06-28T07:38:36] [119/217] FAIL rc=1 https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai :: 07:38:35 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.247s
+[2026-06-28T07:38:43] [120/217] FAIL rc=1 https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf :: 07:38:42 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.302s
+[2026-06-28T07:38:48] [121/217] FAIL rc=1 https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/ai-and-skills_8dbed5fe/f843b352-en.pdf :: 07:38:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.266s
+[2026-06-28T07:38:55] [122/217] FAIL rc=1 https://www.weforum.org/stories/2026/02/ai-improving-wages-job-quality/ :: 07:38:55 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.185s
+[2026-06-28T07:39:01] [123/217] FAIL rc=1 https://towardsdatascience.com/my-honest-advice-for-aspiring-machine-learning-engineers/ :: 07:39:01 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.177s
+[2026-06-28T07:39:07] [124/217] FAIL rc=1 https://towardsdatascience.com/dont-follow-generic-ml-engineer-roadmaps-do-this-instead-2/ :: 07:39:06 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.305s
+[2026-06-28T07:39:12] [125/217] FAIL rc=1 https://towardsdatascience.com/how-i-became-a-machine-learning-engineer-no-cs-degree-no-bootcamp/ :: 07:39:12 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.260s
+[2026-06-28T07:39:18] [126/217] FAIL rc=1 https://admit-lab.com/blog/is-a-masters-degree-in-computer-science-worth-it/ :: 07:39:18 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.354s
+[2026-06-28T07:39:24] [127/217] FAIL rc=1 https://admit-lab.com/blog/is-a-masters-in-ai-worth-it/ :: 07:39:23 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.255s
+[2026-06-28T07:39:29] [128/217] FAIL rc=1 https://zenvanriel.com/job/should-get-ai-masters/ :: 07:39:29 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.235s
+[2026-06-28T07:39:37] [129/217] FAIL rc=1 https://www.guvi.in/blog/do-you-need-a-masters-or-phd-for-a-career-in-ai-ml/ :: 07:39:37 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.325s
+[2026-06-28T07:39:44] [130/217] FAIL rc=1 https://aigraduate.org/news/masters-vs-phd-ai-in-2026 :: 07:39:44 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.281s
+[2026-06-28T07:39:52] [131/217] FAIL rc=1 https://www.ucumberlands.edu/blog/masters-vs-phd-it-which-degree-to-pursue :: 07:39:51 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.231s
+[2026-06-28T07:39:58] [132/217] FAIL rc=1 https://statementofpurpose.net/ai-ml-graduate-programs-career-guide-engineer-researcher-2025 :: 07:39:58 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.270s
+[2026-06-28T07:40:04] [133/217] FAIL rc=1 https://admit-lab.com/blog/statement-of-purpose-artificial-intelligence/ :: 07:40:04 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.364s
+[2026-06-28T07:40:10] [134/217] FAIL rc=1 https://admit-lab.com/blog/computer-science-statement-of-purpose-example/ :: 07:40:10 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.252s
+[2026-06-28T07:40:16] [135/217] FAIL rc=1 https://aigraduate.org/tools/statement-of-purpose/ :: 07:40:16 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.195s
+[2026-06-28T07:40:22] [136/217] FAIL rc=1 https://csguides.github.io/grad-school-application-guide/ :: 07:40:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.371s
+[2026-06-28T07:40:29] [137/217] FAIL rc=1 https://www.cs.jhu.edu/~aadelucia/blog/2025/apply-phd/ :: 07:40:28 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.238s
+[2026-06-28T07:40:35] [138/217] FAIL rc=1 https://careeradvancement.uchicago.edu/careers-in/technology/applying-to-computer-science-graduate-programs/ :: 07:40:34 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.285s
+[2026-06-28T07:40:41] [139/217] FAIL rc=1 https://www.hmc.edu/cs/student-resources/cs-grad-school-information/ :: 07:40:41 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.300s
+[2026-06-28T07:40:49] [140/217] FAIL rc=1 https://timdettmers.com/2018/11/26/phd-applications/ :: 07:40:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.587s
+[2026-06-28T07:40:55] [141/217] FAIL rc=1 https://blog.ruipan.xyz/blog/towards-applying-to-cs-ph.d.-programs :: 07:40:54 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.248s
+[2026-06-28T07:41:01] [142/217] FAIL rc=1 https://www.scribbr.com/graduate-school/when-to-apply/ :: 07:41:01 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.249s
+[2026-06-28T07:41:07] [143/217] FAIL rc=1 https://www.youtube.com/watch?v=8P1FbgnbZJ8 :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=8P1FbgnbZJ8" }
+[2026-06-28T07:41:13] [144/217] FAIL rc=1 https://www.youtube.com/watch?v=3mPt-T40T-Q :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=3mPt-T40T-Q" }
+[2026-06-28T07:41:19] [145/217] FAIL rc=1 https://www.youtube.com/watch?v=FCBrUt5Qqzs :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=FCBrUt5Qqzs" }

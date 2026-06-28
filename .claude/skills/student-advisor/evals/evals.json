@@ -1,0 +1,41 @@
+{
+  "skill_name": "student-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to learn reinforcement learning properly but I keep bouncing between random YouTube videos and getting nowhere. Can you give me a roadmap from beginner to advanced?",
+      "expected_output": "A beginner-to-advanced roadmap using the learn-anything tutor templates: 3-5 ordered stages, each with named core concepts and a self-test checkpoint, a build-something step by the intermediate stage, an honest time estimate, common traps, and a concrete 'start today' action. Should offer to hand off to deep-research for current named courses/resources rather than fabricating specific links, and offer a Google Docs export.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have my data structures final in 9 days and I haven't really revised. What's the most effective way to prepare in the time I have?",
+      "expected_output": "An evidence-grounded exam-prep plan: leads with practice testing / retrieval practice and distributed (spaced) practice over the 9 days rather than rereading, gives a concrete day-by-day schedule, addresses test anxiety and sleep, and cites the learning-science evidence. Should not invent statistics; numbers should trace to the corpus.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I study a chapter and feel like I get it, then a week later it's totally gone. How do I actually retain what I learn?",
+      "expected_output": "A retention answer grounded in cognitive science: explains the forgetting curve, prescribes spaced retrieval practice (self-quizzing on a spacing schedule), elaboration, and interleaving, and corrects the illusion of fluency from rereading. Must cite the research corpus and avoid fabricated effect sizes; should flag rereading/highlighting as low-utility.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I'm a final-year AI undergrad and honestly have no idea what comes next. What career paths are realistic and what should I be learning right now to be competitive?",
+      "expected_output": "Career guidance calibrated to an AI/CS undergraduate via student-context.md: names realistic 2026 routes (ML engineer, data scientist, AI engineer, MLOps, research, founder track), the in-demand skills/gaps to close, and a ranked 'what to explore next.' Grounded in the career corpus; flags anything time-sensitive (job market, salaries) and can verify via the live notebook. Offers next steps.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "I'm from Pakistan and want to do a fully funded master's abroad in AI. Which scholarships should I target and which countries make the most sense?",
+      "expected_output": "A scholarship + study-abroad answer grounded in the corpus and student-context.md location: names fully funded programs realistically open to Pakistani nationals (Fulbright, Chevening, DAAD, Erasmus Mundus, Commonwealth, MEXT), with eligibility, deadlines, and how to win, plus a country comparison (cost, post-study work, PR, CS/AI quality). Time-sensitive details verified via live notebook; nothing invented. Offers a shortlist export.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "I have to take a compulsory accounting course and I find it mind-numbingly boring. How do I get myself to actually care enough to do well?",
+      "expected_output": "A motivation answer grounded in self-determination theory and the research corpus: practical tactics to build interest/intrinsic motivation in a dry subject (find relevance/autonomy, curiosity hooks, connect to existing interests), plus procrastination tactics and habit formation. Honest and concrete, cites the corpus, ends with a first action.",
+      "files": []
+    }
+  ]
+}

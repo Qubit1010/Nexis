@@ -1,0 +1,608 @@
+{
+  "answer": "Effective note-taking and active-reading methods for university students are distinguished by their ability to transform passive \"recording\" into active \"encoding\" and \"retrieval.\" Research consistently identifies a hierarchy where techniques involving **active recall** and **spaced repetition** significantly outperform passive strategies like rereading or highlighting [1-4].\n\n### **Best Supported Note-Taking Methods**\n\n#### **1. The Cornell Method (The Gold Standard for Lectures)**\nDeveloped by Walter Pauk, this system is a structured application of retrieval practice and synthesis [5-7].\n*   **Structure:** Divide the page into three zones: the **Notes Column** (70%, right), the **Cue Column** (30%, left), and the **Summary Section** (bottom 5-6 lines) [8-11].\n*   **The Science:** The method is highly effective because it embeds **high-utility** strategies (practice testing and distributed practice) into the format [12, 13]. A 2025 meta-analysis confirmed that students using Cornell notes scored significantly higher on comprehension tests and exhibited greater confidence compared to those using personal notes [14-16].\n*   **Effect Size:** In recent research, the Cornell group showed a steeper rise in reading comprehension scores over time with a **medium effect size (partial $\\eta^2 = 0.077$)** for the interaction between time and group [16].\n\n#### **2. Mapping (Concept Mapping)**\nThis non-linear method uses a central concept with branching subtopics and linking words to show relationships [17, 18].\n*   **Best Use:** Use mapping for brainstorming, synthesis, and exam preparation rather than real-time lecture capture [17, 19].\n*   **Hybrid System:** Research suggests a **Cornell-plus-mapping workflow** is most powerful [20]. Use Cornell notes for initial disciplined capture and concept maps (within 24\u201372 hours) as an \"understanding layer\" to make relationships visible [20-22]. Nesbit and Adesope\u2019s (2006) meta-analysis found concept mapping to be superior to linear notes for showing cause-and-effect [23, 24].\n\n#### **3. The Outline Method**\nThe default hierarchical system of bullet points is best for structured textbooks or technical documentation [25-27].\n*   **Actionable Step:** To make outlines active, write **headings as questions**. Attempting to recall the bulleted details underneath provides an active-recall mechanic [26].\n\n---\n\n### **Best Supported Active-Reading Methods**\n\n#### **1. SQ3R (Survey, Question, Read, Recite, Review)**\nFocused on optimizing reading comprehension, this method provides five interactions with the text instead of one [28, 29].\n*   **Step 1 [Survey]:** Scan headings, graphs, and summaries (3\u20135 min) [30, 31].\n*   **Step 2 [Question]:** Turn headings into questions (e.g., \"What are the long-term effects of X?\") [30, 31].\n*   **Step 3 [Read]:** Read in-depth to answer those questions [30, 32].\n*   **Step 4 [Recite]:** Close the book and answer your questions in your own words (Active Recall) [30, 32].\n*   **Step 5 [Review]:** Solidify memory by checking accuracy and repeating the recitation periodically (Spaced Repetition) [30, 33].\n\n#### **2. The Feynman Technique (The \"Great Explainer\")**\nUsed as a \"sanity check\" to ensure you truly understand a concept rather than just parroting jargon [34-36].\n*   **Actionable Steps:**\n    1. Write the topic at the top of a page [37, 38].\n    2. Explain it in plain language as if teaching a **12-year-old** (or a child) [37-39].\n    3. Identify where your explanation breaks down or becomes vague [37, 38, 40].\n    4. Re-learn those gaps from source material and simplify again [37-39].\n\n---\n\n### **Handwriting vs. Typing: The \"Encoding\" Bottleneck**\nThe research generally supports **handwriting for comprehension** and **typing for coverage** [41, 42].\n*   **The Mueller & Oppenheimer (2014) Study:** Laptop note-takers often default to verbatim transcription, which is shallow processing [43-45]. Handwritten note-takers are forced to paraphrase because they cannot write as fast as someone speaks; this \"bottleneck\" results in deeper information processing [2, 42, 44].\n*   **Neurobiology:** High-density EEG studies show that **handwriting** (but not typing) leads to widespread brain connectivity in theta and alpha ranges, which are crucial for memory formation [46-48].\n*   **Nuance:** Typed notes can be effective if the student consciously avoids verbatim transcription and reviews them rigorously, but laptop use increases the risk of digital distractions [45, 49-51].\n\n---\n\n### **Student Workflow: During and After Lectures**\n\n#### **During the Lecture**\n*   **Record:** Capture main ideas and meaningful examples in the **notes column** [52, 53]. Use \"telegraphic\" phrases (short phrases, symbols, and abbreviations) rather than full sentences [52-55].\n*   **Listen for Signal Words:** Focus on claims and connections the lecturer emphasizes [56].\n*   **Avoid Verbatim:** If you are transcribing word-for-word, you are not thinking [43].\n\n#### **After the Lecture (The Review Cycle)**\n*   **Within 24 Hours [Reduce]:** Fill in the **cue column** with questions or keywords that test the notes. The harder you make these questions, the more effective the review [52, 57, 58].\n*   **Immediately After [Summarize]:** Write a 3\u20135 sentence synthesis of the page as if explaining it to someone who wasn't there [57-59].\n*   **Active Recall [Recite]:** Cover the notes column. Read the cue and try to answer it fully from memory before checking [57, 60-62]. **Active recall improves retention by 25-60%** compared to passive reading [63, 64].\n*   **Spaced Repetition [Review]:** Apply the **1-2-7-14 Rule**: Review your notes on Day 1, Day 2, Day 7, and Day 14 [63, 65, 66]. Spending just **10 minutes per subject per week** can build long-term retention [67-69].\n\n### **Key Effect Sizes for Evidence-Based Learning**\n*   **Spaced/Distributed Practice:** Highest overall impact, $d = 0.85$ [70-72].\n*   **Retrieval Practice (Practice Testing):** Very high impact, $d = 0.74$ [70-72].\n*   **Rereading and Highlighting:** Low utility, $d = 0.47$ and $d = 0.44$ respectively [70, 72, 73]. Passive rereading provides **little or no benefit** for learning [74, 75].",
+  "conversation_id": "fa8e51bb-bb8a-4ca9-b7f4-2bcdb3fba360",
+  "turn_number": 1,
+  "is_follow_up": true,
+  "references": [
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 1,
+      "cited_text": "Re-reading your notes does not fix this. It feels productive, but recognition is not the same as recall. You recognise the material because you wrote it down. That does not mean you can produce it under exam conditions.",
+      "start_char": 3518,
+      "end_char": 3737,
+      "chunk_id": "7335ee04-94ec-4a1f-9dbb-d1737b59ccf6"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 2,
+      "cited_text": "The digital Cornell workflow with Notesmakr: capture lecture notes, generate AI cue-column flashcards, write your Feynman summary, let the system schedule your spaced reviews. This is the Cornell system with the parts students most commonly skip handled automatically.",
+      "start_char": 17238,
+      "end_char": 17506,
+      "chunk_id": "632d8135-4eb6-4339-913d-4541ed3ca2a3"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 3,
+      "cited_text": "Why Most Exam Study Strategies Fail",
+      "start_char": 1237,
+      "end_char": 1272,
+      "chunk_id": "271ffbd9-77ed-4d7a-844c-293868fec920"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 4,
+      "cited_text": "s going to be the structure of the video firstly i'm going to be talking about the three very popular revision techniques that are shown to be less effective in the literature namely rereading highlighting and making notes/summarizing those are by far the most popular techniques but they're also not very effective if you look at the evidence behind them secondly i'm going to be introducing the concept of active recall which is by far the most powerful effective study technique and that involves like testing yourself and practicing retrieving information from your brain because the very act of retrieving information actually strengthens connections in the brain and there's like a load of evidence behind this and finally in part three of the video i'll be giving you some specific tips on how you can actually apply this active recall thing to your own study so hopefully by the end of the video you'll have some practical strategies that you can apply if you feel like it as always everythin",
+      "start_char": 1000,
+      "end_char": 2000,
+      "chunk_id": "d2aa4623-073f-41a5-bd2a-2f9bb34c698e"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 5,
+      "cited_text": "You recognise this. You've sat in lectures filling pages. You've highlighted half a textbook. You've re-read your notes the night before an exam and felt a rising panic as nothing stuck. The problem isn't your memory. The problem is your system. (And if textbook reading specifically is where you lose information, check out how to read a textbook effectively before continuing.)",
+      "start_char": 632,
+      "end_char": 1011,
+      "chunk_id": "e4418117-cfa5-498c-b94a-79afd6afc483"
+    },
+    {
+      "source_id": "0fbc2fd1-3739-42d3-bc78-5837a55ca942",
+      "citation_number": 6,
+      "cited_text": "Recent empirical studies on second-language (L2) proficiency have been increasingly interested in the impacts of note-taking (Jin & Webb, 2025 ). Of the various note-taking methods, the Cornell note-taking system has been found particularly effective as it facilitates efficient note-taking and enhances reading comprehension (RC) (Faber et al., 2000 ). Moreover, Cornell notes integrate note-taking, self-questioning, and summarization, serving as a powerful tool for strengthening metacognitive learning strategies. This study investigates the use of Cornell note-taking in a first-year English reading class to assess whether this intervention can enhance RC skills.",
+      "start_char": 6640,
+      "end_char": 7307,
+      "chunk_id": "263c9e5c-592e-48d8-89e9-24fa361b56ec"
+    },
+    {
+      "source_id": "fab0067d-5448-477c-a73c-1c900e0dcf11",
+      "citation_number": 7,
+      "cited_text": "Before the detailed comparison, a quick orientation:",
+      "start_char": 2162,
+      "end_char": 2214,
+      "chunk_id": "74865d73-45ec-44c8-88a3-b27e17a7b41d"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 8,
+      "cited_text": "This guide covers the complete Cornell system: what it is, how to use it, common mistakes that kill its effectiveness, and how to combine it with AI-powered tools to make it scale across every subject.",
+      "start_char": 1455,
+      "end_char": 1656,
+      "chunk_id": "f09ef0c5-84ad-488a-9146-140eb680a1b4"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 9,
+      "cited_text": "The cue column runs down the left side, about 30% of the page width. You fill this within 24 hours after class. For each row in your notes column, you write a question, keyword, or prompt in the cue column. These become your flashcards: cover the right side, read the cue, and try to recall the answer.",
+      "start_char": 2021,
+      "end_char": 2323,
+      "chunk_id": "582e4990-3829-41cb-8b4d-898e5711dcf2"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 10,
+      "cited_text": "Frequently Asked Questions About the Cornell Note-Taking Method",
+      "start_char": 18880,
+      "end_char": 18943,
+      "chunk_id": "1d97e77c-de53-4ba6-98be-62ca56dbab2d"
+    },
+    {
+      "source_id": "46c32885-8e92-408c-a4f1-1139abb65c22",
+      "citation_number": 11,
+      "cited_text": "Together, the two principles imply a single design rule for good notes: the page or document should make active recall and spaced review easy .",
+      "start_char": 4152,
+      "end_char": 4294,
+      "chunk_id": "4f8f6ff7-8cac-40ca-9078-9f45c8a6c674"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 12,
+      "cited_text": "This three-part structure works because it embeds the two study strategies Dunlosky et al. (2013) rated as having \"high utility\" out of ten common methods (practice testing and distributed practice) directly into how you take notes in the first place.",
+      "start_char": 2784,
+      "end_char": 3035,
+      "chunk_id": "b4775c90-a24e-4ec5-bf34-91e4f7b2c70f"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 13,
+      "cited_text": "Does the Cornell note-taking method actually work?",
+      "start_char": 19434,
+      "end_char": 19484,
+      "chunk_id": "9309ddf4-1cb6-4221-8e8c-2251c7e7bbfe"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 14,
+      "cited_text": "Does the Cornell Method Actually Work?",
+      "start_char": 10358,
+      "end_char": 10396,
+      "chunk_id": "4fca667f-0a46-449b-9dd8-9455927fea08"
+    },
+    {
+      "source_id": "0fbc2fd1-3739-42d3-bc78-5837a55ca942",
+      "citation_number": 15,
+      "cited_text": "Ji-Young Seo 1",
+      "start_char": 1766,
+      "end_char": 1780,
+      "chunk_id": "bcb6dd58-09ae-4718-9ca4-6f5be0e82021"
+    },
+    {
+      "source_id": "0fbc2fd1-3739-42d3-bc78-5837a55ca942",
+      "citation_number": 16,
+      "cited_text": "A repeated measures two-way ANOVA was conducted to detect statistically significant differences in test scores between the two groups (see Table 6 ). The results showed a significant increase in the test scores over time (F = 36.221, p < 0.001) with a large effect size (partial \u03b7 2 = .326), indicating a substantial improvement in participants' scores over time. According to Richardson ( 2011 ), partial \u03b7 2 values of .01, .06, and .14 correspond to small, medium, and large effects, respectively. The significant interaction between time and group ( F = 6.271, p < 0.05) with a medium effect size (partial \u03b7 2 = .077) suggests that the extent of improvement differed between groups. These findings show that the Cornell note-taking group achieved statistically higher post-test scores and that the participants' scores were significantly influenced by time. This implies that learners' continued use of the Cornell note-taking method could positively affect their test scores.",
+      "start_char": 37469,
+      "end_char": 38446,
+      "chunk_id": "34253a2f-f9e2-4a29-b1ef-015da6ec3bc8"
+    },
+    {
+      "source_id": "46c32885-8e92-408c-a4f1-1139abb65c22",
+      "citation_number": 17,
+      "cited_text": "Method 3: Mind Mapping",
+      "start_char": 6040,
+      "end_char": 6062,
+      "chunk_id": "121668c9-2d97-4dcc-8868-558da48cf5e5"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 18,
+      "cited_text": "Mind Maps and Visual Techniques",
+      "start_char": 12202,
+      "end_char": 12233,
+      "chunk_id": "1057397c-ca5c-43f7-b726-1bb948a25e00"
+    },
+    {
+      "source_id": "fab0067d-5448-477c-a73c-1c900e0dcf11",
+      "citation_number": 19,
+      "cited_text": "Which Method Should You Use?",
+      "start_char": 11660,
+      "end_char": 11688,
+      "chunk_id": "e1ae61dc-a6a1-420b-b1e1-fcdbfc92ba93"
+    },
+    {
+      "source_id": "eb5dcb78-1218-4bc0-87b1-1a817f4c759d",
+      "citation_number": 20,
+      "cited_text": "That is where a Cornell-notes-plus-concept-maps workflow becomes useful. Cornell notes give you disciplined capture, questions, and summaries. Concept maps give you structure, linking words, and system-level understanding. Together, they create a study process that is much better for revision, project learning, and long-term knowledge retention than either method used alone.",
+      "start_char": 1063,
+      "end_char": 1440,
+      "chunk_id": "98925d2b-a838-44d1-b6b7-485bc61fa072"
+    },
+    {
+      "source_id": "eb5dcb78-1218-4bc0-87b1-1a817f4c759d",
+      "citation_number": 21,
+      "cited_text": "This schedule also works for professionals. Replace \"lecture\" with \"meeting,\" \"article,\" or \"training session,\" and the same logic holds.",
+      "start_char": 7986,
+      "end_char": 8123,
+      "chunk_id": "95f8c5fa-b250-4447-842c-713e223c9735"
+    },
+    {
+      "source_id": "eb5dcb78-1218-4bc0-87b1-1a817f4c759d",
+      "citation_number": 22,
+      "cited_text": "How many concepts should one Cornell page turn into?",
+      "start_char": 12140,
+      "end_char": 12192,
+      "chunk_id": "0f8cb991-8edb-42a8-8fbd-5944a88925b8"
+    },
+    {
+      "source_id": "eb5dcb78-1218-4bc0-87b1-1a817f4c759d",
+      "citation_number": 23,
+      "cited_text": "For outside references, it helps to know the background behind each method. Cornell University's Learning Strategies Center still provides a practical overview of the Cornell Note-taking System . For concept mapping foundations, the Wikipedia overview on concept maps is a fast starting point, and the overview on the testing effect is useful when thinking about retrieval-based review. On the research side, Nesbit and Adesope's 2006 meta-analysis remains one of the most-cited summaries of learning with concept and knowledge maps.",
+      "start_char": 1867,
+      "end_char": 2399,
+      "chunk_id": "1dad2285-bdf5-4752-a6d6-b501ff007e8a"
+    },
+    {
+      "source_id": "eb5dcb78-1218-4bc0-87b1-1a817f4c759d",
+      "citation_number": 24,
+      "cited_text": "Concept maps are strong when you need to:",
+      "start_char": 2910,
+      "end_char": 2951,
+      "chunk_id": "8ff64737-a6fe-4f89-bb19-bc8cce280c81"
+    },
+    {
+      "source_id": "46c32885-8e92-408c-a4f1-1139abb65c22",
+      "citation_number": 25,
+      "cited_text": "To review, cover the right column and use the left-column cues to recall what's there.",
+      "start_char": 4824,
+      "end_char": 4910,
+      "chunk_id": "67d0e812-6880-4d6f-88f0-aa908d47b18b"
+    },
+    {
+      "source_id": "46c32885-8e92-408c-a4f1-1139abb65c22",
+      "citation_number": 26,
+      "cited_text": "Best for : textbook chapters, technical documentation, structured material with parent-child relationships. For symbol-heavy subjects with theorems and proofs, see our how to take math notes guide.",
+      "start_char": 5421,
+      "end_char": 5617,
+      "chunk_id": "5e92d10f-b153-435c-ad27-a3926d0d2435"
+    },
+    {
+      "source_id": "fab0067d-5448-477c-a73c-1c900e0dcf11",
+      "citation_number": 27,
+      "cited_text": "Outline Method: The Default for a Reason",
+      "start_char": 6503,
+      "end_char": 6543,
+      "chunk_id": "ad3095bf-0d14-41d5-9e15-76f0c525b0d9"
+    },
+    {
+      "source_id": "c13145bb-7893-4a5e-a32d-059f87d97467",
+      "citation_number": 28,
+      "cited_text": "TABLE OF CONTENTS",
+      "start_char": 11405,
+      "end_char": 11422,
+      "chunk_id": "ff5d9512-13b0-4e1e-a670-bd8ec94cbf52"
+    },
+    {
+      "source_id": "fbfb4550-b725-4295-9621-f3dccf837f65",
+      "citation_number": 29,
+      "cited_text": null,
+      "start_char": 0,
+      "end_char": 1,
+      "chunk_id": "50d83d84-f177-41d3-b048-785b2f6683ee"
+    },
+    {
+      "source_id": "c13145bb-7893-4a5e-a32d-059f87d97467",
+      "citation_number": 30,
+      "cited_text": "Download a PDF summary of the method from the Center for Teaching and Learning at Stanford University here \u2192",
+      "start_char": 11920,
+      "end_char": 12028,
+      "chunk_id": "4f7bf2ef-d3f8-4579-ac70-4182f8192fa8"
+    },
+    {
+      "source_id": "fbfb4550-b725-4295-9621-f3dccf837f65",
+      "citation_number": 31,
+      "cited_text": null,
+      "start_char": 688,
+      "end_char": 693,
+      "chunk_id": "0dc355a7-8046-4884-8271-000015408306"
+    },
+    {
+      "source_id": "fbfb4550-b725-4295-9621-f3dccf837f65",
+      "citation_number": 32,
+      "cited_text": null,
+      "start_char": 1463,
+      "end_char": 1464,
+      "chunk_id": "3285944e-5292-4345-9b58-6729b98ba9ef"
+    },
+    {
+      "source_id": "fbfb4550-b725-4295-9621-f3dccf837f65",
+      "citation_number": 33,
+      "cited_text": null,
+      "start_char": 1986,
+      "end_char": 1987,
+      "chunk_id": "713941b2-e681-4380-85ad-03b85934c34f"
+    },
+    {
+      "source_id": "5cb70d5f-2b3b-459c-bdfc-815c886400f6",
+      "citation_number": 34,
+      "cited_text": "s the famous Feynman technique famously named after the famous physicist Richard feinman who was aptly known as The Great explainer and Feynman was a big deal back in the day before he died because he was able to you know distill really complicated things in theoretical physics in a way that made sense to the layperson and the reason he was able to do that is because he understood the topic so well and once you've understood the topic well enough you can just explain it to anyone and that is the key principle behind the Feynman technique and that's our key litmus test for whether we really understand something and so the way we do that is that whenever we're learning a topic um what I would do is that after I've kind of learned the topic or sort of at every Junction within the topic I would ask myself does this make sense firstly and secondly could I explain this to a five-year-old so let's say in medicine I'm trying to learn about how atrial fibrillation works for example I might expl",
+      "start_char": 7000,
+      "end_char": 8000,
+      "chunk_id": "a32ce94b-620e-4c8e-91d4-eceb79187394"
+    },
+    {
+      "source_id": "6dd41403-fb2e-4048-b5f0-3fcbd2c0df9f",
+      "citation_number": 35,
+      "cited_text": "It\u2019s straightforward, and powerful.",
+      "start_char": 3144,
+      "end_char": 3179,
+      "chunk_id": "775d210f-d9c7-4c7d-8d8b-103d3cf9ed06"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 36,
+      "cited_text": "Specific Techniques to Deepen Understanding",
+      "start_char": 10638,
+      "end_char": 10681,
+      "chunk_id": "43938880-323f-44b4-bc39-59b03e2b6f4b"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 37,
+      "cited_text": "What it is: Actively retrieving information from memory without looking at notes or textbooks.",
+      "start_char": 3011,
+      "end_char": 3105,
+      "chunk_id": "12d53ebf-b669-4cf4-a200-3ecdff15aa37"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 38,
+      "cited_text": "Write the concept at the top of a blank page",
+      "start_char": 8941,
+      "end_char": 8985,
+      "chunk_id": "baa9a6ff-a6c7-4a0a-b100-55ccbfdfa85f"
+    },
+    {
+      "source_id": "f93fa46d-2548-4dca-9972-1b43697d0301",
+      "citation_number": 39,
+      "cited_text": "Asking questions sparks curiosity.",
+      "start_char": 6717,
+      "end_char": 6751,
+      "chunk_id": "6c2e26dc-7727-47b3-9b0c-38a3176e79b5"
+    },
+    {
+      "source_id": "6dd41403-fb2e-4048-b5f0-3fcbd2c0df9f",
+      "citation_number": 40,
+      "cited_text": "it well enough that you could explain it to\na child.",
+      "start_char": 4252,
+      "end_char": 4304,
+      "chunk_id": "e6242c0c-beb5-4271-b025-3bb518ac3f73"
+    },
+    {
+      "source_id": "fab0067d-5448-477c-a73c-1c900e0dcf11",
+      "citation_number": 41,
+      "cited_text": "Digital versus physical mind maps: Digital tools (XMind, MindMeister, Miro) allow infinite canvas and easy rearrangement. Physical mind maps on paper are faster to draw but harder to revise. For study purposes, digital is usually better because you can add detail without running out of space.",
+      "start_char": 9302,
+      "end_char": 9595,
+      "chunk_id": "6483c351-8568-4e95-a473-76ec0f9a9839"
+    },
+    {
+      "source_id": "fab0067d-5448-477c-a73c-1c900e0dcf11",
+      "citation_number": 42,
+      "cited_text": "The famous Mueller and Oppenheimer (2014) study found that students who took notes by hand retained conceptual material better than typists, even though typists captured more content. The explanation: handwriters are forced to paraphrase (you cannot write fast enough to transcribe), which produces deeper encoding. Typists transcribe verbatim and process less.",
+      "start_char": 9808,
+      "end_char": 10169,
+      "chunk_id": "bcacae64-d502-4adc-85bd-3f410358eed8"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 43,
+      "cited_text": "The fix: Leave the cue column completely blank during lectures. Treat it as a post-class activity. Go back within 24 hours. That is the window before the forgetting curve steepens.",
+      "start_char": 12225,
+      "end_char": 12405,
+      "chunk_id": "8a02525f-63fa-4c7d-abe5-a5cb742cd54e"
+    },
+    {
+      "source_id": "46c32885-8e92-408c-a4f1-1139abb65c22",
+      "citation_number": 44,
+      "cited_text": "The single most quoted study on note-taking is Mueller and Oppenheimer (Princeton, 2014) , which compared longhand and laptop note-takers across three experiments. Laptop users wrote more words, more verbatim transcripts, and scored worse on conceptual questions one week later. The authors concluded that the bottleneck of writing forces compression, and compression is the active-encoding step that makes notes useful.",
+      "start_char": 2734,
+      "end_char": 3153,
+      "chunk_id": "f0c006fd-d1d0-4e88-acc5-446668c61965"
+    },
+    {
+      "source_id": "c744cd2a-8ac5-4637-bcf8-e72fcc37ec5e",
+      "citation_number": 45,
+      "cited_text": "organization, or elaboration. With that in mind,",
+      "start_char": 1701,
+      "end_char": 1749,
+      "chunk_id": "9030e51a-49e8-47c1-b72e-e9c0f6a82a9f"
+    },
+    {
+      "source_id": "10f0d68c-2c4b-4e7c-b9e0-b9d878e17aad",
+      "citation_number": 46,
+      "cited_text": "64",
+      "start_char": 5060,
+      "end_char": 5062,
+      "chunk_id": "1aa94b86-54f0-4441-b06c-3f1f88227176"
+    },
+    {
+      "source_id": "10f0d68c-2c4b-4e7c-b9e0-b9d878e17aad",
+      "citation_number": 47,
+      "cited_text": "A recent EEG-study from our lab showed that drawing by hand causes more activity and involves larger areas in the brain as opposed to typing on a keyboard ( Van der Meer and Van der Weel, 2017 ). We concluded that the involvement of fine and intricate hand movements in notetaking, in contrast with pressing keys on a keyboard that all require the same simple finger movement, may be more advantageous for learning ( Van der Meer and Van der Weel, 2017 ). A follow-up study observed event-related synchronized activity in the theta range in both children and students in parietal and central brain regions, but only when writing by hand ( Askvik et al., 2020 ). As these studies have found evidence that writing by hand facilitates learning, the present study further investigated the neurobiological differences related to cursive writing and typewriting in the young adult brain. Specifically, we investigated how the various brain regions interconnect via neural networks when writing by hand as opposed to typing on a keyboard using frequency modulation and the latest in brain connectivity analysis (c.f., Solomon et al., 2017 ).",
+      "start_char": 10962,
+      "end_char": 12096,
+      "chunk_id": "71fce1e5-44ad-45b7-b4c5-70c9042f8f85"
+    },
+    {
+      "source_id": "10f0d68c-2c4b-4e7c-b9e0-b9d878e17aad",
+      "citation_number": 48,
+      "cited_text": "Thus, the ongoing substitution of handwriting by typewriting in almost every educational setting may seem somewhat misguided as it could affect the learning process in a negative way ( Alonso, 2015 ; Mangen and Balsvik, 2016 ; Arnold et al., 2017 ). The present findings suggest that the intricate and precisely controlled handwriting movements have a beneficial impact on the brain's connectivity patterns related to learning and remembering. The present study did not find evidence of such positive activation patterns when using a keyboard.",
+      "start_char": 32553,
+      "end_char": 33096,
+      "chunk_id": "7e2e0c2f-fdfb-459b-a3ba-370da04c1dd4"
+    },
+    {
+      "source_id": "0fbc2fd1-3739-42d3-bc78-5837a55ca942",
+      "citation_number": 49,
+      "cited_text": "With the advancement of technology, considerable research has been conducted on digital note-taking and note-taking modalities such as computer note-taking, as opposed to handwritten notes, with mixed findings. While digital tools allow students to quickly take notes and efficiently revise them, these applications have also been associated with shallow cognitive processing and higher susceptibility to distractions such as browsing nonacademic websites or social media platforms (Aagaard, 2015 ). Mueller and Oppenheimer ( 2014 ) found that students who took handwritten notes were better at processing and organizing information than those who took notes verbatim on a laptop, which had been linked to better test performance.",
+      "start_char": 12455,
+      "end_char": 13183,
+      "chunk_id": "e6b69d24-624d-4095-85a0-b9f7196a31f8"
+    },
+    {
+      "source_id": "c744cd2a-8ac5-4637-bcf8-e72fcc37ec5e",
+      "citation_number": 50,
+      "cited_text": "Failing to do so drastically reduces any benefits offered by using an electronic device.",
+      "start_char": 4301,
+      "end_char": 4389,
+      "chunk_id": "728e1190-3d61-4859-b7bc-841552997805"
+    },
+    {
+      "source_id": "5202b8e9-27f5-4386-a640-2011e0a5c71b",
+      "citation_number": 51,
+      "cited_text": "4.3. Brief Summary",
+      "start_char": 47609,
+      "end_char": 47627,
+      "chunk_id": "22726290-b3f0-4a9d-bf69-d50e674f1182"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 52,
+      "cited_text": "1",
+      "start_char": 4769,
+      "end_char": 4770,
+      "chunk_id": "906110fd-a1eb-4b53-a4fc-c6bf768f72c4"
+    },
+    {
+      "source_id": "0fbc2fd1-3739-42d3-bc78-5837a55ca942",
+      "citation_number": 53,
+      "cited_text": "According to Pauk and Owens ( 2010 ), the Cornell format consists of three sections, each serving a unique purpose. In the note-taking section, students record information as completely as possible in telegraphic sentences using bullet points, graphic organizers, or abbreviations rather than verbatim notes. In the cue section, students take note of main ideas or write questions based on their notes, and in the summary section, students must condense the entire content into a few sentences. This organizational layout encourages students to efficiently synthesize, record, and annotate information.",
+      "start_char": 17151,
+      "end_char": 17752,
+      "chunk_id": "9b6ac637-c95f-4917-b471-8f21ff9a110b"
+    },
+    {
+      "source_id": "5f447d65-916e-4bb8-a114-86c090f59ad1",
+      "citation_number": 54,
+      "cited_text": "It involves dividing the note page into three sections :",
+      "start_char": 537,
+      "end_char": 594,
+      "chunk_id": "c01e4253-eb0d-47f0-81da-4704a218ec22"
+    },
+    {
+      "source_id": "3f026343-15cc-40c0-b4ef-2b28e679d756",
+      "citation_number": 55,
+      "cited_text": "Cornell notes are a helpful study tool in class while reading a textbook or when using online resources writing key information down as you learn will help you retain more how do you use Cornell notes in a variety of learning environments you can modify the Cornell note-taking system to match your learning situation and needs the notes section is where you write down what the professor says and what she puts on the board but you don't need to write down every word useful notes capture both the gist of what's being said and the important details using abbreviations and symbols can help you keep up if you're learning from a video or online text treat it just like class and write down the information you think you'll need to know different online resources have different options for taking notes find out what's available and what will work best for you students use the Q section for all kinds of questions and comments traditionally the Q column of Cornell notes is used after you take your notes this is the place where students add questions that will help them remember or organize the material using the Q section idea for textbook reading can help you identify what you still need to study more",
+      "start_char": 0,
+      "end_char": 1210,
+      "chunk_id": "fbfe42af-cb19-45b0-b424-d40c6590d877"
+    },
+    {
+      "source_id": "46c32885-8e92-408c-a4f1-1139abb65c22",
+      "citation_number": 56,
+      "cited_text": "How to Take Good Notes During Lectures",
+      "start_char": 8969,
+      "end_char": 9007,
+      "chunk_id": "f3c96944-1488-4428-9e7d-b7696e8c91ac"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 57,
+      "cited_text": "Within 24 hours: Fill in the cue column. One question or keyword per row. Make them specific enough that answering them correctly would prove you understand the content. Aim for \"how does X cause Y?\" rather than just \"what is X?\"",
+      "start_char": 7544,
+      "end_char": 7773,
+      "chunk_id": "a7d9aef1-699e-4800-b72b-821df6eadcff"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 58,
+      "cited_text": null,
+      "start_char": 11601,
+      "end_char": 11986,
+      "chunk_id": "c2c2d846-c47e-4b56-bc61-2429c9655dc4"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 59,
+      "cited_text": "The fix: Write in your own words. If you cannot paraphrase it, flag it with a question mark. That flag means you do not understand it yet. Get clarification before the cue column step.",
+      "start_char": 12777,
+      "end_char": 12961,
+      "chunk_id": "98df2501-5e32-410e-8939-8c9041ae795c"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 60,
+      "cited_text": "3",
+      "start_char": 5581,
+      "end_char": 5582,
+      "chunk_id": "acae8fda-4e74-4f3b-bf36-9ef379a6856b"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 61,
+      "cited_text": "Mistake 4: Reading the cue column with the notes uncovered",
+      "start_char": 13418,
+      "end_char": 13476,
+      "chunk_id": "165b06ee-84a0-445b-9d4f-6ff813676414"
+    },
+    {
+      "source_id": "5f447d65-916e-4bb8-a114-86c090f59ad1",
+      "citation_number": 62,
+      "cited_text": "Cue column:",
+      "start_char": 1030,
+      "end_char": 1042,
+      "chunk_id": "30705495-1518-46c0-bdf9-67b2266abce6"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 63,
+      "cited_text": "Quick Answer: To ace an exam, use active recall (testing yourself rather than re-reading), spaced repetition (studying over multiple days using the 1-2-7-14 rule), retrieval practice (flashcards and self-quizzing), and strategic test-taking skills. Research shows students using these evidence-based techniques score 12-18% higher than similarly prepared students who only passively review material.",
+      "start_char": 1128,
+      "end_char": 1527,
+      "chunk_id": "defb65f7-8d83-4f6f-9fcc-bf6f33c160df"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 64,
+      "cited_text": "Why these fail: Your brain isn't storing information\u2014it's recognizing it. Recognition feels like knowing, but it's not. When exam day comes, you can't retrieve what you only recognized.",
+      "start_char": 2477,
+      "end_char": 2662,
+      "chunk_id": "1e5101fe-204e-4d3c-8f4e-17767c267493"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 65,
+      "cited_text": "The 1-2-7-14 Day Spaced Repetition System",
+      "start_char": 4770,
+      "end_char": 4811,
+      "chunk_id": "a747dd4e-ceab-4fb1-9de3-6af06112d4a7"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 66,
+      "cited_text": "Review new material the same day you learn it",
+      "start_char": 6769,
+      "end_char": 6814,
+      "chunk_id": "107a4d14-c5ce-4750-b475-79664d74a676"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 67,
+      "cited_text": "5",
+      "start_char": 6115,
+      "end_char": 6116,
+      "chunk_id": "f43040e7-57c5-4e45-b0f1-24c39de302c6"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 68,
+      "cited_text": "The fix: Ten minutes per subject per week. That is Pauk's prescription. This is a manual implementation of the spaced review intervals that spaced repetition software automates. The weekly review is what builds long-term retention, not the pre-exam cram session.",
+      "start_char": 13948,
+      "end_char": 14210,
+      "chunk_id": "39439b25-6e02-4625-9ee8-24e973388b08"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 69,
+      "cited_text": "Start Today",
+      "start_char": 21582,
+      "end_char": 21593,
+      "chunk_id": "998938b1-8b34-43d8-b624-171fc88ae547"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 70,
+      "cited_text": "TABLE 1",
+      "start_char": 24724,
+      "end_char": 24731,
+      "chunk_id": "5d4eb591-a670-45de-9921-02172138ec0d"
+    },
+    {
+      "source_id": "4df8f3c4-0905-43aa-b4f7-3ca95eaaab70",
+      "citation_number": 71,
+      "cited_text": "TABLE 1",
+      "start_char": 24365,
+      "end_char": 24372,
+      "chunk_id": "8628627e-34af-4981-9450-9c61960cfff6"
+    },
+    {
+      "source_id": "b0d009ce-c259-445e-a961-259caa5c91be",
+      "citation_number": 72,
+      "cited_text": "The examination of heterogeneity of the effect size distributions within each outcome category was conducted using the Q statistic and the I2 statistic (Borenstein et al.,",
+      "start_char": 20073,
+      "end_char": 20245,
+      "chunk_id": "26c8c18e-53cb-428e-bad6-df27aaecb768"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 73,
+      "cited_text": "Discussion and Conclusion",
+      "start_char": 32427,
+      "end_char": 32452,
+      "chunk_id": "e237e351-c663-4c08-8394-fc68cc6d81bd"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 74,
+      "cited_text": "is pretty much a waste of time here's another quote from a 2016 paper that again looked at the evidence behind lots of study techniques and this is what they had to say about rereading they said \"a wealth of research has shown that passive repetitive reading produces little or no benefit for learning yet not only was repetitive reading the most frequently listed strategy it was also the strategy most often listed at students number one choice by a large margin so that's what i'm going to say about rereading for the time being um i'm very happy to discuss all the evidence against rereading and against these other techniques if you guys want to hear about that just leave a comment down below and i'll do it but i want to focus on stuff you can do rather than kind of just hopping on to stuff that you shouldn't be doing so we'll close that for now uh rereading generally according to the evidence is pretty ineffective it does sort of work but you know compared to other things you could be d",
+      "start_char": 4000,
+      "end_char": 5000,
+      "chunk_id": "2b4c319c-ecc0-4267-ab97-b50dee75c702"
+    },
+    {
+      "source_id": "008e3869-54bb-4278-91fd-9c48fef76714",
+      "citation_number": 75,
+      "cited_text": "Retrieval practice\u2009+\u2009spacing: a potential solution to an age-old problem",
+      "start_char": 5695,
+      "end_char": 5767,
+      "chunk_id": "1654710b-4c2d-4c69-96ea-f1b8fe4176a2"
+    }
+  ]
+}
