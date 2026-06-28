@@ -23,6 +23,8 @@ See `.claude/rules/tool-integrations.md` for full details. Key tools:
 
 - **Google Workspace CLI (`gws`)** — Gmail, Drive, Docs, Sheets, Calendar
 - **MCP Servers** — GitHub, Firecrawl, Stitch, NotebookLM, Google Calendar/Gmail
+- **Pandoc + wkhtmltopdf** — document conversion (MD/DOCX/HTML → PDF). Pandoc on PATH; wkhtmltopdf at `C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe`. CSS: `catalog/styles/pdf.css`. Full usage in tool-integrations.md.
+- **Exa AI** — semantic/neural web search API (`EXA_API_KEY` in `.env`). Better than Google for research and source discovery. Use via `pip install exa-py`. Full usage in tool-integrations.md.
 - **GWS auth:** hassanaleem86@gmail.com | GCP project: gmail-mcp-483215
 
 ## Skills
