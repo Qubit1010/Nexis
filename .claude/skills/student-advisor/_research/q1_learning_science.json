@@ -1,0 +1,480 @@
+{
+  "answer": "Evidence-based learning research identifies a clear hierarchy of study techniques, distinguishing between \"high-utility\" methods that significantly boost retention and \"low-utility\" methods that many students mistakenly prefer. [1-3]\n\n### **1. Retrieval Practice (Practice Testing)**\nRetrieval practice, also known as the testing effect, is rated as a **high-utility** strategy because it forces the brain to actively pull information from memory, strengthening neural pathways. [4-6]\n*   **Meta-Analyses & Effect Sizes:** A 2021 meta-analysis of 242 studies calculated a large effect size of **$d = 0.74$** for practice testing. [7, 8] A separate meta-analysis of 118 studies found that testing improves retention by an average of **50%** compared to restudying. [9] In a landmark *Science* study, retrieval practice produced **80% retention** after one week, compared to just 34% for rereading. [4, 10]\n*   **Actionable Steps:**\n    *   **Blank Page Testing (Blurting):** Close all notes and write down everything you remember about a topic on a blank sheet; then, use your notes to identify and fill gaps in red. [11-13]\n    *   **Flashcards:** Use apps like **Anki** or **Quizlet** to quiz yourself frequently; ensure you attempt the answer before flipping the card. [14-16]\n    *   **PQ4R Method:** Use the **Preview, Question, Read, Reflect, Recite, and Review** sequence to engage deeply with texts. [17, 18]\n\n### **2. Spaced Repetition (Distributed Practice)**\nSpaced repetition involves spreading study sessions over time rather than \"massing\" them into a single session (cramming). [19-21]\n*   **Meta-Analyses & Effect Sizes:** Donoghue and Hattie\u2019s 2021 meta-analysis reported the highest effect size of **$d = 0.85$** for distributed practice. [8, 22] Applied research in classrooms shows a moderate effect of **$d = 0.54$** for curriculum-relevant materials. [23, 24]\n*   **Optimal Intervals:** Research suggests the \"10-20% rule\"\u2014to remember something for a week, space reviews by 12\u201324 hours; to remember for a year, space by ~1 month. [25, 26]\n*   **Actionable Steps:**\n    *   **The 1-2-7-14 Rule:** After the first encounter (Day 0), review on **Day 1, Day 2, Day 7, and Day 14**. [14, 27]\n    *   **Leitner System:** Move cards you know well into \"boxes\" reviewed less frequently (e.g., weekly), while keeping difficult cards in \"boxes\" reviewed daily. [28, 29]\n\n### **3. Interleaving**\nInterleaving is the practice of mixing different topics or problem types within a single session, which trains the brain to discriminate between categories. [30-32]\n*   **Meta-Analyses & Effect Sizes:** While originally rated as moderate utility, more recent research shows a moderate effect size of **$d = 0.47$**. [8, 33] In mathematics, interleaving has been shown to boost test accuracy by **43%** compared to \"blocked\" practice (doing many of the same problem types in a row). [34]\n*   **Actionable Steps:**\n    *   **Shuffle Problem Sets:** Instead of doing 20 algebra questions, do five algebra, five geometry, and five statistics problems mixed together. [35, 36]\n    *   **Switch Topics:** Avoid spending more than **60\u201390 minutes** on a single sub-topic before moving to a different subject. [35]\n\n### **4. Elaboration (Elaborative Interrogation & Self-Explanation)**\nElaboration involves generating \"why\" explanations for facts or relating new information to prior knowledge. [30, 37, 38]\n*   **Meta-Analyses & Effect Sizes:** Elaborative interrogation has an effect size of **$d = 0.56$**, and self-explanation has **$d = 0.54$**. [8, 39]\n*   **Actionable Steps:**\n    *   **The Feynman Technique:** Write a topic at the top of a page and explain it as if teaching it to a **10-year-old**; identify where your explanation becomes vague or uses jargon to find knowledge gaps. [40, 41]\n    *   **The \"Why\" Prompt:** For every fact you read, ask: \"Why does it make sense that X is true?\" [30, 42]\n\n### **5. Dual Coding**\nDual coding uses both verbal and visual information (words and pictures) to encode concepts into separate channels of working memory. [43-45]\n*   **Actionable Steps:**\n    *   **Hybrid Note-Taking:** Combine the **Cornell Method** with **Concept Maps**; use the structured notes for capture and maps within 24\u201372 hours to visualize relationships. [46, 47]\n    *   **Draw Diagrams:** When learning a process (like cell division), sketch the steps while describing them in your own words. [48, 49]\n\n### **Contrast with Ineffective Techniques**\nDespite their popularity, the following techniques are rated **low-utility** by major reviews because they rely on **recognition** rather than **recall**, creating an \"illusion of knowledge.\" [50-52]\n*   **Rereading:** Effect size **$d = 0.47$**. [8] Passive rereading provides \"little or no benefit for learning\" but remains the most common student strategy. [53, 54]\n*   **Highlighting/Underlining:** Effect size **$d = 0.44$**. [8] It may actually **hurt performance** on higher-level tasks that require inference-making. [55, 56]\n*   **Summarization (Passive):** Effect size **$d = 0.44$**. [8] While useful for those already skilled at it, it requires extensive training and is often less effective than generating questions or self-testing. [57, 58]\n*   **Cramming:** Retention for crammed material can be as low as **8% after three days**, whereas spaced practice can increase retention by up to **65%**. [50, 59]",
+  "conversation_id": "fa8e51bb-bb8a-4ca9-b7f4-2bcdb3fba360",
+  "turn_number": 1,
+  "is_follow_up": true,
+  "references": [
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 1,
+      "cited_text": "This three-part structure works because it embeds the two study strategies Dunlosky et al. (2013) rated as having \"high utility\" out of ten common methods (practice testing and distributed practice) directly into how you take notes in the first place.",
+      "start_char": 2784,
+      "end_char": 3035,
+      "chunk_id": "100ae261-297a-4044-a7d4-47c83b487470"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 2,
+      "cited_text": "The authors then categorised the 10 techniques into three groups based on whether they considered them having high, medium or low support for their effectiveness in enhancing learning. Categorised as \u201chigh\u201d support were Practice Testing (self-testing or taking practice tests on to-be-learned material) and Distributed Practice (implementing a schedule of practice that spreads out study activities over time in contrast to massed or 'crammed' practice). Categorised as \u201cmoderate\u201d support were Elaborative Interrogation (generating an explanation of a fact or concept), Self-Explanation (where the student explains how new information is related to already-known information) and Interleaved Practice (implementing a schedule of practice mixing different kinds of problems within a single study session). Finally, categorised as \u201clow\u201d support were Summarization (writing summaries of to-be-learned texts), Highlighting/Underlining (marking potentially important portions of to-be-learned materials whilst reading), Keyword Mnemonic (generating keywords and mental imagery to associate verbal materials), Imagery use (attempting to form mental images of text materials while reading or listening) and Re-Reading (restudying text material again after an initial reading). In an accompanying article, Dunlosky et al. (2013b) claimed that some of these low support techniques (that students use a lot) have \u201cfailed to help students of all sorts\u201d ( p . 20), the benefits can be short lived, they may not be widely applicable, the benefits are relatively limited, and they do not provide \u201cbang for the buck\u201d ( p . 21).",
+      "start_char": 7146,
+      "end_char": 8756,
+      "chunk_id": "80347d5d-837d-4725-8a70-d925542f7d5a"
+    },
+    {
+      "source_id": "ebbb2a87-3769-451e-9a1c-3935b8a74d3c",
+      "citation_number": 3,
+      "cited_text": "From Dunlosky et al. (2013) - the most comprehensive meta-analysis of study techniques",
+      "start_char": 1030,
+      "end_char": 1116,
+      "chunk_id": "5b25c517-18a0-402e-a612-0b59ad9f0443"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 4,
+      "cited_text": "Re-reading your notes does not fix this. It feels productive, but recognition is not the same as recall. You recognise the material because you wrote it down. That does not mean you can produce it under exam conditions.",
+      "start_char": 3518,
+      "end_char": 3737,
+      "chunk_id": "4264f9ac-c021-469b-b74d-95645bb63320"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 5,
+      "cited_text": "Practice Testing is one of the two techniques with the highest utility. This must be distinguished from high stakes testing: Practice Testing instead involves any activity where the student practices retrieval of to-be-learned information, reproduces that information in some form, and evaluates the correctness of that reproduction against an accepted 'correct' answer. Any discrepancy between the produced and \u201ccorrect\u201d information then forms a type of feedback that the learner uses to modify their understanding. Practice tests can include a range of activities that students can conduct on their own, such as completing questions from textbooks or previous exams, or even self-generated flashcards. According to Dunlosky et al. (2013a) , such testing helps increase the likelihood that target information can be retrieved from long-term memory and it helps students mentally organize information that supports better retention and test performance. This effect is strong regardless of test form (multiple choice or essay), even when the format of the practice test does not match the format of the criterion test, and it is effective for all ages of student. Practice Testing works well even when it is massed, but is even more effective when it is spaced over time. It does not place high demand on time, is easy to learn to do (but some basic instruction on how to most effectively use practice tests helps), is so much better than unguided restudy, and so much more effective when there is feedback about the practice test outputs (which also enhances confidence in performance).",
+      "start_char": 8756,
+      "end_char": 10343,
+      "chunk_id": "710d0cf3-9d57-4db4-bbc6-619fca6b9c1e"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 6,
+      "cited_text": "want to call it basically involves retrieving facts from your brain retrieving stuff from your brain because the very act of retrieving stuff from your brain actually strengthens the connections between the stuff in your brain and this this was quite counterintuitive to me for me anyway i'd always kind of assumed learning was this sort of process whereby you put stuff into your brain and the only purpose of getting stuff out of your brain was to you know ace that exam or get that a star or whatever in fact this cannot be further from the truth and over a 100red years of research has shown that we learn far better by retrieving practicing retrieving stuff from our brains than by trying to you know put stuff back into our brain so what's the evidence behind this uh let's go back to professor dunloski's review paper you know the one where he looked at hundreds of studies and you know decided that rereading highlighting and summarizing weren't very good this is what these guys had to say",
+      "start_char": 11000,
+      "end_char": 12000,
+      "chunk_id": "444ddaac-4634-4436-8ac8-bfbcabf06c1b"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 7,
+      "cited_text": "SYSTEMATIC REVIEW article",
+      "start_char": 3902,
+      "end_char": 3927,
+      "chunk_id": "4989be80-ac5e-442b-8f81-5e93b9a90cbd"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 8,
+      "cited_text": "TABLE 1",
+      "start_char": 24724,
+      "end_char": 24731,
+      "chunk_id": "37c97c20-7a7e-4831-a1dc-1f85c116c05d"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 9,
+      "cited_text": "Active recall means retrieving information from memory without looking at your notes. Instead of re-reading a page, you close the book and try to write down everything you remember. Instead of highlighting a definition, you look away and explain it in your own words.",
+      "start_char": 4917,
+      "end_char": 5184,
+      "chunk_id": "aa0910ac-8c79-4ee2-9c28-6bad79871b3f"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 10,
+      "cited_text": "The digital Cornell workflow with Notesmakr: capture lecture notes, generate AI cue-column flashcards, write your Feynman summary, let the system schedule your spaced reviews. This is the Cornell system with the parts students most commonly skip handled automatically.",
+      "start_char": 17238,
+      "end_char": 17506,
+      "chunk_id": "58218504-4b6d-40f7-b05a-398f0e79d7f7"
+    },
+    {
+      "source_id": "e4ec196c-2bfa-489b-8e1d-5f76db14eb6c",
+      "citation_number": 11,
+      "cited_text": "Effective Study Strategies",
+      "start_char": 3154,
+      "end_char": 3180,
+      "chunk_id": "cda4a52f-a0e6-47c5-8061-188e1af7ac0f"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 12,
+      "cited_text": "Strategy 3: Retrieval Practice (Turn Passive Study into Active Testing)",
+      "start_char": 5335,
+      "end_char": 5406,
+      "chunk_id": "04dd83cc-7a28-42e5-b048-1642262df415"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 13,
+      "cited_text": "Active Recall and Retrieval Practice",
+      "start_char": 7052,
+      "end_char": 7088,
+      "chunk_id": "9043e119-7510-47e1-8213-be385f850322"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 14,
+      "cited_text": "The 1-2-7-14 Day Spaced Repetition System",
+      "start_char": 4770,
+      "end_char": 4811,
+      "chunk_id": "2fe3d333-0e34-4af4-ad73-c1bab9cc043f"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 15,
+      "cited_text": "t you can use to apply active recall or practice testing in your own studies and the first thing to say is that this is not really rocket science pretty much anything you do that requires you to use cognitive effort like use brain power to retrieve information that you have learned once already pretty much anything is going to be really really efficient for you but having said that i know a lot of you guys benefit from specific strategies so here are three that i find useful personally number one is an app called anki and anki is a flash card app that you might have heard of like loads of medical students use it the idea behind that is that you make a fl like an online flash card and then it comes up and in your like practice session but the special thing about anki is that once once a flash card comes up you can mark it as being easy medium or hard and depending on what rating you gave it it comes up later on depending on what that rating was so if you found a fact really easy to reca",
+      "start_char": 20000,
+      "end_char": 21000,
+      "chunk_id": "7875da53-9a39-4531-9a8e-3d9d4c4c620d"
+    },
+    {
+      "source_id": "c519228b-4bed-4f8f-9df6-a7246a9736df",
+      "citation_number": 16,
+      "cited_text": "close your book and put your notes away now try to write or sketch everything you know about the idea you're trying to learn you won't remember all of it but that's okay this will help you get there when you've exhausted your knowledge open up the book again grab your notes and start to determine what you've missed and what you need to work on more bringing information to mind from memory like this is called retrieval practice to do it properly you have to put your class materials away forcing yourself to bring information to mind is good when you have your book or your class notes open in front of you they serve as a sort of crutch and when you rely on your class materials you don't learn as much practicing retrieval can be hard but as you continue to practice it will get easier and you won't need to look at your notes as often then when it comes time to take the exam it will be easier to remember the information there are many different ways to practice retrieval take any practice test you can get your hands on if you don't have one make your own or you can try practicing retrieval with a friend what's a neurotransmitter chemicals in the nerves how do neurons communicate in the synapse why was Freud so obsessed no no no no no no I'm not going to answer that one just answer questions often and make sure you space out your retrieval practice need to learn more about spacing out you're studying check out our spacing video you can also use flash cards when you try to answer a question on the card that's retrieval practice it's inexpensive and easy to do but do try to answer the question from memory don't just split the Cod whatever your method make sure you put your notes away and bring the information to mind it's effective it's backed by science one more thing don't just memorize definitions yeah defining things is important but what's more important is knowing the main idea of a lesson and how you can apply it let's use classical conditioning as an example if I were to memorize the definition I would know that classical conditioning is a learning process that occurs when two stimuli are repeatedly paired together a response that is at first elicited by the second s Ulus is eventually elicited by the first stimulus alone but do you really know what that means sure it's a learning process that occurs when to stimulat St stop that definition is full of jargon and reciting it like that word for word probably won't help you much on the exam Instead try to explain what you think it really means but in your own words maybe try to use a concrete example well pav was studying dogs in his lab but he started to notice that they were salivating before he even gave them the food so he started pairing another stimulus like a bell with the food and pretty soon the dogs would salivate when they heard the bell and that's classical conditioning the food is the unconditioned stimulus and salivating is the unconditioned response this happens naturally the Bell is the conditioned stimulus and salivating is the conditioned response and this happens after learning or classical conditioning yes",
+      "start_char": 0,
+      "end_char": 3129,
+      "chunk_id": "06229598-ae22-4edc-a3d3-715447d3cc5d"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 17,
+      "cited_text": "2. The PQ4R Method",
+      "start_char": 5904,
+      "end_char": 5922,
+      "chunk_id": "4996a0c6-af6a-4ab3-bb33-ab10ab31c8cb"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 18,
+      "cited_text": "Reading Methods: SQ3R and PQ4R",
+      "start_char": 9929,
+      "end_char": 9959,
+      "chunk_id": "29623998-b203-46cf-9061-3bd5ba0e0e2c"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 19,
+      "cited_text": "Many studies have shown that practice spread out over time (spaced) is much more effective than practice over a short time period (massed)\u2013this is what is meant by Distributed Practice. Most students need three to four opportunities to learn something ( Nuthall, 2007 ) but these learning opportunities are more effective if they are distributed over time, rather than delivered in one massed session: that is, spaced practice, not skill and drill, spread out not crammed, and longer inter-study intervals are more effective than shorter. There have been four meta-analyses of Spaced vs. Massed practices involving about 300 studies, with an average effect of 0.60 ( Donovan and Radosevich, 1999 ; Cepeda et al., 2006 ; Janiszewski et al., 2003 ; Lee and Genovese 1988 ). Cepeda et al. (2008) showed that for almost all retention intervals, memory performance increases sharply with the length of the spacing interval. But at a certain spacing interval, optimal test performance is reached, and from that interval onwards, performance declines but only to a limited degree. But they also note that this does not take into account the absolute level of performance, which decreases as the retention interval increases. Further, Spaced Practice is more effective for deeper than surface processing, and for all ages. Rowland (2014) completed a meta-analysis on 61 studies investigating the effect of testing vs. restudy on retention. He found a high effect size ( d = 0.50) supporting the testing over restudy, and the effects were greater for recall than for recognition tasks. The educational message is to review previously covered material in subsequent units of work, time tests regularly and not all at the end (which encourages cramming and massed practice), and given that students tend to rate learning higher after massed, educate them as to the benefits of spaced practice and show them those benefits.",
+      "start_char": 10343,
+      "end_char": 12254,
+      "chunk_id": "d136e508-5451-4b0f-a354-64d4dbbea0e1"
+    },
+    {
+      "source_id": "7bc588a9-81bb-4455-a89a-dbc5111299e0",
+      "citation_number": 20,
+      "cited_text": "what is spaced repetition spaced repetition is as the name suggests where you spaced your repetition of particular subjects over a period of time it is in contrast to cramming which is a very popular revision strategy but as we all probably intuitively know when you cram for a test the next day you can probably remember quite a lot of it because it's like in your short-term memory but by you know maybe the next day or the following day you've completely forgotten all of it",
+      "start_char": 1750,
+      "end_char": 2228,
+      "chunk_id": "02efc813-68f0-4d21-b04a-f455aec71dcb"
+    },
+    {
+      "source_id": "895c542b-e453-41e8-bd12-1a72d4ceecf4",
+      "citation_number": 21,
+      "cited_text": "As it turns out, the timing of practice greatly influences learning success, even for the same overall quantity of practice. Repeated practice opportunities that are spaced apart in time are more effective than the same number of practice opportunities that occur closer together in time. This finding\u2014known as the spacing effect or the distributed practice effect\u2014was first documented over 100 years ago.13 The spacing effect has since been demonstrated in several hundred studies,5 making it one of the most reliable and robust findings in the psychology of learning. According to a 2006 meta-analysis, the benefits of spacing on retention of information over at least one day can be sizeable, with an effect size of Cohen\u2019s d sometimes over 1.0.9 Across the lifespan, spacing effectively enhances learning in a number of domains (Table 1). These include 3-year-old children learning about basic concepts and categories14 up to older adults of at least 60 years learning new knowledge and skills.15",
+      "start_char": 10970,
+      "end_char": 11972,
+      "chunk_id": "dd54cc11-105c-4944-b14c-2abac794f78b"
+    },
+    {
+      "source_id": "4df8f3c4-0905-43aa-b4f7-3ca95eaaab70",
+      "citation_number": 22,
+      "cited_text": "TABLE 1",
+      "start_char": 24365,
+      "end_char": 24372,
+      "chunk_id": "cb83c407-354e-4990-8592-745f6dee49ee"
+    },
+    {
+      "source_id": "abd141a8-c48d-43c9-b3d9-50e6b3726571",
+      "citation_number": 23,
+      "cited_text": "Download keyboard_arrow_down",
+      "start_char": 26419,
+      "end_char": 26447,
+      "chunk_id": "c3dde1b2-0ff4-4924-a1d0-9096582c6245"
+    },
+    {
+      "source_id": "abd141a8-c48d-43c9-b3d9-50e6b3726571",
+      "citation_number": 24,
+      "cited_text": "Acknowledging the above points, Analysis 1 appeared to maximize the amount of information for analysis while minimizing the inaccuracy introduced by averaging nonindependent effect sizes. As such, Analysis 1 is described in detail below.",
+      "start_char": 50913,
+      "end_char": 51150,
+      "chunk_id": "8b1dcb51-ce32-47d0-abc3-ad139159cf7c"
+    },
+    {
+      "source_id": "de42e921-0c9b-4442-9b4f-0adba607f268",
+      "citation_number": 25,
+      "cited_text": "However, the answer is not as simple as \u201clonger lags are better\u201d\u2014the answer depends on how long the learner wants to retain information. Impressive data come from Cepeda, Vul, Rohrer, Wixted, and Pashler (2008), who examined people\u2019s learning of trivia facts in an internet study that had 26 different conditions, which combined different between-session intervals (from no lag to a lag of 105 days) with different retention intervals (up to 350 days). In brief, criterion performance was best when the lag between sessions was approximately 10\u2013 20% of the desired retention interval. For example, to remember something for 1 week, learning episodes should be spaced 12 to 24 hours apart; to remember something for 5 years, the learning episodes should be spaced 6 to 12 months apart. Of course, when students are preparing for examinations, the degree to which they can space their study sessions may be limited, but the longest intervals (e.g., intervals of 1 month or more) may be ideal for studying core content that needs to be retained for cumulative examinations or achievement tests that assess the knowledge students have gained across several years of education.",
+      "start_char": 193944,
+      "end_char": 195117,
+      "chunk_id": "9b2145cf-3ad0-4679-8e5f-3b6d6c990a24"
+    },
+    {
+      "source_id": "895c542b-e453-41e8-bd12-1a72d4ceecf4",
+      "citation_number": 26,
+      "cited_text": "Although spacing is beneficial across a range of learning activities, there is no universal ideal spacing schedule. Longer spacing schedules can be beneficial after information is already well-learned and must be retained over a long delay.30 However, longer spacing schedules can be less effective when information is not yet well-learned, likely due to learners forgetting the information across sessions.40,41 Because spacing increases the risk of forgetting between learning sessions, spaced learning activities should provide sufficient practice with the material to permit any forgotten information to be re-learned. Although it is not possible to anticipate the perfect spacing schedule, effective spacing schedules typically involve providing sufficient practice with the learning material during the learning sessions and enough time between sessions such that the information is still familiar but not fresh in mind. This situation creates the need to retrieve the previous learning experience during each practice session, engaging the beneficial effects of retrieval that we discuss in the next section. Illustrating a range of effective spacing schedules, classroom studies have observed benefits of engaging",
+      "start_char": 17953,
+      "end_char": 19175,
+      "chunk_id": "589e7130-2737-4b7d-8d44-68dba2fa6e19"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 27,
+      "cited_text": "Quick Answer: To ace an exam, use active recall (testing yourself rather than re-reading), spaced repetition (studying over multiple days using the 1-2-7-14 rule), retrieval practice (flashcards and self-quizzing), and strategic test-taking skills. Research shows students using these evidence-based techniques score 12-18% higher than similarly prepared students who only passively review material.",
+      "start_char": 1128,
+      "end_char": 1527,
+      "chunk_id": "bb2c55f6-7d20-487a-a07a-26ee8c1eb7cc"
+    },
+    {
+      "source_id": "3c9d21f9-87af-4f06-97fa-5d097de3199d",
+      "citation_number": 28,
+      "cited_text": "instead of retrieval review is where you look at what you underlined you read your highlights you review your notes it gives you the sense of confidence like oh yeah I know this this all makes sense I will remember this when I need it in the future that's a false sense of confidence because understanding something while you're reading it is a lot different than pulling that information from memory so that's what these three techniques get at these ones a little bit more",
+      "start_char": 5477,
+      "end_char": 5952,
+      "chunk_id": "7a1d1983-986b-4b0f-aca9-23cc1fd551a8"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 29,
+      "cited_text": "Spaced Practice and the Leitner System",
+      "start_char": 8243,
+      "end_char": 8281,
+      "chunk_id": "75f37039-9f32-402e-afb2-cb3bc9b05d8a"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 30,
+      "cited_text": "Elaborative Interrogation, Self-Explanation, and Interleaved Practice received moderate support. Elaborative Interrogation involves asking \u201cWhy\u201d questions (\u201cWhy does it make sense that\u201d \u201cWhy is this true\u201d) and a major purpose is to integrate new information with existing prior knowledge. The effects are higher when elaborations are precise rather than imprecise, when prior knowledge is higher than lower, and when elaborations are self-generated rather than provided. A constraint of the method is that is more applicable to surface than to deep understanding. Self-explanation involves students explaining some aspect of their processing during learning. It works across task domains, across ages, but may require training, and can take some time to implement. Interleaved Practice involves alternating study practice of different kinds of items, problems, and even subject domains rather than blocking study. The claim is that Interleaving leads to better discrimination of different kinds of problems, more attention to the actual question or problem posed, and as above there is better learning from Spaced than Mass Practice. The research evidence base is currently small, and it is not clear how to break tasks in an optimal manner so as to interleave them.",
+      "start_char": 12254,
+      "end_char": 13520,
+      "chunk_id": "df58787f-e70e-4f5f-9580-8b828f264407"
+    },
+    {
+      "source_id": "ebbb2a87-3769-451e-9a1c-3935b8a74d3c",
+      "citation_number": 31,
+      "cited_text": "Use the Study Hours Calculator \u2192",
+      "start_char": 4752,
+      "end_char": 4784,
+      "chunk_id": "1cafe7b7-6ea2-44df-bc6d-2c44658ceac6"
+    },
+    {
+      "source_id": "b83029b0-f640-4b13-a1d4-9f0da0b6321e",
+      "citation_number": 32,
+      "cited_text": "longer retrieval intervals dictate to longer um spaces sorry retention intervals when when your exam is in a year's time maybe a month uh between study episodes if it's next week maybe a day between study episodes you know there's there's this kind of dynamic approach there but with the headline use is distributed practice better than Mass practice let's um let's shift shift gears to interleaved practice and I think that'll round off this this discussion about the big three practice",
+      "start_char": 37871,
+      "end_char": 38359,
+      "chunk_id": "320a9434-927a-4598-bd16-9657fd235e7b"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 33,
+      "cited_text": "Third, Dunlosky and Rawson (2015) noted that more recent research may influence some of these findings. For example, he noted that while Interleaving was a \u201cLow\u201d technique, there have since been many studies demonstrating the benefits of Interleaving. For example, Carvalho and Goldstone (2015) found that the way information is ordered impacts learning and that this influence is modulated by the demands of the study task; in particular whether learning is active or passive. Learners in the active study condition tend to look for features that discriminate between categories, and these features are easier to detect when categories frequently alternate (i.e., using Interleaving). Learners in the passive study condition are more likely to look for features that consistently appear within one category's examples, and these features are easier to detect when categories rarely alternate.",
+      "start_char": 40109,
+      "end_char": 41002,
+      "chunk_id": "dcf37e4d-90fd-4e49-a021-1bc0af5015e0"
+    },
+    {
+      "source_id": "de42e921-0c9b-4442-9b4f-0adba607f268",
+      "citation_number": 34,
+      "cited_text": "a given solid, which was immediately followed by the four practice problems for that kind of solid. Practice solving volumes for a given solid was then followed by the tutorial and practice problems for the next kind of solid, and so on. Stu-dents in an interleaved-practice group first read all four tutorials and then completed all the practice problems, with the constraint that every set of four consecutive problems included one problem for each of the four kinds of solids. One week after the second practice session, all students took a criterion test in which they solved two novel problems for each of the four kinds of solids. Students\u2019 percentages of correct responses during the practice sessions and during the criterion test are presented in Figure 13, which illustrates a typical interleaving effect: During practice, performance was better with blocked practice than interleaved practice, but this advantage dramatically reversed on the criterion test, such that interleaved practice boosted accuracy by 43%.",
+      "start_char": 213165,
+      "end_char": 214190,
+      "chunk_id": "b4ad6ac3-ab34-4fcb-8ef5-e939c18eb65f"
+    },
+    {
+      "source_id": "ebbb2a87-3769-451e-9a1c-3935b8a74d3c",
+      "citation_number": 35,
+      "cited_text": "Interleaving is particularly effective for mathematics, physics, and language learning because it trains your brain to distinguish between different patterns. Instead of knowing how to use a formula (which is easy when you've done ten identical problems in a row), you learn when to use it\u2014which is exactly what is required during a high-stakes exam.",
+      "start_char": 5286,
+      "end_char": 5636,
+      "chunk_id": "427f0287-a23d-4625-88bb-91e534c61b65"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 36,
+      "cited_text": "Interleaving and Chunking Content",
+      "start_char": 9151,
+      "end_char": 9184,
+      "chunk_id": "5ff3c51c-0f38-4495-8b70-9da634e11d33"
+    },
+    {
+      "source_id": "f31ac817-685e-46d2-9f01-1366899888de",
+      "citation_number": 37,
+      "cited_text": "The LIST inventory is a slightly modified German translation of the Motivated Strategies for Learning Questionnaire (MSLQ) ( Duncan and McKeachie, 2005 ). It uses three different scales to measure cognitive, metacognitive and resource-related learning strategies (from this point on referred to as LS) which, in turn, are divided into a total of eleven subscales (see Supplementary material S3 and Supplementary Table S2 ) ( Wild et al., 1992 ; Wild and Schiefele, 1994 ).",
+      "start_char": 22092,
+      "end_char": 22563,
+      "chunk_id": "2888e862-a9c5-4cc2-919f-749ab5243f71"
+    },
+    {
+      "source_id": "de42e921-0c9b-4442-9b4f-0adba607f268",
+      "citation_number": 38,
+      "cited_text": "Table 1. Learning Techniques",
+      "start_char": 11456,
+      "end_char": 11485,
+      "chunk_id": "77cebf08-e531-4f3a-bfd8-c059bdb44f9e"
+    },
+    {
+      "source_id": "b0d009ce-c259-445e-a961-259caa5c91be",
+      "citation_number": 39,
+      "cited_text": "DISCUSSION AND CONCLUSION",
+      "start_char": 28882,
+      "end_char": 28908,
+      "chunk_id": "d008c1cc-597b-4cd0-9d64-f59da279b14b"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 40,
+      "cited_text": "What it is: Actively retrieving information from memory without looking at notes or textbooks.",
+      "start_char": 3011,
+      "end_char": 3105,
+      "chunk_id": "c904a502-516e-4f86-a0dc-53eb5861ae47"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 41,
+      "cited_text": "Does cramming actually work for exams?",
+      "start_char": 20537,
+      "end_char": 20575,
+      "chunk_id": "03763eb6-b25e-4cd3-a6de-459421dcf2ab"
+    },
+    {
+      "source_id": "de42e921-0c9b-4442-9b4f-0adba607f268",
+      "citation_number": 42,
+      "cited_text": "1.3 Effects in representative educational contexts. Con- cerning the evidence that elaborative interrogation will enhance learning in representative educational contexts, few studies have been conducted outside the laboratory. However, outcomes from a recent study are suggestive (B. L. Smith et al., 2010). Participants were undergraduates enrolled in an",
+      "start_char": 34929,
+      "end_char": 35284,
+      "chunk_id": "9b3d2677-ce3b-44d9-a3ed-ff63ce1cc929"
+    },
+    {
+      "source_id": "6241b69b-8500-470a-8863-2b8bb29eaa07",
+      "citation_number": 43,
+      "cited_text": "[ Teachers",
+      "start_char": 10999,
+      "end_char": 11009,
+      "chunk_id": "d728e60c-2b04-4fea-834e-fb724a8fe5d9"
+    },
+    {
+      "source_id": "b0f6461b-e573-45e3-9140-5b78c26ab887",
+      "citation_number": 44,
+      "cited_text": "Findings from two areas of cognitive science have been especially influential: cognitive psychology,  which is underpinned by interpretive, behavioural,  and observational methods, and cognitive neuroscience, which is underpinned by brain imaging technologies. Many theories of effective learning have been derived from these research areas, including:",
+      "start_char": 3753,
+      "end_char": 4106,
+      "chunk_id": "415c7f6a-6218-4899-b281-49f5c101864f"
+    },
+    {
+      "source_id": "b0f6461b-e573-45e3-9140-5b78c26ab887",
+      "citation_number": 45,
+      "cited_text": "What is the theory?",
+      "start_char": 72245,
+      "end_char": 72265,
+      "chunk_id": "22641c94-00cb-42aa-ae03-eb0890c82098"
+    },
+    {
+      "source_id": "eb5dcb78-1218-4bc0-87b1-1a817f4c759d",
+      "citation_number": 46,
+      "cited_text": "This matches what many evidence-based study guides recommend in practice: do not rely on one passive review format. Capture, question, retrieve, and reorganize. That is also why the testing effect matters here. Review works better when you have to actively reconstruct ideas instead of simply rereading them.",
+      "start_char": 3395,
+      "end_char": 3703,
+      "chunk_id": "5e6a6b93-be7d-4dbc-9791-8d9b1202b21d"
+    },
+    {
+      "source_id": "eb5dcb78-1218-4bc0-87b1-1a817f4c759d",
+      "citation_number": 47,
+      "cited_text": "This schedule also works for professionals. Replace \"lecture\" with \"meeting,\" \"article,\" or \"training session,\" and the same logic holds.",
+      "start_char": 7986,
+      "end_char": 8123,
+      "chunk_id": "890aaac5-21f3-4a5a-b421-d8f6cf7df0da"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 48,
+      "cited_text": "Studying in silence, just reading and thinking, produces weak memory traces. Studying with output (writing, speaking, drawing, explaining) produces strong ones. The act of output forces your brain to retrieve and reconstruct information rather than passively receive it.",
+      "start_char": 16036,
+      "end_char": 16306,
+      "chunk_id": "f6ce31fe-290e-467e-a095-37db25091ccc"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 49,
+      "cited_text": "How do I know if a study technique is working for me?",
+      "start_char": 20780,
+      "end_char": 20833,
+      "chunk_id": "366933d5-42a9-48d9-beb0-161676557f4b"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 50,
+      "cited_text": "The Problem: Why Most Students Study Wrong",
+      "start_char": 1973,
+      "end_char": 2015,
+      "chunk_id": "2d0dc80d-9f62-4eaf-969b-81e84d4b2c6a"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 51,
+      "cited_text": "Why Most Exam Study Strategies Fail",
+      "start_char": 1237,
+      "end_char": 1272,
+      "chunk_id": "9f85ce9c-718d-4708-9fc4-643d86b38ad1"
+    },
+    {
+      "source_id": "895c542b-e453-41e8-bd12-1a72d4ceecf4",
+      "citation_number": 52,
+      "cited_text": "SCIENCE OF EFFECTIVE LEARNING  18",
+      "start_char": 50881,
+      "end_char": 50920,
+      "chunk_id": "cfd9f81b-56e5-49d5-b674-f7f2c53cd6a9"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 53,
+      "cited_text": "is pretty much a waste of time here's another quote from a 2016 paper that again looked at the evidence behind lots of study techniques and this is what they had to say about rereading they said \"a wealth of research has shown that passive repetitive reading produces little or no benefit for learning yet not only was repetitive reading the most frequently listed strategy it was also the strategy most often listed at students number one choice by a large margin so that's what i'm going to say about rereading for the time being um i'm very happy to discuss all the evidence against rereading and against these other techniques if you guys want to hear about that just leave a comment down below and i'll do it but i want to focus on stuff you can do rather than kind of just hopping on to stuff that you shouldn't be doing so we'll close that for now uh rereading generally according to the evidence is pretty ineffective it does sort of work but you know compared to other things you could be d",
+      "start_char": 4000,
+      "end_char": 5000,
+      "chunk_id": "b8bfa451-5ddd-4cc9-a523-597ccdd55808"
+    },
+    {
+      "source_id": "008e3869-54bb-4278-91fd-9c48fef76714",
+      "citation_number": 54,
+      "cited_text": "Retrieval practice\u2009+\u2009spacing: a potential solution to an age-old problem",
+      "start_char": 5695,
+      "end_char": 5767,
+      "chunk_id": "8568dd45-b304-4e38-a23b-e0ac806dd9bc"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 55,
+      "cited_text": "oing it's it's it's by no means the most efficient study tactic secondly let's talk about highlighting and either we highlight ourselves or we know friends who like to highlight their textbooks and the notes in pretty colors here is a list of studies that show that highlighting is a very popular revision strategy and i'll link these studies in the description below so if you really want to read them you can but let's go back to professor dunloski's paper where again he looked at all the evidence around these and this is what he had to say about highlighting and underlining he said \"on the basis of available evidence we rate highlighting and underlining as having low utility in most situations that have been examined and with most participants highlighting does little to boost performance it may help when students have the knowledge needed to highlight more effectively or when the texts are difficult but it may actually hurt performance on higher level tasks that require inference makin",
+      "start_char": 5000,
+      "end_char": 6000,
+      "chunk_id": "b885df53-9075-4713-8c24-aaf6a408ba1c"
+    },
+    {
+      "source_id": "de42e921-0c9b-4442-9b4f-0adba607f268",
+      "citation_number": 56,
+      "cited_text": "retention intervals. Most students report rereading and highlighting, yet these techniques do not consistently boost students\u2019",
+      "start_char": 8708,
+      "end_char": 8835,
+      "chunk_id": "99531f58-d8e8-47a8-8126-bd941bc6a44e"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 57,
+      "cited_text": "not very good you know we could be doing more efficient things finally let's talk about summarizing or making notes again a really really popular technique that i have been using pretty much all my life uh and still use to this day but i'm trying to phase it out because the evidence around summarizing and making notes is you know a bit equivocal there are some studies that show that students that do summarizing well perform slightly better on exams but it's really quite hard to test this because as you can imagine the quality of notes varies massively between students and so that makes it quite hard to actually test a proper rigorous scientific study about it in any case professor dunloski again he and his colleagues tried they looked at all the evidence around summarizing and making notes and this is what they said on the basis of the available evidence we rate summarization as low utility it can be an effective learning strategy for learners who are who are already skilled at summari",
+      "start_char": 7000,
+      "end_char": 8000,
+      "chunk_id": "c292a517-079f-46f0-8421-7fcd71455d7d"
+    },
+    {
+      "source_id": "de42e921-0c9b-4442-9b4f-0adba607f268",
+      "citation_number": 58,
+      "cited_text": "3.5 Summarization: Overall assessment. On the basis of the available evidence, we rate summarization as low utility. It can be an effective learning strategy for learners who are already skilled at summarizing; however, many learners (including children, high school students, and even some undergraduates) will require extensive training, which makes this strategy less feasible. Our enthusiasm is further dampened by mixed findings regarding which tasks summarization actually helps. Although summarization has been examined with a wide range of text materials, many researchers have pointed to factors of these texts that seem likely to moderate the effects of summarization (e.g., length), and future research should be aimed at investigating such factors. Finally, although many studies have examined summarization training in the classroom, what are lacking are classroom studies examining the effectiveness of summarization as a technique that boosts students\u2019 learning, comprehension, and retention of course content.",
+      "start_char": 83520,
+      "end_char": 84546,
+      "chunk_id": "6af21ddd-da89-496d-adcf-985ab6f86545"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 59,
+      "cited_text": "The 80/20 Rule for Active Recall",
+      "start_char": 4179,
+      "end_char": 4211,
+      "chunk_id": "4b33d9f3-dc96-4317-bc75-eed398882b0e"
+    }
+  ]
+}

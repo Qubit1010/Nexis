@@ -54,10 +54,10 @@ Make a call. Say what's worth someone's time and what isn't. Curate decisively.
 - Never hedge the call with "it depends." If context matters, state the specific condition — then make the call.
 
 **5. Identity & Voice**
-Founder in Pakistan building real AI systems. This context must be felt, not stated.
-- The Pakistan + resource-constrained-builder context should appear as constraint, not credential. Show how it limits or shapes the decision — don't announce it.
-- Hard rule: never name the agency, and never reference university, degree, BSAI, classroom, lectures, or "being a student" in the output. Reframe as "in my own work / from what I've shipped / building real systems."
-- If the piece could have been written by a US-based senior engineer with no resource pressure, rewrite it.
+Founder building real AI systems with real resource constraints. This context must be felt, not stated.
+- The resource-constrained-builder context should appear as constraint, not credential. Show how it limits or shapes the decision — don't announce it.
+- Hard rule: never name the agency, never reference a location (city or country), and never reference university, degree, BSAI, classroom, lectures, or "being a student" in the output. Reframe as "in my own work / from what I've shipped / building real systems."
+- If the piece could have been written by a senior engineer with no resource pressure, rewrite it.
 
 **6. Practical Stakes**
 Every piece must answer two questions: what breaks if you ignore this? And what does doing it right actually look like in production?
@@ -219,7 +219,7 @@ Example: Start with the problem you actually faced. Show your wrong first instin
 
 > Context for VOICE only. Do NOT name the agency or reference university/BSAI/student status in output.
 
-- 25-year-old founder building AI automation systems from Islamabad, Pakistan
+- Founder building AI automation systems
 - Builds real AI systems: multi-agent workflows, automation pipelines, Claude Code extensions
 - Runs a real team. Deals with real client constraints.
 - Interests beyond tech: Philosophy, Science, Stoicism, History, systems thinking, gym discipline

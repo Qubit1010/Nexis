@@ -1,0 +1,464 @@
+{
+  "answer": "Research identifies a clear hierarchy of study techniques, distinguishing between \"high-utility\" methods that significantly boost retention and \"low-utility\" methods that many students mistakenly prefer [1, 2]. The most effective preparation involves a systematic transition from understanding to active retrieval, supported by biological optimization through sleep [3, 4].\n\n### **1. Scheduling: Spacing vs. Cramming**\nDistributed practice (spacing) is a **high-utility** strategy involving spreading study sessions over time rather than \"massing\" them into a single session [1, 5]. \n*   **The Science:** Meta-analyses report a high effect size of **$d = 0.85$** for distributed practice [6, 7]. Research indicates that massed practice (cramming) may boost immediate performance but leads to rapid decay, with retention potentially falling to **8% after just three days** [8, 9]. \n*   **Optimal Intervals:** Effectiveness follows the **\"10\u201320% rule\"**\u2014the interval between study sessions should be roughly 10\u201320% of the desired retention time [10, 11]. To remember something for a week, space reviews by 12\u201324 hours; for a year, space them by one month [11, 12].\n*   **Actionable Steps:** \n    *   **The 1-2-7-14 Rule:** Review new material after **1 day, 2 days, 7 days, and 14 days** to maximize long-term retention [13, 14].\n    *   **The 5-Day Plan:** For short-term deadlines, use a structured 5-day cycle: Day 1 (priority topics), Day 2 (testing Day 1 content + new topics), Day 3 (weak spots + new topics), Day 4 (full mock simulation), and Day 5 (light review and rest) [15].\n    *   **Leitner System:** Use a box-based system where cards known well are moved to boxes reviewed less frequently [16, 17].\n\n### **2. Practice Testing and Mock Exams**\nPractice testing, or **Retrieval Practice**, is the most powerful technique for strengthening neural connections [18, 19]. \n*   **The Science:** Retrieval practice has a very high effect size of **$d = 0.74$** [6]. Studies show it improves retention by an average of **50%** compared to restudying, with retention rates reaching **80% after one week** (vs. 34% for rereading) [20, 21].\n*   **Actionable Steps:**\n    *   **The 80/20 Rule:** Spend **80% of study time testing yourself** and only 20% reviewing notes [22, 23].\n    *   **Blank Page Testing (Blurting):** Close all notes and write everything you remember about a topic on a blank sheet; then use your notes to identify and fill gaps in red [24-26].\n    *   **Feynman Technique:** Explain a complex concept in plain language as if teaching a **12-year-old** to identify gaps in your understanding [27-29].\n    *   **Past Paper Simulations:** Attempt papers under timed, realistic conditions without notes [30-32]. Analyze errors by classifying them as knowledge gaps, recall failures, or technique problems [33].\n    *   **Digital Tools:** Use automated spaced repetition programs like **Anki**, **Quizlet**, **Notesmakr**, or **Revaldo AI** to manage review schedules [14, 34-36].\n\n### **3. Managing Test Anxiety**\nTest anxiety is a performance-based stress response that shifts the brain into \"survival mode,\" blocking clear thinking [37].\n*   **Evidence-Based Interventions:** \n    *   **Box Breathing:** Inhale (4 counts), hold (4), exhale (4), and pause (4) to settle the nervous system [38, 39].\n    *   **5-4-3-2-1 Grounding:** Notice 5 things you see, 4 you feel, 3 you hear, 2 you smell, and 1 you taste [40, 41].\n    *   **Brain Dumping:** At the start of an exam, write down all formulas or facts you fear forgetting to free up working memory [42, 43].\n    *   **Open-Label Placebos (OLP):** A 3-week OLP treatment has been shown to improve exam scores specifically in highly anxious students with a **moderate effect size (partial $\\eta^2 = 0.129$)** [44, 45].\n    *   **Support Apps:** Use **MindShift CBT** for clinical management or **Headspace** and **Calm** for mindfulness training [46].\n\n### **4. The Role of Sleep**\nSleep is a biological requirement for memory, as long-term potentiation (synapse strengthening) happens primarily during rest [47].\n*   **The Science:** Sleep after learning can improve retention by **up to 40%** [48, 49]. Conversely, sleep deprivation before an exam leads to a significant, measurable decline in cognitive performance [49, 50].\n*   **Actionable Steps:**\n    *   Aim for **7 to 9 hours** of sleep consistently, especially during the week before the exam [50-52].\n    *   **The 8-Hour Buffer:** Set a sleep alarm 8 hours before your wake time to ensure a full rest cycle [53].\n    *   **Pre-Sleep Review:** A light, calm review of difficult flashcards 1\u20132 hours before bed can support overnight consolidation [50, 54].\n\n### **Contrast with Ineffective Techniques**\nThe research identifies three \"popular but useless\" strategies rated as **low-utility** [19]:\n1.  **Passive Rereading:** Produces \"little or no benefit for learning\" because it relies on recognition rather than recall [55].\n2.  **Highlighting/Underlining:** Can actually hurt performance on tasks requiring inference and offers negligible benefits over rereading [1, 56].\n3.  **Passive Summarization:** Often becomes a transcription exercise rather than a generative understanding task [2, 57].",
+  "conversation_id": "fa8e51bb-bb8a-4ca9-b7f4-2bcdb3fba360",
+  "turn_number": 1,
+  "is_follow_up": true,
+  "references": [
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 1,
+      "cited_text": "The authors then categorised the 10 techniques into three groups based on whether they considered them having high, medium or low support for their effectiveness in enhancing learning. Categorised as \u201chigh\u201d support were Practice Testing (self-testing or taking practice tests on to-be-learned material) and Distributed Practice (implementing a schedule of practice that spreads out study activities over time in contrast to massed or 'crammed' practice). Categorised as \u201cmoderate\u201d support were Elaborative Interrogation (generating an explanation of a fact or concept), Self-Explanation (where the student explains how new information is related to already-known information) and Interleaved Practice (implementing a schedule of practice mixing different kinds of problems within a single study session). Finally, categorised as \u201clow\u201d support were Summarization (writing summaries of to-be-learned texts), Highlighting/Underlining (marking potentially important portions of to-be-learned materials whilst reading), Keyword Mnemonic (generating keywords and mental imagery to associate verbal materials), Imagery use (attempting to form mental images of text materials while reading or listening) and Re-Reading (restudying text material again after an initial reading). In an accompanying article, Dunlosky et al. (2013b) claimed that some of these low support techniques (that students use a lot) have \u201cfailed to help students of all sorts\u201d ( p . 20), the benefits can be short lived, they may not be widely applicable, the benefits are relatively limited, and they do not provide \u201cbang for the buck\u201d ( p . 21).",
+      "start_char": 7146,
+      "end_char": 8756,
+      "chunk_id": "810ecb61-352d-42b8-8509-08f9a0687e18"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 2,
+      "cited_text": "Why Most Exam Study Strategies Fail",
+      "start_char": 1237,
+      "end_char": 1272,
+      "chunk_id": "4c719e69-f38c-4112-838a-a24fa900ca77"
+    },
+    {
+      "source_id": "5cb70d5f-2b3b-459c-bdfc-815c886400f6",
+      "citation_number": 3,
+      "cited_text": "s evidence-based masterclass on how to study for your exams so this whole class is basically going to be split up into three parts and these are the sort of the three key steps of effective studying effective learning effective anything and that is step one understand step two remember and step three focus and they're all kind of interlinked and obviously kind of focusing as part of the understanding and remembering but those are the three broad categories that we split up this class into and when it comes to effective studying of any kind understanding is by far the most important thing I think one of the mistakes that we can often make when we're studying for our exams or learning anything new is that we could be very quick to to rely on memorization and especially when you know we talk about some of the effective study techniques that we'll talk about later on like active recall and space repetition um especially when students find out about those for the first time and this certain",
+      "start_char": 3000,
+      "end_char": 4000,
+      "chunk_id": "554e0826-a176-43ee-b8db-b202bf418ce8"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 4,
+      "cited_text": "The fundamental insight: Studying more is not the answer. Studying better is. Replace passive review with active retrieval. Replace marathon sessions with spaced practice. Replace familiarity with tested recall. The techniques in this guide have been validated across hundreds of studies. They work regardless of subject, age, or starting ability.",
+      "start_char": 24251,
+      "end_char": 24598,
+      "chunk_id": "7fa7d437-01c9-48ec-a7f8-eb8aabc7beeb"
+    },
+    {
+      "source_id": "b0d009ce-c259-445e-a961-259caa5c91be",
+      "citation_number": 5,
+      "cited_text": "The authors then categorised the 10 techniques into three groups based on whether they considered them having high, medium or low support for their effectiveness in enhancing learning. Categorised as \u201chigh\u201d support were Practice Testing (self-testing or taking practice tests on to-be-learned material) and Distributed Practice (implementing a schedule of practice",
+      "start_char": 3184,
+      "end_char": 3549,
+      "chunk_id": "533571f5-2b83-4b33-827c-bdc4866d2120"
+    },
+    {
+      "source_id": "02abeabe-cf13-4312-ac0c-de2082c0acf5",
+      "citation_number": 6,
+      "cited_text": "TABLE 1",
+      "start_char": 24724,
+      "end_char": 24731,
+      "chunk_id": "e4decb24-1e0b-4370-b407-f736f06138c8"
+    },
+    {
+      "source_id": "b0d009ce-c259-445e-a961-259caa5c91be",
+      "citation_number": 7,
+      "cited_text": "The examination of heterogeneity of the effect size distributions within each outcome category was conducted using the Q statistic and the I2 statistic (Borenstein et al.,",
+      "start_char": 20073,
+      "end_char": 20245,
+      "chunk_id": "71c4152d-dcfb-4b73-8cf8-355a7608b633"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 8,
+      "cited_text": "The Problem: Why Most Students Study Wrong",
+      "start_char": 1973,
+      "end_char": 2015,
+      "chunk_id": "6a91df89-4910-4607-b24f-97d56d9db9ff"
+    },
+    {
+      "source_id": "de42e921-0c9b-4442-9b4f-0adba607f268",
+      "citation_number": 9,
+      "cited_text": "9.2d Criterion tasks. We alluded earlier to the fact that dis- tributed-practice effects are robust over long retention intervals, with Cepeda and colleagues (2008) arguing that the ideal lag between practice sessions would be approximately 10\u2013 20% of the desired retention interval. They examined learning up to 350 days after study; other studies have shown benefits of distributed testing after intervals lasting for months (e.g., Cepeda et al., 2009) and even years (e.g., Bahrick et al., 1993; Bahrick & Phelps, 1987). In fact, the distributed-practice effect is often stronger on delayed tests than immediate ones, with massed practice (cramming) actually benefitting performance on immediate tests (e.g., Rawson & Kintsch, 2005).",
+      "start_char": 200196,
+      "end_char": 200932,
+      "chunk_id": "42256206-e8a4-4161-830e-5dea9bbd5056"
+    },
+    {
+      "source_id": "abd141a8-c48d-43c9-b3d9-50e6b3726571",
+      "citation_number": 10,
+      "cited_text": "For the intervention, a one-day interstudy interval was chosen as the smallest interval applicable to real-world learning. Specifically, everyday classrooms tend to cluster the learning of content, focusing on introducing new material in one class and then practicing it in the next lesson a day or so later ( Svihla et al., 2017 ). A one-day interstudy interval is therefore relevant to the way that classrooms currently operate. Moreover, recent large-scale research suggests that optimal learning outcomes occur when the interstudy interval is approximately 10\u201320% of the required retention interval ( Cepeda et al., 2008 , 2009 ). While this indicates that a retention period of 7 days provides the most effective use of practice distributed over a day, retention periods both more and less than 7 days were included (i.e., no exclusions were placed on retention interval). This decision was motivated by the fact that the goal or purpose of learning defines the length of time needed to retain it, a factor which likely varies considerably across study levels, subject areas, and learning tasks.",
+      "start_char": 38573,
+      "end_char": 39670,
+      "chunk_id": "9d3b8f73-3fac-4694-bd2b-f850e621b105"
+    },
+    {
+      "source_id": "de42e921-0c9b-4442-9b4f-0adba607f268",
+      "citation_number": 11,
+      "cited_text": "However, the answer is not as simple as \u201clonger lags are better\u201d\u2014the answer depends on how long the learner wants to retain information. Impressive data come from Cepeda, Vul, Rohrer, Wixted, and Pashler (2008), who examined people\u2019s learning of trivia facts in an internet study that had 26 different conditions, which combined different between-session intervals (from no lag to a lag of 105 days) with different retention intervals (up to 350 days). In brief, criterion performance was best when the lag between sessions was approximately 10\u2013 20% of the desired retention interval. For example, to remember something for 1 week, learning episodes should be spaced 12 to 24 hours apart; to remember something for 5 years, the learning episodes should be spaced 6 to 12 months apart. Of course, when students are preparing for examinations, the degree to which they can space their study sessions may be limited, but the longest intervals (e.g., intervals of 1 month or more) may be ideal for studying core content that needs to be retained for cumulative examinations or achievement tests that assess the knowledge students have gained across several years of education.",
+      "start_char": 193944,
+      "end_char": 195117,
+      "chunk_id": "0a7a13d2-b766-446a-a1c8-7202d986fc89"
+    },
+    {
+      "source_id": "b83029b0-f640-4b13-a1d4-9f0da0b6321e",
+      "citation_number": 12,
+      "cited_text": "depends on your retention interval the longer your retention intervals and they looked at you know retention intervals from what's it a day to up to a year in length so really wide range of different retention intervals they found that the longer your retention interval the optimal spacing Gap increases so that means for example if you're trying to optimize your ability to recall something a year later and you only have one repetition",
+      "start_char": 33070,
+      "end_char": 33509,
+      "chunk_id": "f967775c-3b85-43a2-9414-7724ec5788c9"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 13,
+      "cited_text": "Quick Answer: To ace an exam, use active recall (testing yourself rather than re-reading), spaced repetition (studying over multiple days using the 1-2-7-14 rule), retrieval practice (flashcards and self-quizzing), and strategic test-taking skills. Research shows students using these evidence-based techniques score 12-18% higher than similarly prepared students who only passively review material.",
+      "start_char": 1128,
+      "end_char": 1527,
+      "chunk_id": "3cf2561f-1c5c-4411-a484-616b2f39b557"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 14,
+      "cited_text": "The 1-2-7-14 Day Spaced Repetition System",
+      "start_char": 4770,
+      "end_char": 4811,
+      "chunk_id": "616df1e2-0f9d-434f-8acf-e0b01c623da6"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 15,
+      "cited_text": "The 5-Day Study Plan (for a one-week timeline): Day 1 is priority topics. Day 2 is practice testing on Day 1 content plus new topics. Day 3 is reviewing weak spots plus new topics. Day 4 is a full past paper simulation. Day 5 is light review and rest.",
+      "start_char": 4344,
+      "end_char": 4595,
+      "chunk_id": "994469f7-a9de-416b-adc1-b5a0d9e36008"
+    },
+    {
+      "source_id": "3c9d21f9-87af-4f06-97fa-5d097de3199d",
+      "citation_number": 16,
+      "cited_text": "instead of retrieval review is where you look at what you underlined you read your highlights you review your notes it gives you the sense of confidence like oh yeah I know this this all makes sense I will remember this when I need it in the future that's a false sense of confidence because understanding something while you're reading it is a lot different than pulling that information from memory so that's what these three techniques get at these ones a little bit more",
+      "start_char": 5477,
+      "end_char": 5952,
+      "chunk_id": "d1bbc4b6-b115-479d-9e1d-7c922eaecaf5"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 17,
+      "cited_text": "Spaced Practice and the Leitner System",
+      "start_char": 8243,
+      "end_char": 8281,
+      "chunk_id": "5f5af0a4-e2d9-411a-94c8-d69857d8f520"
+    },
+    {
+      "source_id": "7c1b1e48-d32d-4aac-b1c3-ea14e90cc71f",
+      "citation_number": 18,
+      "cited_text": "ows these are not actually the most effective ways to revise even though they may be the most intuitive and what most students use the most effective way to make your revision impactful so it actually sticks in your brain uses a principle called active recall education experts psychologists and students have conducted experiments to figure this out I've linked all the sporting evidence academic papers and YouTube videos below if you want to go into more detail on this but if you're like me and a bit like show me the money then keep watching to sum it up active recall is the act of retrieving information from your brain without having that information in front of you a simple way to think about it is testing yourself looking back on my own exams from GCSE to a level to University I probably spent too much time revising I could have improved how efficient and effective my revision was by doing more active recall techniques and less passive note-taking highlighting and staring blankly at",
+      "start_char": 1000,
+      "end_char": 2000,
+      "chunk_id": "1177000a-8c30-4883-a074-f0c566f01006"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 19,
+      "cited_text": "s going to be the structure of the video firstly i'm going to be talking about the three very popular revision techniques that are shown to be less effective in the literature namely rereading highlighting and making notes/summarizing those are by far the most popular techniques but they're also not very effective if you look at the evidence behind them secondly i'm going to be introducing the concept of active recall which is by far the most powerful effective study technique and that involves like testing yourself and practicing retrieving information from your brain because the very act of retrieving information actually strengthens connections in the brain and there's like a load of evidence behind this and finally in part three of the video i'll be giving you some specific tips on how you can actually apply this active recall thing to your own study so hopefully by the end of the video you'll have some practical strategies that you can apply if you feel like it as always everythin",
+      "start_char": 1000,
+      "end_char": 2000,
+      "chunk_id": "6a2d2cf5-b988-4e35-8ffa-28d3ef043b3a"
+    },
+    {
+      "source_id": "0958f7df-a53a-4220-b157-fba141531dd6",
+      "citation_number": 20,
+      "cited_text": "Re-reading your notes does not fix this. It feels productive, but recognition is not the same as recall. You recognise the material because you wrote it down. That does not mean you can produce it under exam conditions.",
+      "start_char": 3518,
+      "end_char": 3737,
+      "chunk_id": "d9e87657-464c-43e1-9f18-f8161b9f5262"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 21,
+      "cited_text": "Active recall means retrieving information from memory without looking at your notes. Instead of re-reading a page, you close the book and try to write down everything you remember. Instead of highlighting a definition, you look away and explain it in your own words.",
+      "start_char": 4917,
+      "end_char": 5184,
+      "chunk_id": "0badf540-a0b0-48cf-88c0-9cc04bdbde97"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 22,
+      "cited_text": "The 80/20 Rule for Active Recall",
+      "start_char": 4179,
+      "end_char": 4211,
+      "chunk_id": "b14b5629-269c-4d17-b689-ade5a8f683c0"
+    },
+    {
+      "source_id": "2c46d0aa-51d3-41e2-9db3-1916486b8d0a",
+      "citation_number": 23,
+      "cited_text": "3",
+      "start_char": 4210,
+      "end_char": 4211,
+      "chunk_id": "793ba259-94d8-4c2d-a86b-f5dd79ee828d"
+    },
+    {
+      "source_id": "e4ec196c-2bfa-489b-8e1d-5f76db14eb6c",
+      "citation_number": 24,
+      "cited_text": "Effective Study Strategies",
+      "start_char": 3154,
+      "end_char": 3180,
+      "chunk_id": "9d410483-7d7c-45ed-8549-b2aca2f77ace"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 25,
+      "cited_text": "Active Recall and Retrieval Practice",
+      "start_char": 7052,
+      "end_char": 7088,
+      "chunk_id": "3a8273be-52aa-4cc9-9df9-927b43aa9264"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 26,
+      "cited_text": "Summarising and the Blurting Method",
+      "start_char": 11652,
+      "end_char": 11687,
+      "chunk_id": "b1107a60-afc4-4951-a5a2-865381689b99"
+    },
+    {
+      "source_id": "5cf523c2-c3ef-4cea-9d5d-cf7ae5372188",
+      "citation_number": 27,
+      "cited_text": "What it is: Actively retrieving information from memory without looking at notes or textbooks.",
+      "start_char": 3011,
+      "end_char": 3105,
+      "chunk_id": "fcd3e6c6-5016-44dc-a2b8-1ada68d78454"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 28,
+      "cited_text": "Write the concept at the top of a blank page",
+      "start_char": 8941,
+      "end_char": 8985,
+      "chunk_id": "dbef3ff1-49aa-4cc8-beed-d5c21b8fd900"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 29,
+      "cited_text": "Specific Techniques to Deepen Understanding",
+      "start_char": 10638,
+      "end_char": 10681,
+      "chunk_id": "0891a6b2-1999-4a43-88a3-5184117ffe2e"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 30,
+      "cited_text": "How to use past papers effectively:",
+      "start_char": 7880,
+      "end_char": 7915,
+      "chunk_id": "a8153df3-9c46-42b8-b3db-2b9863e0f0af"
+    },
+    {
+      "source_id": "89baa342-99fb-4a27-b724-9b8b20cfb85a",
+      "citation_number": 31,
+      "cited_text": "Step 1: Use them to identify what is tested",
+      "start_char": 7054,
+      "end_char": 7097,
+      "chunk_id": "7fb4d90b-0956-4ba1-94e3-2f8010ec6f35"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 32,
+      "cited_text": "Use Past Papers and Practice Tests",
+      "start_char": 17293,
+      "end_char": 17327,
+      "chunk_id": "69cd7ff7-8362-4d01-92b6-fc5c9938b158"
+    },
+    {
+      "source_id": "89baa342-99fb-4a27-b724-9b8b20cfb85a",
+      "citation_number": 33,
+      "cited_text": "Step 3: Analyse your errors systematically",
+      "start_char": 7892,
+      "end_char": 7934,
+      "chunk_id": "642de28f-bfde-43a5-8e93-a8496e95e6b6"
+    },
+    {
+      "source_id": "2c46d0aa-51d3-41e2-9db3-1916486b8d0a",
+      "citation_number": 34,
+      "cited_text": "AI Study Plans: Enter your exam date and subjects \u2014 get a complete, day-by-day study schedule with spaced review sessions automatically distributed.",
+      "start_char": 4831,
+      "end_char": 4979,
+      "chunk_id": "aa5aef8f-7986-49de-b4cc-7b41103c66af"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 35,
+      "cited_text": "How Notesmakr Helps You Apply This System",
+      "start_char": 18267,
+      "end_char": 18308,
+      "chunk_id": "bf360483-52df-4e17-903c-57b8bd418b18"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 36,
+      "cited_text": "t you can use to apply active recall or practice testing in your own studies and the first thing to say is that this is not really rocket science pretty much anything you do that requires you to use cognitive effort like use brain power to retrieve information that you have learned once already pretty much anything is going to be really really efficient for you but having said that i know a lot of you guys benefit from specific strategies so here are three that i find useful personally number one is an app called anki and anki is a flash card app that you might have heard of like loads of medical students use it the idea behind that is that you make a fl like an online flash card and then it comes up and in your like practice session but the special thing about anki is that once once a flash card comes up you can mark it as being easy medium or hard and depending on what rating you gave it it comes up later on depending on what that rating was so if you found a fact really easy to reca",
+      "start_char": 20000,
+      "end_char": 21000,
+      "chunk_id": "7d10edb4-93ac-44a0-8a39-89289416d91c"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 37,
+      "cited_text": "Your heart is racing, your palms are sweaty, and your mind has gone blank. You studied for days, yet nothing is coming back to you.",
+      "start_char": 1029,
+      "end_char": 1160,
+      "chunk_id": "2816d07a-dd33-4112-bccb-62e11dbd4100"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 38,
+      "cited_text": "Mid Exam Strategies That Stop Anxiety From Taking Over",
+      "start_char": 9885,
+      "end_char": 9939,
+      "chunk_id": "ce1cb0a8-5557-4aab-8c2d-7788b4783c88"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 39,
+      "cited_text": "Box breathing helps slow that process down, making it easier to regain focus and think clearly during an exam.",
+      "start_char": 10495,
+      "end_char": 10605,
+      "chunk_id": "40b5ea87-1706-4b69-b005-41194544a479"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 40,
+      "cited_text": "Moving on lets you keep earning marks elsewhere while maintaining momentum. Many students find that answers become clearer when they return later with a calmer mindset and fresh perspective.",
+      "start_char": 11627,
+      "end_char": 11817,
+      "chunk_id": "eaa747fc-89d8-4424-b5ad-e7aa922e1dd4"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 41,
+      "cited_text": "Instead of focusing on worst-case scenarios, this method directs your attention to your surroundings.",
+      "start_char": 12239,
+      "end_char": 12340,
+      "chunk_id": "bdd28b7c-ff31-41ab-81a7-a6386af060fe"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 42,
+      "cited_text": "A brain dump involves writing down important information you are worried about forgetting before you begin answering questions. This may include formulas, dates, definitions, or key concepts.",
+      "start_char": 13939,
+      "end_char": 14130,
+      "chunk_id": "094f8fa0-55ea-4352-be6c-deaef0285aa5"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 43,
+      "cited_text": "If anxiety has reached a point where it is controlling your decisions around studying and exams, using one of these tools alongside professional support is a strong starting point.",
+      "start_char": 20350,
+      "end_char": 20530,
+      "chunk_id": "e26be929-6a42-4b80-a234-0ce389c9fbf8"
+    },
+    {
+      "source_id": "f31ac817-685e-46d2-9f01-1366899888de",
+      "citation_number": 44,
+      "cited_text": "Article metrics",
+      "start_char": 5363,
+      "end_char": 5378,
+      "chunk_id": "0eb639a8-5ba5-4606-8190-efd45080c087"
+    },
+    {
+      "source_id": "f31ac817-685e-46d2-9f01-1366899888de",
+      "citation_number": 45,
+      "cited_text": "3.1 Interaction effects between group and test anxiety on exam score",
+      "start_char": 32106,
+      "end_char": 32174,
+      "chunk_id": "cd0b7bcb-7fd7-499a-9110-3c3107a3bc00"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 46,
+      "cited_text": "Remember, needing support is not a sign of weakness. The right help and tools can make test anxiety much easier to manage.",
+      "start_char": 19379,
+      "end_char": 19501,
+      "chunk_id": "65d74e43-01c6-41b8-a22b-d464f3d4821b"
+    },
+    {
+      "source_id": "ebbb2a87-3769-451e-9a1c-3935b8a74d3c",
+      "citation_number": 47,
+      "cited_text": "The \"Blank Page\" Test: Try to write everything you know about a topic on a blank sheet before opening your notes.",
+      "start_char": 6803,
+      "end_char": 6916,
+      "chunk_id": "e688b6ff-a31f-4755-98bd-e0dd0efc5589"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 48,
+      "cited_text": "7",
+      "start_char": 9654,
+      "end_char": 9655,
+      "chunk_id": "85d33197-5f9c-4c49-b792-d11992c5fc62"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 49,
+      "cited_text": "The Research Behind the System",
+      "start_char": 17182,
+      "end_char": 17212,
+      "chunk_id": "b2784d43-5a81-49b8-911e-8deb9c14a848"
+    },
+    {
+      "source_id": "5b3d36b1-d0be-4389-a812-a27311cbd42c",
+      "citation_number": 50,
+      "cited_text": "Take Care of Your Brain: Sleep, Food, and Movement",
+      "start_char": 14918,
+      "end_char": 14968,
+      "chunk_id": "f786bbbb-a67d-4f4e-aa03-5ee30c690636"
+    },
+    {
+      "source_id": "32024cfd-9ae7-4148-831c-e94a7c906fb2",
+      "citation_number": 51,
+      "cited_text": "How to do it:",
+      "start_char": 5793,
+      "end_char": 5806,
+      "chunk_id": "890df8da-35e2-4e47-ba73-a24ff11748bd"
+    },
+    {
+      "source_id": "ebbb2a87-3769-451e-9a1c-3935b8a74d3c",
+      "citation_number": 52,
+      "cited_text": "Pulling an all-nighter is counterproductive because it eliminates the REM and deep sleep stages necessary for memory consolidation. Furthermore, the brain requires steady glucose levels and hydration to maintain the focus required for deep work. A dehydrated brain experiences a significant drop in cognitive processing speed and executive function.",
+      "start_char": 7601,
+      "end_char": 7950,
+      "chunk_id": "2ee8c6fb-14f5-41f4-aa18-c06941f624ff"
+    },
+    {
+      "source_id": "c8b6fc14-3174-4d52-9a55-5e298b8a9be3",
+      "citation_number": 53,
+      "cited_text": "Start Today: Your 10-Minute Action Plan",
+      "start_char": 21944,
+      "end_char": 21983,
+      "chunk_id": "f41c7e90-957c-4ae1-ae24-b57102797e23"
+    },
+    {
+      "source_id": "6b34f521-ec4a-410b-a16e-96d8f451961c",
+      "citation_number": 54,
+      "cited_text": "2 weeks out: review and diagnose",
+      "start_char": 4000,
+      "end_char": 4032,
+      "chunk_id": "1812c5b8-b045-49b9-a33c-6dd3ce7b57e6"
+    },
+    {
+      "source_id": "a11091c5-91e8-46f6-b130-391459ab3f47",
+      "citation_number": 55,
+      "cited_text": "is pretty much a waste of time here's another quote from a 2016 paper that again looked at the evidence behind lots of study techniques and this is what they had to say about rereading they said \"a wealth of research has shown that passive repetitive reading produces little or no benefit for learning yet not only was repetitive reading the most frequently listed strategy it was also the strategy most often listed at students number one choice by a large margin so that's what i'm going to say about rereading for the time being um i'm very happy to discuss all the evidence against rereading and against these other techniques if you guys want to hear about that just leave a comment down below and i'll do it but i want to focus on stuff you can do rather than kind of just hopping on to stuff that you shouldn't be doing so we'll close that for now uh rereading generally according to the evidence is pretty ineffective it does sort of work but you know compared to other things you could be d",
+      "start_char": 4000,
+      "end_char": 5000,
+      "chunk_id": "cc8e3d00-e190-46b5-9fe9-f5af385e84ae"
+    },
+    {
+      "source_id": "ebbb2a87-3769-451e-9a1c-3935b8a74d3c",
+      "citation_number": 56,
+      "cited_text": "LOW",
+      "start_char": 1554,
+      "end_char": 1557,
+      "chunk_id": "6eefaf09-1852-42d4-878a-82071b4f8db8"
+    },
+    {
+      "source_id": "5cb70d5f-2b3b-459c-bdfc-815c886400f6",
+      "citation_number": 57,
+      "cited_text": "ly are but that doesn't involve just testing ourselves as a sort of judgment exercise once we've learned a topic it involves testing ourselves throughout because again the more a brain has to work to do something the more effortful the learning is the more the connections are likely to be strengthened taking notes is a little bit controversial because in general if you look at the evidence for it summarizing I.E kind of writing summaries of stuff with the book open is generally considered a fairly low like low utility thing according to professor danloskey and his colleagues the guys who reviewed thousands of studies that looked at this sort of stuff they found that the people who sort of some memorized content and don't do very well compared to the people that just test themselves on the content because summarizing content is usually a passive process and going back to a fundamental idea the harder we have to the harder our brains have to work to do something the more likely we are to",
+      "start_char": 14000,
+      "end_char": 15000,
+      "chunk_id": "659f88cd-5716-4e84-9459-9e4bdefbfb4f"
+    }
+  ]
+}

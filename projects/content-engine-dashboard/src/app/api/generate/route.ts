@@ -109,7 +109,7 @@ const PILLAR_DEFINITIONS: Record<PillarKey, string> = {
   strong_pov: "STRONG POV: Take a clear, defensible side. Name the popular belief you're rejecting — use a different phrase each time (e.g. 'what most people assume', 'the standard advice', 'the default take', 'the accepted playbook', 'what everyone gets wrong', 'the usual thinking'). Never write the phrase 'conventional wisdom'. The opinion must be defensible — state the condition under which you'd be wrong. Never be neutral.",
   cross_domain: "CROSS-DOMAIN SYNTHESIS: Connect AI/tech with an unexpected domain (Philosophy, compiler theory, gym discipline, history, science, systems thinking). The connection must be non-obvious. Lead with the unexpected domain first (philosophy, experience, computer science, tech-business, history, or some insight) before bridging to the business/AI point.",
   taste_judgment: "TASTE & JUDGMENT: Make a decisive call. State what you would NOT do and why. Never hedge with 'it depends' — if context matters, state the specific condition, then make the call.",
-  identity_voice: "IDENTITY & VOICE: Founder in Pakistan building real AI systems. This context must appear as constraint, not credential — show how it limits or shapes decisions. If the piece could have been written by a US-based senior engineer with no resource pressure, rewrite it. Do NOT name a specific company/agency or reference school, university, classroom, lectures, or being a student.",
+  identity_voice: "IDENTITY & VOICE: Founder building real AI systems with real resource constraints. This context must appear as constraint, not credential — show how it limits or shapes decisions. If the piece could have been written by a senior engineer with no resource pressure, rewrite it. Do NOT name a specific company/agency, reference a location, or reference school, university, classroom, lectures, or being a student.",
   practical_stakes: "PRACTICAL STAKES: Answer two questions — what breaks if you ignore this? And what does doing it right look like in production? Don't explain a concept without grounding it in a consequence. The production example must come from real work, not a hypothetical.",
   content_specific: "CONTENT SPECIFIC: Explain what the topic is, how it works, and how it applies in real business or life. Be engaging, easy to understand, and easy to follow. Ground explanations in practical use cases.",
 };
@@ -132,7 +132,7 @@ This is a position piece. Aleem must take a clear, defensible side.
   story: `CONTENT MODE: Personal Story
 This is narrative-first. The insight must emerge from the story — do not front-load conclusions.
 - Start in the moment, not with the lesson.
-- Identity and context (Pakistan, founder, real constraints) must be felt throughout — never name a school, university, or agency.
+- Identity and context (founder, real constraints) must be felt throughout — never name a location, school, university, or agency.
 - The reader should discover the principle alongside Aleem, not be told it upfront.
 - End with the extractable principle that generalizes beyond the specific case.`,
 
@@ -164,6 +164,7 @@ ${pillarsToEnforce.map((k) => `- ${PILLAR_DEFINITIONS[k]}`).join("\n")}`;
 HARD CONSTRAINT — DO NOT mention any of the following anywhere in the output:
 - Aleem's agency name (NexusPoint) or any phrasing like "my agency", "at my company", "my AI agency"
 - Academia: university, college, school, classroom, lectures, professor, course, degree, BSAI, "as a student", "in my studies", "in my classes"
+- Location: Islamabad, Pakistan, or any city/country reference
 If the topic naturally pulls toward these, reframe in personal/operational terms instead (e.g. "in my own work", "building real systems", "from what I've shipped").
 
 ${modeBlock}
@@ -197,8 +198,8 @@ VOICE RULES — apply without exception:
 - Short sentences. White space. No corporate filler.
 - LENGTH DISCIPLINE: hit the target word count in the format spec. At least the minimum, never over the maximum. If you are under the minimum, add another concrete example, data point, or sub-point, never filler. Every sentence must add new information. Do not stop short of the minimum.
 
-ALEEM'S CONTEXT (use this to inform voice — but do NOT name the agency or reference school/university/being-a-student in the output):
-- 25-year-old founder building AI automation systems from Islamabad, Pakistan
+ALEEM'S CONTEXT (use this to inform voice — but do NOT name the agency, reference any location, or reference school/university/being-a-student in the output):
+- Founder building AI automation systems
 - Builds real AI systems: multi-agent workflows, automation pipelines, Claude Code extensions
 - Runs a real team. Deals with real client constraints.
 - Interests beyond tech: Philosophy, Science, Stoicism, History, systems thinking, gym discipline
