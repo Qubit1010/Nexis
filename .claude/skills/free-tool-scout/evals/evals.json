@@ -1,0 +1,41 @@
+{
+  "skill_name": "free-tool-scout",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Find me free tools for email marketing. I want something that lets me send campaigns and has a decent free tier.",
+      "expected_output": "Lists relevant email marketing tools from the catalog (e.g. Mailchimp, Brevo, MailerLite) with URL, category, and free tier details. Should show 3-8 tools, each with a clear description of what the free tier includes.",
+      "files": [],
+      "assertions": [
+        {"text": "Response contains at least 3 tool entries (each with a tool name and URL)"},
+        {"text": "At least one tool is clearly email marketing related (e.g. Mailchimp, Brevo, MailerLite, ConvertKit, or similar)"},
+        {"text": "Each tool entry includes a URL"},
+        {"text": "Output is a scannable list format, not dense prose paragraphs"}
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Search for free CRM tools that work for a small agency.",
+      "expected_output": "Runs the live Exa search for free CRM tools, returns 5-8 results with title, URL, and a snippet describing each tool's free tier or positioning for small teams.",
+      "files": [],
+      "assertions": [
+        {"text": "Response contains at least 3 CRM tool entries"},
+        {"text": "Each entry includes a URL"},
+        {"text": "At least one entry mentions free tier, free plan, or free version context"},
+        {"text": "The with-skill run executed a live Exa search (not just recalled from memory)"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What free AI tools do you have in the catalog?",
+      "expected_output": "Reads the AI Tools category from catalog/tools.md and presents the entries in a scannable format. Should group or label them clearly as AI Tools and include URL + brief about for each.",
+      "files": [],
+      "assertions": [
+        {"text": "Response references or labels 'AI Tools' as a category"},
+        {"text": "At least 3 tools are listed"},
+        {"text": "Each tool entry includes a URL"},
+        {"text": "Output is formatted as a list, not a prose paragraph"}
+      ]
+    }
+  ]
+}
