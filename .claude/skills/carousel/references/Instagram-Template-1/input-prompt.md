@@ -32,7 +32,7 @@ Reply with a one-line confirmation and a numbered slide plan, then wait for my p
 
 ```
 Slide 1 of <N> — COVER. Generate ONE 1080x1350 image only.
-Style: saturated blue vertical gradient background. A photoreal white marble statue/bust bleeding off the top-right, holding or beside a 3D terracotta symbolic object that represents <topic>.
+Style: saturated blue vertical gradient background. A photoreal hero subject that visually fits <topic> (a device, object, icon, or figure — only use a marble statue if the topic is literally classical/historical) bleeding off the top-right, holding or beside a 3D terracotta symbolic object that represents <topic>.
 Kicker (small uppercase, letter-spaced): "<KICKER>"
 Headline (giant condensed heavy white sans, tight leading, soft drop shadow): "<HOOK, max 8 words>"
 Subtitle (italic serif, white): "<one-line subtitle>"

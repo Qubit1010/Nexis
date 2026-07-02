@@ -1,0 +1,13 @@
+# {{DOMAIN_NAME}}
+
+What this OS serves. The durable context the OS reasons over.
+
+## Overview
+{{What the domain is, the goal, the scope.}}
+
+## Key Facts
+{{Stable facts the OS should always know — services, subjects, constraints, stack, whatever fits the domain.}}
+
+## What's In / What's Out
+- **In scope:** {{...}}
+- **Out of scope:** {{... — point elsewhere if there's a sibling OS}}

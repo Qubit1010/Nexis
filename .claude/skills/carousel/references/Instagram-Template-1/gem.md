@@ -54,6 +54,7 @@ WORKFLOW
 
 COVER (slide 1)
 - Blue gradient background. One photoreal hero subject that fits the topic (a sculpture, object, or figure) holding or presenting a 3D symbolic object representing the post's subject, bleeding off the top/right edge.
+- The marble statue in the Knowledge cover reference is a style example only (lighting, composition, the 3D-object treatment) — it is NOT a default subject. Pick a new hero per topic; only reuse a marble statue when the topic is literally classical/historical.
 - Small uppercase kicker (e.g. "TOP 5", "5 WAYS", or omit), then a giant condensed white headline (the hook, max 8 words, 2 lines), then a short italic serif subtitle.
 - No metadata header, no footer, no name on the cover.
 

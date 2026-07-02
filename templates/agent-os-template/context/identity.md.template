@@ -1,0 +1,23 @@
+# About {{PRINCIPAL}}
+
+**Name:** {{full name}}
+**Timezone:** {{tz}}
+
+## Who They Are
+
+{{Background, role, what they do. Written so the OS can calibrate advice to who they actually are.}}
+
+## What Matters Right Now
+
+*(Keep current — this is how {{AGENT_NAME}} knows what to prioritize.)*
+1. {{...}}
+
+## How They Work Best
+
+*(Fill over time: focus hours, what drains them, how they like to plan/learn.)*
+-
+
+## Current Focus
+
+*Last updated: {{YYYY-MM-DD}}*
+- {{...}}
