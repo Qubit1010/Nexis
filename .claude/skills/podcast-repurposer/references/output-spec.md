@@ -37,11 +37,14 @@ Save to `output/<client>/<episode-slug>/<NN>-<template-name>.md`.
 **Transcript excerpt:** "<the actual quotable lines the clip is cut from>"
 
 ### Text hooks (5) — on-video overlays, <hook word limit>
-1. <hook>
-2. <hook>
+1. <hook> (recommended)
+2. <hook> (2nd option)
 3. <hook>
 4. <hook>
 5. <hook>
+
+Mark your top pick `(recommended)` and runner-up `(2nd option)` — the markers can sit on any
+two of the five. The editor reviews from a shortlist, not a flat list.
 
 ### Captions (3, A/B) — <caption word limit>, self-contained, platform noted
 - **A (<platform/angle>):** <caption>
@@ -54,10 +57,14 @@ Format each post for its platform's native reading behavior:
 
 **LinkedIn:** Open with the most interesting sentence (bold claim, specific moment, or short
 question — never a scene-setter). One sentence per line. Short sentences, white space,
-no link in body. End on a principle or open question. ~150-300 words. Optimize for dwell.
+no link in body. ~150-300 words. Optimize for dwell.
 
 **Facebook:** Conversational opening, slightly more narrative. Still use line breaks — no walls
-of text. ~100-250 words. End with an invite (question, soft CTA, or "tag someone").
+of text. ~100-250 words.
+
+**Both platforms:** end every post with a specific, experience-based question the reader can
+answer in one sentence ("What's the toughest deal situation you've navigated?") — never a
+generic "Thoughts?" / "What do you think?".
 
 Label every post at the start of the line:
 
