@@ -87,7 +87,7 @@ These are third-party skills and plugins installed into Nexis. **Reach for them 
 - `senior-architect`, `senior-backend`, `senior-frontend` — system design, API/DB/backend, and modern frontend (React/Next/TS/Tailwind) implementation and review.
 - `code-reviewer` — multi-language PR review, security scan, review checklists.
 - `agent-development` — authoring Claude Code subagents (frontmatter, triggering, tools).
-- `frontend-design`, `ui-ux-pro-max`, `canvas-design` — distinctive production UI, deep UI/UX design intelligence (styles/palettes/fonts/charts/stacks), and static visual art (PNG/PDF).
+- `ui-ux-pro-max`, `canvas-design` — deep UI/UX design intelligence (styles/palettes/fonts/charts/stacks) and static visual art (PNG/PDF). (`frontend-design` archived 2026-07-03 to `archives/frontend-design-skill-2026-07-03/`, superseded by `taste-skill`.)
 - `brainstorming` — structured intent/requirements exploration before building.
 - `remotion-best-practices` — Remotion/React video patterns (pairs with `reel-creator` + `projects/reel-engine`).
 - `skill-creator` — the standard skill-authoring/eval workflow (see `.claude/rules/skill-creation.md`).
