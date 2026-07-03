@@ -1,0 +1,7 @@
+# Local Overrides
+
+Personal preferences and overrides that never get committed (gitignored).
+
+## API Key Handling
+
+When {{PRINCIPAL}} pastes an API key (patterns like `sk-`, `sk-or-`, `AIza`, `Bearer `, etc.), immediately save it to `.env` with the variable name matching the service (e.g. `OPENAI_API_KEY`). Confirm once. Never echo the key back in full.

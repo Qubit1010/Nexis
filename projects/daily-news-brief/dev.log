@@ -1,0 +1,476 @@
+
+> daily-news-brief@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.102:3000
+- Environments: .env
+
+✓ Starting...
+✓ Ready in 1998ms
+
+========================================
+  Generating YOUTUBE INTELLIGENCE brief for 2026-06-27
+========================================
+
+[Step 1/4] Scraping YouTube channels...
+Error: spawn C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe ENOENT
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'spawn C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe',
+  path: 'C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe',
+  spawnargs: [Array]
+}
+⨯ uncaughtException: Error: spawn C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe ENOENT
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'spawn C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe',
+  path: 'C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe',
+  spawnargs: [Array]
+}
+⨯ uncaughtException:  Error: spawn C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe ENOENT
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'spawn C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe',
+  path: 'C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe',
+  spawnargs: [Array]
+}
+ POST /api/generate-youtube 207 in 5.0min (compile: 351ms, render: 5.0min)
+
+========================================
+  Generating YOUTUBE INTELLIGENCE brief for 2026-06-27
+========================================
+
+[Step 1/4] Scraping YouTube channels...
+Scraping 13 channels, 5 videos each (5 concurrent)...
+
+[4/13] Dan Martell (@danmartell)
+  OK -- 0 videos scraped
+[2/13] AI Revolution (@airevolutionx)
+  OK -- 5 videos scraped
+[1/13] AI Search (@theAIsearch)
+  OK -- 5 videos scraped
+[3/13] Jack Roberts (@Itssssss_Jack)
+  OK -- 2 videos scraped
+[7/13] MreFlow (@mreflow)
+  OK -- 2 videos scraped
+[10/13] Nick Saraev (@nicksaraev)
+  OK -- 5 videos scraped
+[6/13] AI Daily Brief (@AIDailyBrief)
+  OK -- 5 videos scraped
+[11/13] Liam Ottley (@LiamOttley)
+  OK -- 5 videos scraped
+[9/13] Dave Shap (@DaveShap)
+  OK -- 4 videos scraped
+[13/13] Nate B Jones (@NateBJones)
+  OK -- 2 videos scraped
+[8/13] TheAIGrid (@TheAiGrid)
+  OK -- 5 videos scraped
+    Error resolving channel @TechWithTim: _ssl.c:1063: The handshake operation timed out
+[5/13] Tech With Tim (@TechWithTim)
+  WARN: Could not resolve channel ID for @TechWithTim
+    Error resolving channel @nateherk: _ssl.c:1063: The handshake operation timed out
+[12/13] Nate Herk (@nateherk)
+  WARN: Could not resolve channel ID for @nateherk
+
+==================================================
+Scraping complete!
+  Channels: 11/13 succeeded
+  Videos:   40 total
+  Errors:   2
+    - @TechWithTim: Could not resolve channel ID for @TechWithTim
+    - @nateherk: Could not resolve channel ID for @nateherk
+
+Saved 40 videos to C:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\youtube-daily-brief\.tmp\raw_videos.json
+Archived to C:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\youtube-daily-brief\.tmp\history\2026-06-28.json
+
+[Step 2/4] Analyzing content with OpenAI...
+Loaded 40 videos from raw_videos.json
+Loaded 1 days of history
+Sending to gpt-5.2...
+Error: OpenAI returned invalid JSON: Expecting value: line 1 column 1 (char 0)
+Raw response:
+
+
+No analysis generated. Check your API key and try again.
+ POST /api/generate-youtube 207 in 3.0min (compile: 161ms, render: 3.0min)
+
+========================================
+  Generating YOUTUBE INTELLIGENCE brief for 2026-06-27
+========================================
+
+[Step 1/4] Scraping YouTube channels...
+Scraping 13 channels, 5 videos each (5 concurrent)...
+
+[4/13] Dan Martell (@danmartell)
+  OK -- 0 videos scraped
+[5/13] Tech With Tim (@TechWithTim)
+  OK -- 2 videos scraped
+[3/13] Jack Roberts (@Itssssss_Jack)
+  OK -- 2 videos scraped
+[1/13] AI Search (@theAIsearch)
+  OK -- 5 videos scraped
+[2/13] AI Revolution (@airevolutionx)
+  OK -- 5 videos scraped
+[6/13] AI Daily Brief (@AIDailyBrief)
+  OK -- 5 videos scraped
+[8/13] TheAIGrid (@TheAiGrid)
+  OK -- 5 videos scraped
+[7/13] MreFlow (@mreflow)
+  OK -- 2 videos scraped
+[10/13] Nick Saraev (@nicksaraev)
+  OK -- 5 videos scraped
+[9/13] Dave Shap (@DaveShap)
+  OK -- 4 videos scraped
+[12/13] Nate Herk (@nateherk)
+  OK -- 4 videos scraped
+[11/13] Liam Ottley (@LiamOttley)
+  OK -- 5 videos scraped
+[13/13] Nate B Jones (@NateBJones)
+  OK -- 2 videos scraped
+
+==================================================
+Scraping complete!
+  Channels: 13/13 succeeded
+  Videos:   46 total
+
+Saved 46 videos to C:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\youtube-daily-brief\.tmp\raw_videos.json
+Archived to C:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\youtube-daily-brief\.tmp\history\2026-06-28.json
+
+[Step 2/4] Analyzing content with OpenAI...
+Loaded 46 videos from raw_videos.json
+Loaded 1 days of history
+Sending to gpt-5.2...
+Analysis complete -- 8 topics, 12 opportunities identified
+
+Saved analysis to C:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\youtube-daily-brief\.tmp\analysis.json
+
+[Step 3/4] Reading analysis...
+
+[Step 4/4] Storing to database...
+
+[Done] YouTube brief stored: 8 topics, 10 videos, 12 channels
+ POST /api/generate-youtube 200 in 95s (compile: 5ms, render: 95s)
+ GET /youtube/2026-06-27 200 in 4.2s (compile: 1899ms, render: 2.3s)
+ GET /brief/2026-06-22 200 in 1600ms (compile: 887ms, render: 714ms)
+ GET /api/briefs 200 in 101ms (compile: 87ms, render: 14ms)
+ GET /api/youtube-briefs 200 in 160ms (compile: 151ms, render: 9ms)
+ GET /api/practical/lookups 200 in 222ms (compile: 210ms, render: 12ms)
+ GET /api/tool-briefs 200 in 288ms (compile: 279ms, render: 10ms)
+ GET /api/sentiment/history?date=2026-06-22 200 in 89ms (compile: 79ms, render: 10ms)
+ GET /api/trends/history?slugs=from-big-models-to-shippable-agents%2Caccess-control-becomes-a-product-feature%2Cwashington-hyperscaler-coupling-tightens-the-market%2Ccapital-splits-mega-rounds-at-the-frontier-revenue-ai-in-the-middle%2Ccompliance-ops-goes-always-on-and-agentized&date=2026-06-22 200 in 156ms (compile: 144ms, render: 12ms)
+ GET /brief/2026-06-22 200 in 311ms (compile: 51ms, render: 260ms)
+ GET /api/briefs 200 in 20ms (compile: 9ms, render: 10ms)
+ GET /api/tool-briefs 200 in 34ms (compile: 25ms, render: 9ms)
+ GET /api/practical/lookups 200 in 46ms (compile: 37ms, render: 9ms)
+ GET /api/youtube-briefs 200 in 35ms (compile: 27ms, render: 9ms)
+ GET /api/sentiment/history?date=2026-06-22 200 in 14ms (compile: 7ms, render: 7ms)
+ GET /api/trends/history?slugs=from-big-models-to-shippable-agents%2Caccess-control-becomes-a-product-feature%2Cwashington-hyperscaler-coupling-tightens-the-market%2Ccapital-splits-mega-rounds-at-the-frontier-revenue-ai-in-the-middle%2Ccompliance-ops-goes-always-on-and-agentized&date=2026-06-22 200 in 24ms (compile: 16ms, render: 8ms)
+
+========================================
+  Generating YOUTUBE INTELLIGENCE brief for 2026-06-27
+========================================
+
+[Step 1/4] Scraping YouTube channels...
+Scraping 13 channels, 5 videos each (5 concurrent)...
+
+[4/13] Dan Martell (@danmartell)
+  OK -- 0 videos scraped
+[3/13] Jack Roberts (@Itssssss_Jack)
+  OK -- 2 videos scraped
+[5/13] Tech With Tim (@TechWithTim)
+  OK -- 2 videos scraped
+[1/13] AI Search (@theAIsearch)
+  OK -- 5 videos scraped
+[2/13] AI Revolution (@airevolutionx)
+  OK -- 5 videos scraped
+[7/13] MreFlow (@mreflow)
+  OK -- 2 videos scraped
+[9/13] Dave Shap (@DaveShap)
+  OK -- 4 videos scraped
+[10/13] Nick Saraev (@nicksaraev)
+  OK -- 5 videos scraped
+[8/13] TheAIGrid (@TheAiGrid)
+  OK -- 5 videos scraped
+[6/13] AI Daily Brief (@AIDailyBrief)
+  OK -- 5 videos scraped
+[11/13] Liam Ottley (@LiamOttley)
+  OK -- 5 videos scraped
+[12/13] Nate Herk (@nateherk)
+  OK -- 4 videos scraped
+[13/13] Nate B Jones (@NateBJones)
+  OK -- 2 videos scraped
+
+==================================================
+Scraping complete!
+  Channels: 13/13 succeeded
+  Videos:   46 total
+
+Saved 46 videos to C:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\youtube-daily-brief\.tmp\raw_videos.json
+Archived to C:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\youtube-daily-brief\.tmp\history\2026-06-28.json
+
+[Step 2/4] Analyzing content with OpenAI...
+Loaded 46 videos from raw_videos.json
+Loaded 1 days of history
+Sending to gpt-5.2...
+Analysis complete -- 8 topics, 12 opportunities identified
+
+Saved analysis to C:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\youtube-daily-brief\.tmp\analysis.json
+
+[Step 3/4] Reading analysis...
+
+[Step 4/4] Storing to database...
+
+[Done] YouTube brief stored: 8 topics, 10 videos, 12 channels
+ POST /api/generate-youtube 200 in 105s (compile: 4ms, render: 105s)
+ GET /youtube/2026-06-27 200 in 240ms (compile: 44ms, render: 196ms)
+ GET /youtube/2026-06-27 200 in 224ms (compile: 5ms, render: 219ms)
+ GET /api/briefs 200 in 17ms (compile: 8ms, render: 9ms)
+ GET /api/tool-briefs 200 in 26ms (compile: 19ms, render: 7ms)
+ GET /api/practical/lookups 200 in 35ms (compile: 28ms, render: 7ms)
+ GET /api/youtube-briefs 200 in 46ms (compile: 38ms, render: 7ms)
+ GET /youtube/2026-06-27 200 in 1566ms (compile: 373ms, render: 1193ms)
+ GET /youtube/2026-06-27 200 in 1094ms (compile: 5ms, render: 1088ms)
+ GET /youtube/2026-06-27 200 in 1076ms (compile: 6ms, render: 1070ms)
+ GET /youtube/2026-06-27 200 in 922ms (compile: 5ms, render: 917ms)
+ GET /youtube/2026-06-27 200 in 965ms (compile: 4ms, render: 961ms)
+ GET /youtube/2026-06-27 200 in 1035ms (compile: 22ms, render: 1012ms)
+ GET /youtube/2026-06-27 200 in 1166ms (compile: 6ms, render: 1161ms)
+ GET /youtube/2026-06-27 200 in 1001ms (compile: 8ms, render: 993ms)
+ GET /youtube/2026-06-27 200 in 1115ms (compile: 7ms, render: 1108ms)
+ GET /youtube/2026-06-27 200 in 909ms (compile: 25ms, render: 884ms)
+ GET /youtube/2026-06-27 200 in 1008ms (compile: 4ms, render: 1003ms)
+ GET /youtube/2026-06-27 200 in 857ms (compile: 4ms, render: 854ms)
+ GET /youtube/2026-06-27 200 in 1042ms (compile: 8ms, render: 1035ms)
+ GET /youtube/2026-06-27 200 in 923ms (compile: 23ms, render: 900ms)
+ GET /youtube/2026-06-27 200 in 1074ms (compile: 5ms, render: 1069ms)
+ GET /youtube/2026-06-27 200 in 918ms (compile: 4ms, render: 913ms)
+ GET /youtube/2026-06-27 200 in 1107ms (compile: 5ms, render: 1102ms)
+ GET /youtube/2026-06-27 200 in 960ms (compile: 3ms, render: 956ms)
+ GET /youtube/2026-06-27 200 in 1185ms (compile: 20ms, render: 1165ms)
+ GET /youtube/2026-06-27 200 in 1192ms (compile: 6ms, render: 1186ms)
+ GET /youtube/2026-06-27 200 in 1032ms (compile: 6ms, render: 1026ms)
+ GET /youtube/2026-06-27 200 in 1026ms (compile: 4ms, render: 1022ms)
+ GET /youtube/2026-06-27 200 in 1112ms (compile: 5ms, render: 1107ms)
+ GET /youtube/2026-06-27 200 in 930ms (compile: 25ms, render: 905ms)
+ GET /youtube/2026-06-27 200 in 991ms (compile: 5ms, render: 987ms)
+ GET /youtube/2026-06-27 200 in 976ms (compile: 5ms, render: 971ms)
+ GET /youtube/2026-06-27 200 in 826ms (compile: 4ms, render: 822ms)
+ GET /youtube/2026-06-27 200 in 997ms (compile: 27ms, render: 970ms)
+ GET /youtube/2026-06-27 200 in 856ms (compile: 7ms, render: 849ms)
+ GET /youtube/2026-06-27 200 in 853ms (compile: 4ms, render: 849ms)
+ GET /youtube/2026-06-27 200 in 1044ms (compile: 4ms, render: 1040ms)
+ GET /youtube/2026-06-27 200 in 1083ms (compile: 5ms, render: 1079ms)
+ GET /youtube/2026-06-27 200 in 1119ms (compile: 27ms, render: 1092ms)
+ GET /youtube/2026-06-27 200 in 1121ms (compile: 5ms, render: 1116ms)
+ GET /youtube/2026-06-27 200 in 1144ms (compile: 6ms, render: 1138ms)
+ GET /youtube/2026-06-27 200 in 1127ms (compile: 5ms, render: 1121ms)
+ GET /youtube/2026-06-27 200 in 1160ms (compile: 26ms, render: 1134ms)
+ GET /youtube/2026-06-27 200 in 1129ms (compile: 6ms, render: 1123ms)
+ GET /youtube/2026-06-27 200 in 1124ms (compile: 4ms, render: 1120ms)
+ GET /youtube/2026-06-27 200 in 978ms (compile: 5ms, render: 973ms)
+ GET /youtube/2026-06-27 200 in 1204ms (compile: 5ms, render: 1199ms)
+ GET /youtube/2026-06-27 200 in 1051ms (compile: 24ms, render: 1026ms)
+ GET /youtube/2026-06-27 200 in 876ms (compile: 6ms, render: 871ms)
+ GET /youtube/2026-06-27 200 in 735ms (compile: 5ms, render: 731ms)
+ GET /youtube/2026-06-27 200 in 564ms (compile: 6ms, render: 558ms)
+ GET /youtube/2026-06-27 200 in 438ms (compile: 22ms, render: 416ms)
+✓ Compiled in 403ms
+ GET /youtube/2026-06-27 200 in 1129ms (compile: 287ms, render: 842ms)
+ GET /youtube/2026-06-27 200 in 610ms (compile: 5ms, render: 605ms)
+ GET /youtube/2026-06-27 200 in 450ms (compile: 4ms, render: 446ms)
+ GET /youtube/2026-06-27 200 in 318ms (compile: 27ms, render: 291ms)
+ GET /youtube/2026-06-27 200 in 354ms (compile: 177ms, render: 176ms)
+✓ Compiled in 206ms
+✓ Compiled in 265ms
+ GET /youtube/2026-06-27 200 in 984ms (compile: 340ms, render: 643ms)
+✓ Compiled in 219ms
+ GET /youtube/2026-06-27 200 in 841ms (compile: 351ms, render: 491ms)
+✓ Compiled in 225ms
+[YT Bookmark] Error: Command failed: C:\Program Files\nodejs\node.exe C:/Users/qubit/AppData/Roaming/npm/node_modules/@googleworkspace/cli/run.js sheets spreadsheets values append --params {"spreadsheetId":"1TwAuLDKak3hpPWqlojpNL_OTsUyCOBaAVjRRncOpb9Q","range":"Youtube bookmarked!A1","valueInputOption":"USER_ENTERED"} --json {"values":[["2026-06-27","Claude Fable / Mythos","AI Search, AI Revolution, AI Daily Brief","","","","","","","New"]]}
+Using keyring backend: keyring
+error[auth]: Authentication failed: Failed to get token: Server error: invalid_grant: Token has been expired or revoked.: invalid_grant: Token has been expired or revoked.
+
+ POST /api/youtube-bookmark 500 in 2.7s (compile: 877ms, render: 1787ms)
+ POST /api/youtube-bookmark 200 in 2.4s (compile: 10ms, render: 2.4s)
+ POST /api/youtube-bookmark 200 in 1564ms (compile: 3ms, render: 1560ms)
+ POST /api/youtube-bookmark 200 in 1539ms (compile: 4ms, render: 1536ms)
+ POST /api/youtube-bookmark 200 in 1274ms (compile: 4ms, render: 1271ms)
+ POST /api/youtube-bookmark 200 in 1332ms (compile: 5ms, render: 1326ms)
+ POST /api/youtube-bookmark 200 in 1260ms (compile: 4ms, render: 1256ms)
+ POST /api/youtube-bookmark 200 in 1367ms (compile: 5ms, render: 1362ms)
+ POST /api/youtube-bookmark 200 in 1318ms (compile: 4ms, render: 1314ms)
+ GET /youtube/2026-06-27 200 in 503ms (compile: 254ms, render: 249ms)
+✓ Compiled in 168ms
+
+========================================
+  Generating brief for 2026-06-27
+  mode=daily days=2 depth=lean
+========================================
+
+[Step 1/6] Fetching + ranking evidence...
+(node:25044) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[RSS] Fetched 294 articles from 5 feeds
+[HackerNews] Fetched 30 AI-related articles from top 150
+[Topics] daily mode: 8 topics (6 curated + 2 live-derived)
+[last30days] Fetching 8 topics (lean, days=2, sources=reddit,hackernews,grounding)
+[last30days] "frontier AI model releases and benchmark results" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "frontier AI model releases and benchmark results" -> 0 articles
+[last30days] "AI research breakthroughs and new papers" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "AI research breakthroughs and new papers" -> 1 articles
+[last30days] "OpenAI Anthropic Google DeepMind Meta AI strategy and moves" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "OpenAI Anthropic Google DeepMind Meta AI strategy and moves" -> 0 articles
+[last30days] "AI funding rounds, acquisitions and valuations" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "AI funding rounds, acquisitions and valuations" -> 0 articles
+[last30days] "AI regulation, policy and government action" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "AI regulation, policy and government action" -> 1 articles
+[last30days] "AI safety, alignment and ethics debates" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "AI safety, alignment and ethics debates" -> 0 articles
+[last30days] "OpenAI custom chip" source errors: { grounding: 'HTTP 401: Unauthorized', jobs: 'HTTP 401: Unauthorized' }
+[last30days] "OpenAI custom chip" -> 0 articles
+[last30days] "Anthropic Claude theft" source errors: { grounding: 'HTTP 401: Unauthorized', jobs: 'HTTP 401: Unauthorized' }
+[last30days] "Anthropic Claude theft" -> 0 articles
+[last30days] Total: 2 articles from 8 topics
+[Sources] Total: 2 articles across 1 source types
+
+[Step 2/6] Deduplicating articles...
+
+[Step 3/6] Categorizing articles...
+[Categorizer] 1 articles could not be categorized (50%)
+[Categorizer] Warning: 50% uncategorized — consider expanding keywords
+[Categorizer] 1 articles categorized across 3 categories
+  AI Models & Breakthroughs: 0 articles
+  AI Business & Strategy: 0 articles
+  AI Ethics, Safety & Regulation: 1 articles
+
+[Step 4/6] Analyzing each category with Haiku...
+  Processing: AI Models & Breakthroughs (0 articles)...
+  Processing: AI Business & Strategy (0 articles)...
+  Processing: AI Ethics, Safety & Regulation (1 articles)...
+
+[Step 5/6] Synthesizing with Sonnet...
+
+[Step 6/6] Storing trends...
+  5 trends stored
+  Sentiment: cautious
+
+[Done] Brief generated: 3/3 categories, 2 articles fetched
+ POST /api/generate 200 in 91s (compile: 598ms, render: 90s)
+ GET /brief/2026-06-27 200 in 299ms (compile: 144ms, render: 156ms)
+ GET /brief/2026-06-27 200 in 128ms (compile: 4ms, render: 123ms)
+ GET /api/briefs 200 in 88ms (compile: 75ms, render: 13ms)
+ GET /api/trends/history?slugs=compliance-becomes-a-product-feature%2Ceu-counsel-hiring-signals-enforcement-ready-europe%2Cpolicy-teams-turn-into-go-to-market-infrastructure%2Cgovernance-first-architectures-gain-budget%2Cmodel-differentiation-shifts-from-raw-capability-to-trust&date=2026-06-27 200 in 85ms (compile: 73ms, render: 12ms)
+ GET /api/sentiment/history?date=2026-06-27 200 in 153ms (compile: 142ms, render: 11ms)
+ GET /api/tool-briefs 200 in 215ms (compile: 205ms, render: 9ms)
+ GET /api/practical/lookups 200 in 282ms (compile: 271ms, render: 11ms)
+ GET /api/youtube-briefs 200 in 342ms (compile: 333ms, render: 8ms)
+ GET /api/trends/history?slugs=compliance-becomes-a-product-feature%2Ceu-counsel-hiring-signals-enforcement-ready-europe%2Cpolicy-teams-turn-into-go-to-market-infrastructure%2Cgovernance-first-architectures-gain-budget%2Cmodel-differentiation-shifts-from-raw-capability-to-trust&date=2026-06-27 200 in 16ms (compile: 6ms, render: 10ms)
+ GET /api/sentiment/history?date=2026-06-27 200 in 28ms (compile: 20ms, render: 9ms)
+ GET /compare 200 in 390ms (compile: 343ms, render: 47ms)
+ GET /api/briefs 200 in 17ms (compile: 8ms, render: 9ms)
+ GET /api/tool-briefs 200 in 26ms (compile: 19ms, render: 8ms)
+ GET /api/practical/lookups 200 in 36ms (compile: 29ms, render: 7ms)
+ GET /api/youtube-briefs 200 in 23ms (compile: 17ms, render: 6ms)
+ GET /api/briefs 200 in 10ms (compile: 4ms, render: 6ms)
+ GET /api/briefs 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /api/briefs/2026-06-22 200 in 1074ms (compile: 1039ms, render: 35ms)
+ GET /api/briefs/2026-06-27 200 in 1073ms (compile: 1038ms, render: 35ms)
+ GET /api/briefs 200 in 13ms (compile: 5ms, render: 8ms)
+ GET /api/sentiment/history?date=2026-06-27 200 in 18ms (compile: 8ms, render: 10ms)
+ GET /api/trends/history?slugs=compliance-becomes-a-product-feature%2Ceu-counsel-hiring-signals-enforcement-ready-europe%2Cpolicy-teams-turn-into-go-to-market-infrastructure%2Cgovernance-first-architectures-gain-budget%2Cmodel-differentiation-shifts-from-raw-capability-to-trust&date=2026-06-27 200 in 28ms (compile: 19ms, render: 9ms)
+ GET /api/tool-briefs 200 in 38ms (compile: 30ms, render: 8ms)
+ GET /api/practical/lookups 200 in 48ms (compile: 40ms, render: 8ms)
+ GET /api/youtube-briefs 200 in 58ms (compile: 50ms, render: 8ms)
+ GET /api/sentiment/history?date=2026-06-27 200 in 11ms (compile: 5ms, render: 6ms)
+ GET /api/trends/history?slugs=compliance-becomes-a-product-feature%2Ceu-counsel-hiring-signals-enforcement-ready-europe%2Cpolicy-teams-turn-into-go-to-market-infrastructure%2Cgovernance-first-architectures-gain-budget%2Cmodel-differentiation-shifts-from-raw-capability-to-trust&date=2026-06-27 200 in 20ms (compile: 12ms, render: 8ms)
+ GET /youtube/2026-06-27 200 in 503ms (compile: 259ms, render: 244ms)
+ GET /api/briefs 200 in 16ms (compile: 7ms, render: 9ms)
+ GET /api/tool-briefs 200 in 12ms (compile: 5ms, render: 7ms)
+ GET /api/practical/lookups 200 in 21ms (compile: 14ms, render: 7ms)
+ GET /api/youtube-briefs 200 in 31ms (compile: 23ms, render: 8ms)
+ GET /api/briefs 200 in 17ms (compile: 9ms, render: 8ms)
+ GET /api/tool-briefs 200 in 16ms (compile: 9ms, render: 7ms)
+ GET /api/practical/lookups 200 in 27ms (compile: 18ms, render: 9ms)
+ GET /api/sentiment/history?date=2026-06-27 200 in 39ms (compile: 31ms, render: 9ms)
+ GET /api/youtube-briefs 200 in 49ms (compile: 42ms, render: 7ms)
+ GET /api/trends/history?slugs=compliance-becomes-a-product-feature%2Ceu-counsel-hiring-signals-enforcement-ready-europe%2Cpolicy-teams-turn-into-go-to-market-infrastructure%2Cgovernance-first-architectures-gain-budget%2Cmodel-differentiation-shifts-from-raw-capability-to-trust&date=2026-06-27 200 in 39ms (compile: 29ms, render: 10ms)
+ GET /api/sentiment/history?date=2026-06-27 200 in 12ms (compile: 5ms, render: 7ms)
+ GET /api/trends/history?slugs=compliance-becomes-a-product-feature%2Ceu-counsel-hiring-signals-enforcement-ready-europe%2Cpolicy-teams-turn-into-go-to-market-infrastructure%2Cgovernance-first-architectures-gain-budget%2Cmodel-differentiation-shifts-from-raw-capability-to-trust&date=2026-06-27 200 in 23ms (compile: 14ms, render: 9ms)
+ GET /api/briefs 200 in 10ms (compile: 3ms, render: 8ms)
+ GET /api/tool-briefs 200 in 11ms (compile: 5ms, render: 6ms)
+ GET /api/practical/lookups 200 in 19ms (compile: 12ms, render: 7ms)
+ GET /api/youtube-briefs 200 in 29ms (compile: 21ms, render: 8ms)
+ GET /api/briefs 200 in 17ms (compile: 10ms, render: 8ms)
+ GET /api/tool-briefs 200 in 26ms (compile: 19ms, render: 7ms)
+ GET /api/practical/lookups 200 in 38ms (compile: 31ms, render: 7ms)
+ GET /api/youtube-briefs 200 in 49ms (compile: 41ms, render: 8ms)
+ GET /api/sentiment/history?date=2026-06-27 200 in 36ms (compile: 28ms, render: 8ms)
+ GET /api/trends/history?slugs=compliance-becomes-a-product-feature%2Ceu-counsel-hiring-signals-enforcement-ready-europe%2Cpolicy-teams-turn-into-go-to-market-infrastructure%2Cgovernance-first-architectures-gain-budget%2Cmodel-differentiation-shifts-from-raw-capability-to-trust&date=2026-06-27 200 in 42ms (compile: 37ms, render: 5ms)
+ GET /api/sentiment/history?date=2026-06-27 200 in 11ms (compile: 4ms, render: 7ms)
+ GET /api/trends/history?slugs=compliance-becomes-a-product-feature%2Ceu-counsel-hiring-signals-enforcement-ready-europe%2Cpolicy-teams-turn-into-go-to-market-infrastructure%2Cgovernance-first-architectures-gain-budget%2Cmodel-differentiation-shifts-from-raw-capability-to-trust&date=2026-06-27 200 in 20ms (compile: 13ms, render: 7ms)
+
+========================================
+  Generating PRACTICAL AI brief for 2026-06-27 (lean)
+========================================
+
+[Step 1/6] Fetching practical evidence...
+[Practical] Fetching evidence for 9 topics (lean)...
+[last30days] Fetching 9 topics (lean, days=7, sources=reddit,hackernews,github,grounding)
+[GitHubTrending] Fetched 34 AI-related trending repos
+[last30days] "Claude Code new features updates and use cases" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "Claude Code new features updates and use cases" -> 7 articles
+[last30days] "OpenAI Codex CLI new features updates and use cases" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "OpenAI Codex CLI new features updates and use cases" -> 4 articles
+[last30days] "Gemini CLI new features updates and use cases" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "Gemini CLI new features updates and use cases" -> 4 articles
+[last30days] "Cursor AI editor new features updates and use cases" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "Cursor AI editor new features updates and use cases" -> 7 articles
+[last30days] "MCP servers Model Context Protocol new features updates and use cases" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "MCP servers Model Context Protocol new features updates and use cases" -> 10 articles
+[last30days] "AI tools for content marketing and SEO" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "AI tools for content marketing and SEO" -> 19 articles
+[last30days] "AI cold outreach and lead generation tools" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "AI cold outreach and lead generation tools" -> 6 articles
+[last30days] "AI agents to automate business operations" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "AI agents to automate business operations" -> 4 articles
+[last30days] "AI tools to build a website or landing page fast" source errors: { grounding: 'HTTP 401: Unauthorized' }
+[last30days] "AI tools to build a website or landing page fast" -> 10 articles
+[last30days] Total: 71 articles from 9 topics
+[Practical] 71 evidence items, 14 movers
+
+[Step 2/6] Categorizing into business domains...
+[PracticalCategorizer] Marketing: 12 items
+[PracticalCategorizer] Sales: 6 items
+[PracticalCategorizer] Managing & Scaling: 12 items
+[PracticalCategorizer] Online Presence: 12 items
+
+[Step 3/6] Analyzing each domain with Haiku...
+  Processing: Marketing (12 items)...
+  Processing: Sales (6 items)...
+  Processing: Managing & Scaling (12 items)...
+  Processing: Online Presence (12 items)...
+
+[Step 4/6] Synthesizing Practical AI brief with Sonnet...
+
+[Step 5/6] Storing trends, content ideas, recipe...
+  Top pick: Built-in MCP server for AI agent integration
+  5 trends, 8 ideas, 14 movers
+
+[Done] Practical AI brief generated: 4/4 domains, 71 items
+ POST /api/generate-tools 200 in 110s (compile: 122ms, render: 110s)
+ GET /tools/2026-06-27 200 in 1272ms (compile: 990ms, render: 282ms)
+ GET /tools/2026-06-27 200 in 183ms (compile: 36ms, render: 147ms)
+ GET /api/briefs 200 in 17ms (compile: 9ms, render: 7ms)
+ GET /api/tool-briefs 200 in 26ms (compile: 19ms, render: 7ms)
+ GET /api/practical/lookups 200 in 35ms (compile: 29ms, render: 6ms)
+ GET /api/youtube-briefs 200 in 47ms (compile: 38ms, render: 9ms)
+ POST /api/sheets 200 in 2.7s (compile: 112ms, render: 2.6s)
+ POST /api/sheets 200 in 1655ms (compile: 5ms, render: 1651ms)
+ POST /api/sheets 200 in 1249ms (compile: 4ms, render: 1245ms)
+ POST /api/sheets 200 in 1400ms (compile: 4ms, render: 1396ms)
+ POST /api/sheets 200 in 1219ms (compile: 4ms, render: 1215ms)

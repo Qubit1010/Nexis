@@ -1,0 +1,63 @@
+# Scope the knowledge graph to the Nexis OS CORE: in-house skills, rules,
+# context, decisions, CLAUDE.md, templates. Exclude vendored skills, the app
+# codebases under projects/, duplicate mirrors, and heavy artifacts.
+
+# --- Duplicate mirror of skills (noise) ---
+.agents/
+
+# --- Project app codebases (out of scope for the OS-core graph) ---
+projects/
+
+# --- Non-core top-level areas ---
+autoresearch/
+brand-assets/
+catalog/
+client-projects/
+dashboards/
+docs/
+logs/
+research/
+tools/
+ml-runs/
+datasets/
+.impeccable/
+.playwright-cli/
+
+# --- Non-core .claude model-config dirs ---
+.claude/deepseek-v4-flash/
+.claude/deepseek-v4-pro/
+.claude/glm/
+.claude/open-models/
+.claude/default/
+
+# --- Archives ---
+archives/
+
+# --- Third-party vendored skill collections (installed, not built here) ---
+.claude/skills/scientific-agent-skills/
+.claude/skills/marketing-skills/
+.claude/skills/awesome-claude-skills/
+.claude/skills/social-media-skills/
+.claude/skills/senior-architect/
+.claude/skills/senior-backend/
+.claude/skills/senior-frontend/
+.claude/skills/code-reviewer/
+.claude/skills/frontend-design/
+.claude/skills/ui-ux-pro-max/
+.claude/skills/canvas-design/
+.claude/skills/remotion-best-practices/
+.claude/skills/skill-creator/
+.claude/skills/ponytail/
+.claude/skills/caveman/
+.claude/skills/carousel/
+.claude/skills/case-study-generator/
+.claude/skills/agent-development/
+.claude/skills/brainstorming/
+.claude/skills/ask-matt/
+
+# --- Build / vendor / cache ---
+**/node_modules/
+**/.next/
+**/__pycache__/
+**/dist/
+**/.venv/

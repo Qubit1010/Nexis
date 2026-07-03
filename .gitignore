@@ -33,7 +33,7 @@ logs/
 .vscode/
 .idea/
 
-context/
+/context/
 
 # Datasets & ML runs (large files)
 datasets/
@@ -60,7 +60,7 @@ catalog/
 archives/
 
 # Decision log (private/sensitive)
-decisions/
+/decisions/
 
 # Research source indexes and run logs (large, regenerable)
 **/_research/sources.json
@@ -79,6 +79,9 @@ decisions/
 
 # Impeccable cache files
 **/.impeccable/
+
+# Understand-Anything plugin output
+.understand-anything/
 
 # University files (assignments, coursework, private)
 university/

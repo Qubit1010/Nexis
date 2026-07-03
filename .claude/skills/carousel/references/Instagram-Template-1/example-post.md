@@ -23,7 +23,7 @@ Reply with a one-line confirmation and a numbered slide plan, then wait for my p
 
 ```
 Slide 1 of 8 — COVER. Generate ONE 1080x1350 image only.
-Style: saturated blue vertical gradient background (deep blue). A photoreal white marble Roman statue/bust bleeding off the top-right, holding a 3D terracotta star/spark object (the symbolic "spark" of the model).
+Style: saturated blue vertical gradient background (deep blue). A photoreal dark stone monolith engraved with faint circuit-line patterns, bleeding off the top-right, holding a 3D terracotta star/spark object (the symbolic "spark" of the model).
 Kicker (small uppercase, letter-spaced): "ARCHITECTURAL DEEP DIVE"
 Headline (giant condensed heavy white sans, tight leading, soft drop shadow): "STOP TREATING CLAUDE CODE LIKE A CHATBOT."
 Subtitle (italic serif, white): "The 3-part mental model for agentic development on production repos."
