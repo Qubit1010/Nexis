@@ -17,6 +17,19 @@ These files contain the full picture. Read them when you need context:
 - @context/goals.md — Quarterly goals and milestones
 - @context/ideas.md — Build backlog: skills and tools to work on next
 
+## gstack
+
+`gstack` (`.claude/skills/gstack/`, github.com/garrytan/gstack) is installed. Use the `/browse` skill from gstack for all web browsing — never use `mcp__claude-in-chrome__*` tools.
+
+Available gstack skills: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`, `/plan-design-review`, `/design-consultation`, `/design-shotgun`, `/design-html`, `/review`, `/ship`, `/land-and-deploy`, `/canary`, `/benchmark`, `/browse`, `/connect-chrome`, `/qa`, `/qa-only`, `/design-review`, `/setup-browser-cookies`, `/setup-deploy`, `/setup-gbrain`, `/retro`, `/investigate`, `/document-release`, `/document-generate`, `/codex`, `/cso`, `/autoplan`, `/plan-devex-review`, `/devex-review`, `/careful`, `/freeze`, `/guard`, `/unfreeze`, `/gstack-upgrade`, `/learn`.
+
+`.claude/skills/gstack` is a git submodule pinned to upstream. Teammates cloning Nexis need to run:
+```
+git submodule update --init .claude/skills/gstack
+cd .claude/skills/gstack && ./setup
+```
+`./setup` requires the `bun` runtime (`npm install -g bun` if missing). Re-run `./setup` after every `git pull` that updates the submodule.
+
 ## Tool Integrations
 
 See `.claude/rules/tool-integrations.md` for full details. Key tools:
