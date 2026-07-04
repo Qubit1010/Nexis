@@ -3,10 +3,16 @@ import Anthropic from "@anthropic-ai/sdk";
 import OpenAI from "openai";
 import fs from "fs";
 import path from "path";
+import { countExchanges, normalizeIdentity } from "@/lib/db";
 
 // Primary model (Anthropic). OpenAI is the fallback if Anthropic errors or is unkeyed.
 const ANTHROPIC_MODEL = "claude-sonnet-4-6";
 const OPENAI_FALLBACK_MODEL = "gpt-5.2";
+
+// Prospect replies without a call ask before the ask becomes mandatory.
+// Pinned by Q7 research (SetSmart 828K-conversation study): the booking window
+// opens at ~11 total messages = 5-6 prospect replies; earlier asks convert ~0%.
+const ASK_BY = 6;
 
 export const dynamic = "force-dynamic";
 
@@ -116,10 +122,13 @@ async function generateDraft(
   }
 
   if (openaiKey) {
+    if (anthropicError) console.warn("Anthropic failed, falling back to OpenAI:", anthropicError);
     const openai = new OpenAI({ apiKey: openaiKey });
     const completion = await openai.chat.completions.create({
       model: OPENAI_FALLBACK_MODEL,
-      max_tokens: 1024,
+      // gpt-5* rejects max_tokens; it wants max_completion_tokens + reasoning_effort
+      max_completion_tokens: 2048,
+      reasoning_effort: "low",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: userMessage },
@@ -212,25 +221,50 @@ OUTPUT FORMAT — start your output with the finished message itself (no labels,
 Archetype: <the angle/move used for this touch>
 Why: <one line — what this touch does that the previous one didn't>`;
     } else {
-      const { conversation, profileLine, goal } = body as {
+      const { conversation, profileLine, goal, state, identityRaw } = body as {
         conversation?: string;
         profileLine?: string;
         goal?: string;
+        state?: {
+          exchange_count?: number;
+          stage?: string;
+          meeting_status?: string;
+          last_contact?: string;
+        };
+        identityRaw?: string;
       };
       if (!conversation || !profileLine) {
         return NextResponse.json({ error: "conversation and profile are required for a live reply" }, { status: 400 });
       }
 
-      userMessage = `Live ${pName} conversation. Draft the next reply that moves them exactly one phase forward (never skip phases).
+      const contactHint = identityRaw ? normalizeIdentity(platform, identityRaw) : undefined;
+      // The pasted thread and the DB record can each be stale; trust the higher count.
+      const exchangeCount = Math.max(countExchanges(conversation, contactHint), state?.exchange_count ?? 0);
+      const asked = !!state?.meeting_status && state.meeting_status !== "none";
+
+      userMessage = `Live ${pName} conversation. You are a pro closer with a human peer tone: warm, specific, zero salesman smell, and you drive decisively to a booked call.
+
+CONVERSATION STATE (ground truth from the conversation database, do not re-infer it):
+- Prospect replies so far: ${exchangeCount}
+- Current phase: ${state?.stage || "unknown, infer from the thread"}
+- Call asked yet: ${asked ? `yes (${state?.meeting_status})` : "no"}${state?.last_contact ? `\n- Last contact: ${state.last_contact}` : ""}
 
 ${conversation}
 
 Profile: ${profileLine}${goal ? `\nMy goal: ${goal}` : ""}
 
-Match their register and message length. Label before you pull. Don't drop proof until they've disclosed a real pain or asked what I do; when you do, use one matched peer from the proof bank. Don't ask for a call until they've shown pull — and if you do, anchor it to the Ops Teardown deliverable, never "quick chat". ${chars} No em-dash, no emoji, no banned phrases.
+ADVANCE RULES (hard, in priority order):
+1. Buying signal in their last 1-2 messages (price or timeline question, "how does it work", technical or integration question, second proof request, mentions a partner or team decision, asks about availability): skip everything and make the Warm Ask now. 20-min Ops Teardown, two specific times.
+2. Prospect replies >= ${ASK_BY} and no call ask yet: this reply MUST contain the Ops Teardown ask. Non-negotiable.
+3. Same objection raised twice: use the transition line. Easier to show than type; offer the screen-share with two times.
+4. Otherwise move at least one phase toward the Warm Ask, and never repeat the previous move (no second label in a row, no third calibrated question in a row).
+Phase 6 is the destination, not a last resort. Every reply must be measurably closer to a booked call than the last one.
+
+Match their register and message length. Proof only after they disclose a real pain or ask what I do; use one matched peer from the proof bank. Any call ask anchors to the Ops Teardown deliverable, never "quick chat". ${chars} No em-dash, no emoji, no banned phrases.
 
 OUTPUT FORMAT — start your output with the finished reply itself (no labels, no brackets, no analysis before it). After the reply, a line containing only --- then:
-Phase: <Qualify / Label / Deepen / Proof / Warm Ask / Call>
+Phase: <Qualify / Label / Deepen / Proof / Objection / Warm Ask / Call>
+Ask: <yes or no — did this reply contain the call ask>
 Tactic: <one line naming the move>
 Why: <one line — why this is the right next step in the thread>`;
     }
@@ -256,6 +290,7 @@ Why: <one line — why this is the right next step in the thread>`;
     const meta = {
       archetype: grab("Archetype"),
       phase: grab("Phase"),
+      ask: grab("Ask").toLowerCase().startsWith("yes") ? "yes" : "no",
       tactic: grab("Tactic"),
       why: grab("Why"),
     };

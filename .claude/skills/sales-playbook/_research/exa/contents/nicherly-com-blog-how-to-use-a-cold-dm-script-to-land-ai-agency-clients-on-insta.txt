@@ -1,0 +1,138 @@
+Cold DM Script: Landing AI Agency Clients on Instagram and Facebook | Nicherly
+https://nicherly.com/blog/how-to-use-a-cold-dm-script-to-land-ai-agency-clients-on-instagram
+2026-06-06T05:06:11.000Z
+
+Cold DM Script: Landing AI Agency Clients on Instagram and Facebook | Nicherly
+
+← All posts
+
+Instagram DMs get a 90% open rate. Cold email averages 39%. If you run an AI automation agency, using a cold DM script for Instagram outreach instead of cold email means more opens on every message you send.
+
+Facebook is different. The platform caps cold DMs to non-connections at around 10 per day, which makes Instagram the primary channel for a cold DM script targeting AI agency clients on Instagram and Facebook. Both platforms work, but the approach on each needs to match how the platform treats outbound messages.
+
+This post covers how to structure a cold DM script for AI agency prospecting on Instagram and Facebook, which local business niches respond, and how to avoid the account restrictions that kill campaigns before they gain traction.
+
+90%
+
+open rate for Instagram DMs vs 39% for cold email (2025, ManyChat data)
+
+## Cold DM Script Basics: What Separates Replies from Ignores
+
+Instagram DM click-through rates reach 28% vs cold email's 2-3%. The gap shrinks fast when the message is generic.
+
+A cold DM script built on these principles outperforms generic openers in every measured metric. What the research shows about cold DM outreach to local businesses on Instagram:
+
+- Reference something specific. Generic openers like "love your work!" underperform specific references by 40%. A plumber's recent job photo, an unanswered review, a service area mention in their bio.
+- Name a pain before naming a service. "Are you still doing X manually?" outperforms "I can help you with X" because it asks about their situation, not your offer.
+- Stay at 4-6 sentences. Local business owners read DMs on mobile, usually between jobs. A wall of text gets dismissed. A one-liner reads as spam.
+- End with one yes/no question. Not a calendar link. A question that opens a conversation.
+
+Personalized Instagram DMs to local businesses get a 32% reply rate. Generic DMs drop that to levels closer to cold email baseline (InfluenceFlow, 2026).
+
+## Instagram vs Facebook: Where to Focus First
+
+Established Instagram accounts, 6 or more months old with posted content, can send 100-150 cold DMs per day without triggering restrictions. New accounts should stay at 20-50 for the first month. The trigger is not the raw count: sending identical copy to multiple accounts is the fastest way to get flagged.
+
+Facebook Messenger limits cold DMs to non-connections at around 10 messages per day. That makes it a secondary channel for AI agency prospecting on local businesses. Use Facebook to reach businesses with no Instagram presence, or to follow up after a prior Facebook comment interaction.
+
+| Platform | Daily DM Limit | Account Notes | Best Use |
+| --- | --- | --- | --- |
+| Instagram | 100–150 (established) / 20–50 (new) | Established = 6+ months, active content | Primary cold outreach channel |
+| Facebook Messenger | ~10 to non-connections | No age-based scaling | Businesses with no Instagram; post-comment follow-ups |
+
+One tactic almost no AI agency is running: Instagram voice DMs. Instagram added voice DM transcription in May 2025, extending recording time to 5 minutes. A 30-45 second personalized voice note gets treated differently by recipients than a text DM. The bar for a voice note being "good" is lower than a polished written script, and the perceived effort is higher.
+
+Sending identical cold DM copy to multiple accounts is the most common trigger for Instagram restrictions. Vary at least the first line of every message. Pattern detection, not volume, is what causes flags.
+
+## The Cold DM Script Structure for AI Agency Outreach on Instagram
+
+Every cold DM script for AI agency Instagram and Facebook prospecting to local businesses follows this structure:
+
+Line 1: Something specific from their account (a recent post, an unanswered review, a job they shared, their service area)
+
+Line 2: The problem you observed, stated in their language
+
+Line 3: One sentence on what you do for businesses like theirs
+
+Line 4: One question, yes or no framing
+
+Before
+
+Love your work! I help local businesses like yours use AI to grow. Would love to connect and see if we are a good fit.
+
+After
+
+Noticed you have 4 reviews from the last 30 days with no replies. Are you handling that manually or does someone on your team take care of it?
+
+The second version opens with their context, not your offer. The question is specific enough that answering it moves the conversation forward.
+
+Folk.app's research on Instagram lead generation confirms the warm-up step matters: liking 2-3 recent posts and leaving one specific comment before sending a DM raises reply rates and reduces spam flags on both Instagram and Facebook.
+
+## Cold DM Scripts by Local Business Niche
+
+### Plumbers and HVAC
+
+Missed after-hours calls are the pain to reference in a cold DM script for plumbers and HVAC contractors. Most plumbing and HVAC businesses miss emergency inquiries overnight.
+
+"Saw your post about the emergency call on Monday. Do you get a lot of after-hours inquiries that go to voicemail? We build AI phone agents for [city] contractors that handle those calls overnight so jobs do not slip. Still managing those calls manually?"
+
+Reference the specific post if there is one. If not, reference the service area and the type of emergency work they do. Adapt this cold DM script to each contractor's posted content for the highest reply rates.
+
+### Dentists
+
+A cold DM script targeting dental practices should lead with patient communication gaps, not technology. Review response gaps are visible and specific.
+
+"Noticed your Google profile has 51 reviews but the last response was 8 months ago. Do you have someone managing patient follow-ups and review replies? We set up automated patient communication for practices in [city] that takes that off the front desk. Is that something your team is handling manually right now?"
+
+Use the real review count from their Google Business Profile. Dental practice owners know that number. This cold DM script approach works because specificity signals you actually looked at their business.
+
+### Roofers
+
+Storm event lead follow-up speed is the pain to lead with in a cold DM script for roofing companies. Roofing contractors get overwhelmed after hail events and lose jobs to faster competitors.
+
+"Noticed you are in [city]. Was there a hailstorm in your area recently? We set up automated lead follow-up for roofing companies that contacts storm inquiries within 5 minutes of a form submission. Still doing that outreach manually?"
+
+The specificity of "5 minutes" is what makes the question land. That is a real operational gap most roofers recognize.
+
+## What Breaks at Scale
+
+The cold DM script for AI agency prospecting on Instagram and Facebook to local businesses works until you try to automate it. Instagram's detection for automation has gotten more aggressive since 2024. Third-party tools that send DMs at volume, even with randomization and delays, carry a meaningfully higher restriction rate than manual sending.
+
+The practical ceiling for a solo operator: 30-50 personalized cold DMs per day on Instagram, sent manually. At a 32% reply rate from a well-crafted cold DM script, that is 10-15 conversations per day from the DM channel alone. That is a solid pipeline for an agency in its first 6-12 months.
+
+Scaling past 50 DMs per day without a second account or a second person doing outreach is where most AI agency owners run into problems. The fix is usually not better tooling; it is more accounts or more hands.
+
+For multi-niche prospecting, pre-qualifying which local businesses have the specific gaps your cold DM script references (unanswered reviews, slow lead follow-up, missed after-hours calls) before you DM saves significant time. The faster Google Maps prospecting workflow covers how to identify those businesses before you start outreach.
+
+Some links in this post are affiliate links. We may earn a commission at no extra cost to you.
+
+Once conversations start coming in from a cold DM campaign on Instagram and Facebook, managing follow-up threads manually across 10-15 active conversations gets messy. Lindy handles inbox automation across channels and can track conversation state across multiple DM threads without requiring manual tagging per lead.
+
+## Close
+
+Cold DM prospecting on Instagram and Facebook for AI agency clients is not a volume game. Thirty well-researched cold DM script variations, each referencing a specific detail from the local business, will outperform 300 generic ones. The cold DM script structure matters less than the one specific thing you observed about their business before sending.
+
+Nicherly pre-scores 65,000+ local businesses against the signals these scripts reference: unanswered reviews, thin online presence, no automated follow-up. If you would rather start pitching than doing the scoring yourself, that is what it is for.
+
+---
+
+## References
+
+1. Instagram DM Automation vs Email in 2025(Unkoa, 2025)
+2. Instagram DM Limits 2026(Flowgent, 2026)
+3. Instagram Lead Generation for B2B(Folk.app, 2025)
+4. Instagram Outreach B2B Lead Generation(Chrysales, 2026)
+
+---
+
+### Find clients to pitch, not leads to chase.
+
+Nicherly pre-scores 50K+ local businesses so your agency outreach lands on the ones that actually need you.
+
+Start free trial
+
+## Related
+
+- May 16, 2026Cold Email Templates That Get Replies from Local Businesses
+- Jun 18, 2026AI Agency Lead Magnets That Convert Local Business Owners
+- Jun 26, 2026How to Charge Premium Rates as an AI Automation Agency

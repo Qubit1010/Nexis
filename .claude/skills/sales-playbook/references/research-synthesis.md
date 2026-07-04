@@ -304,6 +304,133 @@ While the exact phrase "best closing question" is not explicitly designated in t
 
 ---
 
+## Q6: Sounding Human vs AI Slop (the tells and the fix)
+
+> Provenance: Q6-Q9 come from the July 2026 Exa research pass (31 full-text practitioner sources, 2024-2026). Citations `[n]` resolve to URLs via `_research/sources.json` and the raw material in `_research/exa/`. Import into the NotebookLM notebook is pending re-login; the audit trail is `_research/exa/contents/`.
+
+**1. Why this matters now**
+By 2026 buyers pattern-match AI-generated outreach reflexively, in the first five words, before consciously reading content [1, 2]. A buyer reading forty cold messages a week recognizes the rhythm alone [2]. 69% of US decision makers say it bothers them when AI was clearly used to write a pitch [4]. Reachium's 316K-sequence dataset shows reply rates among accepted connections drifted DOWN through 2025-2026 as near-identical AI text flooded the channel [2]. The penalty compounds: spot the tell once and the prospect deletes; spot it twice and they hit "Report spam," which damages the sending account for every message after [1].
+
+**2. The documented AI tells (each one independently fires the pattern-match)**
+*   **The em-dash signature.** The single most reliable AI tell in written copy. Humans use one or two per thousand words; AI drafts use three in a four-sentence message. Fix is mechanical: zero tolerance, grep before sending [1, 2]. (Already codified in `what-not-to-do.md` and the repo style rule.)
+*   **The over-polished structure.** Three sentences of context, one pain, one solution, one CTA, every time. Readers recognize the eleventh AI email by its shape before processing content. Fix: deliberate imperfection, a fragment, an aside in parentheses, a self-aware acknowledgment that this is a cold message [1].
+*   **The tricolon.** Three parallel items in a row. Models love balanced lists; busy humans don't write them in DMs [2].
+*   **Fake personalization.** "I saw your post about X" where X is either generic ("your post about leadership") or scrape-specific ("your April 14th post on supply chain"). Both fire the tell. "Noticed" is particularly diagnostic: humans do not narrate their noticing [1]. A writer opening with a year-old reposted article reads as surveillance, not research [7].
+*   **The generic opener set.** "I came across your profile", "I noticed [Company] is scaling", "My name is X and I help companies like yours", "Hope this finds you well" [1, 2].
+*   **The vocabulary cluster.** "Leverage" (humans say "use"), "robust", "seamless", "streamline", "elevate", "unlock", "empower", "cutting-edge", "comprehensive solution", "pain points" as a standalone noun [1, 2].
+*   **The compliment sandwich.** "I love what you're doing in the space", "really impressive background". Generic praise with nothing specific behind it reads as a manipulation tactic and triggers distrust [1, 2, 6].
+*   **The fake question and the templated CTA.** A question the sender doesn't want answered, and "Would you be open to a quick 15-minute chat?" which every other message also used [2].
+*   **Over-long essay paragraphs** that don't fit a phone screen [2].
+
+**3. The fix (validated 9-point edit pass + the one-detail rule)**
+The highest-leverage move: **one observed, verifiable detail per prospect**. It is the cheapest humanizing move and the hardest thing for a machine to fake, because a model cannot invent a true fact about a stranger [2]. Trying to personalize three things stalls reps without improving replies; one is enough [2]. The 60-second edit pass before sending [2]:
+1. Opener references the prospect, not greeting filler. 2. Exactly one specific detail you actually saw. 3. No three-item list. 4. No em dashes. 5. Zero generic compliments. 6. Fits a phone screen. 7. No corporate verbs. 8. Any question is one you genuinely want answered. 9. Closing line is specific to this person, not a templated ask.
+Supporting tests: read it out loud, "if it doesn't sound like something one real person would say to another, it isn't going to work" [5]; would a smart colleague write this sentence in a Slack message [1]; keep drafts under 60 words in a peer-to-peer register [2].
+
+**4. AI-assisted is fine, unedited AI is poison**
+The documented working model is AI drafts + human edit: AI does research and first draft, a human cuts filler, adds the one real detail, and takes responsibility for what sends [1, 2, 8]. Fully automated sends underperform on replies and raise spam complaints [1]. Signal-first personalization (write from a real trigger) beats better prompts [3].
+
+**5. Volume and platform notes**
+Acceptance rates show a volume tax: 34% peak at 10-19 LinkedIn invites/day, falling to 30.6% at 20-29/day [2]. On Instagram/Facebook, identical copy across accounts is the flag trigger, not raw volume; vary at least the first line of every message [9]. **Not in sources:** any reply-rate delta for "AI-disclosure" openers (e.g. admitting AI wrote the draft); no data found.
+
+Sources: [1] FirstSales, How Prospects Spot AI-Written Cold Emails (2026). [2] LinkedInsider, Humanize AI-Written LinkedIn Outreach: 9-Point Pass (2026). [3] UnifyGTM, Personalize at Scale Without Sounding Like AI (2026). [4] Neal Schaffer, Email Outreach in 2026. [5] MarketingProfs, Read It Out Loud (2026). [6] The Selling Collective, AI Sales Messaging (2025). [7] Experiment Outbound, Why Your AI Cold Emails Sound AI (2026). [8] Anaboo AI, AI-Written Outreach That Doesn't Sound AI-Written (2026). [9] Nicherly, Cold DM Script for AI Agency Clients (2026).
+
+---
+
+## Q7: Buying Signals + When to Ask for the Call
+
+**1. The ask-timing data (the largest dataset available)**
+SetSmart's study of 828,761 DM conversations (5.6M messages, 391 businesses, Instagram + WhatsApp, July 2024 - March 2026) is the best public data on when calls get booked in DMs [1]. Their unit: total messages both sides combined, where "21 messages ≈ 10 back-and-forth exchanges" (so ~2 messages ≈ 1 prospect reply). Booked-call rate by conversation depth:
+
+| Total messages (≈ prospect replies) | Booked-call rate |
+|---|---|
+| 1-4 (≈ 1-2 replies) | 0.07% |
+| 5-10 (≈ 2-5 replies) | 1.67% |
+| 11-20 (≈ 5-10 replies) | 11.25% |
+| 21-40 (≈ 10-20 replies) | 28.87% |
+| 40+ (≈ 20+ replies) | 34.13% (plateau) |
+
+The inflection point is 11 total messages, i.e. **the booking window opens at roughly 5-6 prospect replies** [1]. Before that, asks convert at rounding-error rates; after 40 messages (~20 replies) the curve flattens: "if a lead hasn't booked by then, more messages won't change the outcome" [1]. This validates the playbook's ask-by-6-exchanges trigger: at 6 exchanges you are inside the highest-slope zone of the booking curve, and drifting past ~20 exchanges without an ask is provably dead weight. Also from the same dataset: 53% of conversations die before message 3, and timing (hour, weekday) moves bookings by less than half a percentage point, so consistency and depth beat send-time optimization [1].
+
+**2. Readiness signals (ask NOW when you see these)**
+Documented buying signals in a DM thread [3, 4]:
+*   Replies get longer than one sentence, they ask a question back, they express curiosity about your work [3]
+*   They share specific challenges or frustrations (pain disclosure) [3]
+*   They mention timelines, budgets, or decision-making processes [3]
+*   They ask how you've solved something similar (proof request) [3]
+*   Price or "how does it work" questions, availability questions [4, 6]
+*   A profile view mid-thread is a behavioral signal worth a direct follow-up within 24-48h [5]
+
+**3. Too early vs too late**
+A 30-minute call ask to someone who has never heard of you "registers as too big for the relationship that exists"; the first DM asks for a reply, not a meeting [4]. Effective outreach runs on micro-commitments: earn a tiny yes (read two sentences, answer one question) before asking for 20 minutes [7]. On the other end, high-ticket DM deals ($3-10K programs) close across 5-12 touchpoints over ~3 weeks, so the ask is expected well within that arc [6]. In Facebook-group DM funnels, practitioners offer the 20-30 minute call after 3-8 exchanges, typically the 4th-6th, once there's clear depth [8].
+
+**4. Benchmark rates for calibration (LinkedIn)**
+Well-executed LinkedIn DM outreach: 30-50% connection acceptance, 15-25% reply, 3-8% meeting-booked [2]. Sequence: 3-4 touches over 10-14 days with the direct ask at message 3 (day 8-10), framed as "would a 15-minute call to share how we helped [similar company] achieve [result] be worth your time?"; 40-60% of total replies come from messages 2-4 [2]. Saturation context: 89% of prospects receive 15+ connection requests weekly and are 3x more selective than before [9].
+
+**5. Ask mechanics**
+Qualify before you pitch; never lead with a calendar link; for anything high-ticket the DM's job is to book the call, not close the deal in chat [10]. Propose two specific times or a single low-commitment framing (our anchored Ops Teardown) rather than "open to a chat?" [2, 10]. **Not in sources:** a controlled A/B of "two specific times" vs "calendar link" in DMs; the two-times recommendation is practitioner consensus, not measured.
+
+Sources: [1] SetSmart, 828K AI DM Conversations Analyzed (2026). [2] Growtoro, LinkedIn DM Outreach: Complete B2B Strategy 2026. [3] Pursue Networking, From DM to Deal (2025). [4] Gangly, Why My LinkedIn DMs Get Ignored (2026). [5] LinkedInsider, Re-Engage Cold LinkedIn Leads (2026). [6] SellByChat, Close High-Ticket Coaching Sales in DMs (2026). [7] ScaliQ, LinkedIn Message Sequence Template (2026). [8] MultipleGroupPoster, Facebook Groups for Coaches 2026. [9] Yadulink, LinkedIn Outreach Benchmarks 2026 (132M attempts). [10] SetSmart, Facebook Messenger Marketing: 2026 DM Playbook.
+
+---
+
+## Q8: Facebook Outreach (Messenger + Groups)
+
+**1. Channel constraints (why Facebook is a precision channel, not a volume channel)**
+*   Facebook caps cold DMs to non-connections at ~10/day, vs Instagram's 100-150/day for established accounts. Use Facebook for leads with no Instagram presence or after a prior comment interaction [1].
+*   Messages from non-friends land in the **Message Requests folder** with reduced visibility. This is "the hidden reason cold outreach performs worse than expected on Facebook" [2]. Countermeasures: engage with their public content first so the name is familiar, keep the first message short enough to fully read in the request preview, and message from a real, credible profile.
+*   The Meta 24-hour rule (free reply window after a user messages you, then only Message Tags / Sponsored / Marketing Messages) applies to **Pages** [3, 4]. Our outreach is profile-to-profile, so it doesn't gate us, but the underlying lesson transfers: reply speed decides whether a thread lives [3].
+*   Recurring-notification broadcasts are dead (Meta sunset them in 2026). The working model is conversational: trigger, open with one question, qualify with 2-3 questions, route to a booked call [3].
+
+**2. The group-to-DM flow (matches our facebook-lead-nav pipeline)**
+The documented funnel [5]: the DM trigger is a member **posting something showing they have a specific problem you solve** (exactly what our group-post scraping captures), or commenting thoughtfully, or engaging repeatedly over weeks. Well-targeted observation-based openers get **60-80% reply rates**, and 20-40% of DM conversations convert to a booked consult [5]. The spearfishing variant [6]: post value in the group, track who both liked AND commented, then warm-DM those engagers referencing their engagement, zero pressure. Both agree: the opener references THEIR context (their post, their comment), never your service.
+
+**3. Opener structure and worked patterns**
+4-6 sentences max (owners read DMs on mobile between jobs); specific observation first; name the pain before naming any service; end with ONE yes/no question, never a calendar link [1]. Specific references outperform generic openers by 40%; personalized DMs to local businesses get ~32% reply rates [1]. Documented opener shapes [5]:
+*   *"Hey [Name], saw your comment on the pricing thread. You mentioned [specific detail]. Curious how that's been going, is it still the situation or has anything shifted?"*
+*   *"[Name], the question you asked yesterday about [topic] is something a lot of my clients run into. Got 5 min to share what's worked for them, if useful?"*
+What doesn't work: pitch-in-first-message ("I help [audience] achieve [outcome]. Interested in a free consult?"), no-specificity flattery, and recap-their-post-then-pivot-to-offer [5].
+
+**4. The 3-touch Facebook DM sequence (agency-specific SOP)**
+From a documented agency appointment-engine SOP [7]: **DM 1** context + one qualifying question ("are you doing outreach manually or using automation yet?"). **DM 2** (+5 days if silent): value giveaway (resource, guide, teardown), "want me to send it over?". **DM 3** (+2 days after DM 2): re-engage + offer a free audit or walkthrough call. KPI targets: DM 1 reply rate 30-40%, DM 2 engagement 20%+ [7]. Escalation to the call happens after 3-8 exchanges per the group-funnel data [5].
+
+**5. Safety and etiquette**
+Identical copy is the ban trigger, not volume; vary at least the first line of every DM [1]. Mass-DMing group members corrodes community trust and trips automation detection; sustainable pace is a handful of high-signal DMs per group per week, 30-60 min/week total [5]. Warm-up (like 2-3 recent posts, leave one specific comment before the DM) raises reply rates and reduces spam flags [1]. **Not in sources:** Facebook-specific reply-rate benchmarks at the scale of the LinkedIn datasets; FB numbers above come from single-practitioner SOPs and should be treated as directional.
+
+Sources: [1] Nicherly, Cold DM Script for AI Agency Clients on Instagram and Facebook (2026). [2] Clepher, How to Inbox Someone on Facebook (2026). [3] SetSmart, Facebook Messenger Marketing: 2026 DM Playbook. [4] AvanSaber, Facebook Messenger Marketing: A Practitioner Playbook (2026). [5] MultipleGroupPoster, Facebook Groups for Coaches and Consultants: 2026 Playbook. [6] Growth Models, How to Get Clients From Facebook Groups Without Getting Banned (2026). [7] Six Figure AI Outreach, Steal Our Exact Facebook DM SOP (2025).
+
+---
+
+## Q9: Stalled Threads, Cadence, and Loop Recovery
+
+**1. Why follow-up is where the meetings are**
+Follow-ups generate 50-70% of total LinkedIn responses; only ~2% of deals close on first contact [1]. In the 828K-conversation dataset, a single follow-up on a silent thread **doubles booked calls (+106%)** among engaged leads, and on Instagram specifically nearly triples qualification (+182%) [6]. Letting silent threads die is "the single most expensive habit in the channel" [7].
+
+**2. The cadence numbers**
+*   First follow-up: 24-48 hours after connection acceptance (15-20% reply, the highest-conversion window) [1]
+*   Then space 3-5 business days; second follow-up converts at 8-12% [1]
+*   2-3 follow-ups maximum; 48% of prospects find more than 3 inappropriate [1]. Expandi's 13.2M-data-point benchmark: following up at least twice adds ~4% reply lift, the return beyond a third touch is negligible, and negative-signal risk (block, "stop messaging") rises from there [4]
+*   Whole-sequence shape: 3-4 messages over 10-14 days (documented variants: days 1/4/9/14 [2]; ours: day 1/4/9/16) with each message under 300 characters, delivering something new, easy to bail out of [2, 3]
+*   Breakup message after the final silent touch: professional, door-open, no guilt. Generates 5-8% delayed responses [1]
+*   Follow-ups must change the angle, never restate the opener: "most sequences fail because follow-up messages restate the opener instead of advancing toward a decision" [10]
+
+**3. Cold is three different segments (treat them differently)**
+The most common re-engagement error is one message for all "cold" leads [4]:
+*   **No-reply** (accepted connection, never answered): change the ANGLE, not the wording. Reference something that changed (their post, a company announcement, a role change). Re-approach after 5-7 business days [4].
+*   **Went-quiet** (replied once or twice, then silence): never re-approach as cold. Reference the prior exchange explicitly ("we spoke in March about X, figured I'd check back"). Reply rates for known contacts referencing the prior conversation: 25-35% vs 10.4% platform-wide [4]. Window: two touches over 3-4 weeks, then stop [4].
+*   **Old connection** (connected long ago, no conversation): value and content warm-up over weeks before any direct ask [4].
+After 3 direct touches with no engagement: archive the sequence, keep the record, re-enter in 60-90 days. "Not now" is not "never": structured recovery of 30+ day stalled opportunities re-engages 40-60% of them [5].
+
+**4. Loop diagnosis (the failure mode this playbook update exists to kill)**
+Stalled conversations "feel circular - progress is implied but never confirmed"; conversations that convert move with clarity and purpose toward a decision [8]. The skill gap is answering vs advancing: "answering gives information; advancing moves the buyer closer to a decision" [11]. Prospects ghost for four documented reasons: distraction, lost interest after a price hint, pressure on the next step, or they were never qualified [9]. The recovery is the right specific message, not more messages [9]. Rapport that stays surface-level is precisely what stalls deals [8].
+
+**5. What not to send**
+"Just bumping this", "did you see my last email", guilt-trips, and daily check-ins are documented relationship-killers [1, 4]. (Cross-ref: the ~48%-worse "just following up" stat in Live Query Additions below.) Pattern interrupts work for the final touch: an unexpected format, a specific industry analogy, a genuinely new resource [1].
+
+Sources: [1] LeadHunter, LinkedIn Follow-Up Messages: The Science of Persistence (2026). [2] PhantomBuster, The Ultimate LinkedIn Follow-Up Sequence (2026). [3] LinkedInsider, LinkedIn Follow-Up Sequence: Optimal Length and Timing (2026). [4] LinkedInsider, Re-Engage Cold LinkedIn Leads (2026; SalesBread + Expandi data). [5] It's Just Revenue, Stalled Opportunity Follow-Up (2026). [6] SetSmart, 828K AI DM Conversations Analyzed (2026). [7] SetSmart, Facebook Messenger Marketing: 2026 DM Playbook. [8] Blazeo, Sales Conversations That Convert (2026, Exa highlight). [9] SellByChat, Why Prospects Ghost You in DMs (2026). [10] Prospecting Manual, DM Sequence Framework (2026). [11] Iangenius, Why Your Team Answers Questions But Still Loses Deals (2026, Exa highlight).
+
+---
+
 ## Live Query Additions
 
 Findings from on-demand live queries to the **NexusPoint Sales Playbook Research** NotebookLM notebook (the same corpus this synthesis was built from), captured when the original Q1-Q5 synthesis didn't fully answer a specific question. Each entry is dated and tagged to the relevant Q section. Procedure: `notebook-live-query.md`. New live-query results get appended here (this is the growing source of truth - scan it before re-querying).

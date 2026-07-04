@@ -1,0 +1,14 @@
+{
+  "question": "Q8: How does B2B cold outreach work on Facebook (Messenger mechanics, group-to-DM flow, openers, cadence, limits)?",
+  "method": "exa-direct (NotebookLM auth expired 2026-07-04; synthesized from full-text sources in _research/exa/contents/, import to notebook pending re-login)",
+  "answer": "See references/research-synthesis.md section 'Q8: Facebook Outreach (Messenger + Groups)' and the distilled scripts/facebook-cold-dm-sequence.md.",
+  "references": [
+    {"citation_number": 1, "title": "Cold DM Script: Landing AI Agency Clients on Instagram and Facebook", "url": "https://nicherly.com/blog/how-to-use-a-cold-dm-script-to-land-ai-agency-clients-on-instagram", "published": "2026-06-06"},
+    {"citation_number": 2, "title": "How to Inbox Someone on Facebook: Quick Guide", "url": "https://clepher.com/how-to-inbox-someone-on-facebook", "published": "2026-06-23"},
+    {"citation_number": 3, "title": "Facebook Messenger Marketing: 2026 DM Playbook", "url": "https://setsmart.io/blog/facebook-messenger-marketing", "published": "2026-06-22"},
+    {"citation_number": 4, "title": "Facebook Messenger Marketing: A Practitioner Playbook", "url": "https://www.avansaber.com/blog/messenger-marketing-guide", "published": "2026-05-31"},
+    {"citation_number": 5, "title": "Facebook Groups for Coaches and Consultants: 2026 Playbook", "url": "https://multiplegroupposter.com/blog/facebook-groups-for-coaches-consultants", "published": "2026-05-14"},
+    {"citation_number": 6, "title": "How to Get Clients From Facebook Groups Without Getting Banned", "url": "https://growthmodels.co/close-clients-free-groups", "published": "2026-04-08"},
+    {"citation_number": 7, "title": "Steal Our Exact Facebook DM SOP (Scripts Inside)", "url": "https://www.sixfigureaioutreach.com/p/steal-our-exact-facebook-dm-sop-scripts-inside", "published": "2025-07-29"}
+  ]
+}

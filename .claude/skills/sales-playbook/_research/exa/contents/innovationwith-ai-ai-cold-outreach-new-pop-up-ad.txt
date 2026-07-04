@@ -1,0 +1,93 @@
+I Deleted 29 LinkedIn Messages Yesterday Without Reading Them - Innovation with AI
+https://innovationwith.ai/ai-cold-outreach-new-pop-up-ad
+2026-05-05T14:43:20.000Z
+
+I Deleted 29 LinkedIn Messages Yesterday Without Reading Them - Innovation with AI
+
+I deleted 29 LinkedIn messages yesterday without reading past the first sentence.
+
+Same opening line. Same canned reference to my board work. Same “really impressive background.” Same robotic cadence. Same em dashes. All AI. All trash. No joke.
+
+I’ve hit my breaking point. And based on the conversations I’m having with founders, investors, and operators in my network, I’m not alone. We’ve crossed a threshold where AI-written outreach has become so prolific, so identical, and so transparently generated that it’s actively destroying the channels it was supposed to scale.
+
+This is the exact same arc as banner ads, junk faxes, and pop-ups. I’ve seen this movie before and we all know how it ends.
+
+### The tells you can’t unsee
+
+Once you’ve used AI as much as I have, the giveaways are everywhere. A few patterns that should trigger your delete reflex instantly:
+
+- The em dash addiction. Real humans use one or two. AI carpet-bombs them.
+- “I’d love to learn more about your work at…” followed by a scraped accomplishment from your LinkedIn header.
+- “I noticed your impressive background in…” (nobody who actually noticed something writes that sentence)
+- “Would love to hop on a quick 15 minutes to explore synergies”
+- Words like delve, tapestry, realm, intricate, multifaceted, underscore, pivotal, navigate the landscape
+
+That last one isn’t just my pet peeve. Researchers at Florida State University ran the first scientific study on why ChatGPT overuses certain words and confirmed what every AI-fluent reader already feels: words like delve, realm and intricate are statistically overrepresented in AI-generated text, and humans react more negatively to delve than to almost any other AI buzzword. Your brain doesn’t even need to consciously process it. Something just feels off. Fsu
+
+### It’s not just clogging your inbox. It’s in the boardroom.
+
+If you think this is only a cold-outreach problem, look at corporate America.
+
+Barron’s recently ran the phrase “It’s not just a ___, it’s a ___” through AlphaSense’s database of press releases, SEC filings, and earnings call transcripts. The results are damning. The phrase appeared in 49 documents in 2023, then 100 in 2024, then 208 in 2025. Doubled. Then doubled again. The Decoder
+
+Companies caught using it include Citizens Financial Group, Synopsys, Progressive, Royal Caribbean, Coca-Cola, Dollar Tree, Cisco, Accenture, Workday, Microsoft, and Schwab. Both Citizens and Synopsys confirmed their corporate communications teams use AI assistance. Fortune
+
+These are Fortune 500 shareholder letters. The most carefully wordsmithed documents a public company produces. And they sound like ChatGPT wrote them, because ChatGPT did.
+
+The contagion is industry-wide. A Muck Rack survey found three out of four PR professionals now use AI at work, mostly for writing and editing. Crazy, right? The Decoder
+
+### We’ve seen this movie. Three times, in fact.
+
+Every channel that becomes too easy to flood eventually collapses on itself. The pattern is so consistent it’s almost a law:
+
+Banner ads. The first online ad ran for AT&T on HotWired in October 1994 with a 44% click-through rate. Forty-four percent! The average banner ad CTR today is around 0.5%, and many estimates put it under 0.1%. Why? Because once everyone could buy banners, everyone did, and users stopped seeing them. From novelty to invisible in three decades. Alucid LinkedIn
+
+Email spam. The first unsolicited mass email went out in 1978 from Gary Thuerk at Digital Equipment Corp to 393 ARPANET users. He sold computers. He also got the nickname “Father of Spam.” Today, nearly 86% of the world’s email traffic is unsolicited junk. Spam didn’t go away. We just built a parallel infrastructure of filters to hide it from view. Act-On
+
+Pop-up ads. Effective in the late 90s. So aggressively overused that within a decade, every major browser shipped a built-in blocker. The ad format was so universally hated the guy who invented it publicly apologized. I don’t think we’ll get one from Sam Altman.
+
+AI cold outreach is following the exact same trajectory, just compressed into a much shorter timeline. Novelty. Mass adoption. User fatigue. Filtering. Near-zero response rates. Eventually, regulation or platform-level blocking will come.
+
+### The math doesn’t work the way the vendors claim
+
+The pitch from every Apollo, Outreach, and Instantly clone is the same: “Hit 1,000 prospects in an afternoon.”
+
+OK, then what?
+
+If your response rate is zero, 1,000 zeroes is still zero. Volume only solves your problem if quality stays constant. It doesn’t. The exact tools that let you scale are the same tools your prospect uses to identify and delete you.
+
+The dirty secret is that these systems do hit a fractional response rate on lower-quality lists, where recipients can’t yet spot the patterns, like my Grandma. That’s the only reason the industry exists. But that audience is shrinking by the month as AI literacy spreads. The economics are deteriorating in real time, and the people building five-tool stacks to “10x their outbound” are running into the same wall I am as a recipient. The list of people who’ll respond to a templated AI message is getting smaller, not larger.
+
+### What actually works now
+
+I’m not anti-AI. I write about it every week. I use it constantly. The question is whether you’re using it as a force multiplier on your own thinking, or as a substitute for it.
+
+A few things that still work, and will keep working:
+
+1. Write the first draft yourself. Even if it’s rough. Even if it has a typo. Use AI to sharpen, not to generate. The minute you let AI write the opener, you’ve sent the same opener as 10,000 other people.
+2. Train AI on your actual voice. If you’re going to use it, feed it everything you’ve ever written and force it to mimic you specifically. A generic ChatGPT output is now a negative signal. Your voice, properly captured, is at least neutral.
+3. Do the research yourself. AI scrapes the same three accomplishments off everyone’s LinkedIn header. The thing that actually catches my attention is when somebody references a podcast I was on six months ago, or a specific point I made in an article, or a mutual connection’s offhand comment. AI doesn’t surface that, yet! A human paying attention does.
+4. Reward the humans. When somebody clearly wrote you a real message, write back. Even if you can’t help. That’s how we keep the channel alive for the people doing it right.
+
+### The hidden cost: the next generation
+
+Here’s what worries me most. I came up in sales by writing terrible emails and watching them fail. Hundreds of them. The failure was my education. You learn what doesn’t work, then one day you write the sentence that actually lands.
+
+If you’re 23 and entering the workforce right now, you’re not getting that education. You’ll outsource your outreach to ChatGPT, get zero responses, and have no idea why. And when you walk into a networking event, you can’t pull out your phone and ask Claude what to say. The muscle just isn’t there.
+
+The skills you build offline are the same skills that make your written outreach work. AI doesn’t shortcut the muscle. It atrophies it.
+
+### What’s actually going to happen
+
+Cold outreach won’t die. Neither did spam, banner ads, or pop-ups, technically. They just stopped working and got pushed into ever-more-irrelevant corners of our attention.
+
+The likely future, in order:
+
+- LinkedIn, Gmail, and the major platforms will start algorithmically deprioritizing AI-detected outreach (some already do this quietly)
+- A premium tier of “verified human” inboxes emerges, the same way verified accounts emerged on Twitte. I dream of this coming soon!
+- Smart senders return to deeply personalized, low-volume outreach because it’s the only thing that converts
+- The Apollo/Instantly tier of mass-AI-spray vendors consolidates and shrinks, the way the cold-call telemarketing industry did after Do Not Call
+
+We’re already at stage one. The senders who win the next five years are the ones who figured out, early, that the cheap path is the path to zero.
+
+Stop sending those messages. Start writing them. Please.

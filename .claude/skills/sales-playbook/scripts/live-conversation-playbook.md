@@ -6,7 +6,34 @@
 
 Prospect has replied to a cold DM (LinkedIn or Instagram). The cold sequences (`scripts/linkedin-cold-dm-sequence.md`, `scripts/instagram-cold-dm-sequence.md`) hand off to this file the moment a back-and-forth starts.
 
-The job here: **don't blow the rapport you just earned**. Most reps overpitch the second they see "interesting!" come back. The data says the opposite move wins.
+The job here: **don't blow the rapport you just earned**. Most reps overpitch the second they see "interesting!" come back. The data says the opposite move wins. But the opposite failure is just as real: labeling and mirroring forever without ever asking. The Advance Triggers below exist to kill that loop.
+
+---
+
+## Conversation state (memory)
+
+Every live thread has a record in the conversation DB (Supabase, table `conversations`, managed by `scripts/convo.py`). Before drafting any reply:
+
+1. **Derive the identity** from the prospect's profile URL or handle (LinkedIn `/in/` slug, Instagram `@handle`, Facebook slug/id).
+2. **Load the record:** `python scripts/convo.py get <channel> <identity>`. Treat the stored `stage`, `exchange_count`, and `meeting_status` as ground truth. Do not re-infer the phase from the pasted snippet alone; a short paste looks like an early conversation even when it isn't.
+3. **Merge threads:** the pasted thread wins when it is longer (it is the superset). If the stored thread has exchanges the paste is missing, use the stored one as history.
+4. **Draft the reply** using the phases + Advance Triggers below.
+5. **Write back:** `python scripts/convo.py upsert <channel> <identity> --stage <new_stage> --thread-file <merged_thread> --last-draft "<reply>"` and `--meeting asked` the moment a call ask goes out (then `booked` / `declined` / `ghosted` as the thread resolves).
+
+If the DB is unreachable, say so, draft from the pasted thread, and count exchanges manually. Never silently skip the state check.
+
+---
+
+## Advance Triggers (check before every reply)
+
+An **exchange = one prospect reply.** Count them (the DB tracks it; the transcript's `[Them]:` lines are the same number). Check these in priority order before writing anything. When one fires, it overrides whatever phase you think you are in.
+
+1. **Exchanges >= 6 and no call ask yet:** this reply MUST contain the anchored Ops Teardown ask. Not softened, not deferred. Six replies of engagement IS the pull; waiting longer reads as either fear or farming. (Research-pinned, not a guess: the SetSmart 828K-conversation study puts the booking inflection at ~11 total messages, i.e. 5-6 prospect replies, with near-zero bookings before it and a plateau past ~20 replies. See research-synthesis.md Q7.)
+2. **Buying signal in their last 1-2 messages:** jump straight to Phase 6, skip everything between. Buying signals: a price or timeline question, "how does it work", a technical or integration question ("does it work with X?"), a second request for proof, mentioning a partner or team decision, asking about your availability.
+3. **Same objection raised twice:** stop handling it in DMs. Send the transition line ("Honestly, easier to show you than type it. 20 min screen-share Tuesday or Thursday?").
+4. **Phase 5 loop cap:** loop back to Phase 3 at most ONCE per conversation. A second unresolved objection pass means DMs have hit their ceiling: transition line or disqualify cleanly.
+
+Phase 6 is the default destination, not a reward for a perfect conversation. Every reply must be measurably closer to a booked call than the last one: a deeper disclosure, a quantified cost, a proof drop, or the ask itself. If a drafted reply does none of those, it is a loop; rewrite it.
 
 ---
 
@@ -23,7 +50,7 @@ Adapted from the sourced "Partnership Discovery Flow" + Voss tactical empathy fr
 | **5. Objection branch** | Handle pushback if any | Pull from `frameworks/objection-riffs.md` | varies |
 | **6. Warm Ask → Call** | Anchored call ask | Two specific times + deliverable framing | 1-2 exchanges |
 
-**Critical:** Don't skip phases. Most reps go Touch 1 → Phase 6 the moment a prospect replies. That's the burnt move.
+**Critical:** Don't run ahead of the prospect's signals: going Touch 1 → Phase 6 the moment a prospect replies is still the burnt move. But always skip TOWARD Phase 6 when an Advance Trigger fires. Phase 6 is the default destination; every reply must be measurably closer to the booked call.
 
 ---
 
@@ -114,7 +141,8 @@ Prospect raises objection
   → Pull the cited response from objection-riffs.md
   → [SILENCE again]
   → If resolved → continue to Phase 6
-  → If not resolved → loop back to Phase 3 (deepen) or disqualify cleanly
+  → If not resolved → loop back to Phase 3 (deepen) ONCE, max, or disqualify cleanly
+     (second unresolved pass = transition line or disqualify; see Advance Triggers)
 ```
 
 **Most common DM-stage objections:**
@@ -126,9 +154,9 @@ Prospect raises objection
 
 ---
 
-### Phase 6 — Warm Ask → Call (1-2 exchanges)
+### Phase 6 — Warm Ask → Call (the default destination, 1-2 exchanges)
 
-By now you've labeled, deepened, proven (only if asked), and handled any objection. The prospect should be leaning in.
+By now you've labeled, deepened, proven (only if asked), and handled any objection. The prospect should be leaning in. And even if they are not visibly leaning in, an Advance Trigger (6+ exchanges, buying signal, repeated objection) puts you here anyway; make the ask.
 
 **The warm ask (sourced as best-performing in DMs):**
 
@@ -162,8 +190,8 @@ If they're price-curious early ("how much?"):
 - DMs are for QUALIFICATION + WARM ASK
 - Deal happens on the call
 
-**Signs you've stretched too long in DMs:**
-- 8+ exchanges without a call ask → you're overpitching
+**Signs you've stretched too long in DMs** (these are now enforced as Advance Triggers, counted via the conversation DB, not eyeballed):
+- 6+ exchanges without a call ask → the next reply must contain the ask
 - Same objection re-emerging twice → not handling it well, switch to call
 - They start asking technical questions ("does it integrate with X?") → MOVE TO CALL, this is buying behavior
 

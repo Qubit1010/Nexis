@@ -60,6 +60,8 @@ Instagram DMs outperform LinkedIn and email on raw response. The conversion ceil
 **B2B-specific source template:**
 > "Hey [Name], I noticed you recently posted about [specific pain point]. We work with creators in your space to solve exactly that. Would you be open to a quick chat about how we do it? No pressure either way."
 
+> ⚠️ 2026 Q6 update: don't use this template verbatim. "I noticed you..." and the "open to a quick chat" CTA are now documented AI-tells (see `references/what-not-to-do.md` Tier 6). Use the Aleem-adapted variants below, which open with the observation itself instead of narrating the noticing.
+
 **Aleem-adapted variants (lead with AI automation per `offer/ai-automation-positioning.md`):**
 
 > Hey [Name], saw the post about [specific thing - their Sunday Shopify recon, their manual handoff bottleneck, etc]. We build the AI workflow that kills that exact problem - took 12 hrs/week off another [niche] founder last month. Wanted to flag it. No pressure.

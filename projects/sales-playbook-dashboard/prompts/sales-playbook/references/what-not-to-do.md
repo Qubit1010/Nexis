@@ -93,6 +93,28 @@ These get you bucketed as spam by platform filters or by the prospect's email cl
 
 ---
 
+## Tier 6 — AI-Tells (2026 buyer pattern-match)
+
+Sourced from `references/research-synthesis.md` Q6 (FirstSales, LinkedInsider, MarketingProfs, The Selling Collective, 2026). Buyers now pattern-match these in the first five words, before reading content. Stack two and the message is deleted; get spotted twice and they report spam, which damages the sending account.
+
+| Tell | Why kill it | Source |
+|---|---|---|
+| Em dashes (any) | The single most reliable AI tell in written copy. Humans use 1-2 per thousand words; AI uses 3 in a 4-sentence message. | FirstSales |
+| The tricolon (3 parallel items in a row) | Models love balanced lists; busy humans don't write them in DMs. | LinkedInsider |
+| Over-polished structure (context / pain / solution / CTA, every time) | Readers recognize the shape before the content. Add a fragment, an aside, a crooked route to the point. | FirstSales |
+| "I noticed you..." | Humans do not narrate their noticing. The most diagnostic single word in fake personalization. | FirstSales |
+| Scrape-specific personalization ("your April 14th post on X") | Proves a machine did the reading. As bad as generic. | FirstSales |
+| "Leverage" / "robust" / "seamless" / "streamline" / "elevate" / "unlock" / "empower" / "cutting-edge" / "comprehensive solution" | The vocabulary fingerprint. Replace each with the word you'd say out loud. | FirstSales, LinkedInsider |
+| "Pain points" as a standalone noun | Same cluster. | FirstSales |
+| Generic praise ("impressive background", "love what you're doing in the space") | Reads as a manipulation tactic, triggers distrust. Specific evidence or skip the compliment entirely. | FirstSales, LinkedInsider |
+| The fake question | A question bolted on to seem curious that you don't actually want answered. | LinkedInsider |
+| "Would you be open to a quick 15-minute chat?" | The templated CTA every other AI message also used. | LinkedInsider |
+| Essay paragraphs that don't fit a phone screen | Format tell, independent of content. | LinkedInsider |
+
+**The countermeasure (Q6):** exactly ONE observed, verifiable detail per prospect. It's the cheapest humanizing move and the only thing a machine can't fake, because a model cannot invent a true fact about a stranger. One detail beats three. Then the read-aloud test: would one real person say this to another?
+
+---
+
 ## Formatting kills (apply everywhere)
 
 - **No em-dashes** (—) in any cold message. Use hyphens with spaces (` - `) or commas. Em-dashes are now widely associated with AI-generated text.
@@ -107,7 +129,7 @@ These get you bucketed as spam by platform filters or by the prospect's email cl
 
 Before any cold message goes out, it must pass:
 
-1. ☐ Does NOT contain any Tier 1-4 phrase
+1. ☐ Does NOT contain any Tier 1-6 phrase or pattern
 2. ☐ Under platform character/word limit (LinkedIn connection: 280 / IG DM: 100 words / Cold email: 120 words)
 3. ☐ Specific to this prospect — would NOT make sense sent to 10 other prospects in the same batch
 4. ☐ Max 2 instances of "I" / "we" / "my" / "our"

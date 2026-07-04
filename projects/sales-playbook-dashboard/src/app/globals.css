@@ -24,6 +24,12 @@ html,
 body {
   background: var(--background);
   color: var(--foreground);
+  color-scheme: dark;
+}
+
+select option {
+  background: var(--input);
+  color: var(--foreground);
 }
 
 ::-webkit-scrollbar {

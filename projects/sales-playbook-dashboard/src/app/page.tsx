@@ -1,13 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Copy, Check, Loader2, Zap, Linkedin, Instagram, X } from "lucide-react";
 
 type Platform = "linkedin" | "instagram";
 type Mode = "opener" | "followup" | "reply";
 type TouchNumber = 2 | 3 | 4;
 
-type Meta = { archetype: string; phase: string; tactic: string; why: string };
+type Meta = { archetype: string; phase: string; ask?: string; tactic: string; why: string };
+
+type Conversation = {
+  id: number;
+  channel: string;
+  identity: string;
+  name: string;
+  profile: string;
+  stage: string;
+  exchange_count: number;
+  meeting_status: string;
+  last_contact: string;
+  thread: string;
+  last_draft: string;
+  updated_at: string;
+};
+
+const MEETING_STATUSES = ["none", "asked", "booked", "declined", "ghosted"] as const;
+
+// Map the model's Phase meta label onto the DB stage vocabulary.
+function phaseToStage(phase: string): string | undefined {
+  const p = phase.toLowerCase();
+  for (const s of ["qualify", "label", "deepen", "proof", "objection"]) {
+    if (p.startsWith(s)) return s;
+  }
+  if (p.startsWith("warm") || p.startsWith("ask") || p.startsWith("call")) return "ask";
+  return undefined;
+}
 
 const ACCENT: Record<Platform, string> = {
   linkedin: "#0a66c2",
@@ -71,6 +98,11 @@ export default function Home() {
   const [conversation, setConversation] = useState("");
   const [profileLine, setProfileLine] = useState("");
   const [goal, setGoal] = useState("");
+  // Reply — conversation memory
+  const [identityRaw, setIdentityRaw] = useState("");
+  const [convos, setConvos] = useState<Conversation[]>([]);
+  const [selectedConvoId, setSelectedConvoId] = useState<number | null>(null);
+  const [memoryAvailable, setMemoryAvailable] = useState(true);
 
   // Output
   const [message, setMessage] = useState("");
@@ -98,6 +130,63 @@ export default function Home() {
     setError(null);
   }
 
+  const loadConvos = useCallback(async () => {
+    try {
+      const res = await fetch("/api/conversations");
+      if (res.status === 503) {
+        setMemoryAvailable(false);
+        return;
+      }
+      const data = await res.json();
+      if (res.ok) {
+        setMemoryAvailable(true);
+        setConvos(data.conversations ?? []);
+      }
+    } catch {
+      setMemoryAvailable(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (mode === "reply") loadConvos();
+  }, [mode, loadConvos]);
+
+  const selectedConvo = convos.find((c) => c.id === selectedConvoId) ?? null;
+
+  function selectConvo(id: number | null) {
+    setSelectedConvoId(id);
+    const c = convos.find((x) => x.id === id);
+    if (c) {
+      setConversation(c.thread);
+      setProfileLine(c.profile);
+      setIdentityRaw(c.identity);
+      if (c.channel === "linkedin" || c.channel === "instagram") setPlatform(c.channel);
+    } else {
+      setConversation("");
+      setProfileLine("");
+      setIdentityRaw("");
+    }
+    resetOutput();
+  }
+
+  async function saveConvo(fields: Record<string, unknown>): Promise<void> {
+    if (!memoryAvailable || !identityRaw.trim()) return;
+    try {
+      const res = await fetch("/api/conversations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ channel: platform, identityRaw, profile: profileLine, ...fields }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        await loadConvos();
+        if (data.conversation?.id) setSelectedConvoId(data.conversation.id);
+      }
+    } catch {
+      // memory is a convenience layer; drafting still works without it
+    }
+  }
+
   function touchLabel(n: TouchNumber): string {
     if (platform === "linkedin") {
       return n === 2 ? "DM 2 · Day 4" : n === 3 ? "DM 3 · Day 9" : "DM 4 · Day 16";
@@ -117,7 +206,21 @@ export default function Home() {
       const base = { platform, mode };
       const payload =
         mode === "reply"
-          ? { ...base, conversation, profileLine, goal }
+          ? {
+              ...base,
+              conversation,
+              profileLine,
+              goal,
+              identityRaw: identityRaw.trim() || undefined,
+              state: selectedConvo
+                ? {
+                    exchange_count: selectedConvo.exchange_count,
+                    stage: selectedConvo.stage,
+                    meeting_status: selectedConvo.meeting_status,
+                    last_contact: selectedConvo.last_contact,
+                  }
+                : undefined,
+            }
           : mode === "followup"
           ? { ...base, name, role, company, signal, touchNumber, previousMessage }
           : { ...base, name, role, company, signal, archetype };
@@ -131,6 +234,19 @@ export default function Home() {
       if (!res.ok) throw new Error(data.error || "Generation failed");
       setMessage(data.message);
       setMeta(data.meta ?? null);
+      if (mode === "reply") {
+        const m: Meta | null = data.meta ?? null;
+        await saveConvo({
+          thread: conversation,
+          last_draft: data.message,
+          stage: m?.phase ? phaseToStage(m.phase) : undefined,
+          // never downgrade booked/declined back to asked
+          meeting_status:
+            m?.ask === "yes" && (!selectedConvo || selectedConvo.meeting_status === "none")
+              ? "asked"
+              : undefined,
+        });
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong");
     } finally {
@@ -182,7 +298,9 @@ export default function Home() {
                     key={p}
                     onClick={() => {
                       setPlatform(p);
-                      resetOutput();
+                      // drop any saved-convo selection (and its fields) so a thread never
+                      // saves under the wrong channel or lingers across platforms
+                      selectConvo(null);
                     }}
                     className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-colors flex items-center justify-center gap-1.5 ${
                       active ? "text-white" : "text-[--muted-foreground] hover:text-[--foreground]"
@@ -336,6 +454,48 @@ export default function Home() {
           {/* Reply fields */}
           {mode === "reply" && (
             <>
+              {memoryAvailable ? (
+                <div>
+                  <label className={labelClass}>Saved conversations</label>
+                  <select
+                    value={selectedConvoId ?? ""}
+                    onChange={(e) => selectConvo(e.target.value ? Number(e.target.value) : null)}
+                    className={`${inputClass} cursor-pointer`}
+                  >
+                    <option value="">New conversation</option>
+                    {convos
+                      .filter((c) => c.channel === platform)
+                      .map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {`${c.name || c.identity} · ${c.channel} · ${c.stage} · ${c.exchange_count} ${
+                          c.exchange_count === 1 ? "reply" : "replies"
+                        } · ${c.meeting_status}`}
+                      </option>
+                    ))}
+                  </select>
+                  {selectedConvo && (
+                    <div className="flex items-center gap-2 mt-2">
+                      <span className="text-xs text-[--muted-foreground]">Meeting status</span>
+                      <select
+                        value={selectedConvo.meeting_status}
+                        onChange={(e) => saveConvo({ meeting_status: e.target.value })}
+                        className="rounded-lg bg-[--input] border border-[--border] text-[--foreground] text-xs px-2 py-1 cursor-pointer focus:outline-none focus:ring-1 focus:ring-white/20"
+                      >
+                        {MEETING_STATUSES.map((s) => (
+                          <option key={s} value={s}>
+                            {s}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <p className="text-xs text-[--muted-foreground]">
+                  Conversation memory is off. Set SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY in .env.local to save
+                  threads across sessions.
+                </p>
+              )}
               <div>
                 <label className={labelClass}>Conversation thread *</label>
                 <textarea
@@ -351,6 +511,17 @@ export default function Home() {
                   value={profileLine}
                   onChange={(e) => setProfileLine(e.target.value)}
                   placeholder="Sarah Lin, founder of Loop & Co — 9-person social agency, content ops pain"
+                  className={inputClass}
+                />
+              </div>
+              <div>
+                <label className={labelClass}>Profile URL or handle (saves to memory)</label>
+                <input
+                  value={identityRaw}
+                  onChange={(e) => setIdentityRaw(e.target.value)}
+                  placeholder={
+                    platform === "linkedin" ? "https://linkedin.com/in/sarah-lin-123" : "@sarahlin"
+                  }
                   className={inputClass}
                 />
               </div>
@@ -473,6 +644,20 @@ export default function Home() {
                         }`}
                       >
                         {meta.phase}
+                      </span>
+                    </div>
+                  )}
+                  {meta.ask && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-[--muted-foreground] w-14 shrink-0">Ask</span>
+                      <span
+                        className={`text-xs font-medium px-2.5 py-0.5 rounded-full border ${
+                          meta.ask === "yes"
+                            ? "bg-emerald-500/15 text-emerald-400 border-emerald-500/25"
+                            : "bg-[--muted] text-[--muted-foreground] border-[--border]"
+                        }`}
+                      >
+                        {meta.ask === "yes" ? "Call ask made" : "No ask yet"}
                       </span>
                     </div>
                   )}

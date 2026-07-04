@@ -1,0 +1,18 @@
+{
+  "question": "Q9: What is the documented follow-up cadence for warm stalled DM threads, and how do you force advancement past rapport loops?",
+  "method": "exa-direct (NotebookLM auth expired 2026-07-04; synthesized from full-text sources in _research/exa/contents/, import to notebook pending re-login)",
+  "answer": "See references/research-synthesis.md section 'Q9: Stalled Threads, Cadence, and Loop Recovery'.",
+  "references": [
+    {"citation_number": 1, "title": "LinkedIn Follow-Up Messages: The Science of Persistence 2026", "url": "https://lhunter.cc/blog/linkedin-follow-up-messages-the-science-of", "published": "2026-02-23"},
+    {"citation_number": 2, "title": "The Ultimate LinkedIn Follow Up Sequence for Higher Response Rates", "url": "https://phantombuster.com/blog/social-selling/linkedin-follow-up-sequence/", "published": "2026-01-16"},
+    {"citation_number": 3, "title": "LinkedIn Follow Up Sequence: Optimal Length and Timing", "url": "https://linkedinsider.blog/linkedin-follow-up-sequence", "published": "2026-05-24"},
+    {"citation_number": 4, "title": "Re-Engage Cold LinkedIn Leads: The Playbook", "url": "https://linkedinsider.blog/re-engage-cold-linkedin-leads", "published": "2026-05-29"},
+    {"citation_number": 5, "title": "Stalled Opportunity Follow-Up: The Recovery Framework", "url": "https://www.itsjustrevenue.com/insights/stalled-opportunity-follow-up", "published": "2026-02-10"},
+    {"citation_number": 6, "title": "828K AI DM Conversations Analyzed: What Books Calls", "url": "https://setsmart.io/blog/ai-dm-conversation-study", "published": "2026-04-11"},
+    {"citation_number": 7, "title": "Facebook Messenger Marketing: 2026 DM Playbook", "url": "https://setsmart.io/blog/facebook-messenger-marketing", "published": "2026-06-22"},
+    {"citation_number": 8, "title": "Sales Conversations That Convert: Spot the Signals Early", "url": "https://www.blazeo.com/blog/sales-conversations-that-convert/", "published": "2026-04-27"},
+    {"citation_number": 9, "title": "Why Prospects Ghost You in DMs (And How to Win Them Back)", "url": "https://sellbychat.ai/blog/why-prospects-ghost-in-dms", "published": "2026-05-13"},
+    {"citation_number": 10, "title": "DM Sequence Framework: Guide, Examples & Tool Fit", "url": "https://prospectingmanual.com/linkedin-automation/workflows/dm-sequence-framework/", "published": "2026-03-22"},
+    {"citation_number": 11, "title": "Why Your Team Answers Questions But Still Loses Deals", "url": "https://www.iangenius.co.uk/sales-training-online-reactive-sales-conversations/", "published": "2026-04-08"}
+  ]
+}

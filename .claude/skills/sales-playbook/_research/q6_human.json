@@ -1,0 +1,16 @@
+{
+  "question": "Q6: What are the documented tells of AI-generated outreach copy in 2026, and what techniques make outreach read as human?",
+  "method": "exa-direct (NotebookLM auth expired 2026-07-04; synthesized from full-text sources in _research/exa/contents/, import to notebook pending re-login)",
+  "answer": "See references/research-synthesis.md section 'Q6: Sounding Human vs AI Slop (the tells and the fix)'.",
+  "references": [
+    {"citation_number": 1, "title": "How Prospects Spot AI-Written Cold Emails", "url": "https://firstsales.io/blog/how-prospects-spot-ai-written-emails", "published": "2026-06-12"},
+    {"citation_number": 2, "title": "Humanize AI-Written LinkedIn Outreach: 9-Point Pass", "url": "https://linkedinsider.blog/humanize-ai-written-linkedin-outreach", "published": "2026-05-30"},
+    {"citation_number": 3, "title": "How to Personalize Outreach at Scale Without Sounding Like AI", "url": "https://www.unifygtm.com/explore/ai-outreach-without-sounding-like-ai", "published": "2026-06-03"},
+    {"citation_number": 4, "title": "Email Outreach in 2026: How to Get Replies, Not Deletes", "url": "https://nealschaffer.com/email-outreach/", "published": "2026-05-27"},
+    {"citation_number": 5, "title": "Read It Out Loud: The Cold Email Test That Improves Response Rates", "url": "https://www.marketingprofs.com/articles/2026/55155/b2b-cold-email-fixes", "published": "2026-06-25"},
+    {"citation_number": 6, "title": "AI Sales Messaging: Why Buyers Spot It Instantly", "url": "https://www.thesellingcollective.com/post/ai-sales-messaging", "published": "2025-06-06"},
+    {"citation_number": 7, "title": "Why your AI cold emails sound AI (and what actually fixes it)", "url": "https://www.experimentoutbound.com/field-notes/why-ai-cold-emails-sound-ai/", "published": "2026-05-21"},
+    {"citation_number": 8, "title": "AI-Written Outreach That Doesn't Sound AI-Written: The Rules We Use", "url": "https://www.anaboo.ai/blog/ai-outreach-that-doesnt-sound-ai-written", "published": "2026-06-10"},
+    {"citation_number": 9, "title": "Cold DM Script: Landing AI Agency Clients on Instagram and Facebook", "url": "https://nicherly.com/blog/how-to-use-a-cold-dm-script-to-land-ai-agency-clients-on-instagram", "published": "2026-06-06"}
+  ]
+}

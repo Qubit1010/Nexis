@@ -1,0 +1,254 @@
+Steal Our Exact Facebook DM SOP (Scripts Inside)
+https://www.sixfigureaioutreach.com/p/steal-our-exact-facebook-dm-sop-scripts-inside
+2025-07-29T16:49:17.000Z
+
+Steal Our Exact Facebook DM SOP (Scripts Inside)
+
+- Steal Our Exact Facebook DM SOP (Scripts Inside)
+- Posts
+- Home
+
+# Steal Our Exact Facebook DM SOP (Scripts Inside)
+
+Peek under the hood of our Facebook group workflow—complete with copy‐paste DMs and timing rules.
+
+Ankit Modi
+
+Jul 29, 2025
+
+If you’ve ever wondered how to turn a Facebook group into a predictable appointment engine, today’s newsletter breaks down the exact SOP we use to book appointments from Facebook.
+
+Now, what you will read below is an example of how we structure our SOP but you can tweak that to come up with your version using Chat GPT
+
+Feel free to swipe, tweak, or hit reply with questions.
+
+# 📘 SOP – Facebook Group to Sales Call
+
+Purpose: Use this SOP to convert qualified group members into booked sales calls through 3-step DM sequences.
+
+## 🔍 Step 1: Targeting Filters
+
+### ✅ Framework: Who you DO want to reach out to:
+
+[insert type of agency] owners based in [insert geography]
+
+Agencies in niches like [insert niche 1], [niche 2], [niche 3]
+
+[insert growth stage: "startups looking to get first 10 clients", "agencies doing 10-50k/mo looking to scale"]
+
+Profiles with [insert credibility marker: "real name", "profile photo", "activity in groups or posts"]
+
+### ❌ Framework: Who you DO NOT want to reach out to:
+
+[insert business types not relevant to the offer]
+
+People who [insert disqualifier: "sell the same services", "target ecom brands", etc.]
+
+Profiles with [insert low-credibility indicators: "no photo", "new account", "no recent activity"]
+
+Individuals from [insert regions you want to exclude]
+
+## 🧠 Step 2: Audience Pain Points & Desires
+
+### 🎯 Framework: Insert common pain points your audience faces
+
+[insert pain: "Inconsistent outbound leads"]
+
+[insert pain: "Founder stuck doing outreach manually"]
+
+[insert pain: "Low show-up or close rates"]
+
+[insert pain: "No automation, follow-up, or proper systems"]
+
+### ✅ Framework: Insert the desires they want fulfilled
+
+[insert outcome: "10–15 qualified sales calls on autopilot"]
+
+[insert system: "AI + cold email/LinkedIn system that scales"]
+
+[insert goal: "More free time + higher ROI from outreach"]
+
+## 🔑 Step 3: Messaging Funnel — 3-Touch DM Flow
+
+### ✍️ DM 1 — Welcome + Qualifying
+
+WHEN: Send when the member joins or if they’ve never been messaged beforeGOAL: Warm connection + qualify with one simple question
+
+Framework:
+
+```
+Hey {firstname}, welcome to the [insert group name] group!
+
+This group is for [insert niche: "agency founders"] looking to [insert transformation: "book more qualified sales calls using AI + multi-channel outbound systems"] without [insert pain: "hiring setters" / "relying on referrals" / "doing manual outreach"].
+
+Just curious — are you currently [insert context-based question: "doing outreach manually or using any automation yet?"]
+
+```
+
+### ✍️ DM 1 (Alternate) — For Old/Existing Members
+
+WHEN: Use for members already in the group, but never messagedGOAL: Same as above — qualify + open convo
+
+Framework:
+
+```
+Hey {firstname}, noticed you’ve been part of the [insert group name] group for a while now.
+
+This group is for [insert niche] looking to [insert transformation or end goal] without [insert pain].
+
+I’m curious — are you currently [insert qualifying question]?
+
+```
+
+### ✍️ DM 2 — Value Giveaway
+
+WHEN: Send 5 days after DM 1 if no response or cold responseGOAL: Deliver value (AI resource library, training, etc.) and reopen the loop
+
+Framework:
+
+```
+Hey {firstname},  
+
+We’re giving a few [insert niche: "agency owners"] early access to our [insert value: "library of AI Outbound Guides / mini-course / SOP vault"] to help them [insert outcome: "build a predictable appointment-setting system using AI, cold email + LinkedIn"].
+
+Want me to send it over?
+
+```
+
+### ✍️ DM 3 — Re-engagement + Audit/Call
+
+WHEN: 2 days after DM 2GOAL: Final touch — offer a free audit or invite for a walkthrough call
+
+Framework:
+
+```
+Hey {firstname}, just circling back to see if you got a chance to check my last message.
+
+Also, happy to share a [insert offer: "free audit of your outbound strategy"] or walk you through how we help [insert ICP: "agencies"] [insert result: "book 10–15+ qualified sales calls/month using AI + LinkedIn + cold email"].
+
+Would you be open to that?
+
+```
+
+## 📌 Bonus DM — For Engaged Members (Commented or Liked Posts)
+
+WHEN: Send when they interact with group contentGOAL: Start conversation while they’re warm
+
+Framework:
+
+```
+Hey {firstname}, saw your comment on [insert post topic or keyword].
+
+Quick Q — are you currently [insert qualifying question: "doing outreach manually or have something automated in place?"]
+
+We help [insert ICP] build [insert transformation: "a scalable system using AI + outbound to book 10–15 calls/month"].
+
+Want me to break down how this could work for you?
+
+```
+
+## 🛠 Step 4: Setup & Daily Execution Plan
+
+Insert a daily action plan for your team:
+
+Task
+
+Owner
+
+Notes
+
+Message 10–15 new group members
+
+Setter/VA
+
+Use DM 1 Script
+
+Track responses + next steps
+
+CRM or Sheet
+
+Use columns: Name, Status, DM1/2/3, Booked Y/N
+
+Follow up with DM 2 or DM 3
+
+Setter
+
+Based on timing rules
+
+Flag high-potential replies
+
+Team Lead
+
+For personal follow-up or call booking
+
+## 📈 Step 5: Track & Optimize
+
+Insert KPIs to measure outreach success:
+
+Metric
+
+Target
+
+Notes
+
+DM 1 → Reply Rate
+
+30–40%
+
+Personalization increases reply rate
+
+DM 2 → Engagement
+
+20%+
+
+Value drop = re-opens convo
+
+Calls Booked from DM Flow
+
+10–15 per week
+
+Use calendar link
+
+Qualified Call %
+
+70%+
+
+Ensure proper targeting upfront
+
+### Want the Full SOP?
+
+I packaged the entire workflow—scripts, triggers, ClickUp checklist, and KPI tracker—into a single PDF.
+
+Reply “SOP” and it’s yours.Talk soon,
+
+Ankit ModiCo‑Founder, Six Figure ConsultingAI‑Driven Appointment Setting for Agencies LinkedIn• Website• Blog
+
+### Keep Reading
+
+View more
+
+Home
+
+Past Editions
+
+Tags
+
+Subscribe
+
+LinkedIn Outreach System
+
+Services
+
+1:1 Consultation
+
+Blog
+
+# STAY IN THE KNOW
+
+Subscribe
+
+© 2026 Six Figure Consulting.
+
+Report abuse Privacy policy Terms of use
+
+Powered by beehiiv

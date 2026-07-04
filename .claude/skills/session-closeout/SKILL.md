@@ -2,12 +2,13 @@
 name: session-closeout
 description: >
   End-of-session wrap-up skill for Aleem's Nexis assistant. Summarizes what was done,
-  extracts decisions worth logging, and updates context/current-priorities.md to reflect
-  any shifts. Use this skill whenever the user says "close out", "wrap up", "end session",
-  "session summary", "closeout", "wrap this up", "let's close", or anything indicating
-  they're done for the session. Also trigger if the user says "what did we do today" or
-  "summarize this session". This skill should always be used at session end — don't just
-  summarize inline, run this skill so decisions get logged and priorities stay current.
+  extracts decisions worth logging, and updates context/ (priorities, goals, ideas, etc.),
+  .claude/rules/, and CLAUDE.md to reflect any shifts those decisions imply. Use this skill
+  whenever the user says "close out", "wrap up", "end session", "session summary",
+  "closeout", "wrap this up", "let's close", or anything indicating they're done for the
+  session. Also trigger if the user says "what did we do today" or "summarize this session".
+  This skill should always be used at session end — don't just summarize inline, run this
+  skill so decisions get logged and context/rules/CLAUDE.md stay current.
 ---
 
 # Session Closeout
@@ -81,22 +82,27 @@ If they say yes (or if they gave a blanket "yes" earlier), append to `decisions/
 
 ---
 
-## Step 4 — Update Priorities
+## Step 4 — Update Context, Rules & CLAUDE.md
 
-Look at `context/current-priorities.md` and ask: does what we did today change anything?
+For each decision logged in Step 3, check whether it makes any of these stale, and update the ones that are:
+- `context/current-priorities.md` — focus areas, "What's Live" vs "Next to build", bottleneck
+- `context/me.md`, `context/work.md`, `context/team.md`, `context/goals.md`, `context/ideas.md` — role/stack/team/quarterly-goal/backlog facts
+- `.claude/rules/*.md` — a decision that changes a standing rule or adds a new one
+- `CLAUDE.md` — the Active Skills catalog, tool integrations, or any section a shipped decision touches
 
 Good reasons to update:
-- Something got built that was listed as "next to build" — move it to "What's Live"
-- A bottleneck shifted — the constraint is now different
-- The user explicitly said focus is moving somewhere new
-- A new urgent item emerged that isn't captured yet
+- Something got built that was listed as "next to build" — move it to "What's Live" / strike it from `ideas.md`
+- A bottleneck or strategic picture shifted
+- The user explicitly said focus, a rule, or the team/stack changed
+- A skill's capabilities changed enough that its CLAUDE.md catalog entry is now inaccurate
+- A decision implies a new or changed standing rule
 
 Bad reasons to update:
 - Just because time passed
 - Minor progress that doesn't change the strategic picture
-- You want to be thorough — only update if something actually shifted
+- You want to be thorough — only touch a file if something in it actually shifted
 
-If an update is warranted, make the edit directly to `context/current-priorities.md`. Update the "Last updated" date to today. If nothing meaningful shifted, say so: "Priorities look current — no update needed."
+Update each affected file directly (bump "Last updated" dates where the file has one). If nothing meaningful shifted anywhere, say so: "Context, rules, and CLAUDE.md look current — no update needed."
 
 ---
 
@@ -119,7 +125,7 @@ End every closeout with a single clean block like this — no preamble, just the
 Session closed.
 Summary: [1-line]
 Decisions logged: [N] (or "none")
-Priorities updated: [yes / no — what changed] (or "no change")
+Context/Rules/CLAUDE.md updated: [files touched — what changed] (or "no change")
 Memory saved: [what, or "nothing new"]
 ```
 

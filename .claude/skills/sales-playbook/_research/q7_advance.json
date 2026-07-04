@@ -1,0 +1,17 @@
+{
+  "question": "Q7: What buying signals mark a DM thread as ready for the meeting ask, and after how many exchanges should the ask happen?",
+  "method": "exa-direct (NotebookLM auth expired 2026-07-04; synthesized from full-text sources in _research/exa/contents/, import to notebook pending re-login)",
+  "answer": "See references/research-synthesis.md section 'Q7: Buying Signals + When to Ask for the Call'. Headline: booking window opens at ~11 total messages = 5-6 prospect replies (SetSmart 828K study); plateau past ~40 messages; validates the ask-by-6-exchanges advance trigger.",
+  "references": [
+    {"citation_number": 1, "title": "828K AI DM Conversations Analyzed: What Books Calls", "url": "https://setsmart.io/blog/ai-dm-conversation-study", "published": "2026-04-11"},
+    {"citation_number": 2, "title": "LinkedIn DM Outreach: The Complete Strategy for B2B in 2026", "url": "https://growtoro.com/blog/linkedin-dm-outreach-complete-strategy-b2b-2026", "published": "2026-04-02"},
+    {"citation_number": 3, "title": "From DM to Deal: Mapping the Conversation Journey", "url": "https://pursuenetworking.com/blog/linkedin-dm-to-meeting", "published": "2025-04-29"},
+    {"citation_number": 4, "title": "Why My LinkedIn DMs Get Ignored", "url": "https://getgangly.com/blog/why-my-linkedin-dms-get-ignored", "published": "2026-04-17"},
+    {"citation_number": 5, "title": "Re-Engage Cold LinkedIn Leads: The Playbook", "url": "https://linkedinsider.blog/re-engage-cold-linkedin-leads", "published": "2026-05-29"},
+    {"citation_number": 6, "title": "Close High-Ticket Coaching Sales in DMs", "url": "https://sellbychat.ai/blog/high-ticket-closing-dms", "published": "2026-03-29"},
+    {"citation_number": 7, "title": "LinkedIn Message Sequence Template for Higher Conversions", "url": "https://scaliq.ai/blogs/linkedin-message-sequence-template-3-message-momentum", "published": "2026-05-15"},
+    {"citation_number": 8, "title": "Facebook Groups for Coaches and Consultants: 2026 Playbook", "url": "https://multiplegroupposter.com/blog/facebook-groups-for-coaches-consultants", "published": "2026-05-14"},
+    {"citation_number": 9, "title": "LinkedIn Outreach Benchmarks 2026: B2B Acceptance (132M attempts)", "url": "https://yadulink.com/en/blog/linkedin-outreach-benchmarks-2026-acceptance-and-response-rates-from-132m-attempts-689", "published": "2026-05-20"},
+    {"citation_number": 10, "title": "Facebook Messenger Marketing: 2026 DM Playbook", "url": "https://setsmart.io/blog/facebook-messenger-marketing", "published": "2026-06-22"}
+  ]
+}

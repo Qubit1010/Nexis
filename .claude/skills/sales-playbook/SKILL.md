@@ -9,8 +9,8 @@ The canonical sales asset for NexusPoint. Built to fix one problem: existing DM 
 
 ## When to use
 
-- "Draft a DM to [prospect]" → pick archetype from `frameworks/opener-archetypes.md`, follow `scripts/linkedin-cold-dm-sequence.md` or `scripts/instagram-cold-dm-sequence.md`
-- "They replied — what now?" → `scripts/live-conversation-playbook.md`
+- "Draft a DM to [prospect]" → pick archetype from `frameworks/opener-archetypes.md`, follow `scripts/linkedin-cold-dm-sequence.md`, `scripts/instagram-cold-dm-sequence.md`, or `scripts/facebook-cold-dm-sequence.md`
+- "They replied — what now?" → `scripts/live-conversation-playbook.md` (load conversation memory first, see below)
 - "They said [objection]" → `frameworks/objection-riffs.md`
 - "I have a discovery call with X" → `scripts/discovery-call-script.md` + offer context from `offer/`
 - "How do I pitch this prospect?" → `offer/ai-automation-positioning.md`
@@ -45,6 +45,18 @@ Always: anchored to a deliverable.
 - *"Tuesday 2pm or Thursday 11am — I'll screen-share the actual automation we built for [peer], you tell me if it'd port to your stack."*
 - *"Want a 20-min Ops Teardown? I look at your stack, tell you the first thing I'd automate, you decide if it's worth building."*
 
+## Conversation memory (the anti-loop layer)
+
+Every live conversation has a persistent record in Supabase (table `conversations`), managed by `scripts/convo.py` (stdlib Python, reads `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` from the repo `.env`). One-time table setup: paste `scripts/schema.sql` into the Supabase SQL Editor.
+
+The loop for any live reply:
+
+1. `python scripts/convo.py get <channel> <identity_or_url>` before drafting. Stored `stage`, `exchange_count`, and `meeting_status` are ground truth; never re-infer the phase from a short paste.
+2. Draft using `scripts/live-conversation-playbook.md`, checking its Advance Triggers first (6+ exchanges without an ask forces the ask; buying signals jump to Phase 6).
+3. `python scripts/convo.py upsert <channel> <identity_or_url> --stage <s> --thread-file <merged> --last-draft "<reply>"` after drafting; set `--meeting asked/booked/declined/ghosted` as the thread resolves.
+
+`list` shows the whole pipeline (`python scripts/convo.py list`). The dashboard (projects/sales-playbook-dashboard) reads and writes the same table, so the memory is shared. Self-check: `python scripts/test_convo.py`.
+
 ## The discovery call (30-min Ops Teardown)
 
 Frame: *"I'm going to ask 6 questions about your ops, then either show you what I'd build or tell you it's not a fit."* Not a sales call — a teardown.
@@ -78,13 +90,17 @@ sales-playbook/
 ├── scripts/
 │   ├── linkedin-cold-dm-sequence.md        # 4-touch with archetype rotation
 │   ├── instagram-cold-dm-sequence.md       # IG-native voice
-│   ├── live-conversation-playbook.md       # 6 phases + objection branches
-│   └── discovery-call-script.md            # 30-min Ops Teardown
+│   ├── facebook-cold-dm-sequence.md        # FB group-context outreach (Q8 research)
+│   ├── live-conversation-playbook.md       # 6 phases + Advance Triggers + objection branches
+│   ├── discovery-call-script.md            # 30-min Ops Teardown
+│   ├── convo.py                            # conversation memory CLI (Supabase)
+│   ├── schema.sql                          # one-time Supabase table setup
+│   └── test_convo.py                       # self-check for convo.py
 ├── offer/
 │   ├── ai-automation-positioning.md        # The AI wedge — one-liner + 3 sub-offers
 │   └── proof-bank.md                       # Results by industry/pain
 └── references/
-    ├── research-synthesis.md               # Cited Q1-Q5 research + Live Query Additions
+    ├── research-synthesis.md               # Cited Q1-Q9 research + Live Query Additions
     ├── what-not-to-do.md                   # Banned phrases + patterns
     └── notebook-live-query.md              # LIVE FALLBACK: ask the sales notebook on a miss
 ```

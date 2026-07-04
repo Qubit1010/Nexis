@@ -1,0 +1,156 @@
+DM Sequence Framework: Guide, Examples & Tool Fit
+https://prospectingmanual.com/linkedin-automation/workflows/dm-sequence-framework
+2026-03-22T03:28:53.000Z
+
+DM Sequence Framework: Guide, Examples & Tool Fit
+
+LinkedIn Automation · Guide
+
+# DM Sequence Framework
+
+After reading this guide, you will have a documented DM sequence framework with message types, timing gaps, and conditional branching logic configured per ICP tier in your LinkedIn automation tool.
+
+↓ Jump to TL;DR LinkedIn Automation Hub ↗
+
+Written for operators No vendor influence Practical, not theoretical
+
+TL;DR
+
+## 4 message types, 3 sequence formats: the complete framework
+
+A DM sequence framework defines how many messages you send after a LinkedIn connection accepts, what each message does, and how long to wait between steps. Most sequences fail because follow-up messages restate the opener instead of advancing toward a decision.
+
+📋
+
+What this guide covers
+
+Message types, timing gaps, 3 sequence templates (short, standard, signal-based), conditional branching for non-accepts, and which tools handle if/then logic natively.
+
+The Framework
+
+## Three DM sequence scenarios at a glance
+
+| Dimension | Short (2-3 DMs) | Standard (4-5 DMs) | Signal-Based (3 DMs) |
+| --- | --- | --- | --- |
+| Volume fit | 50+ new connections/week | 15 to 50 connections/week | 5 to 20 signal-qualified/week |
+| Message 1 | ICP opener + direct ask | ICP opener + shared context | Signal reference + opener |
+| Message 2 | Bump or breakup | Value-add resource or insight | Value-add or direct ask |
+| Message 3 | Optional breakup | Angle shift (different pain) | Breakup |
+| Message 4 | - | Bump | - |
+| Message 5 | - | Breakup | - |
+| Gap between steps | 2 to 3 days | 3 to 5 days | 2 to 4 days |
+| Best fit | High-volume, lower ACV | Mid-market, defined ICP | Intent-triggered, named accounts |
+
+Message Types
+
+## 4 DM types: what each step must accomplish
+
+Message 1 names a context: a shared ICP signal, a recent profile trigger, or an explicit reason the connection makes sense right now. It does not pitch. A note already sent in the connection request reduces the obligation on message 1 since partial context is set.
+
+Message 2 introduces something new: a case study, a data point, or a different problem framing. Restating message 1 with different wording is not a value-add. If both messages name the same problem and make the same ask, the sequence stalls.
+
+Angle shift (message 3 in a standard sequence)
+
+Approach from a different angle: a second use case, a different stakeholder problem, or a business outcome instead of a feature. The prospect who did not respond to the first frame may respond to a second one.
+
+Bump (message 4)
+
+One or two lines that resurface the thread without adding new content: "Wanted to make sure this landed" followed by the single most relevant sentence from a previous message. Bumps generate meaningful late replies from contacts who read earlier messages without responding.
+
+Breakup (final message)
+
+Closes the sequence and often generates the highest reply rate of any step. Frame non-response as understandable and leave a door open: guilt without a path to re-engagement underperforms.
+
+⚠️
+
+Same ask twice: zero incremental lift
+
+Each message should be auditable on its own: if the previous message did not exist, would this one still make sense? If no, it is restating, not advancing.
+
+Timing and Volume
+
+## Timing gaps and daily DM caps: 80 to 100 combined actions per day
+
+Standard gap between DM steps: 3 to 5 days for mid-market. Compressing to 24-hour gaps reads as aggressive and concentrates daily action counts above LinkedIn's automation detection threshold.
+
+Most tools enforce a safe ceiling of 100 to 150 follow-up messages per account per day. The practical safe limit running both connections and DMs is 80 to 100 combined actions daily, with connection requests kept below 20 per day.
+
+✅
+
+500+ DMs/week: use multiple accounts
+
+Spread sequences across warmed accounts using a tool with multi-sender rotation. More accounts sending less per account, not one account sending more.
+
+Conditional Branching
+
+## Non-accept after 7 days: 2 actions that recover the contact
+
+A DM sequence only fires after a connection request is accepted. For requests unaccepted after 7 to 10 days: export to cold email if you have a verified address, or withdraw the request and re-queue the contact after 60 days.
+
+Tools with native if/then logic (La Growth Machine, Skylead, Expandi) handle this branch automatically. Without conditional logic, manually audit pending requests weekly and export non-accepts to cold email.
+
+ℹ️
+
+Never DM a pending connection: it fails silently
+
+If accepted within 7 days, start the DM sequence at message 1. If not accepted, export to cold email or withdraw and re-queue at 60 days.
+
+Recommended Tools
+
+## 3 tools with native if/then branching: La Growth Machine, Expandi, Dripify
+
+La Growth Machine and Expandi handle if/then branching natively; La Growth Machine also triggers email steps from the non-accept branch. Dripify is the lowest-cost entry point for LinkedIn-only sequences without a multichannel layer.
+
+La Growth Machine
+
+Multichannel (LinkedIn + email) with native if/then branching. Triggers an email step when a connection does not accept, from the same sequence builder.
+
+See Review
+
+Expandi
+
+Cloud LinkedIn automation with conditional branching, country-based IP, and per-step stats. Smart algorithms enforce safe daily limits per account.
+
+See Review
+
+Dripify
+
+LinkedIn-only drip campaigns with smart conditions and built-in email finder. Lowest entry price for teams starting with LinkedIn outreach.
+
+See Review
+
+Common Questions
+
+## 5 questions on sequence length, timing, and non-response
+
+Q How many DMs should a LinkedIn sequence have?
+
+Four to five DMs covers most mid-market B2B sequences. Two to three works for high-volume broad lists; beyond five rarely improves reply rates.
+
+Q Should I include a pitch in the connection request note?
+
+No. Connection request notes should establish why the connection makes sense for the prospect. The pitch belongs in the DM sequence post-acceptance.
+
+Q How long should I wait between LinkedIn DMs?
+
+Three to five days between steps is standard for mid-market; two to three days works for high-volume short sequences. Gaps under 48 hours read as aggressive and increase spam flag risk.
+
+Q What does a signal-based DM sequence look like?
+
+Three messages over 6 to 10 days: message 1 references the specific signal (job change, funding, post), message 2 adds a relevant resource, message 3 is a breakup. Signal sequences are shorter because personalization in message 1 justifies a direct ask earlier.
+
+Q What do I do when a prospect accepts but never replies to any DM?
+
+After the breakup, tag as non-respondent and move to cold email if you have a verified address. Wait at least 60 days before re-engaging on LinkedIn.
+
+## Sequence built. Now pick the right LinkedIn automation tool to run it.
+
+Compare LinkedIn automation platforms on conditional logic, safety controls, and pricing before configuring your DM sequence.
+
+Best LinkedIn Automation Tools → LinkedIn Automation Hub
+
+Connection Request FrameworkLinkedIn Automation · Guide →
+
+LinkedIn Safety Limits: Pacing SOPLinkedIn Automation · Workflow →
+
+LinkedIn and Email OrchestrationLinkedIn Automation · Workflow →
