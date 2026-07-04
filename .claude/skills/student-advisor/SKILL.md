@@ -123,7 +123,17 @@ need the cited source behind a number. Stay within ~3 files.
   notebook before saying you don't know — follow `references/notebook-live-query.md` (ask, present
   the cited answer, then append it to `research-synthesis.md` "Live Query Additions" so it's reusable).
   Only after a genuine miss do you say the corpus doesn't cover it.
-- **Honesty:** flag any net-new figure that came from a live query rather than the locked corpus.
+- **Missing reference files or corpus gap:** if a relevant `.md` file in `references/` is missing
+  or the topic falls outside the notebook's coverage entirely, use **Exa.ai** to supplement before
+  answering. Run via PowerShell with `dangerouslyDisableSandbox: true`:
+  ```powershell
+  & "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe" tools/exa/exa_client.py search "<query>"
+  ```
+  Save any substantive findings to `_research/` so they are reusable. Depth is caller-controlled:
+  - **"deep search"** — run 3+ queries, pull 10+ sources, synthesize thoroughly before answering.
+  - **"medium search"** / default — 1-2 queries, 5-7 sources, solid coverage.
+  - **"light search" / "quick"** — 1 query, 2-3 sources, fast answer only.
+- **Honesty:** flag any net-new figure that came from a live query or Exa search rather than the locked corpus.
 
 ### Step 5: Deliver and offer follow-ups
 - Substantial roadmaps/plans: offer "Want me to save this to Google Docs?"
@@ -174,6 +184,8 @@ deadlines + how to actually win. Flag anything time-sensitive and verify via the
 | Repeating a debunked study tip (rereading, learning styles) | Check `what-not-to-do.md`, correct it with the evidence |
 | Asks you to do the actual graded work (write the essay, solve the problem set) | Coach and outline, don't do it for them — point to `assignment-research`'s boundaries |
 | Google Docs script fails | Output the plan inline, note the failure |
+| Reference file missing from `references/` | Use Exa.ai to supplement (see Step 4 research depth); save results to `_research/` |
+| Topic outside notebook coverage entirely | Use Exa.ai (depth = medium by default); flag that answer is from live search, not the locked corpus |
 
 ---
 
