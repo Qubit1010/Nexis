@@ -1,0 +1,62 @@
+{
+  "slug": "glm-5-2",
+  "platform": "linkedin",
+  "title": "GLM-5.2",
+  "voiceScript": "A 1M-token context window is not a flex. It's an operational weapon. The naive move is dumping a million tokens in and hoping for reliability. What breaks is latency, cost, and silent hallucinations. So I treat GLM 5.2's context as a read-only workspace, open-weight, and private. Then I route verified slices into tools. One million tokens of context. Six times cheaper than GPT 5.5. It only activates the experts it needs. Bigger context only matters if you design the workflow around it. Otherwise, you just bought a bigger failure mode. What would you build with the whole repo in memory? Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "A 1M-token context window is not a flex. It's an operational weapon.",
+      "headline": "Not a flex. An *operational weapon*",
+      "sub": "GLM-5.2's 1M Context"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "The naive move is dumping a million tokens in and hoping for reliability. What breaks is latency, cost, and silent hallucinations.",
+      "headline": "Big context, *bigger failures*",
+      "sub": "the naive way to use 1M tokens",
+      "problemVariant": "crossout",
+      "chips": ["latency", "cost", "hallucinations"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I treat GLM 5.2's context as a read-only workspace, open-weight, and private. Then I route verified slices into tools.",
+      "headline": "One *read-only* workspace",
+      "visual": "roadmap",
+      "asset": "infographic.png",
+      "roadmap": [
+        { "name": "Ingest", "goal": "Full repo or docs" },
+        { "name": "Read-Only", "goal": "1M token workspace" },
+        { "name": "Route", "goal": "Verified slices to tools" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "One million tokens of context. Six times cheaper than GPT 5.5. It only activates the experts it needs.",
+      "headline": "Context + cost",
+      "stats": [
+        { "value": 1, "suffix": "M", "label": "token context window" },
+        { "value": 6, "suffix": "x", "label": "cheaper than GPT-5.5" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Bigger context only matters if you design the workflow around it. Otherwise, you just bought a bigger failure mode.",
+      "headline": "A bigger *failure mode*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "What would you build with the whole repo in memory? Follow for more.",
+      "cta": "What would you build with the whole repo in memory?"
+    }
+  ],
+  "source": "LinkedIn post on GLM-5.2 (Z.ai, shipped June 2026). Thesis: a 1M-token context window is an operational weapon, not a flex, but only if the workflow is designed around it, otherwise it's just a bigger failure mode. Key specs: 1,000,000 token context window (ingest a large codebase or hundreds of long docs without losing the beginning). Open-weight under an MIT license, runnable on your own hardware, keeps sensitive data off third-party servers. Reported to match or beat GPT-5.5 on benchmarks while costing roughly 6x less via API. Adjustable 'thinking' depth: non-thinking for speed, high or max for multi-step reasoning. Under the hood: Mixture-of-Experts (MoE), activates only the needed experts instead of the whole model every token. IndexShare keeps retrieval fast even at huge context sizes. Failure mode: naively dumping huge context into any model and expecting reliability, causing latency, cost blowups, and silent hallucinations from overloaded prompts. Doing it right: keep the full 1M context as a read-only workspace, then route smaller verified slices into tools and agents with tight budgets.",
+  "handle": "@nexuspoint"
+}
