@@ -48,3 +48,24 @@ He manually tagged hooks "reco hook" / "Reco" / "Can be 2nd option" / "2nd optio
 "Reco with minor tweak" / "Reco with revision" on nearly every segment. Output should
 pre-mark our top pick `(recommended)` and runner-up `(2nd option)` per segment so his
 review starts from a shortlist.
+
+---
+
+## 2026-07-04 — Min Rosales (Belle & Perry) — review of `05-hybrid-v2` (Deal Falling Apart)
+
+One comment, but it's a hard rule: **"It should be in the first POV as this is her channel."**
+
+The captions and posts were written in third person about Brenda ("Brenda Thompson has
+taken the 9:15pm call... she asks them one question"). The content publishes to **Brenda's
+own channels**, so Brenda is the speaker. It must be **first person**.
+
+**Rule — match POV to the channel owner:**
+- Content published on the **client's own channel** → first person. The client is the
+  speaker ("I've taken the 9:15pm call", "I call them the W's"). Never refer to the client
+  in third person, and never write in a fan/curator "I heard [client] say..." voice.
+- Only use third-person attribution if the content ships to a **different** channel (an
+  agency page, a curator, a team member's feed) — set that per client in the voice file.
+- This supersedes the 2026-06-29 entry-2 example that showed "This is what Brenda Thompson
+  taught me" — that phrasing is third-person-about-the-client and is now wrong for her channel.
+- Editorial scaffolding stays third person: file headers, "Why this segment", transcript
+  excerpts, and metadata address the creative team, not the audience.

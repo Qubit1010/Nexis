@@ -14,6 +14,13 @@
 - **Real goal of the content:** agent **recruitment**, not podcast promotion. Grow the roster from **125 to 165-175 realtors**. Every piece should make a good agent think "I want to be in her corner," not "nice episode."
 - **Critical reframe (from the strategy doc):** we market **Brenda Thompson**, not the podcast. A clip/caption must **stand on its own** without needing the full episode. If it only makes sense as a teaser, it failed.
 
+## Point of view `[Red knob]`
+
+- **Publishing channel:** Brenda's own channels (her IG/LinkedIn/Facebook).
+- **POV: FIRST PERSON.** Brenda is the speaker. Every caption and long-form post is written as **Brenda talking to her audience** — "I've taken the 9:15pm call", "I call them the W's", "here's my question for you". **Never** refer to her in third person ("Brenda Thompson says...", "she asks them...") and **never** write in a fan/curator voice ("one line from Brenda that changed how I think..."). (Set by Min Rosales, 2026-07-04.)
+- Third person is correct **only** if a piece is explicitly slated for a different channel (an agency/curator page). Flag that per-piece; the default is always first person.
+- Editorial scaffolding (file headers, "Why this segment", transcript excerpts, metadata) stays third person — it addresses the creative team, not the audience.
+
 ## The audience we are recruiting (the ICP)
 
 Rockstar agents who feel **undervalued or unsupported** in their current brokerage. Specifically:
