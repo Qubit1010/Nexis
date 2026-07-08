@@ -109,8 +109,8 @@ references/marketing-books-notes/
 .claude/rules/
 .gstack/
 
-# gstack skill suite: individual skills installed by .claude/skills/gstack/setup
-# (copied out of the submodule, regenerable — the submodule itself stays tracked)
+# gstack skill suite: don't regenerate individual skill copies out of the submodule.
+# Use .claude/skills/gstack/ directly when needed instead of `./setup` copying them out.
 .claude/skills/_gstack-command/
 .claude/skills/autoplan/
 .claude/skills/benchmark/
@@ -165,3 +165,48 @@ references/marketing-books-notes/
 .claude/skills/spec/
 .claude/skills/sync-gbrain/
 .claude/skills/unfreeze/
+
+# hyperframes skill suite (heygen-com/hyperframes, installed via `npx skills add`):
+# regenerable from skills-lock.json, don't track installed copies.
+# (.claude/skills/hyperframes-reel/ is a separate, hand-authored Nexis skill -- stays tracked.)
+.agents/skills/embedded-captions/
+.agents/skills/faceless-explainer/
+.agents/skills/figma/
+.agents/skills/general-video/
+.agents/skills/hyperframes/
+.agents/skills/hyperframes-animation/
+.agents/skills/hyperframes-cli/
+.agents/skills/hyperframes-core/
+.agents/skills/hyperframes-creative/
+.agents/skills/hyperframes-keyframes/
+.agents/skills/hyperframes-registry/
+.agents/skills/media-use/
+.agents/skills/motion-graphics/
+.agents/skills/music-to-video/
+.agents/skills/pr-to-video/
+.agents/skills/product-launch-video/
+.agents/skills/remotion-to-hyperframes/
+.agents/skills/slideshow/
+.agents/skills/talking-head-recut/
+.agents/skills/website-to-video/
+agent/skills/embedded-captions/
+agent/skills/faceless-explainer/
+agent/skills/figma/
+agent/skills/general-video/
+agent/skills/hyperframes/
+agent/skills/hyperframes-animation/
+agent/skills/hyperframes-cli/
+agent/skills/hyperframes-core/
+agent/skills/hyperframes-creative/
+agent/skills/hyperframes-keyframes/
+agent/skills/hyperframes-registry/
+agent/skills/media-use/
+agent/skills/motion-graphics/
+agent/skills/music-to-video/
+agent/skills/pr-to-video/
+agent/skills/product-launch-video/
+agent/skills/remotion-to-hyperframes/
+agent/skills/slideshow/
+agent/skills/talking-head-recut/
+agent/skills/website-to-video/
+.claude/skills/hyperframes/
