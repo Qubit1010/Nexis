@@ -83,6 +83,9 @@ archives/
 # Understand-Anything plugin output
 .understand-anything/
 
+# HyperFrames video render output (large binaries, generated per-run)
+/videos/
+
 # University files (assignments, coursework, private)
 university/
 
