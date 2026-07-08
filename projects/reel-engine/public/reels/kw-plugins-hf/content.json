@@ -1,0 +1,12 @@
+{
+  "slug": "kw-plugins-hf",
+  "voiceScript": "What if AI worked like an org chart for your whole team, not just a chat window? Most people paste generic prompts into a box. It forgets your context and drifts from how you actually work. Anthropic's open-source Knowledge Work Plugins fix that. Role-based packages of skills, slash commands, tool connectors, and sub-agents, one tuned per job. It ships with 11 ready-made roles, four building blocks each, and it is completely free. AI should make every person an expert in their domain, not sit there as a toy. Start with one workflow, not everything at once. Follow for more.",
+  "scenes": [
+    { "id": "hook", "voiceText": "What if AI worked like an org chart for your whole team, not just a chat window?" },
+    { "id": "problem", "voiceText": "Most people paste generic prompts into a box. It forgets your context and drifts from how you actually work." },
+    { "id": "solution", "voiceText": "Anthropic's open-source Knowledge Work Plugins fix that. Role-based packages of skills, slash commands, tool connectors, and sub-agents, one tuned per job." },
+    { "id": "stats", "voiceText": "It ships with 11 ready-made roles, four building blocks each, and it is completely free." },
+    { "id": "punch", "voiceText": "AI should make every person an expert in their domain, not sit there as a toy." },
+    { "id": "outro", "voiceText": "Start with one workflow, not everything at once. Follow for more." }
+  ]
+}

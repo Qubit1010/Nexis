@@ -19,9 +19,9 @@ These files contain the full picture. Read them when you need context:
 
 ## gstack
 
-`gstack` (`.claude/skills/gstack/`, github.com/garrytan/gstack) is installed. Use the `/browse` skill from gstack for all web browsing — never use `mcp__claude-in-chrome__*` tools.
+`gstack` (`.claude/skills/gstack/`, github.com/garrytan/gstack) is installed but **not a default tool** — only reach for it when it's actually the right fit for the task (e.g. `/browse` for headless browser QA), not as a standing preference over other tools or MCP servers.
 
-Available gstack skills: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`, `/plan-design-review`, `/design-consultation`, `/design-shotgun`, `/design-html`, `/review`, `/ship`, `/land-and-deploy`, `/canary`, `/benchmark`, `/browse`, `/connect-chrome`, `/qa`, `/qa-only`, `/design-review`, `/setup-browser-cookies`, `/setup-deploy`, `/setup-gbrain`, `/retro`, `/investigate`, `/document-release`, `/document-generate`, `/codex`, `/cso`, `/autoplan`, `/plan-devex-review`, `/devex-review`, `/careful`, `/freeze`, `/guard`, `/unfreeze`, `/gstack-upgrade`, `/learn`.
+Everything lives in the one `.claude/skills/gstack/` folder (office-hours, plan-ceo-review, plan-eng-review, plan-design-review, design-consultation, design-shotgun, design-html, review, ship, land-and-deploy, canary, benchmark, browse, connect-chrome, qa, qa-only, design-review, setup-browser-cookies, setup-deploy, setup-gbrain, retro, investigate, document-release, document-generate, codex, cso, autoplan, plan-devex-review, devex-review, careful, freeze, guard, unfreeze, gstack-upgrade, learn) — use it from there when needed. Don't copy individual skills out to the top level of `.claude/skills/`.
 
 `.claude/skills/gstack` is a git submodule pinned to upstream. Teammates cloning Nexis need to run:
 ```

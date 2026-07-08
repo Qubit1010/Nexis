@@ -397,6 +397,12 @@
       "skillPath": "skills/emails/SKILL.md",
       "computedHash": "24be312d773945dda1d21b52fa172a523e9cb005cb3b700fe81f787980d5381c"
     },
+    "embedded-captions": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/embedded-captions/SKILL.md",
+      "computedHash": "dceb016e6122a59bde9bd91611eb3f4c480efb6cb7aa6783505fc61407040e0c"
+    },
     "esm": {
       "source": "K-Dense-AI/scientific-agent-skills",
       "sourceType": "github",
@@ -427,6 +433,18 @@
       "skillPath": "skills/exploratory-data-analysis/SKILL.md",
       "computedHash": "3b4d3d0d02383ab2e76d22ac26d939bba9354a865f54b03965677c7eb3cd5597"
     },
+    "faceless-explainer": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/faceless-explainer/SKILL.md",
+      "computedHash": "ac903460562ac1f3452fca0264cd0dfb68ef31236201780325818596757b50d2"
+    },
+    "figma": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/figma/SKILL.md",
+      "computedHash": "3ca51d4e122edda1b73266edd0eb51d13e68e0d748eec0fe614f986772ff8100"
+    },
     "flowio": {
       "source": "K-Dense-AI/scientific-agent-skills",
       "sourceType": "github",
@@ -450,6 +468,12 @@
       "sourceType": "github",
       "skillPath": "skills/output-skill/SKILL.md",
       "computedHash": "524f7c7950c3fde726101613f630140411c7d080e63be718687f4b38f919be81"
+    },
+    "general-video": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/general-video/SKILL.md",
+      "computedHash": "25fa17eb18ee8000cfe202a1497544f1c878830c022e9ab0519ea56f9eff0f57"
     },
     "generate-image": {
       "source": "K-Dense-AI/scientific-agent-skills",
@@ -558,6 +582,48 @@
       "sourceType": "github",
       "skillPath": "skills/hugging-science/SKILL.md",
       "computedHash": "44fb2f3f59e3fdf9dcab042b61b822cacee4c55cbfe46a7d537a192194fde61b"
+    },
+    "hyperframes": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes/SKILL.md",
+      "computedHash": "e04878b6978209c27dacb1f0aa46433789810d1f5476cb620de779267b3a972e"
+    },
+    "hyperframes-animation": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-animation/SKILL.md",
+      "computedHash": "9b8a51e42d140c81b0da429d1cf3f2fda756e0aac78071ed9385993792e29ab6"
+    },
+    "hyperframes-cli": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-cli/SKILL.md",
+      "computedHash": "3f1fcaa71f14d54d5ff7883d76cc0a0f9d408e1134eb1b1074b497b623a316ba"
+    },
+    "hyperframes-core": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-core/SKILL.md",
+      "computedHash": "cc40d63ab189c5e9e8ed92e827698497533db95de6d8dadc5d905312a7169c9e"
+    },
+    "hyperframes-creative": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-creative/SKILL.md",
+      "computedHash": "659e7574a601d057ba6970518f289cd14f0f8e3f341cb712d5744135e88a9826"
+    },
+    "hyperframes-keyframes": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-keyframes/SKILL.md",
+      "computedHash": "809aae904520e0e206d2ca26dca04d879fe22466be6ac1ae312e821604195301"
+    },
+    "hyperframes-registry": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-registry/SKILL.md",
+      "computedHash": "a65dd053db01700a8c52ee2dd005807bb48962808b6dc32b59699561dea3eabd"
     },
     "hypogenic": {
       "source": "K-Dense-AI/scientific-agent-skills",
@@ -745,6 +811,12 @@
       "skillPath": "skills/medchem/SKILL.md",
       "computedHash": "aa53a99b94b1f438a62b7636f031020814cffe58e0304166d07cef329956fcc2"
     },
+    "media-use": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/media-use/SKILL.md",
+      "computedHash": "997bb52f1fa40529b71ec85c1444554ce71c46a279c283e5faae3ca28ca72983"
+    },
     "migrate-to-shoehorn": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -774,6 +846,18 @@
       "sourceType": "github",
       "skillPath": "skills/molfeat/SKILL.md",
       "computedHash": "a1a9ddbb429778e57074ffbf0c2eed94f483e888e04f8167c6389e09b64ef2cd"
+    },
+    "motion-graphics": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/motion-graphics/SKILL.md",
+      "computedHash": "5043f690cc7a4910b650487fea7adad52b5dac789007b8d8447721e420a53a1c"
+    },
+    "music-to-video": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/music-to-video/SKILL.md",
+      "computedHash": "4c2b0393392dbdc3f03c17500cb92f861a7099e58d9407bc54054debfbee0703"
     },
     "networkx": {
       "source": "K-Dense-AI/scientific-agent-skills",
@@ -979,6 +1063,12 @@
       "skillPath": "skills/pptx-posters/SKILL.md",
       "computedHash": "eb39a4d454702403119b56fcbda0f2d5b04fa9718266d4164f4922280619af0f"
     },
+    "pr-to-video": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/pr-to-video/SKILL.md",
+      "computedHash": "491333d133acf9e052cd87843c4163a3c302ca8e10dd62738c2d6df8f6eba744"
+    },
     "pricing": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -990,6 +1080,12 @@
       "sourceType": "github",
       "skillPath": "skills/primekg/SKILL.md",
       "computedHash": "8499e1c76cdad4d4d59cecc08c49c69579f3d841ea175308f7db730bba015de8"
+    },
+    "product-launch-video": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/product-launch-video/SKILL.md",
+      "computedHash": "991574c04ef8bd880a2c8e87b7edd8afa5149edd84ae58412efbd95db228ac90"
     },
     "product-marketing": {
       "source": "coreyhaines31/marketingskills",
@@ -1146,6 +1242,12 @@
       "sourceType": "github",
       "skillPath": "skills/remotion/SKILL.md",
       "computedHash": "d9457a606202a23c28b4c17b2611c65ecc09311ce46a5d93ffe8493d2e8ea4f3"
+    },
+    "remotion-to-hyperframes": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-to-hyperframes/SKILL.md",
+      "computedHash": "3f5441e7d3b935d61e98d185c96555b51f9c5229b3a77b940765bd852aa0629f"
     },
     "request-refactor-plan": {
       "source": "mattpocock/skills",
@@ -1333,6 +1435,12 @@
       "skillPath": "skills/site-architecture/SKILL.md",
       "computedHash": "cf98bb28d2a26e2e5f086f2418352975608e52907b05bc7d54a2d67b3d93b7aa"
     },
+    "slideshow": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/slideshow/SKILL.md",
+      "computedHash": "5c167185ac9791bdc73346455018db3d9d0ea23cd2b890da5eb5b163f93c8a8a"
+    },
     "sms": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -1380,6 +1488,12 @@
       "sourceType": "github",
       "skillPath": "skills/sympy/SKILL.md",
       "computedHash": "2a844fc3584566cd394918e8d280d1a9a1bee486a9f8e3fb4093b7ea0e9f97fd"
+    },
+    "talking-head-recut": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/talking-head-recut/SKILL.md",
+      "computedHash": "01ef81d35161b708d9e27fe8eb8bb431bb1228c13040de819606dddd5b82cc87"
     },
     "tdd": {
       "source": "mattpocock/skills",
@@ -1482,6 +1596,12 @@
       "sourceType": "github",
       "skillPath": "skills/video/SKILL.md",
       "computedHash": "3b222617f41c03a3eb870747977d07159bf92861c905ea6b5af2de15d51bcabb"
+    },
+    "website-to-video": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/website-to-video/SKILL.md",
+      "computedHash": "4379b216b738dfd9054e6953184a3645a341b6f7b9ef260f3090c6f06a8dc828"
     },
     "what-if-oracle": {
       "source": "K-Dense-AI/scientific-agent-skills",
