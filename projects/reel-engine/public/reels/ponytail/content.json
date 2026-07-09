@@ -1,0 +1,64 @@
+{
+  "slug": "ponytail",
+  "platform": "linkedin",
+  "title": "Ponytail",
+  "voiceScript": "What if your AI agent shipped 54% less code, and still passed every safety check? My agent kept over-building. Full React components for problems a native input solved. That is extra QA, extra edge cases, extra midnight fixes. So I installed Ponytail, a Claude Code skill. It runs a ladder before writing anything: delete, native, reuse, minimal. The result: 54% less code on average, sometimes up to 94%. Sessions run 27% faster, 20% cheaper. Discipline is subtraction, not motivation. Small PRs that review in minutes, not hours. If your agent talks itself into complexity, this ladder fixes it. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "What if your AI agent shipped 54% less code, and still passed every safety check?",
+      "headline": "Ship *54%* less code",
+      "sub": "The Ponytail Ladder"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "My agent kept over-building. Full React components for problems a native input solved. That is extra QA, extra edge cases, extra midnight fixes.",
+      "headline": "AI agents *over-build*",
+      "sub": "extra QA, extra midnight fixes",
+      "problemVariant": "chips",
+      "chips": ["custom component", "extra state", "boilerplate"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I installed Ponytail, a Claude Code skill. It runs a ladder before writing anything: delete, native, reuse, minimal.",
+      "headline": "Meet the *Ponytail* ladder",
+      "visual": "funnel",
+      "asset": "infographic.png",
+      "funnel": [
+        { "name": "Delete", "goal": "Remove the code" },
+        { "name": "Native", "goal": "Use the platform" },
+        { "name": "Reuse", "goal": "Reuse what exists" },
+        { "name": "Minimal", "goal": "Smallest new code" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "The result: 54% less code on average, sometimes up to 94%. Sessions run 27% faster, 20% cheaper.",
+      "headline": "Real benchmark gains",
+      "stats": [
+        { "value": 54, "suffix": "%", "label": "less code on average" },
+        { "value": 27, "suffix": "%", "label": "faster sessions" },
+        { "value": 20, "suffix": "%", "label": "cheaper sessions" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Discipline is subtraction, not motivation. Small PRs that review in minutes, not hours.",
+      "headline": "Discipline is *subtraction*",
+      "punchVariant": "spotlight"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "If your agent talks itself into complexity, this ladder fixes it. Follow for more.",
+      "cta": "What does your agent over-build?"
+    }
+  ],
+  "source": "LinkedIn post about Ponytail, a minimalist instruction set / plugin that makes AI coding agents think like a 'lazy senior developer.' Core philosophy: 'the best code is the code you never wrote.' Forces a ladder before writing any code: Delete (can this be solved by removing code), Native (does a built-in platform feature already do this, e.g. native <input>), Reuse (is there an existing helper/component), Minimal (smallest new code if code must be written). Stays strict on safety, security, accessibility, and validation, so minimal never means reckless. Benchmarks (Claude Code editing a FastAPI + React repo): avg 54% less code, up to 94% in over-building cases; sessions ~20% cheaper and ~27% faster from reduced token usage; 100% safety record in benchmarks vs. other terse prompts that drop safety guards. Commands: /ponytail [lite|full|ultra|off], /ponytail-review, /ponytail-audit, /ponytail-debt, /ponytail-gain. Plugin-based on Claude Code, Codex, GitHub Copilot CLI, Devin CLI, Gemini/Antigravity CLI; instruction-based via .cursorrules/.clinerules on Cursor, Windsurf, Cline, Aider; zero-setup auto-detect via AGENTS.md on CodeWhale/Swival. Post's own closing line: discipline is subtraction, not motivation.",
+  "handle": "@nexuspoint"
+}

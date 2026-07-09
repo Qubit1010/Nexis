@@ -1,0 +1,62 @@
+{
+  "slug": "sonnet-5",
+  "platform": "linkedin",
+  "title": "Claude Sonnet 5",
+  "voiceScript": "Claude Sonnet 5 just made mid-tier model a meaningless category. It works harder, and that's the trap. It emits 30% more tokens for the same text, so a lazy prompt can cost twice as much. So I treat it as the default worker, not a free-for-all. Hard budgets, step limits, explicit success criteria, every single run. Just two dollars in, ten dollars out, per million tokens, through August. One million tokens of context, scaled ten times with search. Sonnet 5 is the default worker now. Escalate only the edge cases to Opus. Set the budget before the agent runs, not after. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Claude Sonnet 5 just made mid-tier model a meaningless category.",
+      "headline": "It just beat *Opus*",
+      "sub": "Claude Sonnet 5"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "It works harder, and that's the trap. It emits 30% more tokens for the same text, so a lazy prompt can cost twice as much.",
+      "headline": "*30%* more tokens, per task",
+      "sub": "and the bill creeps up",
+      "problemVariant": "glitch"
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I treat it as the default worker, not a free-for-all. Hard budgets, step limits, explicit success criteria, every single run.",
+      "headline": "Default worker, *on a leash*",
+      "visual": "roadmap",
+      "asset": "infographic.png",
+      "roadmap": [
+        { "name": "Budget", "goal": "Hard token cap" },
+        { "name": "Steps", "goal": "Limit agent loops" },
+        { "name": "Criteria", "goal": "Explicit success" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "Just two dollars in, ten dollars out, per million tokens, through August. One million tokens of context, scaled ten times with search.",
+      "headline": "Intro price + context window",
+      "stats": [
+        { "value": 2, "prefix": "$", "label": "per million input tokens" },
+        { "value": 10, "prefix": "$", "label": "per million output tokens" },
+        { "value": 1, "suffix": "M", "label": "token context window" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Sonnet 5 is the default worker now. Escalate only the edge cases to Opus.",
+      "headline": "Escalate only the *edge cases*",
+      "punchVariant": "quote"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Set the budget before the agent runs, not after. Follow for more.",
+      "cta": "Want my agent-budget checklist?"
+    }
+  ],
+  "source": "LinkedIn post on Claude Sonnet 5. Historic result: this mid-tier model beat top-tier Opus on professional knowledge work, document analysis, and strategy-style tasks, a pricing signal not just a benchmark flex. Intro price $2/M input tokens and $10/M output tokens until Aug 31, 2026, then $3/$15. Catch: the new reasoning system emits ~30% more tokens for the same text ('works harder'), so per-task cost can land closer to 2x older Sonnet versions if prompts are vague/unbounded. Biggest practical win per the author's own builds: tool use, it follows complex terminal and coding instructions with far fewer retries. Ships with 1M token context; if the project is larger it falls back to search (RAG) to scale capacity 10x. Doing it wrong in production = uncontrolled agent loops, surprise bills, 'it followed instructions' failures from vague prompts. Doing it right = hard budgets, step limits, explicit success criteria, Sonnet 5 as the default worker, escalating only edge cases (deep physics, cybersecurity) to Opus 4.8.",
+  "handle": "@nexuspoint"
+}

@@ -1,0 +1,24 @@
+{
+  "skill_name": "hyperframes-reel",
+  "note": "Design-stage evals. A full render is a multi-minute GPU+HyperFrames pipeline, so these test the thing the user actually cares about — 'creative per post, no fixed template': given varied posts, the skill must DESIGN structurally-different 9:16 storyboards that each hold the visual genome. Each run produces STORYBOARD.md (1080x1920) + content.json (voiceScript + per-beat scenes) for its post; it does NOT render. Structural diversity is judged ACROSS the three outputs.",
+  "evals": [
+    {
+      "id": 0,
+      "name": "stat-heavy-post",
+      "prompt": "Design a hyperframes reel from this post. Do Phase A only (storyboard + voice content.json), no render. Slug: prompt-caching. CAPTION: \"Prompt caching cut our token bill by 90%. Same prompts, one config change. Here's what actually happened when we turned it on.\" SOURCE: Anthropic's prompt-caching docs + our own logs — cached input tokens are billed at 10% of the base rate, cache writes cost 25% more once, and on our agent workload (a ~12k-token system prompt reused across every call) it dropped average cost-per-call from $0.042 to $0.006 and shaved ~1.1s off latency. No image.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "conceptual-no-numbers",
+      "prompt": "Design a hyperframes reel from this post. Do Phase A only (storyboard + voice content.json), no render. Slug: context-not-prompts. CAPTION: \"Everyone's optimizing prompts. The real unlock is context engineering. Stop tuning wording and start designing what the model can see.\" SOURCE: Aleem's own take after building agentic systems — the argument is that prompt wording is a local optimum, and the bigger lever is what context (tools, memory, retrieved docs, state) the model has access to at decision time. It's a mindset/positioning piece, no benchmarks, no stats. No image.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "list-howto-with-image",
+      "prompt": "Design a hyperframes reel from this post. Do Phase A only (storyboard + voice content.json), no render. Slug: rag-chunking-mistakes. CAPTION: \"5 RAG chunking mistakes killing your retrieval quality. #3 is why your AI keeps citing the wrong section.\" SOURCE: a technical blog roundup — the five: (1) fixed-size chunks that split mid-sentence, (2) no overlap between chunks, (3) ignoring document structure/headings, (4) chunks too large so embeddings blur, (5) no metadata on chunks. The post has an infographic listing all five as a numbered card grid (assume infographic.png is available). Treat it as a listicle.",
+      "files": []
+    }
+  ]
+}

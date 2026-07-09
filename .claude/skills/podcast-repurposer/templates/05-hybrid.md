@@ -101,6 +101,12 @@ with 02's "three jobs" principle:
 | C | Facebook | Warm / community / peer | Conversational. A little more narrative. Speaks to the agent like a friend or peer. Ends with a specific, experience-based question. ~80-130 words. |
 
 Rules:
+- **POV — match the channel owner (applies to Step 4 too).** Check the voice file's Point of
+  view field. When the content publishes on the **client's own channel**, write **first
+  person**: the client is the speaker ("I've taken the 9:15pm call", "I call them the W's").
+  Never refer to the client in third person ("Brenda says...", "she asks...") and never use a
+  fan/curator voice ("one line from [client] that changed how I think..."). Use third person
+  only if a piece explicitly ships to a different channel. Editorial notes stay third person.
 - Self-contained — no "listen to the full episode" as the only CTA.
 - All three use the same segment, but the angle, rhythm, and length differ by platform. If
   all three read the same, rewrite until they don't.
@@ -189,6 +195,7 @@ Run these checks on every segment's full output before writing:
 - [ ] All 5 hooks are different archetypes / angles (not rewordings)
 - [ ] Recommended hook + 2nd option marked per segment
 - [ ] No imperative "Stop doing X" hooks, no hedging words, no filler tag-ons
+- [ ] POV matches the channel owner (first person on the client's own channel — no third-person "[client] says", no fan/curator voice)
 - [ ] Second-sentence test run on every caption and post opener (strongest line leads)
 - [ ] Caption A / B / C are genuinely platform-different (different rhythm, length, job)
 - [ ] One CTA per caption; IG caption A ends on a save trigger

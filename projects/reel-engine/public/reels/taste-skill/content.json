@@ -1,0 +1,63 @@
+{
+  "slug": "taste-skill",
+  "platform": "linkedin",
+  "title": "Taste-Skill",
+  "voiceScript": "Your AI is not bad at UI. Your prompts are. I kept asking for modern, clean, premium, and got the same bland, centered layout. The demo looked like boilerplate, and the team stopped trusting agent frontends. So I installed Taste-Skill, a Claude Code skill. It sets three dials, design variance, motion intensity, visual density, and locks them for the whole feature. My production default is four, three, six for SaaS dashboards. Crank variance and motion to eight, and users miss the primary action. Agents level up when you give them constraints, not vibes. Consistent screens, fewer design reviews, fewer rewrites. Follow for more.",
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "voiceText": "Your AI is not bad at UI. Your prompts are.",
+      "headline": "It's your *prompts*, not your AI",
+      "sub": "The Anti-Slop Framework"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "I kept asking for modern, clean, premium, and got the same bland, centered layout. The demo looked like boilerplate, and the team stopped trusting agent frontends.",
+      "headline": "Bland, centered, *boilerplate*",
+      "sub": "same result, every time",
+      "problemVariant": "crossout",
+      "chips": ["modern", "clean", "premium"]
+    },
+    {
+      "id": "solution",
+      "type": "solution",
+      "voiceText": "So I installed Taste-Skill, a Claude Code skill. It sets three dials, design variance, motion intensity, visual density, and locks them for the whole feature.",
+      "headline": "Meet *Taste-Skill*",
+      "visual": "layers",
+      "asset": "infographic.png",
+      "layers": [
+        { "name": "Design Variance", "goal": "4 of 10" },
+        { "name": "Motion Intensity", "goal": "3 of 10" },
+        { "name": "Visual Density", "goal": "6 of 10" }
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "stats",
+      "voiceText": "My production default is four, three, six for SaaS dashboards. Crank variance and motion to eight, and users miss the primary action.",
+      "headline": "My production defaults",
+      "stats": [
+        { "value": 4, "label": "design variance" },
+        { "value": 3, "label": "motion intensity" },
+        { "value": 6, "label": "visual density" }
+      ]
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Agents level up when you give them constraints, not vibes.",
+      "headline": "Constraints, not *vibes*",
+      "punchVariant": "rule"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Consistent screens, fewer design reviews, fewer rewrites. Follow for more.",
+      "cta": "Want the exact dial presets?"
+    }
+  ],
+  "source": "LinkedIn post about Taste-Skill, an 'anti-slop frontend framework' for AI coding agents (Claude Code, Cursor, Codex). Problem: agents asked for vague terms like 'modern, clean, premium' default to bland, centered, boilerplate-looking UI with generic shadows, eroding team trust in agent-generated frontends. Fix: a collection of portable Agent Skills that give guardrails for layout, typography, spacing, and motion instead of vibes. Workflow: Step 1, pick the right skill (default 'design-taste-frontend (v2)' for new UI, switch to 'redesign-skill' for fixing existing UI, also 'gpt-taste' for GPT/Codex, 'image-to-code-skill' for image-first pipelines, style variants like minimalist-skill/soft-skill/brutalist-skill). Step 2, set 3 dials each rated 1-10 and lock them for the whole feature: DESIGN_VARIANCE (centered/clean at low to asymmetric/modern at high), MOTION_INTENSITY (simple hover at low to complex scroll/magnetic animation at high), VISUAL_DENSITY (spacious at low to dense dashboard-style at high). Author's production default for SaaS dashboards: 4 (variance), 3 (motion), 6 (density) because dense info with calm motion ships faster. Pitfall: cranking variance and motion to 8 looks impressive but users miss the primary action and support tickets spike. Step 3, force full code output with 'output-skill' so there are no placeholder/TODO comments at handoff. Result: consistent screens across multiple agents, fewer design reviews, fewer last-minute rewrites. Broader principle: agents are v2 when given constraints, not vibes. Installable via npx skills add or by copying a SKILL.md file into a project.",
+  "handle": "@nexuspoint"
+}
