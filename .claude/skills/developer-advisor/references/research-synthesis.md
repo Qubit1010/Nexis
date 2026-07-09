@@ -90,7 +90,7 @@
 
 **ORM decision (TypeScript) — the two dominant choices** [s90][s92]:
 - **Prisma** — maximum abstraction, mature ecosystem, schema-first with a separate schema language + generated client. Choose for clarity and long-term team maintainability [s88][s95].
-- **Drizzle** — SQL-first, schema-in-TypeScript, smaller bundles, **faster serverless cold starts**. Choose for SQL control and edge/serverless [s88][s92]. (One team reports running Drizzle on 66 production schemas [s90].) *Note: this is Aleem's Business Brain default — see `dev-context.md`.*
+- **Drizzle** — SQL-first, schema-in-TypeScript, smaller bundles, **faster serverless cold starts**. Choose for SQL control and edge/serverless [s88][s92]. (One team reports running Drizzle on 66 production schemas [s90].)
 
 **Caching (Redis, cache-aside pattern)** [s89][s91]:
 - Hash query params → cache key, check Redis first, fall back to DB on miss, store with TTL. Offloads read-heavy load and cuts DB CPU/IOPS/egress cost [s89][s91].

@@ -1,10 +1,12 @@
 # Project Intake Framework — from vague idea to build blueprint
 
-This is the marquee flow of developer-advisor. When Aleem describes a project ("I want to build X", "a client needs Y", "how would I architect Z"), **don't jump to a stack.** Run a structured discovery, then output a blueprint. This is the pre-project decision layer — the `senior-*` skills take over at implementation time.
+This is the marquee flow of developer-advisor. When Aleem describes a project ("I want to build X", "a client needs Y", "how would I architect Z"), **the first job is to understand the problem, not to pick a stack.** Deeply understand what is being solved, for whom, at what scale, under what constraints, and what the strategy is. Only then derive the best-fit approach and structure from research. There is no house stack and no carried-over stack from another project — every recommendation is derived from THIS problem. This is the pre-project decision layer; the `senior-*` skills take over at implementation time.
+
+**Where the answer comes from:** local references first, then escalate NotebookLM → Exa live research per `research-fallback.md` when the problem is novel or the corpus is thin. Researching the specific problem is the point — never substitute a familiar default for a researched answer.
 
 ---
 
-## Step 1 — Extract what's already known (don't ask what you can infer)
+## Step 1 — Understand the problem, and extract what's already known (don't ask what you can infer)
 
 Read the prompt first and silently fill in as much of the intake grid as you can. Only ask about the gaps that would actually change the recommendation. Never fire all questions blindly — that's the fast way to annoy Aleem.
 
@@ -16,7 +18,7 @@ Read the prompt first and silently fill in as much of the intake grid as you can
 | **Project type** | Client project · internal tool · product/SaaS · one-off | Changes delivery constraints + who maintains it |
 | **Scale & load** | Expected users, read/write ratio, traffic pattern, data volume | Monolith vs services, DB choice, hosting, serverless vs containers |
 | **AI surface** | Is there an AI/LLM feature? RAG, agent, chat, automation? | Whole extra layer (Q5) + DB (pgvector) + provider choice |
-| **Constraints** | Timeline, budget, team available, must-use tech | Boring-stack vs bespoke; delegate map (Areeba/Muzammil/etc.) |
+| **Constraints** | Timeline, budget, team size/skill, must-use tech | How lean vs bespoke; whether a new tool's ramp-up is affordable |
 | **Integrations** | Auth, payments, email, third-party APIs, existing systems | Pulls in specific tools; can dictate framework |
 | **Delivery context** | Who runs it after ship, hosting preference, compliance | Hosting + handoff + maintenance model |
 | **Platform** | Web · mobile · both · desktop | Q2/Q7 branch; PWA-vs-native gate |
@@ -42,7 +44,7 @@ A blueprint is the deliverable. Structure (adapt length to project size — a sm
 One or two sentences: what we're building, for whom, and the core job. Restate so Aleem can correct a wrong assumption before you design on top of it.
 
 ### 2. Recommended architecture
-Name the pattern (almost always **modular monolith** to start — see `research-synthesis.md` Q1) and one line on why it fits this scale/team. Note the one thing that would later justify splitting a service.
+Derive the pattern from the problem's scale, data shape, and constraints (`research-synthesis.md` Q1). A modular monolith is the common right answer for an MVP, but say so because it fits THIS problem, not by reflex. Note the one condition that would later justify a different structure.
 
 ### 3. Stack table (cite the why)
 | Layer | Choice | Why (cite research) |
@@ -55,7 +57,7 @@ Name the pattern (almost always **modular monolith** to start — see `research-
 | Auth / payments / email | … | … |
 | Hosting | … | … |
 
-Pull defaults from `stack-scoreboard.md`; deviate only with a stated reason. Every row should have a "why" a client would accept.
+Match each row to the problem shape via `stack-scoreboard.md`, resolving the "why" to `[sN]` evidence. **No row is there because it's a default** — if the problem is novel or the corpus is thin, research it (`research-fallback.md`: NotebookLM → Exa) and cite what you find. Every "why" should survive a client asking "why not X instead?"
 
 ### 4. Data model sketch
 The core entities and their relationships (bullet list or a tiny ERD in prose). Enough to expose the hard modeling decisions (multi-tenancy? relational vs document? vector data?), not a full schema.
@@ -67,7 +69,7 @@ The wiring: auth flow, API contracts between frontend/backend, where the AI call
 Tailored, not generic: the testing approach (pyramid vs trophy), CI/CD baseline, security must-dos (OWASP items relevant to *this* app), CWV/a11y targets if web, eval strategy if AI. From `research-synthesis.md` Q8.
 
 ### 7. Build milestones
-A rough phased path (M0 scaffold → … → ship), sized to the timeline. Where relevant, map phases to the team (Areeba: frontend/design; Muzammil: full-stack; Muhammad Usman: automation — see `dev-context.md`) or to a Claude Code agentic workflow (spec → plan → build → review, Q6).
+A rough phased path (M0 scaffold → … → ship), sized to the timeline, sequenced so a demoable slice lands early. Frame each phase as spec → plan → build → review (agentic workflow, Q6). **Do not assign milestones to specific team members** unless the user explicitly asks "who builds what" — keep the blueprint about the build, not the org chart.
 
 ### 8. Risks & what-not-to-do
 The 2–4 things most likely to go wrong or the tempting-but-wrong choices for this project. Run the plan through `what-not-to-do.md` before delivering.
@@ -84,8 +86,9 @@ End with concrete next steps: "Want me to (a) write the spec for spec-driven dev
 - **Architecture review** ("here's my stack, critique it") — map their choices against the scoreboard, flag mismatches and `what-not-to-do` hits, recommend changes with reasons.
 
 ## Rules
+- Problem first, stack second. Every choice derived from THIS problem, never a house default or a carried-over stack.
 - Lead with the recommendation, then the reasoning (Aleem's communication style).
 - No em dashes in body text; no emojis.
-- Cite research for load-bearing calls; if the local refs don't cover it, use `notebook-live-query.md`.
-- Client-facing blueprints get NexusPoint framing (positioning AI automation as the premium wedge) and hand deep pitch/ROI work to `ai-use-case-generator` / `proposal-generator`.
-- Don't over-engineer the recommendation. The whole skill biases toward the simplest thing that ships.
+- Cite research for load-bearing calls; on a gap, escalate `research-fallback.md` (NotebookLM → Exa live research) before recommending. Never invent.
+- Client-facing framing (AI automation as the premium wedge) is about how you present value, not stack selection; hand deep pitch/ROI work to `ai-use-case-generator` / `proposal-generator`.
+- Don't over-engineer. Simplest thing that genuinely fits the problem, and name what you're deliberately leaving out.

@@ -1,26 +1,8 @@
-# Stack Scoreboard — the default-load decision file
+# Stack Scoreboard — the problem-to-decision lookup
 
-**Source basis:** distilled from `research-synthesis.md` (Q1–Q9), which cites `_research/sources.json`. This is the fast lookup layer: lead with the recommendation, then the reasoning. **Load this on every invocation.** For depth or a contested call, open the matching Q-section of `research-synthesis.md`. Treat every "default" as *the sensible starting point to deviate from with a reason*, not a law.
+**Source basis:** distilled from `research-synthesis.md` (Q1–Q9), which cites `_research/sources.json`. This is the fast lookup layer: match the problem shape to the research-backed best-fit, lead with the recommendation, then the reasoning. **Load this on every invocation.** For depth or a contested call, open the matching Q-section of `research-synthesis.md`.
 
----
-
-## The one-screen default stack (2026)
-
-For a typical NexusPoint web/AI project, the boring-wins default:
-
-| Layer | Default | When to deviate |
-|---|---|---|
-| Frontend | **Next.js (App Router) + React + TypeScript + Tailwind** | Content-only → Astro; smallest bundle → SvelteKit |
-| Backend | **Next.js server (route handlers / server actions)** or **FastAPI** if Python/AI-heavy | High sustained throughput → Go; batteries-included → Django |
-| API style | **REST public, tRPC internal** (TS monorepo) | Multi-client/relational → GraphQL; sub-10ms internal → gRPC |
-| Database | **Postgres** — Neon (serverless) or Supabase (batteries) | Document-shaped + horizontal writes → MongoDB; edge → Turso |
-| ORM | **Drizzle** (serverless/edge, SQL-first) | Max abstraction / mature ecosystem → Prisma |
-| AI layer | **Direct SDK** (Anthropic/OpenAI/Vercel AI SDK) + pgvector | Stateful multi-step agents → LangGraph; linear RAG → LangChain |
-| Hosting | **Vercel** (Next.js) | High bandwidth/edge → Cloudflare; persistent state → Railway/Render; control → Fly.io/AWS |
-| Auth | Better Auth / Clerk / Supabase Auth | — |
-| Caching | Redis (cache-aside) | — |
-
-*This mirrors Aleem's Business Brain stack (Next.js / Neon / Drizzle / Better Auth / Inngest / Resend) — see `dev-context.md`.*
+**There is no house stack. Do not carry a stack over from another project.** Every row below is a *conditional*: "if the problem looks like X, the evidence points to Y, because Z." Start from the actual problem and read off the rows that apply. Where the problem is genuinely novel or the corpus is thin, escalate per `research-fallback.md` (NotebookLM, then Exa live research) rather than forcing a familiar tool.
 
 ---
 
@@ -120,11 +102,13 @@ Pipelines < 10 min · shift-left + shift-right as a loop · trunk-based (+ featu
 
 ---
 
-## Universal defaults (apply unless a reason overrides)
+## Universal heuristics (tie-breakers, applied only after fit)
 
-1. **Boring wins** — proven stack, deep docs, big hiring pool beats novelty.
-2. **Simplest thing that works** — monolith before microservices, single call before agents, PWA before native, pgvector before a vector DB.
-3. **Match the team, not the benchmark** — pick frameworks by existing skills + hiring market first.
-4. **Postgres until proven otherwise.**
+These break ties between options that are already a good fit for the problem. They never pre-empt the problem analysis.
+
+1. **Best-fit first** — the problem's real constraints (scale, data shape, latency, team, timeline) decide the stack. Everything below is secondary.
+2. **Simplest thing that genuinely solves it** — monolith before microservices, single call before agents, PWA before native, pgvector before a vector DB. Only when each is actually sufficient for the problem.
+3. **Boring wins ties** — between two equally-fit options, proven + deep-docs + big-ecosystem beats novelty. A tie-breaker, not a stack selector.
+4. **Capability as a tie-breaker only** — when two options fit equally, a familiar one is fine; when the best-fit tool is unfamiliar, recommend it anyway and flag the ramp-up.
 5. **Ship measurably** — DORA + evals; you can't improve what you don't measure.
 6. **AI-in-the-loop, human-on-the-hook** — agents draft, humans review; a fresh agent grades, not the one that did the work.
