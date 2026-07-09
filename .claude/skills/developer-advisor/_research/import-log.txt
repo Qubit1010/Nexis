@@ -1,0 +1,329 @@
+[2026-07-08T18:25:52] === IMPORT START notebook=5c8257d3-cdb3-469e-8d8c-da500a99ea14 total=226 already=0 ===
+[2026-07-08T18:25:59] [1/226] OK https://upcloud.com/global/blog/modern-software-architecture-patterns-2026-scales-production/
+[2026-07-08T18:26:10] [2/226] OK https://westpoint.io/insights/choosing-the-right-application-architecture-monolith-microservices-and-beyond
+[2026-07-08T18:26:18] [3/226] OK https://skphd.medium.com/the-right-architecture-at-the-right-time-monolith-vs-microservices-vs-serverless-396b9f00d0c6
+[2026-07-08T18:26:25] [4/226] OK https://codelit.io/blog/backend-architecture-patterns-guide
+[2026-07-08T18:26:36] [5/226] OK https://www.ness.com/blog/modular-monolith-vs-microservices/
+[2026-07-08T18:26:43] [6/226] OK https://devlyn.ai/blog/different-type-of-software-architecture
+[2026-07-08T18:26:51] [7/226] OK https://solid-web.com/monolith-vs-microservices-2026/
+[2026-07-08T18:27:10] [8/226] OK https://levelop.dev/blog/modular-monolith-vs-microservices-decision-framework
+[2026-07-08T18:27:21] [9/226] OK https://internative.net/insights/blog/microservices-vs-monolith-decision-framework-2026
+[2026-07-08T18:27:33] [10/226] OK https://medevel.com/debugging-the-system-how-to-choose-between-monoliths-microservices-and-serverless-in-2026/
+[2026-07-08T18:27:43] [11/226] OK https://wojciechowski.app/en/articles/clean-architecture-domain-driven-design-2025
+[2026-07-08T18:27:58] [12/226] OK https://www.youngju.dev/blog/culture/2026-03-22-clean-architecture-design-patterns-guide.en
+[2026-07-08T18:28:11] [13/226] OK https://github.com/heyitskuril/system-design-for-web-developers
+[2026-07-08T18:28:24] [14/226] OK https://github.com/DFE-Digital/rsd-ddd-clean-architecture
+[2026-07-08T18:28:36] [15/226] OK https://antigravitylab.net/en/articles/app-dev/antigravity-clean-architecture-ddd-implementation-guide
+[2026-07-08T18:28:42] [16/226] FAIL rc=1 https://medium.com/@afrozmohd/domain-driven-design-and-mediatr-a-practical-guide-to-clean-architecture-0ffddca683e0 :: 18:28:42 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.589s
+[2026-07-08T18:28:52] [17/226] OK https://linhgo.com/clean-architecture-in-net-realworld-example/
+[2026-07-08T18:29:04] [18/226] OK https://rizwancode.com/blog/clean-architecture-in-dotnet
+[2026-07-08T18:29:11] [19/226] OK https://www.youtube.com/watch?v=wUOGCN5P-to
+[2026-07-08T18:29:18] [20/226] OK https://www.youtube.com/watch?v=6giotJL8bzc
+[2026-07-08T18:29:25] [21/226] OK https://www.youtube.com/watch?v=wgdBVIX9ifA
+[2026-07-08T18:29:34] [22/226] OK https://martinfowler.com/articles/microservice-trade-offs.html
+[2026-07-08T18:29:44] [23/226] OK https://martinfowler.com/microservices/
+[2026-07-08T18:29:56] [24/226] OK https://microservices.io/post/microservices/2020/02/18/why-microservices-part-1.html
+[2026-07-08T18:30:11] [25/226] OK https://microservices.io/post/microservices/2021/02/14/why-microservices-part-5-monolith.html
+[2026-07-08T18:30:22] [26/226] OK https://martinfowler.com/articles/microservices.html
+[2026-07-08T18:30:34] [27/226] OK https://www.pkgpulse.com/guides/nextjs-vs-astro-vs-sveltekit-2026
+[2026-07-08T18:30:46] [28/226] OK https://www.gigson.co/blog/sveltekit-vs-next-js-vs-astro-which-framework-wins-in-2026
+[2026-07-08T18:30:57] [29/226] OK https://socialanimal.dev/blog/modern-web-development-frameworks-2026-complete-guide-nextjs-astro-svelte-remix/
+[2026-07-08T18:31:09] [30/226] OK https://reptile.haus/journal/meta-frameworks-in-2026-next-js-vs-nuxt-vs-sveltekit-vs-astro-which-one-fits-your-project/
+[2026-07-08T18:31:20] [31/226] OK https://pockit.tools/blog/nextjs-vs-remix-vs-astro-vs-sveltekit-2026-comparison/
+[2026-07-08T18:31:29] [32/226] OK https://dev.to/contrite42/astro-vs-nextjs-vs-sveltekit-for-content-sites-in-2026-5hia
+[2026-07-08T18:31:41] [33/226] OK https://starterpick.com/guides/launchfast-nextjs-vs-svelte-vs-astro-2026
+[2026-07-08T18:31:49] [34/226] OK https://access-proof.com/accessibility/nextjs-accessibility-guide
+[2026-07-08T18:32:01] [35/226] OK https://strapi.io/blog/react-and-nextjs-in-2025-modern-best-practices
+[2026-07-08T18:32:10] [36/226] OK https://ztabs.co/blog/nextjs-app-router-best-practices
+[2026-07-08T18:32:15] [37/226] FAIL rc=1 https://www.tsx-patterns.com/2026/01/how-to-architect-accessible-tailwind.html :: 18:32:14 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 0.381s: HTTP 502
+[2026-07-08T18:32:25] [38/226] OK https://pagepro.co/blog/web-development-best-practices/
+[2026-07-08T18:32:36] [39/226] OK https://searchpod.com/knowledge-base/modern-web-stack-2026
+[2026-07-08T18:32:46] [40/226] OK https://dev.to/thekitbase/nextjs-app-router-best-practices-in-2026-2b0f
+[2026-07-08T18:32:55] [41/226] OK https://cloudrevol.com/blog/nextjs-best-practices
+[2026-07-08T18:33:08] [42/226] OK https://www.youtube.com/watch?v=D6qxfOi8344
+[2026-07-08T18:33:19] [43/226] OK https://www.youtube.com/watch?v=55i5LcrY6nU
+[2026-07-08T18:33:26] [44/226] OK https://www.youtube.com/watch?v=p9taQkF24Fs
+[2026-07-08T18:33:39] [45/226] OK https://vercel.com/blog/how-to-choose-the-best-rendering-strategy-for-your-app
+[2026-07-08T18:33:49] [46/226] OK https://vercel.com/blog/nextjs-server-side-rendering-vs-static-generation
+[2026-07-08T18:33:57] [47/226] OK https://examples.vercel.com/academy/glossary
+[2026-07-08T18:34:08] [48/226] OK https://react.dev/reference/rsc/server-components
+[2026-07-08T18:34:19] [49/226] OK https://vercel.com/blog/understanding-react-server-components
+[2026-07-08T18:34:30] [50/226] OK https://2025.stateofjs.com/en-US/libraries/front-end-frameworks/
+[2026-07-08T18:34:41] [51/226] OK https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/
+[2026-07-08T18:34:52] [52/226] OK https://2023.stateofjs.com/en-US/libraries/front-end-frameworks/
+[2026-07-08T18:35:02] [53/226] OK https://acquaintsoft.com/blog/fastapi-vs-nodejs-vs-go-performance-benchmarks
+[2026-07-08T18:35:13] [54/226] OK https://www.boundev.ai/blog/best-backend-frameworks-comparison-guide
+[2026-07-08T18:35:24] [55/226] OK https://blog.nextideatech.com/django-vs-fastapi-vs-nodejs-cto-guide/
+[2026-07-08T18:35:33] [56/226] OK https://www.adriano-junior.com/best-backend-framework-scalable-startup-2026
+[2026-07-08T18:35:40] [57/226] FAIL rc=1 https://rankingdevs.com/best-backend-tools :: 18:35:39 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.213s
+[2026-07-08T18:35:50] [58/226] OK https://apiscout.dev/guides/trpc-vs-graphql-vs-rest-2026
+[2026-07-08T18:36:07] [59/226] OK https://www.codewithseb.com/blog/graphql-vs-rest-vs-trpc-data-layer-guide
+[2026-07-08T18:36:18] [60/226] OK https://pockit.tools/blog/rest-graphql-trpc-grpc-api-comparison-2026/
+[2026-07-08T18:36:27] [61/226] OK https://zendevy.com/en/architecture/rest-vs-graphql-vs-trpc-2026/
+[2026-07-08T18:36:34] [62/226] FAIL rc=1 https://www.alexcloudstar.com/blog/rest-vs-graphql-vs-trpc-api-design-2026/ :: 18:36:34 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.184s
+[2026-07-08T18:36:45] [63/226] OK https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
+[2026-07-08T18:36:59] [64/226] OK https://blog.postman.com/rest-api-best-practices/
+[2026-07-08T18:37:10] [65/226] OK https://env.dev/guides/rest-api-best-practices
+[2026-07-08T18:37:19] [66/226] OK https://buildwithfern.com/post/api-design-best-practices-guide
+[2026-07-08T18:37:29] [67/226] OK https://www.netguru.com/blog/api-design-best-practices
+[2026-07-08T18:37:42] [68/226] OK https://github.com/microsoft/api-guidelines/blob/master/Guidelines.md
+[2026-07-08T18:37:57] [69/226] OK https://zuplo.com/learning-center/api-design-patterns
+[2026-07-08T18:38:07] [70/226] OK https://www.systemdesignhandbook.com/guides/rest-api-design/
+[2026-07-08T18:38:13] [71/226] OK https://www.youtube.com/watch?v=XopFgJzVY-o
+[2026-07-08T18:38:20] [72/226] OK https://www.youtube.com/watch?v=n0WqcmfnRaw
+[2026-07-08T18:38:28] [73/226] OK https://www.youtube.com/watch?v=IvsANO0qZEg
+[2026-07-08T18:38:38] [74/226] OK https://learn.microsoft.com/en-us/azure/architecture/microservices/design/api-design
+[2026-07-08T18:38:48] [75/226] OK https://cloud.google.com/discover/what-is-rest-api
+[2026-07-08T18:39:14] [76/226] OK https://cloud.google.com/blog/products/api-management/api-design-which-version-of-versioning-is-right-for-you
+[2026-07-08T18:39:24] [77/226] OK https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-implementation
+[2026-07-08T18:39:34] [78/226] OK https://scihub101.com/web-development/database-choice-2026
+[2026-07-08T18:39:43] [79/226] OK https://tinyctl.dev/roundups/database-software/
+[2026-07-08T18:39:52] [80/226] OK https://trybuildpilot.com/422-how-to-choose-database-for-your-app-2026
+[2026-07-08T18:40:04] [81/226] OK https://www.pkgpulse.com/guides/neon-vs-supabase-vs-turso-2026
+[2026-07-08T18:40:12] [82/226] OK https://klymentiev.com/blog/serverless-postgres-guide
+[2026-07-08T18:40:23] [83/226] OK https://apiscout.dev/guides/best-serverless-database-apis-2026
+[2026-07-08T18:40:58] [84/226] FAIL rc=1 https://www.techplained.com/turso-vs-neon-vs-planetscale :: 18:40:58 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 30.224s:
+[2026-07-08T18:41:06] [85/226] OK https://techsy.io/en/blog/neon-vs-planetscale-vs-turso
+[2026-07-08T18:41:17] [86/226] OK https://techoral.com/db/mongodb-vs-postgresql.html
+[2026-07-08T18:41:27] [87/226] OK https://www.altexsoft.com/blog/vector-databases-compared/
+[2026-07-08T18:41:39] [88/226] OK https://www.prisma.io/docs/orm/more/comparisons/prisma-and-drizzle
+[2026-07-08T18:41:50] [89/226] OK https://redis.io/tutorials/howtos/solutions/microservices/caching/
+[2026-07-08T18:42:11] [90/226] OK https://ecosire.com/blog/drizzle-orm-vs-prisma-2026-comparison
+[2026-07-08T18:42:22] [91/226] OK https://redis.io/blog/guide-to-cache-optimization-strategies/
+[2026-07-08T18:42:32] [92/226] OK https://makerkit.dev/blog/tutorials/drizzle-vs-prisma
+[2026-07-08T18:42:42] [93/226] OK https://oneuptime.com/blog/post/2026-03-31-redis-design-redis-keys-for-query-patterns/view
+[2026-07-08T18:42:52] [94/226] OK https://redis.io/docs/latest/develop/use-cases/prefetch-cache/nodejs/
+[2026-07-08T18:42:58] [95/226] FAIL rc=1 https://tech-insider.org/drizzle-vs-prisma-2026/ :: 18:42:57 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 0.382s: HTTP 502
+[2026-07-08T18:43:03] [96/226] FAIL rc=1 https://www.youtube.com/watch?v=vTffXwujRdE :: 18:43:03 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 0.439s: HTTP 502
+[2026-07-08T18:43:10] [97/226] OK https://www.youtube.com/watch?v=E_YvO_uxb2U
+[2026-07-08T18:43:16] [98/226] OK https://www.youtube.com/watch?v=N-6Lotg0vUU
+[2026-07-08T18:43:28] [99/226] OK https://supabase.com/docs/guides/database/partitions
+[2026-07-08T18:43:38] [100/226] OK https://planetscale.com/blog/approaches-to-tenancy-in-postgres
+[2026-07-08T18:43:46] [101/226] OK https://planetscale.com/blog/schema-design-101-relational-databases
+[2026-07-08T18:43:58] [102/226] OK https://supabase.com/blog/read-replicas-vs-bigger-compute
+[2026-07-08T18:44:09] [103/226] OK https://supabase.com/docs/guides/database/query-optimization
+[2026-07-08T18:44:20] [104/226] OK https://valuestreamai.com/blog/ai-system-architecture-essential-guide-2026
+[2026-07-08T18:44:28] [105/226] OK https://dzone.com/articles/llm-architecture-patterns-rag-to-agentic
+[2026-07-08T18:44:38] [106/226] OK https://rapidclaw.dev/blog/rag-architecture-ai-agents-guide-2026
+[2026-07-08T18:44:50] [107/226] OK https://mastra.ai/articles/agentic-rag
+[2026-07-08T18:45:05] [108/226] FAIL rc=1 https://medium.com/@reetesh043/rag-vs-agents-which-ai-architecture-should-you-actually-use-fd3ea4860264 :: 18:45:05 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.560s
+[2026-07-08T18:45:17] [109/226] FAIL rc=1 https://www.whatgenerativeai.com/docs/genai-playbook/agents-memory-rag/ :: 18:45:16 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.537s
+[2026-07-08T18:45:23] [110/226] FAIL rc=1 https://www.oreilly.com/radar/the-ai-agents-stack-2026-edition/ :: 18:45:23 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.974s
+[2026-07-08T18:45:29] [111/226] FAIL rc=1 https://www.knowlee.ai/blog/ai-agent-platform-architecture-2026 :: 18:45:29 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.332s
+[2026-07-08T18:45:37] [112/226] FAIL rc=1 https://internative.net/insights/blog/agentic-ai-architecture-2026 :: 18:45:36 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.481s
+[2026-07-08T18:45:43] [113/226] FAIL rc=1 https://llmbestpractices.com/ai-agents/structured-output :: 18:45:42 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.446s
+[2026-07-08T18:45:49] [114/226] FAIL rc=1 https://www.droptica.com/blog/langchain-vs-langgraph-vs-raw-openai-how-choose-your-rag-stack :: 18:45:49 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.348s
+[2026-07-08T18:45:55] [115/226] FAIL rc=1 https://activewizards.com/blog/langgraph-vs-direct-api-orchestration-when-the-framework-earns-its-weight/ :: 18:45:55 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.462s
+[2026-07-08T18:46:00] [116/226] FAIL rc=1 https://docs.langchain.com/oss/python/concepts/products :: 18:46:00 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.151s
+[2026-07-08T18:46:08] [117/226] FAIL rc=1 https://aiexpert.ee/en/articles/agent-framework-choice :: 18:46:08 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.658s
+[2026-07-08T18:46:13] [118/226] FAIL rc=1 https://www.speakeasy.com/blog/ai-agent-framework-comparison :: 18:46:13 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.206s
+[2026-07-08T18:46:19] [119/226] FAIL rc=1 https://www.kalviumlabs.ai/blog/langgraph-vs-langchain-production/ :: 18:46:19 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.269s
+[2026-07-08T18:46:25] [120/226] FAIL rc=1 https://www.technolynx.com/post/llm-orchestration-frameworks-comparison :: 18:46:25 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.400s
+[2026-07-08T18:46:31] [121/226] FAIL rc=1 https://apiscout.dev/guides/langchain-vs-crewai-vs-openai-agents-sdk-2026 :: 18:46:31 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.125s
+[2026-07-08T18:46:37] [122/226] FAIL rc=1 https://www.youtube.com/watch?v=aiKDe2GWKI8 :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=aiKDe2GWKI8" }
+[2026-07-08T18:46:42] [123/226] FAIL rc=1 https://www.youtube.com/watch?v=4KiiKQ9RVvA :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=4KiiKQ9RVvA" }
+[2026-07-08T18:46:48] [124/226] FAIL rc=1 https://www.youtube.com/watch?v=3wqsiyf4qeo :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=3wqsiyf4qeo" }
+[2026-07-08T18:46:54] [125/226] FAIL rc=1 https://www.anthropic.com/engineering/building-effective-agents :: 18:46:53 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.104s
+[2026-07-08T18:46:59] [126/226] FAIL rc=1 https://developers.openai.com/api/docs/guides/evaluation-best-practices :: 18:46:59 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.349s
+[2026-07-08T18:47:05] [127/226] FAIL rc=1 https://huggingface.co/learn/cookbook/agent_rag :: 18:47:05 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.245s
+[2026-07-08T18:47:11] [128/226] FAIL rc=1 https://huggingface.co/learn/cookbook/en/advanced_rag :: 18:47:10 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.204s
+[2026-07-08T18:47:16] [129/226] FAIL rc=1 https://huggingface.co/blog/darielnoel/simple-rag-retrieve-tools :: 18:47:16 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.357s
+[2026-07-08T18:47:22] [130/226] FAIL rc=1 https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents :: 18:47:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.230s
+[2026-07-08T18:47:28] [131/226] FAIL rc=1 https://www.fundesk.io/context-engineering-techniques-ai-coding-agents-2026 :: 18:47:28 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.398s
+[2026-07-08T18:47:34] [132/226] FAIL rc=1 https://amux.io/guides/context-engineering/ :: 18:47:34 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.368s
+[2026-07-08T18:47:39] [133/226] FAIL rc=1 https://claudefa.st/blog/guide/mechanics/context-engineering :: 18:47:39 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.225s
+[2026-07-08T18:47:45] [134/226] FAIL rc=1 https://www.codewithseb.com/blog/context-engineering-claude-code-guide :: 18:47:45 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.185s
+[2026-07-08T18:47:50] [135/226] FAIL rc=1 https://packmind.com/context-engineering-ai-coding/context-engineering-best-practices/ :: 18:47:50 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.328s
+[2026-07-08T18:48:06] [136/226] FAIL rc=1 https://claudecodeguides.com/context-engineering-claude-code-complete-guide-2026/ :: 18:48:06 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.203s
+[2026-07-08T18:48:14] [137/226] FAIL rc=1 https://code.visualstudio.com/docs/agents/guides/context-engineering-guide :: 18:48:14 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.243s
+[2026-07-08T18:48:20] [138/226] FAIL rc=1 https://amux.io/guides/spec-driven-development/ :: 18:48:20 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.178s
+[2026-07-08T18:48:26] [139/226] FAIL rc=1 https://planu.dev/en/blog/spec-driven-development-guide :: 18:48:26 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.261s
+[2026-07-08T18:48:32] [140/226] FAIL rc=1 https://code.claude.com/docs/en/best-practices.md :: 18:48:32 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.242s
+[2026-07-08T18:48:37] [141/226] FAIL rc=1 https://www.generative.inc/the-complete-claude-code-guide-2026-planning-context-engineering-and-high-leverage-development :: 18:48:37 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.212s
+[2026-07-08T18:48:45] [142/226] FAIL rc=1 https://www.sitepoint.com/claude-code-workflows-a-practical-pattern-guide/ :: 18:48:45 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 3.423s
+[2026-07-08T18:48:51] [143/226] FAIL rc=1 https://www.theproductionline.ai/blog/claude-code-best-practices-complete-guide :: 18:48:51 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.171s
+[2026-07-08T18:48:56] [144/226] FAIL rc=1 https://hamy.xyz/blog/2026-02_code-reviews-claude-subagents :: 18:48:56 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.412s
+[2026-07-08T18:49:02] [145/226] FAIL rc=1 https://steeleobrienconsulting.com/blog/claude-code-masterclass-every-trick-and-workflow/ :: 18:49:02 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.502s
+[2026-07-08T18:49:08] [146/226] FAIL rc=1 https://adambernard.com/kb/ai/models/specific-models/claude/ai-models-specific-models-claude-claude-code-operators-guide/ :: 18:49:08 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.129s
+[2026-07-08T18:49:13] [147/226] FAIL rc=1 https://keonarmin.com/blog/claude-code-configs :: 18:49:13 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.375s
+[2026-07-08T18:49:19] [148/226] FAIL rc=1 https://www.youtube.com/watch?v=CnfJKGY6rko :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=CnfJKGY6rko" }
+[2026-07-08T18:49:25] [149/226] FAIL rc=1 https://www.youtube.com/watch?v=gv0WHhKelSE :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=gv0WHhKelSE" }
+[2026-07-08T18:49:30] [150/226] FAIL rc=1 https://www.youtube.com/watch?v=VJjAQYNGzwU :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=VJjAQYNGzwU" }
+[2026-07-08T18:49:36] [151/226] FAIL rc=1 https://www.anthropic.com/engineering/claude-code-best-practices :: 18:49:36 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.194s
+[2026-07-08T18:49:42] [152/226] FAIL rc=1 https://docs.anthropic.com/en/docs/claude-code/overview :: 18:49:42 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.211s
+[2026-07-08T18:49:48] [153/226] FAIL rc=1 https://resources.anthropic.com/hubfs/Claude%20Code%20Advanced%20Patterns_%20Subagents,%20MCP,%20and%20Scaling%20to%20Real%20Codebases.pdf :: 18:49:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.426s
+[2026-07-08T18:49:53] [154/226] FAIL rc=1 https://www.anthropic.com/webinars/claude-code-foundations :: 18:49:53 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.198s
+[2026-07-08T18:49:59] [155/226] FAIL rc=1 https://www.applighter.com/blog/react-native-performance-benchmarks-expo-vs-bare-vs-flutter-vs-native-2026 :: 18:49:59 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.241s
+[2026-07-08T18:50:05] [156/226] FAIL rc=1 https://techradiant.co/resources/cross-platform-vs-native-apps-2026-performance-data/ :: 18:50:04 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.235s
+[2026-07-08T18:50:11] [157/226] FAIL rc=1 https://codevia.software/blog/native-vs-flutter-vs-react-native-2026 :: 18:50:11 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.322s
+[2026-07-08T18:50:16] [158/226] FAIL rc=1 https://byteager.ca/blog/react-native-vs-flutter-vs-native-mobile-2026 :: 18:50:16 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.212s
+[2026-07-08T18:50:22] [159/226] FAIL rc=1 https://fullscale.io/blog/flutter-vs-react-native/ :: 18:50:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.263s
+[2026-07-08T18:50:28] [160/226] FAIL rc=1 https://www.youngju.dev/blog/culture/2026-05-25-cross-platform-mobile-react-native-flutter-expo-capacitor-tauri-kotlin-mp-lynx-2026-deep-dive.en :: 18:50:28 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.306s
+[2026-07-08T18:50:34] [161/226] FAIL rc=1 https://primocys.com/blog/flutter-vs-react-native-vs-native-app-development/ :: 18:50:33 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.329s
+[2026-07-08T18:50:39] [162/226] FAIL rc=1 https://yusmpgroup.com/blog/web-app-vs-native-vs-pwa-2026 :: 18:50:39 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.285s
+[2026-07-08T18:50:45] [163/226] FAIL rc=1 https://www.code24x7.com/blog/progressive-web-app-vs-native-app :: 18:50:45 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.270s
+[2026-07-08T18:50:51] [164/226] FAIL rc=1 https://particle41.com/insights/native-app-or-pwa-2026/ :: 18:50:51 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.310s
+[2026-07-08T18:51:05] [165/226] FAIL rc=1 https://syftnex.com/blog/pwa-vs-native-app-vs-website-which-one-does-your-business-actually-need/ :: 18:51:05 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.179s
+[2026-07-08T18:51:15] [166/226] FAIL rc=1 https://137foundry.com/articles/progressive-web-apps-vs-native-apps-choosing-the-right-mobile-strategy :: 18:51:15 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.538s
+[2026-07-08T18:51:21] [167/226] FAIL rc=1 https://www.magicbell.com/blog/pwa-vs-native-app-when-to-build-installable-progressive-web-app :: 18:51:21 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.308s
+[2026-07-08T18:51:27] [168/226] FAIL rc=1 https://www.youtube.com/watch?v=Frs4XdJ6Kws :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=Frs4XdJ6Kws" }
+[2026-07-08T18:51:34] [169/226] FAIL rc=1 https://www.youtube.com/watch?v=_NVJuaKxPEY :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=_NVJuaKxPEY" }
+[2026-07-08T18:51:40] [170/226] FAIL rc=1 https://www.youtube.com/watch?v=U3UywC4i5jo :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=U3UywC4i5jo" }
+[2026-07-08T18:51:46] [171/226] FAIL rc=1 https://docs.expo.dev/guides/new-architecture/ :: 18:51:46 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.218s
+[2026-07-08T18:51:53] [172/226] FAIL rc=1 https://expo.dev/blog/upgrading-to-sdk-55 :: 18:51:53 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.317s
+[2026-07-08T18:51:58] [173/226] FAIL rc=1 https://expo.dev/blog/out-with-the-old-in-with-the-new-architecture :: 18:51:58 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.319s
+[2026-07-08T18:52:04] [174/226] FAIL rc=1 https://docs.expo.dev/guides/local-app-production :: 18:52:04 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.235s
+[2026-07-08T18:52:10] [175/226] FAIL rc=1 https://www.netguru.com/blog/best-software-development-practices :: 18:52:10 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.462s
+[2026-07-08T18:52:15] [176/226] FAIL rc=1 https://whatisthesalary.com/guides/software-engineering-practices/ :: 18:52:15 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.377s
+[2026-07-08T18:52:21] [177/226] FAIL rc=1 https://dev.to/apprecode/cicd-best-practices-in-2026-how-to-build-fast-secure-and-reliable-pipelines-1681 :: 18:52:21 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.388s
+[2026-07-08T18:52:27] [178/226] FAIL rc=1 https://contextqa.com/blog/shift-left-or-shift-right-testing/ :: 18:52:27 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.445s
+[2026-07-08T18:52:33] [179/226] FAIL rc=1 https://codersera.com/blog/software-testing-complete-guide-2026/ :: 18:52:32 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.240s
+[2026-07-08T18:52:38] [180/226] FAIL rc=1 https://totalshiftleft.com/blog/shift-left-testing-complete-guide :: 18:52:38 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.338s
+[2026-07-08T18:52:44] [181/226] FAIL rc=1 https://fullscale.io/blog/software-testing-trends/ :: 18:52:44 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.254s
+[2026-07-08T18:52:51] [182/226] FAIL rc=1 https://totalshiftleft.ai/blog/test-automation-best-practices-devops :: 18:52:51 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.528s
+[2026-07-08T18:52:56] [183/226] FAIL rc=1 https://neuralwired.com/2026/06/29/cicd-pipeline-enterprise-best-practices/ :: 18:52:56 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.244s
+[2026-07-08T18:53:02] [184/226] FAIL rc=1 https://cicd.watch/learn/dora-metrics :: 18:53:02 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.284s
+[2026-07-08T18:53:09] [185/226] FAIL rc=1 https://martinfowler.com/articles/practical-test-pyramid.html :: 18:53:09 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.972s
+[2026-07-08T18:53:14] [186/226] FAIL rc=1 https://circleci.com/blog/testing-pyramid/ :: 18:53:14 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.264s
+[2026-07-08T18:53:20] [187/226] FAIL rc=1 https://mergify.com/learn/trunk-based-development :: 18:53:20 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.407s
+[2026-07-08T18:53:26] [188/226] FAIL rc=1 https://github.com/khasky/testing-strategy-playbook-2026 :: 18:53:26 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.237s
+[2026-07-08T18:53:31] [189/226] FAIL rc=1 https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development :: 18:53:31 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.232s
+[2026-07-08T18:53:37] [190/226] FAIL rc=1 https://gitlab.ifi.uzh.ch/help/development/testing_guide/testing_strategy.md :: 18:53:37 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.572s
+[2026-07-08T18:53:43] [191/226] FAIL rc=1 https://www.youngju.dev/blog/culture/2026-03-25-software-testing-strategies-unit-integration-e2e-guide-2025.en :: 18:53:43 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.195s
+[2026-07-08T18:53:48] [192/226] FAIL rc=1 https://dev.to/michael_burry_00/integration-vs-e2e-system-testing-a-practical-testing-pyramid-playbook-with-real-ci-pipelines-1del :: 18:53:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.278s
+[2026-07-08T18:53:55] [193/226] FAIL rc=1 https://www.youtube.com/watch?v=iVEnrC4KnYg :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=iVEnrC4KnYg" }
+[2026-07-08T18:54:02] [194/226] FAIL rc=1 https://www.youtube.com/watch?v=fAXRDllelZ0 :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=fAXRDllelZ0" }
+[2026-07-08T18:54:09] [195/226] FAIL rc=1 https://www.youtube.com/watch?v=w6Y19RWawc0 :: {   "error": true,   "code": "ERROR",   "message": "API returned no data for URL: https://www.youtube.com/watch?v=w6Y19RWawc0" }
+[2026-07-08T18:54:16] [196/226] FAIL rc=1 https://dora.dev/guides/dora-metrics/ :: 18:54:15 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.278s
+[2026-07-08T18:54:22] [197/226] FAIL rc=1 https://dora.dev/research/2022/dora-report/2022-dora-accelerate-state-of-devops-report.pdf :: 18:54:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.568s
+[2026-07-08T18:54:28] [198/226] FAIL rc=1 https://dora.dev/research/2021/dora-report/2021-dora-accelerate-state-of-devops-report.pdf :: 18:54:27 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.408s
+[2026-07-08T18:54:34] [199/226] FAIL rc=1 https://dora.dev/capabilities/continuous-delivery/ :: 18:54:33 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.560s
+[2026-07-08T18:54:39] [200/226] FAIL rc=1 https://dora.dev/capabilities/pervasive-security/ :: 18:54:39 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.523s
+[2026-07-08T18:54:45] [201/226] FAIL rc=1 https://dora.dev/capabilities/streamlining-change-approval/ :: 18:54:45 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.243s
+[2026-07-08T18:54:51] [202/226] FAIL rc=1 https://www.youngju.dev/blog/culture/2026-05-14-paas-comparison-2026-vercel-render-fly-railway-northflank-coolify-deep-dive.en :: 18:54:51 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.225s
+[2026-07-08T18:54:57] [203/226] FAIL rc=1 https://hub.causo.ai/guides/vercel-vs-alternatives-founders-2026 :: 18:54:57 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.265s
+[2026-07-08T18:55:03] [204/226] FAIL rc=1 https://www.sideguysolutions.com/shareables/vercel-vs-netlify-vs-cloudflare-pages-vs-render-vs-railway-vs-fly-honest-comparison.html :: 18:55:02 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.242s
+[2026-07-08T18:55:08] [205/226] FAIL rc=1 https://hunchbite.com/guides/vercel-vs-aws-deployment :: 18:55:08 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.253s
+[2026-07-08T18:55:14] [206/226] FAIL rc=1 https://toolchew.com/en/best-deploy-platform-fullstack/ :: 18:55:14 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.301s
+[2026-07-08T18:55:20] [207/226] FAIL rc=1 https://cadence.withremote.ai/blog/best-deployment-platforms-startups :: 18:55:20 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.284s
+[2026-07-08T18:55:26] [208/226] FAIL rc=1 https://www.webtoolkit.tech/guides/best-hosting-for-side-projects-2026 :: 18:55:26 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.293s
+[2026-07-08T18:55:32] [209/226] FAIL rc=1 https://www.birjob.com/blog/paas-comparison-railway-render-fly-vercel-2026 :: 18:55:32 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.363s
+[2026-07-08T18:55:38] [210/226] FAIL rc=1 https://www.techplained.com/serverless-vs-containers :: 18:55:37 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.166s
+[2026-07-08T18:55:43] [211/226] FAIL rc=1 https://beek.cloud/when-to-choose-serverless-vs-containers-a-technical-decision :: 18:55:43 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.344s
+[2026-07-08T18:58:05] === CLEAN START errors=108 of 208 ===
+[2026-07-08T19:06:33]   [96/108] DELETE FAIL 3b8debfa-f859-4285-ac33-8eac50fb75b8 :: 19:06:30 ERROR [notebooklm._core] RPC DELETE_SOURCE failed after 0.381s: HTTP 502
+[2026-07-08T19:07:35] === CLEAN DONE deleted=107 failed=1 ===
+[2026-07-08T19:09:13] === IMPORT START notebook=5c8257d3-cdb3-469e-8d8c-da500a99ea14 total=199 (skipped 27 youtube) ready=100 pace=3.0s ===
+[2026-07-08T19:09:18] [16/199] FAIL rc=1 https://medium.com/@afrozmohd/domain-driven-design-and-mediatr-a-practical-guide-to-clean-architecture-0ffddca683e0 :: 19:09:18 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.488s
+[2026-07-08T19:09:26] [34/199] FAIL rc=1 https://www.tsx-patterns.com/2026/01/how-to-architect-accessible-tailwind.html :: 19:09:26 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.288s
+[2026-07-08T19:09:34] [51/199] FAIL rc=1 https://rankingdevs.com/best-backend-tools :: 19:09:34 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.531s
+[2026-07-08T19:09:41] [56/199] FAIL rc=1 https://www.alexcloudstar.com/blog/rest-vs-graphql-vs-trpc-api-design-2026/ :: 19:09:41 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.231s
+[2026-07-08T19:09:49] [75/199] FAIL rc=1 https://www.techplained.com/turso-vs-neon-vs-planetscale :: 19:09:49 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.562s
+[2026-07-08T19:09:56] [86/199] FAIL rc=1 https://tech-insider.org/drizzle-vs-prisma-2026/ :: 19:09:56 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.522s
+[2026-07-08T19:10:04] [96/199] FAIL rc=1 https://medium.com/@reetesh043/rag-vs-agents-which-ai-architecture-should-you-actually-use-fd3ea4860264 :: 19:10:04 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.256s
+[2026-07-08T19:10:11] [97/199] FAIL rc=1 https://www.whatgenerativeai.com/docs/genai-playbook/agents-memory-rag/ :: 19:10:11 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.211s
+[2026-07-08T19:10:19] [98/199] FAIL rc=1 https://www.oreilly.com/radar/the-ai-agents-stack-2026-edition/ :: 19:10:18 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.269s
+[2026-07-08T19:10:26] [99/199] FAIL rc=1 https://www.knowlee.ai/blog/ai-agent-platform-architecture-2026 :: 19:10:26 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.335s
+[2026-07-08T19:10:34] [100/199] FAIL rc=1 https://internative.net/insights/blog/agentic-ai-architecture-2026 :: 19:10:33 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.299s
+[2026-07-08T19:10:41] [101/199] FAIL rc=1 https://llmbestpractices.com/ai-agents/structured-output :: 19:10:41 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.332s
+[2026-07-08T19:10:49] [102/199] FAIL rc=1 https://www.droptica.com/blog/langchain-vs-langgraph-vs-raw-openai-how-choose-your-rag-stack :: 19:10:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.558s
+[2026-07-08T19:10:56] [103/199] FAIL rc=1 https://activewizards.com/blog/langgraph-vs-direct-api-orchestration-when-the-framework-earns-its-weight/ :: 19:10:56 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.174s
+[2026-07-08T19:11:03] [104/199] FAIL rc=1 https://docs.langchain.com/oss/python/concepts/products :: 19:11:03 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.461s
+[2026-07-08T19:11:11] [105/199] FAIL rc=1 https://aiexpert.ee/en/articles/agent-framework-choice :: 19:11:11 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.257s
+[2026-07-08T19:11:18] [106/199] FAIL rc=1 https://www.speakeasy.com/blog/ai-agent-framework-comparison :: 19:11:18 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.308s
+[2026-07-08T19:11:26] [107/199] FAIL rc=1 https://www.kalviumlabs.ai/blog/langgraph-vs-langchain-production/ :: 19:11:26 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.316s
+[2026-07-08T19:11:33] [108/199] FAIL rc=1 https://www.technolynx.com/post/llm-orchestration-frameworks-comparison :: 19:11:33 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.309s
+[2026-07-08T19:11:40] [109/199] FAIL rc=1 https://apiscout.dev/guides/langchain-vs-crewai-vs-openai-agents-sdk-2026 :: 19:11:40 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.312s
+[2026-07-08T19:11:48] [110/199] FAIL rc=1 https://www.anthropic.com/engineering/building-effective-agents :: 19:11:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.271s
+[2026-07-08T19:11:55] [111/199] FAIL rc=1 https://developers.openai.com/api/docs/guides/evaluation-best-practices :: 19:11:55 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.325s
+[2026-07-08T19:12:04] [112/199] FAIL rc=1 https://huggingface.co/learn/cookbook/agent_rag :: 19:12:04 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.524s
+[2026-07-08T19:12:12] [113/199] FAIL rc=1 https://huggingface.co/learn/cookbook/en/advanced_rag :: 19:12:11 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.630s
+[2026-07-08T19:12:19] [114/199] FAIL rc=1 https://huggingface.co/blog/darielnoel/simple-rag-retrieve-tools :: 19:12:19 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.361s
+[2026-07-08T19:12:27] [115/199] FAIL rc=1 https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents :: 19:12:26 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.523s
+[2026-07-08T19:12:35] [116/199] FAIL rc=1 https://www.fundesk.io/context-engineering-techniques-ai-coding-agents-2026 :: 19:12:35 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.332s
+[2026-07-08T19:12:42] [117/199] FAIL rc=1 https://amux.io/guides/context-engineering/ :: 19:12:42 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.398s
+[2026-07-08T19:12:51] [118/199] FAIL rc=1 https://claudefa.st/blog/guide/mechanics/context-engineering :: 19:12:51 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.363s
+[2026-07-08T19:12:59] [119/199] FAIL rc=1 https://www.codewithseb.com/blog/context-engineering-claude-code-guide :: 19:12:59 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.483s
+[2026-07-08T19:13:07] [120/199] FAIL rc=1 https://packmind.com/context-engineering-ai-coding/context-engineering-best-practices/ :: 19:13:07 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.289s
+[2026-07-08T19:13:14] [121/199] FAIL rc=1 https://claudecodeguides.com/context-engineering-claude-code-complete-guide-2026/ :: 19:13:14 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.343s
+[2026-07-08T19:13:22] [122/199] FAIL rc=1 https://code.visualstudio.com/docs/agents/guides/context-engineering-guide :: 19:13:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.333s
+[2026-07-08T19:13:29] [123/199] FAIL rc=1 https://amux.io/guides/spec-driven-development/ :: 19:13:29 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.236s
+[2026-07-08T19:13:37] [124/199] FAIL rc=1 https://planu.dev/en/blog/spec-driven-development-guide :: 19:13:37 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.369s
+[2026-07-08T19:13:44] [125/199] FAIL rc=1 https://code.claude.com/docs/en/best-practices.md :: 19:13:44 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.216s
+[2026-07-08T19:13:51] [126/199] FAIL rc=1 https://www.generative.inc/the-complete-claude-code-guide-2026-planning-context-engineering-and-high-leverage-development :: 19:13:51 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.224s
+[2026-07-08T19:13:59] [127/199] FAIL rc=1 https://www.sitepoint.com/claude-code-workflows-a-practical-pattern-guide/ :: 19:13:58 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.295s
+[2026-07-08T19:14:07] [128/199] FAIL rc=1 https://www.theproductionline.ai/blog/claude-code-best-practices-complete-guide :: 19:14:07 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.470s
+[2026-07-08T19:14:14] [129/199] FAIL rc=1 https://hamy.xyz/blog/2026-02_code-reviews-claude-subagents :: 19:14:14 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.373s
+[2026-07-08T19:14:22] [130/199] FAIL rc=1 https://steeleobrienconsulting.com/blog/claude-code-masterclass-every-trick-and-workflow/ :: 19:14:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.335s
+[2026-07-08T19:14:30] [131/199] FAIL rc=1 https://adambernard.com/kb/ai/models/specific-models/claude/ai-models-specific-models-claude-claude-code-operators-guide/ :: 19:14:29 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.371s
+[2026-07-08T19:14:37] [132/199] FAIL rc=1 https://keonarmin.com/blog/claude-code-configs :: 19:14:37 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.446s
+[2026-07-08T19:14:45] [133/199] FAIL rc=1 https://www.anthropic.com/engineering/claude-code-best-practices :: 19:14:45 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.934s
+[2026-07-08T19:14:59] [134/199] FAIL rc=1 https://docs.anthropic.com/en/docs/claude-code/overview :: 19:14:59 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.927s
+[2026-07-08T19:15:07] [135/199] FAIL rc=1 https://resources.anthropic.com/hubfs/Claude%20Code%20Advanced%20Patterns_%20Subagents,%20MCP,%20and%20Scaling%20to%20Real%20Codebases.pdf :: 19:15:07 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.287s
+[2026-07-08T19:15:15] [136/199] FAIL rc=1 https://www.anthropic.com/webinars/claude-code-foundations :: 19:15:15 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.591s
+[2026-07-08T19:15:23] [137/199] FAIL rc=1 https://www.applighter.com/blog/react-native-performance-benchmarks-expo-vs-bare-vs-flutter-vs-native-2026 :: 19:15:23 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.329s
+[2026-07-08T19:15:30] [138/199] FAIL rc=1 https://techradiant.co/resources/cross-platform-vs-native-apps-2026-performance-data/ :: 19:15:30 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.402s
+[2026-07-08T19:15:38] [139/199] FAIL rc=1 https://codevia.software/blog/native-vs-flutter-vs-react-native-2026 :: 19:15:38 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.266s
+[2026-07-08T19:15:46] [140/199] FAIL rc=1 https://byteager.ca/blog/react-native-vs-flutter-vs-native-mobile-2026 :: 19:15:46 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.783s
+[2026-07-08T19:15:53] [141/199] FAIL rc=1 https://fullscale.io/blog/flutter-vs-react-native/ :: 19:15:53 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.380s
+[2026-07-08T19:16:01] [142/199] FAIL rc=1 https://www.youngju.dev/blog/culture/2026-05-25-cross-platform-mobile-react-native-flutter-expo-capacitor-tauri-kotlin-mp-lynx-2026-deep-dive.en :: 19:16:01 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.301s
+[2026-07-08T19:16:09] [143/199] FAIL rc=1 https://primocys.com/blog/flutter-vs-react-native-vs-native-app-development/ :: 19:16:09 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.325s
+[2026-07-08T19:16:17] [144/199] FAIL rc=1 https://yusmpgroup.com/blog/web-app-vs-native-vs-pwa-2026 :: 19:16:17 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.259s
+[2026-07-08T19:16:25] [145/199] FAIL rc=1 https://www.code24x7.com/blog/progressive-web-app-vs-native-app :: 19:16:24 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.281s
+[2026-07-08T19:16:32] [146/199] FAIL rc=1 https://particle41.com/insights/native-app-or-pwa-2026/ :: 19:16:32 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.329s
+[2026-07-08T19:16:40] [147/199] FAIL rc=1 https://syftnex.com/blog/pwa-vs-native-app-vs-website-which-one-does-your-business-actually-need/ :: 19:16:40 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.383s
+[2026-07-08T19:16:49] [148/199] FAIL rc=1 https://137foundry.com/articles/progressive-web-apps-vs-native-apps-choosing-the-right-mobile-strategy :: 19:16:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.730s
+[2026-07-08T19:16:56] [149/199] FAIL rc=1 https://www.magicbell.com/blog/pwa-vs-native-app-when-to-build-installable-progressive-web-app :: 19:16:56 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.333s
+[2026-07-08T19:17:07] [150/199] FAIL rc=1 https://docs.expo.dev/guides/new-architecture/ :: 19:17:07 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 4.252s
+[2026-07-08T19:17:16] [151/199] FAIL rc=1 https://expo.dev/blog/upgrading-to-sdk-55 :: 19:17:16 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.590s
+[2026-07-08T19:17:25] [152/199] FAIL rc=1 https://expo.dev/blog/out-with-the-old-in-with-the-new-architecture :: 19:17:24 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.131s
+[2026-07-08T19:17:33] [153/199] FAIL rc=1 https://docs.expo.dev/guides/local-app-production :: 19:17:33 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.253s
+[2026-07-08T19:17:42] [154/199] FAIL rc=1 https://www.netguru.com/blog/best-software-development-practices :: 19:17:42 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.662s
+[2026-07-08T19:17:50] [155/199] FAIL rc=1 https://whatisthesalary.com/guides/software-engineering-practices/ :: 19:17:50 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.500s
+[2026-07-08T19:17:58] [156/199] FAIL rc=1 https://dev.to/apprecode/cicd-best-practices-in-2026-how-to-build-fast-secure-and-reliable-pipelines-1681 :: 19:17:58 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.431s
+[2026-07-08T19:18:10] [157/199] FAIL rc=1 https://contextqa.com/blog/shift-left-or-shift-right-testing/ :: 19:18:10 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.408s
+[2026-07-08T19:18:19] [158/199] FAIL rc=1 https://codersera.com/blog/software-testing-complete-guide-2026/ :: 19:18:19 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.219s
+[2026-07-08T19:18:29] [159/199] FAIL rc=1 https://totalshiftleft.com/blog/shift-left-testing-complete-guide :: 19:18:28 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.461s
+[2026-07-08T19:18:37] [160/199] FAIL rc=1 https://fullscale.io/blog/software-testing-trends/ :: 19:18:37 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.539s
+[2026-07-08T19:18:45] [161/199] FAIL rc=1 https://totalshiftleft.ai/blog/test-automation-best-practices-devops :: 19:18:44 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.299s
+[2026-07-08T19:18:52] [162/199] FAIL rc=1 https://neuralwired.com/2026/06/29/cicd-pipeline-enterprise-best-practices/ :: 19:18:52 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.430s
+[2026-07-08T19:19:01] [163/199] FAIL rc=1 https://cicd.watch/learn/dora-metrics :: 19:19:01 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.355s
+[2026-07-08T19:19:09] [164/199] FAIL rc=1 https://martinfowler.com/articles/practical-test-pyramid.html :: 19:19:09 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.618s
+[2026-07-08T19:19:17] [165/199] FAIL rc=1 https://circleci.com/blog/testing-pyramid/ :: 19:19:17 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.394s
+[2026-07-08T19:19:25] [166/199] FAIL rc=1 https://mergify.com/learn/trunk-based-development :: 19:19:25 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.379s
+[2026-07-08T19:19:33] [167/199] FAIL rc=1 https://github.com/khasky/testing-strategy-playbook-2026 :: 19:19:33 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.339s
+[2026-07-08T19:19:41] [168/199] FAIL rc=1 https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development :: 19:19:41 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.301s
+[2026-07-08T19:19:49] [169/199] FAIL rc=1 https://gitlab.ifi.uzh.ch/help/development/testing_guide/testing_strategy.md :: 19:19:49 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.518s
+[2026-07-08T19:19:57] [170/199] FAIL rc=1 https://www.youngju.dev/blog/culture/2026-03-25-software-testing-strategies-unit-integration-e2e-guide-2025.en :: 19:19:57 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.281s
+[2026-07-08T19:20:06] [171/199] FAIL rc=1 https://dev.to/michael_burry_00/integration-vs-e2e-system-testing-a-practical-testing-pyramid-playbook-with-real-ci-pipelines-1del :: 19:20:06 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.933s
+[2026-07-08T19:20:14] [172/199] FAIL rc=1 https://dora.dev/guides/dora-metrics/ :: 19:20:14 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.544s
+[2026-07-08T19:20:22] [173/199] FAIL rc=1 https://dora.dev/research/2022/dora-report/2022-dora-accelerate-state-of-devops-report.pdf :: 19:20:22 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.485s
+[2026-07-08T19:20:31] [174/199] FAIL rc=1 https://dora.dev/research/2021/dora-report/2021-dora-accelerate-state-of-devops-report.pdf :: 19:20:31 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.083s
+[2026-07-08T19:20:39] [175/199] FAIL rc=1 https://dora.dev/capabilities/continuous-delivery/ :: 19:20:39 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.407s
+[2026-07-08T19:20:48] [176/199] FAIL rc=1 https://dora.dev/capabilities/pervasive-security/ :: 19:20:48 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.504s
+[2026-07-08T19:20:57] [177/199] FAIL rc=1 https://dora.dev/capabilities/streamlining-change-approval/ :: 19:20:57 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.637s
+[2026-07-08T19:21:08] [178/199] FAIL rc=1 https://www.youngju.dev/blog/culture/2026-05-14-paas-comparison-2026-vercel-render-fly-railway-northflank-coolify-deep-dive.en :: 19:21:08 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.433s
+[2026-07-08T19:21:16] [179/199] FAIL rc=1 https://hub.causo.ai/guides/vercel-vs-alternatives-founders-2026 :: 19:21:16 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.645s
+[2026-07-08T19:21:24] [180/199] FAIL rc=1 https://www.sideguysolutions.com/shareables/vercel-vs-netlify-vs-cloudflare-pages-vs-render-vs-railway-vs-fly-honest-comparison.html :: 19:21:24 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.670s
+[2026-07-08T19:21:32] [181/199] FAIL rc=1 https://hunchbite.com/guides/vercel-vs-aws-deployment :: 19:21:32 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.463s
+[2026-07-08T19:21:39] [182/199] FAIL rc=1 https://toolchew.com/en/best-deploy-platform-fullstack/ :: 19:21:39 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.373s
+[2026-07-08T19:21:47] [183/199] FAIL rc=1 https://cadence.withremote.ai/blog/best-deployment-platforms-startups :: 19:21:47 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.325s
+[2026-07-08T19:21:55] [184/199] FAIL rc=1 https://www.webtoolkit.tech/guides/best-hosting-for-side-projects-2026 :: 19:21:55 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.291s
+[2026-07-08T19:22:02] [185/199] FAIL rc=1 https://www.birjob.com/blog/paas-comparison-railway-render-fly-vercel-2026 :: 19:22:02 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.245s
+[2026-07-08T19:22:10] [186/199] FAIL rc=1 https://www.techplained.com/serverless-vs-containers :: 19:22:10 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.553s
+[2026-07-08T19:22:19] [187/199] FAIL rc=1 https://beek.cloud/when-to-choose-serverless-vs-containers-a-technical-decision :: 19:22:18 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.407s
+[2026-07-08T19:22:27] [188/199] FAIL rc=1 https://deploywise.dev/compare :: 19:22:27 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 2.104s
+[2026-07-08T19:22:34] [189/199] FAIL rc=1 https://bytepane.com/faq/edge-runtime-vercel-fluid-vs-cloudflare-workers-2026-benchmarks/ :: 19:22:34 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.320s
+[2026-07-08T19:22:43] [190/199] FAIL rc=1 https://azin.run/blog/paas-pricing-comparison :: 19:22:43 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.458s
+[2026-07-08T19:22:51] [191/199] FAIL rc=1 https://www.techplained.com/best-hosting-nextjs :: 19:22:51 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.404s
+[2026-07-08T19:22:59] [192/199] FAIL rc=1 https://www.techplained.com/cloudflare-vs-vercel-vs-netlify :: 19:22:59 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.586s
+[2026-07-08T19:23:06] [193/199] FAIL rc=1 https://techconcepts.org/blog/vercel-vs-cloudflare-pages :: 19:23:06 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.599s
+[2026-07-08T19:23:14] [194/199] FAIL rc=1 https://agentdeals.dev/hosting-pricing :: 19:23:14 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.426s
+[2026-07-08T19:23:23] [195/199] FAIL rc=1 https://vercel.com/resources/when-to-add-serverless-to-your-kubernetes-architecture :: 19:23:23 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.471s
+[2026-07-08T19:23:30] [196/199] FAIL rc=1 https://blog.railway.app/p/deploy-full-stack-typescript-apps-architectures-execution-models-and-deployment-choices :: 19:23:30 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.389s
+[2026-07-08T19:23:38] [197/199] FAIL rc=1 https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/edge-functions-choosing.html :: 19:23:38 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.519s
+[2026-07-08T19:23:46] [198/199] FAIL rc=1 https://docs.aws.amazon.com/decision-guides/latest/fargate-or-lambda/fargate-or-lambda.html :: 19:23:45 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.419s
+[2026-07-08T19:23:58] [199/199] FAIL rc=1 https://aws.amazon.com/getting-started/decision-guides/modern-apps-strategy-on-aws-how-to-choose/ :: 19:23:57 ERROR [notebooklm._core] RPC ADD_SOURCE failed after 1.447s
+[2026-07-08T19:24:01] === IMPORT DONE ok=0 fail=110 skip=89 ===
+[2026-07-08T19:25:25] === CLEAN START errors=110 of 210 ===
+[2026-07-08T19:35:43] === CLEAN DONE deleted=110 failed=0 ===
