@@ -1,0 +1,23 @@
+{
+  "skill_name": "post-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "run the post creator on the next draft row in my schedule",
+      "expected_output": "Reads the next actionable row from SM Schedule via schedule.py, runs Exa research to find 8-12 sources, loads those URLs into a NotebookLM notebook and asks it for a detailed Formal response and a Simplified one, generates the post per the row's mode/pillars/format from the Formal source, pauses at the checkpoint, then (on OK) saves one Google Doc with SIX REAL TABS named LinkedIn / LinkedIn - Infographics Prompt / Instagram / Instagram - Carousel Prompt / Source / Source_S (each independently clickable in the Doc's left sidebar, not just headings in one tab), and writes the doc URL into the row's Final Video/Post cell with Status=Draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "create the post for the GLM 5.2 row in my posting schedule",
+      "expected_output": "Finds the row by topic via schedule.py find, runs the same end-to-end flow. The row has no Reference URL, so research runs from topic + description alone and still produces a usable source pack. Design Template cell names both a LinkedIn and Instagram template; both prompt sets are emitted.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "process my schedule - the mastering claude code row",
+      "expected_output": "Finds the row; its Design Template cell is blank or names a template number with no folder on disk. The skill surfaces the template inventory (LinkedIn {1,2,4,9,10,11}, Instagram {1,2,6,10}) and asks which to use rather than guessing. The rest of the flow (research, post, doc, write-back) proceeds normally once answered.",
+      "files": []
+    }
+  ]
+}

@@ -5,8 +5,13 @@ Reads content JSON from stdin, creates a Google Doc with proper formatting
 (headings, body text, bullets, tables), and saves it to the Nexis Content
 folder in Google Drive.
 
+Two payload shapes:
+    {"title": "...", "sections": [...]}                 single doc, one (default) tab
+    {"title": "...", "tabs": [{"title","sections"},...]} one real Google Docs tab per entry
+
 Usage:
     echo '{"title":"...","sections":[...]}' | python save_content.py
+    echo '{"title":"...","tabs":[{"title":"LinkedIn","sections":[...]},...]}' | python save_content.py
     cat content.json | python save_content.py
 
 Output (stdout):
@@ -159,12 +164,79 @@ def create_doc(title, folder_id):
     return doc_id
 
 
-def build_text_requests(sections):
-    """Build batchUpdate requests for all text content.
+def get_default_tab_id(doc_id):
+    """A freshly-created doc has one default tab. Read its id (usually 't.0',
+    but don't hardcode it)."""
+    doc = run_gws([
+        "docs", "documents", "get",
+        "--params", json.dumps({"documentId": doc_id, "includeTabsContent": True})
+    ])
+    tabs = doc.get("tabs", [])
+    if tabs:
+        return tabs[0]["tabProperties"]["tabId"]
+    return None
+
+
+def rename_tab(doc_id, tab_id, title):
+    run_gws(
+        ["docs", "documents", "batchUpdate",
+         "--params", json.dumps({"documentId": doc_id})],
+        json_body={"requests": [{
+            "updateDocumentTabProperties": {
+                "tabProperties": {"tabId": tab_id, "title": title},
+                "fields": "title"
+            }
+        }]}
+    )
+
+
+def create_tab(doc_id, title):
+    """Add a new tab to the document and rename it. Returns the new tabId."""
+    result = run_gws(
+        ["docs", "documents", "batchUpdate",
+         "--params", json.dumps({"documentId": doc_id})],
+        json_body={"requests": [{"addDocumentTab": {}}]}
+    )
+    tab_id = result["replies"][0]["addDocumentTab"]["tabProperties"]["tabId"]
+    rename_tab(doc_id, tab_id, title)
+    return tab_id
+
+
+def write_tab_content(doc_id, tab_id, sections, tab_title):
+    """Insert all sections' content into one tab, chunked to stay under the
+    Windows command line length limit."""
+    text_requests, table_locations = build_text_requests(sections, tab_id=tab_id)
+    if text_requests:
+        for i, chunk in enumerate(chunk_by_size(text_requests)):
+            try:
+                run_gws(
+                    ["docs", "documents", "batchUpdate",
+                     "--params", json.dumps({"documentId": doc_id})],
+                    json_body={"requests": chunk}
+                )
+            except RuntimeError as e:
+                error_exit(f"Failed to insert content into tab '{tab_title}' (chunk {i + 1}): {e}")
+    if table_locations:
+        insert_tables(doc_id, table_locations, tab_id=tab_id)
+
+
+def build_text_requests(sections, tab_id=None):
+    """Build batchUpdate requests for all text content in one tab.
+
+    tab_id: when set (multi-tab documents), stamped onto every location/range so
+    the request targets that tab instead of the document's default tab.
 
     Returns (requests_list, table_locations) where table_locations is a list of
     (insert_index, table_data) tuples for second-pass table insertion.
     """
+    def loc(index):
+        return {"index": index, "tabId": tab_id} if tab_id else {"index": index}
+
+    def rng(start, end):
+        if tab_id:
+            return {"startIndex": start, "endIndex": end, "tabId": tab_id}
+        return {"startIndex": start, "endIndex": end}
+
     requests = []
     table_locations = []
     idx = 1  # Google Docs body starts at index 1
@@ -180,7 +252,7 @@ def build_text_requests(sections):
             heading_text = heading + "\n"
             requests.append({
                 "insertText": {
-                    "location": {"index": idx},
+                    "location": loc(idx),
                     "text": heading_text
                 }
             })
@@ -188,7 +260,7 @@ def build_text_requests(sections):
             named_style = style_map.get(level, "HEADING_1")
             requests.append({
                 "updateParagraphStyle": {
-                    "range": {"startIndex": idx, "endIndex": idx + len(heading_text)},
+                    "range": rng(idx, idx + len(heading_text)),
                     "paragraphStyle": {"namedStyleType": named_style},
                     "fields": "namedStyleType"
                 }
@@ -199,13 +271,13 @@ def build_text_requests(sections):
             body_text = body + "\n"
             requests.append({
                 "insertText": {
-                    "location": {"index": idx},
+                    "location": loc(idx),
                     "text": body_text
                 }
             })
             requests.append({
                 "updateParagraphStyle": {
-                    "range": {"startIndex": idx, "endIndex": idx + len(body_text)},
+                    "range": rng(idx, idx + len(body_text)),
                     "paragraphStyle": {"namedStyleType": "NORMAL_TEXT"},
                     "fields": "namedStyleType"
                 }
@@ -217,20 +289,20 @@ def build_text_requests(sections):
                 bullet_text = bullet + "\n"
                 requests.append({
                     "insertText": {
-                        "location": {"index": idx},
+                        "location": loc(idx),
                         "text": bullet_text
                     }
                 })
                 requests.append({
                     "updateParagraphStyle": {
-                        "range": {"startIndex": idx, "endIndex": idx + len(bullet_text)},
+                        "range": rng(idx, idx + len(bullet_text)),
                         "paragraphStyle": {"namedStyleType": "NORMAL_TEXT"},
                         "fields": "namedStyleType"
                     }
                 })
                 requests.append({
                     "createParagraphBullets": {
-                        "range": {"startIndex": idx, "endIndex": idx + len(bullet_text)},
+                        "range": rng(idx, idx + len(bullet_text)),
                         "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"
                     }
                 })
@@ -251,20 +323,20 @@ def build_text_requests(sections):
 
             requests.append({
                 "insertText": {
-                    "location": {"index": idx},
+                    "location": loc(idx),
                     "text": bullet_text
                 }
             })
             requests.append({
                 "updateParagraphStyle": {
-                    "range": {"startIndex": idx, "endIndex": idx + len(bullet_text)},
+                    "range": rng(idx, idx + len(bullet_text)),
                     "paragraphStyle": {"namedStyleType": "NORMAL_TEXT"},
                     "fields": "namedStyleType"
                 }
             })
             requests.append({
                 "createParagraphBullets": {
-                    "range": {"startIndex": idx, "endIndex": idx + len(bullet_text)},
+                    "range": rng(idx, idx + len(bullet_text)),
                     "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"
                 }
             })
@@ -272,7 +344,7 @@ def build_text_requests(sections):
             if label_len > 0:
                 requests.append({
                     "updateTextStyle": {
-                        "range": {"startIndex": idx, "endIndex": idx + label_len},
+                        "range": rng(idx, idx + label_len),
                         "textStyle": {"bold": True},
                         "fields": "bold"
                     }
@@ -284,7 +356,7 @@ def build_text_requests(sections):
             placeholder = "\n"
             requests.append({
                 "insertText": {
-                    "location": {"index": idx},
+                    "location": loc(idx),
                     "text": placeholder
                 }
             })
@@ -293,7 +365,7 @@ def build_text_requests(sections):
         spacing = "\n"
         requests.append({
             "insertText": {
-                "location": {"index": idx},
+                "location": loc(idx),
                 "text": spacing
             }
         })
@@ -302,7 +374,38 @@ def build_text_requests(sections):
     return requests, table_locations
 
 
-def insert_tables(doc_id, table_locations):
+def chunk_by_size(requests, max_chars=6000):
+    """Group batchUpdate requests so each chunk's serialized JSON stays under
+    max_chars, regardless of request count (Windows command line limit is ~8191
+    chars total, and the gws/node wrapper adds its own overhead)."""
+    chunks = []
+    current, current_len = [], 0
+    for req in requests:
+        req_len = len(json.dumps(req))
+        if current and current_len + req_len > max_chars:
+            chunks.append(current)
+            current, current_len = [], 0
+        current.append(req)
+        current_len += req_len
+    if current:
+        chunks.append(current)
+    return chunks
+
+
+def get_tab_body_content(doc_id, tab_id):
+    """Read a specific tab's body content (multi-tab documents nest content under
+    tabs[].documentTab.body instead of the top-level body)."""
+    doc = run_gws([
+        "docs", "documents", "get",
+        "--params", json.dumps({"documentId": doc_id, "includeTabsContent": True})
+    ])
+    for tab in doc.get("tabs", []):
+        if tab.get("tabProperties", {}).get("tabId") == tab_id:
+            return tab.get("documentTab", {}).get("body", {}).get("content", [])
+    return []
+
+
+def insert_tables(doc_id, table_locations, tab_id=None):
     """Second pass: insert and populate tables."""
     if not table_locations:
         return
@@ -317,13 +420,14 @@ def insert_tables(doc_id, table_locations):
         num_rows = len(rows) + 1
         num_cols = len(headers)
 
+        table_location = {"index": insert_idx, "tabId": tab_id} if tab_id else {"index": insert_idx}
         try:
             run_gws(
                 ["docs", "documents", "batchUpdate",
                  "--params", json.dumps({"documentId": doc_id})],
                 json_body={"requests": [{
                     "insertTable": {
-                        "location": {"index": insert_idx},
+                        "location": table_location,
                         "rows": num_rows,
                         "columns": num_cols
                     }
@@ -334,15 +438,18 @@ def insert_tables(doc_id, table_locations):
             continue
 
         try:
-            doc = run_gws([
-                "docs", "documents", "get",
-                "--params", json.dumps({"documentId": doc_id})
-            ])
+            if tab_id:
+                body_content = get_tab_body_content(doc_id, tab_id)
+            else:
+                doc = run_gws([
+                    "docs", "documents", "get",
+                    "--params", json.dumps({"documentId": doc_id})
+                ])
+                body_content = doc.get("body", {}).get("content", [])
         except RuntimeError as e:
             print(f"Warning: Failed to read doc for table population: {e}", file=sys.stderr)
             continue
 
-        body_content = doc.get("body", {}).get("content", [])
         target_table = None
         for element in body_content:
             if "table" in element:
@@ -379,19 +486,20 @@ def insert_tables(doc_id, table_locations):
                         continue
 
                 if text:
+                    cell_loc = {"index": cell_start, "tabId": tab_id} if tab_id else {"index": cell_start}
                     cell_requests.append({
                         "insertText": {
-                            "location": {"index": cell_start},
+                            "location": cell_loc,
                             "text": text
                         }
                     })
                     if row_idx == 0:
+                        cell_range = ({"startIndex": cell_start, "endIndex": cell_start + len(text), "tabId": tab_id}
+                                       if tab_id else
+                                       {"startIndex": cell_start, "endIndex": cell_start + len(text)})
                         cell_requests.append({
                             "updateTextStyle": {
-                                "range": {
-                                    "startIndex": cell_start,
-                                    "endIndex": cell_start + len(text)
-                                },
+                                "range": cell_range,
                                 "textStyle": {"bold": True},
                                 "fields": "bold"
                             }
@@ -438,18 +546,41 @@ def normalize_text(value):
     return value
 
 
+def validate_section(section, label):
+    if not isinstance(section, dict):
+        error_exit(f"Section {label} must be a JSON object")
+    if not any(k in section for k in ["heading", "body", "bullets", "bold_bullets", "table"]):
+        error_exit(f"Section {label} has no content (needs heading, body, bullets, bold_bullets, or table)")
+
+
 def validate_content(content):
+    """Two payload shapes:
+    - {"title", "sections": [...]}  -> single doc, all sections in one (default) tab.
+    - {"title", "tabs": [{"title", "sections": [...]}, ...]}  -> one real Docs tab
+      per entry, in order. Use this when the content has natural top-level groupings
+      (e.g. LinkedIn / Instagram / Source) that should be separately navigable.
+    """
     if not isinstance(content, dict):
         error_exit("Input must be a JSON object")
     if "title" not in content:
         error_exit("Missing required field: 'title'")
+
+    if "tabs" in content:
+        if not content["tabs"]:
+            error_exit("'tabs' array is empty")
+        for i, tab in enumerate(content["tabs"]):
+            if not isinstance(tab, dict) or "title" not in tab:
+                error_exit(f"tabs[{i}] must be an object with a 'title'")
+            if not tab.get("sections"):
+                error_exit(f"tabs[{i}] ('{tab.get('title')}') has no 'sections'")
+            for j, section in enumerate(tab["sections"]):
+                validate_section(section, f"tabs[{i}].sections[{j}]")
+        return
+
     if "sections" not in content or not content["sections"]:
-        error_exit("Missing or empty 'sections' array")
+        error_exit("Missing or empty 'sections' array (or use 'tabs' for a multi-tab doc)")
     for i, section in enumerate(content["sections"]):
-        if not isinstance(section, dict):
-            error_exit(f"Section {i} must be a JSON object")
-        if not any(k in section for k in ["heading", "body", "bullets", "table"]):
-            error_exit(f"Section {i} has no content (needs heading, body, bullets, or table)")
+        validate_section(section, str(i))
 
 
 def main():
@@ -466,28 +597,36 @@ def main():
     content = normalize_text(content)
 
     title = content["title"]
-    sections = content["sections"]
-
     folder_id = find_or_create_folder()
     doc_id = create_doc(title, folder_id)
 
-    text_requests, table_locations = build_text_requests(sections)
-    if text_requests:
-        # Batch into chunks of 30 to avoid Windows command line length limits
-        chunk_size = 30
-        for i in range(0, len(text_requests), chunk_size):
-            chunk = text_requests[i:i + chunk_size]
-            try:
-                run_gws(
-                    ["docs", "documents", "batchUpdate",
-                     "--params", json.dumps({"documentId": doc_id})],
-                    json_body={"requests": chunk}
-                )
-            except RuntimeError as e:
-                error_exit(f"Failed to insert text content (chunk {i // chunk_size + 1}): {e}")
-
-    if table_locations:
-        insert_tables(doc_id, table_locations)
+    if "tabs" in content:
+        default_tab_id = get_default_tab_id(doc_id)
+        for i, tab_spec in enumerate(content["tabs"]):
+            tab_title = tab_spec["title"]
+            if i == 0 and default_tab_id:
+                tab_id = default_tab_id
+                rename_tab(doc_id, tab_id, tab_title)
+            else:
+                tab_id = create_tab(doc_id, tab_title)
+            write_tab_content(doc_id, tab_id, tab_spec["sections"], tab_title)
+    else:
+        text_requests, table_locations = build_text_requests(content["sections"])
+        if text_requests:
+            # Chunk by serialized size, not request count: a handful of long bullets
+            # (e.g. full image-generation prompts) can blow the Windows command line
+            # limit well before 30 requests are reached.
+            for i, chunk in enumerate(chunk_by_size(text_requests)):
+                try:
+                    run_gws(
+                        ["docs", "documents", "batchUpdate",
+                         "--params", json.dumps({"documentId": doc_id})],
+                        json_body={"requests": chunk}
+                    )
+                except RuntimeError as e:
+                    error_exit(f"Failed to insert text content (chunk {i + 1}): {e}")
+        if table_locations:
+            insert_tables(doc_id, table_locations)
 
     doc_url = f"https://docs.google.com/document/d/{doc_id}/edit"
     print(json.dumps({
