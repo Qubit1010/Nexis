@@ -101,6 +101,7 @@ Median site conversion **2.35%** (top 10%: 11.45%); B2B lead-gen landing pages *
 | Wed | Behind-the-build / native video or Reel | IG Reel + LinkedIn video |
 | Thu | Contrarian take / industry POV | LinkedIn text post |
 | Fri | Tool breakdown / comparison content | LinkedIn + blog |
+| Daily | IG Story, 1-3 slides (see content-engine `story-strategy.md`) | Instagram |
 | Daily | 10-15 min substantive engagement (comments/DMs) | All |
 | Weekend | Repurpose the week's best performer | Cross-platform |
 

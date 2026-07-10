@@ -47,7 +47,10 @@ sync. Numbers are targets to beat, measured against real performance.
 - **Hashtags:** 3-5 niche.
 
 ### Story (BOFU - direct, low-reach)
-- Max 2 sentences. Quick behind-the-build or reaction. Optional question/poll sticker.
+- Max 2 sentences per slide. Daily, 1-3 slides/day. At least one slide/day carries an
+  interaction mechanic (poll/quiz/Q&A/this-or-that). Same-day reshare of every carousel/Reel/
+  static post is a non-negotiable daily habit. Full cadence, pillar mapping, and promo mix:
+  `story-strategy.md`.
 
 ### Instagram funnel
 Reels (awareness) -> Carousels (saves/trust) -> Stories (direct). Reels rarely convert
