@@ -43,6 +43,10 @@ ml-runs/
 projects/nexuspoint-landing/
 projects/*-landing/
 
+# Expense Calculator: its own standalone git repo (github.com/Qubit1010/expense-calculator-pwa),
+# deployed separately to Vercel. Not part of the Nexis monorepo.
+projects/ExpenseCalculator/
+
 # Webots robotics projects (large, generated worlds/archives)
 webots-projects/
 webots-projects.rar
