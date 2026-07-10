@@ -56,11 +56,13 @@ two of the five. The editor reviews from a shortlist, not a flat list.
 Format each post for its platform's native reading behavior:
 
 **LinkedIn:** Open with the most interesting sentence (bold claim, specific moment, or short
-question — never a scene-setter). One sentence per line. Short sentences, white space,
-no link in body. ~150-300 words. Optimize for dwell.
+question — never a scene-setter). Punchy opener and CTA, one idea per line; the body writes
+in short 1-3 sentence paragraphs, not one sentence per line throughout — vary cadence so it
+reads as a person talking, not a list. White space, no link in body. ~150-300 words.
+Optimize for dwell.
 
-**Facebook:** Conversational opening, slightly more narrative. Still use line breaks — no walls
-of text. ~100-250 words.
+**Facebook:** Conversational opening, slightly more narrative. Same cadence rule as LinkedIn
+above. Still use line breaks — no walls of text. ~100-250 words.
 
 **Both platforms:** end every post with a specific, experience-based question the reader can
 answer in one sentence ("What's the toughest deal situation you've navigated?") — never a
@@ -69,8 +71,8 @@ generic "Thoughts?" / "What do you think?".
 Label every post at the start of the line:
 
 ```
-1. **LinkedIn**: <post — one sentence per line, line-break formatted>
-2. **Facebook**: <post — conversational, line breaks, peer tone>
+1. **LinkedIn**: <post — punchy opener/CTA, 1-3 sentence body paragraphs, line-break formatted>
+2. **Facebook**: <post — conversational, 1-3 sentence body paragraphs, line breaks, peer tone>
 3. ...
 ```
 
