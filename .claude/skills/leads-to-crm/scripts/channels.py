@@ -346,8 +346,11 @@ class FacebookChannel(Channel):
     label = "Facebook"
     source_sheet_id = "1ao7_Aam6bsI6D4xk-Mfc-EM54WZYivN9petcZU2P68U"
     source_tab = "Sheet1"
-    crm_sheet_id = "1h4QcK1yPwHVRfvasB1mjPWgXl84XSpcQKeIL3L3Dp8A"
-    crm_tab = "Sheet1"
+    # 2026-07-10: the old crm_sheet_id (1h4QcK1yPwHVRfvasB1mjPWgXl84XSpcQKeIL3L3Dp8A) was
+    # confirmed trashed in Drive -- pushes were silently landing somewhere Aleem couldn't see.
+    # This is the live "NexusPoint Facebook Outreach CRM" he actually uses, confirmed by ID.
+    crm_sheet_id = "1GkbzCclQsg83P_l5EgKxjceW-Y_7fQ1lByJUGH1aaNg"
+    crm_tab = "Leads"
     message_style = "fb_dm"
     source_aliases = {
         "name": "full_name", "full name": "full_name",
@@ -453,16 +456,122 @@ class FacebookChannel(Channel):
         return ""
 
     def crm_record(self, lead, message, today):
+        # Header on the live CRM sheet: Name, Profile URL, Company, Role, Location,
+        # Source Post, Bio, Touch 1-4 Message, Status, Date Added (no First Name column,
+        # confirmed 2026-07-10 against the actual sheet -- see crm_sheet_id note above).
         return {
             "Name": lead["name"],
-            "First Name": lead["first_name"],
             "Company": lead["company"],
             "Role": lead["title"],
-            "URL": lead["profile_url"],
+            "Profile URL": lead["profile_url"],
             "Location": lead["location"],
-            "Recent Post": lead["bio"],
+            "Bio": lead["bio"],
             "Touch 1 Message": message,
             "Status": lead.get("_status", "New"),
+            "Date Added": today,
+        }
+
+
+# ---------------------------------------------------------------------------
+# Google Maps
+# ---------------------------------------------------------------------------
+#
+# Sourced by lead-generator (.claude/skills/lead-generator/), not scraped by
+# hand like the other three. Maps leads are businesses, not social profiles —
+# no @handle or /in/slug to key on, so identity() falls back through
+# phone -> email -> website domain (same fallback-chain shape Facebook's
+# identity() already uses for slug/uid/group-key, just different fields).
+
+def _digits(text):
+    return re.sub(r"\D", "", text or "")
+
+
+def _domain(url):
+    if not url:
+        return ""
+    return re.sub(r"^https?://(www\.)?", "", url.strip().lower()).split("/")[0].rstrip("/")
+
+
+class GoogleMapsChannel(Channel):
+    key = "google_maps"
+    label = "Google Maps"
+    source_sheet_id = "1-shiCVpIryTYKcnAfI3XQ4phHi77jP94n9r07GM6IVw"
+    source_tab = "Raw"
+    crm_sheet_id = "1QRC0bdaKGQHNxnzT4H4HSzDv-W3abst2fLuuWzRgl0E"
+    crm_tab = "Leads"
+    message_style = "maps_email"
+    source_aliases = {
+        "business name": "full_name", "name": "full_name", "business": "full_name",
+        "category": "title",
+        "phone": "phone", "phone number": "phone",
+        "email": "email",
+        "website": "website", "url": "website",
+        "address": "location",
+        "owner/contact name": "contact_name", "contact name": "contact_name", "owner": "contact_name",
+        "note": "bio", "notes": "bio",
+    }
+
+    def parse_row(self, row, col_map):
+        if not any(c.strip() for c in row):
+            return None
+        business = cell(row, col_map, "full_name")
+        phone = cell(row, col_map, "phone")
+        email = cell(row, col_map, "email")
+        website = cell(row, col_map, "website")
+        if not business and not phone and not email and not website:
+            return None
+        contact_name = cell(row, col_map, "contact_name")
+        return {
+            "channel": "google_maps",
+            "name": contact_name or business,
+            "first_name": first_name_of(contact_name) if contact_name else "",
+            "business": business,
+            "company": business,
+            "title": cell(row, col_map, "title"),
+            "location": cell(row, col_map, "location"),
+            "phone": phone,
+            "email": email,
+            "website": website,
+            "bio": cell(row, col_map, "bio"),
+        }
+
+    def identity(self, lead):
+        phone = _digits(lead.get("phone", ""))
+        if phone:
+            return "phone:" + phone
+        email = (lead.get("email") or "").strip().lower()
+        if email:
+            return "email:" + email
+        domain = _domain(lead.get("website", ""))
+        return "site:" + domain if domain else ""
+
+    def crm_identity(self, crm_row, crm_cols):
+        def g(names):
+            for n in names:
+                i = crm_cols.get(n)
+                if i is not None and i < len(crm_row):
+                    return crm_row[i].strip()
+            return ""
+        phone = _digits(g(["phone"]))
+        if phone:
+            return "phone:" + phone
+        email = g(["email"]).strip().lower()
+        if email:
+            return "email:" + email
+        domain = _domain(g(["website"]))
+        return "site:" + domain if domain else ""
+
+    def crm_record(self, lead, message, today):
+        return {
+            "Name": lead["name"],
+            "Business": lead["business"],
+            "Category": lead["title"],
+            "Phone": lead["phone"],
+            "Email": lead["email"],
+            "Website": lead["website"],
+            "Address": lead["location"],
+            "Touch 1 Message": message,
+            "Status": "New",
             "Date Added": today,
         }
 
@@ -475,4 +584,5 @@ CHANNELS = {
     "instagram": InstagramChannel(),
     "linkedin": LinkedinChannel(),
     "facebook": FacebookChannel(),
+    "google_maps": GoogleMapsChannel(),
 }

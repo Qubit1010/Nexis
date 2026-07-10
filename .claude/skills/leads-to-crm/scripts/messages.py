@@ -100,6 +100,23 @@ _STYLE = {
             "280). Professional but human, no emojis. No formal sign-off."
         ),
     },
+    "maps_email": {
+        # Google Maps leads are businesses (real estate agencies, local shops), not
+        # a social profile you DM — this is an email opener. Signal here is the
+        # business category/name, not a personal bio, so lean on the observation
+        # archetype referencing their category/location rather than "no_signal"
+        # openers built for a bare handle.
+        "with_signal": [("genuine_question", 5), ("specific_observation", 4), ("anti_pitch", 3)],
+        "no_signal": [("genuine_question", 5), ("anti_pitch", 4)],
+        "max_chars": 500,
+        "channel_rules": (
+            "Channel: cold email opener to a local business (e.g. a real estate agency). "
+            "This is a DRAFT for Aleem to review and send manually, never auto-sent. Write the "
+            "email BODY only (no subject line, no sign-off/signature). Professional but human, "
+            "not corporate. Under 90 words. Reference their business category or what they do "
+            "specifically. No emojis."
+        ),
+    },
     "fb_dm": {
         # These leads are founders/CEOs who introduced themselves in business groups,
         # so the bio/note is strong signal: lean on specific_observation.
