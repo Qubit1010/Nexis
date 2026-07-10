@@ -126,8 +126,11 @@ platform's native reading behavior:
 **LinkedIn posts:**
 - Open with the most interesting sentence — a bold claim, a specific moment, or a short
   provocative question. Not a scene-setter. Run the second-sentence test (Step 3).
-- One sentence per line. Short sentences followed by slightly longer ones. White space is part
-  of the layout.
+- **Cadence — vary it, don't default to one sentence per line.** The opener and closing CTA
+  stay short and punchy, one idea per line. The body between them — the 2-4 lines of
+  substance — writes in short paragraphs of 1-3 sentences, blending a short line with a
+  slightly longer one, so it reads like someone talking, not a list. White space still
+  separates paragraphs; it no longer forces a break after every single sentence.
 - 150-300 words (per voice file default; Red may adjust). Avoid the 300-600 **character**
   "dead zone" — commit to a real post.
 - No link in the post body (kills reach).
@@ -136,7 +139,8 @@ platform's native reading behavior:
 
 **Facebook posts:**
 - Conversational opening — like you're talking to an agent in the room.
-- Slightly more narrative/story structure is fine. Still use line breaks; avoid walls of text.
+- Same cadence rule as LinkedIn above: short paragraphs of 1-3 sentences in the body (not
+  one sentence per line), punchy opener and CTA. Narrative is fine — avoid walls of text.
 - 100-250 words.
 - No engagement bait ("tag 3 friends", "drop a YES") — it suppresses reach. A genuine
   "tag someone who needs this" invite is fine when it's earned by the content.
@@ -201,7 +205,7 @@ Run these checks on every segment's full output before writing:
 - [ ] One CTA per caption; IG caption A ends on a save trigger
 - [ ] Every long-form post ends with a specific, experience-based question (no "Thoughts?")
 - [ ] Enumerated steps are numbered; named framework words in ALL CAPS
-- [ ] Long-form LinkedIn posts use line-break formatting (not dense paragraphs)
+- [ ] Long-form posts vary cadence — punchy opener/CTA, body in 1-3 sentence paragraphs (not mechanical one-sentence-per-line); still line-break formatted, not dense walls of text
 - [ ] Long-form Facebook posts feel conversational and peer-level (not corporate)
 - [ ] Flow pass done (softeners, possessive reframes, no clunk)
 - [ ] Zero absence-signal violations (no em dashes, no buzzwords, no emojis unless knob ON)
