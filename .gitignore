@@ -115,6 +115,7 @@ references/Upwork/
 references/marketing-books-notes/
 .claude/rules/
 .gstack/
+.gstack.bak-*/
 
 # gstack skill suite: don't regenerate individual skill copies out of the submodule.
 # Use .claude/skills/gstack/ directly when needed instead of `./setup` copying them out.

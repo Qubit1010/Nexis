@@ -1,0 +1,50 @@
+[
+  {
+    "id": "generate-proposal",
+    "label": "Generate Proposal",
+    "description": "Draft a client proposal with the proposal-generator skill and save it to Google Docs.",
+    "skill": "proposal-generator",
+    "inputs": [
+      {
+        "name": "brief",
+        "label": "Client / project brief",
+        "placeholder": "Who the client is, what they need, budget/timeline if known...",
+        "multiline": true
+      }
+    ],
+    "prompt_template": "Use the proposal-generator skill (.claude/skills/proposal-generator/SKILL.md) to create a proposal for the client brief below. Follow the skill's workflow end to end, including saving the proposal as a Google Doc. Run fully autonomously - do not ask questions; make sensible assumptions where the brief is silent. End your final message with the Google Doc link on its own line.\n\nCLIENT BRIEF:\n{brief}",
+    "profile": "act"
+  },
+  {
+    "id": "upwork-proposal",
+    "label": "Upwork Proposal",
+    "description": "Turn a pasted Upwork job post into a ready-to-send proposal (upwork-proposal-generator skill).",
+    "skill": "upwork-proposal-generator",
+    "inputs": [
+      {
+        "name": "job_post",
+        "label": "Upwork job post",
+        "placeholder": "Paste the full job post...",
+        "multiline": true
+      }
+    ],
+    "prompt_template": "Use the upwork-proposal-generator skill (.claude/skills/upwork-proposal-generator/SKILL.md) to write a ready-to-send proposal for the Upwork job post below. Follow the skill's classification and drafting workflow. Run fully autonomously - do not ask questions. Output the final proposal text in full.\n\nJOB POST:\n{job_post}",
+    "profile": "act"
+  },
+  {
+    "id": "website-audit",
+    "label": "Quick Website Audit",
+    "description": "Quick-mode audit of a prospect site (website-audit-system): top findings + outreach hook email.",
+    "skill": "website-audit-system",
+    "inputs": [
+      {
+        "name": "url",
+        "label": "Website URL",
+        "placeholder": "https://example.com",
+        "multiline": false
+      }
+    ],
+    "prompt_template": "Use the website-audit-system skill (.claude/skills/website-audit-system/SKILL.md) in QUICK mode to audit this website: {url}\n\nFollow the skill's quick-mode workflow (homepage-level analysis, 3-5 findings, hook email). Run fully autonomously - do not ask questions. If the skill saves a Google Doc, end your final message with the Doc link on its own line; otherwise output the findings and the outreach email in full.",
+    "profile": "act"
+  }
+]

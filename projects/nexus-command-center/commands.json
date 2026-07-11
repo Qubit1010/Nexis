@@ -1,0 +1,23 @@
+[
+  {
+    "id": "decision-digest",
+    "label": "Decision Digest",
+    "description": "Summarize the last 30 days of the Nexis decision log: themes, the 5 most consequential calls, open loops.",
+    "prompt": "Read the decision log at C:/Users/qubit/OneDrive/Documents/Automations/Nexis/decisions/log.md. Write a crisp digest of the entries from the most recent 30 days: group them by theme, call out the 5 most consequential decisions with their dates, and end with any open loops or contradictions you notice. Output pure markdown (start with a # title), no preamble, no questions.",
+    "output": "vault-raw"
+  },
+  {
+    "id": "skills-health",
+    "label": "Skills Health",
+    "description": "Inventory every Nexis skill from SKILL.md frontmatter and flag weak or missing descriptions.",
+    "prompt": "Using Grep on C:/Users/qubit/OneDrive/Documents/Automations/Nexis/.claude/skills/*/SKILL.md, extract each skill's name and description from frontmatter (one Grep for 'name:' and one for 'description:' with file paths is enough — do not read every file). Produce a markdown report: total skill count, a table of skill -> one-line purpose, and a final section flagging any skill with a missing, vague, or duplicated description. Markdown only, no preamble.",
+    "output": "vault-raw"
+  },
+  {
+    "id": "brain-pulse",
+    "label": "Brain Pulse",
+    "description": "Check the second brain's wiki coverage and suggest the next ingest priorities.",
+    "prompt": "Read C:/Users/qubit/OneDrive/Documents/agency-brain/CRITICAL_FACTS.md and C:/Users/qubit/OneDrive/Documents/agency-brain/wiki/index.md, then skim 2-3 wiki pages that look most important. Write a short 'brain pulse' report: what the wiki currently covers well, which pages look stale or thin, and 3 concrete suggestions for the next brain-sync ingest. Markdown only, no preamble.",
+    "output": "vault-raw"
+  }
+]

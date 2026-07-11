@@ -1,0 +1,62 @@
+[
+  {
+    "id": "daily-news-brief",
+    "label": "Daily Brief",
+    "description": "AI/tech news + Practical AI + YouTube brief dashboard (Next.js).",
+    "dir": "C:/Users/qubit/OneDrive/Documents/Automations/Nexis/projects/daily-news-brief",
+    "command": "npm run dev -- -p 3001",
+    "url": "http://localhost:3001",
+    "port": 3001,
+    "ready_regex": "Ready in|Local:"
+  },
+  {
+    "id": "content-engine-dashboard",
+    "label": "Content Engine",
+    "description": "Content ideas, scoring, and creation dashboard (Next.js).",
+    "dir": "C:/Users/qubit/OneDrive/Documents/Automations/Nexis/projects/content-engine-dashboard",
+    "command": "npm run dev -- -p 3002",
+    "url": "http://localhost:3002",
+    "port": 3002,
+    "ready_regex": "Ready in|Local:"
+  },
+  {
+    "id": "sales-playbook-dashboard",
+    "label": "Sales Playbook",
+    "description": "LinkedIn/Instagram DM drafting with conversation memory (Next.js).",
+    "dir": "C:/Users/qubit/OneDrive/Documents/Automations/Nexis/projects/sales-playbook-dashboard",
+    "command": "npm run dev -- -p 3003",
+    "url": "http://localhost:3003",
+    "port": 3003,
+    "ready_regex": "Ready in|Local:"
+  },
+  {
+    "id": "upwork-proposal-dashboard",
+    "label": "Upwork Proposals",
+    "description": "Paste a job post, get a tailored proposal (Next.js).",
+    "dir": "C:/Users/qubit/OneDrive/Documents/Automations/Nexis/projects/upwork-proposal-dashboard",
+    "command": "npm run dev -- -p 3004",
+    "url": "http://localhost:3004",
+    "port": 3004,
+    "ready_regex": "Ready in|Local:"
+  },
+  {
+    "id": "upwork-job-scout",
+    "label": "Job Scout",
+    "description": "Upwork job feed scoring dashboard (Next.js).",
+    "dir": "C:/Users/qubit/OneDrive/Documents/Automations/Nexis/projects/upwork-job-scout",
+    "command": "npm run dev -- -p 3005",
+    "url": "http://localhost:3005",
+    "port": 3005,
+    "ready_regex": "Ready in|Local:"
+  },
+  {
+    "id": "reel-engine",
+    "label": "Reel Engine",
+    "description": "Remotion studio for the motion-graphics reel pipeline.",
+    "dir": "C:/Users/qubit/OneDrive/Documents/Automations/Nexis/projects/reel-engine",
+    "command": "npm run studio -- --port 3010",
+    "url": "http://localhost:3010",
+    "port": 3010,
+    "ready_regex": "Ready|localhost:3010"
+  }
+]

@@ -108,6 +108,21 @@ Update each affected file directly (bump "Last updated" dates where the file has
 
 ---
 
+## Step 4.5 — Brain Ingest Check
+
+Run the wiki staleness detector:
+
+```bash
+python .claude/skills/brain-sync/scripts/sync_vault.py --ingest-status
+```
+
+- If it reports **INGEST OVERDUE**, ask: "Brain wiki is [N] skill(s) / [M] decision(s) behind (last ingest [date]) — run the ingest now?" If yes, follow the `brain-sync` skill's Ingest workflow (distill into `wiki/` + refresh `CRITICAL_FACTS.md`, then `--mark-ingested`).
+- If it reports current, say nothing and move on.
+
+This is the human-in-the-loop trigger for the brain's knowledge half — closeout is the moment new knowledge was just created, so it's the right moment to distill it.
+
+---
+
 ## Step 5 — Offer Memory Updates
 
 Scan the session for anything worth saving to persistent memory that isn't already captured:
