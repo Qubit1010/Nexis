@@ -1,64 +1,46 @@
 {
   "slug": "claude-code-automation",
   "platform": "instagram",
-  "title": "Claude Code for Business Automations",
-  "voiceScript": "",
+  "title": "Claude Code Automation: Screen-clicking vs MCP",
+  "voiceScript": "Everyone's excited that Claude Code can now click through any app like a human. That's the part I trust least. Screen clicking looks like magic in a demo, but it breaks the moment a button moves, and the whole flow falls apart mid-run. The durable wins come from MCP. Structured read and write straight into your real tools. Your inbox, your CRM, your sheets. That's the difference between a magic trick and infrastructure. So now I ask one thing. Does this tool expose a real connection, or am I asking an agent to pretend to be a mouse? Start with one boring, repetitive task. Prove it, then expand. That's the only approach that compounds. What would you automate first? Follow for more.",
   "handle": "@nexuspoint",
-  "source": "Article: Claude Code evolved from coding assistant into autonomous business agent. Computer Use = visual screen navigation (fragile, breaks on layout change). MCP = structured read/write connections across SaaS apps (durable). Use cases: Finance (invoice processing, compliance), Sales/CRM (data entry, lead research, LinkedIn outreach), Marketing (ad management, campaign gen, price monitoring), HR (job postings, onboarding), MCP orchestration (cross-platform reporting, pipeline reviews, client onboarding).",
+  "source": "LinkedIn post: Claude Code Computer Use (visual screen-clicking) is fragile and breaks on any layout change mid-run, useful only for legacy portals with no API. The durable wins come from MCP: structured read/write into real tools (inbox, CRM, sheets, accounting). Screen-scraping is a magic trick; calling an API is infrastructure. Scope rule: does the tool expose a real connection, or are you asking an agent to pretend to be a mouse? If mouse, price in the breakage. Winners pick one boring repetitive task, prove it against edge cases, then expand. Start small is the only approach that compounds.",
   "scenes": [
     {
       "id": "intro",
       "type": "intro",
-      "voiceText": "Claude Code doesn't just write code. It runs your operations.",
-      "headline": "Claude Code runs your *operations*",
-      "sub": "Business Automation"
+      "voiceText": "Everyone's excited that Claude Code can now click through any app like a human. That's the part I trust least.",
+      "headline": "It clicks any app, like a human"
     },
     {
       "id": "problem",
       "type": "problem",
-      "voiceText": "Most teams still handle this manually. Finance pulls invoice data by hand. Sales copies leads into CRM. Marketing adjusts ad spend one row at a time.",
-      "headline": "Still doing this *manually*?",
-      "sub": "every department, every day",
-      "chips": ["invoice data", "CRM entry", "ad spend"],
-      "problemVariant": "crossout"
+      "voiceText": "Screen clicking looks like magic in a demo, but it breaks the moment a button moves, and the whole flow falls apart mid-run.",
+      "headline": "It breaks mid-run"
     },
     {
       "id": "solution",
       "type": "solution",
-      "voiceText": "I started wiring Claude Code into real business workflows. It reads invoices, updates records, adjusts campaigns, posts jobs across multiple boards.",
-      "headline": "One agent, *all* your tools",
-      "visual": "layers",
-      "layers": [
-        { "name": "Finance", "goal": "Invoices and compliance" },
-        { "name": "Sales", "goal": "CRM and lead research" },
-        { "name": "Marketing", "goal": "Ads and campaigns" },
-        { "name": "HR", "goal": "Job posts and onboarding" },
-        { "name": "Ops", "goal": "Cross-tool reporting" }
-      ]
+      "voiceText": "The durable wins come from MCP. Structured read and write straight into your real tools. Your inbox, your CRM, your sheets. That's the difference between a magic trick and infrastructure.",
+      "headline": "MCP plugs into your real tools"
     },
     {
       "id": "stats",
       "type": "stats",
-      "voiceText": "Finance, sales, marketing, HR. Five business functions automated. Running 24/7. Starting from just one task.",
-      "headline": "What gets automated",
-      "stats": [
-        { "value": 5, "suffix": "+", "label": "business functions covered" },
-        { "value": 24, "suffix": "/7", "label": "autonomous operation" },
-        { "value": 1, "label": "task to start, then expand" }
-      ]
+      "voiceText": "So now I ask one thing. Does this tool expose a real connection, or am I asking an agent to pretend to be a mouse?",
+      "headline": "How I scope it now"
     },
     {
       "id": "punch",
       "type": "punch",
-      "voiceText": "The question isn't whether to automate. It's which task you start with.",
-      "headline": "Which task do you *start* with?",
-      "punchVariant": "spotlight"
+      "voiceText": "Start with one boring, repetitive task. Prove it, then expand. That's the only approach that compounds.",
+      "headline": "Start small"
     },
     {
       "id": "outro",
       "type": "outro",
-      "voiceText": "Pick the most repetitive thing on your team. Start there. Follow for more.",
-      "cta": "What's the first task you'd hand to an agent?"
+      "voiceText": "What would you automate first? Follow for more.",
+      "cta": "What would you automate first?"
     }
   ]
 }

@@ -2,63 +2,15 @@
   "slug": "ai-os",
   "platform": "linkedin",
   "title": "AI Operating Systems",
+  "handle": "@nexuspoint",
   "voiceScript": "Most people use AI like a chatbot. The real shift is an operating system that runs your business. An isolated chatbot just waits for your prompt. No memory, no tools, no way to act on its own. So I stopped prompting and started building. An AI OS runs on four layers. Context, Connections, Capabilities, Cadence. And this isn't niche. 72% of big companies already run AI agents, in a market heading toward 139 billion dollars, connecting over 6,000 apps. Your AI shouldn't wait for prompts. It should run the work while you sleep. Want to build your own AI OS? Follow for more.",
   "scenes": [
-    {
-      "id": "intro",
-      "type": "intro",
-      "voiceText": "Most people use AI like a chatbot. The real shift is an operating system that runs your business.",
-      "headline": "From toy to *operating system*",
-      "sub": "AI Operating Systems"
-    },
-    {
-      "id": "problem",
-      "type": "problem",
-      "voiceText": "An isolated chatbot just waits for your prompt. No memory, no tools, no way to act on its own.",
-      "headline": "A chatbot just *waits* for you",
-      "sub": "it can't act on its own",
-      "problemVariant": "crossout",
-      "chips": ["No memory", "No tools", "No autonomy"]
-    },
-    {
-      "id": "solution",
-      "type": "solution",
-      "voiceText": "So I stopped prompting and started building. An AI OS runs on four layers. Context, Connections, Capabilities, Cadence.",
-      "headline": "The *Four C's* of an AI OS",
-      "visual": "roadmap",
-      "asset": "infographic.png",
-      "roadmap": [
-        { "name": "Context", "goal": "What AI knows about you" },
-        { "name": "Connections", "goal": "Access real data" },
-        { "name": "Capabilities", "goal": "Add new skills" },
-        { "name": "Cadence", "goal": "Run on autopilot" }
-      ]
-    },
-    {
-      "id": "stats",
-      "type": "stats",
-      "voiceText": "And this isn't niche. 72% of big companies already run AI agents, in a market heading toward 139 billion dollars, connecting over 6,000 apps.",
-      "headline": "Where this is going",
-      "stats": [
-        { "value": 72, "suffix": "%", "label": "of big firms run AI agents" },
-        { "value": 139, "prefix": "$", "suffix": "B", "label": "agentic AI market by 2034" },
-        { "value": 6000, "suffix": "+", "label": "apps connected via MCP" }
-      ]
-    },
-    {
-      "id": "punch",
-      "type": "punch",
-      "voiceText": "Your AI shouldn't wait for prompts. It should run the work while you sleep.",
-      "headline": "AI should *run* the work",
-      "punchVariant": "spotlight"
-    },
-    {
-      "id": "outro",
-      "type": "outro",
-      "voiceText": "Want to build your own AI OS? Follow for more.",
-      "cta": "Ready to build your own AI OS?"
-    }
+    { "id": "hook",    "voiceText": "Most people use AI like a chatbot. The real shift is an operating system that runs your business. " },
+    { "id": "problem", "voiceText": "An isolated chatbot just waits for your prompt. No memory, no tools, no way to act on its own. " },
+    { "id": "system",  "voiceText": "So I stopped prompting and started building. An AI OS runs on four layers. Context, Connections, Capabilities, Cadence. " },
+    { "id": "stats",   "voiceText": "And this isn't niche. 72% of big companies already run AI agents, in a market heading toward 139 billion dollars, connecting over 6,000 apps. " },
+    { "id": "punch",   "voiceText": "Your AI shouldn't wait for prompts. It should run the work while you sleep. " },
+    { "id": "outro",   "voiceText": "Want to build your own AI OS? Follow for more." }
   ],
-  "source": "LinkedIn post 'Ready to transform AI from a toy to a powerhouse'. AI Operating Systems vs isolated chatbots; Claude Code vs Codex CLI; the Four C's framework (Context, Connections, Capabilities, Cadence). Research synthesis stats: 72% of Global 2000 run agent systems by 2026; agentic AI market projected $139B by 2034; MCP connects Claude to 6,000+ apps. Claude Opus 4.7 = 1M ctx, 87.6% SWE-bench; Codex GPT-5.4 ~4x fewer tokens; 65% devs prefer Codex daily, 67% find Claude output cleaner.",
-  "handle": "@nexuspoint"
+  "source": "LinkedIn post 'Ready to transform AI from a toy to a powerhouse'. AI Operating Systems vs isolated chatbots; the Four C's framework (Context, Connections, Capabilities, Cadence). Stats: 72% of Global 2000 run agent systems by 2026; agentic AI market projected $139B by 2034; MCP connects Claude to 6,000+ apps."
 }
