@@ -34,10 +34,16 @@ DRIVE_FOLDER_NAME = "Nexis Content"
 def find_gws():
     """Find gws and return (cmd_list, use_shell).
 
-    On Windows, prefer calling node + run-gws.js directly to bypass
-    the cmd.exe 8191-char command line limit. Falls back to gws.cmd with shell.
+    On Windows, prefer the standalone compiled gws.exe (shipped in the CLI
+    package's bin/) so calls run with shell=False: no cmd.exe re-tokenization,
+    which is what breaks on JSON bodies containing quotes/`>`/markdown.
+    Falls back to node + run-gws.js, then gws.cmd with shell=True.
     """
     npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
+    gws_exe = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "bin" / "gws.exe"
+    if gws_exe.exists():
+        return ([str(gws_exe)], False)
+
     gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run-gws.js"
 
     if gws_js.exists():

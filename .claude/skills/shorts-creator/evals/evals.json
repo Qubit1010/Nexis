@@ -1,0 +1,47 @@
+{
+  "skill_name": "shorts-creator",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "make a short for Claude Fable 5, the new model in the Claude 5 lineup",
+      "expected_output": "A checkpoint showing drafted copy for 3 frames (cover eyebrow/headline/subtitle, one content line, CTA text), then 4 code-block prompts (CONTEXT, COVER, CONTENT, CTA) at 1080x1920 with NexusPoint branding (logo, wordmark, diagonal stripe) on every frame, no em dashes/emojis.",
+      "files": [],
+      "assertions": [
+        "States 1080x1920 (or unambiguously 9:16 vertical) as the frame canvas",
+        "No em dash character appears anywhere in the drafted copy or prompts",
+        "No emoji characters appear anywhere in the output",
+        "NexusPoint branding (logo and/or wordmark) is explicitly present in every frame description",
+        "Produces 3-4 total image frames (cover + 1-2 content + CTA), not a longer carousel-length set",
+        "Shows a drafted-copy checkpoint/summary before the final image-generation prompts, not prompts only"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "I want a short for my Nexis OS case study - it's the personal second-brain / exec assistant system I built for my agency, 7-layer architecture, costs about $0.10 to $0.20 a day to run, replaced a bunch of manual ops work I used to do by hand. Can you make a short out of that?",
+      "expected_output": "The skill distills the detailed brief down to one punchy idea per frame (not a dump of every fact), still following the cover/content/CTA structure and NexusPoint branding, with a checkpoint before the prompts.",
+      "files": [],
+      "assertions": [
+        "States 1080x1920 (or unambiguously 9:16 vertical) as the frame canvas",
+        "No em dash character appears anywhere in the drafted copy or prompts",
+        "No emoji characters appear anywhere in the output",
+        "NexusPoint branding (logo and/or wordmark) is explicitly present in every frame description",
+        "Produces 3-4 total image frames (cover + 1-2 content + CTA), not a longer carousel-length set",
+        "Shows a drafted-copy checkpoint/summary before the final image-generation prompts, not prompts only",
+        "Content frame(s) distill one condensed idea each rather than restating every raw fact from the brief verbatim in one frame"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "make a short for row 221 in the Weekly Posting Schedule sheet",
+      "expected_output": "The skill recognizes this as the sheet-driven path and attempts schedule.py get --row 221. If network/auth isn't available in this environment, it reports that honestly and stops rather than fabricating row content.",
+      "files": [],
+      "assertions": [
+        "Either grounded in row 221's real topic (GPT-5.6 Sol/Terra/Luna) because schedule.py actually succeeded, or explicitly and honestly reports it could not reach the sheet rather than fabricating unrelated content",
+        "If it proceeded to frames: states 1080x1920 (or unambiguously 9:16 vertical) as the frame canvas",
+        "If it proceeded to frames: no em dash character appears anywhere in the drafted copy or prompts",
+        "If it proceeded to frames: NexusPoint branding is explicitly present in every frame description",
+        "If it proceeded to frames: produces 3-4 total image frames, not a longer carousel-length set"
+      ]
+    }
+  ]
+}
