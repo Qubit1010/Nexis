@@ -1,0 +1,40 @@
+{
+  "skill_name": "api-scout",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I'm building a small side project and need a free API for weather data. What are my options?",
+      "expected_output": "Lists relevant weather APIs from the catalog (e.g. Open-Meteo, wttr.in, US Weather, WeatherAPI) with URL, auth type, HTTPS, CORS, and a one-line description. Should show 3-10 entries and mention auth type clearly since the user wants something quick to integrate.",
+      "files": [],
+      "assertions": [
+        {"text": "Response contains at least 3 API entries (each with a name and URL)"},
+        {"text": "At least one entry is clearly a weather API (e.g. Open-Meteo, wttr.in, WeatherAPI, US Weather, or similar)"},
+        {"text": "Each API entry includes an auth type (e.g. No, apiKey, OAuth)"},
+        {"text": "Output is a scannable list format, not dense prose paragraphs"}
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Is there a free public API I can use to validate email addresses or check if a domain is real? Need it for a signup form.",
+      "expected_output": "Reads the Data Validation (or related) category from catalog/apis.md and surfaces matching APIs with URL, auth, HTTPS/CORS, and description. Should recognize 'validate email/domain' maps to the Data Validation category even though the user didn't name it.",
+      "files": [],
+      "assertions": [
+        {"text": "Response contains at least 2 API entries relevant to email or domain validation"},
+        {"text": "Each entry includes a URL"},
+        {"text": "Each entry includes auth type and HTTPS/CORS info"},
+        {"text": "Output is formatted as a scannable list, not a prose paragraph"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "search free apis for a super niche use case — I need an api that tells me the current population of axolotls being tracked in captivity databases, or anything close to that",
+      "expected_output": "Recognizes the catalog won't have this exact niche match, checks the catalog first (may surface the general Axolotl API as a loose match), and falls back to a live Exa search via search_api.py when the catalog doesn't have a strong hit. Should be transparent that it's searching live, not just inventing an answer.",
+      "files": [],
+      "assertions": [
+        {"text": "The with-skill run either surfaces a loose catalog match (e.g. an Axolotl-related API) or runs a live Exa search — not a fabricated/hallucinated API"},
+        {"text": "If a live search was run, the response indicates it searched live (e.g. mentions Exa, live search, or 'checking for more options')"},
+        {"text": "Response does not confidently invent a specific API name/URL that doesn't exist"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "skill_name": "free-for-dev-scout",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I need free CI/CD for a side project — what services have a genuinely free tier, not just a trial?",
+      "expected_output": "Lists relevant CI/CD services from the catalog (e.g. CircleCI, Buildkite, appveyor.com) with URL and the specific free-tier limits (minutes/month, users, etc.), not vague 'free tier available' text. Should show 3-10 entries.",
+      "files": [],
+      "assertions": [
+        {"text": "Response contains at least 3 service entries (each with a name and URL)"},
+        {"text": "At least one entry is clearly a CI/CD service (e.g. CircleCI, Buildkite, appveyor.com, bitrise.io, or similar)"},
+        {"text": "Each entry describes the specific free-tier limit, not just 'has a free tier'"},
+        {"text": "Output is a scannable list format, not dense prose paragraphs"}
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "What free options are there for hosting a Postgres database for a hobby project?",
+      "expected_output": "Reads the Managed Data Services (or related) category from catalog/free-for-dev.md and surfaces matching services with URL and free-tier specifics. Should recognize 'Postgres database hosting' maps to Managed Data Services even though the user didn't name the category.",
+      "files": [],
+      "assertions": [
+        {"text": "Response contains at least 2 service entries relevant to database hosting"},
+        {"text": "Each entry includes a URL"},
+        {"text": "Each entry describes what's actually free (storage size, row limits, etc.), not just 'free tier'"},
+        {"text": "Output is formatted as a scannable list, not a prose paragraph"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "does Vercel's free tier still exist and what does it include? also is there anything similar for a niche use case like free tier robotics simulation cloud compute",
+      "expected_output": "Recognizes this is a mixed ask — checks the catalog for Vercel/hosting first (may or may not have it), and for the niche 'robotics simulation cloud compute' part, either finds a loose catalog match or falls back to live Exa search since this is unlikely to be a clean catalog category match. Should not fabricate a specific free-tier detail it can't back up.",
+      "files": [],
+      "assertions": [
+        {"text": "The response does not confidently invent specific free-tier numbers/limits that aren't backed by the catalog or a live search"},
+        {"text": "For the niche robotics-simulation part, the response either says it checked the catalog and found nothing close, or indicates it ran a live search"},
+        {"text": "Response is honest about uncertainty rather than guessing at current free-tier terms, which are noted to change often"}
+      ]
+    }
+  ]
+}

@@ -57,6 +57,29 @@ confident person is found, leave LinkedIn unresolved for that business rather th
 to the company page — better to skip a channel than send a "connection note" that reads like it's
 addressed to the wrong target.
 
+**Team/leadership page pass (added 2026-07-13):** when scrape_socials.py's homepage/contact pass
+still leaves LinkedIn empty, it tries `/team/`, `/our-team/`, `/meet-the-team/`, `/about/team/`,
+`/about-us/team/`, `/people/`, `/leadership/` specifically. This is where a founder's personal
+LinkedIn is actually linked on most agency/small-business sites (headshot + name + icon) — the
+homepage footer usually only has the company page, which gets rejected outright now (see below).
+Uses BeautifulSoup to pull the name/title text surrounding each `/in/` href into a `context`
+string, with a `likely_founder` regex hint (`founder|co-founder|owner|principal|ceo|president`)
+— surfaced as `linkedin_candidates`, never auto-written. Confirm the context text before treating
+it as resolved, same bar as the WebSearch founder query.
+
+**Company-page rejection (fixed same day):** `scrape_socials.py`'s homepage/contact pass used to
+accept `linkedin.com/company/...` into the `linkedin` field with no filter — live-caught testing
+this addition (thinkjuice.com resolved to `linkedin.com/company/juice-labs`), which also silently
+blocked the team-page pass above from ever running (it only fires when `linkedin` is still empty).
+Now rejected the same way the WebSearch pass already rejects it.
+
+**FB/LinkedIn junk patterns backported (same day):** `apify_merge_preview.py`'s junk filters
+(`facebook.com/tr` — Meta's tracking-pixel beacon, `2008/fbml`, `profile.php`, `plugins/`,
+`linkedin.com/feed|showcase`, `linkedin.com/authwall`) existed only in the Apify merge script, not
+in `scrape_socials.py` itself. Live-caught during testing (dtestudio.com returned `facebook.com/tr`
+as its "Facebook"). Ported into `scrape_socials.py`'s own filters so both scripts reject the same
+junk.
+
 ## Phone number cleanup
 
 Instant Data Scraper output sometimes prepends a bullet/middot (`· +1 619-727-6165`). Strip that,

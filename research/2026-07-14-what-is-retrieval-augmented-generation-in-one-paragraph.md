@@ -1,0 +1,45 @@
+# what is retrieval augmented generation in one paragraph
+
+*mode: general | depth: deep | 2026-07-14*
+
+---
+
+## Summary
+Retrieval-augmented generation (RAG) is a system design pattern for large language models (LLMs) that retrieves relevant, up‑to‑date information from external knowledge sources (for example, document stores, search indexes, or databases) and injects that “grounding” context into the model’s prompt before it generates an answer—thereby separating knowledge from model weights, improving factuality, and allowing rapid updates without retraining. In practice, a RAG pipeline indexes data, retrieves and (often) reranks passages for a user query, appends those passages to the prompt, and then has the LLM produce a response with citations. [1][3][4][5][6] ([arxiv.org](https://arxiv.org/abs/2005.11401?utm_source=openai))
+
+## Key Findings
+- Origin and concept: The term “retrieval‑augmented generation” was introduced by Lewis et al. (2020), who combined a neural retriever with a seq2seq generator to answer knowledge‑intensive queries more accurately. Meta’s publication and the arXiv paper remain canonical references. [1][2] ([arxiv.org](https://arxiv.org/abs/2005.11401?utm_source=openai))  
+- Why it matters: RAG lets builders ground responses in enterprise or web data and update knowledge instantly, which reduces hallucinations and domain drift versus relying solely on a model’s parametric memory. [3][5][6] ([cloud.google.com](https://cloud.google.com/use-cases/retrieval-augmented-generation?utm_source=openai))  
+- How it works (typical pipeline): ingest/index (chunk, embed, store), retrieve (vector, keyword, or hybrid), optionally rerank, augment the prompt with retrieved passages and metadata, then generate and cite. Cloud architecture guides document these steps and trade‑offs. [3][4] ([cloud.google.com](https://cloud.google.com/use-cases/retrieval-augmented-generation?utm_source=openai))  
+- Variants are emerging: “Agentic RAG” adds multi‑step planning and iterative retrieval for complex, multi‑hop tasks; vendors report quality gains on enterprise workflows. [7] ([research.google](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/?utm_source=openai))  
+- Evidence base and open issues: Surveys highlight evaluation challenges (measuring retrieval quality, grounding/faithfulness, and answer relevance) and open problems (latency, long‑context limits, noisy retrieval). [8][9] ([arxiv.org](https://arxiv.org/abs/2312.10997?utm_source=openai))  
+- When to use it vs fine‑tuning: Use RAG to expose fresh, domain‑specific content without model retraining; fine‑tune for style or skill when the task is stable and data is labeled—often the best systems combine both. [3][4][6] ([cloud.google.com](https://cloud.google.com/use-cases/retrieval-augmented-generation?utm_source=openai))
+
+## Detail
+RAG’s core idea is to pair an LLM’s parametric knowledge with non‑parametric, externally managed knowledge. The seminal RAG paper demonstrated that retrieving passages from a large corpus and conditioning a generator on them improved accuracy for knowledge‑intensive tasks, while keeping the model architecture modular so the knowledge store can evolve independently. [1][2] ([arxiv.org](https://arxiv.org/abs/2005.11401?utm_source=openai))
+
+A standard RAG architecture proceeds in four stages. First, content is ingested and indexed (splitting into chunks, creating embeddings, and storing them in a search or vector index). Second, at query time, the system retrieves candidate passages using dense, sparse, or hybrid search and often reranks them. Third, the selected passages and provenance metadata (titles, URLs, timestamps) are appended to the user’s prompt. Fourth, the LLM generates an answer grounded in those passages, ideally with citations. Major cloud guides (Google Cloud, Microsoft Learn) document reference architectures and engineering choices at each step. [3][4] ([cloud.google.com](https://cloud.google.com/use-cases/retrieval-augmented-generation?utm_source=openai))
+
+Vendors emphasize RAG’s practical benefits: grounding boosts factuality, enables real‑time updates, and can improve trust via source‑backed answers. NVIDIA’s and IBM’s explainers underscore RAG’s role in bringing enterprise data into GenAI applications without retraining, while clarifying that retrieval quality and prompt design remain critical determinants of end‑to‑end quality. [5][6] ([blogs.nvidia.com](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/?utm_source=openai))
+
+Recent work extends “classic” RAG. Google Research describes “Agentic RAG,” where agents decompose complex questions, iteratively search, and verify evidence before answering—addressing multi‑source, multi‑hop needs often seen in enterprise settings. Surveys synthesize technique evolution and evaluation: beyond standard IR metrics, RAG systems need faithfulness/groundedness measures and task‑level outcome metrics; community tools like RAGAS formalize automated evaluation of retrieval and generation. [7][8][9] ([research.google](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/?utm_source=openai))
+
+## Recommendations
+- Start with a simple, “classic” RAG baseline: high‑quality ingestion (cleaning, chunking), hybrid retrieval (dense + keyword), and conservative context sizes; add a reranker if needed. [3][4] ([cloud.google.com](https://cloud.google.com/use-cases/retrieval-augmented-generation?utm_source=openai))  
+- Ground answers with explicit citations and provenance in prompts and UI; prefer passages with clear, human‑verifiable sources. [3][4] ([cloud.google.com](https://cloud.google.com/use-cases/retrieval-augmented-generation?utm_source=openai))  
+- Evaluate systematically: measure retrieval (precision/recall, MRR/NDCG), answer relevance, and faithfulness/groundedness; consider automated frameworks like RAGAS for scalable testing. [8][9] ([arxiv.org](https://arxiv.org/abs/2312.10997?utm_source=openai))  
+- When queries are complex or multi‑hop, pilot agentic/multi‑step RAG (plan → retrieve → verify → generate), but monitor latency and cost. [7] ([research.google](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/?utm_source=openai))  
+- Combine with fine‑tuning where appropriate: use RAG for freshness and coverage; fine‑tune for task format, style, or domain skills. [3][6] ([cloud.google.com](https://cloud.google.com/use-cases/retrieval-augmented-generation?utm_source=openai))
+
+## Sources
+1) Lewis, Patrick et al. Retrieval‑Augmented Generation for Knowledge‑Intensive NLP Tasks (arXiv, 2020). https://arxiv.org/abs/2005.11401 ([arxiv.org](https://arxiv.org/abs/2005.11401?utm_source=openai))  
+2) Meta AI. Retrieval‑Augmented Generation for Knowledge‑Intensive NLP Tasks (publication page). https://ai.meta.com/research/publications/retrieval-augmented-generation-for-knowledge-intensive-nlp-tasks/ ([ai.meta.com](https://ai.meta.com/research/publications/retrieval-augmented-generation-for-knowledge-intensive-nlp-tasks/?utm_source=openai))  
+3) Google Cloud. What is Retrieval‑Augmented Generation (RAG)? https://cloud.google.com/use-cases/retrieval-augmented-generation ([cloud.google.com](https://cloud.google.com/use-cases/retrieval-augmented-generation?utm_source=openai))  
+4) Microsoft Learn (Azure Architecture Center). Design and Develop a RAG Solution. https://learn.microsoft.com/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide ([learn.microsoft.com](https://learn.microsoft.com/fil-ph/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide?utm_source=openai))  
+5) NVIDIA Blog. What Is Retrieval‑Augmented Generation, aka RAG? https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/ ([blogs.nvidia.com](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/?utm_source=openai))  
+6) IBM Think. What is RAG (Retrieval Augmented Generation)? https://www.ibm.com/think/topics/retrieval-augmented-generation ([ibm.com](https://www.ibm.com/think/topics/retrieval-augmented-generation?utm_source=openai))  
+7) Google Research Blog. Unlocking dependable responses with Gemini Enterprise Agent Platform’s Agentic RAG. https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/ ([research.google](https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/?utm_source=openai))  
+8) Survey: Retrieval‑Augmented Generation for Large Language Models: A Survey (arXiv, 2023). https://arxiv.org/abs/2312.10997 ([arxiv.org](https://arxiv.org/abs/2312.10997?utm_source=openai))  
+9) RAGAS: Automated Evaluation of Retrieval Augmented Generation (arXiv, 2023). https://arxiv.org/abs/2309.15217 ([arxiv.org](https://arxiv.org/abs/2309.15217?utm_source=openai))
+
+## Ranked Sources

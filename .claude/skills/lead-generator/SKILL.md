@@ -94,12 +94,20 @@ parallelized via subagents — so matches can be spot-checked live as they're fo
    Fetches the homepage (falling back to `/contact/`, `/about/` etc. if needed) and regexes
    Instagram/LinkedIn/Facebook hrefs straight out of the HTML — same zero-ambiguity logic as the
    old direct-scrape idea, just used as a cheap free secondary pass instead of the primary method.
-   **Sanity-check every hit before writing it** — this pass throws real false positives: generic
-   `facebook.com/profile.php` links (broken, no ID), `facebook.com/plugins/post.php` (an embedded
-   widget, not a profile), `linkedin.com/authwall` (LinkedIn's login redirect, not a profile), and
-   occasionally a wholly unrelated cross-linked account from the page. Reject anything that doesn't
-   plausibly match the business/founder name. On the first real batch this pass recovered about
-   half of the businesses WebSearch missed, once the junk was filtered out.
+   A `linkedin.com/company/...` hit is rejected outright (no identity for 1:1 outreach, same rule
+   as the WebSearch pass). **Sanity-check every remaining hit before writing it** — this pass still
+   throws real false positives on Instagram/Facebook: occasionally a wholly unrelated cross-linked
+   account from the page. Reject anything that doesn't plausibly match the business/founder name.
+   On the first real batch this pass recovered about half of the businesses WebSearch missed, once
+   the junk was filtered out.
+
+   If LinkedIn is still missing after that, it tries a set of team/leadership page paths
+   (`/team/`, `/our-team/`, `/people/`, `/leadership/`, etc.) specifically, since that's where a
+   founder's personal `/in/` LinkedIn is actually linked — company footers usually only carry the
+   company page, if anything. Any hit there comes back as a `linkedin_candidates` list (URL +
+   nearby name/title text + a `likely_founder` hint), never auto-filled — confirm the context
+   text actually reads as founder/CEO/owner before writing it, same confidence bar as the
+   WebSearch founder query above.
 
 5. **After a batch**, suggest `leads-to-crm`'s `push.py --channel {channel} --dry-run` per touched
    channel to preview what would move into the CRM next.
@@ -117,7 +125,8 @@ scripts/
                          the next N unprocessed businesses, tracks resume status
   write_resolved.py   — appends a resolved business into each matched channel's Instant sheet
                          (via sheet_writer.py) and writes the status column back
-  scrape_socials.py   — secondary pass: footer/contact/about-page scrape for WebSearch's misses
+  scrape_socials.py   — secondary pass: footer/contact/about-page scrape for WebSearch's misses,
+                         plus a team-page pass specifically for founder LinkedIn (/in/) links
   sheet_writer.py     — shared low-level writer (unchanged from before, channel-agnostic)
 references/
   how-it-works.md     — the WebSearch query patterns, URL-shape validation rules, and the

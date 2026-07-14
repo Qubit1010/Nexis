@@ -1,0 +1,16 @@
+{
+  "many": true,
+  "fields": [
+    {"name": "company", "description": "business or company name"},
+    {"name": "category", "description": "business category / industry / what they do"},
+    {"name": "website", "description": "company website URL if shown"},
+    {"name": "phone", "description": "phone number if shown, digits and + only"},
+    {"name": "email", "description": "contact email if shown"},
+    {"name": "address", "description": "street address or full address if shown"},
+    {"name": "city", "description": "city / locality"},
+    {"name": "rating", "description": "review rating or star score if shown"},
+    {"name": "instagram", "description": "Instagram profile URL if shown"},
+    {"name": "linkedin", "description": "LinkedIn URL if shown"},
+    {"name": "facebook", "description": "Facebook page URL if shown"}
+  ]
+}

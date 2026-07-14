@@ -60,6 +60,13 @@ webots-projects.rar
 # Capability catalog (generated PDFs + build script)
 catalog/
 
+# Vendored third-party OSINT tool (qeeqbox/social-analyzer, AGPL-3.0, ~16MB). Regenerable --
+# re-clone from upstream if needed. Keep the README (usage + accuracy findings) tracked.
+# (must use dir/* + negation, not a trailing-slash dir exclude -- git can't re-include a file
+# whose parent directory is itself excluded)
+tools/social-analyzer/*
+!tools/social-analyzer/README.md
+
 # Archived/superseded material
 archives/
 

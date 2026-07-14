@@ -1,0 +1,40 @@
+{
+  "skill_name": "selfhosted-scout",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Is there a self-hosted, open-source alternative to Notion I could run on my own server?",
+      "expected_output": "Lists relevant note-taking/knowledge-management/personal-dashboard projects from the catalog with URL, license, platform, and description, prioritizing entries whose description explicitly mentions 'alternative to Notion' or similar. Should show 2-8 entries.",
+      "files": [],
+      "assertions": [
+        {"text": "Response contains at least 2 project entries (each with a name and URL)"},
+        {"text": "Each entry includes a license"},
+        {"text": "Each entry includes a platform/language (e.g. Docker, Python, Go)"},
+        {"text": "Output is a scannable list format, not dense prose paragraphs"}
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "What open source CRM software can I self-host for a small team?",
+      "expected_output": "Reads the Customer Relationship Management (CRM) category from catalog/selfhosted.md and surfaces matching projects with URL, license, platform, and description.",
+      "files": [],
+      "assertions": [
+        {"text": "Response contains at least 2 CRM project entries"},
+        {"text": "Each entry includes a URL"},
+        {"text": "Each entry includes a license (e.g. GPL, MIT, AGPL, or similar)"},
+        {"text": "Output is formatted as a scannable list, not a prose paragraph"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I want a self-hosted VPN — what are my options? Also is there a self-hosted alternative to some super niche SaaS tool called 'FormFlowPro' for building internal approval workflows?",
+      "expected_output": "For the VPN part: recognizes the VPN category in the source is a redirect-only category (points to an external awesome-sysadmin list) rather than assuming the catalog has no VPN content — should say so rather than claiming there are zero self-hosted VPN options. For the fabricated 'FormFlowPro' part: should not invent a matching project, and should either find nothing relevant or run a live search.",
+      "files": [],
+      "assertions": [
+        {"text": "For the VPN ask, response does not falsely claim there are no self-hosted VPN options available anywhere — it either points to the redirect/external list or a related category, or runs a live search"},
+        {"text": "For the fabricated 'FormFlowPro' tool, response does not invent a specific matching self-hosted project name/URL"},
+        {"text": "Response is honest about what it found vs. didn't find rather than filling gaps with plausible-sounding fabrication"}
+      ]
+    }
+  ]
+}

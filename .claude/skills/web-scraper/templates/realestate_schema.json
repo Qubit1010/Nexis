@@ -1,0 +1,18 @@
+{
+  "many": true,
+  "fields": [
+    {"name": "address", "description": "full property address"},
+    {"name": "price", "description": "listing or sale price, numbers only if possible"},
+    {"name": "beds", "description": "number of bedrooms"},
+    {"name": "baths", "description": "number of bathrooms"},
+    {"name": "sqft", "description": "living area in square feet, numbers only"},
+    {"name": "lot_size", "description": "lot size if shown"},
+    {"name": "price_per_sqft", "description": "price per square foot if shown or derivable"},
+    {"name": "year_built", "description": "year the property was built"},
+    {"name": "property_type", "description": "single family, condo, townhouse, multi-family, etc."},
+    {"name": "hoa", "description": "HOA / monthly association fee if shown"},
+    {"name": "property_tax", "description": "annual property tax if shown"},
+    {"name": "days_on_market", "description": "days listed / time on market if shown"},
+    {"name": "url", "description": "listing detail URL if shown"}
+  ]
+}
