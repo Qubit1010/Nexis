@@ -22,6 +22,7 @@ export const dynamic = "force-dynamic";
 
 type Platform = "linkedin" | "instagram";
 type Mode = "opener" | "followup" | "reply";
+type ICP = "agency" | "founder";
 
 const PLAYBOOK_ROOT = path.join(process.cwd(), "prompts", "sales-playbook");
 
@@ -60,13 +61,22 @@ function followupDay(platform: Platform, n: number): string {
   return ({ 2: "3", 3: "5", 4: "7-14" } as Record<number, string>)[n] ?? "3";
 }
 
-function buildSystemPrompt(platform: Platform, mode: Mode): string {
+function buildSystemPrompt(platform: Platform, mode: Mode, icp: ICP): string {
   const parts: string[] = [];
 
   // The playbook brain — always loaded.
   parts.push(read("SKILL.md"));
   parts.push(section("Opener Archetypes (rotate — never two prospects the same one back-to-back)", read("frameworks/opener-archetypes.md")));
-  parts.push(section("Offer Positioning (AI automation is the wedge — never lead with web)", read("offer/ai-automation-positioning.md")));
+
+  // ICP determines which offer file drives positioning. Agency (white-label) is primary,
+  // founder/SMB is secondary — see offer/agency-to-agency-positioning.md.
+  const offerFile = icp === "agency" ? "offer/agency-to-agency-positioning.md" : "offer/ai-automation-positioning.md";
+  const offerTitle =
+    icp === "agency"
+      ? "Offer Positioning (white-label AI-automation for agencies — this prospect IS an agency)"
+      : "Offer Positioning (AI automation for founders/SMBs — this prospect is an end-business)";
+  parts.push(section(offerTitle, read(offerFile)));
+
   parts.push(section("Proof Bank (use ONE matched peer per message; never fabricate numbers)", read("offer/proof-bank.md")));
 
   // The gold-standard voice exemplar for this platform — this is what makes the
@@ -156,6 +166,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const platform = body.platform as Platform;
     const mode = body.mode as Mode;
+    const icp = (body.icp as ICP) || "agency";
 
     if (!platform || !["linkedin", "instagram"].includes(platform)) {
       return NextResponse.json({ error: "platform must be 'linkedin' or 'instagram'" }, { status: 400 });
@@ -163,8 +174,11 @@ export async function POST(req: NextRequest) {
     if (!mode || !["opener", "followup", "reply"].includes(mode)) {
       return NextResponse.json({ error: "mode must be 'opener', 'followup', or 'reply'" }, { status: 400 });
     }
+    if (!["agency", "founder"].includes(icp)) {
+      return NextResponse.json({ error: "icp must be 'agency' or 'founder'" }, { status: 400 });
+    }
 
-    const systemPrompt = buildSystemPrompt(platform, mode);
+    const systemPrompt = buildSystemPrompt(platform, mode, icp);
     const chars = charGuidance(platform, mode);
     const pName = platformName(platform);
 

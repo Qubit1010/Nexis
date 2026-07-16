@@ -5,6 +5,7 @@ import { Copy, Check, Loader2, Zap, Linkedin, Instagram, X } from "lucide-react"
 
 type Platform = "linkedin" | "instagram";
 type Mode = "opener" | "followup" | "reply";
+type ICP = "agency" | "founder";
 type TouchNumber = 2 | 3 | 4;
 
 type Meta = { archetype: string; phase: string; ask?: string; tactic: string; why: string };
@@ -74,6 +75,11 @@ const MODE_LABELS: Record<Mode, string> = {
   reply: "Live Reply",
 };
 
+const ICP_LABELS: Record<ICP, string> = {
+  agency: "Agency (white-label)",
+  founder: "Founder / SMB",
+};
+
 function charLimit(platform: Platform, mode: Mode): number {
   if (platform === "linkedin") return mode === "opener" ? 300 : 600;
   return 400;
@@ -82,6 +88,7 @@ function charLimit(platform: Platform, mode: Mode): number {
 export default function Home() {
   const [platform, setPlatform] = useState<Platform>("linkedin");
   const [mode, setMode] = useState<Mode>("opener");
+  const [icp, setIcp] = useState<ICP>("agency");
 
   // Opener / Follow-up shared
   const [name, setName] = useState("");
@@ -203,7 +210,7 @@ export default function Home() {
     setGenerating(true);
     resetOutput();
     try {
-      const base = { platform, mode };
+      const base = { platform, mode, icp };
       const payload =
         mode === "reply"
           ? {
@@ -335,6 +342,29 @@ export default function Home() {
                     }`}
                   >
                     {MODE_LABELS[m]}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* ICP toggle */}
+          <div>
+            <label className={labelClass}>Prospect Type</label>
+            <div className="flex gap-1 p-1 rounded-lg bg-[--muted]">
+              {(["agency", "founder"] as ICP[]).map((i) => {
+                const active = icp === i;
+                return (
+                  <button
+                    key={i}
+                    onClick={() => setIcp(i)}
+                    className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                      active
+                        ? "bg-[--card] text-[--foreground] border border-[--border]"
+                        : "text-[--muted-foreground] hover:text-[--foreground]"
+                    }`}
+                  >
+                    {ICP_LABELS[i]}
                   </button>
                 );
               })}
