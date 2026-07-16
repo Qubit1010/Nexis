@@ -59,6 +59,50 @@ only in one such driver and never reached the shipped `resolve.py`, so the next 
 v3 ships that loop as `scripts/run_batch.py`, and the "confirm before writing" bar is enforced there in
 code — not left to however a batch happens to be driven.
 
+## Known limitations (found 2026-07-17, during Aleem's own manual verification of the v3 output)
+
+Even after v3, Aleem caught more issues by hand-checking the sheet — each was a real, fixable bug, but
+together they show the tail of this problem is long. Fixed same day:
+
+- **A founder's own LinkedIn discarded even when known.** When the founder's name came from the parsed
+  answer text (not a verified LinkedIn candidate), the code threw away a matching LinkedIn URL that was
+  sitting right in the raw candidate list. Fixed: cross-check by name before discarding.
+- **Founder-social search only covered IG/FB, never LinkedIn.** Extended to all 3 platforms
+  (`founder_social_search()`), plus a standalone `--backfill-founder-socials` mode for founders already
+  written to the sheet from an earlier run.
+- **Company-token matching is unsafe for a PERSON lookup.** A founder-social search verified against the
+  company's brand token, not the founder's own name — so "Bird Marketing" + founder "Philip" surfaced an
+  unrelated "Cathryn Bird" (her surname coincidentally matched the company token). Fixed: founder-social
+  search now requires the founder's OWN name to appear in context (`_person_name_matches`), not the
+  company's.
+- **URL-shape gaps**: LinkedIn people-directory pages (`/pub/dir/First/Last`) and job postings (`/jobs/`)
+  were accepted as profiles; Facebook's actual plural path shapes (`/photos/`, `/videos/`) and Instagram's
+  `/popular/` search-listing path were not blocked (only the singular `/photo/` was). All added to
+  `url_filters.py`'s `_BAD_PATH`/`_BAD_PATH_LI`.
+- **A `--reverify-founder-socials` mode** was added to re-check every already-written founder-social value
+  against a tightened gate (keep/replace/clear), since the bugs above meant earlier writes could carry the
+  same errors — this is NOT part of the normal flow, it's a one-time correction tool for exactly this
+  situation (a verification rule tightened after data was already written).
+
+**Not fully solved, flagged for Aleem rather than silently "fixed":**
+- **Common personal names are irreducibly ambiguous.** A founder-social search for "David Kessler"
+  (Starfish's founder) kept resurfacing content branded around a different, much more famous "David
+  Kessler" (a grief-book author) — the name-match gate can't tell two real people with the same name
+  apart. No amount of URL-shape filtering fixes this; it needs either a stronger identity signal (e.g.
+  cross-referencing the person's stated employer) or a human glance. Flagged in that row's own status cell
+  rather than guessed at.
+- **A single "distinctive" company token can be common industry jargon.** `_company_core()` picks the
+  first non-generic word in a company's name, but for a company like "Organic Digital Marketing" that word
+  is "organic" — which is also ubiquitous marketing jargon ("organic search," "organic growth"), so it
+  provides almost no discriminative power and let an unrelated company's LinkedIn page through. No
+  additional stopwords fully close this off; treat any single-word-core match on a jargon-adjacent brand
+  name with extra skepticism.
+
+The honest takeaway: website-first + the confidence gates fixed the systemic, high-volume failure modes
+(search-first misattribution, no gate at all, wrong resolution order). What's left is a long tail of
+genuinely hard natural-language identity problems — worth fixing as they're caught, but not fully
+eliminable by pattern-matching alone.
+
 Everything below documents the v2 search-based method, still used as the gap-fill/fallback layer.
 
 ---

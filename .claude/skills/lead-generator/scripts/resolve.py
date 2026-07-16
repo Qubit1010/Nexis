@@ -291,6 +291,59 @@ def founder_search_fallback(company: str, category: str, location: str) -> dict:
             "verified_candidates": verified, "answer_hit": answer_hit, "confidence": confidence}
 
 
+def _person_name_matches(name: str, ctx: str) -> bool:
+    """Does ctx plausibly refer to THIS specific person? Requires a real name token (len>2) from `name`
+    to appear in the result's own title/snippet. Used for founder-social lookups INSTEAD OF a company-
+    token check -- a company token alone can coincidentally match an unrelated same-surname stranger: a
+    search for "Philip" (founder) at "Bird Marketing" surfaced "Cathryn Bird" on LinkedIn, whose own
+    surname happened to match the company's distinctive token "bird". Matching the person's own name is
+    the correct signal when the search is explicitly about them, not their company."""
+    tokens = [w for w in re.split(r"\W+", (name or "").lower()) if len(w) > 2]
+    ctx_l = (ctx or "").lower()
+    return bool(tokens) and any(t in ctx_l for t in tokens)
+
+
+def _filter_person_socials(results: list[dict], founder_name: str, wanted: list[str]) -> dict:
+    """Like pick_socials, but gated on the founder's OWN name appearing in context (see
+    _person_name_matches) rather than pick_socials' company-token verify_context."""
+    out: dict[str, str] = {}
+    for r in results:
+        url = r.get("url", "")
+        if url_filters.is_directory(url):
+            continue
+        ctx = f"{r.get('title','')} {r.get('snippet','')}"
+        if not _person_name_matches(founder_name, ctx):
+            continue
+        hit = url_filters.social_profile(url)
+        if hit and hit[0] in wanted:
+            out.setdefault(hit[0], hit[1])
+    return out
+
+
+def founder_social_search(founder_name: str, company: str, missing: list[str]) -> dict:
+    """Search for a CONFIRMED founder's own social profiles on the given missing platforms (a subset of
+    PLATFORMS). Verified against the FOUNDER'S OWN NAME appearing in the result (not the company token --
+    see _person_name_matches for why that check is unsafe for a person lookup). Used both as resolve()'s
+    own gap-fill (Step 6) and as a standalone backfill for founders already written to the sheet in an
+    earlier run (the identity is already confirmed there -- this only finds their public profiles, a
+    materially lower-risk lookup than founder identification itself, per Aleem's own manual method of
+    searching "company + founder name + platform" once the name is known)."""
+    if not missing or not founder_name:
+        return {}
+    found: dict[str, str] = {}
+    combo = " OR ".join(missing)
+    r = research(f'{founder_name} {company} {combo}', mode="general", depth="light",
+                 services="serper,tavily", num=8)
+    found.update(_filter_person_socials(r.get("results", []), founder_name, missing))
+    for p in [q for q in missing if not found.get(q)]:
+        r2 = research(f'{founder_name} {company} site:{p}.com', mode="general", depth="light",
+                      services="serper,tavily", num=8)
+        f2 = _filter_person_socials(r2.get("results", []), founder_name, [p])
+        if f2.get(p):
+            found[p] = f2[p]
+    return found
+
+
 # --------------------------------------------------------------------------- orchestration
 def resolve(biz: dict, *, do_founder: bool = True) -> dict:
     company = {p: biz.get(p, "") for p in PLATFORMS}
@@ -354,14 +407,21 @@ def resolve(biz: dict, *, do_founder: bool = True) -> dict:
     # Step 4 -- founder search fallback, only if the website didn't name one.
     if do_founder and not founder["name"]:
         founder_search = founder_search_fallback(biz["company"], category, loc)
-        best_name = ""
+        best_name, best_li = "", ""
         if founder_search["verified_candidates"]:
             best = founder_search["verified_candidates"][0]
             best_name, best_li = best["name"], best["linkedin"]
         elif founder_search["answer_hit"].get("name"):
-            best_name, best_li = founder_search["answer_hit"]["name"], ""
-        else:
-            best_li = ""
+            best_name = founder_search["answer_hit"]["name"]
+            # The answer text named them but wasn't itself a LinkedIn hit. Before discarding that lead,
+            # check whether the SAME person already showed up in the raw candidate list (just under the
+            # verification bar) and reuse their LinkedIn instead of throwing away a URL already in hand --
+            # this is exactly the gap that left David Morneau (inBeat Agency) with a name but no LinkedIn
+            # even though his profile was sitting right there in all_candidates.
+            for c in founder_search["all_candidates"]:
+                if c.get("name", "").strip().lower() == best_name.strip().lower() and c.get("linkedin"):
+                    best_li = c["linkedin"]
+                    break
         if best_name:
             founder["name"] = best_name
             founder["linkedin"] = founder["linkedin"] or best_li
@@ -371,16 +431,16 @@ def resolve(biz: dict, *, do_founder: bool = True) -> dict:
         else:
             notes.append("no confident founder candidate on website or search -- needs manual lookup")
 
-    # Step 6 -- founder's own socials, verified against the company's own distinctive token so a
-    # same-named stranger's profile (the Jamie Rourke failure mode) doesn't get attached.
-    if do_founder and founder["name"] and not (founder["instagram"] and founder["facebook"]):
-        core = _company_core(biz["company"])
-        r = research(f'{founder["name"]} {biz["company"]} instagram OR facebook',
-                     mode="general", depth="light", services="serper,tavily", num=8)
-        fs = pick_socials(r.get("results", []), verify_context=core)
-        for p in ("instagram", "facebook"):
-            if fs.get(p) and not founder[p]:
-                founder[p] = fs[p]
+    # Step 6 -- founder's own socials (all 3 platforms, not just IG/FB), verified against the company's
+    # own distinctive token so a same-named stranger's profile (the Jamie Blair failure mode) doesn't get
+    # attached. Factored into founder_social_search() so the same lookup also serves as a standalone
+    # backfill for founders already confirmed + written in an earlier run.
+    if do_founder and founder["name"]:
+        gap = [p for p in PLATFORMS if not founder[p]]
+        if gap:
+            found = founder_social_search(founder["name"], biz["company"], gap)
+            for p, url in found.items():
+                founder[p] = url
                 provenance.setdefault(f"founder_{p}", "search")
 
     needs_review = sorted({k for k, v in provenance.items()
@@ -432,6 +492,20 @@ def demo():
     hit = _founder_from_answer("Hal Sanders is the founder of Halstead Communications, a PR agency.", "Halstead")
     assert hit.get("name") == "Hal Sanders", hit
     assert not _founder_from_answer("Halstead Cole works in social media.", "Halstead")
+
+    # founder social search verification: match the PERSON's name, not the company token -- a company-
+    # token-only check would wrongly accept a same-surname stranger (the "Cathryn Bird" vs founder
+    # "Philip" mismatch at a company literally named "Bird Marketing").
+    person_results = [
+        {"url": "https://www.linkedin.com/in/cathrynbird", "title": "Cathryn Bird - Marketing Manager",
+         "snippet": "Cathryn Bird works in social media marketing."},
+        {"url": "https://www.linkedin.com/in/philipyoung", "title": "Philip Young - CEO of Bird Marketing",
+         "snippet": "CEO of Bird Marketing, London."},
+    ]
+    assert _person_name_matches("Philip Young", "Philip Young - CEO of Bird Marketing")
+    assert not _person_name_matches("Philip Young", "Cathryn Bird - Marketing Manager")
+    fs = _filter_person_socials(person_results, "Philip Young", ["linkedin"])
+    assert fs.get("linkedin") == "https://www.linkedin.com/in/philipyoung", fs
 
     print("resolve self-check OK")
 

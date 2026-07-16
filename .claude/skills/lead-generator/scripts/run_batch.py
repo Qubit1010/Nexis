@@ -103,6 +103,12 @@ def process_one(biz: dict, *, dry_run: bool, rederive: bool = False) -> dict:
     return result
 
 
+def _flat(s: str) -> str:
+    """Collapse whitespace/newlines to a single space -- LinkedIn snippets and some name captures carry
+    embedded newlines that would otherwise break the markdown list formatting."""
+    return " ".join((s or "").split())
+
+
 def _render_review_md(reviews: list[dict]) -> str:
     lines = [f"# Lead Generator — Founder Review Queue",
              f"", f"*Generated {datetime.now():%Y-%m-%d %H:%M} — {len(reviews)} rows need a founder confirm.*",
@@ -111,24 +117,24 @@ def _render_review_md(reviews: list[dict]) -> str:
              "against the website/candidates below, then fill the Founder + Founder-social columns by hand",
              "(or tell me the confirmed name and I'll write it).", ""]
     for rv in reviews:
-        lines.append(f"## Row {rv['row']} — {rv['company']}")
+        lines.append(f"## Row {rv['row']} — {_flat(rv['company'])}")
         lines.append(f"- **Website:** {rv['website'] or '(none)'}")
         gp = rv.get("founder_provenance", "")
-        lines.append(f"- **Best guess:** {rv['founder_guess'] or '(none)'}"
+        lines.append(f"- **Best guess:** {_flat(rv['founder_guess']) or '(none)'}"
                      + (f"  _(from {gp})_" if gp else "") + f"  — confidence: {rv.get('confidence','n/a')}")
         fs = rv.get("founder_socials", {})
         if any(fs.values()):
             lines.append(f"- **Guess's socials (unverified):** "
                          + ", ".join(f"{p}: {u}" for p, u in fs.items() if u))
         if rv.get("answer_hit", {}).get("name"):
-            lines.append(f"- **Search answer said:** {rv['answer_hit']['name']} — "
-                         f"\"{(rv['answer_hit'].get('source_text','') or '')[:200]}\"")
+            lines.append(f"- **Search answer said:** {_flat(rv['answer_hit']['name'])} — "
+                         f"\"{_flat(rv['answer_hit'].get('source_text',''))[:200]}\"")
         cands = rv.get("candidates", [])
         if cands:
             lines.append(f"- **LinkedIn candidates:**")
             for c in cands[:6]:
-                lines.append(f"  - [{c.get('name','?')}]({c.get('linkedin','')}) — "
-                             f"{(c.get('snippet','') or '')[:120].strip()}")
+                lines.append(f"  - [{_flat(c.get('name','?'))}]({c.get('linkedin','')}) — "
+                             f"{_flat(c.get('snippet',''))[:120]}")
         lines.append("")
     return "\n".join(lines)
 
@@ -188,6 +194,173 @@ def run(sheet_id: str, tab: str, *, limit: int, rows: tuple[int, int] | None,
     }
 
 
+def _tier(rv: dict) -> str:
+    p = rv.get("founder_provenance", "")
+    if p == "website":
+        return "website"
+    if p == "search_fallback":
+        return "search_" + (rv.get("confidence", "") or "na")
+    return "none"
+
+
+def write_founders_from_queue(sheet_id: str, tab: str, jsonl_path: Path, tiers: set[str],
+                              *, dry_run: bool = False) -> dict:
+    """Write the founder guesses from the durable review queue onto the sheet -- the human-confirm step,
+    now that Aleem has reviewed. `tiers` selects which confidence tiers to write (website / search_low /
+    search_ambiguous). Founder name + any found founder socials go to their columns; the row's status is
+    updated from 'Founder: REVIEW' to the written name + tier so the sheet self-documents its provenance.
+    Company socials are untouched. Idempotent-ish: re-running rewrites the same values."""
+    import sheets  # noqa: E402  (leads-to-crm sheets module, on path via write_result_main)
+    merged: dict[int, dict] = {}
+    for line in Path(jsonl_path).read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            rv = json.loads(line)
+            merged[rv.get("row")] = rv
+
+    header = sheets.read_values(sheet_id, f"{tab}!1:1")[0]
+    header = W.ensure_columns(sheet_id, tab, header)
+    # one batch read of the status column (rows 2..max) so we don't read per row
+    status_col = W.col_letter_for(header, W.STATUS_HEADER)
+    col_vals = sheets.read_values(sheet_id, f"{tab}!{status_col}2:{status_col}{max(merged)}")
+    statuses = {idx: (cell[0] if cell else "") for idx, cell in enumerate(col_vals, start=2)}
+
+    written, skipped = [], []
+    for row in sorted(merged):
+        rv = merged[row]
+        name = _flat(rv.get("founder_guess", ""))
+        if not name or _tier(rv) not in tiers:
+            skipped.append(row)
+            continue
+        fs = rv.get("founder_socials", {}) or {}
+        old = statuses.get(row, "")
+        new_status = old.replace("Founder: REVIEW", f"Founder: {name} ({_tier(rv)})") \
+            if "Founder: REVIEW" in old else (old + f" | Founder: {name} ({_tier(rv)})")
+        if dry_run:
+            written.append((row, name))
+            continue
+        W.write_row(sheet_id, tab, row, new_status, founder=name,
+                    founder_instagram=fs.get("instagram") or None,
+                    founder_linkedin=fs.get("linkedin") or None,
+                    founder_facebook=fs.get("facebook") or None)
+        written.append((row, name))
+        print(f"row {row}: wrote founder '{name}' ({_tier(rv)})", file=sys.stderr)
+    return {"written": len(written), "skipped": len(skipped), "tiers": sorted(tiers)}
+
+
+def backfill_founder_socials(sheet_id: str, tab: str, start_row: int, end_row: int,
+                             *, dry_run: bool = False) -> dict:
+    """For rows that already carry a confirmed Founder name, search for whichever of their instagram/
+    linkedin/facebook are still missing -- Aleem's method of typing 'company + founder name + platform'
+    once the identity is known. Does NOT touch company data or re-derive the founder name; only fills
+    social-column gaps on rows that already have one. Appends to the existing status rather than
+    overwriting it (write_row would otherwise clobber the 'Resolved...' / 'Founder: X (tier)' text
+    already there)."""
+    import sheets  # noqa: E402
+    batch = read_batch_main.rows_in_range(sheet_id, tab, start_row, end_row)
+    candidates = [b for b in batch["businesses"] if (b.get("founder") or "").strip()
+                 and any(not b.get(f"founder_{p}") for p in R.PLATFORMS)]
+    if not candidates:
+        return {"updated": 0, "skipped": len(batch["businesses"]), "errors": [], "results": []}
+
+    header = sheets.read_values(sheet_id, f"{tab}!1:1")[0]
+    header = W.ensure_columns(sheet_id, tab, header)
+    status_col = W.col_letter_for(header, W.STATUS_HEADER)
+    lo = min(b["row"] for b in candidates)
+    hi = max(b["row"] for b in candidates)
+    col_vals = sheets.read_values(sheet_id, f"{tab}!{status_col}{lo}:{status_col}{hi}")
+    statuses = {lo + i: (c[0] if c else "") for i, c in enumerate(col_vals)}
+
+    updated, errors = [], []
+    for biz in candidates:
+        missing = [p for p in R.PLATFORMS if not biz.get(f"founder_{p}")]
+        try:
+            found = R.founder_social_search(biz["founder"], biz["company"], missing)
+        except Exception as e:  # noqa: BLE001 - one bad lookup must not kill the batch
+            errors.append({"row": biz["row"], "company": biz["company"], "error": str(e)})
+            print(f"row {biz['row']} ({biz['company']}): ERROR {e}", file=sys.stderr)
+            continue
+        if not found:
+            print(f"row {biz['row']} ({biz['company']}): no backfill found", file=sys.stderr)
+            continue
+        old = statuses.get(biz["row"], "")
+        new_status = old + f" | Founder socials backfilled: {', '.join(found)}"
+        if not dry_run:
+            W.write_row(sheet_id, tab, biz["row"], new_status,
+                        founder_instagram=found.get("instagram"),
+                        founder_linkedin=found.get("linkedin"),
+                        founder_facebook=found.get("facebook"))
+        updated.append({"row": biz["row"], "company": biz["company"], "found": found})
+        print(f"row {biz['row']} ({biz['company']}): backfilled {list(found)}", file=sys.stderr)
+
+    return {"updated": len(updated), "skipped": len(batch["businesses"]) - len(candidates),
+            "errors": errors, "results": updated}
+
+
+def reverify_founder_socials(sheet_id: str, tab: str, start_row: int, end_row: int,
+                             *, dry_run: bool = False) -> dict:
+    """Re-check EVERY currently-set founder-social value under the tightened person-name-match gate
+    (added 2026-07-17 after a company-token-only check let "Cathryn Bird" -- an unrelated stranger whose
+    surname happened to match the company "Bird Marketing" -- get written as a founder's LinkedIn). For
+    each platform with an existing value, re-search fresh: keep if reconfirmed (same URL), overwrite if a
+    corrected URL is found, clear if nothing passes the new gate. More expensive than backfill (which only
+    searches gaps) since every populated platform gets a fresh round-trip, but this is the only way to
+    close the window the earlier, weaker gate left open across every founder-social value written before
+    it existed."""
+    import sheets  # noqa: E402
+    batch = read_batch_main.rows_in_range(sheet_id, tab, start_row, end_row)
+    candidates = [b for b in batch["businesses"] if (b.get("founder") or "").strip()
+                 and any(b.get(f"founder_{p}") for p in R.PLATFORMS)]
+    if not candidates:
+        return {"checked": 0, "kept": 0, "changed": 0, "cleared": 0, "errors": [], "results": []}
+
+    header = sheets.read_values(sheet_id, f"{tab}!1:1")[0]
+    header = W.ensure_columns(sheet_id, tab, header)
+    status_col = W.col_letter_for(header, W.STATUS_HEADER)
+    lo, hi = min(b["row"] for b in candidates), max(b["row"] for b in candidates)
+    col_vals = sheets.read_values(sheet_id, f"{tab}!{status_col}{lo}:{status_col}{hi}")
+    statuses = {lo + i: (c[0] if c else "") for i, c in enumerate(col_vals)}
+
+    kept_n, changed_n, cleared_n, errors, results = 0, 0, 0, [], []
+    for biz in candidates:
+        set_platforms = [p for p in R.PLATFORMS if biz.get(f"founder_{p}")]
+        try:
+            fresh = R.founder_social_search(biz["founder"], biz["company"], set_platforms)
+        except Exception as e:  # noqa: BLE001 - one bad lookup must not kill the batch
+            errors.append({"row": biz["row"], "company": biz["company"], "error": str(e)})
+            print(f"row {biz['row']} ({biz['company']}): ERROR {e}", file=sys.stderr)
+            continue
+
+        row_kept, row_changed, row_cleared, write_kwargs, clear_keys = [], [], [], {}, []
+        for p in set_platforms:
+            old, new = biz.get(f"founder_{p}", ""), fresh.get(p, "")
+            if new == old:
+                row_kept.append(p)
+            elif new:
+                write_kwargs[f"founder_{p}"] = new
+                row_changed.append(p)
+            else:
+                clear_keys.append(f"founder_{p}")
+                row_cleared.append(p)
+
+        if not dry_run and (write_kwargs or clear_keys):
+            if clear_keys:
+                W.clear_fields(sheet_id, tab, biz["row"], clear_keys)
+            old_status = statuses.get(biz["row"], "")
+            new_status = old_status + f" | Re-verified: changed {row_changed or 'none'}, cleared {row_cleared or 'none'}"
+            W.write_row(sheet_id, tab, biz["row"], new_status, **write_kwargs)
+
+        kept_n += len(row_kept)
+        changed_n += len(row_changed)
+        cleared_n += len(row_cleared)
+        results.append({"row": biz["row"], "company": biz["company"], "kept": row_kept,
+                        "changed": row_changed, "cleared": row_cleared})
+        print(f"row {biz['row']} ({biz['company']}): kept={row_kept} changed={row_changed} cleared={row_cleared}",
+              file=sys.stderr)
+
+    return {"checked": len(candidates), "kept": kept_n, "changed": changed_n, "cleared": cleared_n,
+            "errors": errors, "results": results}
+
+
 def _parse_rows(s: str) -> tuple[int, int]:
     a, _, b = s.partition("-")
     return (int(a), int(b or a))
@@ -203,10 +376,46 @@ def main():
     p.add_argument("--dry-run", action="store_true", help="resolve + print, never write to the sheet")
     p.add_argument("--no-resume", action="store_true",
                    help="reprocess mode: redo rows already marked v3: (don't skip them)")
+    p.add_argument("--write-founders", default=None,
+                   help="write reviewed founders from the queue to the sheet; value = comma list of tiers "
+                        "(website,search_low,search_ambiguous) or 'all'. Does no resolving.")
+    p.add_argument("--backfill-founder-socials", action="store_true",
+                   help="for rows with a Founder name already set, search for any missing founder "
+                        "instagram/linkedin/facebook (use with --rows A-B). Does not touch company data.")
+    p.add_argument("--reverify-founder-socials", action="store_true",
+                   help="re-check EVERY currently-set founder-social value under the person-name-match "
+                        "gate (use with --rows A-B); keeps reconfirmed values, replaces or clears the rest.")
     args = p.parse_args()
 
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+    if args.write_founders is not None:
+        all_tiers = {"website", "search_low", "search_ambiguous"}
+        tiers = all_tiers if args.write_founders.strip().lower() == "all" else \
+            {t.strip() for t in args.write_founders.split(",") if t.strip()}
+        out = write_founders_from_queue(args.sheet_id, args.tab,
+                                        args.review_out.with_suffix(".jsonl"), tiers, dry_run=args.dry_run)
+        print(json.dumps(out, indent=2, ensure_ascii=False))
+        return
+
+    if args.backfill_founder_socials:
+        if not args.rows:
+            raise SystemExit("--backfill-founder-socials requires --rows A-B")
+        out = backfill_founder_socials(args.sheet_id, args.tab, args.rows[0], args.rows[1],
+                                       dry_run=args.dry_run)
+        out["results"] = f"[{len(out['results'])} rows]"
+        print(json.dumps(out, indent=2, ensure_ascii=False))
+        return
+
+    if args.reverify_founder_socials:
+        if not args.rows:
+            raise SystemExit("--reverify-founder-socials requires --rows A-B")
+        out = reverify_founder_socials(args.sheet_id, args.tab, args.rows[0], args.rows[1],
+                                       dry_run=args.dry_run)
+        out["results"] = f"[{len(out['results'])} rows]"
+        print(json.dumps(out, indent=2, ensure_ascii=False))
+        return
 
     out = run(args.sheet_id, args.tab, limit=args.limit, rows=args.rows,
               dry_run=args.dry_run, review_out=args.review_out, no_resume=args.no_resume)

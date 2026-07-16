@@ -20,9 +20,20 @@ SOCIAL_RE = re.compile(
 )
 
 # Non-profile URL shapes (posts/reels/share/etc.) — learned empirically over the live batches.
-_BAD_PATH = re.compile(r"/(p|reel|explore|tv|posts|pulse|photo|sharer|share|hashtag)(/|$|\?)", re.I)
+# photos/videos/popular added 2026-07-17: the plural "photos"/"videos" (Facebook's actual path shape for
+# a photo/video post -- the singular "photo" alone never matches real URLs) and "/popular/" (a search-
+# aggregator listing path, not a real instagram.com profile) all slipped through a founder-social
+# re-verify pass as if they were profiles -- one even landed a video of an UNRELATED person's story on a
+# company's Facebook page as a "personal profile" match.
+_BAD_PATH = re.compile(
+    r"/(p|reel|reels|explore|tv|posts|pulse|photo|photos|video|videos|popular|sharer|share|hashtag)(/|$|\?)",
+    re.I)
 _BAD_PATH_FB = re.compile(r"facebook\.com/(tr/?$|2008/fbml|profile\.php|plugins/|sharer)", re.I)
-_BAD_PATH_LI = re.compile(r"linkedin\.com/(feed|showcase|posts|pulse)/|linkedin\.com/authwall", re.I)
+_BAD_PATH_LI = re.compile(
+    r"linkedin\.com/(feed|showcase|posts|pulse|jobs)/|linkedin\.com/authwall|"
+    r"linkedin\.com/pub/dir/",  # pub/dir = a people-DIRECTORY search page, not a real profile;
+                                # jobs/ = a job posting page, not a person
+    re.I)
 
 # Review/directory sites: showing up here means "no confident match", not a match.
 _DIRECTORY = re.compile(
@@ -76,6 +87,14 @@ if __name__ == "__main__":
     assert social_profile("https://instagram.com/p/abc123/") is None
     assert social_profile("https://facebook.com/tr") is None
     assert social_profile("https://www.linkedin.com/feed/update/xyz") is None
+    # a people-DIRECTORY search page, not a real profile (live-caught: a founder-name social search
+    # surfaced this instead of the person's actual /in/ profile for 3 rows in the 2026-07-17 backfill)
+    assert social_profile("https://www.linkedin.com/pub/dir/David/Morneau") is None
+    # plural photos/videos + popular: real shapes that slipped past the singular-only regex
+    assert social_profile("https://www.facebook.com/acme/photos/some-post-123") is None
+    assert social_profile("https://www.facebook.com/acme/videos/some-clip-456") is None
+    assert social_profile("https://www.instagram.com/popular/some-listing") is None
+    assert social_profile("https://www.linkedin.com/jobs/view/some-role-3607041216") is None  # job posting
     assert social_profile("https://instagram.com/") is None                      # bare domain
     # company page: rejected by default, kept when allowed
     assert social_profile("https://linkedin.com/company/acme") is None
