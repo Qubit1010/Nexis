@@ -11,29 +11,31 @@ The canonical sales asset for NexusPoint. Built to fix one problem: existing DM 
 
 - "Draft a DM to [prospect]" → pick archetype from `frameworks/opener-archetypes.md`, follow `scripts/linkedin-cold-dm-sequence.md`, `scripts/instagram-cold-dm-sequence.md`, or `scripts/facebook-cold-dm-sequence.md`
 - "They replied — what now?" → `scripts/live-conversation-playbook.md` (load conversation memory first, see below)
-- "They said [objection]" → `frameworks/objection-riffs.md`
+- "They said [objection]" → **diagnose the distortion** in `frameworks/objection-psychology.md`, then pull the phrase-level response from `frameworks/objection-riffs.md`
+- "Prep my head before a call / how do I not sound salesy" → `frameworks/hormozi-selling-principles.md`
 - "I have a discovery call with X" → `scripts/discovery-call-script.md` + offer context from `offer/`
-- "How do I pitch this prospect?" → `offer/ai-automation-positioning.md`
+- "How do I pitch this prospect?" → **agency prospect** → `offer/agency-to-agency-positioning.md` (primary ICP); **end-business/founder** → `offer/ai-automation-positioning.md`
 - "Give me a result I can drop for [industry]" → `offer/proof-bank.md`
 
 ## The lead offer (locked)
 
 **AI automation as the premium wedge.** Web is the upsell, not the opener.
 
-One-liner: *"We build AI workflows that take the manual ops work off founders' plates — 10+ hrs/week back, usually inside 14 days."*
+**ICP (two tracks):**
+- **Primary — agencies (white-label):** marketing / AI / design / branding agencies who need AI-automation + build capacity they can't staff in-house. One-liner: *"We're the white-label AI-automation and build team behind agencies — you keep the client and the brand, we deliver, usually inside 14 days."* Full positioning: `offer/agency-to-agency-positioning.md`.
+- **Secondary — founders/SMBs:** *"We build AI workflows that take the manual ops work off founders' plates — 10+ hrs/week back, usually inside 14 days."* Full positioning: `offer/ai-automation-positioning.md`.
 
-Full positioning: `offer/ai-automation-positioning.md`
+Pick the track by who the prospect is; the frameworks (openers, objection psychology, discovery call) are shared.
 
-## The six opener archetypes (rotation discipline)
+## The 5 opener archetypes (rotation discipline)
 
-Never send two prospects the same archetype back-to-back. Rotation is what kills cadence smell.
+Never send two prospects the same archetype back-to-back. Rotation is what kills cadence smell. `frameworks/opener-archetypes.md` is the canonical list (with cited benchmarks + variants) — these are the five:
 
-1. **Permission-Based** — "Random ask — mind if I float a stupid idea?"
-2. **Anti-Pitch** — "Probably not a fit but had to ask..."
-3. **Observation + Confession** — "Watched your [X]. Quick confession — I'm in your DMs because..."
-4. **Loom-First** — "Made you a 90-sec video on [their workflow]"
-5. **Pattern from the field** — "Every [niche] founder I've talked to this month is doing [X] manually. Same here?"
-6. **Quantified peer result** — "Took 12 hrs/week off [peer] by wiring [stack]. Same problem here?"
+1. **Trigger-Aware Zero-Ask** (Justin Welsh) — congratulate a real trigger event, make no ask.
+2. **Specific Signal + Named Peers** (Becc Holland) — trigger → the pain it creates → two named peer wins → one concrete ask.
+3. **No-Pitch Connection** — reference real profile activity and explicitly promise no pitch.
+4. **Laid-Back Anti-Pitch** (Josh Braun) — "Not sure it's a fit, but thought you might be interested..."
+5. **Post-Connection Genuine Question** — after a connect, ask one open operational question, no CTA.
 
 Detail + variants: `frameworks/opener-archetypes.md`
 
@@ -83,36 +85,45 @@ Top offenders:
 sales-playbook/
 ├── SKILL.md                                # this file
 ├── frameworks/
-│   ├── opener-archetypes.md                # 6 archetypes, 3 variants each
+│   ├── opener-archetypes.md                # 5 archetypes, variants each (canonical opener list)
 │   ├── voss-calibrated-questions.md        # Question bank by phase
 │   ├── hormozi-value-equation.md           # How to frame every proof
-│   └── objection-riffs.md                  # 12 objections × Voss response
+│   ├── hormozi-selling-principles.md       # NEW — the mindset/posture layer (21 beliefs, re-voiced)
+│   ├── objection-psychology.md             # NEW — diagnose the distortion (3 distortions × 5 manifestations)
+│   └── objection-riffs.md                  # 10 objections × cited response (phrase-level, tagged to the taxonomy)
 ├── scripts/
 │   ├── linkedin-cold-dm-sequence.md        # 4-touch with archetype rotation
 │   ├── instagram-cold-dm-sequence.md       # IG-native voice
 │   ├── facebook-cold-dm-sequence.md        # FB group-context outreach (Q8 research)
-│   ├── live-conversation-playbook.md       # 6 phases + Advance Triggers + objection branches
-│   ├── discovery-call-script.md            # 30-min Ops Teardown
+│   ├── live-conversation-playbook.md       # 6 phases + Advance Triggers + distortion-diagnosis branch
+│   ├── discovery-call-script.md            # 30-min Ops Teardown (+ 3 pre-yes beliefs)
 │   ├── convo.py                            # conversation memory CLI (Supabase)
 │   ├── schema.sql                          # one-time Supabase table setup
 │   └── test_convo.py                       # self-check for convo.py
 ├── offer/
-│   ├── ai-automation-positioning.md        # The AI wedge — one-liner + 3 sub-offers
+│   ├── agency-to-agency-positioning.md     # NEW — white-label wedge for agencies (PRIMARY ICP)
+│   ├── ai-automation-positioning.md        # Founder/SMB wedge (secondary ICP)
 │   └── proof-bank.md                       # Results by industry/pain
-└── references/
-    ├── research-synthesis.md               # Cited Q1-Q9 research + Live Query Additions
-    ├── what-not-to-do.md                   # Banned phrases + patterns
-    └── notebook-live-query.md              # LIVE FALLBACK: ask the sales notebook on a miss
+├── references/
+│   ├── research-synthesis.md               # Cited Q1-Q12 research + Live Query Additions
+│   ├── what-not-to-do.md                   # Banned phrases + patterns (Tier 1-7, incl. Hormozi-brash)
+│   ├── notebook-live-query.md              # LIVE FALLBACK: ask the sales notebook on a miss
+│   ├── ask-timing.md                       # "Ask by exchange 6" data justification
+│   ├── how-to-use.md                       # Usage modes + daily workflow
+│   └── worked-example-{linkedin,instagram,cold-email}.md   # End-to-end teaching walkthroughs
+└── _research/                              # Audit trail: sources.json, q*.json, hormozi-4hr-sales-notes.md
 ```
 
 ## How to use this skill in a request
 
 When Aleem asks for any sales asset:
 1. Read the relevant script file in full
-2. Pull the right archetype from `opener-archetypes.md`
-3. Pull a matching proof from `proof-bank.md` (by industry)
-4. Pass through the `what-not-to-do.md` filter before returning the message
-5. If a call ask is involved, use the anchored-deliverable phrasing from `discovery-call-script.md`
+2. Pick the positioning track by ICP: agency prospect → `offer/agency-to-agency-positioning.md`; founder/SMB → `offer/ai-automation-positioning.md`
+3. Pull the right archetype from `opener-archetypes.md`
+4. Pull a matching proof from `proof-bank.md` (by industry)
+5. **For an objection: diagnose the distortion first** (`frameworks/objection-psychology.md`) — which layer (circumstances/others/self) — then pull the matching overcome from `objection-riffs.md`. Set the posture from `hormozi-selling-principles.md` (back foot, one calm angle, resolve the specific concern).
+6. Pass through the `what-not-to-do.md` filter (now Tier 1-7, incl. Hormozi-brash) before returning the message
+7. If a call ask is involved, use the anchored-deliverable phrasing from `discovery-call-script.md`
 
 Don't paraphrase the bans or the call-ask templates — copy them verbatim. They were chosen for specific psychological reasons documented in their files.
 

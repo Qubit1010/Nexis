@@ -10,7 +10,7 @@ This keeps the playbook current without re-running the whole research pipeline. 
 
 Run the live fallback when ALL of these are true:
 1. The user asked a specific sales KNOWLEDGE question (openers, reply/connection rates, objection handling, closing, discovery-call structure, cold-outreach timing, a benchmark or a "what does the research say about X").
-2. After checking the relevant framework/script file + scanning `references/research-synthesis.md` (Q1 Openers, Q2 LinkedIn, Q3 Instagram, Q4 Closing, Q5 Objections, Q6 Human-vs-AI, Q7 Ask Timing, Q8 Facebook, Q9 Stalled Threads), you **don't have a confident, specific answer**.
+2. After checking the relevant framework/script file + scanning `references/research-synthesis.md` (Q1 Openers, Q2 LinkedIn, Q3 Instagram, Q4 Closing, Q5 Objections, Q6 Human-vs-AI, Q7 Ask Timing, Q8 Facebook, Q9 Stalled Threads, Q10 Agency-to-Agency, Q11 Objection Psychology, Q12 Natural Closing), you **don't have a confident, specific answer**.
 3. It's a knowledge question - NOT "write me the DM/script" (that's generated from the archetypes + scripts as usual).
 
 Do NOT run it for things already covered (check the frameworks/scripts + research-synthesis.md first - most asks are already answered there).
@@ -52,6 +52,7 @@ If the answer is empty or unhelpful, the corpus genuinely doesn't cover it - say
 
 ## Auth / troubleshooting
 
+- **Corpus expansion 2026-07-16:** added **Q10 (Agency-to-Agency / white-label), Q11 (Objection Psychology), Q12 (Natural Closing in text)** to `research-synthesis.md`, plus the **Hormozi 4-Hour Sales transcript** (`_research/hormozi-4hr-sales-notes.md`) as the source for the objection taxonomy + selling-principles layers. Q10-Q12 came from **Exa deep-research passes via the `research` skill** (reports saved under `research/2026-07-16-*.md`), not NotebookLM, because NotebookLM auth was expired (2026-07-14). New sources are indexed in `_research/sources.json` (now 88). **Primary live fallback is now a fresh `research` deep pass** (`python .claude/skills/research/scripts/research.py --query "<q>" --depth deep --save`); the NotebookLM tier below is optional/when-auth-works.
 - If the CLI errors with "Authentication expired", run `notebooklm login` (opens a browser; auto-saves on Google sign-in as hassanaleem86@gmail.com). See the [[reference-notebooklm-setup]] memory for paths. NotebookLM sessions expire often - expect to re-login periodically.
 - **Resolved 2026-07-04:** 22 of the 34 curated Q6-Q9 URLs are now in the notebook (12 fail consistently with `RPCError rpc_code=9` across three attempts - bot-blocked or JS-rendered pages, not an auth issue). `_research/sources.json` resolves 192/210 Q1-Q9 citation instances; 5 unique source UUIDs (Q1 citations 9,10,12,13,14,16,26 and Q3 citations 5,6,9,11,12,17,24,30,32,34) no longer resolve because a `source clean` dedup pass removed them - the underlying claims in `research-synthesis.md` are still valid prose, just without a live-resolvable URL in the index.
 - Run from PowerShell, not Bash (Python isn't on the Bash PATH here).

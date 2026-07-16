@@ -170,7 +170,13 @@ Before quoting price, isolate any remaining uncertainty:
 
 [Wait for affirmative.]
 
-If they hesitate or say "I mean, it sounds good but..." — that's an uncertainty objection. Pull from `frameworks/objection-riffs.md` and resolve before moving on.
+**The 3 pre-yes beliefs (silent checklist — from `frameworks/hormozi-selling-principles.md §9`).** No one buys until they believe all three. Use the double tie-down to confirm each; if one is missing, that's the real objection, not price:
+
+1. **This gets them the outcome — the way they want to get there.** (Not just that it works, but the *path* fits their team/stack.) Missing → a fit objection.
+2. **The people around them will back the decision.** Missing → an authority objection (isolate it now, don't let it surface after the price — `frameworks/objection-psychology.md §4`).
+3. **It will work for *them* specifically**, not just for your named peers. Missing → pride-proof with a same-stage case (`objection-psychology.md §3`).
+
+If they hesitate or say "I mean, it sounds good but..." — that's an uncertainty objection. **Diagnose which belief is missing / which distortion is speaking** (`frameworks/objection-psychology.md`), then pull the matching response from `frameworks/objection-riffs.md` and resolve before moving on.
 
 If they say "yeah, that's what we need" — proceed to price.
 
@@ -297,8 +303,10 @@ This single paragraph contains: time control, agenda alignment, framework promis
 This is the call script. It pulls from:
 - `frameworks/voss-calibrated-questions.md` — for labels and questions
 - `frameworks/hormozi-value-equation.md` — for how to apply value mechanics during Act III/IV
+- `frameworks/hormozi-selling-principles.md` — for the posture (back foot, expect the no) + the 3 pre-yes beliefs
+- `frameworks/objection-psychology.md` — for diagnosing which distortion an Act IV objection is
 - `frameworks/objection-riffs.md` — for objection handling at any point
-- `offer/ai-automation-positioning.md` — for the offer description in Act IV
+- `offer/ai-automation-positioning.md` (founder/SMB) or `offer/agency-to-agency-positioning.md` (agency prospect) — for the offer description in Act IV
 - `offer/proof-bank.md` — for the named-peer reference in Mistake ABC
 
 Print it. Have it open during the call. Don't read it verbatim — internalize the moves.

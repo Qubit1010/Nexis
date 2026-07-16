@@ -1,5 +1,7 @@
-# AI Automation Positioning — The Premium Wedge
+# AI Automation Positioning — The Premium Wedge (founder/SMB track — secondary)
 
+> **ICP note:** this is the **secondary** track — for when the prospect is an end-business/founder. The **primary** ICP is other agencies (white-label): use `offer/agency-to-agency-positioning.md` when the prospect is a marketing / AI / design / branding agency. Everything below still applies to direct founder/SMB outreach.
+>
 > **Not directly sourced from NotebookLM research** — this file is positioning specific to NexusPoint. It applies the Hormozi Value Equation (`frameworks/hormozi-value-equation.md`) to Aleem's actual services from `context/work.md`.
 
 ## The strategic shift

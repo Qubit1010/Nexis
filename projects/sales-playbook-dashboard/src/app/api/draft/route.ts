@@ -14,6 +14,10 @@ const OPENAI_FALLBACK_MODEL = "gpt-5.2";
 // opens at ~11 total messages = 5-6 prospect replies; earlier asks convert ~0%.
 const ASK_BY = 6;
 
+// Condensed selling posture (the one-paragraph version of frameworks/hormozi-selling-principles.md).
+// Injected inline in reply mode instead of the full file to keep prompt tokens down.
+const SELLING_POSTURE = `You don't need the sale. You're helping the prospect think clearly about a decision they already half-want to make. Expect the no — it's part of the job, never get defensive. When they push back, DIAGNOSE which distortion is speaking (circumstances = time/money, others = authority, self = fit/avoidance) before you respond — the stated objection is usually not the real one. Meet it with ONE calm, curious, logical reframe that resolves their specific concern; never stack objection-handling lines. Stay on their side the whole way; if the honest answer is no, that's fine too. Keep every line in the register of a sharp founder texting a peer — never a scripted "closer." Delivery beats content: a good line delivered pushily still reads as salesy.`;
+
 export const dynamic = "force-dynamic";
 
 type Platform = "linkedin" | "instagram";
@@ -75,9 +79,11 @@ function buildSystemPrompt(platform: Platform, mode: Mode): string {
     const seq = platform === "linkedin" ? "linkedin-cold-dm-sequence.md" : "instagram-cold-dm-sequence.md";
     parts.push(section(`${platformName(platform)} Cold DM Sequence (cadence + structure)`, read(`scripts/${seq}`)));
   } else {
-    parts.push(section("Live Conversation Playbook (6 phases + objection branches)", read("scripts/live-conversation-playbook.md")));
+    parts.push(section("Live Conversation Playbook (6 phases + Advance Triggers + distortion-diagnosis branch)", read("scripts/live-conversation-playbook.md")));
     parts.push(section("Voss Calibrated Questions (by phase)", read("frameworks/voss-calibrated-questions.md")));
-    parts.push(section("Objection Responses", read("frameworks/objection-riffs.md")));
+    parts.push(section("Objection Psychology — DIAGNOSE the distortion FIRST (3 distortions × 5 manifestations)", read("frameworks/objection-psychology.md")));
+    parts.push(section("Objection Responses (phrase-level, tagged to the taxonomy above)", read("frameworks/objection-riffs.md")));
+    parts.push(section("Selling Posture (hold this the entire reply)", SELLING_POSTURE));
   }
 
   // Banned phrases last so they're the final filter in the model's context.

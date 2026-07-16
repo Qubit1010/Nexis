@@ -431,6 +431,65 @@ Sources: [1] LeadHunter, LinkedIn Follow-Up Messages: The Science of Persistence
 
 ---
 
+## Q10: Selling to Agencies (Agency-to-Agency / White-Label)
+
+*Added 2026-07-16 from a deep research pass (`research/2026-07-16-best-practices-for-selling-b2b-services-to-marketing-ai-desi.md`). NexusPoint's primary new ICP: marketing / AI / design / branding agencies as clients, often white-label. Founders/SMBs remain the secondary track.*
+
+**1. Who decides (multi-threading is mandatory)**
+A complex B2B purchase involves a buying group of **6-10 decision-makers**, each with their own priorities [1, 2]. Inside an agency that usually means the owner/founder (economic), a delivery/ops lead (fulfillment risk), and sometimes an account lead (client-facing risk). Tailor the message by role and expect to sell past more than one person [2]. The authority objection here is structural, not a brush-off — see Q11 and `objection-psychology.md §4`.
+
+**2. What white-label actually is (and the real objection)**
+White-label = a specialist ships work under the *agency's* brand; their client never knows you exist [3]. The agency's real hesitation is almost never price — it's **"will delivery be consistent, will quality hold, and will you try to steal my client?"** [4]. This is the load-bearing objection for A2A and it maps to *fit* + *self* (trust), not *money*. Neutralize it up front: a written MSA/SOW/SLA, a non-solicit/non-compete on their clients, and a small paid pilot before a retainer [5, 4].
+
+**3. How to position (outcomes + margin, not execution)**
+B2B buyers optimize for **logic, ROI, financial stability, and risk reduction** — which validates the whole "sell with logic" posture [6]. Agencies specifically buy **capacity and margin**: reliable fulfillment they don't have to hire for, priced so their markup survives [7, 5]. Lead with the outcome and the margin math, not the tech. For AI specifically, position as **owning an outcome for their client**, not reselling a tool [8]. And note buyers do most of their evaluation online before ever replying [9] — the proof has to be visible before the conversation.
+
+**4. Objections unique to A2A (preempt in discovery)**
+- *"Our clients are different / white-label isn't us"* → fit objection; pride-proof with agency-specific cases (`objection-psychology.md §3`).
+- *"How do I know your delivery is reliable?"* → the #1 real fear [4]; answer with SLA + pilot + a named agency reference.
+- *"What's my margin?"* → price to protect their markup explicitly [7].
+- *"Will you poach my client?"* → written non-solicit; this is table stakes [4].
+
+Sources: [1] Geisheker, The Ultimate B2B Marketing Guide for 2026 (cites Gartner 6-10 buying group). [2] Autobound, B2B Sales Prospecting Guide 2026 (persona/role prospecting). [3] LIVV Creative, The White-Label Playbook (2026). [4] GeeksForGrowth, How Do Agencies Sell White-Label Services Confidently (2026). [5] Gruv.ai, How to Structure a White-Label Partnership (MSA/SOW/SLA, 2026). [6] Salesforce, B2B Digital Marketing: The Ultimate Guide (buyers decide on logic/ROI/stability). [7] Taskip, How to Offer White-Label Services for Agencies 2026 (fulfillment capacity + margin). [8] Vendasta, AI for Resellers / YourGPT, Selling White-Label AI to Clients (own outcomes not tools, 2026). [9] OneMagnify, B2B Digital Marketing Trends 2026 (online-first evaluation).
+
+## Q11: Objection Psychology (Distortions + the Evidence Behind Them)
+
+*Added 2026-07-16 from a deep research pass (`research/2026-07-16-sales-objection-handling-psychology-cognitive-distortions-be.md`) to validate/refine the Hormozi three-distortions model in `frameworks/objection-psychology.md`. Hormozi's model traces to Albert Ellis / CBT (`_research/hormozi-4hr-sales-notes.md §C`).*
+
+**1. The stated objection is rarely the real one**
+Roughly **two-thirds of objections are not about price, product, or timing** — they trace to psychological drivers (threat response, loss aversion, social risk) [1]. Psychological objections are "often hidden," stemming from attitudes or feelings, not the surface reason given [5]. This is exactly Hormozi's point: the objection is a *distortion*, a place the prospect casts their power, not the true blocker. Diagnose the driver before responding.
+
+**2. Objections are buying signals, not rejections**
+Analysis of **67,149 sales calls (2026)**: a prospect who pushes back on price is mentally evaluating your solution against their budget — that's engagement, not a no [3]. Objections activate a **threat response** in the *rep* (the brain reads pushback as rejection and rushes to fix it), which is why untrained reps get defensive [8]. The discipline is to stay on the back foot (`hormozi-selling-principles.md §5, §3`). This corroborates the existing Advance-Trigger that treats a price/timeline/integration question as a buying signal (Q7).
+
+**3. The cited overcome pattern: reframe, don't argue**
+Modern practice converges on **diagnose → isolate → reframe the buyer's own interpretation** rather than rebutting. The DISARM framework (2026): **D**isarm the emotion, **I**solate the real concern, **S**urface the underlying fear, **A**lign on shared outcomes, **R**eflect the decision back [4] — which is the label-first + isolate flow already in `objection-psychology.md` and the Cole Gordon double-tie-down. Cognitive reframing "shifts a buyer's interpretation of their own objection rather than arguing against it," rooted in CBT/NLP [6]. Named cognitive biases that drive stall-or-move: loss aversion, anchoring, status-quo bias, framing, social proof, authority, scarcity [2] — these are the levers behind the Hormozi overcomes (e.g. cost-of-inaction = loss aversion; pride-proof = social proof; risk-free options = status-quo/framing).
+
+**4. Benchmark: discovery decides, closing technique doesn't save a bad discovery**
+RAIN Group survey of **472 sellers**: Elite Performers (top 7%) close at **~75%** vs an industry average of **47%**; the differentiator is discovery quality, not closing tricks [7]. Translation for this playbook: the distortion overcomes in `objection-psychology.md` are a safety net; the real leverage is the Ops Teardown discovery (`scripts/discovery-call-script.md`) surfacing genuine pain first.
+
+**5. Honesty flag**
+No source in this pass names Ellis's three distortions (circumstances/others/self) *as a framework* — that taxonomy is Hormozi's application of CBT (`_research/hormozi-4hr-sales-notes.md`). The research above **validates the underlying mechanics** (hidden drivers, threat response, reframe-don't-argue, the specific biases) but the three-bucket labeling is Hormozi's, used because it's operationally clean, not because a 2026 study named it.
+
+Sources: [1] GetGangly, Objection Handling Psychology: Why Prospects Push Back (2026). [2] Science of Selling, What Cognitive Biases Influence Buying Decisions (seven biases). [3] Prospeo, Objection Handling: What 67,149 Sales Calls Reveal (2026). [4] Kayvon, DISARM Objection Handling Framework (2026). [5] Quizlet / Lumen Learning, Techniques for Overcoming Sales Objections (psychological objections are hidden; "thinking about it" is a stall). [6] UnleashYourPower, Cognitive Reframing Techniques That Close More Sales (2026). [7] ITSConvo / RAIN Group, Best Sales Closing Techniques 2026 (472-seller survey, 75% vs 47%). [8] Prospeo / Trellus, objections activate a threat response (2026). [9] SalesArmor, 50 Sales Objections field guide (Sandler: the industry trained reps to do the wrong thing).
+
+## Q12: Sounding Natural When Closing in Text
+
+*Added 2026-07-16 from a deep research pass (`research/2026-07-16-how-to-write-natural-human-sounding-cold-outreach-and-close.md`). Reinforces `references/what-not-to-do.md` and `frameworks/hormozi-selling-principles.md §5, §8, §12` — the "must look natural" bar for the Hormozi overcomes.*
+
+**1. Sound like a colleague, not a vendor**
+The most-cited authenticity signals for 2026 B2B text: **sound like a colleague, name their pain before pitching, keep it short, keep it lowercase, don't write a brochure** [1]. Coaches are explicitly building systems to "sound human in outbound when everyone else sounds like AI" [2]. Keep messages tight — ~**100-150 words, natural tone, real structure** [3]. Signal-based (specific-trigger) personalization is what makes it feel human, and correlates with materially higher reply rates (one 2026 source reports ~**23%** on a signal-based approach vs the ~1.7% generic baseline in Q1) [6].
+
+**2. Rigid scripts and pressure destroy trust (the case against Hormozi's brash delivery)**
+Practitioners are explicit: closers who "show up cold, follow a rigid script, and push hard for a yes create pressure, break trust, trigger resistance, and leave **75-85% of opportunities on the table**" [4]. The sales-training industry "is selling reps the wrong thing — scripts, frameworks, 'say this when they say that'" [5, and Sandler in Q11]. **This is the direct evidence for why we extract Hormozi's *logic* and drop his *delivery*.** The winning mode is no-pressure, buyer-led conversation [7] — exactly `hormozi-selling-principles.md §5` (sell from the back foot) and §8 (be fine with the no).
+
+**3. What this means for the overcomes**
+Every reframe in `objection-psychology.md` must be delivered: one at a time, calm, curious, lowercase-ish, resolving the *specific* concern, never as a stacked barrage. Delivery beats content [Hormozi §N]. If a drafted overcome reads as a scripted "closer" line, it fails the bar — rewrite it in the register of a colleague thinking alongside them.
+
+Sources: [1] Tejas Jhaveri (Founder/CEO Myntmore), LinkedIn (sound like a colleague, name the pain, short, lowercase, 2026). [2] Morgan J Ingram (AMP), sound human in outbound (2026). [3] r/ChatGPTPro, B2B cold email prompt that sounds human (100-150 words, natural tone, 2026). [4] Adam Lilizai, LinkedIn (rigid-script pushing leaves 75-85% on the table). [5] Mor Assouline (Demo to Close), scripts are the wrong thing (2026). [6] DevCommX, Cold Emails That Get Replies 2026 (signal-based ~23%). [7] Charlotte Lloyd, no-pressure buyer-led selling (2026).
+
+---
+
 ## Live Query Additions
 
 Findings from on-demand live queries to the **NexusPoint Sales Playbook Research** NotebookLM notebook (the same corpus this synthesis was built from), captured when the original Q1-Q5 synthesis didn't fully answer a specific question. Each entry is dated and tagged to the relevant Q section. Procedure: `notebook-live-query.md`. New live-query results get appended here (this is the growing source of truth - scan it before re-querying).

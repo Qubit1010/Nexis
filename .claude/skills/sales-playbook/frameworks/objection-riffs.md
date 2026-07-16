@@ -1,23 +1,26 @@
-# Objection Riffs — 10 Cited Responses
+# Objection Riffs — Cited Responses (phrase-level)
 
-> **Source basis:** Every response below is sourced from `references/research-synthesis.md` (Q5 section) which combines Voss (Black Swan Group), Sandler, Cole Gordon, Becc Holland, Frank Kern, and Hormozi as documented in the NotebookLM research. Where a source doesn't have a documented response, I say "not in sources" — Aleem fills with his own judgment.
+> **This is the phrase-level lookup. The diagnostic model lives in `frameworks/objection-psychology.md`** — read it first. That file tells you *which distortion* a prospect is in (circumstances / others / self) and which family of overcome to reach for; this file gives the ready response for each common surface-phrase. Each objection below is tagged with its distortion + manifestation so the two files line up.
+>
+> **Source basis:** responses combine Voss (Black Swan), Sandler, Cole Gordon, Becc Holland, Frank Kern, and Hormozi's 4-Hour Sales course (`_research/hormozi-4hr-sales-notes.md`), plus the 2026 research pass in `references/research-synthesis.md` (Q5, Q11). Gaps that used to read "not in sources" are now filled from the Hormozi source and labeled `[hormozi-4hr]`.
 
 ## How to use this file
 
 When a prospect raises an objection in a DM or on a call:
 
-1. **Don't argue or defend.** Voss's principle: never argue with a feeling.
-2. **Label first** (acknowledge the feeling). Look up the right label in `frameworks/voss-calibrated-questions.md`.
-3. **Then use the riff below.**
-4. **Then go silent.** Wait.
+1. **Diagnose first.** Which distortion / manifestation is this? (`objection-psychology.md`.) The stated objection is often not the real one — ~2/3 of objections trace to a hidden driver, not the words [research-synthesis Q11].
+2. **Don't argue or defend.** Never argue with a feeling. Objections are buying signals, not rejections [Q11]. Reframe their interpretation; don't rebut it.
+3. **Label first** (acknowledge the feeling). Look up the right label in `frameworks/voss-calibrated-questions.md`.
+4. **Then use the riff below** — ONE angle, calm and curious, resolving their specific concern.
+5. **Then go silent.** Wait.
 
-The riffs are starters, not scripts. Match tone to the prospect.
+The riffs are starters, not scripts. Delivery beats content — pushy delivery makes any line sound salesy. Match tone to the prospect and keep it in the register of a colleague, not a closer.
 
 ---
 
 ## The 10 most-common objections (with cited responses)
 
-### 1. "Too expensive" / "It's too much money"
+### 1. "Too expensive" / "It's too much money" — *[Circumstances / Money]*
 
 **Voss's response (calibrated question):**
 > "How am I supposed to do that?"
@@ -34,25 +37,24 @@ Delivered with **curious tone, not sarcastic**. Forces them to solve your proble
 
 ---
 
-### 2. "I need to think about it"
+### 2. "I need to think about it" — *[Self / Avoidance-stall — the core layer]*
 
-**Not directly in sources** (no documented Voss/Sandler response specifically for this phrase).
+This is the deepest layer: you're finally talking to the decision-maker in power (`objection-psychology.md §5`). Full frame set (past/present/future) lives there. The phrase-level moves:
 
-**Synthesis-based suggestion** (extrapolating from Voss labels + Cole Gordon's framework):
+**Label first, then the go-to** `[hormozi-4hr]`:
+> "Seems like something specific isn't quite landing yet. Totally fair — what's your main concern? Let's think it through together."
 
-Voss label first:
-> "It seems like there's something specific that's not quite landing yet."
+[Silence. Wait.] Most of the time they name it and you handle that. If they stay vague, pick the angle that fits:
 
-[Silence. Wait.]
+- **If it points backward** ("this is fast" / "I've been burned before"): *"Honestly this isn't a fast decision — you've been circling this for a while, and you already put time into these calls because it matters. And if a past attempt burned you, the expensive part is letting it stop you from the one that works."*
+- **If they just can't decide:** *"You're not going to go home and sit with this — you'll get pulled into the next thing and nothing changes. It doesn't take more time, it takes answers, and I'm the source of those. Ask me anything now and let's settle it."*
+- **If you have a guarantee/pilot:** *"You can't really make an informed call from the outside. So don't decide now — start, and decide from the inside. If in [30 days] it hasn't done what I said, you're out and refunded."*
 
-Then if they don't fill it:
-> "Most people who say that are usually circling one of three things — is it the price, the timing, or whether this'll actually work for you? Which one's closest?"
-
-(This forces them to name the real objection, which you can then handle from the bank below.)
+(Forces the real objection or converts the stall into a decision. Deliver calm and curious, never as a push.)
 
 ---
 
-### 3. "I need to talk to my partner / team / wife / co-founder"
+### 3. "I need to talk to my partner / team / wife / co-founder" — *[Others / Authority]*
 
 **Cole Gordon's "double tie-down":**
 > "Hey, no problem. That aside, how do you feel about the process? Do you feel like what we covered is essentially what you need to [solve the specific problem we identified]?"
@@ -65,7 +67,7 @@ This isolates UNCERTAINTY (the real objection) from LOGISTICS (the stated one). 
 
 ---
 
-### 4. "We're already working with someone" / "We have a vendor"
+### 4. "We're already working with someone" / "We have a vendor" — *[Circumstances / Fit]*
 
 **Becc Holland's response (DO NOT criticize the competitor):**
 > Praise the existing setup, then highlight your differences.
@@ -80,19 +82,20 @@ Example:
 
 ---
 
-### 5. "We're not the right fit"
+### 5. "We're not the right fit" / "we're different" — *[Circumstances→Self / Fit]*
 
-**Not in sources.** No documented response.
-
-**Synthesis-based:**
-Voss label:
+Voss label first:
 > "It seems like something specific is making you say that — what's the part that doesn't fit?"
 
-If their reason is real, thank them and disqualify cleanly (don't push). If their reason is vague, you might be hitting a brush-off (handle as #6).
+Then diagnose: is it a *real* structural mismatch, or "I'm a special case" doubt? (`objection-psychology.md §3`.)
+
+- **If it's "our clients / our setup are different" (the snowflake) →** pride-proof `[hormozi-4hr]`: *"How many teams in your exact situation would you need to see this work for before it'd feel proven — a few, a dozen? I'd rather show you the ones closest to your setup than argue it."*
+- **If it's discomfort with a required change →** pain-of-staying vs pain-of-change: *"Fair — is that a hard no, or more that it's a change from how you do it now? The real question is just whether the friction you're in now is worse than the friction of changing it."*
+- **If the mismatch is genuinely real →** thank them and disqualify cleanly (don't push — that's `hormozi-selling-principles.md §8` in action). A clean no is a win.
 
 ---
 
-### 6. "Send me more info / email me" (the brush-off)
+### 6. "Send me more info / email me" (the brush-off) — *[Self / Avoidance-stall]*
 
 **Sandler's "Reversing":** Reply with a gentle question to find the intent behind the brush-off rather than blindly sending material.
 
@@ -104,7 +107,7 @@ This forces them to either (a) name the real concern, or (b) admit the brush-off
 
 ---
 
-### 7. "Not a priority right now" / "Bad timing"
+### 7. "Not a priority right now" / "Bad timing" — *[Circumstances / Time]*
 
 **Sandler pattern interrupt:**
 > "It seems like this may have dropped in priority — should we pause for now or revisit later?"
@@ -116,7 +119,7 @@ This is no-oriented. "Pause for now" feels safe to say yes to. But it also gets 
 
 ---
 
-### 8. "We tried something like this before and it didn't work"
+### 8. "We tried something like this before and it didn't work" — *[Self / Avoidance — "don't let it burn you twice"]*
 
 **Cole Gordon's "Mistake ABC" framework:**
 
@@ -128,7 +131,7 @@ Three steps: name the mistake → name the consequence → name your specific di
 
 ---
 
-### 9. "What if it doesn't work?" / "No guarantee?"
+### 9. "What if it doesn't work?" / "No guarantee?" — *[Self / Fit — perceived likelihood]*
 
 **Frank Kern's documented risk reversal:**
 > "If you feel I wasted your time, I will send you a check for $1,500."
@@ -145,7 +148,7 @@ The more risk you reverse, the less Perceived Likelihood becomes a blocker.
 
 ---
 
-### 10. "Just curious, how much does it cost?" (asked early in call, before discovery)
+### 10. "Just curious, how much does it cost?" (asked early in call, before discovery) — *[Obstacle, pre-ask — not yet an objection]*
 
 **Sandler's reverse question:**
 > "That's a fair question. Usually our clients find the budget once they're fully convinced of the value. Are we at that point yet?"

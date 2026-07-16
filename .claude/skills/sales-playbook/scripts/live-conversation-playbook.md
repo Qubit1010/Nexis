@@ -1,6 +1,6 @@
 # Live Conversation Playbook — When They Reply
 
-> **Source basis:** Stitched from `references/research-synthesis.md` (Q3 IG conversation flow, Q4 discovery structure, Q5 objection responses). Pulls Voss labels (`frameworks/voss-calibrated-questions.md`) and objection riffs (`frameworks/objection-riffs.md`).
+> **Source basis:** Stitched from `references/research-synthesis.md` (Q3 IG conversation flow, Q4 discovery structure, Q5 + Q11 objection responses). Pulls Voss labels (`frameworks/voss-calibrated-questions.md`), the objection taxonomy (`frameworks/objection-psychology.md`), objection riffs (`frameworks/objection-riffs.md`), and the selling posture (`frameworks/hormozi-selling-principles.md`).
 
 ## When to use this file
 
@@ -130,20 +130,28 @@ When they ask "have you done this for someone like me?" or "what does it look li
 
 ### Phase 5 — Objection Branch (varies)
 
-At some point — usually after Phase 3 or 4 — they'll raise an objection. The 10 most common are documented with cited responses in `frameworks/objection-riffs.md`.
+At some point they'll push back. Before you reach for a response, **diagnose the distortion** — the stated objection is usually not the real one (~2/3 of the time, per `research-synthesis.md` Q11).
+
+**Obstacle vs objection (timing):** if the pushback comes *before* you've made the call ask, it's an **obstacle** — you're not soliciting yet, so just keep building belief (it often dissolves on its own). Once the ask is on the table, it's a true **objection** — run the branch below. (`frameworks/hormozi-selling-principles.md §4`.)
 
 **Branch flow:**
 
 ```
 Prospect raises objection
+  → DIAGNOSE: which distortion / manifestation? (frameworks/objection-psychology.md)
+       Circumstances (time/money) = outer layer, furthest from yes
+       Others (authority)         = middle, one step from the decision-maker
+       Self (fit/avoidance)       = core, you're at the real decision
   → Label it first (Voss): "It seems like [feeling]..."
   → [SILENCE - let them confirm or expand]
-  → Pull the cited response from objection-riffs.md
+  → Pull ONE matching overcome (objection-psychology.md for the family, objection-riffs.md for the phrase)
   → [SILENCE again]
-  → If resolved → continue to Phase 6
+  → If resolved → keep peeling toward the core, then Phase 6
   → If not resolved → loop back to Phase 3 (deepen) ONCE, max, or disqualify cleanly
      (second unresolved pass = transition line or disqualify; see Advance Triggers)
 ```
+
+Deliver ONE angle, calm and curious, resolving their *specific* concern — never a stacked barrage (delivery beats content, `hormozi-selling-principles.md §12`). A "need to think about it" is not a setback: it means you've peeled past the outer layers and you're finally at the decision-maker (`objection-psychology.md §5`).
 
 **Most common DM-stage objections:**
 1. "Too expensive" / "What's the price?" (asked early) — see objection-riffs.md #1 and #10

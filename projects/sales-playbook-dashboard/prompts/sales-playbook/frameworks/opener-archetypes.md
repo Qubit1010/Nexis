@@ -1,6 +1,6 @@
 # Opener Archetypes — Sourced & Tested Patterns
 
-> **Source basis:** Every template and stat below is pulled from `references/research-synthesis.md` (a NotebookLM-cited synthesis of 77 sources including Josh Braun, Jason Bay, Becc Holland, Justin Welsh, Outbound Squad, Black Swan/Voss, Sandler, Hormozi, plus 2026 outbound benchmark data from Expandi (13.2M data points), Sopro, Gong, and Mailforge).
+> **Source basis:** Every template and stat below is pulled from `references/research-synthesis.md` — a multi-pass cited synthesis (Q1-Q12) combining a NotebookLM corpus (Q1-Q5) with Exa deep-research passes (Q6-Q12), indexed in `_research/sources.json` (88 sources as of 2026-07-16). Practitioners include Josh Braun, Jason Bay, Becc Holland, Justin Welsh, Outbound Squad, Black Swan/Voss, Sandler, Hormozi, plus 2026 outbound benchmark data (Expandi 13.2M data points, Sopro, Gong, Mailforge).
 
 > **Honesty note:** Where reply-rate data exists, I cite it. Where it doesn't (e.g., Loom video DM stats are not in our sources), I say so. Do not extrapolate.
 

@@ -115,6 +115,24 @@ Sourced from `references/research-synthesis.md` Q6 (FirstSales, LinkedInsider, M
 
 ---
 
+## Tier 7 — Hormozi-Brash Tells (keep the logic, drop the aggression)
+
+The upgrade imports Alex Hormozi's objection *psychology* (`frameworks/objection-psychology.md`, `frameworks/hormozi-selling-principles.md`) but **not his gym-floor delivery.** His raw phrasing is high-pressure closer energy that fails NexusPoint's natural bar and, per the research, *loses* deals: rigid-script pushing "creates pressure, breaks trust, triggers resistance, and leaves 75-85% of opportunities on the table" (`research-synthesis.md` Q12). Strip these registers when re-voicing any Hormozi overcome:
+
+| Pattern to kill | Why | Say instead |
+|---|---|---|
+| Command closes — "Just take the card," "shut up and buy," "sign here" | Pressure; destroys the back-foot posture | Ask, don't command. "Want me to walk you through getting started?" |
+| Shame / insult framing — "you're broke," "you're the problem," calling out their failure | Humiliation is not persuasion in B2B text | Name the cost neutrally, on their side |
+| Profanity / hype-bro tone — "crushing it," "balls to bones," swearing | Reads as a closer script, not a colleague | Plain, calm, lowercase register |
+| Hard ultimatums — "draw the line in the sand right now," "decide this second" | Manufactured urgency; trips the "salesy" pattern-match | Soft, real next step: "no rush — want to settle it now or think on one specific thing?" |
+| Guilt / fear pressure — "another year of almost," "you'll regret this forever" as a hammer | The *idea* (cost of inaction) is fine; the hammering isn't | State the cost once, gently, then go quiet |
+| Stacking 3-4 overcomes in one message | Barrage = pressure = distrust | ONE angle, resolve the specific concern, wait |
+| Manipulative anchoring theatrics — throwing out a shock number to force a gasp | Reads as a tactic in text | Give context before any number (`objection-psychology.md §2`) |
+
+**Rule:** if a drafted overcome sounds like a high-ticket closer on a stage, rewrite it in the register of a sharp founder thinking alongside a peer. Delivery beats content (`hormozi-selling-principles.md §12`).
+
+---
+
 ## Formatting kills (apply everywhere)
 
 - **No em-dashes** (—) in any cold message. Use hyphens with spaces (` - `) or commas. Em-dashes are now widely associated with AI-generated text.
@@ -129,7 +147,7 @@ Sourced from `references/research-synthesis.md` Q6 (FirstSales, LinkedInsider, M
 
 Before any cold message goes out, it must pass:
 
-1. ☐ Does NOT contain any Tier 1-6 phrase or pattern
+1. ☐ Does NOT contain any Tier 1-7 phrase or pattern
 2. ☐ Under platform character/word limit (LinkedIn connection: 280 / IG DM: 100 words / Cold email: 120 words)
 3. ☐ Specific to this prospect — would NOT make sense sent to 10 other prospects in the same batch
 4. ☐ Max 2 instances of "I" / "we" / "my" / "our"
