@@ -27,10 +27,15 @@ HEADER_ALIASES = {
     "location": "location",
     "number": "phone",
     "note": "note",
+    "link": "directory_link",  # Clutch/DesignRush profile URL (no site link on the card itself)
     "website link": "website",
     "instagram link": "instagram",
     "linkedin link": "linkedin",
     "facebook link": "facebook",
+    "founder": "founder",
+    "founder instagram link": "founder_instagram",
+    "founder linkedin link": "founder_linkedin",
+    "founder facebook link": "founder_facebook",
 }
 
 
@@ -55,6 +60,33 @@ def status_col_index(header):
     raise SystemExit(f"No '{STATUS_HEADER}' column found in header: {header}")
 
 
+def row_to_biz(row_num, row, col_map):
+    """One Main row -> the biz dict resolve.py consumes. Existing social/founder values ride along so
+    resolve fills only gaps and never re-searches a filled field."""
+    insta = cell(row, col_map, "instagram")
+    linkd = cell(row, col_map, "linkedin")
+    fbook = cell(row, col_map, "facebook")
+    return {
+        "row": row_num,
+        "company": cell(row, col_map, "company"),
+        "category": _strip_bullet(cell(row, col_map, "category")),
+        "rating": cell(row, col_map, "rating"),
+        "experience": cell(row, col_map, "experience"),
+        "location": cell(row, col_map, "location"),
+        "phone": _clean_phone(cell(row, col_map, "phone")),
+        "note": cell(row, col_map, "note"),
+        "website": cell(row, col_map, "website"),
+        "directory_link": cell(row, col_map, "directory_link"),
+        "instagram": insta,
+        "linkedin": linkd,
+        "facebook": fbook,
+        "founder": cell(row, col_map, "founder"),
+        "founder_instagram": cell(row, col_map, "founder_instagram"),
+        "founder_linkedin": cell(row, col_map, "founder_linkedin"),
+        "founder_facebook": cell(row, col_map, "founder_facebook"),
+    }
+
+
 def next_batch(sheet_id, tab, limit):
     rows = sheets.read_values(sheet_id, tab)
     if not rows:
@@ -71,15 +103,21 @@ def next_batch(sheet_id, tab, limit):
         if not any(c.strip() for c in row):
             continue
         status = row[status_idx].strip() if status_idx < len(row) else ""
-        if status:
+        if status.lower().startswith("skipped"):
             continue
 
         company = cell(row, col_map, "company")
         if not company:
             continue
 
-        # already has at least one social filled in from the earlier merge -- don't re-search
-        if cell(row, col_map, "instagram") or cell(row, col_map, "linkedin") or cell(row, col_map, "facebook"):
+        insta = cell(row, col_map, "instagram")
+        linkd = cell(row, col_map, "linkedin")
+        fbook = cell(row, col_map, "facebook")
+        founder = cell(row, col_map, "founder")
+        # Fully resolved already (has a company social AND founder data) -- don't re-search. A row
+        # with company socials but no founder still surfaces (even if it has an old v1 "Resolved..."
+        # status from before founder columns existed), so v2 can fill the founder gap.
+        if (insta or linkd or fbook) and founder:
             already_has_socials += 1
             continue
 
@@ -92,17 +130,7 @@ def next_batch(sheet_id, tab, limit):
             skipped_geo += 1
             continue
 
-        batch.append({
-            "row": row_num,
-            "company": company,
-            "category": _strip_bullet(cell(row, col_map, "category")),
-            "rating": cell(row, col_map, "rating"),
-            "experience": experience,
-            "location": location,
-            "phone": _clean_phone(cell(row, col_map, "phone")),
-            "note": cell(row, col_map, "note"),
-            "website": cell(row, col_map, "website"),
-        })
+        batch.append(row_to_biz(row_num, row, col_map))
         if len(batch) >= limit:
             break
 
@@ -111,7 +139,47 @@ def next_batch(sheet_id, tab, limit):
         "tab": tab,
         "status_col": status_letter,
         "skipped_geo_this_run": skipped_geo,
-        "already_has_socials_this_run": already_has_socials,
+        "already_resolved_this_run": already_has_socials,
+        "businesses": batch,
+    }
+
+
+def rows_in_range(sheet_id, tab, start_row, end_row, *, skip_status_substr=None):
+    """Businesses for an explicit row range, bypassing next_batch's 'already resolved' skip -- used to
+    REprocess rows that already carry (possibly wrong) data after a resolver logic change. Still applies
+    geo exclusion. `skip_status_substr` makes a re-run resume-safe: pass a marker (e.g. 'v3:') and rows
+    whose status already contains it are skipped, so a batch that died partway continues where it left
+    off without redoing finished rows."""
+    rows = sheets.read_values(sheet_id, tab)
+    if not rows:
+        raise SystemExit(f"Could not read {sheet_id} [{tab}]")
+    header = rows[0]
+    col_map = build_col_map(header)
+    status_idx = status_col_index(header)
+
+    batch, skipped_geo, skipped_done = [], 0, 0
+    for row_num, row in enumerate(rows[1:], start=2):
+        if row_num < start_row or row_num > end_row:
+            continue
+        if not any(c.strip() for c in row):
+            continue
+        company = cell(row, col_map, "company")
+        if not company:
+            continue
+        status = row[status_idx].strip() if status_idx < len(row) else ""
+        if skip_status_substr and skip_status_substr.lower() in status.lower():
+            skipped_done += 1
+            continue
+        geo_text = f"{cell(row, col_map, 'experience')} {cell(row, col_map, 'location')}"
+        if _is_south_asia(geo_text) or _is_south_asia(company):
+            skipped_geo += 1
+            continue
+        batch.append(row_to_biz(row_num, row, col_map))
+
+    return {
+        "sheet_id": sheet_id, "tab": tab,
+        "skipped_geo_this_run": skipped_geo,
+        "already_done_this_run": skipped_done,
         "businesses": batch,
     }
 

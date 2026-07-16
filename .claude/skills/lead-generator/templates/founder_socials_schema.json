@@ -1,0 +1,13 @@
+{
+  "many": false,
+  "fields": [
+    {"name": "founder_name", "description": "full name of the founder, owner, co-founder, principal, or CEO of this business, if the page states it"},
+    {"name": "founder_title", "description": "that person's exact title (Founder, Owner, CEO, Co-Founder, etc.)"},
+    {"name": "company_instagram", "description": "the company's Instagram profile URL if linked on the page"},
+    {"name": "company_linkedin", "description": "the company's LinkedIn URL (company page or personal) if linked"},
+    {"name": "company_facebook", "description": "the company's Facebook page URL if linked"},
+    {"name": "founder_instagram", "description": "the founder's personal Instagram URL if linked"},
+    {"name": "founder_linkedin", "description": "the founder's personal LinkedIn profile URL (linkedin.com/in/...) if linked"},
+    {"name": "founder_facebook", "description": "the founder's personal Facebook URL if linked"}
+  ]
+}

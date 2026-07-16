@@ -33,6 +33,7 @@ import sys
 from urllib.parse import urljoin, urlparse
 
 import requests
+import url_filters  # shared social-URL classifier (single source of truth with resolve.py)
 from bs4 import BeautifulSoup
 
 HEADERS = {
@@ -41,18 +42,6 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
 }
-
-SOCIAL_RE = re.compile(
-    r"https?://(?:www\.|[a-z]{2}-[a-z]{2}\.)?(instagram|facebook|linkedin)\.com/[A-Za-z0-9_./?=&%-]+",
-    re.I,
-)
-
-# Non-profile URL shapes to reject, same rule as the WebSearch pass, plus the FB/LinkedIn junk
-# patterns learned empirically during this session's Apify merge pass (facebook.com/tr is Meta's
-# tracking-pixel beacon, not a page; ported here so this script rejects the same junk it does).
-_BAD_PATH = re.compile(r"/(p|reel|explore|tv|posts|pulse|photo|sharer|share)(/|$|\?)", re.I)
-_BAD_PATH_FB = re.compile(r"facebook\.com/(tr/?$|2008/fbml|profile\.php|plugins/)", re.I)
-_BAD_PATH_LI = re.compile(r"linkedin\.com/(feed|showcase)/|linkedin\.com/authwall", re.I)
 
 CONTACT_PATHS = ["/contact/", "/contact-us/", "/about/", "/about-us/"]
 
@@ -67,30 +56,16 @@ TEAM_PATHS = [
 FOUNDER_TITLE_RE = re.compile(r"founder|co-founder|owner|principal|ceo|president", re.I)
 
 
-def _clean(url):
-    return url.split("?")[0].rstrip("/")
-
-
 def _extract(html):
+    """First valid profile per platform, using the shared classifier (company pages rejected here —
+    this legacy pass feeds the per-channel Instant sheets, which still want a person; resolve.py opts
+    into company pages for the new Main-sheet company-LinkedIn column)."""
     found = {}
-    for m in SOCIAL_RE.finditer(html):
-        url = _clean(m.group(0))
-        platform = m.group(1).lower()
-        if _BAD_PATH.search(url):
-            continue
-        if platform == "facebook" and _BAD_PATH_FB.search(url):
-            continue
-        if platform == "linkedin" and _BAD_PATH_LI.search(url):
-            continue
-        # Skip share/widget links (og:image style CDN links, sharer.php already caught above).
-        path = urlparse(url).path
-        if not path or path == "/":
-            continue
-        # Session-standing rule: a LinkedIn company page has no identity for 1:1 outreach.
-        # Reject it here rather than accept-then-block the team-page person-link pass below.
-        if platform == "linkedin" and "/company/" in url.lower():
-            continue
-        found.setdefault(platform, url)
+    for m in url_filters.SOCIAL_RE.finditer(html):
+        hit = url_filters.social_profile(m.group(0))
+        if hit:
+            platform, url = hit
+            found.setdefault(platform, url)
     return found
 
 
@@ -102,8 +77,8 @@ def _team_linkedin_candidates(html):
     soup = BeautifulSoup(html, "lxml")
     hits, seen = [], set()
     for a in soup.find_all("a", href=True):
-        href = _clean(a["href"])
-        if "linkedin.com/in/" not in href.lower() or href in seen:
+        href = url_filters.clean(a["href"])
+        if not url_filters.is_person_linkedin(href) or href in seen:
             continue
         seen.add(href)
         context, node = "", a

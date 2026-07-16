@@ -1,141 +1,141 @@
 ---
 name: lead-generator
-description: Resolves social media profiles (Instagram, LinkedIn, Facebook) for businesses already sourced via Google Maps (Aleem's manual Instant Data Scraper output), then writes each resolved profile into the matching leads-to-crm Instant sheet so its existing pipeline handles dedup, message drafting, and the CRM push. Use this whenever the user wants to find social profiles for a batch of Google Maps leads, or expand outreach beyond what leads-to-crm already has rows for. Trigger on "resolve socials for these maps leads", "find their instagram/linkedin/facebook", "enrich the google maps leads", "process the maps sheet", "find social profiles for [sheet/business]", or any request to turn a Google Maps business list into outreach-ready leads. Does NOT draft outreach messages or manage the CRM itself — leads-to-crm's push.py owns that once a lead is in an Instant sheet.
+description: Turns raw directory leads into enriched, outreach-ready rows on a consolidated "Main" sheet. Merges + dedups leads from multiple directories (Google Maps, Clutch, DesignRush, ...), then for each unique business resolves a website (via Clutch redirect-extraction when only a directory profile exists), scrapes that website FIRST for the company's Instagram/LinkedIn/Facebook and the founder's name + personal socials (footer/header, then About/Team/Contact pages), and only falls back to the in-repo research skill (fused Serper/Tavily/Exa) when the website doesn't have what's needed. Search-sourced founder matches are always flagged for manual confirmation rather than auto-written. Use this whenever the user wants to merge/dedup directory leads, find social profiles for a batch of businesses, resolve founders and their socials, or enrich a Google Maps / Clutch / DesignRush export. Trigger on "resolve socials for these maps leads", "find their instagram/linkedin/facebook", "find the founder", "enrich the directory leads", "merge these directory tabs", "dedup the leads", "process the main sheet", "find social profiles for [sheet/business]". Does NOT draft outreach messages or manage the CRM — leads-to-crm owns that. Directory *scraping* automation is out of scope (later).
 ---
 
-# Lead Generator
+# Lead Generator (v3 — website-first)
 
-Turns a Google Maps business list Aleem already scraped (Instant Data Scraper — Company Name,
-Category, Rating, Experience, Number, Note, Website Link, Google Map Link) into outreach-ready
-rows in `leads-to-crm`'s existing Instant sheets. One business in, up to three resolved social
-profiles out (Instagram, LinkedIn, Facebook), each written into the exact sheet that channel
-already reads.
+Turns raw directory leads into enriched rows on a single **Main** sheet. Two big jobs: (1) merge +
+dedup leads from several directories into Main; (2) for each unique business, resolve the **company**
+socials (Instagram, LinkedIn, Facebook) AND the **founder** (name + the founder's own IG/LI/FB),
+writing everything back onto that business's Main row.
 
-**What this skill does NOT do:** draft outreach copy, manage the CRM, or decide whether a lead
-gets messaged. Once a resolved profile lands in an Instant sheet, `leads-to-crm/scripts/push.py`
-takes over exactly like it does for every hand-scraped row today.
+**The company's own website is now the primary source of truth**, not search. A live-verified batch
+showed search-first founder resolution repeatedly attaching the wrong person — a same-named stranger,
+someone in an unrelated past/current role, or a coincidental name/company-word overlap (see
+`references/how-it-works.md` for the specific cases). The
+`research` skill (fused Serper/Tavily/Exa) is now a **fallback**, only reached when the website doesn't
+name a founder, and anything it finds is flagged for manual confirmation — never auto-written.
 
-## Why this is agent-in-the-loop, not one script
+**What this skill does NOT do:** draft outreach copy, manage the CRM, decide whether a lead gets
+messaged, or scrape the directories themselves (that automation is deferred). Resolved rows land on
+the Main sheet only; CRM fan-out is a later step.
 
-Resolution runs on WebSearch (Claude Code's built-in web search), not a script-callable API —
-Exa was tried first and confirmed dead for this: it flatly rejects `instagram.com` and
-`facebook.com` (`SOURCE_NOT_AVAILABLE`), and no query phrasing gets around it. WebSearch reliably
-resolves all three platforms including businesses whose own website blocks a plain HTTP fetch.
-That means you (the agent) do the searching, one business at a time; two small scripts handle the
-deterministic I/O around it. Rows are processed one at a time in a session by default — not
-parallelized via subagents — so matches can be spot-checked live as they're found.
+## Why website-first (not search-first)
+
+A business's own About/Team/Contact page is "exact match, zero ambiguity" when it names a founder — it's
+the company's own published claim. A generic search for "{company} founder OR owner OR CEO" matches
+anyone loosely associated with those words at the company, including a person's unrelated past role, a
+same-named stranger, or (when the company's own brand name is a common word) someone
+whose personal name merely happens to overlap the company name. No confidence heuristic on search results
+closes that gap reliably — which is why the website is checked first, and a search-sourced founder is
+always surfaced for review rather than written straight to the sheet. Exa's index still can't return
+`instagram.com`/`facebook.com` (`SOURCE_NOT_AVAILABLE`), so when search IS needed, Serper (Google SERP) +
+Tavily carry those platforms. Full rationale + query patterns: `references/how-it-works.md`.
 
 ## The loop
 
-1. **Read the next batch:**
-   ```
-   python scripts/read_batch.py --sheet-id <id> --tab <tab-name> --limit 10
-   ```
-   Returns unprocessed businesses as JSON, each with `row`, `company`, `category`, `rating`,
-   `experience`, `phone`, `note`, `website`. Already handles, before you see anything:
-   - **Phone cleanup:** keeps a number only if it starts with `+` (a real country code); bare
-     local-format numbers (e.g. `0322 9966458`) are blanked — Instant Data Scraper mixes these in
-     and they're not internationally dialable anyway.
-   - **Geo exclusion:** drops a row outright (marks it `Skipped - geo` on the source sheet) if its
-     `Experience`/company text matches `leads-to-crm`'s own South-Asia exclusion list — the same
-     list `push.py` already filters on downstream, applied here so a bad-geography lead never
-     costs a WebSearch call. (The `Experience` column already carries real city/country text from
-     Google Maps, e.g. "10+ years in business · San Diego, CA, United States" — that's what this
-     matches against, no separate location field needed.)
-   - **Resume-safe:** adds/reads a `Social Search Status` column on the source sheet; anything
-     already marked gets skipped, so re-running the same sheet only surfaces new rows.
+Runs UNSANDBOXED (research + web-scraper need network). Sheet I/O needs a live **gws** token — if it
+reports `invalid_grant: Token expired`, re-auth gws first.
 
-2. **For each business, one WebSearch call:**
-   ```
-   f"{company} {city} instagram.com OR linkedin.com OR facebook.com"
-   ```
-   Take the top result whose URL matches each platform's domain. Reject non-profile shapes
-   (`/posts/`, `/glossary/`, `/p/`, `/reel/`, or a review/directory site like Yelp/Clutch that just
-   mentions the business). No confident match on a platform -> leave it unresolved, don't guess.
+### Phase 0 — merge + dedup directory tabs into Main
+Aleem drops each directory's leads as one tab in a single Google Sheet.
+```
+python scripts/merge_leads.py --sheet-id <id> --main-tab Main [--source-tabs "Google Maps,Clutch,DesignRush"]
+```
+Normalizes every tab's headers, dedups across tabs AND against existing Main rows (website domain >
+phone last-10 digits > normalized company+city, reusing leads-to-crm's `_domain`/`_digits`), and
+appends only new uniques. Idempotent. Ensures the Main header carries every column (company +
+founder + status). `--selftest` checks the keying.
 
-   **LinkedIn needs a second, separate query** — the combined query above finds the business's
-   LinkedIn COMPANY page, but `leads-to-crm`'s LinkedIn outreach is a 1:1 connection note to a
-   person (`_li_slug()` only recognizes `/in/<slug>` URLs; a company page gets no identity and
-   silently lands in "Needs Review" instead of being pushed). Run:
-   ```
-   f"{company} founder OR owner OR CEO linkedin.com/in"
-   ```
-   and use that person's profile instead, when found with confidence (their name/title clearly
-   ties them to the business). About half of real businesses tested had a clear owner/founder
-   match this way — when none is found, leave the LinkedIn field empty for that business rather
-   than falling back to the company page; an unresolved LinkedIn is better than a wrong-target
-   message. (If a company page genuinely gets written some other way, it's not broken — it just
-   lands in `push.py`'s existing "Needs Review" bucket for manual triage, same as any lead that
-   can't be auto-classified.)
+### Phase 1 — read the next unresolved batch
+```
+python scripts/read_batch_main.py --sheet-id <id> --tab Main --limit 12
+```
+Same phone-clean + geo-exclude + resume rules as before; skips rows already fully resolved (has a
+company social AND a founder), and carries any existing social/founder values so resolve fills only gaps.
 
-3. **Write what was found:**
-   ```
-   python scripts/write_resolved.py --business '<json for this row from step 1>' \
-       --instagram <url or omit> --linkedin <url or omit> --facebook <url or omit> \
-       --source-sheet-id <id> --source-tab <tab-name> --status-col <status_col from step 1>
-   ```
-   Appends a row into each matched channel's Instant sheet (Instagram/LinkedIn/Facebook), and
-   marks the source row's status column `Resolved - <channels>`. A business with **no** confident
-   match on any platform falls back automatically to the existing Google Maps/email channel
-   (`Fallback - maps/email`) — still outreach-ready, just via the business's phone/website instead
-   of a social DM.
+### Phase 2/3 — resolve one business (website-first, search-fallback)
+For each business from the batch:
+```
+python scripts/resolve.py --business '<json for this row>'
+```
+Runs, in order:
+1. **Ensure a website** — the row's own `Website Link`, else Clutch redirect-extraction (`clutch_resolve.py`)
+   when the `Link` column is a Clutch profile, else one light reverse-lookup search as a last resort.
+2. **Website extraction FIRST, unconditionally** — fast free http pass (`scrape_socials.py`: footer ->
+   /about/ -> /team/ -> /contact/), then escalates to the **web-scraper crawl4ai tier** (free) with
+   `templates/founder_socials_schema.json` llm extraction for the founder's name + personal socials from
+   About/Team prose. This is now the primary source for both company socials and the founder.
+3. **Search gap-fill** for whatever company socials the website didn't have (unchanged: combined query,
+   then per-platform `site:{platform}.com`).
+4. **Founder search-fallback, only if the website named no founder** — `"founder of {company} {category}
+   {location}"` (not a boolean-OR query), with a real confidence gate (company-token + founder-word
+   proximity, checked against both the raw candidates and Tavily's synthesized answer text).
 
-   The Note/Bio column each channel gets is `"{rating} Google rating. {experience}. {note}"` —
-   `leads-to-crm`'s message generator already treats a non-empty bio as a personalization signal
-   (see `messages.py`'s `has_signal` check), so Touch-1 drafts reference the real rating, years in
-   business, and testimonial automatically. No `leads-to-crm` changes needed for this beyond the
-   one-time `GoogleMapsChannel` bio alias already in place.
+Prints a JSON report: `company_socials`, `founder`, `website` (+ whether it was freshly found),
+`provenance` (per field: `"website"` or `"search"`/`"search_fallback"`), and `needs_review` — the list
+of fields sourced from search that must be confirmed before writing (never auto-write these).
 
-4. **Second pass on the leftovers:** businesses WebSearch found nothing for often still publish
-   their own social links in their website's footer/contact/about page. Run:
-   ```
-   python scripts/scrape_socials.py '<json array of businesses with a "website" field>'
-   ```
-   Fetches the homepage (falling back to `/contact/`, `/about/` etc. if needed) and regexes
-   Instagram/LinkedIn/Facebook hrefs straight out of the HTML — same zero-ambiguity logic as the
-   old direct-scrape idea, just used as a cheap free secondary pass instead of the primary method.
-   A `linkedin.com/company/...` hit is rejected outright (no identity for 1:1 outreach, same rule
-   as the WebSearch pass). **Sanity-check every remaining hit before writing it** — this pass still
-   throws real false positives on Instagram/Facebook: occasionally a wholly unrelated cross-linked
-   account from the page. Reject anything that doesn't plausibly match the business/founder name.
-   On the first real batch this pass recovered about half of the businesses WebSearch missed, once
-   the junk was filtered out.
+### Phase 4 — write results back onto the Main row
+`run_batch.py` (below) does this automatically for anything NOT in `needs_review`. For a manual single
+write:
+```
+python scripts/write_result_main.py --sheet-id <id> --tab Main --row <n> \
+  --status "Resolved - instagram, linkedin, facebook" \
+  [--website URL] [--instagram URL] [--linkedin URL] [--facebook URL] \
+  [--founder NAME] [--founder-instagram URL] [--founder-linkedin URL] [--founder-facebook URL]
+```
+Writes the company socials + `Founder` + the three `Founder ... Link` columns + `Social Search
+Status`. Ensures any missing columns exist first, so it never crashes mid-batch.
 
-   If LinkedIn is still missing after that, it tries a set of team/leadership page paths
-   (`/team/`, `/our-team/`, `/people/`, `/leadership/`, etc.) specifically, since that's where a
-   founder's personal `/in/` LinkedIn is actually linked — company footers usually only carry the
-   company page, if anything. Any hit there comes back as a `linkedin_candidates` list (URL +
-   nearby name/title text + a `likely_founder` hint), never auto-filled — confirm the context
-   text actually reads as founder/CEO/owner before writing it, same confidence bar as the
-   WebSearch founder query above.
+### Batch runner (Phases 1-4 in one loop)
+```
+python scripts/run_batch.py --sheet-id <id> --tab Main --limit 12            # incremental (new leads)
+python scripts/run_batch.py --sheet-id <id> --tab Main --rows 2-165          # reprocess a row range
+python scripts/run_batch.py --sheet-id <id> --tab Main --rows 2-165 --dry-run  # resolve+print, no writes
+```
+The permanent orchestrator. **Write policy (locked with Aleem 2026-07-16):**
+- **Auto-writes** the company website + all company socials — each already passed its gate (website
+  footer links, or search results token-verified against the company name).
+- **Never auto-writes a founder.** Even a website team-page extraction can surface a prominent
+  non-founder exec (one live case returned its current Chief Business Officer, not the co-founder), so every
+  founder — website- or search-sourced — goes to a **review queue** (`docs/lead-generator-review-queue.md`)
+  with its evidence (website, best guess + provenance, ranked LinkedIn candidates, the search answer) for
+  a human confirm. Any stale founder value on a reprocessed row is **cleared**, so the sheet never shows
+  an unverified founder.
 
-5. **After a batch**, suggest `leads-to-crm`'s `push.py --channel {channel} --dry-run` per touched
-   channel to preview what would move into the CRM next.
-
-## Setup this skill needs
-
-Nothing new. WebSearch is built into Claude Code. Sheets I/O reuses `leads-to-crm`'s existing gws
-auth. No API keys to configure.
+**Incremental mode** (`--limit`) pulls the next unresolved batch. **Reprocess mode** (`--rows A-B`) re-runs
+an explicit range that already carries data (bypasses the "already resolved" skip) — used after a resolver
+logic change. Reprocess is **resume-safe**: finished rows get a `v3:` status marker and are skipped on a
+re-run, so a batch that dies partway continues where it left off. Regenerate the full review queue anytime
+with a `--dry-run` pass over the same range (dry-run ignores the marker).
 
 ## Files
 
 ```
 scripts/
-  read_batch.py       — reads the source sheet, applies phone cleanup + geo exclusion, returns
-                         the next N unprocessed businesses, tracks resume status
-  write_resolved.py   — appends a resolved business into each matched channel's Instant sheet
-                         (via sheet_writer.py) and writes the status column back
-  scrape_socials.py   — secondary pass: footer/contact/about-page scrape for WebSearch's misses,
-                         plus a team-page pass specifically for founder LinkedIn (/in/) links
-  sheet_writer.py     — shared low-level writer (unchanged from before, channel-agnostic)
+  merge_leads.py       — Phase 0: merge + dedup multiple directory tabs into Main (self-check)
+  read_batch_main.py   — Phase 1: next unresolved batch from Main (phone/geo/resume + gap-fill)
+  resolve.py           — Phase 2/3: website-first resolution + search fallback + confidence gate (self-check)
+  clutch_resolve.py    — resolves a business's real website from its Clutch profile redirect (self-check)
+  url_filters.py       — shared social-URL classifier (one source of truth with scrape_socials.py)
+  scrape_socials.py    — free http footer/contact/team pass (fast tier of the website pass)
+  write_result_main.py — Phase 4: write_row() + clear_fields() + CLI, writes/clears columns + status on Main
+  run_batch.py         — permanent orchestrator: Phases 1-4, incremental + --rows reprocess, founder review queue
+  read_batch.py / write_resolved.py / sheet_writer.py — legacy per-channel Instant-sheet flow (kept)
+templates/
+  founder_socials_schema.json — web-scraper llm schema (founder name + socials from About/Team)
 references/
-  how-it-works.md     — the WebSearch query patterns, URL-shape validation rules, and the
-                         phone/geo cleanup rules, for when a query needs tuning
+  how-it-works.md      — v3 flow + why website-first, query patterns, URL-shape rules, phone/geo rules
 ```
 
-## leads-to-crm change this skill depends on
+## Handoffs
 
-`GoogleMapsChannel` (`leads-to-crm/scripts/channels.py`) now has a `Note`/`Notes` -> bio alias so
-Maps-fallback leads (no resolved social profile) still get a personalized email draft instead of a
-blank one. Everything else in `leads-to-crm` is unchanged — Instagram/LinkedIn/Facebook rows
-written by this skill flow through the exact same `push.py` pipeline as any hand-scraped row.
+- **Resolve a Clutch-only lead's website** -> `clutch_resolve.py` (this skill calls it).
+- **Search / discover** target URLs or a missing website when the website pass doesn't have it ->
+  `research` skill (this skill calls it, as a fallback).
+- **Scrape a website** (About/Team, blocked sites) -> `web-scraper` skill, free tiers (this skill calls it).
+- **CRM push / message drafting** -> `leads-to-crm` (out of scope here; deferred for the Main-sheet flow).
+- The older per-channel flow (`read_batch.py` -> `write_resolved.py` into Instant IG/LI/FB sheets)
+  still exists for the leads-to-crm handoff and is untouched.

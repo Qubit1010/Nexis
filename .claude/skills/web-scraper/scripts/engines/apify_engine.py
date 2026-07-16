@@ -30,16 +30,17 @@ def _looks_quota(exc: Exception) -> bool:
 
 def run_actor(actor_id: str, run_input: dict, *, max_items: int = 200, timeout_secs: int = 300) -> list[dict]:
     """Run an actor to completion and return its dataset items. Rotates keys on quota errors."""
+    from datetime import timedelta
     from apify_client import ApifyClient
     keys = _keys()
     last = None
     for i, key in enumerate(keys):
         try:
             client = ApifyClient(key)
-            run = client.actor(actor_id).call(run_input=run_input, timeout_secs=timeout_secs)
-            if not run or not run.get("defaultDatasetId"):
+            run = client.actor(actor_id).call(run_input=run_input, timeout=timedelta(seconds=timeout_secs))
+            if not run or not getattr(run, "default_dataset_id", None):
                 raise EngineError(f"actor {actor_id} returned no dataset")
-            items = list(client.dataset(run["defaultDatasetId"]).iterate_items())
+            items = list(client.dataset(run.default_dataset_id).iterate_items())
             return items[:max_items]
         except Exception as e:  # noqa: BLE001 - apify raises various client errors
             if _looks_quota(e) and i < len(keys) - 1:
