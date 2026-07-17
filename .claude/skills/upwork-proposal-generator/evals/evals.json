@@ -9,12 +9,12 @@
     {
       "id": 2,
       "prompt": "Draft a proposal for this:\n\nWe're a B2B SaaS company and our sales process is completely manual. Leads come in from our website form, someone has to manually add them to HubSpot, then manually send a follow-up email, then manually set a reminder to follow up again. We need this automated end to end. We use HubSpot, Slack, and Gmail. Looking for someone who knows n8n or Make.",
-      "expected_output": "A proposal under 200 words, plain prose, direct pain observation about manual handoffs (no 'It sounds/seems/looks like' pattern), specific mention of n8n/Make + HubSpot, uses the lead-to-outreach or CRM automation result, ends with 15-min call CTA. Job type: Marketing Automation."
+      "expected_output": "A proposal under 200 words, plain prose, direct pain observation about manual handoffs (no 'It sounds/seems/looks like' pattern), specific mention of n8n/Make + HubSpot, uses the lead-to-outreach or CRM automation result, ends with an anchored no-oriented CTA (a free Ops Teardown, not a bare 15-minute call). Job type: Marketing Automation."
     },
     {
       "id": 3,
       "prompt": "Generate a proposal for this job post:\n\nWe need an AI agent built using LangChain that can read our support tickets, classify them by urgency and category, draft a response using our tone guidelines, and flag anything it's not confident about for human review. We're currently handling 200+ tickets a day manually and it's killing the team.",
-      "expected_output": "A proposal under 200 words, plain prose, direct pain observation about manual ticket volume (no 'It sounds/seems/looks like' pattern), specific LangChain/agent approach, uses onboarding agent or lead gen pipeline result, ends with 15-min call CTA. Job type: AI Services."
+      "expected_output": "A proposal under 200 words, plain prose, direct pain observation about manual ticket volume (no 'It sounds/seems/looks like' pattern), specific agentic approach (an agent that reads, classifies, and drafts, with a confidence gate for low-confidence items; may acknowledge LangChain since the client named it), uses onboarding agent or lead gen pipeline result, ends with an anchored no-oriented CTA (a free Ops Teardown, not a bare 15-minute call). Job type: AI Services."
     }
   ]
 }
