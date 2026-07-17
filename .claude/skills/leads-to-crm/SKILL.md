@@ -224,6 +224,52 @@ holds: `matt.capala/` (profile) and `matt.capala/videos/...` both key to `matt.c
    automatically if present. Channels without it are untouched.
 5. Test with `--dry-run` before the first live push.
 
+## Second source: lead-generator's Main sheet (founder + company, both pushed)
+
+Added 2026-07-17. `push_from_leadgen.py` is a second, independent SOURCE feeding the same
+three CRMs — it does not touch `push.py` or the per-channel "Instant ... Leads" flow at all.
+Where that flow pushes one identity per scraped row, the `lead-generator` skill's "Main"
+sheet (`1QikXgf6WbPfpCdMlxs43nYeZRjqpr0kqdmtqAiiu8mI`, tab `Main`) resolves BOTH a company
+social link and the founder's own personal social link per business, per platform — and
+Aleem wants both pushed.
+
+**Row shape — two stacked rows per business per channel:** a `Founder` row, then a
+`Company` row directly below it, repeating in Main-sheet business order. One new CRM
+column, **`Contact Type`** (`Founder`/`Company`), auto-appended to all three CRMs on first
+write via the new `sheets.ensure_columns()` helper. The existing `Touch 1 Message` column
+holds each row's own message — no second message column, since each row is already one
+identity.
+
+**LinkedIn is founder-only.** LinkedIn has no "connection request note" mechanic for a
+company PAGE (you follow a page, you don't connect with it) — a generated connection note
+aimed at a company page there would describe an action Aleem can't actually take. So
+LinkedIn only ever gets a Founder row; the company LinkedIn link stays on the Main sheet
+for reference but is never pushed. Instagram and Facebook get both rows (both platforms
+genuinely support DMing a brand account).
+
+**Company-flavored messages:** company rows never carry a `first_name` (that's the signal
+to the message generator that this is a brand, not a person) and use a distinct style —
+`ig_dm_company` / `fb_dm_company` in `messages.py` — that never opens with "Hey [Name]" and
+writes like one business account messaging another.
+
+**Idempotency:** a `<Platform> CRM Push` column is added to the Main sheet itself (e.g.
+`Instagram CRM Push`), stamped `Founder, Company` / `Founder only` / `No identity` per row
+after each run. A re-run skips any row already stamped for that channel; identity-based
+dedup against the live CRM (the same `channel.crm_identity()` every other push already
+uses) is still the real safety net underneath it.
+
+```bash
+python .claude/skills/leads-to-crm/scripts/push_from_leadgen.py --channel instagram --dry-run --limit 6
+python .claude/skills/leads-to-crm/scripts/push_from_leadgen.py --channel instagram
+python .claude/skills/leads-to-crm/scripts/push_from_leadgen.py --channel linkedin
+python .claude/skills/leads-to-crm/scripts/push_from_leadgen.py --channel facebook
+python .claude/skills/leads-to-crm/scripts/push_from_leadgen.py --channel all --rows 2-165
+```
+
+Trigger on: "push the resolved leads to the CRMs", "push founder and company to the CRM",
+"send the main sheet leads to instagram/linkedin/facebook", "push these leads to
+linkedin/instagram/facebook with both founder and company links".
+
 ## Message generation
 
 Touch 1 is written by OpenAI `gpt-5.4-mini` (primary), with Claude `claude-haiku-4-5`

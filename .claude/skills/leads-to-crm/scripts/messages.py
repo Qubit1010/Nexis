@@ -130,6 +130,34 @@ _STYLE = {
             "intro. Start with 'Hey [FirstName]' or a direct line if no name."
         ),
     },
+    "ig_dm_company": {
+        # Company/brand-page variant of ig_dm: no lead.first_name is ever set for these
+        # (the identity anchor is the company's own account, not a specific person), so
+        # the message must never open with "Hey [FirstName]" and should read like one
+        # business account messaging another, not a person DMing a stranger.
+        "with_signal": [("specific_observation", 5), ("genuine_question", 3), ("anti_pitch", 2)],
+        "no_signal": [("genuine_question", 5), ("anti_pitch", 4)],
+        "max_chars": 400,
+        "channel_rules": (
+            "Channel: Instagram DM to a BUSINESS/brand account, not a person -- never use a "
+            "first name or 'Hey [Name]'. Write like one small business account messaging another, "
+            "casual and human. Under 80 words. At most 1 emoji, only if it fits naturally. "
+            "Reference their category or what they do specifically, not a person's bio."
+        ),
+    },
+    "fb_dm_company": {
+        # Company/brand-page variant of fb_dm -- same no-first-name constraint as
+        # ig_dm_company.
+        "with_signal": [("specific_observation", 5), ("genuine_question", 3), ("anti_pitch", 2)],
+        "no_signal": [("genuine_question", 5), ("anti_pitch", 4)],
+        "max_chars": 600,
+        "channel_rules": (
+            "Channel: Facebook DM to a BUSINESS/brand Page, not a person -- never use a first "
+            "name or 'Hey [Name]'. Conversational and human, like one business account messaging "
+            "another. Under 100 words. At most 1 emoji, only if it fits. Reference their category "
+            "or what they do specifically, not a person's bio."
+        ),
+    },
 }
 
 _SYSTEM = """You write the opening outreach message for Aleem Ul Hassan, founder of an AI \

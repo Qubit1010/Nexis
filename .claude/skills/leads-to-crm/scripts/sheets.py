@@ -49,25 +49,37 @@ _GWS_CMD, _GWS_SHELL = _find_gws()
 _TRANSIENT_MARKERS = (
     "http request failed", "request failed", "timeout", "timed out", "econnreset",
     "socket hang up", "etimedout", "enotfound", "503", "502", "500", "rate limit",
-    "temporarily", "eai_again", "network",
+    "temporarily", "eai_again", "network", "unavailable",
 )
 
 
-def run_gws(args, json_body=None, retries=3):
+def run_gws(args, json_body=None, retries=3, timeout=240):
     """Run a gws command and return parsed JSON (or {} / {"raw": ...}).
 
     Retries transient network/HTTP failures (the gws CLI occasionally returns
-    'HTTP request failed' mid-batch, which previously caused partial appends).
+    'HTTP request failed' mid-batch, which previously caused partial appends), AND a
+    hard subprocess timeout (found 2026-07-17 reading a ~950-row CRM tab: a plain
+    TimeoutExpired isn't a non-zero exit, so it was never reaching the retry check
+    below at all -- it just crashed the whole push). timeout default bumped
+    120->240s since a big whole-tab read can genuinely take longer than 120s.
     """
     cmd = _GWS_CMD + args
     if json_body is not None:
         cmd += ["--json", json.dumps(json_body)]
     last_err = "gws error"
     for attempt in range(retries):
-        result = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=120,
-            shell=_GWS_SHELL, encoding="utf-8", errors="replace",
-        )
+        try:
+            result = subprocess.run(
+                cmd, capture_output=True, text=True, timeout=timeout,
+                shell=_GWS_SHELL, encoding="utf-8", errors="replace",
+            )
+        except subprocess.TimeoutExpired:
+            last_err = f"gws command timed out after {timeout}s"
+            if attempt < retries - 1:
+                import time
+                time.sleep(2 * (attempt + 1))
+                continue
+            break
         if result.returncode == 0:
             stdout = result.stdout.strip()
             if not stdout:
@@ -259,3 +271,16 @@ def header_index(header_row, names):
         if h.strip().lower() in wanted:
             return i
     return None
+
+
+def ensure_columns(sheet_id, tab, header, names):
+    """Append any header in `names` missing from the live sheet; return the updated header
+    list. Mirrors lead-generator's write_result_main.ensure_columns() so a write never
+    crashes mid-batch on a sheet that predates a newly-added column."""
+    header = list(header)
+    for name in names:
+        if not any(h.strip().lower() == name.lower() for h in header):
+            col = col_letter(len(header))
+            update_range(sheet_id, f"{tab}!{col}1", [[name]])
+            header.append(name)
+    return header
