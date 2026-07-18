@@ -1,34 +1,31 @@
 import type { RawArticle } from "./types";
 import { resolveTopics, type BriefMode } from "../topics";
-import { fetchViaLast30Days, type Depth } from "./last30days";
+import { fetchViaResearch, type Depth } from "./research";
 
 export type { RawArticle } from "./types";
+export type { Depth } from "./research";
 
 export interface FetchOptions {
   mode: BriefMode;
   /** Required for mode === "topic". */
   topic?: string;
-  /** Lookback window in days (passed to the engine). */
+  /** Lookback window in days (freshness filter on dated results). */
   days: number;
-  /** "lean" (free/cheap) or "full" (adds paid social sources). */
+  /** "lean" (medium research depth) or "full" (deep, adds Jina + extraction). */
   depth: Depth;
 }
 
-// News brief excludes GitHub: repo commits/READMEs are tooling noise, not
-// industry news. (GitHub stays on for Practical AI, where it is the signal.)
-const NEWS_SOURCES = ["reddit", "hackernews", "grounding"];
-const NEWS_SOURCES_FULL = [...NEWS_SOURCES, "x", "youtube", "threads"];
-
 /**
  * Evidence fetch layer. Resolves the topic set (curated daily themes, or a single
- * user-named topic) and fetches + ranks via the last30days engine. Replaces the
- * old NewsAPI/HN/RSS sweep — the engine is far more robust (multi-source, RRF
- * fusion, cross-source corroboration, graceful per-source degradation).
+ * user-named topic) and fetches + ranks via the research skill (Exa + Tavily +
+ * Serper fused, cross-source ranked, junk-filtered).
  */
 export async function fetchAllSources(opts: FetchOptions): Promise<RawArticle[]> {
   const topics = await resolveTopics({ mode: opts.mode, topic: opts.topic });
-  const newsSources = opts.depth === "full" ? NEWS_SOURCES_FULL : NEWS_SOURCES;
-  const articles = await fetchViaLast30Days(topics, opts.days, opts.depth, newsSources);
+  const articles = await fetchViaResearch(topics, {
+    days: opts.days,
+    depth: opts.depth,
+  });
 
   const sourceTypes = new Set(articles.map((a) => a.source));
   console.log(

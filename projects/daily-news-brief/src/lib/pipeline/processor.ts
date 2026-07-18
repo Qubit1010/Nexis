@@ -142,7 +142,7 @@ export interface CategoryPass1Output {
     tldr: string;
     sentimentTag: string;
     relevanceScore: number;
-    engagementScore?: number;
+    sourceCount?: number;
   }>;
 }
 

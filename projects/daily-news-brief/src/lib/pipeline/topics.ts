@@ -77,7 +77,7 @@ export async function resolveTopics(
 /**
  * Discovery seed only: pull today's free RSS + HN headlines and ask a cheap
  * model to extract the hottest AI topics as short search phrases. The headlines
- * are NOT used as evidence — the last30days engine does the real fetch per topic.
+ * are NOT used as evidence — the research engine does the real fetch per topic.
  */
 async function deriveTopicsFromHeadlines(limit: number): Promise<string[]> {
   const [hn, rss] = await Promise.allSettled([

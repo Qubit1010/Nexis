@@ -22,6 +22,9 @@ data/*.db
 data/*.db-shm
 data/*.db-wal
 
+# Local digest state (machine-specific sheet id)
+data/digest-sheet.json
+
 # OS
 .DS_Store
 Thumbs.db

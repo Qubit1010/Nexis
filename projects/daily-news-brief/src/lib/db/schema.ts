@@ -32,7 +32,7 @@ export const articles = sqliteTable("articles", {
   title: text("title").notNull(),
   url: text("url").notNull(),
   source: text("source").notNull(),
-  sourceOrigin: text("source_origin"), // "newsapi" | "hackernews" | "rss"
+  sourceOrigin: text("source_origin"), // "hackernews" | "rss" | "research"
   publishedAt: text("published_at"),
   tldr: text("tldr").notNull(),
   sentimentTag: text("sentiment_tag"), // "excited" | "neutral" | "concerned" | "skeptical"

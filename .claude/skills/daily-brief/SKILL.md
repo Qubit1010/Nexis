@@ -1,178 +1,150 @@
 ---
 name: daily-brief
 description: |
-  Generate and manage the daily AI/tech intelligence brief and YouTube Intelligence brief.
-  Use this skill when the user asks to generate a brief, check AI news, see what's happening
-  in AI/tech today, run the news pipeline, or anything related to the daily news digest or
-  YouTube channel analysis. Triggers on: "generate brief", "daily brief", "news brief",
-  "what's happening in AI", "AI news today", "tech news", "run the brief", "morning brief",
-  "news update", "youtube brief", "youtube trends", "what's on youtube", "youtube channels",
-  "scrape youtube", "generate youtube", "youtube intelligence", "what channels are posting".
+  Generate and manage the daily AI/tech intelligence brief, the Practical AI (SMB
+  marketing) brief, and the YouTube Intelligence brief, plus the scheduled noon
+  digest that logs both to a Google Sheet and emails it.
+  Use this skill when the user asks to generate a brief, check AI news, see what's
+  happening in AI/tech today, run the news pipeline, generate Practical AI, run the
+  daily digest, schedule the brief, or anything about the daily news digest or
+  YouTube analysis. Triggers on: "generate brief", "daily brief", "news brief",
+  "what's happening in AI", "AI news today", "tech news", "run the brief", "morning
+  brief", "practical AI", "generate tools brief", "daily digest", "schedule the
+  brief", "email me the brief", "youtube brief", "youtube trends", "youtube channels",
+  "generate youtube", "youtube intelligence".
 ---
 
 # Daily AI/Tech Intelligence Brief
 
-Generate a comprehensive daily intelligence brief covering AI and tech news from multiple sources, analyzed and synthesized by Claude.
+Three verticals in one Next.js + SQLite dashboard (`projects/daily-news-brief`):
+**News Brief** (`/brief/[date]`), **Practical AI** (`/tools/[date]`), **YouTube
+Intelligence** (`/youtube/[date]`). Evidence for the first two comes from the repo's
+`research` skill; analysis is a Haiku-tier per-section pass + a Sonnet-tier synthesis.
 
-## Pipeline Overview
+## Evidence engine (research skill)
 
-The brief runs a 6-step pipeline:
+Both the News Brief and Practical AI fetch through `src/lib/pipeline/sources/research.ts`,
+which shells out to `.claude/skills/research/scripts/research.py` (Exa + Tavily +
+Serper fused, URL-deduped, ranked by cross-source corroboration). A shared junk-URL
+filter drops GitHub issues/PRs/commits, bare Hacker News threads, Reddit comment pages,
+and blocklisted domains before anything reaches the LLM; a TRUSTED_DOMAINS set gives
+authoritative publishers a small rank nudge.
 
-1. **Fetch + rank** evidence via the **last30days engine** (multi-source: Reddit, Hacker News, GitHub, Web, + optional social), with RRF fusion, cross-source corroboration, and graceful per-source degradation. Replaces the old brittle NewsAPI/RSS sweep.
-2. **Deduplicate** via fuzzy title matching, merge engagement scores
-3. **Categorize** into 6 AI/tech categories using keyword scoring
-4. **Analyze** each category with Claude Haiku (TL;DRs, sentiment, relevance scores)
-5. **Synthesize** across categories with Claude Sonnet (trends, content ideas, overall sentiment)
-6. **Store** in SQLite database for the dashboard
+**Interpreter:** `RESEARCH_PYTHON` must point at a Python with the research skill's deps
+(`exa-py`) installed — on this machine `.../Python312/python.exe`, NOT the 3.14 install
+the retired last30days engine used. Search keys (`EXA_API_KEY`, `TAVILY_API_KEY`,
+`SERPER_API_KEY`) auto-load from the repo-root `.env`.
 
-The engine does deterministic **fetch + rank** (no LLM key required — it falls back to local RRF scoring; with a key it uses a cheap rerank). daily-brief's Haiku/Sonnet still do all the **analysis**. Topics drive *what is fetched*; the 6 categories drive *how it is displayed*.
+## News Brief
 
-**Cost:** ~$0.06 per run for analysis (Haiku bulk + Sonnet synthesis) + cheap web-search calls from the engine. Social sources (`--full`) add paid ScrapeCreators/xAI calls.
-
-## Two run modes
-
-- **Daily mode (default):** a broad sweep of the **last 1-2 days of AI news** across all 6 categories, driven by the curated theme list in `src/lib/pipeline/themes.ts` **plus** up to 2 live breaking topics auto-derived from today's headlines (on by default; disable with `DAILY_BRIEF_DERIVE_TOPICS=0`).
-- **On-demand topic mode:** name a **specific topic** + **timeline** to fetch just that, deeper.
-
-## How to Run
-
-### Generate the daily brief (last 1-2 days, all categories)
-
-```bash
-cd projects/daily-news-brief && npx tsx scripts/daily-cron.ts
-```
-
-For a specific date:
-```bash
-cd projects/daily-news-brief && npx tsx scripts/daily-cron.ts 2026-03-19
-```
-
-### On-demand: a specific topic over a specific timeline
+**Daily mode (default):** a 1-2 day sweep across 6 AI/tech categories, driven by the
+curated themes in `src/lib/pipeline/themes.ts` plus up to 2 breaking topics auto-derived
+from today's RSS/HN headlines (disable with `DAILY_BRIEF_DERIVE_TOPICS=0`).
+**On-demand topic mode:** a specific topic + timeline, fetched deeper.
 
 ```bash
-cd projects/daily-news-brief && npx tsx scripts/daily-cron.ts --topic "Claude Code" --days 7
+cd projects/daily-news-brief
+npx tsx scripts/daily-cron.ts                       # today, all categories
+npx tsx scripts/daily-cron.ts 2026-03-19            # a specific date
+npx tsx scripts/daily-cron.ts --topic "Claude Code" --days 7   # on-demand
+npx tsx scripts/daily-cron.ts --full                # deeper (research deep depth)
 ```
 
-### Deep mode (adds paid social sources: X, TikTok, YouTube, Instagram, Threads, Polymarket)
+"Most Discussed" ranks by cross-source corroboration (`sourceCount`) and auto-hides when
+nothing is corroborated (no engagement/upvote data exists anymore).
+
+### 6 News Categories
+AI Models & Breakthroughs · AI Tools & Products · AI Business & Strategy · AI Automation
+& Workflows · AI Content & Creator Economy · AI Ethics, Safety & Regulation.
+
+## Practical AI (SMB marketing educator)
+
+Topic-led: rotates 2 (lean) / 3 (full) of **9 SMB marketing topics** per day
+(Business Overview, Content Automation, Target Audience, Market Analysis, Marketing Goals,
+Marketing Strategy, Social Media Strategy, Sales Funnel, KPIs), deterministic by date so a
+full cycle completes within 9 days and regenerating a past date reproduces its topics.
+Each topic teaches: business problem in plain language -> agentic-AI solutions
+(Claude Code / Claude Cowork / Codex) -> exactly 3 copy-paste steps -> ready-to-post
+content ideas. A movers rail (GitHub Trending + OpenRouter) covers "what's new".
 
 ```bash
-# add --full (or --deep) to either run
-npx tsx scripts/daily-cron.ts --full
-npx tsx scripts/daily-cron.ts --topic "AI agents" --days 7 --full
+npx tsx scripts/daily-tools.ts                      # today's Practical AI brief
+npx tsx scripts/daily-tools.ts 2026-07-19           # a specific date (rotates topics)
+npx tsx scripts/daily-tools.ts --full               # 3 topics, deep research depth
 ```
 
-Flags: `--topic "<topic>"` (on-demand mode), `--days N` (timeline, default 2), `--full`/`--deep` (depth, default lean). No flags = daily lean sweep over the last 2 days.
+### Look up any tool
+The Practical AI page has a **"Look up any tool"** search (`/api/practical/search` ->
+`runToolLookup` -> `/practical/lookup/[id]`). It runs two research queries for the tool
+(new features/changelog + how-to-use-for-business) over a day window; the shared junk
+filter keeps GitHub issues and forum threads out. Older lookup rows that predate the
+research rebuild keep their "Grounded via NotebookLM" badge; new rows don't use it.
 
-### View the dashboard
+## Scheduled Daily Digest (noon) — Sheet + email
+
+A once-a-day job that generates both briefs, logs a one-row-per-day summary to a Google
+Sheet, and emails the digest to `DIGEST_EMAIL` (defaults to the gws-authed account).
 
 ```bash
-cd projects/daily-news-brief && npm run dev
-```
-Then open http://localhost:3000
+# Register / remove the Windows scheduled task (fires daily at 12:00 local time)
+npx tsx scripts/daily-digest.ts --schedule
+npx tsx scripts/daily-digest.ts --unschedule
 
-### First-time setup
+# Run the digest by hand (reads already-generated briefs; does NOT regenerate)
+npx tsx scripts/daily-digest.ts                     # today: log + email
+npx tsx scripts/daily-digest.ts 2026-07-18          # a specific date
+npx tsx scripts/daily-digest.ts --no-email          # log to the sheet only
+```
+
+- **Scheduled target:** `scripts/run-digest.cmd` runs `daily-cron` -> `daily-tools` ->
+  `daily-digest` in order, so the sheet + email reflect fresh briefs. The task
+  (`NexisDailyBrief`) needs the machine on and signed in at noon.
+- **Sheet:** self-bootstrapping — the first run creates "NexusPoint Daily Brief" (two
+  tabs, News Brief + Practical AI) and remembers its ID in `data/digest-sheet.json`.
+  One row per day per tab, upserted (re-running a date overwrites that day's row). Pin a
+  specific sheet with `DIGEST_SHEET_ID`.
+- **Email:** HTML digest (sentiment, takeaway, trends, corroborated stories; Practical AI
+  topics, top pick, workflow recipe, content ideas) with links back to the dashboard
+  (`DIGEST_DASHBOARD_URL`, default localhost — only clickable while `npm run dev` runs).
+- Sheets + Gmail go through `scripts/gws.ts`, which calls the gws CLI via `node run.js`
+  directly (no cmd.exe) — the same quoting-safe pattern as leads-to-crm's `sheets.py`.
+
+## View the dashboard
+
+```bash
+cd projects/daily-news-brief && npm run dev   # http://localhost:3000
+```
+
+## First-time setup
 
 ```bash
 cd projects/daily-news-brief
 npm install
 cp .env.example .env
-# Fill in OPENAI_API_KEY + ANTHROPIC_API_KEY
+# Fill in OPENAI_API_KEY + ANTHROPIC_API_KEY; ensure repo-root .env has EXA/TAVILY/SERPER
 npx drizzle-kit push
 ```
 
-## Prerequisites
+## YouTube Intelligence (3rd vertical)
 
-**Python:** the last30days engine needs Python 3.12+. The wrapper invokes `LAST30DAYS_PYTHON` (defaults to the local `python3.14.exe`).
-
-**Keys** — the project `.env` (`projects/daily-news-brief/.env`) needs:
-- `OPENAI_API_KEY` — Pass 1 analysis + the engine's cheap rerank
-- `ANTHROPIC_API_KEY` — analysis fallback (Sonnet synthesis)
-- `BRIEF_AUTH_TOKEN` (optional) — protects the HTTP generate endpoint
-
-The engine's **source keys** live in the **repo-root `.env`** (loaded automatically by the wrapper; single source of truth):
-- `PARALLEL_API_KEY` — web search (used by the default lean source set)
-- `SCRAPECREATORS_API_KEY`, `XAI_API_KEY` — social sources (only hit on `--full` runs)
-
-Reddit, Hacker News and GitHub work keyless. NewsAPI is no longer used.
-
-Path overrides (optional, set in `.env` if running outside the project root): `LAST30DAYS_DIR` (engine scripts dir), `LAST30DAYS_ENV` (repo-root .env path), `LAST30DAYS_PYTHON` (interpreter). Live headline auto-derive is on by default — `DAILY_BRIEF_DERIVE_TOPICS=0` disables it, `DAILY_BRIEF_MAX_DERIVED` tunes the count (default 2).
-
-## 6 News Categories
-
-1. **AI Models & Breakthroughs** — New models, benchmarks, research papers
-2. **AI Tools & Products** — Product launches, developer tools, platforms
-3. **AI Business & Strategy** — Funding, acquisitions, big tech strategy
-4. **AI Automation & Workflows** — Agents, MCP, workflow tools, agentic AI
-5. **AI Content & Creator Economy** — Creator tools, generative media, content AI
-6. **AI Ethics, Safety & Regulation** — Safety research, regulation, policy
-
-## Practical AI: "Look up any tool" (NotebookLM-grounded)
-
-The dashboard's Practical AI page has a **"Look up any tool"** search (e.g. "Claude Code", "n8n", "Cursor"). It is grounded on **NotebookLM**, not the news pipeline:
-
-1. Creates a throwaway notebook (`Tool Lookup: <tool> (date)`).
-2. Runs fast web research (`source add-research ... --import-all`) — imports real docs, blogs, YouTube, GitHub, Reddit.
-3. Removes any blocklisted sources from the notebook (`removeIgnoredSources`).
-4. Asks a grounded question for a cited synthesis, then formats it into the lookup JSON via `callWithFallback` (gpt-5.2 primary, Claude fallback).
-5. Stores a `practical_lookups` row (in `data/news.db`) including a `notebook_url`, then redirects to `/practical/lookup/[id]`.
-
-The notebook **persists** so the result page shows a **"Grounded via NotebookLM"** link to verify the search; it is only deleted if the lookup fails. If NotebookLM is unavailable (see auth note below), it **falls back** to GitHub-star-ranked + Firecrawl web + last30days community sources — usable, but ungrounded and with no notebook link.
-
-**Source blocklist** (`src/lib/pipeline/sources/notebooklm.ts`):
-- `IGNORED_URLS` — exact URLs to drop.
-- `IGNORED_DOMAINS` — whole hostnames to drop (currently `code.claude.com`; covers every path under it).
-- `isIgnoredUrl` checks both, and the filter applies to both the NotebookLM and fallback paths. Add new blocks to whichever set fits.
-
-**NotebookLM auth expires every few hours.** When it does, lookups silently fall back (no "Grounded via NotebookLM" badge = it fell back). Re-authenticate with `notebooklm login` (see the `reference-notebooklm-setup` memory for the exe path and login command). Code + ops detail: see the `project-practical-lookup-notebooklm` memory.
-
-## After Generating
-
-Once the brief is generated, offer to:
-- **Open the dashboard** — `npm run dev` in the project directory
-- **Summarize inline** — Read the brief data from the SQLite database and present key findings
-- **Highlight content ideas** — Pull the 5 content ideas and present them as actionable next steps
-- **Show trends** — Display the 5 cross-category trends with momentum signals
-
-## YouTube Intelligence (3rd Vertical)
-
-A separate daily analysis of 13 AI/automation YouTube channels, integrated into the same dashboard with a rose/red accent.
-
-### How to Run
+Separate daily analysis of 13 AI/automation YouTube channels (own Python pipeline in
+`.claude/skills/youtube-daily-brief/`, needs `GOOGLE_API_KEY` + `OPENAI_API_KEY`).
 
 ```bash
-# Standalone
-cd projects/daily-news-brief && npx tsx scripts/youtube-cron.ts
-
-# Via unified cron
-npx tsx scripts/daily-cron.ts --youtube
-
-# Dashboard button
-# Click "Generate YouTube Brief" (rose button) in the sidebar at http://localhost:3000
+npx tsx scripts/youtube-cron.ts          # standalone
+npx tsx scripts/daily-cron.ts --youtube  # via unified cron
 ```
 
-### Dashboard
-http://localhost:3000/youtube/[date]
-
-### What it shows
-Trending topics, top videos (with thumbnails), content ideas, suggested topics with competition level, per-channel stats, format distribution.
-
-### Prerequisites
-`GOOGLE_API_KEY` + `OPENAI_API_KEY` must be set in `projects/daily-news-brief/.env`. The pipeline is self-contained — the Python scripts live in `.claude/skills/youtube-daily-brief/scripts/` and read keys from the inherited process env.
-
-For full details see the `youtube-daily-brief` skill.
-
----
+Dashboard: `/youtube/[date]`. Full details in the `youtube-daily-brief` skill.
 
 ## Troubleshooting
 
 | Issue | Fix |
 |-------|-----|
-| "ANTHROPIC_API_KEY is not set" | Add key to `projects/daily-news-brief/.env` |
-| "last30days requires Python 3.12+" | Install Python 3.12+ and point `LAST30DAYS_PYTHON` at it |
-| "last30days exited N" / non-JSON | Check the engine path (`LAST30DAYS_DIR`) and that the repo-root `.env` has `PARALLEL_API_KEY` |
-| A source shows errors but run completes | Expected — the engine + wrapper fail open per source/topic |
-| No social sources in output | Social only runs on `--full`; needs `SCRAPECREATORS_API_KEY` / `XAI_API_KEY` |
-| "No articles fetched" | Every topic failed — check internet, Python, and the engine keys |
-| Tool lookup returns weak sources / no "Grounded via NotebookLM" badge | NotebookLM session expired and it fell back — run `notebooklm login`, then re-run the lookup |
-| Lookup shows a source you want gone | Add the URL to `IGNORED_URLS` or its host to `IGNORED_DOMAINS` in `src/lib/pipeline/sources/notebooklm.ts` |
-| Build errors after changes | Run `npm run build` to check TypeScript errors |
+| "exa-py not installed" / research returns nothing | Point `RESEARCH_PYTHON` at the Python312 interpreter that has `exa-py`; check repo-root `.env` has EXA/TAVILY/SERPER keys |
+| "No articles fetched" | Every research query failed — check internet + keys; research.py fails open per query and exits 0 even when all engines fail |
+| Brief header shows a low source count | Expected when few results are cross-corroborated; the stat now counts real publisher domains |
+| Digest email didn't arrive | Run `npx tsx scripts/daily-digest.ts` by hand and read the output; gws must be authenticated (`gws` account = the digest recipient default) |
+| Scheduled task didn't fire | Machine must be on + signed in at noon; check `schtasks /Query /TN NexisDailyBrief` |
+| "ANTHROPIC_API_KEY is not set" | Add the key to `projects/daily-news-brief/.env` |
+| Build errors after changes | `npm run build` to surface TypeScript errors |

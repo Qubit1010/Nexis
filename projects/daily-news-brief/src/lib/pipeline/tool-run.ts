@@ -16,7 +16,7 @@ import {
   type ToolCategoryPass1Output,
 } from "./tool-processor";
 import { titleSimilarity } from "./utils";
-import type { Depth } from "./sources/last30days";
+import type { Depth } from "./sources/research";
 
 /** Normalize for tool-name matching: lowercase, unify dashes/arrows, collapse ws. */
 function normName(s: string): string {
@@ -35,10 +35,10 @@ interface ToolBriefResult {
 }
 
 /**
- * Generate the "Practical AI" brief: what's new about the tools SMBs use + how to
- * solve Marketing / Sales / Managing & Scaling / Online Presence problems with
- * them. Evidence comes from the last30days engine + a GitHub/OpenRouter movers
- * signal; analysis is Haiku per domain + Sonnet synthesis.
+ * Generate the "Practical AI" brief: 2-3 rotating SMB marketing topics per day
+ * (business problem -> agentic-AI solution -> copy-paste steps -> content ideas).
+ * Evidence comes from the research engine + a GitHub/OpenRouter movers signal;
+ * analysis is Haiku per topic + Sonnet synthesis.
  */
 export async function generateToolsBrief(
   date?: string,
@@ -51,9 +51,9 @@ export async function generateToolsBrief(
   console.log(`  Generating PRACTICAL AI brief for ${targetDate} (${depth})`);
   console.log(`========================================\n`);
 
-  // --- Step 1: Fetch evidence (engine) + movers (GitHub/OpenRouter) ---
+  // --- Step 1: Fetch evidence (research engine) + movers (GitHub/OpenRouter) ---
   console.log("[Step 1/6] Fetching practical evidence...");
-  const { items, movers } = await fetchPracticalEvidence(depth);
+  const { items, movers, topics } = await fetchPracticalEvidence(targetDate, depth);
   if (items.length === 0) {
     return {
       success: false,
@@ -62,9 +62,9 @@ export async function generateToolsBrief(
     };
   }
 
-  // --- Step 2: Categorize into the 4 business domains ---
-  console.log("\n[Step 2/6] Categorizing into business domains...");
-  const categorized = categorizePractical(items);
+  // --- Step 2: Group by the day's marketing topics ---
+  console.log("\n[Step 2/6] Grouping by marketing topic...");
+  const categorized = categorizePractical(items, topics);
 
   // --- Step 3: Create pending brief ---
   const pendingDate = `${targetDate}_pending`;
@@ -79,19 +79,19 @@ export async function generateToolsBrief(
     .returning()
     .get();
 
-  // --- Step 4: Pass 1 — Per-domain analysis with Haiku ---
-  console.log("\n[Step 3/6] Analyzing each domain with Haiku...");
+  // --- Step 4: Pass 1 — Per-topic analysis with Haiku ---
+  console.log("\n[Step 3/6] Analyzing each topic with Haiku...");
   const pass1Results: ToolCategoryPass1Output[] = [];
 
   const categoryResults = await Promise.allSettled(
-    categorized.map(async ({ category, items: catItems }) => {
-      console.log(`  Processing: ${category.name} (${catItems.length} items)...`);
+    categorized.map(async ({ topic, items: catItems }) => {
+      console.log(`  Processing: ${topic.name} (${catItems.length} items)...`);
       const analysis = await analyzeToolCategory(
-        category.name,
-        category.audienceLens,
+        topic.name,
+        topic.businessProblem,
         catItems
       );
-      return { category, items: catItems, analysis };
+      return { topic, items: catItems, analysis };
     })
   );
 
@@ -104,16 +104,16 @@ export async function generateToolsBrief(
       continue;
     }
 
-    const { category, items: catItems, analysis } = result.value;
+    const { topic, items: catItems, analysis } = result.value;
 
     const categoryRow = db
       .insert(toolCategories)
       .values({
         briefId: brief.id,
-        name: category.name,
-        slug: category.slug,
+        name: topic.name,
+        slug: topic.slug,
         summary: analysis.summary,
-        sortOrder: category.sortOrder,
+        sortOrder: topic.sortOrder,
       })
       .returning()
       .get();
@@ -141,14 +141,14 @@ export async function generateToolsBrief(
           name: t.name,
           url: raw?.url || "#",
           source: raw?.source || "Unknown",
-          sourceOrigin: "last30days",
+          sourceOrigin: "research",
           oneLiner: t.oneLiner,
           bestUseCase: t.bestUseCase,
           howToSteps: JSON.stringify(t.howToSteps),
           audienceHook: t.audienceHook,
           pricingTier: t.pricingTier,
           tags: JSON.stringify(t.tags),
-          upvotes: raw?.engagementScore || 0,
+          upvotes: 0,
           relevanceScore: t.relevanceScore,
           isBestInDomain: isBest ? 1 : 0,
           bestInDomainReason: isBest ? analysis.bestInDomain?.reason || null : null,
@@ -158,25 +158,18 @@ export async function generateToolsBrief(
     }
 
     pass1Results.push({
-      categoryName: category.name,
-      categorySlug: category.slug,
+      categoryName: topic.name,
+      categorySlug: topic.slug,
       summary: analysis.summary,
       bestInDomain: analysis.bestInDomain,
       toolCount: catItems.length,
-      tools: analysis.tools.map((t) => {
-        const raw =
-          t.originalIndex >= 0 && t.originalIndex < catItems.length
-            ? catItems[t.originalIndex]
-            : undefined;
-        return {
-          name: t.name,
-          oneLiner: t.oneLiner,
-          bestUseCase: t.bestUseCase,
-          audienceHook: t.audienceHook,
-          relevanceScore: t.relevanceScore,
-          upvotes: raw?.engagementScore,
-        };
-      }),
+      tools: analysis.tools.map((t) => ({
+        name: t.name,
+        oneLiner: t.oneLiner,
+        bestUseCase: t.bestUseCase,
+        audienceHook: t.audienceHook,
+        relevanceScore: t.relevanceScore,
+      })),
     });
   }
 
@@ -271,7 +264,7 @@ export async function generateToolsBrief(
 
   const successCount = categoryResults.filter((r) => r.status === "fulfilled").length;
   console.log(
-    `\n[Done] Practical AI brief generated: ${successCount}/${categorized.length} domains, ${items.length} items`
+    `\n[Done] Practical AI brief generated: ${successCount}/${categorized.length} topics, ${items.length} items`
   );
 
   return { success: errors.length === 0, briefId: brief.id, date: targetDate, errors };

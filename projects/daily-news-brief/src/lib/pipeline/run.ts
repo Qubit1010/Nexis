@@ -4,7 +4,7 @@ import { eq, and, gte } from "drizzle-orm";
 import { CATEGORIES } from "./categories";
 import { fetchAllSources } from "./sources";
 import type { BriefMode } from "./topics";
-import type { Depth } from "./sources/last30days";
+import type { Depth } from "./sources/research";
 import { deduplicateArticles } from "./deduplicator";
 import { categorizeArticles } from "./categorizer";
 import {
@@ -48,7 +48,7 @@ export async function generateDailyBrief(
   console.log(`  mode=${mode}${mode === "topic" ? ` topic="${opts.topic}"` : ""} days=${days} depth=${depth}`);
   console.log(`========================================\n`);
 
-  // --- Step 1: Fetch evidence via the last30days engine ---
+  // --- Step 1: Fetch evidence via the research engine ---
   console.log("[Step 1/6] Fetching + ranking evidence...");
   const rawArticles = await fetchAllSources({
     mode,
@@ -80,7 +80,7 @@ export async function generateDailyBrief(
     .values({
       date: pendingDate,
       totalArticlesFetched: rawArticles.length,
-      sourcesUsed: new Set(rawArticles.map((a) => a.sourceOrigin)).size,
+      sourcesUsed: new Set(rawArticles.map((a) => a.source)).size,
     })
     .returning()
     .get();
@@ -194,7 +194,7 @@ export async function generateDailyBrief(
           tldr: a.tldr,
           sentimentTag: a.sentimentTag,
           relevanceScore: a.relevanceScore,
-          engagementScore: raw?.engagementScore,
+          sourceCount: raw?.sourceCount,
         };
       }),
     });

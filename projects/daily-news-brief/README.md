@@ -1,24 +1,24 @@
 # Daily News Brief
 
-AI-powered daily intelligence brief for AI/tech news. Fetches from multiple sources, deduplicates, categorizes, analyzes with Claude, and displays in a polished dashboard.
+AI-powered daily intelligence brief for AI/tech news, plus a "Practical AI" vertical teaching SMB owners how agentic AI solves marketing problems, plus YouTube channel intelligence. Evidence comes from the repo's `research` skill (Exa + Tavily + Serper fused, cross-source ranked), analyzed with LLM passes, displayed in a polished dashboard.
 
 ## Architecture
 
 ```
-NewsAPI (6 queries)  ──┐
-Hacker News (top 150) ─┼── Dedup ── Categorize ── Haiku (per-cat) ── Sonnet (synthesis) ── SQLite ── Dashboard
-RSS (5 feeds)        ──┘
+6 curated themes ──┐
+RSS/HN derived    ─┼── research skill (per-topic) ── Filter/Rank ── Categorize ── Haiku (per-cat) ── Sonnet (synthesis) ── SQLite ── Dashboard
+  topics (seed)   ──┘
 ```
 
-**Pipeline steps:**
-1. Fetch from NewsAPI, Hacker News, RSS (ArXiv, TechCrunch, MIT Tech Review, The Verge, Ars Technica)
-2. Deduplicate via fuzzy title matching, merge engagement scores
+**News pipeline steps:**
+1. Resolve topics: 6 curated themes + up to 2 breaking topics derived from free RSS/HN headlines
+2. Fetch evidence per topic via the research skill (`.claude/skills/research/scripts/research.py`) — results are URL-deduped and ranked by cross-source corroboration, with junk URLs (GitHub issues/PRs, bare HN threads) filtered out
 3. Categorize into 6 AI/tech categories using keyword scoring
-4. Analyze each category with Claude Haiku (TL;DRs, sentiment, relevance)
-5. Synthesize across categories with Claude Sonnet (trends, content ideas, overall sentiment)
+4. Analyze each category with Haiku-tier LLM (TL;DRs, sentiment, relevance)
+5. Synthesize across categories with Sonnet-tier LLM (trends, content ideas, overall sentiment)
 6. Store in SQLite, display in Next.js dashboard
 
-**Cost:** ~$0.06 per run (Haiku for bulk analysis, Sonnet for synthesis only).
+**Practical AI pipeline** (`npm run generate:tools`): rotates 2-3 of 9 SMB marketing topics per day (Business Overview, Content Automation, Target Audience, Market Analysis, Marketing Goals, Marketing Strategy, Social Media Strategy, Sales Funnel, KPIs — full cycle weekly, deterministic by date). Each topic: business problem in plain language → agentic-AI solutions (Claude Code / Claude Cowork / Codex) → exactly 3 copy-paste steps per solution → ready-to-post content ideas. A movers rail (GitHub Trending + OpenRouter new models) covers "what's new".
 
 ## Setup
 
@@ -29,12 +29,15 @@ cp .env.example .env
 npx drizzle-kit push
 ```
 
+Search keys (`EXA_API_KEY`, `TAVILY_API_KEY`, `SERPER_API_KEY`) live in the repo-root `.env` and auto-load — see `.env.example`.
+
 ## Usage
 
 **Generate a brief:**
 ```bash
-npm run generate                    # Today's brief
+npm run generate                    # Today's news brief
 npm run generate -- 2026-03-19      # Specific date
+npm run generate:tools              # Today's Practical AI brief
 ```
 
 **Run the dashboard:**
@@ -46,33 +49,24 @@ npm run dev
 **Via Claude Code skill:**
 Say "generate the daily brief" or use `/daily-brief`.
 
-## Practical AI: Look up any tool (NotebookLM-grounded)
+## Practical AI: Look up any tool
 
-The Practical AI page has a **"Look up any tool"** search that researches any tool/library on demand. It is **grounded on NotebookLM**, not the news pipeline:
+The Practical AI page has a **"Look up any tool"** search that researches any tool/library on demand via the research skill:
 
-1. Spins up a throwaway notebook and runs fast web research (`source add-research --import-all`) — pulling real docs, blogs, YouTube, GitHub, and Reddit.
-2. Drops blocklisted sources from the notebook, then asks a grounded, cited question.
-3. Formats the synthesis into the lookup view (`callWithFallback`: gpt-5.2 primary, Claude fallback) and stores a `practical_lookups` row with a `notebook_url`.
-4. The notebook persists so each result links out to it ("Grounded via NotebookLM") for verification; it is deleted only if the lookup fails.
+1. Runs two research queries ("new features updates changelog" + "how to use for business tutorial guide") over the chosen day window.
+2. The shared junk-URL filter (`src/lib/pipeline/sources/research.ts`) drops GitHub issues/PRs, bare comment threads, and blocklisted domains before anything reaches the LLM.
+3. Formats the evidence into the lookup view (`callWithFallback`: gpt-5.2 primary, Claude fallback) and stores a `practical_lookups` row.
 
-If NotebookLM is unavailable it **falls back** to GitHub-star-ranked + Firecrawl web + last30days community sources (ungrounded, no notebook link).
-
-**Source blocklist** lives in `src/lib/pipeline/sources/notebooklm.ts`:
-- `IGNORED_URLS` — exact URLs to drop.
-- `IGNORED_DOMAINS` — whole hostnames to drop (e.g. `code.claude.com`).
-
-Both the grounded and fallback paths apply the blocklist.
-
-**Auth:** NotebookLM sessions expire every few hours. When they do, lookups silently fall back (no "Grounded via NotebookLM" badge). Re-authenticate with `notebooklm login`.
+Older lookup rows generated by the retired NotebookLM path keep their "Grounded via NotebookLM" badge; new rows don't use it.
 
 ## Tech Stack
 
 - Next.js 16 + React 19
-- Anthropic SDK (Haiku + Sonnet)
+- OpenAI + Anthropic SDKs (Haiku/mini tier per-category, Sonnet tier synthesis)
 - SQLite + Drizzle ORM
 - Tailwind CSS v4 + shadcn/ui
 
-## Categories
+## Categories (news brief)
 
 1. AI Models & Breakthroughs
 2. AI Tools & Products

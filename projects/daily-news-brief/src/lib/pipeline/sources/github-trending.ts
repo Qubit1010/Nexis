@@ -1,4 +1,10 @@
-import type { RawTool } from "./tool-types";
+/** Trending repo surfaced for the movers rail. */
+export interface TrendingRepo {
+  name: string;
+  tagline: string;
+  url: string;
+  upvotes: number;
+}
 
 // GitHub Trending HTML scrape. They don't expose an API, but the page is simple enough.
 const TRENDING_URL = "https://github.com/trending?since=daily";
@@ -99,13 +105,13 @@ async function fetchTrendingPage(url: string): Promise<ParsedRepo[]> {
   return parseTrendingHtml(html);
 }
 
-export async function fetchFromGitHubTrending(): Promise<RawTool[]> {
+export async function fetchFromGitHubTrending(): Promise<TrendingRepo[]> {
   try {
     const allUrls = [TRENDING_URL, ...TOPIC_URLS];
     const results = await Promise.allSettled(allUrls.map(fetchTrendingPage));
 
     const seen = new Set<string>();
-    const tools: RawTool[] = [];
+    const tools: TrendingRepo[] = [];
 
     for (const result of results) {
       if (result.status !== "fulfilled") {
@@ -122,10 +128,6 @@ export async function fetchFromGitHubTrending(): Promise<RawTool[]> {
           name: repo.name,
           tagline: repo.description || `${repo.language} project by ${repo.owner}`,
           url: repo.url,
-          source: "GitHub Trending",
-          sourceOrigin: "tool-rss",
-          publishedAt: new Date().toISOString(),
-          description: `${repo.description}${repo.language ? ` [${repo.language}]` : ""} (${repo.stars.toLocaleString()} stars total, +${repo.starsToday} today)`,
           upvotes: repo.starsToday || Math.min(repo.stars, 9999),
         });
       }

@@ -1,13 +1,13 @@
 export interface RawArticle {
   title: string;
   url: string;
-  source: string; // e.g. "TechCrunch", "Ars Technica", "Reddit", "GitHub"
-  sourceOrigin: "newsapi" | "hackernews" | "rss" | "last30days" | "github-search" | "web-search" | "notebooklm";
+  source: string; // publisher hostname label, e.g. "techcrunch.com", "Reddit"
+  sourceOrigin: "hackernews" | "rss" | "research";
   publishedAt: string;
   description: string;
   engagementScore?: number;
   commentCount?: number;
   sourceCount?: number;
-  /** Theme/topic that surfaced this article (last30days runs). */
+  /** Theme/topic query that surfaced this article (research runs). */
   topic?: string;
 }

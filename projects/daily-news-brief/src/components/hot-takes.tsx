@@ -6,8 +6,7 @@ interface Article {
   url: string;
   source: string;
   tldr: string;
-  engagementScore: number | null;
-  commentCount: number | null;
+  sourceCount: number | null;
   sentimentTag?: string | null;
 }
 
@@ -22,21 +21,12 @@ const SENTIMENT_DOT: Record<string, { color: string; label: string }> = {
   skeptical: { color: "bg-red-400", label: "Skeptical" },
 };
 
-function formatEngagement(score: number): string {
-  if (score >= 1000) return `${(score / 1000).toFixed(1)}k`;
-  return String(score);
-}
-
-function buildHNSearchUrl(title: string): string {
-  return `https://news.ycombinator.com/item?id=${encodeURIComponent(title)}`;
-}
-
 export function HotTakes({ articles }: HotTakesProps) {
   if (articles.length === 0) return null;
 
-  // Already sorted by engagement from the parent, but ensure it
+  // Already sorted by corroboration from the parent, but ensure it
   const sorted = [...articles].sort(
-    (a, b) => (b.engagementScore ?? 0) - (a.engagementScore ?? 0)
+    (a, b) => (b.sourceCount ?? 1) - (a.sourceCount ?? 1)
   );
 
   return (
@@ -61,7 +51,7 @@ export function HotTakes({ articles }: HotTakesProps) {
         <div>
           <h2 className="text-lg font-bold tracking-tight">Most Discussed</h2>
           <p className="text-[13px] text-muted-foreground">
-            Highest engagement from Hacker News
+            Corroborated across the most sources
           </p>
         </div>
       </div>
@@ -69,8 +59,7 @@ export function HotTakes({ articles }: HotTakesProps) {
       <div className="space-y-3">
         {sorted.map((article, i) => {
           const sentiment = SENTIMENT_DOT[article.sentimentTag || "neutral"] || SENTIMENT_DOT.neutral;
-          const engagement = article.engagementScore ?? 0;
-          const comments = article.commentCount ?? 0;
+          const sources = article.sourceCount ?? 1;
 
           return (
             <div
@@ -79,7 +68,7 @@ export function HotTakes({ articles }: HotTakesProps) {
               style={{ animationDelay: `${i * 0.06}s`, animationFillMode: "both" }}
             >
               <div className="flex items-start gap-4">
-                {/* Upvote count - prominent */}
+                {/* Corroboration count - prominent */}
                 <div className="shrink-0 flex flex-col items-center gap-0.5 min-w-[52px]">
                   <svg
                     width="16"
@@ -94,9 +83,9 @@ export function HotTakes({ articles }: HotTakesProps) {
                     <path d="M12 19V5m0 0l-7 7m7-7l7 7" />
                   </svg>
                   <span className="text-[22px] font-bold text-orange-400 leading-none tabular-nums">
-                    {formatEngagement(engagement)}
+                    {sources}
                   </span>
-                  <span className="text-[10px] text-muted-foreground/40">points</span>
+                  <span className="text-[10px] text-muted-foreground/40">sources</span>
                 </div>
 
                 {/* Content */}
@@ -114,31 +103,12 @@ export function HotTakes({ articles }: HotTakesProps) {
                     </span>
                   </a>
 
-                  {/* Meta row: source badge, comments, sentiment */}
+                  {/* Meta row: source badge, sentiment */}
                   <div className="flex items-center gap-3 mt-2">
                     {/* Source badge */}
                     <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-full bg-orange-500/15 text-orange-400">
                       {article.source === "hackernews" ? "Hacker News" : article.source}
                     </span>
-
-                    {/* Comment count */}
-                    {comments > 0 && (
-                      <span className="inline-flex items-center gap-1 text-[12px] text-muted-foreground/60">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                        </svg>
-                        {comments}
-                      </span>
-                    )}
 
                     {/* Sentiment dot */}
                     <span className="flex items-center gap-1 text-[11px] text-muted-foreground/50">
@@ -154,30 +124,6 @@ export function HotTakes({ articles }: HotTakesProps) {
                   <p className="text-[13px] text-muted-foreground mt-2.5 leading-relaxed">
                     {article.tldr}
                   </p>
-
-                  {/* HN discussion link */}
-                  <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 mt-2.5 text-[11px] font-semibold text-orange-400/70 hover:text-orange-400 transition-colors"
-                  >
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                    View discussion
-                  </a>
                 </div>
               </div>
             </div>

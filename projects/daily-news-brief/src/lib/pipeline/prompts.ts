@@ -4,8 +4,6 @@ interface ArticleInput {
   title: string;
   description: string;
   source: string;
-  engagementScore?: number;
-  commentCount?: number;
   sourceCount?: number;
 }
 
@@ -40,8 +38,6 @@ export interface SynthesisResult {
 
 function formatArticleForPrompt(a: ArticleInput, i: number): string {
   let line = `${i + 1}. [idx:${i}] "${a.title}" (${a.source})`;
-  if (a.engagementScore) line += ` [${a.engagementScore} upvotes]`;
-  if (a.commentCount) line += ` [${a.commentCount} comments]`;
   if (a.sourceCount && a.sourceCount > 1)
     line += ` [covered by ${a.sourceCount} sources]`;
   line += `\n   ${a.description}`;
@@ -88,13 +84,13 @@ IMPORTANT:
 - Include the originalIndex for each article (the idx number from the listing)
 - Order articles by relevance score (highest first)
 - Be specific — avoid generic statements like "AI is growing"
-- Consider engagement signals (upvotes, comments) as indicators of community interest`;
+- Consider cross-source corroboration ("covered by N sources") as an indicator of importance`;
 }
 
 function engagementContext(articles: ArticleInput[]): string {
-  const withEngagement = articles.filter((a) => a.engagementScore);
-  if (withEngagement.length === 0) return "";
-  return `NOTE: Some articles include engagement metrics (upvotes, comments) from Hacker News. Higher engagement = more community interest. Factor this into your relevance scoring.`;
+  const corroborated = articles.filter((a) => (a.sourceCount ?? 0) > 1);
+  if (corroborated.length === 0) return "";
+  return `NOTE: Some articles are corroborated by multiple search engines — shown as "[covered by N sources]". Higher corroboration = a stronger, more widely reported story. Factor this into your relevance scoring.`;
 }
 
 export function buildSynthesisPrompt(
@@ -109,7 +105,7 @@ export function buildSynthesisPrompt(
       tldr: string;
       sentimentTag: string;
       relevanceScore: number;
-      engagementScore?: number;
+      sourceCount?: number;
     }>;
   }>,
   date: string
@@ -125,7 +121,7 @@ ${cat.topArticles
   .slice(0, 5)
   .map(
     (a) =>
-      `- "${a.title}" (${a.sentimentTag}, relevance: ${a.relevanceScore}/10${a.engagementScore ? `, ${a.engagementScore} upvotes` : ""})\n  ${a.tldr}`
+      `- "${a.title}" (${a.sentimentTag}, relevance: ${a.relevanceScore}/10${a.sourceCount && a.sourceCount > 1 ? `, covered by ${a.sourceCount} sources` : ""})\n  ${a.tldr}`
   )
   .join("\n")}`
     )
@@ -168,5 +164,5 @@ IMPORTANT:
 - Return ONLY valid JSON, no markdown code fences or extra text
 - Be specific and opinionated — generic observations are useless
 - Focus on what genuinely shifts the industry, not hype
-- Weight high-engagement stories (upvotes/comments) as signals of what matters`;
+- Weight stories corroborated across multiple sources as signals of what matters`;
 }

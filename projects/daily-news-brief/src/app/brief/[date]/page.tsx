@@ -67,11 +67,15 @@ export default async function BriefPage({ params }: BriefPageProps) {
       categorySlugs: JSON.parse(t.categorySlugs) as string[],
     }));
 
-  // Get top HN articles by engagement
+  // Most corroborated articles: covered by more than one search engine
   const allArticles = catsWithArticles.flatMap((c) => c.articles);
   const hotArticles = allArticles
-    .filter((a) => a.engagementScore != null && a.engagementScore > 0)
-    .sort((a, b) => (b.engagementScore ?? 0) - (a.engagementScore ?? 0))
+    .filter((a) => (a.sourceCount ?? 1) > 1)
+    .sort(
+      (a, b) =>
+        (b.sourceCount ?? 1) - (a.sourceCount ?? 1) ||
+        (b.relevanceScore ?? 0) - (a.relevanceScore ?? 0)
+    )
     .slice(0, 5);
 
   const totalArticles = catsWithArticles.reduce(

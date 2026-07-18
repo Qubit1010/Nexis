@@ -32,33 +32,32 @@ export interface ToolCategoryPass1Output {
     bestUseCase: string;
     audienceHook: string;
     relevanceScore: number;
-    upvotes?: number;
   }>;
 }
 
 export async function analyzeToolCategory(
-  categoryName: string,
-  audienceLens: string,
+  topicName: string,
+  businessProblem: string,
   items: PracticalItem[]
 ): Promise<ToolAnalysisResult> {
   if (items.length === 0) {
     return {
-      summary: "No notable updates in this domain today.",
+      summary: "No notable updates for this topic today.",
       bestInDomain: null,
       tools: [],
     };
   }
 
-  const prompt = buildToolAnalysisPrompt(categoryName, audienceLens, items);
+  const prompt = buildToolAnalysisPrompt(topicName, businessProblem, items);
   const responseText = await callWithFallback(
     prompt,
-    categoryName,
+    topicName,
     "gpt-5.4-mini",
     "claude-haiku-4-5-20251001",
     4096
   );
 
-  return parseJSON<ToolAnalysisResult>(responseText, categoryName);
+  return parseJSON<ToolAnalysisResult>(responseText, topicName);
 }
 
 export async function synthesizeToolBrief(
