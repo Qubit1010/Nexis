@@ -139,6 +139,32 @@ def first_tab_title(sheet_id):
     return "Sheet1"
 
 
+def create_spreadsheet(title):
+    """Create a new Google Sheet, returning (spreadsheet_id, first_tab_title, first_tab_gid).
+    One place for the gws create call (same pattern as client-onboarding-workflow)."""
+    res = run_gws(["sheets", "spreadsheets", "create"],
+                  json_body={"properties": {"title": title}})
+    sid = res.get("spreadsheetId")
+    if not sid:
+        raise RuntimeError(f"create_spreadsheet failed for '{title}': {res}")
+    props = (res.get("sheets") or [{}])[0].get("properties", {})
+    return sid, props.get("title", "Sheet1"), props.get("sheetId", 0)
+
+
+def batch_update(sheet_id, requests):
+    """Run a spreadsheets.batchUpdate with a list of request objects (formatting, freezing, etc.)."""
+    if not requests:
+        return True
+    try:
+        run_gws(["sheets", "spreadsheets", "batchUpdate",
+                 "--params", json.dumps({"spreadsheetId": sheet_id})],
+                json_body={"requests": requests})
+        return True
+    except RuntimeError as e:
+        print(f"  ERROR batchUpdate: {e}", flush=True)
+        return False
+
+
 # ---------------------------------------------------------------------------
 # Write
 # ---------------------------------------------------------------------------

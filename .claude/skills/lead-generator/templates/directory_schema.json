@@ -1,0 +1,14 @@
+{
+  "many": true,
+  "fields": [
+    {"name": "company", "description": "agency or company name (the listing title)"},
+    {"name": "profile_link", "description": "the URL of this company's profile page ON THIS DIRECTORY (e.g. a clutch.co/profile/... or goodfirms.co/company/... link), NOT the company's own website"},
+    {"name": "rating", "description": "review star rating shown for this company, e.g. 4.9 (leave blank if none)"},
+    {"name": "reviews", "description": "number of reviews / ratings count shown, digits only, e.g. 52 (leave blank if none)"},
+    {"name": "budget_range", "description": "minimum project size or budget shown, e.g. '$5,000+' or '$1,000+' (leave blank if none)"},
+    {"name": "category", "description": "the service category / industry / what they do, e.g. 'Digital Marketing', 'AI Development'"},
+    {"name": "location", "description": "city and state/country shown for the company, e.g. 'New York, NY'"},
+    {"name": "note", "description": "the short tagline or description blurb shown for this company on the listing"},
+    {"name": "website", "description": "the destination URL of THIS company's 'Visit Website' button/link. It is often a directory redirect or tracking link (e.g. 'r.clutch.co/redirect?...&provider_website=...', or an external link carrying utm_ parameters) -- capture the FULL href exactly as it appears, do not shorten or clean it. Leave blank only if this company genuinely has no visit-website link."}
+  ]
+}

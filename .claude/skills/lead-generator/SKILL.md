@@ -1,6 +1,6 @@
 ---
 name: lead-generator
-description: Turns raw directory leads into enriched, outreach-ready rows on a consolidated "Main" sheet. Merges + dedups leads from multiple directories (Google Maps, Clutch, DesignRush, ...), then for each unique business resolves a website (via Clutch redirect-extraction when only a directory profile exists), scrapes that website FIRST for the company's Instagram/LinkedIn/Facebook and the founder's name + personal socials (footer/header, then About/Team/Contact pages), and only falls back to the in-repo research skill (fused Serper/Tavily/Exa) when the website doesn't have what's needed. Search-sourced founder matches are always flagged for manual confirmation rather than auto-written. Use this whenever the user wants to merge/dedup directory leads, find social profiles for a batch of businesses, resolve founders and their socials, or enrich a Google Maps / Clutch / DesignRush export. Trigger on "resolve socials for these maps leads", "find their instagram/linkedin/facebook", "find the founder", "enrich the directory leads", "merge these directory tabs", "dedup the leads", "process the main sheet", "find social profiles for [sheet/business]". Does NOT draft outreach messages or manage the CRM — leads-to-crm owns that. Directory *scraping* automation is out of scope (later).
+description: Scrapes raw leads from business directories (Clutch, GoodFirms, Sortlist, DesignRush) or Google Maps into a scored, sorted, well-formatted new Google Sheet, then enriches them into outreach-ready rows on a consolidated "Main" sheet. Phase -1 (scrape) takes a directory listing URL or a Maps keyword+location, extracts company/rating/reviews/category/location/profile-link via the web-scraper skill, scores each lead 1-10 by rating + review volume, sorts best-first, and creates a new sheet. Then it merges + dedups leads, and for each unique business resolves a website (via Clutch redirect-extraction when only a directory profile exists), scrapes that website FIRST for the company's Instagram/LinkedIn/Facebook and the founder's name + personal socials (footer/header, then About/Team/Contact pages), only falling back to the in-repo research skill (fused Serper/Tavily/Exa) when the website doesn't have what's needed. Search-sourced founder matches are always flagged for manual confirmation rather than auto-written. Use this whenever the user wants to scrape leads from a directory, merge/dedup directory leads, find social profiles for a batch of businesses, resolve founders and their socials, or enrich a Google Maps / Clutch / DesignRush export. Trigger on "scrape 100 leads of [x] in [city]", "scrape this clutch/goodfirms/sortlist/designrush link", "get leads from this directory into a sheet", "score and sort these leads", "resolve socials for these maps leads", "find their instagram/linkedin/facebook", "find the founder", "enrich the directory leads", "merge these directory tabs", "dedup the leads", "process the main sheet", "find social profiles for [sheet/business]". Does NOT draft outreach messages or manage the CRM — leads-to-crm owns that.
 ---
 
 # Lead Generator (v3 — website-first)
@@ -17,9 +17,48 @@ someone in an unrelated past/current role, or a coincidental name/company-word o
 `research` skill (fused Serper/Tavily/Exa) is now a **fallback**, only reached when the website doesn't
 name a founder, and anything it finds is flagged for manual confirmation — never auto-written.
 
-**What this skill does NOT do:** draft outreach copy, manage the CRM, decide whether a lead gets
-messaged, or scrape the directories themselves (that automation is deferred). Resolved rows land on
-the Main sheet only; CRM fan-out is a later step.
+**What this skill does NOT do:** draft outreach copy, manage the CRM, or decide whether a lead gets
+messaged. Resolved rows land on the Main sheet only; CRM fan-out is a later step (`leads-to-crm`'s
+`push_from_leadgen.py`).
+
+## Phase -1 — scrape a directory (or Maps) into a scored, sorted new sheet
+
+The front step that PRODUCES the sheet the rest of this skill consumes. Two input modes (locked
+2026-07-17):
+
+- **Directory URL** (Clutch / GoodFirms / Sortlist / DesignRush): the directory sites encode location
+  as an opaque internal id (Clutch `geona_id=25864`) that can't be guessed from a city name, so filter
+  on the site and paste the resulting URL.
+- **Maps keyword**: `--maps "<keyword>" --location "<city>"` runs the Google Maps actor (keyword +
+  location, structured output).
+
+```
+python scripts/scrape_directory.py --url "https://clutch.co/developers/artificial-intelligence?geona_id=25864" --limit 100
+python scripts/scrape_directory.py --maps "digital marketing" --location "New York, NY" --limit 100
+python scripts/scrape_directory.py --url <url> --limit 15 --dry-run    # scrape+score+md, no sheet
+```
+
+It runs a **two-pass** flow for directories (Maps is one pass — the actor returns everything):
+**(1) discovery** — paginate the listing and llm-extract each company's name + profile link (this is the
+reliable part; a listing page renders rating/reviews as star widgets that don't survive HTML→markdown,
+only shows a "Visit Website" button on sponsored listings, and rotates which companies it shows per
+fetch); **(2) profile enrichment** — fetch each discovered company's own Clutch/GoodFirms/… profile page
+(in parallel, 4 workers) and pull the **accurate rating, review count, budget, and real website** from
+it, since the profile carries all of it cleanly. The **website** is decoded from the profile's "Visit
+Website" href — a Clutch `r.clutch.co/redirect` link (reusing `clutch_resolve`'s decoder), any directory
+redirect carrying the target in a query param, or an external utm link — reduced to the canonical root
+domain, and blanked if it resolves back to the directory's own domain (a sponsored/PPC link). Enrichment
+lifted a live SF batch from 3/46 → 10/10 websites and mostly-blank → 8/10 ratings (the 2 misses were
+genuinely unrated companies). `--no-enrich` skips the profile pass (fast, but listing-only data is
+sparse). Maps uses the `compass/crawler-google-places` actor. It dedups (profile-link OR
+company-name, so the same agency shown on two geo-pages collapses to one row), **scores each lead 1-10**
+by rating blended with log-scaled review volume (`score.py` — a proven 4.8/92-reviews outranks an
+untested 5.0/2), sorts best-first, writes a markdown artifact to `docs/directory-scrapes/`, and creates
+a **new Google Sheet** (bold + frozen header, `Score` column first). The sheet's columns are
+deliberately resolve-compatible, so Phase 0-4 below (then `leads-to-crm`) run on it next, unchanged.
+`--selftest` on `score.py` and `scrape_directory.py` checks the scoring + dedup + pagination logic.
+Verified live on Clutch and Google Maps; GoodFirms/Sortlist/DesignRush route through the identical
+generic path (each a one-line `DIRECTORY_CONFIG` entry, pagination the only likely per-site tweak).
 
 ## Why website-first (not search-first)
 

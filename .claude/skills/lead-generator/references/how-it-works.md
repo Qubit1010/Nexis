@@ -5,6 +5,62 @@ sheet. Replaces the earlier Apify/SocialCrawl/Hunter.io build (archived at
 `archives/lead-generator-apify-2026-07-10/`) after that version's Instagram hashtag-scraping
 surfaced low-quality, wrong-geography leads.
 
+## Phase -1 (2026-07-17): directory scraping — now IN scope
+
+Directory *scraping* was deferred through v1-v3 ("out of scope, later — research it first"). It's now
+built as `scripts/scrape_directory.py`, the front step that produces the sheet Phase 0-4 consume.
+
+- **Two input modes.** Directory URL (Clutch/GoodFirms/Sortlist/DesignRush) is the primary path: those
+  sites encode location as an opaque internal id (Clutch `geona_id=25864`) that can't be derived from a
+  city name, so Aleem filters on the site and pastes the URL. Pure keyword ("digital marketing in New
+  York") routes to Google Maps via the `compass/crawler-google-places` actor, which takes keyword +
+  location cleanly. This split was a deliberate decision — no guessing at geo IDs.
+- **Extraction reuses the web-scraper skill** (subprocess, same pattern as `clutch_resolve.py`): llm-schema
+  extraction (`templates/directory_schema.json`) is structure-tolerant, so one schema fits all four
+  directory sites. `DIRECTORY_CONFIG` per host is just `{page_param, engine}` — Clutch starts on crawl4ai
+  (Cloudflare wall), the rest on the auto ladder.
+- **Two passes: discovery then profile enrichment.** The listing page is a lossy, rotating view — Clutch
+  renders ratings as star-widget components that mostly don't survive HTML→markdown (a page showing ~40
+  companies keeps a review count in the markdown for only ~14), only shows a "Visit Website" button on
+  Premier-Verified/sponsored listings, and returns a **different set of companies each fetch**. So pass 1
+  (`scrape_directory()`) uses the listing only for what it IS reliable at — discovering company names +
+  profile links. Pass 2 (`enrich_profiles()` → `enrich_one()`) fetches each company's own profile page
+  (parallel, 4 workers via ThreadPoolExecutor) and pulls the accurate **rating, review count, budget, and
+  website** from it, because the profile carries all of it cleanly in the markdown (verified: a profile
+  reliably has `4.8`, `86 reviews`, `$25,000+`, and the `r.clutch.co/redirect` website). `_merge_profile()`
+  lets the profile win for rating/reviews/budget/website while keeping the discovered company/link/location;
+  a failed profile fetch leaves the discovery values untouched (graceful). `--no-enrich` skips pass 2.
+  Maps needs no enrichment — the actor returns rating/reviews/website in one call. **Live-verified 2026-07-17:
+  a 10-lead SF batch went from listing-only 3/46 websites + mostly-blank ratings to 10/10 websites, 10/10
+  budgets, 8/10 ratings** (the 2 rating misses were genuinely unrated Clutch listings, confirmed by budget
+  + website still extracting from their profiles).
+- **Website decoding** (`decode_website()`, used in both the listing pass and as the profile fallback):
+  handles the three real shapes — a Clutch `r.clutch.co/redirect?...provider_website=...` (reusing
+  `clutch_resolve.website_from_markdown`), any directory-domain redirect carrying the target in a query
+  param (`u`/`url`/`website`/`redirect`/...), or an already-external utm link (strip tracking). Reduced to
+  the canonical **root domain**. Blanked if the decode resolves back to a directory's OWN domain — a
+  sponsored/PPC "Visit Website" routes through e.g. `ppc.clutch.co` and never leaves the directory (the
+  live-caught Azumo case), so a directory URL never lands in the Website column.
+- **Pagination** fetches the pasted URL (page 1) then increments the page param from 1 upward, always
+  fetching the original first — robust to either 0- or 1-indexed directories (at worst one redundant page
+  the dedup absorbs). Stops at the lead limit, an empty page, two empty streaks, or a 25-page hard cap.
+- **Dedup on profile-link OR company-name** (not merge_leads' name+city): a directory profile is one
+  company entity regardless of which office city a page shows it under — the fix for a live-caught bug
+  where "Simform" appeared twice (once linked/New-York, once linkless/Orlando). Maps mode keeps
+  merge_leads' name+city key, since local businesses legitimately repeat a name across cities.
+- **Score 1-10** (`score.py`) is volume-weighted: `0.7*(rating/5*10) + 0.3*(log-scaled review volume)`.
+  A textbook Bayesian shrink-to-batch-mean was tried first and rejected — when the batch mean exceeds an
+  established agency's own rating, shrinking a thin 5.0 toward the mean still left it on top, so volume
+  never won. The explicit blend makes a proven 4.8/92-reviews outrank an untested 5.0/2. No rating -> 1.0
+  (floored, never invented).
+- **Output** is a markdown artifact (`docs/directory-scrapes/`) plus a NEW Google Sheet (`Score` column
+  first, bold+frozen header, sorted best-first). Columns are resolve-compatible (`read_batch_main`'s
+  aliases map them all + the status column), so `run_batch.py` then `push_from_leadgen.py` run on the
+  produced sheet next with no conversion. Live-verified 2026-07-17 on Clutch (the example AI-dev URL) and
+  Google Maps; GoodFirms/Sortlist/DesignRush route through the identical generic path (each a one-line
+  `DIRECTORY_CONFIG` entry, pagination the only likely per-site tweak — reported as expected-to-work, not
+  yet live-verified).
+
 ## v3 (2026-07-16): website-first, because search-first attached the wrong founder
 
 The v2 flow below resolved the founder by **search first** (query the company + role words, take the top
