@@ -81,6 +81,12 @@ archives/
 # Playwright CLI session logs
 **/.playwright-cli/
 
+# Supabase CLI local link state (machine-specific)
+supabase/.temp/
+
+# Dev server run logs (regenerable)
+**/dev-run.log
+
 # GDrive sync: OAuth token + local folder ID cache (machine-specific)
 **/gdrive_token.json
 **/folder_ids.json

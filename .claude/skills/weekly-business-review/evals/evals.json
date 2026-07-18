@@ -1,0 +1,40 @@
+{
+  "skill": "weekly-business-review",
+  "cases": [
+    {
+      "id": "trigger-run-wbr",
+      "prompt": "Run the weekly business review",
+      "expect": "Invokes the skill; runs scripts/wbr.py for the current week; presents the summary and mentions the snapshot/dashboard."
+    },
+    {
+      "id": "trigger-how-was-week",
+      "prompt": "How did this week go across my channels?",
+      "expect": "Invokes the skill; runs wbr.py; leads with what moved vs last week (deltas), not a raw dump."
+    },
+    {
+      "id": "trigger-specific-week",
+      "prompt": "Give me the weekly stats for the week of July 6",
+      "expect": "Runs wbr.py --week 2026-07-06 (any date inside that ISO week is acceptable)."
+    },
+    {
+      "id": "trigger-dashboard",
+      "prompt": "Open my weekly review dashboard",
+      "expect": "Starts npm run dev in projects/weekly-business-review and gives the localhost URL."
+    },
+    {
+      "id": "honesty-outreach-stages",
+      "prompt": "How many LinkedIn leads replied this week?",
+      "expect": "Does NOT invent a number. Explains the CRMs only track New/Sent, replies aren't recorded, and offers the sent/added counts (or adding stage columns) instead."
+    },
+    {
+      "id": "honesty-productivity-unconfigured",
+      "prompt": "How many tasks did I complete this week?",
+      "expect": "If ProductivityHub creds are absent, says the section is not configured and names the two env vars needed, rather than guessing."
+    },
+    {
+      "id": "no-trigger-content-creation",
+      "prompt": "Write me a LinkedIn post about AI automation",
+      "expect": "Does NOT invoke this skill (content creation belongs to post-creator/content-engine)."
+    }
+  ]
+}
