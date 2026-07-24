@@ -59,7 +59,7 @@ Then exactly 4 paragraphs — no more, no less. Plain prose, no headers, no bull
 
    Do not add a 5th paragraph to continue this — 4 paragraphs total, no exceptions.
 
-3. **Relevant proof** — one result from Aleem's work history that maps directly to their problem. Lead with the result directly — never open with "In similar roles", "Previously", or "I've worked on similar projects". Just state what was built and what it did. Use the results bank below, pick the closest match, don't list multiple.
+3. **Relevant proof** — one result from Aleem's work history that maps directly to their problem. Lead with the result directly — never open with "In similar roles", "Previously", or "I've worked on similar projects". Just state what was built and what it did. Match the results bank entry below by its trigger scenario, not by job type or which one sounds most impressive. Don't default to the email-triage entry unless the post is actually about inbound messages, tickets, or replies, that entry only reads as personalized when it's true.
 
    Portfolio links: Only include web portfolio URLs (tradinghunters.com, ringo.media, inboxapp.framer.website) for **Web Dev** jobs where the post asks for examples. Never include them in AI Services or Marketing Automation proposals — they signal "web developer" and undercut the AI automation positioning.
 
@@ -73,15 +73,16 @@ Best Regards,
 Aleem
 ```
 
-### Results Bank (pick the most relevant one per proposal)
+### Results Bank (match the trigger to their specific pain point — never default to one entry across every proposal)
 
-- Automated client onboarding pipeline — reduced manual work by 70%
-- Lead-to-outreach pipeline — cut manual follow-up time by 80%, eliminated 3 human handoffs
-- AI email triage and CRM workflow — an agent reads inbound messages, drafts replies, and updates records, cutting response time from hours to minutes
-- Multi-step e-commerce automation (Shopify + HubSpot + Slack) — removed 3 manual handoffs
-- AI lead gen pipeline — raw data in, scored and enriched prospects out, zero manual review
-- AI content engine — brief in, finished LinkedIn + Instagram post out, logged automatically
-- Responsive web builds: tradinghunters.com, ringo.media, inboxapp.framer.website
+- Trigger: inbound messages, tickets, or replies piling up → AI email triage and CRM workflow: an agent reads inbound messages, drafts replies, and updates records, cutting response time from hours to minutes
+- Trigger: leads going cold before follow-up happens → Lead-to-outreach pipeline: cut manual follow-up time by 80%, eliminated 3 human handoffs
+- Trigger: client intake or onboarding paperwork → Automated client onboarding pipeline: reduced manual work by 70%
+- Trigger: multi-tool order, fulfillment, or ops flow (Shopify/HubSpot/Slack-style stack) → Multi-step e-commerce automation: removed 3 manual handoffs
+- Trigger: raw leads or prospect data needing research/scoring at volume → AI lead gen pipeline: raw data in, scored and enriched prospects out, zero manual review
+- Trigger: content production or posting cadence → AI content engine: brief in, finished LinkedIn + Instagram post out, logged automatically
+- Trigger: nothing above maps cleanly, or the client's real question is "have you actually built agent systems" → Nexis: the Claude Code-based agentic operating system Aleem built and runs his own agency on daily, 50+ live automations, a public repo and live dashboards to point to instead of a claim
+- Trigger: Web Dev jobs that ask for examples → Responsive web builds: tradinghunters.com, ringo.media, inboxapp.framer.website
 
 ### CTA by Job Type
 

@@ -135,15 +135,16 @@ PERSONALIZED LOOM SCRIPT
 
 ---
 
-## Results Bank (use the most relevant one per script)
+## Results Bank (match the trigger to their specific pain point — never default to one entry across every script)
 
-- Automated client onboarding pipeline — reduced manual work by 70%
-- Lead-to-outreach pipeline — cut manual follow-up time by 80%, eliminated 3 human handoffs
-- AI email triage and CRM workflow — an agent reads inbound messages, drafts replies, and updates records, cutting response time from hours to minutes
-- Multi-step e-commerce automation (Shopify + HubSpot + Slack) — removed 3 manual handoffs
-- AI lead gen pipeline — raw data in, scored and enriched prospects out, zero manual review
-- AI content engine — brief in, finished LinkedIn + Instagram post out, logged automatically
-- Responsive web builds: tradinghunters.com, ringo.media, inboxapp.framer.website
+- Trigger: inbound messages, tickets, or replies piling up → AI email triage and CRM workflow: an agent reads inbound messages, drafts replies, and updates records, cutting response time from hours to minutes
+- Trigger: leads going cold before follow-up happens → Lead-to-outreach pipeline: cut manual follow-up time by 80%, eliminated 3 human handoffs
+- Trigger: client intake or onboarding paperwork → Automated client onboarding pipeline: reduced manual work by 70%
+- Trigger: multi-tool order, fulfillment, or ops flow (Shopify/HubSpot/Slack-style stack) → Multi-step e-commerce automation: removed 3 manual handoffs
+- Trigger: raw leads or prospect data needing research/scoring at volume → AI lead gen pipeline: raw data in, scored and enriched prospects out, zero manual review
+- Trigger: content production or posting cadence → AI content engine: brief in, finished LinkedIn + Instagram post out, logged automatically
+- Trigger: nothing above maps cleanly, or the client's real question is "have you actually built agent systems" → Nexis: the Claude Code-based agentic operating system Aleem built and runs his own agency on daily, 50+ live automations, a public repo and live dashboards to point to instead of a claim
+- Trigger: Web Dev jobs that ask for examples → Responsive web builds: tradinghunters.com, ringo.media, inboxapp.framer.website
 
 ---
 
@@ -182,7 +183,7 @@ PERSONALIZED LOOM SCRIPT
 "I start by auditing your existing stack — I'm not recommending new software if what you have can do the job. Then I map the trigger points and build with error handling designed in from the start. Delivery includes documentation and a recorded tutorial so your team can manage it independently."
 
 [1:00-1:12]
-"One example: a lead-to-outreach pipeline I built cut a client's follow-up time by 80% and eliminated three manual handoffs between sales and ops."
+[Pick the Results Bank entry whose trigger matches this job, not automatically the lead-to-outreach one — e.g. "One example: a lead-to-outreach pipeline I built cut a client's follow-up time by 80% and eliminated three manual handoffs between sales and ops."]
 
 [1:12-1:20 — Face on webcam]
 "Would it be off base to do a quick Ops Teardown first? I map your current flow, point to the one handoff I'd automate first, and you decide if it's worth building."
@@ -201,7 +202,7 @@ PERSONALIZED LOOM SCRIPT
 "I define the use case tightly first, AI fails when it's asked to do too many things. We pick one job it does extremely well before expanding scope. Then I build the agent, connect it to your data and tools, and put a confidence gate in front of anything risky so it never guesses on the cases that matter. I test against real failure cases before delivery. You get documentation, a test log, and a handoff session."
 
 [1:00-1:12]
-"For one client I built an AI email triage and CRM workflow where an agent drafted replies, flagged priority items, and updated records automatically. Zero manual data entry. Hours to minutes."
+[Pick the Results Bank entry whose trigger matches this job, don't default to email-triage unless the post is actually about inbound messages or tickets — e.g. "For one client I built an AI email triage and CRM workflow where an agent drafted replies, flagged priority items, and updated records automatically. Zero manual data entry. Hours to minutes."]
 
 [1:12-1:20 — Face on webcam]
 "Would it be off base to do a short Ops Teardown before anything is scoped? I look at your setup, tell you honestly what's buildable right now and the first thing I'd automate, and you decide where it goes."
