@@ -1,0 +1,51 @@
+{
+  "slug": "impeccable",
+  "platform": "linkedin",
+  "title": "Impeccable",
+  "voiceScript": "You can spot AI-designed UI in a second. Inter font, a purple to blue gradient, cards inside cards, an icon tile above every heading. It all looks the same, because the models trained on the same templates. Left alone, your agent ships it every time. Impeccable is a design language for AI agents. Forty-six deterministic checks catch those tells before they ship, no API key needed. Set your brand once, then use plain commands. Audit a header, polish a form, make it bolder or quieter. Twenty-three in all. So instead of the same purple gradient, you get something that actually looks designed. One command to install, and your agent finally designs with taste. Follow for more.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "You can spot AI-designed UI in a second. Inter font, a purple to blue gradient, cards inside cards, an icon tile above every heading. ",
+      "headline": "You can *spot* AI-designed UI",
+      "sub": "the tells"
+    },
+    {
+      "id": "problem",
+      "type": "problem",
+      "voiceText": "It all looks the same, because the models trained on the same templates. Left alone, your agent ships it every time. ",
+      "headline": "Same *templates*, same look",
+      "sub": "generic by default"
+    },
+    {
+      "id": "fix",
+      "type": "solution",
+      "voiceText": "Impeccable is a design language for AI agents. Forty-six deterministic checks catch those tells before they ship, no API key needed. ",
+      "headline": "A *design language* for AI agents",
+      "sub": "46 checks, no API key"
+    },
+    {
+      "id": "how",
+      "type": "stats",
+      "voiceText": "Set your brand once, then use plain commands. Audit a header, polish a form, make it bolder or quieter. Twenty-three in all. ",
+      "headline": "Plain *commands*",
+      "sub": "audit / polish / bolder / quieter"
+    },
+    {
+      "id": "payoff",
+      "type": "punch",
+      "voiceText": "So instead of the same purple gradient, you get something that actually looks designed. ",
+      "headline": "Actually *looks designed*",
+      "sub": ""
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "One command to install, and your agent finally designs with taste. Follow for more.",
+      "headline": "Design with *taste*",
+      "sub": "Follow for more"
+    }
+  ],
+  "source": "impeccable (github.com/pbakaus/impeccable) - a design language / skill + CLI for AI coding agents (Claude, Cursor, Copilot) that makes their frontend output higher quality. Fights generic 'AI slop' (Inter for everything, purple-to-blue gradients, cards nested in cards, gray text on colored backgrounds, an icon tile above every heading). Combines 46 deterministic detector rules (no API key), 23 design commands via /impeccable <cmd> (craft, shape, audit, critique, polish, harden, bolder, quieter, distill, animate, colorize, typeset, layout, onboard, delight, live...), and project context stored in PRODUCT.md + DESIGN.md. Setup: /impeccable init writes brand/product context once; install via npx impeccable install (auto-detects the AI tool). 48.4k GitHub stars, Apache-2.0."
+}

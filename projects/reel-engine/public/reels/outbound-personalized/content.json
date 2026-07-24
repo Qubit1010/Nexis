@@ -1,0 +1,51 @@
+{
+  "slug": "outbound-personalized",
+  "platform": "linkedin",
+  "title": "Outbound is becoming personalized by default",
+  "voiceScript": "Generic outbound is dead. Blasting the same message to a thousand leads gets you one thing: ignored. Outbound is becoming personalized by default. Not one message at a time by hand. As a step in the pipeline. Every lead runs the same line: research them, pull a real signal, write the opener around it, and end on one consistent ask. Three real signals about a lead roughly doubles your reply rate. And because it's a pipeline, it scales without hiring a single rep. Treat personalization as a pipeline step, not a nice-to-have. That's how small teams outsell big ones now. Follow for the build.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "Generic outbound is dead. Blasting the same message to a thousand leads gets you one thing: ignored. ",
+      "headline": "Generic outbound is *dead*",
+      "sub": "same message, a thousand leads, ignored"
+    },
+    {
+      "id": "shift",
+      "type": "problem",
+      "voiceText": "Outbound is becoming personalized by default. Not one message at a time by hand. As a step in the pipeline. ",
+      "headline": "Personalized *by default*",
+      "sub": "not by hand, as a pipeline step"
+    },
+    {
+      "id": "pipeline",
+      "type": "solution",
+      "voiceText": "Every lead runs the same line: research them, pull a real signal, write the opener around it, and end on one consistent ask. ",
+      "headline": "Every lead runs the *same line*",
+      "sub": "research, signal, opener, one ask"
+    },
+    {
+      "id": "proof",
+      "type": "stats",
+      "voiceText": "Three real signals about a lead roughly doubles your reply rate. And because it's a pipeline, it scales without hiring a single rep. ",
+      "headline": "3 signals, *2x replies*",
+      "sub": "scales without hiring a rep"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Treat personalization as a pipeline step, not a nice-to-have. ",
+      "headline": "A pipeline step, *not a nice-to-have*",
+      "sub": ""
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "That's how small teams outsell big ones now. Follow for the build.",
+      "headline": "Small teams *outsell* big ones",
+      "sub": "Follow for the build"
+    }
+  ],
+  "source": "Topic (SM Schedule row 248, Jul 25): 'Outbound is becoming personalized by default.' Aleem's POV/tutorial: lead workflows are shifting from generic sequences to per-lead research assets + consistent CTAs that protect conversion; SMB outbound scales without hiring SDRs IF personalization is treated as a pipeline step, not a nice-to-have. GROUNDING (2026 research, Instantly/Autobound/Coldreach/Brilo/devcommx): avg cold-email reply ~3.43%, and raw reply rates FELL 38% as volume scaled (4.7%->2.9%/touch) - the deliverability tax of generic high-volume blasting. Personalization depth drives results: outreach personalized to >=3 distinct data points converts ~2x lightly-personalized; multi-signal stacked personalization (2-3 signals + behavioral context) reaches 25-40% reply; research-first personalization at scale (Coldreach, 500k+ emails) ~3.8% = ~10x industry average. AI SDRs now within ~1.2 pts of human reply rates at lower tiers, so deep personalization can run as an automated pipeline rather than manual 1:1 work. Signature = an outbound personalization PIPELINE (production line): generic identical blast bounces (ignored), then a lead-card descends a line through Research -> Signal -> Personalize -> one consistent Ask, emerging as a tailored asset that lands a reply; the line runs many cards in parallel (scales, no SDRs). NO agency name / no university (personal-brand content); first-person advisory voice; 'ask' not 'CTA' and 'rep' not 'SDR' for clean TTS."
+}

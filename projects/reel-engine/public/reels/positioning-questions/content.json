@@ -1,0 +1,51 @@
+{
+  "slug": "positioning-questions",
+  "platform": "linkedin",
+  "title": "The 6 Questions That Turn Market Research Into a Clear Position",
+  "voiceScript": "You can do months of market research and still not know how to position yourself. The data piles up. The decision doesn't. Positioning isn't more research. It's six questions that collapse the pile into one sentence. Who is it really for. What do they struggle with. What are you. The one benefit. Who else they could pick. And why you instead. Answer those and you get a positioning statement. For this buyer, we're the thing that does this, unlike the alternative. Research is a pile. Position is a decision. The questions force the decision. Nail those six and your whole message writes itself. Follow for the build.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "You can do months of market research and still not know how to position yourself. The data piles up. The decision doesn't. ",
+      "headline": "The data piles up. The *decision* doesn't",
+      "sub": "months of research, still no position"
+    },
+    {
+      "id": "fix",
+      "type": "problem",
+      "voiceText": "Positioning isn't more research. It's six questions that collapse the pile into one sentence. ",
+      "headline": "Not more research. *Six questions*",
+      "sub": "collapse the pile into one sentence"
+    },
+    {
+      "id": "questions",
+      "type": "solution",
+      "voiceText": "Who is it really for. What do they struggle with. What are you. The one benefit. Who else they could pick. And why you instead. ",
+      "headline": "The *six questions*",
+      "sub": "who, need, category, benefit, alternative, why you"
+    },
+    {
+      "id": "output",
+      "type": "stats",
+      "voiceText": "Answer those and you get a positioning statement. For this buyer, we're the thing that does this, unlike the alternative. ",
+      "headline": "One *positioning statement*",
+      "sub": "the sentence everything flows from"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Research is a pile. Position is a decision. The questions force the decision. ",
+      "headline": "Position is a *decision*",
+      "sub": ""
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Nail those six and your whole message writes itself. Follow for the build.",
+      "headline": "Your message *writes itself*",
+      "sub": "Follow for the build"
+    }
+  ],
+  "source": "Topic (SM Schedule row 251, Jul 28): 'The 6 Questions That Turn Market Research Into a Clear Position.' Reel, Tutorial/How-to, pillars practical_stakes + taste_judgment. Aleem's POV: market research produces a pile of data but not a decision; positioning is a DECISION, not a discovery. Six questions (Geoffrey Moore / April Dunford positioning lineage) collapse the pile into one positioning statement: (1) Who is it really for [target buyer], (2) What do they struggle with [need/pain], (3) What are you [category / frame of reference], (4) The one benefit [value], (5) Who else could they pick [competitive alternative], (6) Why you instead [differentiation]. Output = a fill-in-the-blank positioning statement: 'For [WHO] who [NEED], we're the [CATEGORY] that [BENEFIT]. Unlike [ALTERNATIVE], we [DIFFERENCE].' Illustrative filled example (generic, non-agency): 'For busy founders who blend in, we're the clear pick that gets chosen. Unlike more research, we force the call.' SIGNATURE = a positioning statement that WRITES ITSELF - a fill-in-the-blank template whose 6 blanks fill (grey->voltage) as each question is answered; foil = a messy research pile (scattered charts/quotes/stats). NO agency name / no university (personal-brand content); first person; 'position is a decision, not a pile of research' is the taste POV."
+}

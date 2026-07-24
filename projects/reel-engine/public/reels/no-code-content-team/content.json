@@ -1,0 +1,51 @@
+{
+  "slug": "no-code-content-team",
+  "platform": "linkedin",
+  "title": "Build a No-Code Social Content Team That Publishes While You Work",
+  "voiceScript": "Hiring a content team is expensive. A writer, a designer, an editor. Outsource it and that's thousands a month. So I didn't hire people. I built the same roles as a pipeline I run from one spreadsheet. Every role became an agent. One researches, one writes the brief, one drafts in my voice, one designs the images, one assembles it. The salaries dropped to zero. And because it's software, it publishes three times a week without me touching a key. The trick isn't automating everything. It's keeping the one job a machine should never own: taste. That's how one person publishes like a whole team. Follow for the build.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "Hiring a content team is expensive. A writer, a designer, an editor. Outsource it and that's thousands a month. ",
+      "headline": "A content team is *expensive*",
+      "sub": "writer, designer, editor, strategist"
+    },
+    {
+      "id": "shift",
+      "type": "problem",
+      "voiceText": "So I didn't hire people. I built the same roles as a pipeline I run from one spreadsheet. ",
+      "headline": "So I stopped *hiring*",
+      "sub": "the same roles, as a pipeline"
+    },
+    {
+      "id": "roster",
+      "type": "solution",
+      "voiceText": "Every role became an agent. One researches, one writes the brief, one drafts in my voice, one designs the images, one assembles it. ",
+      "headline": "Every role became an *agent*",
+      "sub": "research, brief, voice, design, assembly"
+    },
+    {
+      "id": "proof",
+      "type": "stats",
+      "voiceText": "The salaries dropped to zero. And because it's software, it publishes three times a week without me touching a key. ",
+      "headline": "Salaries to *zero*",
+      "sub": "publishes 3x a week on its own"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "The trick isn't automating everything. It's keeping the one job a machine should never own: taste. ",
+      "headline": "Keep the one human job: *taste*",
+      "sub": ""
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "That's how one person publishes like a whole team. Follow for the build.",
+      "headline": "One person, a *whole team*",
+      "sub": "Follow for the build"
+    }
+  ],
+  "source": "Topic (SM Schedule row 251, Jul 27): 'Build a No-Code Social Content Team That Publishes While You Work.' Reel version of the post (post already created). Aleem's POV/tutorial case study of the content pipeline he built. GROUNDING (2026 research, WebFX/Sprout Social/Xyla/Socioapt): outsourcing social content = agency $2,000-$10,000+/mo (and 'the least control over your brand voice'), freelancer $500-$3,000/mo, in-house hire $30-40k+/yr; per-post $40-$150, full production up to $8,000/mo; DIY opportunity cost ~10 hrs/week x $50-100/hr = $400-$2,000/mo. Generic one-prompt AI copy is throttled by ranking systems, so cheap buries reach; brands take ~12-24 months of consistent posting to compound. THE SYSTEM: 5 specialized roles run as agents from one spreadsheet row - researcher, synthesizer/brief, voice-locked writer, designer (image prompts), editor/assembler - human keeps only the taste checkpoint. SIGNATURE = a hiring/staffing board (team roster): 5 role cards flip from costly HUMAN HIRES (avatar + salary tag) to glowing AGENTS wired to one central spreadsheet row you control; salaries strike to $0; the one row dispatches all five, they converge into one finished PUBLISHED post, then the board runs many posts 3x/week; recurring texture = the role card (human+salary grey -> agent+voltage $0) reporting into the single sheet cell. NO agency name / no university (personal-brand content); first-person; 'taste' is the one human job kept."
+}

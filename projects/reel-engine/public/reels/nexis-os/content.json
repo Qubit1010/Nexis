@@ -1,0 +1,51 @@
+{
+  "slug": "nexis-os",
+  "platform": "linkedin",
+  "title": "Nexis OS Case Study",
+  "voiceScript": "Most people use AI like a vending machine. You ask, it answers, and it forgets you the second you close the tab. So I stopped treating it like a chatbot and started building it like an operating system. It has a memory that never resets, over fifty skills it built as my work repeated, and a second brain that ties all of it into one living graph. A hundred and twenty decisions logged. Sixteen projects. Outreach, content, and proposals, all running from one place. It doesn't answer my questions anymore. It runs my business. This is Nexis. Follow if you want to build your own.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "Most people use AI like a vending machine. You ask, it answers, and it forgets you the second you close the tab. ",
+      "headline": "AI is not a *vending machine*",
+      "sub": "ask, answer, forget"
+    },
+    {
+      "id": "shift",
+      "type": "problem",
+      "voiceText": "So I stopped treating it like a chatbot and started building it like an operating system. ",
+      "headline": "I built it like an *operating system*",
+      "sub": "not a chatbot"
+    },
+    {
+      "id": "assemble",
+      "type": "solution",
+      "voiceText": "It has a memory that never resets, over fifty skills it built as my work repeated, and a second brain that ties all of it into one living graph. ",
+      "headline": "One *living system*",
+      "sub": "memory / skills / second brain"
+    },
+    {
+      "id": "proof",
+      "type": "stats",
+      "voiceText": "A hundred and twenty decisions logged. Sixteen projects. Outreach, content, and proposals, all running from one place. ",
+      "headline": "The *receipts*",
+      "sub": "50+ skills / 120 decisions / 16 projects"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "It doesn't answer my questions anymore. It runs my business. ",
+      "headline": "It runs my *business*",
+      "sub": ""
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "This is Nexis. Follow if you want to build your own.",
+      "headline": "This is *Nexis*",
+      "sub": "Follow to build your own"
+    }
+  ],
+  "source": "Nexis OS case study - Aleem's AI operating system / executive assistant + second brain for running his agency. Built on Claude Code: persistent memory (never resets), 51 in-house skills built organically as workflows repeated, a live-connected second brain (Obsidian vault + LLM Wiki + Graphify knowledge graph, 13 wiki pages), 121 decisions logged in decisions/log.md, 16 projects, and the Nexus Command Center - a cockpit that renders every skill/project/rule/context/decision/wiki-page as one living force-directed knowledge graph with system vitals + a guarded command deck. POV: AI is not a vending machine (ask-answer-forget); it's an operating system with memory, skills, and a connected brain. Runs outreach, content, proposals, sales from one place. 'We run on what we sell.'"
+}

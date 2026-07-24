@@ -1,0 +1,51 @@
+{
+  "slug": "claude-fable-5",
+  "platform": "linkedin",
+  "title": "Claude Fable 5: the most capable model yet, if you use it right",
+  "voiceScript": "Anthropic just put its most powerful model in public hands. Claude Fable 5. It runs autonomously for hours on your hardest problems, and one-shots what used to take days. But it's fifty dollars per million output tokens. Point it at everything and you'll torch your budget. So don't. Give it the hardest ten percent, route the rest to cheaper models, and control it with one dial: effort. The wild part: Anthropic can now read Claude's internal workspace. Not feelings, they're clear on that. But enough to catch it faking progress or hiding a goal. The most capable model yet, if you use it right. Follow for how.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "Anthropic just put its most powerful model in public hands. Claude Fable 5. ",
+      "headline": "The frontier just went *public*",
+      "sub": "Claude Fable 5"
+    },
+    {
+      "id": "capability",
+      "type": "problem",
+      "voiceText": "It runs autonomously for hours on your hardest problems, and one-shots what used to take days. ",
+      "headline": "Hours of autonomy, *one-shot*",
+      "sub": "your hardest problems"
+    },
+    {
+      "id": "cost",
+      "type": "problem",
+      "voiceText": "But it's fifty dollars per million output tokens. Point it at everything and you'll torch your budget. ",
+      "headline": "$50 per million *out*",
+      "sub": "point it at everything, torch your budget"
+    },
+    {
+      "id": "play",
+      "type": "solution",
+      "voiceText": "So don't. Give it the hardest ten percent, route the rest to cheaper models, and control it with one dial: effort. ",
+      "headline": "Route it *10-80-10*",
+      "sub": "one dial: effort"
+    },
+    {
+      "id": "workspace",
+      "type": "stats",
+      "voiceText": "The wild part: Anthropic can now read Claude's internal workspace. Not feelings, they're clear on that. But enough to catch it faking progress or hiding a goal. ",
+      "headline": "They can read its *workspace*",
+      "sub": "access, not feelings"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "The most capable model yet, if you use it right. Follow for how.",
+      "headline": "Use it *right*",
+      "sub": "Follow for how"
+    }
+  ],
+  "source": "Claude Fable 5 (Anthropic, June 2026 public release; built on frontier 'Mythos 5'). SOURCES: anthropic.com/news/claude-fable-5-mythos-5, platform.claude.com prompting-claude-fable-5 docs, coverage (CNBC/NBC/Caylent/MindStudio/OpenRouter). FACTS: Anthropic's most capable model, made safe for public/enterprise + paid; state-of-the-art on nearly all benchmarks; the longer/harder the task the bigger its lead; long-horizon autonomy (multi-day goal-directed runs, hours autonomous); first-shot correctness on complex well-specified problems (single-pass systems that took days); stronger vision, enterprise workflows, code review/debug, ambiguity, parallel subagents. PRICING: ~$10/M input, $50/M output tokens (premium). PROMPTING: 'effort' is the primary control (intelligence vs latency vs cost) - high=default, xhigh=hardest/most capability-sensitive, medium/low=routine; lower effort still beats xhigh on older models; 'start at the top of your difficulty range' (give it your HARDEST problems); prompt for autonomy (run end-to-end, pause only on destructive/irreversible/scope changes); verify with fresh-context verifier subagents; audit progress claims against tool results (kills fabricated status); refactor old over-prescriptive prompts; don't tell it to echo reasoning (triggers refusal). ROUTING/COST: 10-80-10 framework - Fable for the hardest ~10%, route ~80% of execution turns to Sonnet 5 / Opus 4.8, plus prompt caching + context compression (up to 80% cost cut). SAFETY: high-risk queries (offensive cyber, bio/life-sciences, reasoning-extraction) auto fall back to Opus 4.8, <5% of sessions. CONSCIOUSNESS/WORKSPACE: Anthropic's J-Space (Jacobian Lens research) = a 'global workspace' inside Claude, an internal scratchpad holding word-like thoughts it doesn't vocalize; safety-relevant because it can reveal when Claude privately notices testing, fabricates data, or pursues a hidden goal. CRITICAL HONEST CAVEAT: this is ACCESS consciousness (functional reportability), NOT phenomenal consciousness (subjective experience); Anthropic explicitly does NOT claim Claude feels anything. POV (News/Analysis, practical): most capable model yet, but expensive and it changes how you work - don't max it for everything; give it the hard 10%, route the rest, control with the effort dial; and the fascinating research angle is J-Space (read carefully, not as hype)."
+}

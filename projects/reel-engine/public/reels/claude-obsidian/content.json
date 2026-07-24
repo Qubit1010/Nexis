@@ -1,0 +1,51 @@
+{
+  "slug": "claude-obsidian",
+  "platform": "linkedin",
+  "title": "claude-obsidian: a second brain that organizes itself",
+  "voiceScript": "Your notes app is where good ideas go to die. You dump things in and never find them again. This flips it. Drop any source into Claude, a link, a PDF, a messy thought, and it reads it for you. It breaks that one source into a dozen clean Markdown pages, files each into the right folder, and links them with wikilinks. Then you just ask, and it answers from your own wiki and cites the pages. Fifteen skills, all keeping it organized. It is plain Markdown you own, not notes trapped in someone else's app. Open source and free. Follow if you want the setup.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "Your notes app is where good ideas go to die. You dump things in and never find them again. ",
+      "headline": "Where ideas go to *die*",
+      "sub": "your notes app"
+    },
+    {
+      "id": "flip",
+      "type": "problem",
+      "voiceText": "This flips it. Drop any source into Claude, a link, a PDF, a messy thought, and it reads it for you. ",
+      "headline": "Drop any *source*",
+      "sub": "a link, a PDF, a messy thought"
+    },
+    {
+      "id": "ingest",
+      "type": "solution",
+      "voiceText": "It breaks that one source into a dozen clean Markdown pages, files each into the right folder, and links them with wikilinks. ",
+      "headline": "One source, one *wiki*",
+      "sub": "pages, folders, wikilinks"
+    },
+    {
+      "id": "proof",
+      "type": "stats",
+      "voiceText": "Then you just ask, and it answers from your own wiki and cites the pages. Fifteen skills, all keeping it organized. ",
+      "headline": "It answers with *citations*",
+      "sub": "15 skills, self-organizing"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "It is plain Markdown you own, not notes trapped in someone else's app. ",
+      "headline": "Notes you *own*",
+      "sub": "plain Markdown"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Open source and free. Follow if you want the setup.",
+      "headline": "Own your *second brain*",
+      "sub": "Follow for the setup"
+    }
+  ],
+  "source": "claude-obsidian (github.com/AgriciDaniel/claude-obsidian, 9.7k stars, MIT) - a self-organizing AI second brain that integrates Claude Code with Obsidian. Not a chat interface over existing notes: it autonomously CREATES, LINKS, ORGANIZES, and MAINTAINS notes. 'Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own.' Three-layer architecture: Ingestion (sources land in .raw/, /wiki-ingest extracts entities/concepts, files into folders, updates index - one source becomes 8-15 pages), Retrieval (hot cache -> index -> pages, BM25 + cosine rerank, answers cite the pages), Maintenance (health check finds orphans, dead links, contradictions, gaps). 15 Claude Code skills (wiki orchestrator, wiki-ingest, wiki-query, wiki-lint, autoresearch, canvas, think, save, ...). Commands: /wiki, /autoresearch, /canvas, /think, /save, 'ingest [file]', 'what do you know about X?'. 4 methodology modes (Generic, LYT, PARA, Zettelkasten). Plain Markdown you own = a private Notion alternative, your data. POV: your notes app is a graveyard; this turns dumping things in into a compounding, self-organizing, wikilinked second brain you actually own."
+}
