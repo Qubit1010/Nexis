@@ -1,0 +1,5 @@
+C:\Users\qubit\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.3)/charset_normalizer (3.4.5) doesn't match a supported version!
+  warnings.warn(
+[warn] tavily failed: POST https://api.tavily.com/search -> 432: {"detail":{"error":"This request exceeds your plan's set usage limit. Please upgrade your plan or contact support@tavily.com"}}
+
+[saved] research\2026-07-21-google-ai-overviews-and-ai-mode-optimization-2026-how-to-app.md

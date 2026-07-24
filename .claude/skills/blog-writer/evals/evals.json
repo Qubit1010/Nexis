@@ -1,0 +1,51 @@
+{
+  "skill_name": "blog-writer",
+  "notes": "Assertions target the checkable, differentiating dimensions (SEO/AEO/GEO structure, the metadata package, human-tone mechanics, personal-brand voice rules). Tone quality itself is judged at the human review gate, not asserted.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write an SEO-optimized blog post about using AI agents to automate customer support for small businesses. Make sure it can get cited by AI search engines like ChatGPT and Google AI Overviews, and it should sound human, not AI-generated.",
+      "expected_output": "A finished long-form blog post in Aleem's first-person voice with an answer-first intro, question-style H2s covering the query fan-out, at least one comparison table or FAQ, first-hand experience/POV, and a complete SEO metadata block. Reads human; no AI-tell phrases; no em dashes.",
+      "files": [],
+      "assertions": [
+        {"text": "Output is a full blog post with a single H1 title and multiple H2 sections"},
+        {"text": "The introduction opens with a direct, self-contained answer to the core query (answer-first), not backstory or 'In this post'"},
+        {"text": "At least one section is a comparison table OR an FAQ block with 3+ natural-language questions"},
+        {"text": "Includes a distinct SEO metadata block containing at minimum an SEO title, a meta description, and a URL slug"},
+        {"text": "The SEO title is 60 characters or fewer and the meta description is 160 characters or fewer"},
+        {"text": "Written in first person (I / my / I built) with at least one specific concrete anchor (a number, a real scenario, or a named decision)"},
+        {"text": "Body contains no em dashes and no curly/smart quotes"},
+        {"text": "Does NOT contain banned AI-tell phrases such as 'game-changer', 'leverage', 'dive into', 'in today's fast-paced world', or 'it's not just X, it's Y'"},
+        {"text": "Does NOT name a specific agency and does NOT reference university, BSAI, degree, or student status"},
+        {"text": "Cites at least one external source or includes at least one specific statistic"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write me a how-to blog post on setting up a RAG pipeline, optimized to rank in Google AI Overviews.",
+      "expected_output": "A how-to formatted post: answer-first intro, prerequisites, numbered steps each with a why, common mistakes, an FAQ covering fan-out questions, and the SEO metadata block including a FAQPage or Article JSON-LD schema stub. Personal-brand voice, human tone.",
+      "files": [],
+      "assertions": [
+        {"text": "Contains a numbered step-by-step section (ordered steps for the how-to)"},
+        {"text": "The intro or first section leads with a short self-contained answer before the steps"},
+        {"text": "Includes an FAQ section addressing related follow-up questions (query fan-out)"},
+        {"text": "Includes a JSON-LD schema stub (FAQPage, Article, or BlogPosting) in the metadata"},
+        {"text": "Includes an SEO metadata block with SEO title, meta description, slug, primary keyword, and supporting keywords"},
+        {"text": "Sentence cadence varies (a mix of short and longer sentences, not uniform length)"},
+        {"text": "Body contains no em dashes"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I want to write a blog but I don't have a topic yet. I work on AI automation and agentic systems.",
+      "expected_output": "The skill proposes a few specific angles (rooted in AI automation / agentic systems / real build lessons), each with a suggested target keyword, and asks which to pursue before writing a full post.",
+      "files": [],
+      "assertions": [
+        {"text": "Proposes multiple (2 or more) distinct, specific blog angles rather than immediately writing one generic post"},
+        {"text": "Each proposed angle is paired with a suggested target keyword or search intent"},
+        {"text": "Asks the user to pick an angle (or otherwise gates before writing the full draft)"},
+        {"text": "Proposed angles reflect a strong point of view or lived-experience framing, not neutral listicle topics"}
+      ]
+    }
+  ]
+}
