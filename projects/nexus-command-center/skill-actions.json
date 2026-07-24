@@ -46,5 +46,85 @@
     ],
     "prompt_template": "Use the website-audit-system skill (.claude/skills/website-audit-system/SKILL.md) in QUICK mode to audit this website: {url}\n\nFollow the skill's quick-mode workflow (homepage-level analysis, 3-5 findings, hook email). Run fully autonomously - do not ask questions. If the skill saves a Google Doc, end your final message with the Doc link on its own line; otherwise output the findings and the outreach email in full.",
     "profile": "act"
+  },
+  {
+    "id": "discovery-call-prep",
+    "label": "Discovery Call Prep",
+    "description": "2-minute prep brief on a prospect: company snapshot, likely pains, positioning angles, sharp questions.",
+    "skill": "discovery-call-prep",
+    "inputs": [
+      {
+        "name": "prospect",
+        "label": "Prospect (company name and/or website)",
+        "placeholder": "Acme Co - https://acme.com - any context you have (industry, who you're meeting)...",
+        "multiline": true
+      }
+    ],
+    "prompt_template": "Use the discovery-call-prep skill (.claude/skills/discovery-call-prep/SKILL.md) to build a prep brief for the prospect below. Follow the skill's research + brief workflow (company snapshot, likely pain points, NexusPoint positioning angles, sharp questions to ask, watchouts). Run fully autonomously - do not ask questions; make sensible assumptions where details are missing. If the skill saves a Google Doc, end your final message with the Doc link on its own line; otherwise output the full brief.\n\nPROSPECT:\n{prospect}",
+    "profile": "act"
+  },
+  {
+    "id": "claude-advisor",
+    "label": "Claude Advisor",
+    "description": "Research-backed answer to any question about Claude (surfaces, models, Claude Code, ecosystem, plans).",
+    "skill": "claude-advisor",
+    "inputs": [
+      {
+        "name": "question",
+        "label": "Your question about Claude",
+        "placeholder": "e.g. Which Claude should I use for X? Opus vs Sonnet? Best Claude Code plugins?...",
+        "multiline": true
+      }
+    ],
+    "prompt_template": "Use the claude-advisor skill (.claude/skills/claude-advisor/SKILL.md) to answer the question below. Ground the answer in the skill's cited references (research-synthesis.md / surface-comparison.md), using the live-query fallback only if the static refs miss. Run fully autonomously - do not ask questions. Output the full answer as markdown, leading with a clear recommendation.\n\nQUESTION:\n{question}",
+    "profile": "act"
+  },
+  {
+    "id": "lead-generator",
+    "label": "Lead Generator",
+    "description": "Resolve company socials + founder identity for the next unresolved rows on the Main leads sheet (website-first).",
+    "skill": "lead-generator",
+    "inputs": [
+      {
+        "name": "count",
+        "label": "How many rows to resolve",
+        "placeholder": "10",
+        "multiline": false
+      }
+    ],
+    "prompt_template": "Use the lead-generator skill (.claude/skills/lead-generator/SKILL.md) to resolve the next {count} unresolved rows on the consolidated Main leads sheet, running its website-first pipeline end to end. Auto-write only the trusted website-sourced fields plus company socials, exactly as the skill does - never auto-write search-sourced founder fields. Do NOT block on interactive confirmation: instead of the one-by-one review, output the full needs_review queue in your final message so it can be confirmed later. Run fully autonomously - do not ask questions. This needs a live gws token; if Sheets access fails, say so plainly and stop. Summarize what was written and list the review queue.\n\nROWS TO RESOLVE: {count}",
+    "profile": "act"
+  },
+  {
+    "id": "post-creator",
+    "label": "Post Creator",
+    "description": "Turn a Weekly Posting Schedule row into a finished LinkedIn/Instagram post + image prompts, saved to a Google Doc.",
+    "skill": "post-creator",
+    "inputs": [
+      {
+        "name": "row",
+        "label": "Which schedule row (topic or row description)",
+        "placeholder": "e.g. the next unprocessed row, or a specific topic from the Weekly Posting Schedule...",
+        "multiline": true
+      }
+    ],
+    "prompt_template": "Use the post-creator skill (.claude/skills/post-creator/SKILL.md) to create the post for the schedule row below, following the full workflow (find + research sources, NotebookLM synthesis, write the post in Aleem's voice, fill the infographic + carousel image prompts, save the multi-tab Google Doc, write the Doc link back into the row). Run fully autonomously - do not ask questions and do not pause at the review checkpoint; make sensible editorial calls. Text rows only (Reel rows are out of scope here). End your final message with the Google Doc link on its own line.\n\nSCHEDULE ROW:\n{row}",
+    "profile": "act"
+  },
+  {
+    "id": "research",
+    "label": "Research",
+    "description": "Multi-engine research (Exa/Tavily/Serper/Jina) on any topic; medium by default, deep on request, cited.",
+    "skill": "research",
+    "inputs": [
+      {
+        "name": "query",
+        "label": "What to research",
+        "placeholder": "A topic, a person/company to profile, or a scientific question...",
+        "multiline": true
+      }
+    ],
+    "prompt_template": "Use the research skill (.claude/skills/research/SKILL.md) to research the query below. Default to medium depth (2-3 engines fused + ranked); go deep (all engines + content extraction + a saved cited report in research/) if the query implies an exhaustive or report-grade answer. Route free-tool/API/software lookups to the scout skills first, per the skill's Layer 0. Run fully autonomously - do not ask questions. Output the findings with inline source citations; if you saved a report file, end with its path on its own line.\n\nQUERY:\n{query}",
+    "profile": "act"
   }
 ]
