@@ -116,7 +116,9 @@ short-form + the existing captions). When Red updates, only this block changes.
 | Caption | **80-150 words** | Self-contained. Hook line + body + soft CTA. No "listen to full episode" as the only CTA. |
 | Long-form LinkedIn/FB post | **150-300 words** | Thought-leadership framing; stands alone. |
 | Segment length | **30s-2min** | Client spec. Research-led templates may flag a tighter 15-45s cut. |
-| Segments per episode | **3-5** | From a ~25-min episode. |
+| Segments per episode | **Quality-gated, not fixed** | Ship every segment that clears both guardrails and scores at or above the quality bar. Never pad to a number, never cut a bar-clearer to hit a cap. |
+| Quality bar | **>= 15 / 20** | On Template 05's 4-criteria rank (Completeness + Resonance + Conviction + Conciseness, 5 each). Red-tunable. |
+| Duration guide | **~1 per 6-8 min** | Sanity check on count, not a cap: a ~25-min episode is typically 3-5, a ~45-min 6-8, a 9-min excerpt 2-3. |
 | Hooks per segment | **5** | |
 | Captions per segment | **3** | For A/B testing — make them genuinely different angles, not reworded. |
 | Long-form posts per segment | **3-5** | Final count per Red. |
@@ -132,6 +134,13 @@ Pick the moments that recruit. A strong segment is:
 5. **Emotionally true** — a real admission, a contrarian truth, or a vivid story beat. Brenda's edge is candor (e.g. "my boss is a real bitch... because I'm the boss").
 
 Avoid: generic advice anyone could give, mid-thought fragments, pure podcast-housekeeping.
+
+These five are the client-specific lens. Template 05 Step 1 turns selection into a transparent
+1-5 rank on four criteria (Completeness of messaging, Resonance to target audience, Conviction,
+Conciseness) behind two pass/fail guardrails (complete standalone thought; offers a solution, not
+just a problem). The five above feed those scores: recruitment-relevance + pillar-fit +
+emotionally-true drive **Resonance**; self-contained drives **Completeness**; quotable/opinionated
+drives **Conviction**.
 
 ---
 

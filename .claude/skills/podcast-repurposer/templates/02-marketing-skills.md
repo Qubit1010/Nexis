@@ -21,7 +21,7 @@ backing, income uncertainty) and desires (autonomy + real support, recognition, 
 grow). Selection and copy both serve these. Keep this list at the top of your working notes.
 
 ### 2. content-strategy — segment selection by pillar coverage
-Pick 3-5 segments so they **cover different pillars** (Feel Secure / Grow with Ease / Belong
+Pick every segment that clears the bar so they **cover different pillars** (Feel Secure / Grow with Ease / Belong
 Fully) rather than three takes on one theme. A balanced set recruits a wider slice of the ICP.
 Each segment names its pillar and the specific fear/desire it speaks to.
 

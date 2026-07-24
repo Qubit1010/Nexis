@@ -39,22 +39,65 @@ No single template nailed all four. This one does.
 
 ## Method
 
-### Step 1 — Segment selection (04 logic: saveability + sendability + completion)
+### Step 1 — Segment selection & ranking (scan, gate, score, rank)
 
-Read the transcript and rank potential segments on three signals:
+Do NOT decide a segment count up front. Scan the ENTIRE transcript for every moment that could
+stand on its own as a clip, then let the rubric decide which ones ship and how many.
 
-- **Saves (~3x a like):** Is it a specific, useful truth an agent wants to find again?
-  Checklists, frameworks, named steps, and sharp reframes are the most saveable formats.
-- **Sends (3-5x a like):** Would an agent DM this to a peer mid-crisis or send it to someone
-  considering the move? "This is us" and "she needed to read this" are send triggers.
-- **Completion:** Does it have a tight arc that pays off before the scroll?
+**1. Scan wide.** List every candidate standalone moment, not just the obvious ones. A candidate
+is any stretch that could become a reel: a piece of advice, a realization, a reframe, a story
+beat, a framework, a confession.
 
-Pick 3-5. Then for each segment, note **two cut options**:
+**2. Guardrails (pass/fail gates).** A candidate is only eligible if it clears BOTH:
+- **Complete standalone thought.** A full arc that lands with zero episode context. No setup or
+  payoff borrowed from elsewhere in the episode. Mid-thought fragments are cut.
+- **Offers a solution, not just a problem.** It leaves the viewer with something: advice, a
+  realization, a way forward. The audience should finish it feeling inspired, provoked, or
+  educated. A pure problem statement with no resolution is cut, however relatable it is.
+
+A candidate that fails either guardrail is dropped before scoring. Still record it in the ranking
+table (marked cut) so the reasoning stays visible.
+
+**3. Score each eligible candidate 1-5 on four criteria.** This is the predefined rank, so the
+selection is transparent, not a black box:
+
+| Criterion | 5 = | 1 = |
+|-----------|-----|-----|
+| **Completeness of messaging** | The point lands fully on its own. Tight arc, nothing missing. | Feels partial, needs the rest of the episode. |
+| **Resonance to target audience** | Hits an ICP pain or desire hard. Highly saveable / sendable ("this is us", "she needed to read this"). | Generic, could apply to anyone. |
+| **Conviction** | Opinionated, certain, quotable. A screenshot line, not a hedge. | Wishy-washy, safe, forgettable. |
+| **Conciseness** | Can be cut tight so the punch lands fast, no filler. | Rambles, sags, needs heavy trimming to work. |
+
+Use the client's voice-file **Segment selection criteria** as the lens for these scores: its
+recruitment-relevance, pillar-fit, and emotional-truth criteria feed **Resonance**; its
+self-contained and quotable/opinionated criteria feed **Completeness** and **Conviction**.
+Saveability and sendability (the metrics that actually move distribution) live inside
+**Resonance**.
+
+**4. Rank by total score, highest first.** That order is the recommended posting order.
+
+**5. Select on quality, not a fixed number.** Ship every segment that clears both guardrails and
+scores at or above the voice file's quality bar. Do NOT pad to a number, and do NOT cut a segment
+that clears the bar just to hit an old cap. Use the voice file's duration guide (roughly one
+segment per 6-8 minutes of usable material) as a sanity check on the count, never a hard limit: a
+strong 45-minute episode can yield 6-8, a thin 9-minute excerpt maybe 2-3. If only three are
+strong, ship three. If seven are strong, ship seven.
+
+**6. Emit a ranking table.** It goes at the top of the output file, right after the header note,
+before the segments (it becomes the Report tab of the Google Doc). List EVERY candidate you
+considered, shipped and cut, so the reviewer sees exactly how the workflow ranked:
+
+| Rank | Segment (label · timestamp) | Complete | Resonate | Conviction | Concise | Total | Ship? | Note |
+|------|------------------------------|----------|----------|-----------|---------|-------|-------|------|
+| 1 | "..." · 00:03:41-00:05:18 | 5 | 5 | 5 | 4 | 19 | Yes | one-line reason |
+| 8 | "..." · 00:02:34-00:03:41 | 4 | 3 | 4 | 3 | 14 | No | below the bar / narrower audience |
+
+**7. For each SHIPPED segment, note two cut options:**
 - The full segment as defined in the voice file (30s-2min).
-- A **tighter in-point** (15-45s) where the punch actually lands — give the editor both.
+- A **tighter in-point** (15-45s) where the punch actually lands. Give the editor both.
 
-Flag which format each segment is (checklist, reframe, confession, framework) — this drives
-hook selection in Step 2.
+**8. Flag which format each segment is** (checklist, reframe, confession, framework, story). This
+drives hook selection in Step 2.
 
 ### Step 2 — Hook writing (01 logic: reverse-engineer + archetype rotation)
 
@@ -212,6 +255,8 @@ Run these checks on every segment's full output before writing:
 - [ ] Every piece stands alone (no "listen to the full episode" as the only CTA)
 - [ ] Tighter in-point flagged for editor (real timestamps from the transcript, never invented)
 - [ ] Segment metadata block written
+- [ ] Ranking table present: every candidate scored 1-5 on the 4 criteria, gated on the 2 guardrails, both shipped and cut shown
+- [ ] Segment count is quality-driven (nothing padded to hit a number, no bar-clearing segment cut to a cap)
 
 Fail any check → fix it before writing.
 
@@ -224,7 +269,11 @@ Fail any check → fix it before writing.
 **Client:** <name>  ·  **Method:** Hybrid — 04 segment selection + 01 hooks + 03 platform-native writing + 02 strategic tagging
 **Episode:** <slug>  ·  **Generated:** <date>
 
-> One paragraph: which segments were chosen and why (saveability/sends lens), noting which
-> template's logic this episode leaned on most. Name the tighter in-point for at least one
-> segment so it's clear the editor-facing callout is live.
+> One paragraph: how many segments cleared the bar and why, in plain terms. The Step 1 rubric did
+> the ranking; this note is the human summary. Name the tighter in-point for at least one segment
+> so it's clear the editor-facing callout is live.
 ```
+
+Immediately after this header note, before Segment 1, write the **`## Segment Ranking`** table
+from Step 1 (every candidate considered, scored and gated, shipped and cut). See
+`references/output-spec.md` for the exact shape. Then the segment blocks, then `## QA Summary`.

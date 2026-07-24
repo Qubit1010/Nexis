@@ -1,7 +1,8 @@
 ---
 name: podcast-repurposer
 description: >
-  Turns a long podcast transcript into a full short-form content package: 3-5 best segments,
+  Turns a long podcast transcript into a full short-form content package: the segments that clear
+  a transparent quality rank (count scales with episode length and quality, not a fixed number),
   each with 5 text hooks, 3 A/B captions, and 3-5 long-form LinkedIn/Facebook posts. Built as a
   4-template comparison harness so you can generate the package four different ways (one per
   content methodology) and pick the best method before locking it into production. Client-agnostic
@@ -84,6 +85,21 @@ Where `<target>` is one of:
 
 The script writes a `.pdf` next to each `.md` file. Requires `fpdf2` (`pip install fpdf2`).
 Run from the skill root: `c:\Users\qubit\OneDrive\Documents\Automations\Nexis\.claude\skills\podcast-repurposer\`.
+
+## Export to Google Doc (tabbed — the client deliverable)
+
+The reviewer-facing deliverable is a Google Doc with **one tab per segment plus a Report tab** (the
+Segment Ranking table + selection note + QA summary), the layout the client asked for. After the
+output `.md` is written, run:
+
+```powershell
+python .claude/skills/podcast-repurposer/scripts/md_to_gdoc.py <output>.md --tabs
+```
+
+It parses the output-spec structure and pipes it to `content-engine/scripts/save_content.py`, which
+builds the real Google Doc tabs via the Docs API, then prints the Doc URL. Needs `gws` authenticated
+(no pandoc required for `--tabs`). Without `--tabs` the script makes the older flat doc (one page
+break per segment).
 
 ## Onboarding a new client (building a main voice file)
 

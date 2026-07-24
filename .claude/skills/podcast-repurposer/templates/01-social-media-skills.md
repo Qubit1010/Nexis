@@ -18,7 +18,7 @@ limits and absence signals. This template defines *how to fill that shape*.
 ### 1. Segment = strongest standalone hook moment (reverse-engineer)
 Scan the transcript for lines that already *are* a hook — a screenshot-worthy claim, a candid
 admission, a contrarian truth. The segment is built **around** that line, not around topic
-order. Cut 3-5 where the quotable line can carry a clip on its own. Prefer moments with built-in
+order. Cut every segment where the quotable line can carry a clip on its own (count is quality-gated, not fixed, see the voice file). Prefer moments with built-in
 tension (a confession, a myth being broken, a number).
 
 ### 2. Hooks via the 6 archetypes

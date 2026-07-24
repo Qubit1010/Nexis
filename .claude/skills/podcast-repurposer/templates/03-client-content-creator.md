@@ -18,7 +18,7 @@ brand. This template defines the *full-funnel, platform-native filling*.
 ## Method
 
 ### 1. Two-angle ideation per segment
-For each of the 3-5 segments, find both:
+For each selected segment, find both:
 - a **teaching angle** (the practical takeaway an agent can use), and
 - an **emotional angle** (the feeling — being seen, being backed, the identity shift).
 
