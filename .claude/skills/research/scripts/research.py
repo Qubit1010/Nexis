@@ -123,18 +123,19 @@ def run(query: str, *, depth: str, mode: str, services: list[str], single: bool,
         return {"mode": mode, "depth": depth, "query": query, "answer": answer,
                 "results": ranked[:num], "report": None}
 
+    top = ranked[:8]
+    if depth == "deep":  # enrich with clean page text -- useful on its own, not just for synth
+        urls = [r["url"] for r in top if r.get("url")][:6]
+        try:
+            extracted = {c["url"]: c.get("text") for c in exa_adapter.contents(urls)["results"]}
+            for r in top:
+                if extracted.get(r["url"]):
+                    r["text"] = extracted[r["url"]]
+        except Exception as e:  # noqa: BLE001
+            print(f"[warn] content extraction failed: {e}", file=sys.stderr)
+
     report = None
     if do_synth:
-        top = ranked[:8]
-        if depth == "deep":  # enrich with clean page text before writing
-            urls = [r["url"] for r in top if r.get("url")][:6]
-            try:
-                extracted = {c["url"]: c.get("text") for c in exa_adapter.contents(urls)["results"]}
-                for r in top:
-                    if extracted.get(r["url"]):
-                        r["text"] = extracted[r["url"]]
-            except Exception as e:  # noqa: BLE001
-                print(f"[warn] content extraction failed: {e}", file=sys.stderr)
         report = synth.synthesize(query, top, mode=mode, depth=depth, context=context)
 
     return {"mode": mode, "depth": depth, "query": query, "answer": answer,

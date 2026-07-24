@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "run the post creator on the next draft row in my schedule",
-      "expected_output": "Reads the next actionable row from SM Schedule via schedule.py, runs Exa research to find 8-12 sources, loads those URLs into a NotebookLM notebook and asks it for a detailed Formal response and a Simplified one, generates the post per the row's mode/pillars/format from the Formal source, pauses at the checkpoint, then (on OK) saves one Google Doc with SIX REAL TABS named LinkedIn / LinkedIn - Infographics Prompt / Instagram / Instagram - Carousel Prompt / Source / Source_S (each independently clickable in the Doc's left sidebar, not just headings in one tab), and writes the doc URL into the row's Final Video/Post cell with Status=Draft.",
+      "expected_output": "Reads the next actionable row from SM Schedule via schedule.py, runs the research skill's deep multi-engine search (Exa + Tavily + Serper + Jina, fused) to find 8-12 sources, loads those URLs into a NotebookLM notebook and asks it for a detailed Formal response and a Simplified one, generates the post per the row's mode/pillars/format from the Formal source, pauses at the checkpoint, then (on OK) saves one Google Doc with SIX REAL TABS named LinkedIn / LinkedIn - Infographics Prompt / Instagram / Instagram - Carousel Prompt / Source / Source_S (each independently clickable in the Doc's left sidebar, not just headings in one tab), and writes the doc URL into the row's Final Video/Post cell with Status=Draft.",
       "files": []
     },
     {

@@ -63,7 +63,8 @@ def research(query: str, *, mode: str = "general", depth: str = "light",
              services: str = "serper,tavily,exa", num: int = 10, timeout: int = 120) -> dict:
     """Call the research skill's CLI (--json) from its own dir. Returns {} on failure (never raises).
     `answer` (Tavily's own synthesized answer, when tavily is in `services`) rides along even at light
-    depth + --no-synth -- that flag only gates the separate multi-source LLM `report` used at medium/deep."""
+    depth + --no-synth -- that flag only gates the separate multi-source LLM `report` used at medium/deep
+    (deep-mode full-text extraction still runs regardless of --no-synth)."""
     cmd = [sys.executable, "research.py", "--query", query, "--mode", mode, "--depth", depth,
            "--services", services, "--num", str(num), "--no-synth", "--json"]
     try:

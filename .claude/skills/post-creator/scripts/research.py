@@ -1,17 +1,18 @@
-"""Exa research for the post-creator skill: topic -> source pack JSON.
+"""Research for the post-creator skill: topic -> source pack JSON.
 
-Replaces the manual NotebookLM step. Given a topic (+ optional description and
-reference URL), it:
-  1. Seeds with the reference URL's cleaned contents when one is given.
-  2. Runs an Exa deep search for the 8-12 best sources.
-  3. Pulls full text for the top few so the synthesis has real substance.
+Delegates topic search to the research skill's multi-engine orchestrator (Exa +
+Tavily + Serper + Jina, deep mode: fused across engines, ranked by cross-source
+agreement, full text pulled for the top sources) instead of a standalone Exa-only
+pass. The row's Reference URL (if any) is still fetched directly via Exa
+get_contents, since that's a known page to read, not something to search for.
 
 Output is a "source pack" JSON that Claude condenses in-session into the
 Formal + Simplified source summaries. This script only gathers — it never
-writes prose, so there is nothing to hallucinate.
+writes prose, so there is nothing to hallucinate. NotebookLM does the actual
+reading and synthesis in step 3.
 
-Reuses tools/exa/exa_client.py (EXA_API_KEY from repo .env; run unsandboxed —
-api.exa.ai DNS fails in the sandbox).
+Run unsandboxed (dangerouslyDisableSandbox: true) — api.exa.ai / Tavily /
+Serper / Jina all need real network.
 
 CLI:
     python research.py --topic "GLM 5.2 as the new open-weights" \
@@ -24,16 +25,15 @@ import json
 import sys
 from pathlib import Path
 
-# tools/exa lives at the repo root; walk up from this file to find it.
+# .claude/skills/post-creator/scripts/research.py -> repo root is 4 parents up.
 _REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(_REPO_ROOT))
+sys.path.insert(0, str(_REPO_ROOT / ".claude" / "skills" / "research" / "scripts"))
 
-from tools.exa.exa_client import get_client, get_contents, search  # noqa: E402
+from tools.exa.exa_client import get_client, get_contents  # noqa: E402
+import research as research_engine  # noqa: E402
 
-# Full text of a page can be huge; cap what we carry into the pack so the
-# in-session synthesis stays sharp instead of drowning in one source.
 TEXT_CAP = 4000
-FULLTEXT_TOP_N = 6
 
 
 def _trim(txt, cap=TEXT_CAP):
@@ -44,14 +44,13 @@ def _trim(txt, cap=TEXT_CAP):
 
 
 def build_pack(topic, description="", reference=None, num=12):
-    client = get_client()
     pack = {"topic": topic, "description": description, "reference": None,
             "sources": [], "errors": []}
 
-    # 1. Seed: the row's Reference URL, fetched directly.
+    # 1. Seed: the row's Reference URL, fetched directly (not a search).
     if reference:
         try:
-            ref = get_contents([reference], text=True, client=client)
+            ref = get_contents([reference], text=True, client=get_client())
             for r in ref.get("results", []):
                 pack["reference"] = {
                     "title": r.get("title"), "url": r.get("url"),
@@ -60,42 +59,29 @@ def build_pack(topic, description="", reference=None, num=12):
         except Exception as e:  # noqa: BLE001 - a dead reference URL shouldn't kill the run
             pack["errors"].append(f"reference fetch failed: {e}")
 
-    # 2. Search: deep neural search with highlights for citability.
+    # 2. Search: the research skill, deep mode (all engines, fused, top sources
+    #    enriched with full text). No LLM synthesis here — NotebookLM does that.
     query = f"{topic}. {description}".strip().rstrip(".")
     try:
-        res = search(query, num_results=num, type="deep", text=False,
-                     highlights=True, summary=True, client=client)
+        result = research_engine.run(query, depth="deep", mode="general", services=[],
+                                      single=False, do_synth=False, num=num, context="")
     except Exception as e:  # noqa: BLE001
-        pack["errors"].append(f"search failed: {e}")
+        pack["errors"].append(f"research failed: {e}")
         return pack
 
-    seen = set()
-    if reference:
-        seen.add(reference.rstrip("/").lower())
-    for r in res.get("results", []):
+    seen = {reference.rstrip("/").lower()} if reference else set()
+    for r in result.get("results", [])[:num]:
         url = (r.get("url") or "").rstrip("/").lower()
         if not url or url in seen:
             continue
         seen.add(url)
         pack["sources"].append({
             "title": r.get("title"), "url": r.get("url"),
-            "published_date": r.get("published_date"), "author": r.get("author"),
-            "summary": r.get("summary"),
-            "highlights": (r.get("highlights") or [])[:3],
-            "text": None,
+            "published_date": r.get("published_date"),
+            "summary": r.get("snippet"),
+            "engines": r.get("sources", []),  # which search engines agreed on this URL
+            "text": _trim(r.get("text")),
         })
-
-    # 3. Full text for the top few, so the synthesis has real substance.
-    top = pack["sources"][:FULLTEXT_TOP_N]
-    if top:
-        try:
-            full = get_contents([s["url"] for s in top], text=True, client=client)
-            by_url = {(r.get("url") or "").rstrip("/").lower(): r.get("text")
-                      for r in full.get("results", [])}
-            for s in top:
-                s["text"] = _trim(by_url.get(s["url"].rstrip("/").lower()))
-        except Exception as e:  # noqa: BLE001
-            pack["errors"].append(f"contents fetch failed: {e}")
 
     pack["num_sources"] = len(pack["sources"])
     return pack
@@ -106,7 +92,7 @@ def main():
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     except Exception:
         pass
-    ap = argparse.ArgumentParser(description="Build an Exa source pack for a schedule topic.")
+    ap = argparse.ArgumentParser(description="Build a research-skill source pack for a schedule topic.")
     ap.add_argument("--topic", required=True)
     ap.add_argument("--description", default="")
     ap.add_argument("--reference", default=None, help="Optional URL from the row's Reference column.")

@@ -3,8 +3,9 @@ name: post-creator
 description: >-
   End-to-end post creation from the Weekly Posting Schedule sheet. Takes a schedule row
   (topic + description + content mode + pillars + design templates), finds 8-12 sources
-  with Exa, loads them into a NotebookLM notebook and queries it for a detailed Formal
-  source summary and a Simplified one, writes the finished LinkedIn/Instagram post in
+  via the research skill's multi-engine deep search, loads them into a NotebookLM notebook
+  and queries it for a detailed Formal source summary and a Simplified one, writes the finished
+  LinkedIn/Instagram post in
   Aleem's voice using the content-engine rules, saves everything to a Google Doc, fills
   the row's LinkedIn infographic + Instagram carousel templates into paste-ready Gemini
   image prompts, and writes the Doc link back into the row's Final Video/Post cell. Use
@@ -19,9 +20,9 @@ description: >-
 
 # Post Creator
 
-Connects the previously disconnected pipeline — Exa for source discovery, NotebookLM
-for synthesis (matching Aleem's existing habit: sources in, detailed response out),
-content-engine generation, carousel + linkedin-infographics image prompts, and the
+Connects the previously disconnected pipeline — the research skill for source discovery,
+NotebookLM for synthesis (matching Aleem's existing habit: sources in, detailed response
+out), content-engine generation, carousel + linkedin-infographics image prompts, and the
 Weekly Posting Schedule sheet — into one flow. One schedule row in, one reviewed
 package out: finished post + Google Doc + Gemini image prompts + the Doc link written
 back into the row.
@@ -34,8 +35,9 @@ prompts into his Gemini Gems).
 
 - Python is NOT on PATH. Use the full path and UTF-8:
   `$env:PYTHONIOENCODING="utf-8"` + `C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe`.
-- Exa, gws, and NotebookLM calls need real network — run those commands with sandbox
-  disabled (`dangerouslyDisableSandbox: true`); api.exa.ai DNS fails inside the sandbox.
+- Research (Exa/Tavily/Serper/Jina), gws, and NotebookLM calls need real network — run
+  those commands with sandbox disabled (`dangerouslyDisableSandbox: true`); api.exa.ai
+  DNS fails inside the sandbox.
 - If gws returns `invalid_grant` / auth errors: tell Aleem to run `gws auth login`
   (account `hassanaleem86@gmail.com`) and stop until he confirms. Never drive the browser.
 - If `notebooklm` returns "Authentication expired": follow the re-auth flow in
@@ -62,18 +64,20 @@ Guards, in order:
 - `post_type` contains Reel → say it's a reel-creator row and pick the next row instead.
 - `final_post` already filled → the row is done; confirm before overwriting anything.
 
-### 2. Research (Exa finds sources)
+### 2. Research (the research skill finds sources)
 
 ```
 python scripts/research.py --topic "<topic>" --description "<description>" \
     [--reference "<url-from-Reference-column>"] -o <scratchpad>/pack-<row>.json
 ```
 
-Writes a source pack: the Reference URL's full text (when present) + 8-12 deep-search
-sources with summaries, highlights, and full text for the top 6. If it comes back with
-fewer than ~5 usable sources, retry once with a rephrased query (the topic alone, or the
-description alone) before telling Aleem the topic is thin. This step only gathers URLs —
-NotebookLM does the actual reading and synthesis in step 3.
+This delegates to `.claude/skills/research/scripts/research.py` in deep mode (Exa +
+Tavily + Serper + Jina, fused and ranked by cross-source agreement) instead of Exa alone.
+Writes a source pack: the Reference URL's full text (when present) + up to 12 fused
+sources with snippets, the engines that agreed on each URL, and full text for the top
+ones. If it comes back with fewer than ~5 usable sources, retry once with a rephrased
+query (the topic alone, or the description alone) before telling Aleem the topic is thin.
+This step only gathers URLs — NotebookLM does the actual reading and synthesis in step 3.
 
 ### 3. Synthesize via NotebookLM (Formal + Simplified)
 
@@ -183,6 +187,6 @@ but still pause at each step-5 checkpoint unless he explicitly waives it.
 ## Failure honesty
 
 Every step reports what actually happened. If the Doc save fails, the sheet write-back
-must not run (a row pointing at a dead link is worse than an empty cell). If Exa returns
-junk sources, say so instead of padding the summary. If a template number doesn't exist
-on disk, ask — the inventories are in `references/column-map.md`.
+must not run (a row pointing at a dead link is worse than an empty cell). If research
+returns junk sources, say so instead of padding the summary. If a template number doesn't
+exist on disk, ask — the inventories are in `references/column-map.md`.
