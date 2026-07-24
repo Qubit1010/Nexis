@@ -151,11 +151,14 @@ def resolve_reference(args):
         log(f"Reference audio not found: {ref}")
         sys.exit(1)
 
-    # Optional sidecar transcript next to the default ref clip.
+    # Optional sidecar transcript next to the GIVEN ref clip (<ref>.txt). Only a
+    # transcript that matches THIS audio is valid: pairing another clip's transcript
+    # (e.g. aleem-ref.txt with a different --ref) makes OmniVoice mis-clone and blow
+    # the length out. So never cross-pair — an unmatched ref just auto-transcribes.
     if not ref_text:
-        default_txt = ROOT / "voice" / "aleem-ref.txt"
-        if default_txt.exists():
-            ref_text = default_txt.read_text(encoding="utf-8").strip()
+        sidecar = Path(ref).with_suffix(".txt")
+        if sidecar.exists():
+            ref_text = sidecar.read_text(encoding="utf-8").strip()
 
     return ref, (ref_text or None)
 
