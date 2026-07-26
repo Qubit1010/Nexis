@@ -12,6 +12,14 @@ Write policy (locked with Aleem 2026-07-16):
     confirm. Any stale founder value already on a reprocessed row is CLEARED, so the sheet never shows an
     unverified founder; the review queue markdown is the source of truth until Aleem fills it in.
 
+CAUTION -- the review queue is keyed by raw sheet ROW NUMBER, not a stable identity. If Main gets
+resorted or deduped (merge_leads.py's --sort / --dedupe-existing) after entries are queued, those row
+numbers now point at whatever company landed there post-reorder, not the one the queue meant (found live
+2026-07-24: a full-sheet sort left 113 of 163 queued entries pointing at the wrong company). Nothing
+gets corrupted in Main itself (a sort/dedupe moves each row's data as one bound unit), but --write-founders
+run against a stale queue WOULD write a founder onto the wrong company. Run --prune-stale-review after any
+sort/dedupe and before trusting an existing queue.
+
 Two modes:
   incremental (default): next unresolved batch via read_batch_main.next_batch (new leads).
   reprocess (--rows A-B): re-run an explicit row range that already carries data, bypassing the
@@ -247,6 +255,44 @@ def write_founders_from_queue(sheet_id: str, tab: str, jsonl_path: Path, tiers: 
     return {"written": len(written), "skipped": len(skipped), "tiers": sorted(tiers)}
 
 
+def prune_stale_review_queue(sheet_id: str, tab: str, jsonl_path: Path, *, dry_run: bool = False) -> dict:
+    """Drop review-queue entries whose row number no longer matches the company it was written
+    for (a sort/dedupe on Main moved that row's occupant since the entry was queued). Company name
+    is the only stable field the queue stores, so it's the validity check. Rewrites the jsonl (kept
+    entries only) and regenerates the markdown from what survives."""
+    import sheets  # noqa: E402
+    if not jsonl_path.exists():
+        return {"kept": 0, "dropped": 0}
+    merged: dict[int, dict] = {}
+    for line in jsonl_path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            rv = json.loads(line)
+            merged[rv.get("row")] = rv
+    if not merged:
+        return {"kept": 0, "dropped": 0}
+
+    rows = sheets.read_values(sheet_id, tab)
+    header = rows[0]
+    ci = sheets.header_index(header, ["company name", "company"])
+    live_company = {i: (r[ci].strip() if ci is not None and ci < len(r) else "")
+                    for i, r in enumerate(rows[1:], start=2)}
+
+    kept = {r: rv for r, rv in merged.items()
+            if live_company.get(r, "").strip().lower() == (rv.get("company") or "").strip().lower()}
+    dropped = len(merged) - len(kept)
+
+    if not dry_run:
+        with jsonl_path.open("w", encoding="utf-8") as fh:
+            for r in sorted(kept):
+                fh.write(json.dumps(kept[r], ensure_ascii=False) + "\n")
+        md_path = jsonl_path.with_suffix(".md")
+        if kept:
+            md_path.write_text(_render_review_md([kept[r] for r in sorted(kept)]), encoding="utf-8")
+        elif md_path.exists():
+            md_path.write_text(_render_review_md([]), encoding="utf-8")
+    return {"kept": len(kept), "dropped": dropped}
+
+
 def backfill_founder_socials(sheet_id: str, tab: str, start_row: int, end_row: int,
                              *, dry_run: bool = False) -> dict:
     """For rows that already carry a confirmed Founder name, search for whichever of their instagram/
@@ -385,10 +431,19 @@ def main():
     p.add_argument("--reverify-founder-socials", action="store_true",
                    help="re-check EVERY currently-set founder-social value under the person-name-match "
                         "gate (use with --rows A-B); keeps reconfirmed values, replaces or clears the rest.")
+    p.add_argument("--prune-stale-review", action="store_true",
+                   help="drop review-queue entries whose row no longer matches the company it was queued "
+                        "for (run after any merge_leads.py --sort / --dedupe-existing).")
     args = p.parse_args()
 
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+    if args.prune_stale_review:
+        out = prune_stale_review_queue(args.sheet_id, args.tab,
+                                       args.review_out.with_suffix(".jsonl"), dry_run=args.dry_run)
+        print(json.dumps(out, indent=2, ensure_ascii=False))
+        return
 
     if args.write_founders is not None:
         all_tiers = {"website", "search_low", "search_ambiguous"}

@@ -23,6 +23,8 @@ HEADER_ALIASES = {
     "company name": "company",
     "category": "category",
     "rating": "rating",
+    "reviews": "reviews",   # review COUNT -- with rating, the strongest verifiable fact we can cite
+    "slogan": "slogan",     # the company's own tagline, the only copy on the row they actually wrote
     "experience": "experience",
     "location": "location",
     "number": "phone",
@@ -71,6 +73,8 @@ def row_to_biz(row_num, row, col_map):
         "company": cell(row, col_map, "company"),
         "category": _strip_bullet(cell(row, col_map, "category")),
         "rating": cell(row, col_map, "rating"),
+        "reviews": cell(row, col_map, "reviews"),
+        "slogan": cell(row, col_map, "slogan"),
         "experience": cell(row, col_map, "experience"),
         "location": cell(row, col_map, "location"),
         "phone": _clean_phone(cell(row, col_map, "phone")),

@@ -52,10 +52,31 @@ PLATFORMS = ("instagram", "linkedin", "facebook")
 _STOPWORDS = {"agency", "marketing", "digital", "media", "group", "company", "the", "new", "york",
               "nyc", "seo", "llc", "inc", "co", "studio", "creative", "solutions", "consulting",
               "top", "best", "leading", "premier", "design", "branding", "concepts", "performance",
-              "pro", "communications"}
+              "pro", "communications", "revenue"}
 
-_FOUNDER_WORDS = r"(?:founder|co-founder|owner|ceo|president|principal)"                       # use with re.I
-_FOUNDER_WORDS_CASED = r"(?:[Ff]ounder|[Cc]o-[Ff]ounder|[Oo]wner|CEO|ceo|[Pp]resident|[Pp]rincipal)"  # name-capture context, no re.I
+_FOUNDER_WORDS = r"(?:founder|co-founder|owner|chief executive officer|ceo|president|principal)"  # use with re.I
+_FOUNDER_WORDS_CASED = (r"(?:[Ff]ounder|[Cc]o-[Ff]ounder|[Oo]wner|[Cc]hief [Ee]xecutive [Oo]fficer|"
+                        r"CEO|ceo|[Pp]resident|[Pp]rincipal)")  # name-capture context, no re.I
+
+
+_PLACEHOLDER_NAMES = re.compile(
+    r"^(john|jane)\s+doe$|^lorem\s+ipsum|^(your|first)\s+(name|last)$|^test\s+(user|name)$|^example\s",
+    re.I)
+
+
+def _is_placeholder_name(name: str) -> bool:
+    """Website extraction has no confidence gate at all -- it's trusted as the company's own claim --
+    so unfilled template copy ('John Doe', 'Lorem Ipsum') needs to be caught explicitly rather than
+    written straight through (found live 2026-07-25: a company's site literally still said 'John Doe')."""
+    return bool(_PLACEHOLDER_NAMES.match((name or "").strip()))
+
+
+def _flexible_token(core: str) -> str:
+    """`core` as a regex that tolerates a space/hyphen inserted between its letters -- a company
+    scraped as one word ('Steptech') is routinely written as two by the company itself or on LinkedIn
+    ('Step Tech'). Still requires every letter in the same order, so this stays a strict identity
+    check, not a fuzzy one."""
+    return r"[\s\-]*".join(re.escape(ch) for ch in core)
 
 
 # --------------------------------------------------------------------------- research
@@ -139,8 +160,8 @@ def _verify_founder_context(company: str, ctx: str) -> bool:
     core = _company_core(company)
     if not core or not ctx:
         return False
-    pat = re.compile(rf"{_FOUNDER_WORDS}.{{0,40}}{re.escape(core)}|{re.escape(core)}.{{0,40}}{_FOUNDER_WORDS}",
-                     re.I)
+    flex = _flexible_token(core)
+    pat = re.compile(rf"{_FOUNDER_WORDS}.{{0,40}}{flex}|{flex}.{{0,40}}{_FOUNDER_WORDS}", re.I)
     return bool(pat.search(ctx))
 
 
@@ -156,9 +177,10 @@ def _founder_from_answer(answer: str, company: str) -> dict:
         return {}
     name_pat = re.compile(r"([A-Z][\w.'-]+(?:\s[A-Z][\w.'-]+){0,3})\s*(?:is|was|,)?\s*(?:the\s+)?"
                           + _FOUNDER_WORDS_CASED)
+    core_pat = re.compile(_flexible_token(core), re.I)
     for m in name_pat.finditer(answer):
-        tail = answer[m.end(): m.end() + 60].lower()
-        if core in tail:
+        tail = answer[m.end(): m.end() + 60]
+        if core_pat.search(tail):
             return {"name": m.group(1).strip(), "source_text": answer[:300]}
     return {}
 
@@ -248,7 +270,7 @@ def website_fallback(website: str, gaps: list[str], want_founder: bool) -> dict:
             page = webscrape_page(base + path)
             if not page:
                 continue
-            if page.get("founder_name") and not out["founder"].get("name"):
+            if page.get("founder_name") and not out["founder"].get("name") and not _is_placeholder_name(page["founder_name"]):
                 out["founder"]["name"] = page["founder_name"]
                 out["founder"]["title"] = page.get("founder_title", "")
             for src, dst in (("company_instagram", "instagram"), ("company_linkedin", "linkedin"),
@@ -488,6 +510,33 @@ def demo():
     assert _verify_founder_context("Acme", "Jane Doe - Founder at Acme | LinkedIn")
     assert _verify_founder_context("Lark Studio", "Sofia Marek, Creative Principal and Co-Founder, Lark Studio")
     assert not _verify_founder_context("Halstead", "Halstead Cole - Social Media Strategist at Overlook")
+
+    # regression (found live 2026-07-24): a spelled-out "Chief Executive Officer" title, next to the
+    # company name, was invisible to the gate because only the "CEO" abbreviation was recognized.
+    assert _verify_founder_context("Vertex", "### Chief Executive Officer - [Vertex](...) (Current)")
+    # regression: company scraped as one word ("Steptech") but written as two on LinkedIn ("Step Tech")
+    # broke the literal substring check even with "Founder" right next to it.
+    assert _verify_founder_context("Steptech", "Founder & CEO at Step Tech | AI & Brand Development Expert")
+    # the flex-token match still requires every letter in order -- an unrelated word sharing only some
+    # letters must not pass.
+    assert not _verify_founder_context("Steptech", "Founder & CEO at Step Ahead Tech Consulting")
+
+    # regression (found live 2026-07-25, Aleem's manual QA on row 101): "Revenue Rushy" picked "revenue"
+    # as its core token, a word generic enough to also appear in an unrelated company's name -- a
+    # different person's "Co-Founder, Revenue Boost" then falsely verified against "Revenue Rushy".
+    # "revenue" is now stopworded so the core falls through to the actually-distinctive "rushy".
+    assert not _verify_founder_context("Revenue Rushy", "Co Founder Revenue Boost, a lead-gen agency")
+    # "Chief Growth Officer" is a real title at the real company but not a founder-equivalent word --
+    # correctly still rejected (a hired exec isn't a founder just for sitting next to the company name).
+    assert not _verify_founder_context("Revenue Rushy", "Chief Growth Officer - Revenue Rushy Inc. (Current)")
+    assert _verify_founder_context("Revenue Rushy", "Co-Founder & CEO - Revenue Rushy Inc. (Current)")
+
+    # _is_placeholder_name: unfilled website template copy must never pass as a real founder.
+    assert _is_placeholder_name("John Doe")
+    assert _is_placeholder_name("  jane doe ")
+    assert _is_placeholder_name("Lorem Ipsum Dolor")
+    assert not _is_placeholder_name("John Smith")
+    assert not _is_placeholder_name("Alan")
 
     # _founder_from_answer: explicit statement + company co-occurrence required together.
     hit = _founder_from_answer("Hal Sanders is the founder of Halstead Communications, a PR agency.", "Halstead")
