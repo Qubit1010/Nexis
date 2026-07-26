@@ -53,12 +53,13 @@ Pillar definitions (what each enforces in the writing) live in
 
 ## Design Template cell -> template folders
 
-`schedule.py` parses out both numbers. Templates that exist on disk:
+`schedule.py` parses out both numbers and validates them against the folders actually
+on disk (globbed at import, not a hardcoded list — templates get onboarded often):
 
-- **LinkedIn** {1, 2, 4, 9, 10, 11} -> `.claude/skills/linkedin-infographics/references/LinkedIn-Template-<N>/`
-- **Instagram** {1, 2, 6, 10} -> `.claude/skills/carousel/references/Instagram-Template-<N>/`
+- **LinkedIn** -> `.claude/skills/linkedin-infographics/references/LinkedIn-Template-<N>/`
+- **Instagram** -> `.claude/skills/carousel/references/Instagram-Template-<N>/`
 
-Numbering is sparse. If a row names a missing number, `schedule.py` returns it in
+Numbering is sparse. If a row names a number with no folder, `schedule.py` returns it in
 `templates.errors` — stop and ask Aleem which template to use instead. Never substitute silently.
 
 ## Write-back

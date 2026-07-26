@@ -22,6 +22,7 @@ import json
 import re
 import sys
 from datetime import date, datetime
+from pathlib import Path
 
 import sheets
 
@@ -74,9 +75,20 @@ PILLAR_KEYS = {
 }
 
 # Templates that actually exist on disk. A row naming anything else is an error
-# the orchestrator must surface, not guess around.
-LINKEDIN_TEMPLATES = {1, 2, 4, 9, 10, 11}
-INSTAGRAM_TEMPLATES = {1, 2, 6, 10}
+# the orchestrator must surface, not guess around. Globbed, not hardcoded — new
+# templates get onboarded regularly and a stale list rejects valid rows.
+_SKILLS = Path(__file__).resolve().parents[2]
+
+
+def _template_numbers(skill, prefix):
+    d = _SKILLS / skill / "references"
+    return {int(m.group(1))
+            for p in d.glob(f"{prefix}-*") if p.is_dir()
+            for m in [re.fullmatch(rf"{prefix}-(\d+)", p.name)] if m}
+
+
+LINKEDIN_TEMPLATES = _template_numbers("linkedin-infographics", "LinkedIn-Template")
+INSTAGRAM_TEMPLATES = _template_numbers("carousel", "Instagram-Template")
 
 
 def _parse_templates(cell):

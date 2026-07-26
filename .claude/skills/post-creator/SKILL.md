@@ -6,9 +6,10 @@ description: >-
   via the research skill's multi-engine deep search, loads them into a NotebookLM notebook
   and queries it for a detailed Formal source summary and a Simplified one, writes the finished
   LinkedIn/Instagram post in
-  Aleem's voice using the content-engine rules, saves everything to a Google Doc, fills
-  the row's LinkedIn infographic + Instagram carousel templates into paste-ready Gemini
-  image prompts, and writes the Doc link back into the row's Final Video/Post cell. Use
+  Aleem's voice using the content-engine rules, drafts a companion Instagram Shorts/Reels
+  teaser sequence via the shorts-creator template, saves everything to a Google Doc, fills
+  the row's LinkedIn infographic + Instagram carousel + Shorts templates into paste-ready
+  Gemini image prompts, and writes the Doc link back into the row's Final Video/Post cell. Use
   this skill whenever Aleem says "run the post creator", "create the post for
   [topic/row]", "process my schedule", "next post", "make the post + image prompts for
   [row]", "generate this week's content", "turn the schedule row into a post", "automate
@@ -22,19 +23,22 @@ description: >-
 
 Connects the previously disconnected pipeline — the research skill for source discovery,
 NotebookLM for synthesis (matching Aleem's existing habit: sources in, detailed response
-out), content-engine generation, carousel + linkedin-infographics image prompts, and the
-Weekly Posting Schedule sheet — into one flow. One schedule row in, one reviewed
-package out: finished post + Google Doc + Gemini image prompts + the Doc link written
-back into the row.
+out), content-engine generation, carousel + linkedin-infographics + shorts-creator image
+prompts, and the Weekly Posting Schedule sheet — into one flow. One schedule row in, one
+reviewed package out: finished post + Google Doc + Gemini image prompts (LinkedIn +
+Instagram + Shorts) + the Doc link written back into the row.
 
 **Scope:** text-based rows only. `Post Type = Reel` rows are skipped — that's the
 `reel-creator` skill's job. Image *generation* stays manual (Aleem pastes the emitted
-prompts into his Gemini Gems).
+prompts into his Gemini Gems). Every processed row also gets a companion Shorts/Reels
+teaser prompt set (`Instagram-Short-Template-1`, the only shorts-creator template so far) —
+that generation is prompts-only too, same as the other image templates. No video is
+rendered here.
 
 ## Setup notes (read once per session)
 
 - Python is NOT on PATH. Use the full path and UTF-8:
-  `$env:PYTHONIOENCODING="utf-8"` + `C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe`.
+  `$env:PYTHONIOENCODING="utf-8"` + `$env:LOCALAPPDATA\Programs\Python\Python312\python.exe`.
 - Research (Exa/Tavily/Serper/Jina), gws, and NotebookLM calls need real network — run
   those commands with sandbox disabled (`dangerouslyDisableSandbox: true`); api.exa.ai
   DNS fails inside the sandbox.
@@ -88,7 +92,7 @@ from the Exa pack directly. Uses the `notebooklm` skill's CLI — see that skill
 for the exe path and re-auth flow if a command fails with "Authentication expired".
 
 ```powershell
-$nlm = "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe"
+$nlm = "$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe"
 & $nlm create "<Topic>"                        # note the returned notebook_id
 & $nlm use <notebook_id>
 & $nlm source add "<url 1>"                     # one call per source from the Exa pack
@@ -124,25 +128,50 @@ else just the named one), honoring:
 - the **Formal Source** (from NotebookLM, step 3) as source material: extract what's
   useful, make it Aleem's own, never summarize the summary.
 
+**Write for a business reader, not an engineer.** Plain language beats precise jargon:
+"the budget you set for the answer" not `max_tokens`, "steps" not "tool calls", "it
+refuses" not "returns a 400". Keep every real number — the specificity rule still holds.
+Technical detail belongs in the infographic, where a reader who wants it is already
+leaning in.
+
+**When the row's Reference names one of Aleem's own skills, the post must say how he
+uses it.** A reference like `Content-Engine-Skill`, `Weekly Business Review skill`, or
+`claude advisor` is not just a citation, it is the lived-experience anchor (Pillar 1):
+he built the thing and runs it. Name it and show it working ("I run it through a content
+engine I built, which takes the anchor and produces the platform versions"). Never
+reduce it to a passive mention. If the reference is a skill used only to *source* the
+post rather than as its subject (e.g. `research-skill` on a news row), skip it — that's
+plumbing, not story.
+
 Voice guardrails that override everything: no emojis, no em dashes in body text,
 no "As an AI", no agency-pitch tone — this is Aleem's personal brand feed.
 
+Also draft the companion **Shorts/Reels teaser copy** (shorts-creator's Step 2, light —
+no fresh research): eyebrow label, cover headline + subtitle, 1-2 content frame lines,
+and CTA text, derived from the **Simplified Source** (step 3) and the row's description.
+It's a teaser, not the post repeated — keep every line short and punchy. Shorts always
+carry NexusPoint branding (logo, dark diagonal-stripe motif) even though the post above
+is personal-brand voice — that's shorts-creator's own deliberate, scoped exception to the
+no-agency-mention rule, and it still applies here.
+
 ### 5. Checkpoint (the one review gate)
 
-Show Aleem: both NotebookLM summaries, the post(s), and what will happen next (Doc title,
-the target row/cell, which image templates will be filled). Wait for his OK. This gate
-replaces the carousel/infographic skills' internal approval gates — don't re-ask later.
+Show Aleem: both NotebookLM summaries, the post(s), the drafted Shorts copy (eyebrow /
+headline / subtitle / content line(s) / CTA), and what will happen next (Doc title, the
+target row/cell, which image templates will be filled). Wait for his OK. This gate
+replaces the carousel/infographic/shorts-creator skills' internal approval gates — don't
+re-ask later.
 
-### 6. Save the Google Doc (six real tabs)
+### 6. Save the Google Doc (seven real tabs)
 
 Google Docs API *does* support creating tabs — `addDocumentTab` in `batchUpdate` (this
 isn't in any gws help text; verified live 2026-07-08). `save_content.py` was extended to
 use it: pass a `"tabs"` array instead of `"sections"` and it creates one real, independently
 clickable tab per entry via `addDocumentTab` + `updateDocumentTabProperties`, in order.
 Use Aleem's exact tab names: `LinkedIn` / `LinkedIn - Infographics Prompt` / `Instagram`
-/ `Instagram - Carousel Prompt` / `Source` / `Source_S`. Don't put a redundant heading
-inside each tab's content — the tab title already labels it (matches his reference docs,
-which start the post text immediately with no heading).
+/ `Instagram - Carousel Prompt` / `Shorts - Image Prompt` / `Source` / `Source_S`. Don't
+put a redundant heading inside each tab's content — the tab title already labels it
+(matches his reference docs, which start the post text immediately with no heading).
 
 Write the payload to a scratchpad JSON file, then pipe it to content-engine's saver
 (creates the Doc in the "Nexis Content" Drive folder and returns `doc_url`).
@@ -156,17 +185,21 @@ cat <payload>.json | python .claude/skills/content-engine/scripts/save_content.p
 
 Payload shape: `{"title": "<Topic> - <Date>", "tabs": [{"title": "<tab name>", "sections": [{"body": "...", "bullets": [...]}]}, ...]}`
 — one tab per name above: LinkedIn post, LinkedIn image prompt, Instagram post, Instagram
-image prompt set, Formal Source (verbatim from NotebookLM), Simplified Source (verbatim).
-Build the image-prompt tabs (step 7) before this call so you save once.
+image prompt set, Shorts image prompt set, Formal Source (verbatim from NotebookLM),
+Simplified Source (verbatim). Build the image-prompt tabs (step 7) before this call so
+you save once.
 
 ### 7. Fill the image prompts
 
 Follow `references/image-prompt-fill.md`. In short: read the row's template
-`input-prompt.md` from `.claude/skills/linkedin-infographics/references/LinkedIn-Template-<N>/`
-and/or `.claude/skills/carousel/references/Instagram-Template-<N>/`, map the
-**Simplified Source** (from NotebookLM, step 3) into the placeholders, and emit the
-paste-ready prompt(s) — LinkedIn = exactly one prompt; Instagram = CONTEXT → COVER →
-BODY× → CTA blocks. Include them in the Doc payload AND print them in chat in code blocks.
+`input-prompt.md` from `.claude/skills/linkedin-infographics/references/LinkedIn-Template-<N>/`,
+`.claude/skills/carousel/references/Instagram-Template-<N>/`, and
+`.claude/skills/shorts-creator/references/Instagram-Short-Template-1/input-prompt.md`,
+map the **Simplified Source** (from NotebookLM, step 3) and the approved Shorts copy
+(step 4) into the placeholders, and emit the paste-ready prompts — LinkedIn = exactly one
+prompt; Instagram = CONTEXT → COVER → BODY× → CTA blocks; Shorts = CONTEXT → COVER →
+CONTENT× (1-2) → CTA blocks, 1080x1920 (9:16). Include them all in the Doc payload AND
+print them in chat in code blocks.
 
 ### 8. Write back to the sheet
 
