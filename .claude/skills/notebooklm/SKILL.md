@@ -5,77 +5,64 @@ description: Complete API for Google NotebookLM - full programmatic access inclu
 
 # NotebookLM Skill
 
-Full programmatic access to Google NotebookLM via the `notebooklm-py` CLI (v0.4.0). Installed system-wide on this machine.
+Full programmatic access to Google NotebookLM via the `notebooklm-py` CLI (v0.7.1). Installed system-wide on this machine.
 
 ## Setup (Already Done)
 
-- **CLI:** `C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe`
-- **Auth:** `C:\Users\Aleem\.notebooklm\profiles\default\storage_state.json`
-- **Invoke via PowerShell:** `& "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe" <command>`
+- **CLI:** `$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe`
+- **Auth:** `$env:USERPROFILE\.notebooklm\profiles\default\storage_state.json`
+- **Invoke via PowerShell:** `& "$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe" <command>`
 
 Always run notebooklm commands via PowerShell, not Bash (Python is not on the Bash PATH).
 
 ## Re-Authentication (When Session Expires)
 
-`notebooklm list` will fail with "Authentication expired". Fix:
+`notebooklm list` will fail with "Authentication expired". `scripts/relogin.py` handles it.
 
-**Step 1** — Write and launch the login script:
-
-```powershell
-@'
-import json, os, time
-from pathlib import Path
-from playwright.sync_api import sync_playwright
-
-STORAGE_PATH = Path.home() / ".notebooklm" / "profiles" / "default" / "storage_state.json"
-PROFILE_PATH = Path.home() / ".notebooklm" / "browser_profile"
-SIGNAL_FILE = Path(os.environ.get("TEMP", "C:/Temp")) / "nlm_save_signal"
-
-SIGNAL_FILE.unlink(missing_ok=True)
-STORAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
-
-with sync_playwright() as p:
-    browser = p.chromium.launch_persistent_context(
-        user_data_dir=str(PROFILE_PATH),
-        headless=False,
-        args=["--disable-blink-features=AutomationControlled"],
-    )
-    page = browser.pages[0] if browser.pages else browser.new_page()
-    page.goto("https://notebooklm.google.com/")
-    print("Browser open. Waiting for save signal...")
-    while not SIGNAL_FILE.exists():
-        time.sleep(1)
-    storage = browser.storage_state()
-    with open(STORAGE_PATH, "w") as f:
-        json.dump(storage, f)
-    print(f"Saved {len(storage.get('cookies', []))} cookies")
-    browser.close()
-
-SIGNAL_FILE.unlink(missing_ok=True)
-'@ | Out-File "$env:TEMP\nlm_login.py" -Encoding utf8
-
-Start-Process -FilePath "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe" `
-  -ArgumentList "$env:TEMP\nlm_login.py" `
-  -RedirectStandardOutput "$env:TEMP\nlm_login_out.txt" `
-  -WindowStyle Hidden
-```
-
-Tell user: "A browser window just opened — sign into Google and navigate to notebooklm.google.com. Let me know when you're on the homepage."
-
-**Step 2** — Once user confirms, save the session:
+**Step 1** — Open the browser. This MUST be a background task (`run_in_background: true`);
+a foreground call is torn down when it returns and kills the browser with it:
 
 ```powershell
-New-Item -Path "$env:TEMP\nlm_save_signal" -ItemType File -Force | Out-Null
-Start-Sleep -Seconds 8
-Get-Content "$env:TEMP\nlm_login_out.txt"
+& "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" -u `
+  .claude\skills\notebooklm\scripts\relogin.py open
 ```
 
-**Step 3** — Verify and clean up:
+Tell user: "A Chromium window is open at notebooklm.google.com. Sign in and tell me when
+you're on the homepage." Note the window title is **Google Chrome for Testing** — signing
+into their normal Chrome does nothing, since this profile is isolated.
+
+**Step 2** — Once the user confirms, close the browser and capture the session. The
+sign-in persists in the profile on disk, so capture is a separate run:
 
 ```powershell
-& "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe" list
-Remove-Item "$env:TEMP\nlm_login.py","$env:TEMP\nlm_login_out.txt","$env:TEMP\nlm_save_signal" -ErrorAction SilentlyContinue
+Get-CimInstance Win32_Process -Filter "Name='python.exe'" |
+  Where-Object { $_.CommandLine -like "*relogin.py*" } |
+  ForEach-Object { Stop-Process -Id $_.ProcessId -Force }
+Start-Sleep -Seconds 3
+Get-CimInstance Win32_Process -Filter "Name='chrome.exe'" |
+  Where-Object { $_.CommandLine -like "*notebooklm*browser_profile*" } |
+  ForEach-Object { Stop-Process -Id $_.ProcessId -Force }
+Start-Sleep -Seconds 3
+& "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" -u `
+  .claude\skills\notebooklm\scripts\relogin.py capture
 ```
+
+Both kills are needed: the browser must release the profile lock before `capture` can
+reopen it.
+
+**Step 3** — Verify:
+
+```powershell
+$out = & "$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe" list --json
+"exit=$LASTEXITCODE"; ($out | ConvertFrom-Json).Count
+```
+
+Use `--json` to check. The plain `list` renders a table but exits 255 through PowerShell
+(native-stderr quirk), which reads as a failure when it isn't.
+
+**Do not** verify sign-in by watching the URL from inside the open browser. NotebookLM
+redirects through several hostnames and can settle on a Gemini-branded title, so a naive
+`"notebooklm.google.com" in url` check misses a completed login. Ask the user instead.
 
 ## Autonomy Rules
 
