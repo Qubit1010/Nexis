@@ -27,6 +27,23 @@ Strong shape: "AI Automation Engineer | Agentic Workflows | Claude, Python, n8n"
 Check: does it contain the words a client would actually type? Does it read specialist, not
 generalist? The algorithm favors specialists [Q2].
 
+### 1b. Hard platform constraint: NO external links in the overview
+
+**Upwork rejects the overview if it contains any external URL.** The error is: "Links to external
+websites are not allowed in your profile overview. You can add work samples and portfolio links in
+the Portfolio section on this page."
+
+This bites the obvious move of listing recent client sites as proof. Never put a domain in the
+overview, not even bare (`example.com` without `https://` still trips it).
+
+**Instead:** describe the work by type ("Recent builds: trading education platforms, media agency
+sites, SaaS products") and let the Portfolio section carry the actual links. That section wants them
+anyway, and a portfolio piece with a visual and a measurable outcome converts better than a bare
+domain in a wall of text.
+
+*Source: hit live 2026-07-26 while pasting a rewritten overview. Not in the research corpus, which
+has no coverage of Upwork's overview content-validation rules.*
+
 ### 2. First two lines of the overview
 This is a **search preview**, not an introduction [Q1][Q5]. It must carry:
 - who you help

@@ -90,6 +90,8 @@ supabase/.temp/
 # GDrive sync: OAuth token + local folder ID cache (machine-specific)
 **/gdrive_token.json
 **/folder_ids.json
+# Drive folder-id cache written by the save_*_plan.py doc writers
+**/.folder_id
 
 # Eval workspaces (large run outputs, not needed in repo)
 **/*-workspace/

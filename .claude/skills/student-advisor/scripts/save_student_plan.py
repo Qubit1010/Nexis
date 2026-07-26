@@ -38,9 +38,16 @@ def find_gws():
     the cmd.exe 8191-char command line limit. Falls back to gws.cmd with shell.
     """
     npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
-    gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run-gws.js"
+    cli_dir = npm_dir / "node_modules" / "@googleworkspace" / "cli"
+    # The installed entry point is run.js; run-gws.js was the old name. Getting
+    # this wrong silently falls back to gws.cmd through cmd.exe, where content
+    # containing "&" is treated as a command separator and the call dies.
+    gws_js = next(
+        (p for p in (cli_dir / "run.js", cli_dir / "run-gws.js") if p.exists()),
+        None,
+    )
 
-    if gws_js.exists():
+    if gws_js:
         node_exe = None
         for candidate in [
             npm_dir / "node.exe",

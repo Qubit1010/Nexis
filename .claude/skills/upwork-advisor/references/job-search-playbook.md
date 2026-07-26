@@ -12,10 +12,17 @@ Evidence in `research-synthesis.md` Q3 (+ Q4 economics, Q5 timing). Numbers in `
 
 Score a job post before spending a single connect. **Two hard gates, then five scored criteria.**
 
-### Hard gates (fail either = skip, no scoring needed)
+### Hard gates (fail any = skip, no scoring needed)
 
-1. **Payment unverified** → never bid [Q3]
-2. **20+ proposals already in**, or post is **24-48h+ old** → the window is closed [Q3][Q5]
+1. **Posted more than 10 minutes ago** → skip. Validated on Aleem's own 905-proposal dataset:
+   **7.1% hire rate within 10 min vs 1.3% after (5.3x, p = 0.000028)**. 70% of his historical
+   proposals fell on the wrong side of this line. See the Live Query Addition in
+   `research-synthesis.md` and `references/Upwork/upwork-bidding-protocol-2026.md`.
+2. **Payment unverified** → never bid [Q3]
+3. **20+ proposals already in** → the window is closed [Q3][Q5]
+
+> **Why late bids feel fine but aren't:** late proposals still earn interviews at a normal rate, they
+> just close at 10% instead of 66%. Interview rate alone will never reveal this. Judge on hire rate.
 
 ### Score the rest, 0-2 each (max 10)
 
@@ -65,6 +72,21 @@ refreshing a general feed.
 
 **The structural point:** speed only pays if the search is already narrow. Broad searches make you
 fast at bidding on the wrong jobs.
+
+**A quota and the speed window are structurally incompatible.** A daily target means bidding when
+*you* sit down; the window means bidding when the *job* appears. Alerts fix this, discipline does
+not. Quota the screening (review 15-20 posts/day), never the sending.
+
+### Timing by hour of day: a validated negative result
+
+**Do not schedule bids around US business hours to improve conversion.** Measured on 905 real
+proposals, hire rate grouped by US client window came out at 3.5% / 3.4% / 3.4% / 1.4% — three of
+four windows within 0.1 points. Hour of day is close to noise.
+
+What *does* vary by hour is **supply**: how many fresh jobs exist to bid on. For a PKT-based
+freelancer targeting US clients, job-posting volume is densest around **PKT 20:00-01:00**
+(US ET 10:00-15:00). Be alert-ready then because there is more to catch, not because the odds per
+bid improve.
 
 ---
 

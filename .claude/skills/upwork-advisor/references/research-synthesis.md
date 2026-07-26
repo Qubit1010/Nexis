@@ -199,6 +199,7 @@ Be explicit about these rather than extrapolating:
 - **Upwork's exact ranking weights.** Every source infers signals; none has the actual algorithm.
 - **Category-specific reply-rate benchmarks** (AI/automation vs web dev). Only platform-wide and top-quartile agency figures exist.
 - **Invite-to-hire ratio thresholds.** Q2 establishes the ratio matters; no source gives a target number.
+- **Platform content-validation rules** (overview character limits, link restrictions, formatting). Nothing in the corpus. One rule learned the hard way is logged under Live Query Additions (no external links in the overview); assume others exist and are undocumented here.
 
 ---
 
@@ -208,4 +209,55 @@ Be explicit about these rather than extrapolating:
 > `### [YYYY-MM-DD] (Q# - Topic) <question>` then key specifics in bullets, then a Source line
 > noting it came from a live query rather than the locked corpus.
 
-*(none yet)*
+### [2026-07-26] (Q5 - Speed) FIRST-PARTY VALIDATION: the speed window, measured on 905 real proposals
+
+Aleem's **Proposals Timeline** sheet (905 logged proposals, 750 with usable timestamps) independently
+confirms Q5's speed claim, and sharpens it into a hard operating rule.
+
+| Delay | Sent | Hired | Hire rate |
+|---|---|---|---|
+| **Within 10 min** | 226 | 16 | **7.1%** |
+| After 10 min | 524 | 7 | **1.3%** |
+
+**5.3x difference. Two-proportion z = 4.19, p = 0.000028.** Not sample noise.
+
+**The refinement Q5's sources do not capture:** late proposals still earn interviews at a *normal*
+rate (the 31-60 min bucket had the highest interview rate in the whole dataset, 16.3%) but convert
+those interviews at **10%** versus **66%** for sub-5-minute bids. Being late does not stop you being
+*considered*, it stops you being *chosen*. A freelancer watching interview rate alone would never
+detect the problem.
+
+**Corroborating splits from the same dataset:**
+- **Invited vs cold applied:** 27.3% vs 9.4% interview rate (2.9x), consistent with Q2's
+  invite-to-hire-ratio-is-now-a-signal finding.
+- **Hour of day is NOT a lever.** Grouped by US client window, three of four windows land within 0.1
+  points (3.4-3.5%). This **contradicts the common advice** to time bids to US business hours.
+  What varies by hour is job *supply*, not conversion. Useful negative result.
+
+**Caveats:** 23 total hires in the speed split, so treat 5.3x as directional rather than precise.
+155 rows were unusable because the sheet stores one AM/PM value for two different timestamps, and
+only 378 of 905 dates parse (mixed M/D/Y and D/M/Y), so no trend analysis was possible.
+
+**Source:** first-party analysis of Aleem's own Proposals Timeline sheet, not the locked corpus.
+Distilled into `references/Upwork/upwork-bidding-protocol-2026.md`.
+
+---
+
+### [2026-07-26] (Q1 - Profile) Does Upwork allow external links in the profile overview?
+
+**No. The overview rejects any external URL.** Exact platform error: *"Links to external websites are
+not allowed in your profile overview. You can add work samples and portfolio links in the Portfolio
+section on this page."*
+
+- Applies to bare domains too (`example.com` with no protocol still trips validation).
+- Portfolio links belong in the **Portfolio section**, which is where the platform routes you.
+- Practical consequence: proof-by-client-URL cannot live in the overview. Describe the work by
+  category instead and let portfolio pieces carry the links plus a visual and a measurable outcome.
+
+**Source:** hit live while pasting a rewritten overview into Aleem's account, **not** from the
+locked corpus. The 96-source corpus has no coverage of Upwork's overview content-validation rules,
+so this is net-new. Distilled into `profile-playbook.md` step 1b.
+
+**Related gap this exposes:** the corpus documents what to *say* in a profile but nothing about the
+platform's content restrictions (character limits, link rules, formatting). Worth a dedicated pass
+if more validation surprises turn up.
