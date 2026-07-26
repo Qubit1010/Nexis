@@ -5,13 +5,13 @@ When the loaded references + `research-synthesis.md` don't confidently answer a 
 ## Notebook
 - **Title:** `Developer Advisor - Curated Sources 2026`
 - **Notebook ID:** `5c8257d3-cdb3-469e-8d8c-da500a99ea14`
-- **CLI (full path):** `C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe`
+- **CLI (full path):** `$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe`
   (fallback: the `find_exe()` list in `_research/build_corpus.py`)
 
 ## Command (run via PowerShell, not Bash — Python isn't on the Bash PATH)
 ```powershell
 $env:PYTHONIOENCODING="utf-8"
-& "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe" `
+& "$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe" `
   ask "<the question, phrased to pull specifics, tools, numbers>" `
   --json -n 5c8257d3-cdb3-469e-8d8c-da500a99ea14
 ```

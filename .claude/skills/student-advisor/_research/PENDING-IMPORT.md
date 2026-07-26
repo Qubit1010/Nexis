@@ -24,13 +24,13 @@ The importer is **resume-safe** — it skips URLs already in the notebook and on
 ones. After the quota resets, run:
 
 ```powershell
-& "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe" `
+& "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" `
   ".claude\skills\student-advisor\_research\import_to_notebooklm.py"
 ```
 
 Then (optional) refresh the live-query corpus index:
 
 ```powershell
-& "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe" `
+& "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" `
   ".claude\skills\student-advisor\_research\build_corpus.py" sources
 ```

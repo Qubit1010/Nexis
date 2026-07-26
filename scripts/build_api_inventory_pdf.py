@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Generate the Nexis Projects API & Integration Inventory PDF.
 
-One-off report builder. Run with the Python 3.13 install that has reportlab:
-    & "$env:LOCALAPPDATA\Programs\Python\Python313\python.exe" scripts/build_api_inventory_pdf.py
+One-off report builder. Run with the Python install that has reportlab:
+    & "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" scripts/build_api_inventory_pdf.py
 """
 
 from pathlib import Path

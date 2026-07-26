@@ -18,7 +18,7 @@ Bulk-adding 226 URLs produced **100 `ready` + 108 `error`** entries in the noteb
 ## Commands (PowerShell; sandbox disabled for network)
 ```powershell
 $env:PYTHONIOENCODING="utf-8"
-$py = "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe"
+$py = "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe"
 $imp = ".claude/skills/developer-advisor/_research/import_to_notebooklm.py"
 
 & $py $imp status            # ready/error counts

@@ -32,7 +32,7 @@ Ask the skill's own notebook (`Developer Advisor - Curated Sources 2026`, `5c825
 Quick form (PowerShell, not Bash — Python isn't on the Bash PATH):
 ```powershell
 $env:PYTHONIOENCODING="utf-8"
-& "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe" `
+& "$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe" `
   ask "<question, phrased for specifics/tools/numbers>" `
   --json -n 5c8257d3-cdb3-469e-8d8c-da500a99ea14
 ```
@@ -52,15 +52,15 @@ Pick the mode by need:
 
 ```bash
 # Fast cited answer to a specific question (best default for a single decision):
-"C:/Users/Aleem/AppData/Local/Programs/Python/Python313/python.exe" tools/exa/exa_client.py \
+"$LOCALAPPDATA/Programs/Python/Python312/python.exe" tools/exa/exa_client.py \
   answer "which auth service best fits <specific constraints> in 2026"
 
 # Multi-source search when you need to read + compare (best for a stack decision):
-"C:/Users/Aleem/AppData/Local/Programs/Python/Python313/python.exe" tools/exa/exa_client.py \
+"$LOCALAPPDATA/Programs/Python/Python312/python.exe" tools/exa/exa_client.py \
   search "<problem-specific query> 2026 comparison tradeoffs" --num 8 --type deep --highlights
 
 # Deep agentic research for a gnarly, multi-part architecture question:
-"C:/Users/Aleem/AppData/Local/Programs/Python/Python313/python.exe" tools/exa/exa_client.py \
+"$LOCALAPPDATA/Programs/Python/Python312/python.exe" tools/exa/exa_client.py \
   research "<the specific architecture problem, with constraints>" --model exa-research -o report.json
 ```
 Run with `PYTHONIOENCODING=utf-8` set, and the sandbox disabled (network). Prefer `--highlights` over full `--text` to control cost; `answer`/`research` cost more than `search`.

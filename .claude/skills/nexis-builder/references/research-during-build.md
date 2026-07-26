@@ -23,7 +23,7 @@ Follow `developer-advisor`'s `references/research-fallback.md`. In order, stop a
 **Tier 2 — NotebookLM.** The advisor's notebook (`Developer Advisor - Curated Sources 2026`, `5c8257d3-cdb3-469e-8d8c-da500a99ea14`). PowerShell (Python is not on the Bash PATH):
 ```powershell
 $env:PYTHONIOENCODING="utf-8"
-& "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe" `
+& "$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe" `
   ask "<implementation question, phrased for specifics/version/API>" `
   --json -n 5c8257d3-cdb3-469e-8d8c-da500a99ea14
 ```
@@ -31,11 +31,11 @@ $env:PYTHONIOENCODING="utf-8"
 **Tier 3 — Exa live research (research THIS implementation question).** When the corpus misses, research the specific problem. Shared client `tools/exa/exa_client.py` (loads `EXA_API_KEY` from repo `.env`; needs the sandbox disabled for network):
 ```bash
 # Fast cited answer for a single implementation decision:
-"C:/Users/Aleem/AppData/Local/Programs/Python/Python313/python.exe" tools/exa/exa_client.py \
+"$LOCALAPPDATA/Programs/Python/Python312/python.exe" tools/exa/exa_client.py \
   answer "current recommended way to <do X with service Y> in 2026"
 
 # Multi-source compare when you need to read the tradeoffs:
-"C:/Users/Aleem/AppData/Local/Programs/Python/Python313/python.exe" tools/exa/exa_client.py \
+"$LOCALAPPDATA/Programs/Python/Python312/python.exe" tools/exa/exa_client.py \
   search "<framework/service> <specific integration> 2026 best practice" --num 8 --type deep --highlights
 ```
 Run with `PYTHONIOENCODING=utf-8`. Prefer official docs and vendor engineering blogs over listicles. Flag anything from Tier 3 as fresh live research, not from the locked corpus, and record the source in `decisions.md`.

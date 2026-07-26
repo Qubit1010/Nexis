@@ -36,13 +36,13 @@ deadline-, or market-sensitive, since those age fast.
 
 **Notebook:** `Student Advisor - Curated Sources 2026` (built from Exa-curated, hand-vetted sources)
 **Notebook ID:** `ffcd6d51-673d-4308-9400-c01976e3a849`
-**CLI (run via PowerShell, full path):** `C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe`
+**CLI (run via PowerShell, full path):** `$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe`
 (If that path moves, the build script `_research/build_corpus.py` resolves the exe via `find_exe()`.)
 
 Ask the notebook (use `--json` to get citations; `-n` pins the notebook):
 
 ```powershell
-& "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\Scripts\notebooklm.exe" `
+& "$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe" `
   ask "<the user's question, phrased to pull specifics and numbers>" `
   --json -n ffcd6d51-673d-4308-9400-c01976e3a849
 ```

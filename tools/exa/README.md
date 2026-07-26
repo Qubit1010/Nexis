@@ -11,7 +11,7 @@ papers, specialist blogs, primary docs) instead of generic scraped pages.
 - **Key:** `EXA_API_KEY` lives in the repo-root `.env` (gitignored). The client auto-loads it; nothing
   to export.
 - **SDK:** `exa-py` (>= 2.x) installed. Reinstall with `python -m pip install exa-py` if needed.
-- **Python:** `C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe`.
+- **Python:** `$env:LOCALAPPDATA\Programs\Python\Python312\python.exe`.
 
 ## Usage — CLI
 

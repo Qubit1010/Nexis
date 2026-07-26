@@ -127,7 +127,7 @@ need the cited source behind a number. Stay within ~3 files.
   or the topic falls outside the notebook's coverage entirely, use **Exa.ai** to supplement before
   answering. Run via PowerShell with `dangerouslyDisableSandbox: true`:
   ```powershell
-  & "C:\Users\Aleem\AppData\Local\Programs\Python\Python313\python.exe" tools/exa/exa_client.py search "<query>"
+  & "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" tools/exa/exa_client.py search "<query>"
   ```
   Save any substantive findings to `_research/` so they are reusable. Depth is caller-controlled:
   - **"deep search"** — run 3+ queries, pull 10+ sources, synthesize thoroughly before answering.
