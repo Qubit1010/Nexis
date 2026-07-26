@@ -43,7 +43,7 @@ import facebook_resolve as fr  # noqa: E402
 
 DEFAULT_SHEET_ID = "1QikXgf6WbPfpCdMlxs43nYeZRjqpr0kqdmtqAiiu8mI"
 DEFAULT_TAB = "Main"
-DEFAULT_ROWS = "2-165"
+DEFAULT_ROWS = "2-246"  # widened 2026-07-25: rows 166-246 resolved this session
 CONTACT_TYPE_COL = "Contact Type"
 PUSH_STATUS_HEADERS = {
     "instagram": "Instagram CRM Push",
@@ -57,9 +57,27 @@ def parse_row_range(spec):
     return int(a), int(b)
 
 
-def _bio_of(biz):
-    parts = [p for p in (biz.get("category", ""), biz.get("note", "")) if p]
-    return ". ".join(parts).strip()
+def _facts_of(biz):
+    """The verifiable facts from a Main row, kept in SEPARATE labelled fields.
+
+    Previously this was `_bio_of`, which concatenated category + note into `bio` -- the field
+    messages.py treats as the prospect's OWN words. But `note` is a Clutch/GoodFirms review summary
+    written ABOUT them, so the generator kept opening with "your post about..." quoting copy the
+    prospect never wrote. Splitting them lets the prompt cite the underlying facts honestly while
+    never attributing directory prose to the lead. `bio` is deliberately left unset here: nothing on
+    a Main row is self-authored except the slogan, which has its own field."""
+    return {
+        # Explicitly blank, and required: channels.py's crm_record reads lead["bio"] directly for all
+        # three channels (L232/L327/L468), so dropping the key crashes the push AFTER every message
+        # has been generated. Blank is also the honest value -- a Main row carries nothing the
+        # prospect wrote, and LinkedIn files this column under "Recent Post", which there isn't one of.
+        "bio": "",
+        "specialization": (biz.get("category") or "").strip(),
+        "rating": (biz.get("rating") or "").strip(),
+        "reviews": (biz.get("reviews") or "").strip(),
+        "slogan": (biz.get("slogan") or "").strip(),
+        "review_summary": (biz.get("note") or "").strip(),
+    }
 
 
 _NAME_SUFFIXES = {"mba", "phd", "cpa", "esq", "jr", "sr", "ii", "iii", "iv", "cfa", "jd", "md"}
@@ -97,7 +115,7 @@ def _founder_lead(channel_key, biz):
         "location": biz.get("location", ""),
         "profile_url": url,
         "followers": "",
-        "bio": _bio_of(biz),
+        **_facts_of(biz),
     }
     if channel_key == "instagram":
         handle = ch._ig_handle_from_url(url)
@@ -131,7 +149,7 @@ def _company_lead(channel_key, biz):
         "location": biz.get("location", ""),
         "profile_url": url,
         "followers": "",
-        "bio": _bio_of(biz),
+        **_facts_of(biz),
     }
     if channel_key == "instagram":
         handle = ch._ig_handle_from_url(url)
