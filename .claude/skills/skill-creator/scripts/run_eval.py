@@ -8,9 +8,10 @@ for a set of queries. Outputs results as JSON.
 import argparse
 import json
 import os
-import select
+import queue
 import subprocess
 import sys
+import threading
 import time
 import uuid
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -97,20 +98,50 @@ def run_single_query(
         pending_tool_name = None
         accumulated_json = ""
 
+        def _is_match(text: str) -> bool:
+            """Did Claude reach for this skill?
+
+            The harness registers a throwaway command named <skill>-skill-<uuid> so a
+            description can be tested before the skill exists. But once the skill is
+            actually installed, Claude invokes the REAL name instead, and matching only
+            the throwaway name reports 0% for a skill that triggers perfectly. Accept
+            either, so the harness works pre- and post-install.
+            """
+            return clean_name in text or skill_name in text
+
+        # select() only works on sockets on Windows, not pipes, so polling the
+        # child's stdout with it raises WinError 10093 and every query silently
+        # reports "not triggered". Pump the pipe from a thread instead, which
+        # behaves the same on both platforms. os.read (not stream.read) so we get
+        # data as soon as it arrives and keep early trigger detection.
+        chunk_q: queue.Queue = queue.Queue()
+
+        def _pump(fd: int, q: queue.Queue) -> None:
+            try:
+                while True:
+                    data = os.read(fd, 8192)
+                    if not data:
+                        break
+                    q.put(data)
+            except OSError:
+                pass
+            finally:
+                q.put(None)  # sentinel: EOF
+
+        threading.Thread(
+            target=_pump, args=(process.stdout.fileno(), chunk_q), daemon=True
+        ).start()
+
         try:
             while time.time() - start_time < timeout:
-                if process.poll() is not None:
-                    remaining = process.stdout.read()
-                    if remaining:
-                        buffer += remaining.decode("utf-8", errors="replace")
-                    break
-
-                ready, _, _ = select.select([process.stdout], [], [], 1.0)
-                if not ready:
+                try:
+                    chunk = chunk_q.get(timeout=1.0)
+                except queue.Empty:
+                    if process.poll() is not None:
+                        break
                     continue
 
-                chunk = os.read(process.stdout.fileno(), 8192)
-                if not chunk:
+                if chunk is None:  # EOF
                     break
                 buffer += chunk.decode("utf-8", errors="replace")
 
@@ -144,12 +175,12 @@ def run_single_query(
                             delta = se.get("delta", {})
                             if delta.get("type") == "input_json_delta":
                                 accumulated_json += delta.get("partial_json", "")
-                                if clean_name in accumulated_json:
+                                if _is_match(accumulated_json):
                                     return True
 
                         elif se_type in ("content_block_stop", "message_stop"):
                             if pending_tool_name:
-                                return clean_name in accumulated_json
+                                return _is_match(accumulated_json)
                             if se_type == "message_stop":
                                 return False
 
@@ -161,9 +192,9 @@ def run_single_query(
                                 continue
                             tool_name = content_item.get("name", "")
                             tool_input = content_item.get("input", {})
-                            if tool_name == "Skill" and clean_name in tool_input.get("skill", ""):
+                            if tool_name == "Skill" and _is_match(tool_input.get("skill", "")):
                                 triggered = True
-                            elif tool_name == "Read" and clean_name in tool_input.get("file_path", ""):
+                            elif tool_name == "Read" and _is_match(tool_input.get("file_path", "")):
                                 triggered = True
                             return triggered
 

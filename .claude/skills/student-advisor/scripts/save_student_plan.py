@@ -24,7 +24,10 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_DIR = SCRIPT_DIR.parent
-FOLDER_CACHE = SKILL_DIR / ".folder_id"
+# Other skills reuse this writer with their own STUDENT_DOCS_FOLDER (see
+# upwork-advisor/scripts/save_upwork_plan.py). Let them cache to their own file so
+# two skills don't overwrite each other's folder id on every run.
+FOLDER_CACHE = Path(os.environ.get("PLAN_FOLDER_CACHE") or (SKILL_DIR / ".folder_id"))
 DRIVE_FOLDER_NAME = os.environ.get("STUDENT_DOCS_FOLDER", "Student Advisor")
 
 

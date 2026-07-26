@@ -1,0 +1,77 @@
+{
+  "skill_name": "upwork-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's my Upwork profile title: 'Full-Stack Developer & AI Enthusiast | Web Development, Automation, Data Analysis'. And my overview opens with 'I am a passionate developer with 5+ years of experience delivering high-quality solutions for clients worldwide.' Can you review it?",
+      "expected_output": "Profile mode. Should split the diagnosis into search signals (title, first two overview lines, 15 skill tags) vs conversion elements (portfolio, photo, video), and note that fixing the wrong half is wasted work. Should flag the title as generalist when the 2026 algorithm favors specialists, and apply the three-layer formula (general service | specific specialty | primary tools). Should kill the 'I am a passionate' opener because the first two lines are a search preview needing who-you-help + outcome + one quantitative proof point. Must deliver an actual rewrite of both the title and the first two lines, not just a description of what to write. Should cite specifics: exactly 15 skill tags, irrelevant tags cause de-ranking, 90%+ JSS critical for placement.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Found a job: 'Need AI automation expert to build a lead qualification agent. Budget $2,500. Looking for someone who can start immediately.' Client has 42% hire rate, $8k spent, payment verified, 11 proposals already, posted 3 hours ago. Worth bidding? Should I boost?",
+      "expected_output": "Job-search mode. Should run the triage rubric: hard gates pass (payment verified, under 20 proposals, posted within hours). Then score the five criteria, roughly: hire rate 42% = 1 (mid band, below the 60% good threshold), spend $8k = 2, post quality = 2 (specific problem and budget), competition 11 proposals + 3 hours = 1, fit to AI automation specialty = 2. Total around 8/10, above the 7.5 bid threshold. Boost recommendation should be yes given 8+ score, $2,500 exceeds the $1,000 boost floor, and relevant proof exists. Should flag 'start immediately' as a mild urgency/anxiety signal. Should end by offering to hand off to upwork-proposal-generator, not by writing the proposal.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I've sent 60 proposals this month and only got 3 replies. What am I doing wrong? Should I start boosting more?",
+      "expected_output": "Proposal-strategy mode. Should compute 5% reply rate against the ~15% platform average and 22-30% top-quartile benchmark, and diagnose this as a targeting or first-two-lines problem, not a volume problem. Must push back on boosting: if win rate is low, boosting and volume accelerate losses. Should recommend cutting proposal count and raising the fit threshold to 7.5/10. Should cover the speed windows (0-5 min critical, avoid the 5-10 min valley, 12-15 min rebound), the first-two-lines diagnosis requirement, the question-opener finding (up to +479% replies), and the 150-300 word range. Should not write a proposal.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "How close am I to Top Rated Plus?",
+      "expected_output": "Badges mode. Must state the actual requirements: Top Rated Plus is top 3%, requires maintaining Top Rated plus $10,000+ earned in the past 12 months plus large category-relevant contracts with no negative outcomes. Critically, should NOT compute a distance or quote a JSS figure, because upwork-context.md flags the stats as unconfirmed (the existing skills contradict each other at 93% vs 100%) and because the '$20K+ lifetime' figure says nothing about the 12-month window that badges actually use. Should ask for current JSS and 12-month earnings before answering. Should also note Top Rated needs 90% JSS sustained across 13 of the last 16 weeks, not as a snapshot.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Honestly is Upwork even worth it anymore in 2026? Feels like AI killed freelancing and everyone's undercutting each other.",
+      "expected_output": "Strategy mode. Should push back on the premise rather than agreeing. The sourced position: Upwork shifted from a volume job board to a structured ecosystem favoring specialists; AI removed low-complexity commodity work but raised the premium on judgment-driven work, with complex-AI freelancers earning +34% on average per Upwork's Future Workforce Index 2026. Should note specialists earn ~35% more than generalists. Should give the five-part strategy (specialize, be an AI orchestrator not executor, bid like an ad budget at a 7.5/10 threshold, retainers for the 5% fee tier after $10k per client, protect JSS). Should surface the meta-play: Upwork as a case-study and credibility engine feeding the independent channel, which aligns with rather than conflicts with growing NexusPoint beyond it. Should diagnose which of the four causes applies rather than issuing a blanket verdict.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "I have one client who's been with me 8 months and a bunch of one-off projects. Should I be trying harder to keep the small ones?",
+      "expected_output": "Retention mode. Should give the target portfolio shape of 2 long-term anchors plus 3-5 rotating project clients, and diagnose one anchor as fragile. Should present the retainer math: Upwork's fee drops to 5% after $10,000 billed with a single client, plus no connects spent, no proposal time, and positive JSS signal from long relationships. Should distinguish which clients are worth keeping (compounding scope, prompt payment, clean private feedback) from which to fire early (scope-creepers, dispute-trending), noting that firing bad-fit clients early protects JSS. Should hand off the actual retainer pitch or reactivation message to upwork-reply-drafter rather than drafting it.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Write me a proposal for this job: 'Looking for a developer to build a Shopify to HubSpot integration that syncs orders and triggers follow-up emails. Budget $1,200.'",
+      "expected_output": "HANDOFF TEST. Must NOT write the proposal. Should recognize this as a request for the artifact and route to upwork-proposal-generator. May optionally offer a one-line strategic note (e.g. the job is above the $1,000 boost floor, or which results-bank entry maps to a multi-tool ops flow), but the proposal copy itself must come from the generator skill. Failure looks like drafting proposal paragraphs here.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "My client just messaged: 'This is looking good but can you also add a dashboard showing the analytics? Should be quick.' What do I say?",
+      "expected_output": "HANDOFF TEST. This is a client message needing a reply, which is upwork-reply-drafter's territory (its Q3 scope-creep and change-control material: Swap/Extend/Explore, never begin out-of-scope work until a new milestone is funded). Must route there rather than drafting the reply. May note strategically that 'should be quick' is a scope-creep signal, but the reply text belongs to the other skill.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "What's the average reply rate specifically for AI and automation jobs on Upwork versus web development jobs?",
+      "expected_output": "HONESTY TEST. The corpus does not contain category-specific reply-rate benchmarks; this is explicitly listed in the synthesis 'Known gaps' section. Must say so plainly rather than estimating or inventing a figure. Should give what IS documented (platform-wide ~15%, top-quartile agency 22-30%) and clearly label it as not category-split. May offer the live-search fallback. Failure looks like producing a confident per-category number.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Should I set up specialized profiles for my AI work and my web dev work separately?",
+      "expected_output": "TIME-SENSITIVITY TEST. Should surface that one source in the corpus states specialized profiles were phased out in May 2026, that this date is already past relative to the 2026-07-26 corpus build, and that it rests on a single source for a structural platform change. Must NOT confidently advise either way from the corpus alone. Should ask Aleem what he actually sees in his account settings, or offer to verify against live Upwork docs. Should note the underlying strategic point still holds regardless: the algorithm favors specialists over generalists, so splitting attention across two positionings has a cost.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "How do connects actually work now, and how many should I be buying per month?",
+      "expected_output": "Proposal-strategy or job-search mode. Should give the documented economics: connects cost $0.15 each, a standard proposal costs 6-16 connects ($0.90-$2.40), boosting adds 10-60 connects. Should explain Boost mechanics accurately: it buys a top-4 slot, you pay only if you land top-4 or the client interacts, and connects are refunded if you're outbid before engagement. Should note Freelancer Plus pays off above 8 proposals/month for the 80-connect bundle. Critically, should reframe the question: successful freelancers don't run a fixed proposal count, they manage acquisition cost against win rate, so the answer depends on Aleem's win rate. Should note the corpus does not document connect cost by specific job size (a Known gap).",
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "I want to raise my rates. I'm at $35/hr and I just finished a big project and got Top Rated.",
+      "expected_output": "Strategy mode. Should identify this as a repositioning event, not a routine increment: badge earned plus a major project completed justifies a 30-50% increase, versus the routine 15-25% every six months. So roughly $45-$52/hr. Should specify application mechanics: new rates go on all new proposals immediately, existing hourly contracts get 30 days' notice framed factually as a market adjustment without apologizing. Should state that on pushback the move is to cut scope, never the rate. May note the undercharging tell (consistently booked out means underpriced) and the ~35% specialist premium as supporting context.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  { "query": "Can you review my Upwork profile? My title is 'Full-Stack Developer & AI Enthusiast'.", "should_trigger": true },
+  { "query": "I've sent 60 proposals this month and only got 3 replies. What am I doing wrong?", "should_trigger": true },
+  { "query": "Is this job worth spending the connects on? Client has 42% hire rate and $8k spent.", "should_trigger": true },
+  { "query": "How close am I to Top Rated Plus on Upwork?", "should_trigger": true },
+  { "query": "Honestly is Upwork even worth it anymore in 2026?", "should_trigger": true },
+  { "query": "I want to raise my rates on Upwork. I'm at $35/hr and just got Top Rated.", "should_trigger": true },
+  { "query": "How do connects and boosted proposals actually work now?", "should_trigger": true },
+  { "query": "Which Upwork jobs should I be bidding on to get better clients?", "should_trigger": true },
+  { "query": "How do I rank higher in Upwork search and get more invites?", "should_trigger": true },
+  { "query": "Should I niche down on Upwork or stay a generalist?", "should_trigger": true },
+
+  { "query": "Write me a proposal for this job: 'Looking for a developer to build a Shopify to HubSpot integration that syncs orders and triggers follow-up emails. Budget $1,200.'", "should_trigger": false },
+  { "query": "Need AI automation expert to build a lead qualification agent that scores inbound leads and routes them to the right sales rep. Must integrate with our existing CRM. Budget $2,500. Looking for someone who can start immediately.", "should_trigger": false },
+  { "query": "My client just messaged: 'This is looking good but can you also add a dashboard showing the analytics? Should be quick.' What do I say back?", "should_trigger": false },
+  { "query": "A client on Upwork is asking for a discount. How should I reply?", "should_trigger": false },
+  { "query": "Write a LinkedIn post about AI agents for small businesses.", "should_trigger": false },
+  { "query": "How do I get more clients through cold email and LinkedIn outreach?", "should_trigger": false },
+  { "query": "Help me debug this Python script that keeps throwing a KeyError.", "should_trigger": false }
+]

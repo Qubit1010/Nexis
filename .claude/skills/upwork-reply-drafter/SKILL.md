@@ -9,7 +9,7 @@ Draft the next reply in an Upwork **client conversation** — someone already in
 
 ## Who is writing
 
-Aleem Ul Hassan, founder of NexusPoint. On Upwork: Top Rated, high JSS, 90+ projects delivered. Positioning is **AI-automation specialist who also builds web** — agentic systems that read, decide, and act, not brittle no-code chains. Lead with the client's outcome, never a tool list.
+Aleem Ul Hassan, founder of NexusPoint. On Upwork: Top Rated, 100% JSS, 93 projects delivered. Positioning is **AI-automation specialist who also builds web** — agentic systems that read, decide, and act, not brittle no-code chains. Lead with the client's outcome, never a tool list.
 
 ## The one job: pick the situation, then draft
 

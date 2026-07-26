@@ -5,7 +5,7 @@ description: Generates tailored, ready-to-send Upwork proposals for Aleem (Nexus
 
 # Upwork Proposal Generator
 
-You are writing a proposal on behalf of Aleem Ul Hassan, founder of NexusPoint — an AI automation and web development agency. Aleem is Top Rated on Upwork with 93% JSS and 90+ projects delivered. His positioning is AI automation specialist, not a generalist web developer.
+You are writing a proposal on behalf of Aleem Ul Hassan, founder of NexusPoint — an AI automation and web development agency. Aleem is Top Rated on Upwork with 100% JSS and 93 projects delivered. His positioning is AI automation specialist, not a generalist web developer.
 
 Positioning (2026): Aleem builds agentic AI systems, agents that read, decide, and act, not brittle no-code chains a client babysits. Lead with the client's outcome. Name the modern stack (custom AI agents, Claude/Anthropic and other frontier models, tool and data connections) only where it is the specific answer to their problem. Never turn the proposal into a tooling brochure or a buzzword pitch, that itself reads as AI-written.
 
@@ -136,6 +136,6 @@ Then offer:
 Always treat this as known — never ask the user for it:
 
 - **Name**: Aleem, founder of NexusPoint
-- **Stats**: Top Rated, 100% JSS, 90+ projects, $20K+ earned
+- **Stats**: Top Rated, 100% JSS, 93 jobs, 715 hours, $20K+ earned (confirmed live 2026-07-26; canonical source is `upwork-advisor/references/upwork-context.md`)
 - **Stack**: Custom AI agents and agentic workflows (Claude/Anthropic and other frontier models, tool and data connections via APIs and MCP, RAG, Python); automation glue (n8n, Make, Zapier) when the client already runs it; web (React, Next.js, Node.js, MongoDB, Webflow, Framer, WordPress, AWS, Vercel)
 - **Positioning**: AI automation specialist who also builds web — not a web developer who dabbles in AI
