@@ -55,8 +55,10 @@ LOG_HEADERS = [
 
 def find_gws():
     npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
-    gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run-gws.js"
-    if gws_js.exists():
+    cli_dir = npm_dir / "node_modules" / "@googleworkspace" / "cli"
+    # run.js is the current entry point; run-gws.js is the old name kept as fallback.
+    gws_js = next((p for p in (cli_dir / "run.js", cli_dir / "run-gws.js") if p.exists()), None)
+    if gws_js:
         node_exe = None
         for candidate in [
             npm_dir / "node.exe",

@@ -37,16 +37,18 @@ def find_gws():
     On Windows, prefer the standalone compiled gws.exe (shipped in the CLI
     package's bin/) so calls run with shell=False: no cmd.exe re-tokenization,
     which is what breaks on JSON bodies containing quotes/`>`/markdown.
-    Falls back to node + run-gws.js, then gws.cmd with shell=True.
+    Falls back to node + run.js, then gws.cmd with shell=True.
     """
     npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
     gws_exe = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "bin" / "gws.exe"
     if gws_exe.exists():
         return ([str(gws_exe)], False)
 
-    gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run-gws.js"
+    cli_dir = npm_dir / "node_modules" / "@googleworkspace" / "cli"
+    # run.js is the current entry point; run-gws.js is the old name kept as fallback.
+    gws_js = next((p for p in (cli_dir / "run.js", cli_dir / "run-gws.js") if p.exists()), None)
 
-    if gws_js.exists():
+    if gws_js:
         node_exe = None
         for candidate in [
             npm_dir / "node.exe",

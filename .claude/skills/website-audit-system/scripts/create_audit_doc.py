@@ -27,11 +27,13 @@ DRIVE_FOLDER_NAME = "NexusPoint Website Audits"
 
 
 def find_gws():
-    """Find gws: prefer direct node+run-gws.js to bypass Windows 8191-char cmd limit."""
+    """Find gws: prefer direct node+run.js to bypass Windows 8191-char cmd limit."""
     npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
-    gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run-gws.js"
+    cli_dir = npm_dir / "node_modules" / "@googleworkspace" / "cli"
+    # run.js is the current entry point; run-gws.js is the old name kept as fallback.
+    gws_js = next((p for p in (cli_dir / "run.js", cli_dir / "run-gws.js") if p.exists()), None)
 
-    if gws_js.exists():
+    if gws_js:
         node_exe = None
         for candidate in [
             npm_dir / "node.exe",

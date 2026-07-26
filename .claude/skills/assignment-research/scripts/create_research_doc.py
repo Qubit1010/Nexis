@@ -31,13 +31,15 @@ DRIVE_FOLDER_NAME = "University Research Notes"
 def find_gws():
     """Find gws and return (cmd_list, use_shell).
 
-    On Windows, prefer calling node + run-gws.js directly to bypass
+    On Windows, prefer calling node + run.js directly to bypass
     the cmd.exe 8191-char command line limit. Falls back to gws.cmd with shell.
     """
     npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
-    gws_js = npm_dir / "node_modules" / "@googleworkspace" / "cli" / "run-gws.js"
+    cli_dir = npm_dir / "node_modules" / "@googleworkspace" / "cli"
+    # run.js is the current entry point; run-gws.js is the old name kept as fallback.
+    gws_js = next((p for p in (cli_dir / "run.js", cli_dir / "run-gws.js") if p.exists()), None)
 
-    if gws_js.exists():
+    if gws_js:
         # Find node.exe
         node_exe = None
         for candidate in [
