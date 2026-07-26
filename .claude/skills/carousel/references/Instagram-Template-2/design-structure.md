@@ -11,7 +11,7 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 - **Slide order:** Cover (1) -> Body (2..N-1) -> CTA (N).
 - **Generation protocol:** one slide per image, generated one at a time. Never tiled, never a deck. See `gem.md` OUTPUT FORMAT.
 - **Two visual registers:**
-  - **Cinematic Dark** (cover + CTA): full-bleed photo, deep red/maroon color grade, heavy film grain.
+  - **Cinematic Dark** (cover + CTA): full-bleed photo, deep navy/blue color grade (brand blue wash, `#4FA3F7` to `#1C5FA8`, over near-black `#0A1420` shadows), heavy film grain.
   - **Editorial Light** (body): warm cream background with fine dot grid, clean typographic layout.
 - **Tone:** editorial, cinematic, high-contrast. Dark bookends, clean interior. Stops the scroll.
 - **Identity:** `@{{HANDLE}}` centered near the very top of cover and CTA slides only. Body slides carry no branding strip or header.
@@ -27,7 +27,8 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 | Teal accent | `#B8DDE0` | CTA action word + quoted keyword tint |
 | Pill fill | `#FFFFFF` | cover bottom pill |
 | Pill text | `#0D0D0D` | cover pill label |
-| Cinematic shadows | `#1A0808` | cover/CTA photo color grade base |
+| Cinematic shadows | `#0A1420` | cover/CTA photo color grade base (near-black navy) |
+| Cinematic blue wash | `#4FA3F7` -> `#1C5FA8` | cover/CTA photo color grade tint (agency brand blue) |
 
 ## Type stack
 
@@ -45,7 +46,7 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 ## Slide anatomy
 
 ### Cover (slide 1)
-- **Background:** full-bleed cinematic photo, deep red/maroon dominant color grade, heavy film grain overlay. Subject should fit the post topic (person, crowd, environment, symbolic object).
+- **Background:** full-bleed cinematic photo, deep navy/blue dominant color grade (agency brand blue wash `#4FA3F7` to `#1C5FA8` over near-black `#0A1420` shadows), heavy film grain overlay. Subject should fit the post topic (person, crowd, environment, symbolic object).
 - **Handle:** `@{{HANDLE}}` — small, white, centered ~60-80px from the top edge.
 - **Pre-line (optional):** small italic intro phrase centered above the main headline ("How To", "The", "Why", etc.).
 - **Giant headline:** 2-3 lines of extra-condensed heavy sans, white, each line filling ~85% of the slide width. The hook. Tight leading.
@@ -65,7 +66,7 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 - No pill, no page number, no ticket badge.
 
 ### CTA / Close (slide N)
-- **Background:** full-bleed cinematic photo — a different scene from the cover (crowd overhead, abstract environment, texture). Same deep-red color grade + film grain.
+- **Background:** full-bleed cinematic photo — a different scene from the cover (crowd overhead, abstract environment, texture). Same deep navy/blue color grade + film grain.
 - **Handle:** `@{{HANDLE}}` — small, white, centered near the top.
 - **Pre-lines:** 1-2 small centered lines, white, conversational teaser (e.g. "want to know / how do we scale it?").
 - **Action word:** giant extra-condensed heavy sans, centered, white with light teal tint. This is the comment trigger instruction (e.g. "COMMENT").

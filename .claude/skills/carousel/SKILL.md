@@ -18,7 +18,7 @@ Reusable design templates live in `references/<Template>/`. Each has a `design-s
 - **Instagram-Template-1** (`references/Instagram-Template-1/`) — blue-gradient statue cover +
   terracotta editorial body slides. Source images in `docs/Instagram-Template-1/`.
 - **Instagram-Template-2** (`references/Instagram-Template-2/`) — cinematic dark film-grain cover
-  + CTA (deep red/maroon photo) with clean cream dot-grid body slides. Mixed bold-sans + italic-serif
+  + CTA (deep navy/blue photo, agency brand blue #4FA3F7 to #1C5FA8) with clean cream dot-grid body slides. Mixed bold-sans + italic-serif
   headlines, hand-drawn arrow annotations, screenshot visuals. Comment-to-DM CTA mechanic.
   Source images in `docs/Instagram-Template-2/`.
 - **Instagram-Template-6** (`references/Instagram-Template-6/`) — resource/tool showcase format.
@@ -27,17 +27,36 @@ Reusable design templates live in `references/<Template>/`. Each has a `design-s
   pill. Dark-gradient CTA with dotted-border pixelated keyword pill and "Comment -> DM" mechanic.
   Best for: top-N tool lists, GitHub repo showcases, AI skill packs, plugins, frameworks.
   Source images in `docs/Instagram-Template-6/`.
+- **Instagram-Template-8** (`references/Instagram-Template-8/`) — step-by-step build/tutorial
+  format. Off-white grid-paper background throughout. Cover: dashed pill kicker, 3-line headline
+  with a terracotta accent word, browser-mockup preview bleeding off the bottom. One overview slide
+  lists 3-5 stacked colored file/item cards. Numbered step slides are threaded by a single vertical
+  color-gradient progress rail (blue -> purple -> orange -> green) with a phase-colored step badge,
+  a "PHASE N · NAME" pill, and a cream copy-paste prompt box with a sunburst icon + send button.
+  CTA is centered with a comment-pill mechanic and an identity chip. Best for: "how I built X"
+  walkthroughs, AI workflow tutorials, and any process breakdown with real copy-paste prompts.
+  Source images in `docs/SM-Posts-Templates/Instagram-Template-8/`.
 - **Instagram-Template-10** (`references/Instagram-Template-10/`) — GitHub repo / plugin showcase
-  format. Two visual registers: cinematic dark navy cover with a large 3D plush mascot + multicolor
-  heavy headline (pink + amber + white); cream dot-grid editorial body slides with ultra-heavy black
+  format. Two visual registers: cinematic dark navy cover with a large 3D icon/symbol built fresh per
+  topic (never a generic mascot) + multicolor heavy headline (pink + amber + white); cream dot-grid editorial body slides with ultra-heavy black
   headline, inline screenshot embed, "Why it matters" body text, two tag pills, and an italic serif
   punchline quote. Cream CTA with massive stacked all-caps "COMMENT [KEYWORD] FOR THE [PAYOFF]."
   mechanic. No handle on body or CTA -- identity only on the cover. Best for: curated plugin lists,
   GitHub repo roundups, open-source tool showcases where each item has a URL and a metric.
   Source images in `docs/Instagram-Template-10/`.
+- **Instagram-Template-11** (`references/Instagram-Template-11/`) — vintage kraft-paper zine
+  tutorial format. Magazine masthead (date/handle/page) top and bottom of every slide, warm tan
+  paper texture, masking-tape motif, hand-drawn rust arrows/annotations, and a giant faded ghost
+  numeral behind each step headline. Cover has a taped terminal mockup; overview slide explains the
+  product; numbered step slides pick from four visual variants (terminal demo, provider/option grid,
+  hub/connection diagram, stacked capability cards) matched to what each step shows; closes on a
+  numbered "Pro Tips" checklist and/or a "Why X Over Others" comparison list, then a "Save This"
+  CTA with a ghost-logo watermark. Best for: dev-tool setup guides, CLI/product walkthroughs, AI
+  agent tutorials with real commands and terminal output.
+  Source images in `docs/SM-Posts-Templates/Instagram-Template-11/`.
 
 When a template fits the user's ask, recommend it: tell them to build the Gem once from `gem.md`
-(attach the 4 Knowledge images), then use `input-prompt.md` per post so Gemini renders the slides
+(attach the Knowledge images), then use `input-prompt.md` per post so Gemini renders the slides
 in that exact look, one slide at a time (cover first, then "next" for each following slide). The inline brief + per-slide prompt flow below (Steps 1-4) is the fallback when
 no template applies or the user wants a one-off custom design.
 

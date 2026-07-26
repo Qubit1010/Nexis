@@ -28,7 +28,7 @@ Reply with a one-line confirmation and a numbered slide plan, then wait for my p
 ```
 Slide 1 of 6 -- COVER. Generate ONE 1080x1350 image only.
 Background: deep navy (#080E1C), flat dark.
-Center: large 3D fluffy/plush mascot -- a soft rounded robot with glowing circuit-board eyes and small antenna, warm orange underlighting from below, a few golden sparkle particles around it, fills upper ~60% of canvas. Match the plush stuffed-toy 3D aesthetic from the Knowledge cover image.
+Center: large 3D rendered icon -- an open GitHub repo folder with four glowing code-branch nodes orbiting it, connected by thin light traces, warm orange underlighting from below, a few golden sparkle particles around it, fills upper ~60% of canvas. Match the soft claymation/toy-render 3D material from the Knowledge cover image, but the object itself is this repo/branch symbol, not a mascot.
 Top-right: "01 / 06 ->" small white monospace.
 Bottom headline (ultra-heavy bold sans, 2 lines, left-aligned):
   Line 1: "Top 4" in hot pink (#FF4D8C) + " AI" in warm amber (#FFA031) + " repos" in white -- same heavy font, same line.

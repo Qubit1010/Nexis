@@ -8,7 +8,7 @@ resource lists where each item has a URL and a star count or metric.
 Build the Gem once from `gem.md` (attach the 4 Knowledge images). Then per post:
 
 1. Paste **CONTEXT** (sets the series + identity, no image generated).
-2. Paste **COVER** -- the cinematic dark title card with 3D mascot.
+2. Paste **COVER** -- the cinematic dark title card with a topic-specific 3D icon.
 3. Paste one **BODY** prompt per item slide. Each body slide = one tool/repo/plugin.
 4. Paste **CTA** for the last slide.
 
@@ -38,8 +38,8 @@ Reply with a one-line confirmation and a numbered slide plan, then wait for my p
 ```
 Slide 1 of <N> -- COVER. Generate ONE 1080x1350 image only.
 Background: deep navy (#080E1C), no gradient -- flat dark.
-Center: large 3D fluffy/plush mascot character adapted to <TOPIC> -- warm orange studio lighting from below, subtle sparkle particles, fills upper ~60% of canvas.
-<Describe the mascot: e.g. "a soft rounded robot with glowing circuit-board eyes" or "a fluffy cube creature with lightning-bolt pupils" -- match the plush/3D aesthetic of the Knowledge cover.>
+Center: large 3D rendered icon/symbol that literally depicts <TOPIC> (not a mascot or character) -- warm orange studio lighting from below, subtle sparkle particles, fills upper ~60% of canvas.
+<Describe the object: a real, specific thing that represents the topic, e.g. "an isometric stack of OS panels with a glowing AI chip core at the center" or "a padlock split down the middle with light leaking through the crack" or "a magnifying glass hovering over a grid of tool icons" -- match the soft claymation/toy-render 3D material and warm lighting of the Knowledge cover, but invent the object fresh per topic.>
 Top-right: "01 / <N> ->" small white monospace.
 Bottom headline (ultra-heavy bold sans, 2 lines, left-aligned):
   Line 1: "<PINK WORD>" in hot pink (#FF4D8C) + " <AMBER WORD(S)>" in warm amber (#FFA031) + " <WHITE WORD(S)>" in white -- all same heavy font, same line.
@@ -94,5 +94,5 @@ Notes:
 - Fix any slide with: `regenerate slide N, same style, change <X>`.
 - Attach a real screenshot of each item before its BODY prompt for the most accurate embed.
 - The BODY kicker label is fully flexible -- swap "PLUGIN" to "REPO", "TOOL", "SKILL", "RESOURCE", etc.
-- The cover mascot should be adapted to the post topic -- a fluffy robot for AI tools, a plush cursor for code tools, a soft lock for security tools, etc.
+- The cover object must be a literal, specific 3D symbol for the post topic, not a generic mascot -- an OS layer stack + glowing chip for an "AI operating system" post, a cracked padlock for a security breach post, a magnifying glass for a tools roundup, gears fused with a brain for an automation post, etc. Never default to a fluffy/plush creature.
 - See `example-post.md` for a fully filled 6-slide set.

@@ -25,7 +25,7 @@ Reply with a one-line confirmation and a numbered slide plan, then wait for my p
 
 ```
 Slide 1 of 6 — COVER. Generate ONE 1080x1350 image only.
-Style: full-bleed cinematic photo, deep red/maroon color grade, heavy film grain. Subject: a lone figure at a workstation in a dark industrial environment, silhouetted against glowing screens or machinery — feels powerful and technical.
+Style: full-bleed cinematic photo, deep navy/blue color grade (agency brand blue wash #4FA3F7 to #1C5FA8 over near-black #0A1420 shadows), heavy film grain. Subject: a lone figure at a workstation in a dark industrial environment, silhouetted against glowing screens or machinery — feels powerful and technical.
 Handle (small, white, centered near top): "@aleem_uh"
 Pre-line (small italic, white, centered): "How To"
 Giant condensed-heavy-sans headline, white, 2 lines each ~85% slide width, tight leading:
@@ -109,7 +109,7 @@ No footer, no page number, no pill. One image only.
 
 ```
 Slide 6 of 6 — CTA. Generate ONE 1080x1350 image only.
-Style: full-bleed cinematic photo — overhead shot of a dense crowd of people, dark maroon/deep red color grade, heavy film grain. Different scene from the cover.
+Style: full-bleed cinematic photo — overhead shot of a dense crowd of people, deep navy/blue color grade (agency brand blue #4FA3F7 to #1C5FA8), heavy film grain. Different scene from the cover.
 Handle (small, white, centered near top): "@aleem_uh"
 Pre-lines (small, centered, white): "want the full automation map?" / "here is how to get it."
 Giant condensed-heavy-sans, centered, white with light teal tint: "COMMENT"

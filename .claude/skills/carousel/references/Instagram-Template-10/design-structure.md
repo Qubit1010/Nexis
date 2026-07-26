@@ -18,7 +18,7 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 
 | Register | Slides | Background | Tone |
 |---|---|---|---|
-| **Cinematic Dark** | Cover only | Deep navy (#080E1C) | 3D mascot, multicolor headline |
+| **Cinematic Dark** | Cover only | Deep navy (#080E1C) | 3D topic icon, multicolor headline |
 | **Editorial Light** | Body + CTA | Warm cream (#F5F0E8) with dot grid | Structured editorial layout |
 
 ## Palette
@@ -57,7 +57,7 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 ### Cover (slide 1)
 
 - **Background:** deep navy (#080E1C), no gradient needed — flat dark.
-- **Center:** large 3D character illustration, centered/slightly upper center, filling ~50-60% of canvas height. The character is a fluffy/plush mascot adapted to the post topic, with warm studio lighting (warm orange glow from below), subtle sparkle particles.
+- **Center:** large 3D rendered icon/symbol, centered/slightly upper center, filling ~50-60% of canvas height. The object is a purpose-built symbolic representation of the specific post topic (never a generic mascot or character), rendered in a soft claymation/toy-render material style with warm studio lighting (warm orange glow from below), subtle sparkle particles. Choose the actual object from the topic itself — e.g. an operating-system layer stack with a glowing AI chip core for "AI operating system," a cracked/broken padlock for a security breach post, a magnifying glass over a grid for a tools roundup, gears fused with a brain for automation. The object must be recognizable and literal to the topic, not a cute creature standing in for it.
 - **Top-right:** page counter "01 / NN ->" in small white monospace.
 - **Bottom:** two-line heavy sans headline, left-aligned or centered, spanning bottom ~25% of canvas:
   - Line 1: mixed-color words — pink accent for the kicker/number word, amber accent for the main topic word(s), white for the rest.

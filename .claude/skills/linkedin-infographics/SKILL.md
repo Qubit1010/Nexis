@@ -49,6 +49,14 @@ spec), a `gem.md` (a Gemini Gem to build once), an `input-prompt.md` (the per-po
   right. Row accent colors cycle: orange, teal, purple, amber, rose. Warm cream background (#FAF6F0)
   throughout. Best for: "N patterns for X", design pattern references, architecture guides,
   methodology breakdowns, "how X works" explainers. Source image in `docs/LinkedIn-Template-4/`.
+- **LinkedIn-Template-6** (`references/LinkedIn-Template-6/`) -- vertical funnel diagram.
+  Bordered "printed sheet" canvas, centered title + freshness stamp pill + three flow arrows. One
+  continuous tapering funnel of 4-6 stacked stage bands runs down the center (each stage narrower
+  than the last, its own flat color, a number badge + name + italic tagline). Each stage is flanked
+  left by "Online Location" (3 bullets) + "KPIs" (3 bullets) panels and right by a "Strategy" panel
+  (3 bullets), panel tints keyed to that stage's color. Best for: marketing/sales funnels, customer
+  journey maps, hiring or onboarding pipelines, product-led-growth funnels, any narrowing multi-stage
+  process needing data and tactics per stage. Source image in `docs/SM-Posts-Templates/LinkedIn-Template-6/`.
 - **LinkedIn-Template-11** (`references/LinkedIn-Template-11/`) -- two-column hybrid layout.
   Large bold title with one key phrase in an inline coral pill (#F07560, white text). 3-box
   definition row (full width, "X =" format, thin amber left-border). Left column (~65%): dark navy

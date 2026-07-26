@@ -33,7 +33,7 @@ Reply with a one-line confirmation and a numbered slide plan, then wait for my p
 
 ```
 Slide 1 of <N> — COVER. Generate ONE 1080x1350 image only.
-Style: full-bleed cinematic photo, deep red/maroon color grade, heavy film grain. Subject: <describe a person, crowd, environment, or object that matches the post topic>.
+Style: full-bleed cinematic photo, deep navy/blue color grade (agency brand blue wash #4FA3F7 to #1C5FA8 over near-black #0A1420 shadows), heavy film grain. Subject: <describe a person, crowd, environment, or object that matches the post topic>.
 Handle (small, white, centered near top): "@<HANDLE>"
 Pre-line (small italic, white, centered): "<intro phrase, e.g. 'How To' / 'The' / 'Why'>"
 Giant condensed-heavy-sans headline, white, 2-3 lines each ~85% slide width, tight leading:
@@ -67,7 +67,7 @@ No footer, no page number, no pill. One image only.
 
 ```
 Slide <N> of <N> — CTA. Generate ONE 1080x1350 image only.
-Style: full-bleed cinematic photo — different scene from the cover (crowd overhead, dark texture, abstract environment). Same deep red/maroon color grade and heavy film grain.
+Style: full-bleed cinematic photo — different scene from the cover (crowd overhead, dark texture, abstract environment). Same deep navy/blue color grade (agency brand blue #4FA3F7 to #1C5FA8) and heavy film grain.
 Handle (small, white, centered near top): "@<HANDLE>"
 Pre-lines (small, centered, white): "<teaser line 1, e.g. 'want to know'>" / "<teaser line 2, e.g. 'how to build it?'>"
 Giant condensed-heavy-sans, centered, white with light teal tint: "<ACTION WORD e.g. COMMENT>"
