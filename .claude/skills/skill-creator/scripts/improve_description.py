@@ -10,6 +10,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -23,7 +24,11 @@ def _call_claude(prompt: str, model: str | None, timeout: int = 300) -> str:
     Prompt goes over stdin (not argv) because it embeds the full SKILL.md
     body and can easily exceed comfortable argv length.
     """
-    cmd = ["claude", "-p", "--output-format", "text"]
+    # Reuse run_eval's resolver: it handles both the .CMD/WinError 2 problem and a
+    # dead shim winning on PATH. Importing keeps one definition instead of two.
+    from scripts.run_eval import _claude_exe
+
+    cmd = [_claude_exe(), "-p", "--output-format", "text"]
     if model:
         cmd.extend(["--model", model])
 

@@ -9,6 +9,7 @@ import argparse
 import json
 import os
 import queue
+import shutil
 import subprocess
 import sys
 import threading
@@ -18,6 +19,42 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
 from scripts.utils import parse_skill_md
+
+
+def _claude_exe() -> str:
+    """Absolute path to a WORKING claude CLI.
+
+    Two separate Windows failures both end up scoring every query as "not
+    triggered", and the resulting report looks like a real measurement rather
+    than a broken harness (every should-trigger query fails, every should-not
+    query passes, summary reads ~50%):
+
+    1. `claude` resolves to a .CMD shim, and CreateProcess will not resolve a
+       bare name to a .CMD the way a shell does, so Popen(["claude", ...]) dies
+       with WinError 2. shutil.which() applies PATHEXT and fixes this.
+    2. The shim that wins on PATH can be a dead redirect. On this machine
+       ~/.local/bin/claude.CMD forwards to an Antigravity path that no longer
+       exists, so it launches fine and immediately exits with "The system cannot
+       find the path specified." which() cannot detect that, since the shim is a
+       real file.
+
+    So prefer the actual packaged binary, then fall back to PATH. Set
+    CLAUDE_CLI to override if the install lives somewhere else.
+    """
+    override = os.environ.get("CLAUDE_CLI", "").strip()
+    if override and Path(override).exists():
+        return override
+
+    appdata = os.environ.get("APPDATA", "")
+    candidates = [
+        Path(appdata) / "npm/node_modules/@anthropic-ai/claude-code/bin/claude.exe",
+        Path.home() / "AppData/Roaming/npm/node_modules/@anthropic-ai/claude-code/bin/claude.exe",
+        Path.home() / ".claude/local/node_modules/@anthropic-ai/claude-code/bin/claude.exe",
+    ]
+    for c in candidates:
+        if c.exists():
+            return str(c)
+    return shutil.which("claude") or "claude"
 
 
 def find_project_root() -> Path:
@@ -69,7 +106,7 @@ def run_single_query(
         command_file.write_text(command_content)
 
         cmd = [
-            "claude",
+            _claude_exe(),
             "-p", query,
             "--output-format", "stream-json",
             "--verbose",
@@ -225,6 +262,7 @@ def run_eval(
 ) -> dict:
     """Run the full eval set and return results."""
     results = []
+    errors: list[Exception] = []
 
     with ProcessPoolExecutor(max_workers=num_workers) as executor:
         future_to_info = {}
@@ -254,6 +292,20 @@ def run_eval(
             except Exception as e:
                 print(f"Warning: query failed: {e}", file=sys.stderr)
                 query_triggers[query].append(False)
+                errors.append(e)
+
+    # A query that never launched is not the same as a skill that did not trigger, but scoring
+    # both as False makes them indistinguishable, and the resulting report looks like a real
+    # measurement: every should-trigger query "fails", every should-not query "passes", and the
+    # summary reads as a plausible ~50%. Surfacing it is the difference between rewriting a
+    # description for no reason and fixing the harness.
+    if errors and len(errors) == sum(len(v) for v in query_triggers.values()):
+        print(
+            f"\nERROR: all {len(errors)} runs failed to execute, so these results measure nothing.\n"
+            f"       First error: {type(errors[0]).__name__}: {errors[0]}\n"
+            f"       If this is WinError 2, the claude CLI could not be launched.",
+            file=sys.stderr,
+        )
 
     for query, triggers in query_triggers.items():
         item = query_items[query]
