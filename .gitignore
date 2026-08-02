@@ -9,6 +9,7 @@ credentials*.json
 # Claude Code local config
 CLAUDE.local.md
 .claude/settings.local.json
+.mcp.json
 
 # Next.js
 .next/
@@ -77,6 +78,11 @@ archives/
 **/_research/sources.json
 **/_research/sources-raw.json
 **/_research/*.log
+
+# Exception: seo-advisor's source index MUST stay tracked. It is the only thing that
+# resolves the [sN] citations in references/research-synthesis.md, and losing it is
+# what left claude-advisor's citations dangling. Public URLs only, nothing private.
+!.claude/skills/seo-advisor/_research/sources.json
 
 # Playwright CLI session logs
 **/.playwright-cli/
