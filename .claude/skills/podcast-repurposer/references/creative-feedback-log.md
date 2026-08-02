@@ -100,3 +100,128 @@ call-to-actions, the shorter/sharper it is, the better."**
   short standalone lines were left untouched on purpose: they're Red's own hand-flagged
   edits from the 2026-06-29 review (softeners, parallel structure, personality beats) — this
   cadence fix only targets mechanical one-sentence-per-line stacking, not deliberate craft.
+
+---
+
+## 2026-07-27 — Red Cajucom (Belle & Perry) — review of `05-hybrid` (Kevyn Rustici interview)
+
+Four Doc comments, two of them substantive.
+
+**1. No real brand names in headlines.** On the hook "This is how you become the next Kodak":
+**"I'm uncomfortable with using actual brand names to disparage (at least for headlines): 1.
+without the full context, people wouldn't know if Kodak was actually a good example to follow,
+or a bad example of what not to follow. 2. Kodak, while not as active anymore, still exists.
+Not sure if we want to be directly comparing ourselves to them."**
+
+**Rule — brand names live in the body, never in a hook or segment title:**
+- A hook is 6-12 words. There is no room in it for the context that tells a reader whether the
+  named company is the model or the warning, so the name reads as a bare swipe at a company
+  that in most cases still trades.
+- Name the outcome instead. "This is how you become the next Kodak" became "This is how you
+  become a cautionary tale," which carries its own valence with nobody's logo attached.
+- The body is fine, as long as the context sits in the same breath ("Kodak invented the digital
+  camera and buried it to protect film sales") and the reference is the guest's own from the
+  transcript, not one we added. Kodak and Xerox stayed in the captions and long-form on that
+  basis, and Red was told so in the reply rather than left to notice.
+- Applies to segment titles too, which surface in the ranking table and read as headlines.
+- Added to `templates/05-hybrid.md` Step 4 hook rules and the Step 7 QA checklist.
+
+**2. Hook rules were checked off without being run.** Red rewrote hook 5 of Segment 2 from
+"I run operations for a 135-year-old company. Here's where I draw the AI line." to **"Running a
+135 year old company, here's where I draw the AI line."** His version is the fix for a rule we
+already had and had ticked as passing: hooks never open with "I".
+
+Three hooks in this deliverable open with "I" (Segment 2 hook 5, Segment 3 hook 4, Segment 5
+hook 2) and Segment 2 hook 1 ran to 13 words against a 6-12 ceiling, while the QA block in the
+shipped doc claimed both rules passed. The client caught what the checklist claimed to have
+checked.
+
+**Rule — QA items get executed, not asserted.** The two mechanical hook checks are now written
+as actions in the checklist ("read the actual first word of all 5", "count them, don't eyeball
+it"). A checklist that is filled in from intent rather than inspection is worse than no
+checklist, because it transfers the review cost to the client.
+
+**3 and 4. Hook selection.** Red confirmed "Your title is not your legacy." as Segment 1's 2nd
+option and picked "This outlasts every title you'll ever hold." as the recommended hook over our
+pick. Both applied. Nothing to generalize beyond what the 2026-06-29 entry already says about
+pre-marking a shortlist, which worked here as intended.
+
+**Addendum — accepting a review round introduces its own defects.** Red's 57 suggestions were
+mostly paragraph merges. Merging two paragraphs in the Docs UI deletes the newline without
+adding a space, so "Accept all" silently produced 13 run-together sentences ("your title.They
+remember", "the door.It's not", "Titles are temporary.How you made"), plus a double space and a
+curly apostrophe. None of it is visible while the suggestions are still pending, because Docs
+renders the join as a line break until you accept.
+
+**Rule — after accepting any review round, scan the accepted text before shipping.** Regex for
+`[a-z0-9)?!"][.!?][A-Z]` (missing space at a merge join), `\w  +\w` (double space), and
+`[\u2018\u2019]` (smart quotes) across every tab. Cheap, and it catches an entire class of defect
+that is invisible during review and obvious to the client after.
+
+Two of Red's edits also needed reverting on content grounds, both caught the same way: "It's
+what you  made the people around you feel" (he meant "how", and "what" breaks the callback to
+the segment's own payoff line) and "they care about your last." (dropped "name", killing the
+first-name/last-name parallel the whole segment turns on). A reviewer's edits get read, not
+rubber-stamped.
+
+---
+
+## 2026-07-28 — Diagnosis: what Red's edit volume actually is
+
+Red reviewed Kevyn Rustici (two rounds) and Kyle Matthys. Kyle alone drew 460 suggestion runs,
+231 paragraph-level changes. Measured rather than eyeballed, because the obvious read was wrong.
+
+**The obvious read, which is false:** "he is undoing our one-sentence-per-line stacking." The
+2026-07-10 cadence rule made that the natural suspicion. The numbers do not support it. The
+share of single-sentence body paragraphs barely moves across his review:
+
+| | before Red | after Red |
+|---|---|---|
+| Kyle | 66% | 64% |
+| Kevyn | 58% | 54% |
+
+He is not changing how many sentences sit in a paragraph.
+
+**What he is actually doing:** moving where paragraphs *end*. On Kyle his structural edits split
+into **129 merges and 57 splits** — both directions, in the same pass. That combination is the
+tell. If paragraphs were simply too short he would only merge. Merging *and* splitting means the
+boundaries are in the wrong places.
+
+```
+OURS   A Christmas tree menorah, because Hanukkah and Christmas landed on the same day
+       that year. I learned 3D modeling.
+
+       Got CAD designs ready. Reached out to manufacturers. Bought the domain. Total,
+       complete failure.
+
+RED'S  A Christmas tree menorah, because Hanukkah and Christmas landed on the same day
+       that year.
+
+       I learned 3D modeling. Got CAD designs ready. Reached out to manufacturers.
+       Bought the domain.
+```
+
+We break by rhythm and length. He breaks by meaning. Our version puts the tail of the
+explanation and the head of the build sequence in one paragraph, then runs the build sequence
+into its own outcome. His gives each idea its own paragraph.
+
+**Rule — one paragraph carries one complete idea; the break goes where the thought turns.**
+Sentence count is an output of that rule, never an input. A paragraph is finished when its idea
+is finished, whether that took one sentence or three. Never start a second idea in the back half
+of a paragraph, never continue one into the next.
+
+Replaces the "1-3 sentences" framing in `templates/05-hybrid.md` Step 4 and
+`references/output-spec.md`, which was measuring the wrong thing and passed while the real
+problem was untouched. The worked example above is now in the template.
+
+**Also changed: the QA checklist stopped being self-attested.** Items claiming "every hook avoids
+I as first word" and "every hook is 6-12 words" shipped false passes twice. They are now
+`scripts/qa_check.py`, which on the two live deliverables found 6 and 10 real violations that the
+hand-checked list had marked as passing. Judgement items stay human; only the mechanically
+checkable ones moved. The idea-boundary rule above cannot be scripted, which is exactly why it
+gets the worked example instead of a checkbox.
+
+**Not everything here is our defect.** Roughly a fifth of Kyle's changes are one editorial
+decision applied many times (quoting "have to" / "get to" 19 times, a colon before an explanation
+7 times), and a real slice catches genuine errors of ours. Some volume is a creative director
+doing the job. The idea-boundary miss is the part that was ours and is now fixed.

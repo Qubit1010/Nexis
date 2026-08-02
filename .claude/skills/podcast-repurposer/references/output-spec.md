@@ -68,7 +68,7 @@ two of the five. The editor reviews from a shortlist, not a flat list.
 ### Captions (3, A/B) — <caption word limit>, self-contained, platform noted
 
 **The label sits alone on its own line, then the caption body is written as its own
-blank-line-separated short paragraphs** (1-3 sentences each, per the cadence rule below) —
+blank-line-separated short paragraphs** (one complete idea each, per the break-at-the-idea rule below) —
 never one dense run-on line. The tabbed Google Doc exporter (`md_to_gdoc.py --tabs`) turns a
 bold label with nothing after it into its own bold paragraph, and blank-line-separated text
 below it into separate spaced paragraphs. A caption written as `- **A (...):** <full text>`
@@ -80,7 +80,7 @@ paragraph with the label buried inside it. Follow this shape exactly:
 
 <opening line, on its own>
 
-<1-3 sentence body paragraph>
+<body paragraph — one complete idea, however many sentences that takes>
 
 <CTA line or closing thought, on its own>
 
@@ -99,8 +99,8 @@ Format each post for its platform's native reading behavior:
 
 **LinkedIn:** Open with the most interesting sentence (bold claim, specific moment, or short
 question — never a scene-setter). Punchy opener and CTA, one idea per line; the body writes
-in short 1-3 sentence paragraphs, not one sentence per line throughout — vary cadence so it
-reads as a person talking, not a list. White space, no link in body. ~150-300 words.
+with one complete idea per paragraph and the break where the thought turns, never at a fixed
+sentence count — so it reads as a person talking, not a list. White space, no link in body. ~150-300 words.
 Optimize for dwell.
 
 **Facebook:** Conversational opening, slightly more narrative. Same cadence rule as LinkedIn
@@ -120,9 +120,9 @@ that back apart). Follow this shape:
 
 <opening line — the most interesting sentence, on its own>
 
-<1-3 sentence body paragraph>
+<body paragraph — one complete idea, however many sentences that takes>
 
-<1-3 sentence body paragraph>
+<body paragraph — one complete idea, however many sentences that takes>
 
 <CTA question, on its own>
 

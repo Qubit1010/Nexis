@@ -123,6 +123,10 @@ Rules:
   walking into a conversation with only one option."
 - **No imperative "Stop doing X" hooks** — worst-performing hook family in 2026 data. Stat,
   story, and direct/utility hooks perform best.
+- **No real brand names in a hook or segment title.** A hook has no room for the context that
+  tells a reader whether the named company is the example to follow or the one to avoid, and
+  most of them still exist. Say the outcome instead ("this is how you become a cautionary
+  tale"), and keep the named company for the body, where the context sits in the same breath.
 - **No hedging words** in a hook ("I think", "maybe", "kind of") — they kill confidence and
   dwell.
 
@@ -169,11 +173,39 @@ platform's native reading behavior:
 **LinkedIn posts:**
 - Open with the most interesting sentence — a bold claim, a specific moment, or a short
   provocative question. Not a scene-setter. Run the second-sentence test (Step 3).
-- **Cadence — vary it, don't default to one sentence per line.** The opener and closing CTA
-  stay short and punchy, one idea per line. The body between them — the 2-4 lines of
-  substance — writes in short paragraphs of 1-3 sentences, blending a short line with a
-  slightly longer one, so it reads like someone talking, not a list. White space still
-  separates paragraphs; it no longer forces a break after every single sentence.
+- **Break at the idea, not at the sentence.** This is the single biggest source of editor
+  rework, so get it right the first time. **One paragraph carries one complete idea.** The
+  break goes where the thought turns, never at a fixed sentence count. A paragraph is done
+  when its idea is done, whether that took one sentence or three. Never start a new idea in
+  the back half of a paragraph, and never continue an idea into the next one.
+
+  Counting sentences is not the rule and never was. An editor rewriting this will merge
+  *and* split in the same pass, which is the signal that boundaries are in the wrong place,
+  not that paragraphs are the wrong length:
+
+  ```
+  WRONG (breaks mid-thought — the menorah explanation and the build sequence share a
+  paragraph, then the build sequence runs into its own outcome):
+
+    A Christmas tree menorah, because Hanukkah and Christmas landed on the same day
+    that year. I learned 3D modeling.
+
+    Got CAD designs ready. Reached out to manufacturers. Bought the domain. Total,
+    complete failure.
+
+  RIGHT (one idea each — the explanation, then the build, then the outcome):
+
+    A Christmas tree menorah, because Hanukkah and Christmas landed on the same day
+    that year.
+
+    I learned 3D modeling. Got CAD designs ready. Reached out to manufacturers.
+    Bought the domain.
+
+    Total, complete failure.
+  ```
+
+  The opener and closing CTA stay short and punchy on their own lines. White space still
+  separates paragraphs; it does not force a break after every sentence.
 - 150-300 words (per voice file default; Red may adjust). Avoid the 300-600 **character**
   "dead zone" — commit to a real post.
 - No link in the post body (kills reach).
@@ -182,8 +214,9 @@ platform's native reading behavior:
 
 **Facebook posts:**
 - Conversational opening — like you're talking to an agent in the room.
-- Same cadence rule as LinkedIn above: short paragraphs of 1-3 sentences in the body (not
-  one sentence per line), punchy opener and CTA. Narrative is fine — avoid walls of text.
+- Same break-at-the-idea rule as LinkedIn above: one paragraph carries one complete idea,
+  the break lands where the thought turns, punchy opener and CTA. Narrative is fine — avoid
+  walls of text.
 - 100-250 words.
 - No engagement bait ("tag 3 friends", "drop a YES") — it suppresses reach. A genuine
   "tag someone who needs this" invite is fine when it's earned by the content.
@@ -238,7 +271,10 @@ client's editor was doing by hand — do it here instead:
 
 Run these checks on every segment's full output before writing:
 
-- [ ] Every hook avoids "I" as first word
+- [ ] **Run `python scripts/qa_check.py <output>.md` and get 0 failures.** This replaces the
+      hook first-word, hook word-count, run-together-sentence and smart-quote checks — they
+      were self-attested here twice and shipped false passes both times. Read its warnings
+      (imperative hooks, proper nouns in hooks) and clear or justify each one.
 - [ ] All 5 hooks are different archetypes / angles (not rewordings)
 - [ ] Recommended hook + 2nd option marked per segment
 - [ ] No imperative "Stop doing X" hooks, no hedging words, no filler tag-ons
@@ -248,7 +284,7 @@ Run these checks on every segment's full output before writing:
 - [ ] One CTA per caption; IG caption A ends on a save trigger
 - [ ] Every long-form post ends with a specific, experience-based question (no "Thoughts?")
 - [ ] Enumerated steps are numbered; named framework words in ALL CAPS
-- [ ] Long-form posts vary cadence — punchy opener/CTA, body in 1-3 sentence paragraphs (not mechanical one-sentence-per-line); still line-break formatted, not dense walls of text
+- [ ] **Paragraph breaks land at idea boundaries, not sentence boundaries** — reread each post and ask where the thought turns; no paragraph starts a second idea, none continues the previous one (see the worked example in Step 4; this is the top source of editor rework and no script can catch it)
 - [ ] Long-form Facebook posts feel conversational and peer-level (not corporate)
 - [ ] Flow pass done (softeners, possessive reframes, no clunk)
 - [ ] Zero absence-signal violations (no em dashes, no buzzwords, no emojis unless knob ON)
