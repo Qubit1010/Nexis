@@ -1,0 +1,23 @@
+[
+  {"query": "run my linkedin commenting round for today", "should_trigger": true},
+  {"query": "what should i comment on today", "should_trigger": true},
+  {"query": "its been like 3 days since i last did my linkedin comments, can you pull whatever i missed", "should_trigger": true},
+  {"query": "find me some posts worth commenting on, i want to actually do the engagement thing consistently this week instead of just scrolling", "should_trigger": true},
+  {"query": "add these 4 profiles to my target list and then do a run: linkedin.com/in/someone, linkedin.com/in/another, plus two more i'll paste after", "should_trigger": true},
+  {"query": "draft comments for the posts in docs/linkedin-comments/2026-07-31.md, i already ran the fetch", "should_trigger": true},
+  {"query": "the commenter only gave me 2 posts this morning, is the apify actor broken or is that just how it is", "should_trigger": true, "note": "KNOWN GAP, do not chase with more trigger phrases. Measured 0.0 on 2026-07-31 even after the description was given this query's wording almost verbatim ('it only gave me 2 posts', 'is the apify actor broken'). Adding the phrasing moved nothing, which points at the documented triggering limitation rather than a description flaw: Claude skips skills for things it judges it can answer directly, and this reads as a yes/no question about tool behaviour rather than a task. Low practical cost, since answering directly means reading the drop counts, which is what the skill would say to do anyway. Further description edits here would overfit to one query."},
+  {"query": "i want to borrow reach from bigger accounts instead of grinding my own posts. whats the daily habit look like", "should_trigger": true},
+  {"query": "can you look at what ruben hassid and nick saraev posted in the last day and give me something intelligent to say on each", "should_trigger": true},
+
+  {"query": "i only post 2x a week and my reach is fine but my follower count is stuck. whats the lever here that doesnt mean posting more", "should_trigger": false, "note": "Moved from should-trigger after the 2026-07-31 run. This asks WHICH lever, not to run it, and SKILL.md's own boundary routes strategy and benchmark questions to marketing-advisor (whose linkedin-playbook holds the answer). Kept as a near-miss negative: the correct behaviour is to answer the strategy question, then optionally offer a run."},
+  {"query": "write me a linkedin post about why most AI agent projects fail, i want it in my voice with a real example from client work", "should_trigger": false},
+  {"query": "i need a carousel for instagram about the 5 stages of automating a sales pipeline, 8 slides, branded", "should_trigger": false},
+  {"query": "draft a connection request note for this prospect, hes a marketing agency owner in denver with about 15 staff", "should_trigger": false},
+  {"query": "whats a good engagement rate on linkedin for someone with under 5k followers, and is 40% reach actually good or am i reading it wrong", "should_trigger": false},
+  {"query": "reply to this upwork client, hes asking for a discount after we already agreed the scope", "should_trigger": false},
+  {"query": "push the new linkedin leads from the instant leads sheet into the CRM with touch 1 messages", "should_trigger": false},
+  {"query": "scrape the comments off this linkedin post so i can see who engaged, i want them as leads", "should_trigger": false},
+  {"query": "someone left a really hostile comment on my post about pricing. how do i respond without it turning into a thread war", "should_trigger": false},
+  {"query": "optimize my linkedin profile headline and about section, im getting profile views but nobody messages me", "should_trigger": false},
+  {"query": "turn my last blog post into a week of linkedin content, text posts plus hooks", "should_trigger": false}
+]

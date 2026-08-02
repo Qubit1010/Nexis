@@ -83,8 +83,10 @@ Default to this for educational/framework content - it out-performs text and vid
   Do NOT write 3-4 sentence paragraph blocks - dense blocks get skimmed and kill dwell time
   (the #1 ranking signal: a 61s+ read earns ~13x the engagement of a 3s skim). White space
   IS the format. Arc: hook -> why it matters -> 2-4 short beats -> resolution/principle.
-- **No external link in the body** (cuts reach 50-70%). If you must link, tell the reader it
-  is in the comments and add it 30-60 min after posting.
+- **No external link in the body** (cuts reach 50-70%) and **none in the first comment either**
+  - that is penalized too, and the wait-30-60-min version is only "least bad", not safe. Use
+  "comment X and I'll send it", or link from the profile. Canonical rule:
+  `marketing-advisor/references/linkedin-playbook.md` -> Decision rules.
 - **CTA:** one specific question that invites a real reply. Never "Follow me", "repost", or
   "share this".
 - **No emojis. No em dashes.**

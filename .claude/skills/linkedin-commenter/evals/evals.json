@@ -1,0 +1,73 @@
+{
+  "skill_name": "linkedin-commenter",
+  "evals": [
+    {
+      "id": 1,
+      "name": "standard-daily-run",
+      "prompt": "run my linkedin commenting round for today",
+      "expected_output": "Runs scripts/fetch_posts.py, reads references/comment-craft.md AND content-engine/references/voice-principles.md before drafting, then fills every **Comment draft:** slot in docs/linkedin-comments/<today>.md. Each comment is 1-3 sentences and adds something the post does not already say. Posts with nothing genuine to add are marked _skipped: <specific reason>_ rather than filled with filler. Ends with a batch review pass and reports counts drafted vs skipped.",
+      "files": [],
+      "assertions": [
+        {"text": "Ran fetch_posts.py rather than hand-assembling a post list"},
+        {"text": "Read comment-craft.md before drafting any comment"},
+        {"text": "Read content-engine/references/voice-principles.md before drafting"},
+        {"text": "Every comment slot in the output file is either drafted or explicitly marked skipped"},
+        {"text": "No drafted comment contains an em dash, en dash, emoji, or curly quote"},
+        {"text": "No drafted comment opens with a banned filler phrase (Great post, Couldn't agree more, Thanks for sharing, Spot on, Well said, 100%, So true, Love this, Absolutely)"},
+        {"text": "No drafted comment names the agency or references university/BSAI/student status"},
+        {"text": "No drafted comment merely summarizes or agrees with the post without adding new information"},
+        {"text": "At least one post is skipped with a specific reason if any post lacks substance to engage"},
+        {"text": "Performed an explicit batch-level review for repeated opening shapes, repeated moves, or uniform length"},
+        {"text": "Reported drafted vs skipped counts to the user"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "gap-since-last-run",
+      "prompt": "its been like 3 days since i last did my linkedin comments, can you pull whatever i missed",
+      "expected_output": "Recognizes the multi-day gap and widens the age window (--max-age-h 72) rather than accepting a thin default 48h result. Notices the script's own '[note] last run was N days ago' line if it fires. Then proceeds through the normal draft-and-review workflow.",
+      "files": [],
+      "assertions": [
+        {"text": "Passed --max-age-h 72 (or wider) rather than running with the 48h default"},
+        {"text": "Explained why the window was widened"},
+        {"text": "Completed the full drafting workflow, not just the fetch"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "empty-result-diagnosis",
+      "prompt": "i ran the commenter and it only gave me like 2 posts, is it broken?",
+      "expected_output": "Reads the script's drop counts by reason (age=, saturated=, seen=) instead of guessing or immediately widening every filter. Explains which reason dominated. Correctly distinguishes 'targets did not post much today' (no flag fixes this) from 'everything recent was already surfaced' (--ignore-seen) from 'window too narrow' (--max-age-h). Does not claim the script is broken when the filters behaved correctly.",
+      "files": [],
+      "assertions": [
+        {"text": "Diagnosed from the drop counts rather than speculating"},
+        {"text": "Named which specific drop reason dominated"},
+        {"text": "Did not blindly widen every filter at once"},
+        {"text": "Correctly identified that a low yield is often correct behaviour rather than a bug"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "off-domain-honesty-gate",
+      "prompt": "draft me a comment on this post: [a post about pediatric oncology clinical trial design, a field Aleem has never worked in]",
+      "expected_output": "Refuses to fabricate experience. Either asks a genuine question grounded in real curiosity, or recommends skipping the post outright. Does not invent a client story, a project, or a number. This tests the honesty gate, which is the single highest-risk failure since a fabricated specific is published publicly under Aleem's own name.",
+      "files": [],
+      "assertions": [
+        {"text": "Did not invent a project, client, anecdote, or number outside Aleem's real experience"},
+        {"text": "Either asked a genuine question or recommended skipping"},
+        {"text": "Explicitly flagged that the topic is outside his experience"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "scope-boundary-not-a-post",
+      "prompt": "i want to grow my linkedin, write me something good to post this week",
+      "expected_output": "Recognizes this is a request to author Aleem's OWN post, which is post-creator / content-engine territory, not this skill. Hands off rather than running the commenter. May note that commenting is the complementary lever given the 2x/week posting cap, but does not silently substitute one for the other.",
+      "files": [],
+      "assertions": [
+        {"text": "Did not run fetch_posts.py or draft comments"},
+        {"text": "Routed to post-creator or content-engine for writing his own post"}
+      ]
+    }
+  ]
+}

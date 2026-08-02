@@ -38,15 +38,40 @@
 | Native vertical video ER | **4.7-5.6%** | 30-90s, hook in 1-2s, 9:16 = +71% impressions [s185] |
 | Text post ER | **2.0-4.5%** (expert 6-8%) | Sweet spot 150-300 words / 800-1000 chars [s186] |
 | Newsletter open rate | **40-60%** | Bypasses feed; triggers email+push [s154, s155] |
-| External link in body | **-60-68% reach** | Put link in a comment? Also penalized now [s185] |
+| External link in body | **-60-68% reach** | Link in first comment is also penalized. One rule: don't link, say "comment X and I'll send it" [s185] |
 | Personal vs company page | personal = **8x engagement, 5.6x reach** | Founder-led wins [s85] |
-| Cadence | **3-5 posts/week**; Tue-Thu; 7-10am, 12-1pm, 2-4pm local | [s146, s222] |
+| Cadence | **2-5 posts/week** (3-5 optimal); Tue-Thu; 7-10am, 12-1pm, 2-4pm local | 2/wk is the floor of the acceptable band, not below it [s146, s222, s43] |
+| Comment volume (top creators) | **~150/week** (499% more than average) | Platform hard cap: **90 comments/day** [L6] |
+| Comment impressions | LinkedIn now shows impression counts **on your own comments** | Self-visible only; makes borrowed reach measurable [L7] |
+| Thought Leader Ads CPC | **$2.29 median** (range $0.50-2.00, avg $1.25) | vs single-image $13.23, video $15.61; up to **2x CTR** vs standard Sponsored Content [L8, L9] |
+| Thought Leader Ads budget | platform min **$10/day** ($100 lifetime); practitioner programs start **$1,500-2,000/mo** | Big gap between "possible" and "what operators report working" [L8, L9] |
 | Connection acceptance (avg) | **28.5-30%** | Personalized/pre-warmed: **55-70%**; generic mass: 12-18% [s156, s149] |
 | Safe connection volume | **80-100/wk** (cloud automation 20-25/wk) | <20% acceptance = penalty box [s156, s38] |
 | Connection-note reply | **2.2-3.0%** (down 37% YoY) | [s156] |
 | Post-acceptance DM reply | **10.4% avg**; good 10-25%; elite multi-touch 30-50% | [s156, s157] |
 | InMail (Message Ads) | **57.5% open, 10-25% reply, ~3.2% CTR** | [s148] |
 | Omnichannel lift | LinkedIn+email+phone = **+287% purchase** vs email alone | [s150] |
+
+### Reach + engagement by account size (personal profiles)
+
+The table above is format-level. These are **account-level** and depend on follower bracket - quote the bracket, never a flat number.
+
+| Followers | Median impressions/post (p50) | "Average" band | Top quartile | Good ER |
+|---|---|---|---|---|
+| 0-1K | **148-167** | 150-300 | 400-800 | 2-4% |
+| **1K-5K** | **469-479** | 700-1,500 | 2,000-5,000 | **1.5-3%** (avg 2.34%) |
+| 5K-10K | **774** | 1,500-4,000 | 5,000-12,000 | 1-2.5% |
+| 10K-25K | **1,216** | 4,000-10,000 | 12,000-30,000 | - |
+
+Median across **all** personal profiles: **860/post** (top 5%: 8,400). All company pages: 500 (top 5%: 2,200) [L3]. Platform-wide average ER **3.49%** across 219,456 posts [L5].
+
+**Reach rate rule of thumb:** a healthy post reaches **5-15% of your follower count**; **10%+** = at or above median, **20%+** = top quartile [L4]. Below ~5K followers this ratio can look excellent while absolute impressions stay small - that is a small-base problem, not an efficiency problem. Say which one you're diagnosing.
+
+Sources: Shield Index Jan/Feb 2026 (50K posts tracked) [L1, L2], AuthoredUp [L3], ConnectSafely [L4], Taplio [L5]. **`[Ln]` = net-new sources from the 2026-07-27 live research pass, NOT the locked 234-source corpus** - resolve them in `research-synthesis.md` -> Live Query Additions [2026-07-27], not `sources.json`.
+
+**Two LinkedIn numbers we do NOT have (do not invent them):**
+- **Follower growth rate for a personal B2B profile.** Only a company-page proxy exists: pages at 1K-5K grow **40.75%/year** (~2.88%/mo, ~29-144 followers/mo) [L10]. Page data, not profile data.
+- **Share of impressions from non-followers.** Instagram's is 55% [s130]; LinkedIn's is not published in any source found. This matters - under an Interest Graph it decides whether follower count or surface area is the real lever.
 
 ---
 
@@ -114,7 +139,7 @@ Sources [s43, s166, s167]. Recommended B2B SaaS split: **70% Google / 30% Meta**
 - AI automation project tiers: Entry **$1.5-10k** + $0.5-1.5k/mo; Core **$10-35k** + $1.5-4k/mo; Premium **$35-100k+** + $4-10k+/mo [s32].
 - Three-tier pricing close rate **75%** vs 55% (two options) vs 35% (single) [s27]. AI audit gateway ($2-5k) converts **40-60%** into core builds [s28].
 - Dark funnel = **~38% of B2B pipeline** (51% PLG); use self-reported attribution ("How did you hear about us?") blended 70% digital / 30% survey [s162, s48].
-- Track: SQL rate, pipeline/channel, CAC, CAC payback, LTV:CAC, CTOR + reply rate (not opens), POAS (not just ROAS). Ignore raw traffic, impressions, opens, follower counts [s206].
+- Track: SQL rate, pipeline/channel, CAC, CAC payback, LTV:CAC, CTOR + reply rate (not opens), POAS (not just ROAS). Ignore raw traffic, impressions, opens, follower counts [s206]. **Scoped exception:** follower count is still a vanity *KPI*, but below ~5K it is a real *constraint* on the reach ceiling - see `linkedin-playbook.md` -> "Is follower growth even the goal?".
 
 ---
 

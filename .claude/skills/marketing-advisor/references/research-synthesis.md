@@ -620,4 +620,50 @@ Key specifics (finer-grained than Q2 above):
 
 Source: Marketing 2026 notebook (within the locked corpus; live-answer citations map to the LinkedIn sources behind Q2 - e.g. the 2026 LinkedIn Algorithmic Landscape report [186], Sales Higher [185], Expandi [156]). Cross-ref `linkedin-playbook.md`.
 
+### [2026-07-27] (Q2 - LinkedIn) Growing a personal B2B account from ~1,800 followers
+
+**Provenance warning - these are NOT the locked 234-source corpus.** The NotebookLM notebook was unreachable (auth expired), so this came from three `research` skill passes instead. **Serper and Tavily were both out of API credit, so all three ran on Exa + Jina only** (2 engines, not 4) - cross-source agreement is correspondingly weaker than the Q1-Q8 corpus. Cite these as `[Ln]`, never as `[sN]`, and never resolve them via `sources.json`. Raw reports: `research/2026-07-27-linkedin-follower-growth-rate-benchmarks-*.md`, `research/2026-07-27-linkedin-growth-without-posting-more-*.md`, `research/2026-07-27-linkedin-thought-leader-ads-*.md`.
+
+**Reach + engagement by follower bracket (the gap Q2 never covered):**
+- Median impressions/post: 0-1K = **148-167**, 1K-5K = **469-479**, 5K-10K = **774**, 10K-25K = **1,216** [L1, L2]. Median across all personal profiles **860** (top 5%: 8,400); company pages 500 (top 5%: 2,200) [L3].
+- Healthy post reaches **5-15% of follower count**; 10%+ = at/above median, 20%+ = top quartile [L4].
+- ER by bracket: <1K **2-4%**, 1K-5K **1.5-3%**, 5K-10K **1-2.5%** [L5]. Platform average **3.49%** across 219,456 posts; 1K-5K accounts average **2.34%** [L5].
+
+**Commenting as a growth channel (Q2 had the algorithm weight but no volume data):**
+- Top creators comment **~150/week** (499% above average); platform hard cap **90/day** [L6].
+- LinkedIn now exposes **impression counts on your own comments** (self-visible only) - borrowed reach is measurable for the first time [L7].
+- Tiered targeting: large creators for visibility, mid-sized for relationships, peers for community [L7].
+- **Honest gap:** no source quantifies followers or profile views gained per comment. Volume norms and platform limits exist; outcome data does not.
+
+**Creator Mode (2026):** relocated to Settings -> Privacy -> Visibility -> Followers; elevates the Follow button as primary profile CTA and unlocks newsletters [L11].
+
+**Thought Leader Ads (zero coverage anywhere in the locked corpus):**
+- Median CPC **$2.29** (range $0.50-2.00, avg $1.25) vs single-image **$13.23**, video **$15.61** [L8, L9]. LinkedIn reports up to **2x CTR** vs standard Sponsored Content [L14]. One head-to-head test: raw personal video +240% CTR vs produced company-page ad [L15] (single test, not a benchmark).
+- Platform minimum **$10/day / $100 lifetime** [L12]; practitioner programs report starting at **$1,500-2,000/mo** [L13].
+- **Honest gap:** no CPM data, so impressions-per-dollar is not computable. No platform-wide TLA-vs-Sponsored-Content CTR benchmark - claims are directional.
+
+**Two things that genuinely do not exist in any source found:**
+1. **Follower growth rate for a personal B2B profile.** Only a company-page proxy: pages at 1K-5K grow **40.75%/year** (~2.88%/mo, ~29-144 followers/mo) [L10]. Hootsuite's LinkedIn 1.08%/mo is entertainment/media, not B2B [L16]. Do not present either as a personal-profile benchmark.
+2. **Share of impressions from non-followers.** Instagram's 55% [130] has no LinkedIn equivalent in print. Under an Interest Graph this is the decisive unknown for whether follower count or surface area is the real lever.
+
+**Sources (net-new, 2026-07-27):**
+- [L1] Shield Index, LinkedIn reach benchmarks by follower bracket, Feb 2026 - https://www.linkedin.com/posts/ajonxyz_linkedin-reach-benchmarks-by-follower-bracket-activity-7435255311663534082-786X
+- [L2] Shield Index, January 2026 benchmarks - https://www.linkedin.com/posts/ajonxyz_linkedin-benchmarks-january-2026-01000-activity-7425154772766347264-fQsC (March 2026 edition, 50K posts tracked: https://theshieldindex.beehiiv.com/p/march-2026-linkedin-reach-benchmarks-by-follower-size - 403s to automated fetch)
+- [L3] AuthoredUp, LinkedIn Metrics to Track in 2026 - https://authoredup.com/blog/linkedin-metrics-to-track
+- [L4] ConnectSafely, How Many Impressions Are Good on LinkedIn (2026) - https://connectsafely.ai/articles/how-many-impressions-good-linkedin-benchmarks-2026
+- [L5] Taplio, LinkedIn Engagement Rate 2026 Benchmarks (219,456 posts) - https://taplio.com/blog/linkedin-engagement-rate
+- [L6] Noah G, How LinkedIn's new content algorithm works ("4 Laws of Commenting") - https://www.linkedin.com/posts/noahg_linkedin-launched-a-new-content-algorithm-activity-7394742438848016384-EvdN
+- [L7] OmniCreator, Smart Comments / comment impression counts - https://www.omnicreator.club/blog/linkedins-new-feature-reveals-the-key-to-growth-smart-comments/ ; Commenti, Commenting-First Plan - https://www.commenti.in/blogs/how-to-grow-on-linkedin-without-posting
+- [L8] ZenABM, LinkedIn Thought Leader Ads: Ultimate Guide 2026 - https://zenabm.com/blog/linkedin-thought-leader-ads-ultimate-guide
+- [L9] Ampy, Thought Leader Ads Complete Guide 2026 - https://goampy.com/resources/thought-leader-ads
+- [L10] Closely, LinkedIn Company Page Benchmarks - https://blog.closelyhq.com/linkedin-company-page-benchmarks-followers-engagement-and-growth-rates/
+- [L11] Cindy Dodd, LinkedIn Creator Mode Has A New Face (2026) - https://www.linkedin.com/pulse/linkedin-creator-mode-has-new-face-heres-where-went-2026-cindy-dodd--apnpe
+- [L12] Stackmatix, LinkedIn Ads Cost 2026 (platform minimums) - https://www.stackmatix.com/blog/linkedin-ads-cost
+- [L13] The B2B Playbook, LinkedIn Thought Leadership Ads - https://theb2bplaybook.com/linkedin-thought-leader-ads
+- [L14] Postiv AI, LinkedIn Thought Leadership Ads (citing LinkedIn's own 2x CTR claim) - https://postiv.ai/blog/linkedin-thought-leadership-ads
+- [L15] Alex Berman, Thought Leadership Ads LinkedIn (240% CTR test) - https://alexberman.com/thought-leadership-ads-linkedin
+- [L16] Hootsuite, Social media benchmarks 2026 - https://blog.hootsuite.com/social-media-benchmarks/
+
+Cross-ref `linkedin-playbook.md` -> "Growing the account" and `channel-benchmarks.md` -> "Reach + engagement by account size".
+
 ---
