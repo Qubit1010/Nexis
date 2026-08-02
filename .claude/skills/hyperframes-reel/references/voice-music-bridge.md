@@ -45,7 +45,11 @@ Outputs into `public/reels/<slug>/`:
   **Per-beat duration = `endMs − startMs`** (seconds = `/1000`).
 
 Length/tuning flags (`--speed`, `--pitch-semitones`, `--no-post`, …) are documented in reel-creator's
-`references/voice-cloning.md`. Default speed 0.82 reads a touch tight; lower it to stretch.
+`references/voice-cloning.md`. **Default speed is 0.76** (lowered from 0.82 on 2026-07-29 — Aleem
+flagged 0.82 as "a bit fast" on a finished reel, and this file had already noted it read "a touch
+tight" without anyone acting on it). Only override per-run with `--speed` if a script is long enough
+to push the reel past the ~50s ceiling; the fix for a long reel is normally to **cut a line, not to
+speed the voice back up**.
 
 ## 2. Sync the visuals to the voice
 

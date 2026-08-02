@@ -1,0 +1,51 @@
+{
+  "slug": "marketing-report",
+  "platform": "linkedin",
+  "title": "The Weekly Marketing Report Your Team Will Actually Read",
+  "voiceScript": "Most weekly marketing reports are forty charts nobody reads. Someone spends five hours a week building it, about seventy five thousand dollars a year of manager time, and nobody acts on any of it. Here's the test that fixes it. A good report catches things. One team spotted a broken tracking setup in twenty four hours instead of finding it a quarter later. That's the whole job. So cut it to the numbers that change a decision, put the recommendation in the first line, and automate the collecting. ASUS saved ninety hours a week doing exactly that. And the best reports read in under five minutes. Follow for the build.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "Most weekly marketing reports are forty charts nobody reads. ",
+      "headline": "Forty charts. *Nobody reads them.*",
+      "sub": "the weekly data graveyard"
+    },
+    {
+      "id": "cost",
+      "type": "problem",
+      "voiceText": "Someone spends five hours a week building it, about seventy five thousand dollars a year of manager time, and nobody acts on any of it. ",
+      "headline": "*$75,000 a year* of manager time",
+      "sub": "five hours a week, acted on by no one"
+    },
+    {
+      "id": "test",
+      "type": "solution",
+      "voiceText": "Here's the test that fixes it. A good report catches things. One team spotted a broken tracking setup in twenty four hours instead of finding it a quarter later. That's the whole job. ",
+      "headline": "A good report *catches things*",
+      "sub": "24 hours, not a quarter later"
+    },
+    {
+      "id": "fix",
+      "type": "stats",
+      "voiceText": "So cut it to the numbers that change a decision, put the recommendation in the first line, and automate the collecting. ",
+      "headline": "Three rules. *That's the rebuild.*",
+      "sub": "decide, lead, automate"
+    },
+    {
+      "id": "proof",
+      "type": "punch",
+      "voiceText": "ASUS saved ninety hours a week doing exactly that. And the best reports read in under five minutes. ",
+      "headline": "*90 hours a week* back",
+      "sub": "and it reads in under five minutes"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Follow for the build.",
+      "headline": "Follow for the build",
+      "sub": ""
+    }
+  ],
+  "source": "Topic (SM Schedule row 259/267, Jul 30): 'The Weekly Marketing Report Your Team Will Actually Read', reference: Weekly Business Review skill. REGENERATED from the Doc's Source_S tab after v1 was rejected for weak script + visuals. NOTE: v1's headline claim ('about 11 seconds of attention') is NOT supported by the Source tab, which says stakeholders skim reports for ~30 seconds; the 11s figure came from the looser LinkedIn tab and has been dropped rather than repeated. Grounding, all from Source_S: reports with 40+ charts become a 'data graveyard' nobody can find the point in; marketers spend 5+ hours a week copy-pasting numbers, which costs roughly $75,000/year in manager overhead; tracking likes instead of revenue makes executives stop trusting the data. What GOOD reports do: one team caught a technical tracking break in 24 HOURS rather than weeks/a quarter; ASUS saved 90 HOURS PER WEEK by automating their data pulls; high-performing reports read in UNDER 5 MINUTES and lead with 'what do we do next?'. Benchmarks available if needed: CTR 2-5% search / 0.5-1.5% social, ROAS 3-5x ecom / 2x+ B2B, conversion 1-3% B2B / 0.5-2% ecom. POV SHIFT vs v1: v1 argued 'cut to six numbers and lead with the answer' (generic); v2 argues a report's real job is to CATCH things, and time-to-catch is the test that separates a live instrument from a document. SIGNATURE = a TRIPWIRE ON A METRIC LINE: a tangle of ~14 faint chart lines (the 40-chart graveyard) strips down to ONE clean line with a dashed threshold tripwire beneath it; the line dips, CROSSES the wire, and an alert fires instantly stamped '24 HRS' - contrasted against a ghosted version where the same dip passes unnoticed inside the tangle while a month strip runs a full quarter before a late flag appears. Recurring texture = the line crossing the wire and how long until anyone notices. NO agency name / no university (personal-brand content); first person. Voice generated at --speed 0.76 (slower corrected pace)."
+}

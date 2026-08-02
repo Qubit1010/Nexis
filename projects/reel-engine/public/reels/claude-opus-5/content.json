@@ -1,0 +1,51 @@
+{
+  "slug": "claude-opus-5",
+  "platform": "linkedin",
+  "title": "Claude Opus 5",
+  "voiceScript": "Claude Opus 5 doubled its coding score at the same price. That's the number everyone posted. It's not the number that pays you back. This one is: the same job, sixty percent less time, one third fewer tool calls. If you're billing per task, that's the whole difference. But there's a default nobody mentions. Thinking is on now, and thinking spends the same budget as the answer. One cap, two jobs. Set it too low and the answer stops mid sentence. No error. It reports success. Raise your output cap before you upgrade, not after you ship something broken.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "Claude Opus 5 doubled its coding score at the same price. That's the number everyone posted. ",
+      "headline": "The number *everyone posted*",
+      "sub": "43.3% coding, same $5 / $25"
+    },
+    {
+      "id": "turn",
+      "type": "problem",
+      "voiceText": "It's not the number that pays you back. This one is: the same job, sixty percent less time, one third fewer tool calls. ",
+      "headline": "*60% less time.* Same job.",
+      "sub": "one third fewer tool calls"
+    },
+    {
+      "id": "stake",
+      "type": "solution",
+      "voiceText": "If you're billing per task, that's the whole difference. ",
+      "headline": "Billing per task? That's the *whole difference*",
+      "sub": "the line that reaches your invoice"
+    },
+    {
+      "id": "catch",
+      "type": "stats",
+      "voiceText": "But there's a default nobody mentions. Thinking is on now, and thinking spends the same budget as the answer. One cap, two jobs. ",
+      "headline": "*One cap.* Two jobs.",
+      "sub": "thinking is on by default now"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "Set it too low and the answer stops mid sentence. No error. It reports success. ",
+      "headline": "No error. *Reports success.*",
+      "sub": "the failure that looks like a win"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Raise your output cap before you upgrade, not after you ship something broken.",
+      "headline": "Raise the cap *first*",
+      "sub": "not after you ship it"
+    }
+  ],
+  "source": "Topic (SM Schedule row 268, Jul 31): 'Claude Opus 5' - Anthropic launched Opus 5 on Jul 24 2026. v2 REBUILD (Aleem rejected v1's script AND visuals). Every claim traced to the Doc's Source_S + Source tabs before writing: coding 43.3% on Frontier-Bench vs ~19-21% prior (Source_S 'The Numbers'); price unchanged at $5/$25 per million (Source_S); 60% less time + one-third fewer tool calls (Source_S 'Efficiency'); thinking on by default sharing the max_tokens cap -> silent truncation (Source tab line 289, citations [34,35,62]); 'It does not warn you. The job reports success.' (Doc LinkedIn + Instagram tabs). Aleem's POV: the capability headline is a decoy; the number that reaches the invoice is time-per-task, and the one default that can silently break an unattended job is thinking sharing the answer's budget. WHY v1 WAS REPLACED: script spent 3 of 6 beats on 'not the point' before landing anything, and left the concrete numbers (43.3, one-third fewer tool calls) unused; the signature was a thin horizontal pill bar in mostly empty frame that read as a loading bar. SIGNATURE v2 = a vertical PAPER TAPE / token ledger that unspools down the frame printing entries, with a hard MAX_TOKENS cap line across it; grey THINKING entries interleave with white ANSWER entries drawing on the same tape, the final answer line hits the cap and the tape TEARS OFF mid-word on a ragged edge, and a green SUCCESS stamp thumps onto the severed end; the outro slides the cap down and the torn word completes. Recurring texture = a printed tape line meeting a hard cap edge. Deliberately NOT claude-fable-5 (cockpit gauge), NOT claude-obsidian (many filing document-cards), NOT skillopt (one doc under an accept/reject gate), NOT marketing-report (a line crossing a tripwire), NOT the v1 horizontal capacity bar. NO agency name / no university (personal-brand content)."
+}

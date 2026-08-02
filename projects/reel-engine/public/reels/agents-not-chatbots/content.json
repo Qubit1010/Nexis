@@ -1,0 +1,51 @@
+{
+  "slug": "agents-not-chatbots",
+  "platform": "linkedin",
+  "title": "Agents Become The Product, Not The Chatbot",
+  "voiceScript": "The AI question changed this year. Last year everyone asked which chatbot is best. Now buyers ask what one finished task costs, and how often it finishes. An agent task runs five to eight dollars, because it doesn't answer once. It plans, tries, checks, retries. Sixty percent of that cost lands after the first answer exists. You're paying for the checking. And it works now. Agents went from twelve percent success on desktop tasks to sixty six in one year. Which is why you buy reliability, not intelligence. Brilliant and finishing six out of ten loses to dull and finishing nine. Follow for the build.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "The AI question changed this year. Last year everyone asked which chatbot is best. ",
+      "headline": "The question *changed*",
+      "sub": "most businesses haven't noticed"
+    },
+    {
+      "id": "shift",
+      "type": "problem",
+      "voiceText": "Now buyers ask what one finished task costs, and how often it finishes. ",
+      "headline": "Not *which chatbot*. What finishes.",
+      "sub": "cost per task, and how often it lands"
+    },
+    {
+      "id": "mechanics",
+      "type": "solution",
+      "voiceText": "An agent task runs five to eight dollars, because it doesn't answer once. It plans, tries, checks, retries. ",
+      "headline": "It doesn't answer once. It *retries.*",
+      "sub": "$5 to $8 a task"
+    },
+    {
+      "id": "cost",
+      "type": "stats",
+      "voiceText": "Sixty percent of that cost lands after the first answer exists. You're paying for the checking. ",
+      "headline": "You're paying for the *checking*",
+      "sub": "60% lands after the answer exists"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "And it works now. Agents went from twelve percent success on desktop tasks to sixty six in one year. Which is why you buy reliability, not intelligence. Brilliant and finishing six out of ten loses to dull and finishing nine. ",
+      "headline": "Buy *reliability*, not intelligence",
+      "sub": "12% to 66% success in a single year"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Follow for the build.",
+      "headline": "Follow for the build",
+      "sub": ""
+    }
+  ],
+  "source": "Topic (SM Schedule row 262/270, Aug 2). SCRIPT UPGRADED from the Doc's Source_S tab. v1's gap: it was ALL abstract economics ($5-8/task, the 60% rule, the reliability argument) with ZERO trajectory and ZERO proof - nothing showing this is actually working now, which is what makes a buyer act. v2 adds the single strongest number in the source: agent success on the OSWorld desktop-task benchmark jumped from 12% to ~66% IN ONE YEAR. That earns the reliability thesis rather than just asserting it. Retained from v1 (the strongest original lines): cost-per-finished-task as the new buying question, ~$5-8 per agentic task, McKinsey's 60%-of-cost-lands-after-the-first-answer rule ('you're paying for the checking'), and the 6-of-10-brilliant-loses-to-9-of-10-dull reliability punch. Named proof points stay ON SCREEN ONLY, never spoken, to protect TTS and keep the script tight: Tripadvisor's Vesper voice agent at 90% customer sentiment vs 71% for humans, Toyota E-Care agents where 95% of contacted customers book directly with the AI, Rakuten finishing a complex build in 7 hours at 99.9% accuracy. Also available and unused: MCP at 97M installs by March 2026, multi-agent usage +327% in four months, 60-80% of production tokens are waste, Lyzr's SivaClaw running a $100M Series B. SIGNATURE UNCHANGED (never criticized, still distinct): a closed-loop retry racetrack where a task-card laps one check-gate repeatedly while a cost meter ticks, resolving into two parallel mini-loops (brilliant-but-pulled vs dull-but-DONE) - now with a 12->66 trajectory bar added at the punch. FONT FIX applied: the DONE stamp moved off QuicheSans, which renders all-caps with broken mixed-height glyphs. NO agency name / no university; first person. Voice at --speed 0.76."
+}

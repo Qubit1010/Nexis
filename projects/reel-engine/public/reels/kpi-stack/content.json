@@ -1,0 +1,51 @@
+{
+  "slug": "kpi-stack",
+  "platform": "linkedin",
+  "title": "The KPI Stack I Install for Every SMB So Decisions Stop Being Vibes",
+  "voiceScript": "Most small businesses track thirty plus numbers and decide on none. Ask why ad spend went up and the answer is a feeling. A number that doesn't change a decision isn't a KPI. The stack I install is fifteen numbers, and five carry the weight. Lifetime value to acquisition cost, above three to one. Revenue retention above a hundred and five percent. Conversion checked weekly. Quick ratio at one or higher. And days to get paid, US average is twenty eight. Cut followers, page views, raw traffic. They feel like progress and change nothing. The point isn't measurement. It's that arguments end. Follow for the build.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "Most small businesses track thirty plus numbers and decide on none. Ask why ad spend went up and the answer is a feeling. ",
+      "headline": "30+ numbers. Decided on a *feeling.*",
+      "sub": "the tell is always the same"
+    },
+    {
+      "id": "principle",
+      "type": "problem",
+      "voiceText": "A number that doesn't change a decision isn't a KPI. The stack I install is fifteen numbers, and five carry the weight. ",
+      "headline": "Doesn't change a decision? *Not a KPI.*",
+      "sub": "fifteen numbers, five that matter"
+    },
+    {
+      "id": "thresholds",
+      "type": "solution",
+      "voiceText": "Lifetime value to acquisition cost, above three to one. Revenue retention above a hundred and five percent. Conversion checked weekly. Quick ratio at one or higher. And days to get paid, US average is twenty eight. ",
+      "headline": "The *five* that carry it",
+      "sub": "with the number that means healthy"
+    },
+    {
+      "id": "cut",
+      "type": "stats",
+      "voiceText": "Cut followers, page views, raw traffic. They feel like progress and change nothing. ",
+      "headline": "Cut what *feels* like progress",
+      "sub": "followers, page views, raw traffic"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "The point isn't measurement. It's that arguments end. ",
+      "headline": "The point is *arguments end*",
+      "sub": "not measurement"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "Follow for the build.",
+      "headline": "Follow for the build",
+      "sub": ""
+    }
+  ],
+  "source": "Topic (SM Schedule row 261/269, Aug 1). SCRIPT UPGRADED from the Doc's Source_S tab. v1's gap: it named the five groups (cost, value, conversion, cash, channel) but gave ZERO actual target numbers - which is the entire payload of a 'KPI stack' post. A viewer could not tell what 'good' looks like. v2 attaches the real threshold to each of the five, all from Source_S: LTV:CAC > 3:1; Net Revenue Retention > 105%; sales conversion rate reviewed WEEKLY (not monthly) to catch drops; Quick Ratio >= 1.0 (can you cover current liabilities); Accounts Receivable days, US SMB average 27.9 (spoken as 'twenty eight'). Also from Source_S: SMBs should run 15-25 high-level numbers across five core areas; a number that would not change a decision is noise, not a KPI; vanity metrics to cut are website page views, social followers, and raw traffic. Available but unused (kept for a future cut): eNPS 50+ excellent, US Army 7M data points across 28,000+ users, Dubai Ports cut reporting time 50%, Haydenshapes. POV retained from v1 (it was the strongest original line): the point of the stack is not measurement, it is that ARGUMENTS END. SIGNATURE UNCHANGED (it was never the problem and is still distinct): two grey 'FEELING' speech-bubbles clash unresolved over a scatter of vague number-chips, until one verified ratio-chip drops between them and both snap into aligned voltage agreement - now upgraded so the five survivor chips each carry their real threshold, and the resolving chip is the literal 3.2:1 LTV:CAC ratio. NO agency name / no university; first person. Voice at --speed 0.76."
+}

@@ -44,6 +44,19 @@ doc = json.loads(''.join(lines[start:]))
 The **Source tab is ground truth** for numbers/claims; the LinkedIn/Instagram tabs give the voice and
 the hook.
 
+**Prefer `Source_S` for the script.** The Doc usually has both a `Source` tab (long prose) and a
+`Source_S` tab (a fact-dense cheat sheet). `Source_S` is the better script input: it is where the hard
+numbers, benchmarks, named adopters, and the actual technical mechanic live. Two reels in the 2026-07-29
+batch (`video-as-code`, `marketing-report`) were rejected and rebuilt precisely because they had been
+written off the softer LinkedIn tab and came out vague.
+
+**MANDATORY — verify every spoken claim against the Source tabs before generating voice.** List each
+number/claim in the drafted `voiceScript` and point it at its line in `Source`/`Source_S`. Anything
+that does not trace gets **cut, not softened**. This gate exists because `marketing-report` v1 shipped
+with "about 11 seconds of attention" — a figure that appears nowhere in the Source tab (which says
+~30 seconds); it had leaked in from the looser LinkedIn tab. Lint, layout, and contrast checks cannot
+catch a false claim, so this is the only thing standing between a wrong number and a published reel.
+
 ## Step 1 — content.json: verify before reuse
 
 A reel-engine `content.json` may already exist at
@@ -156,6 +169,20 @@ cd videos/<slug> && npx hyperframes render --skill=product-launch-video --qualit
 
 Run with `run_in_background: true` (a ~40s reel renders in ~2min, past the Bash 120s cap).
 
+**MANDATORY — verify the render actually happened; do not trust the exit code.** `hyperframes render`
+**exits 0 on an unknown flag**, printing only `Unknown flag: --x` and rendering nothing. The task
+notification still reports "completed". Twice in one batch (kpi-stack, claude-opus-5) this looked
+exactly like a render that "silently rolled back" — it never ran at all, because the flag is
+`--output`/`-o`, not `--out`. After every render, check freshness and duration:
+
+```bash
+stat -c '%y %n' videos/<slug>/index.html videos/<slug>/renders/reel-silent.mp4   # mp4 MUST be newer
+"$FFMPEG" -i videos/<slug>/renders/reel-silent.mp4 2>&1 | grep Duration          # MUST equal END
+```
+
+If the mp4 is older than `index.html`, or its duration still matches the *previous* `END` constant,
+the render did not run — read the task's output file before re-running.
+
 ## Step 8 — QA-frame gate (mandatory — catches what lint can't)
 
 Lint/check pass compositions that still have **layout bugs** (text overflowing a box, elements
@@ -166,9 +193,30 @@ ffprobe.exe fails standalone with a `swscale-8.dll` error:
 ```bash
 FFMPEG=projects/reel-engine/node_modules/ffmpeg-static/ffmpeg.exe
 for t in 3 7 11 15 18 24 27 31 34 38; do   # ~1 per beat, extra on the signature beat
-  "$FFMPEG" -y -loglevel error -ss $t -i renders/reel-silent.mp4 -frames:v 1 <scratch>/f_$t.png
+  # -ss AFTER -i (output seeking) — see the warning below. Do not reorder these.
+  "$FFMPEG" -y -loglevel error -i renders/reel-silent.mp4 -ss $t -frames:v 1 <scratch>/f_$t.png
 done
 ```
+
+**`-ss` MUST come after `-i`.** With `-ss` *before* `-i`, ffmpeg does input seeking and snaps to
+the nearest preceding **keyframe** — on a `--quality high` render those are sparse, so the frame you
+get back can be several seconds earlier than the timestamp you asked for. This silently invalidates
+the whole QA gate: you inspect what you think is the punch beat and are actually shown the setup.
+It cost a full wrong diagnosis on `claude-opus-5` v2 (the tear looked broken and was not; a browser
+probe of `window.__timelines["main"].time(t)` proved the composition correct while the "t=32.5"
+frame was really from ~t=29). Output seeking is slower and frame-accurate — always use it here.
+
+**When a frame still disagrees with the code, probe the timeline directly** rather than re-rendering
+on a guess: load `index.html` in headless Chromium, call `window.__timelines["main"].time(T)`, and
+read back `getBoundingClientRect()` / computed styles for the elements in question. That separates
+"the composition is wrong" from "the capture or the frame grab is wrong" in one step.
+
+**Never set all-caps text in QuicheSans.** QuicheSans renders capitals with broken mixed-height
+glyphs — `CAUGHT` comes out as `CAUGhT`, `YEAR` as `yEAr`, `SUCCESS` and `DONE` similarly mangled. It
+reads as a typo and **lint, layout, and contrast all pass it**; only reading the rendered frames finds
+it. Use **Urbanist** (`font-weight: 800`, a little `letter-spacing`) for any uppercase label, stamp,
+badge, or kicker. QuicheSans is for **mixed-case display headlines and digits only** — those render
+beautifully. This bug shipped in three reels of the 2026-07-29 batch before it was spotted.
 
 Read every frame. Bugs this gate has caught that lint missed: ai-workspace's punch text overflowing
 its panel/seam box (fixed by dropping the box for a bare full-screen slam + a thin voltage underline);

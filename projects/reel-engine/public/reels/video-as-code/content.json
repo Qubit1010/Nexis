@@ -1,0 +1,51 @@
+{
+  "slug": "video-as-code",
+  "platform": "linkedin",
+  "title": "HyperFrames - Video As Code",
+  "voiceScript": "HeyGen open sourced the engine that turns HTML into finished video. No editor, no timeline. Here's the part that makes it work. It never presses play. It seeks, frame by frame, capturing each one, so what you see in the browser is exactly what renders. Same code, same video, every machine. And the receipts are real. Thirty seven thousand stars, a hundred and fifty ready made blocks, and nineteen skills that teach an agent to build video itself. No React, no build step, and real teams already ship it in production. One line installs it. Follow for the build.",
+  "scenes": [
+    {
+      "id": "hook",
+      "type": "intro",
+      "voiceText": "HeyGen open sourced the engine that turns HTML into finished video. No editor, no timeline. ",
+      "headline": "HTML in. *Finished video* out.",
+      "sub": "no editor, no timeline"
+    },
+    {
+      "id": "setup",
+      "type": "problem",
+      "voiceText": "Here's the part that makes it work. It never presses play. ",
+      "headline": "It never presses *play*",
+      "sub": "that is the whole trick"
+    },
+    {
+      "id": "seek",
+      "type": "solution",
+      "voiceText": "It seeks, frame by frame, capturing each one, so what you see in the browser is exactly what renders. Same code, same video, every machine. ",
+      "headline": "Preview *is* the render",
+      "sub": "same code, same video, every machine"
+    },
+    {
+      "id": "numbers",
+      "type": "stats",
+      "voiceText": "And the receipts are real. Thirty seven thousand stars, a hundred and fifty ready made blocks, and nineteen skills that teach an agent to build video itself. ",
+      "headline": "The *receipts*",
+      "sub": "37.6k stars, 150+ blocks, 19 agent skills"
+    },
+    {
+      "id": "punch",
+      "type": "punch",
+      "voiceText": "No React, no build step, and real teams already ship it in production. ",
+      "headline": "No React. *No build step.*",
+      "sub": "already shipping in production"
+    },
+    {
+      "id": "outro",
+      "type": "outro",
+      "voiceText": "One line installs it. Follow for the build.",
+      "headline": "One line installs it",
+      "sub": "Follow for the build"
+    }
+  ],
+  "source": "Topic (SM Schedule row 258/266, Jul 29): 'hyperframes'. REGENERATED from the Doc's Source_S tab (the fact-dense cheat-sheet version) after the first cut was rejected for a weak script + weak visuals. Grounding, all from Source_S: HeyGen open sourced HyperFrames, an Apache 2.0 engine turning HTML/CSS/JS into professional MP4. Core technical hook = the 'SEEK, DON'T PLAY' model: the renderer never calls play(); it calls window.__hf.seek() frame by frame (seek(0), capture, seek(1/30), capture...) using HeadlessExperimental.beginFrame in chrome-headless-shell, forcing a synchronous layout-paint-composite cycle so preview and render are pixel-identical and deterministic on any machine. Hard numbers: 37.6k GitHub stars, 3.5k forks, 150+ ready-to-use blocks (charts/social cards/transitions), 19 specialized agent skills (plan/lint/render), Node 22+ and FFmpeg the only local requirements, 100MB plugin upload cap, 4K billed at 1.5x. Differentiator vs Remotion: no React, no build step, plain HTML plays as-is. Production users: HeyGen itself, plus tldraw, TanStack, Typeframe. One-line setup: npx skills add heygen-com/hyperframes. SIGNATURE = a TWIN-PANEL SEEK RIG: a browser preview window above and an MP4 output frame below, bound by a frame-index ruler; a struck-through PLAY chip establishes 'never presses play', then a DISCRETE stepper jumps index to index (steps() easing, never a smooth sweep) and each jump STAMPS an identical frame down into the output with an '=' pixel-match tick, counter running to 300. Deliberately NOT the rejected v1 bracket-filmstrip, and distinct from every other reel (twin bound panels + discrete indexed stepping is a new world). Named users appear ON SCREEN only, never spoken, to keep TTS clean. NO agency name / no university (personal-brand content); first person."
+}

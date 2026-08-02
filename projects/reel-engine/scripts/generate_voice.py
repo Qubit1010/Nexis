@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-generate_voice.py <slug> [--speed 0.82] [--device cuda|cpu]
+generate_voice.py <slug> [--speed 0.76] [--device cuda|cpu]
                          [--chunk scene|sentence|none] [--ref PATH] [--ref-text "..."]
                          [--no-post] [--pitch-semitones -0.6] [--bass-db 3.8]
 
@@ -12,7 +12,7 @@ the reference voice, applies the locked "heavy + warm" voice profile, and writes
 the FINISHED public/reels/<slug>/voiceover.wav (24 kHz) — ready for prepare.mjs.
 
 Defaults bake in the tuned recipe: per-scene chunking (natural period pauses, no
-phantom filler words), 0.82 speed, 48 decoding steps, onset-protected seams, and
+phantom filler words), 0.76 speed, 48 decoding steps, onset-protected seams, and
 a pitch-down + low-shelf + loudness post-process. Override any of it via flags,
 or pass --no-post for the raw cloned voice.
 
@@ -43,7 +43,11 @@ import soundfile as sf
 SAMPLE_RATE = 24000  # OmniVoice output rate
 
 # --- Defaults: the locked "Aleem reel voice" recipe (tuned + approved) ---
-DEFAULT_SPEED = 0.82       # measured, natural reel pace
+DEFAULT_SPEED = 0.76       # 2026-07-29: dropped from 0.82 after Aleem flagged the pace as
+                           # "a bit fast" on a finished reel. The old 0.82 was already documented
+                           # in voice-music-bridge.md as reading "a touch tight" and nobody acted
+                           # on it. 0.76 is the approved pace; raise per-run with --speed if a
+                           # script is long enough to push a reel past the ~50s ceiling.
 DEFAULT_NUM_STEP = 48      # cleaner than the model's default 32
 DEFAULT_CHUNK = "scene"    # per-scene = natural period pauses, no phantom fillers
 GAP_SECONDS = 0.42         # silence between scene chunks
