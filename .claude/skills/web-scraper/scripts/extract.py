@@ -25,8 +25,12 @@ from bs4 import BeautifulSoup
 sys.path.insert(0, __import__("os").path.dirname(__file__))
 from _env import get_key  # noqa: E402
 
-LLM_MODEL = "gpt-5.2"          # latest small-capable; falls back to gpt-4.1-mini on model error
-LLM_FALLBACK = "gpt-4.1-mini"
+LLM_MODEL = "gpt-5.4-mini"     # cheap tier of the current gen; nano is the fallback
+LLM_FALLBACK = "gpt-5.4-nano"  # was gpt-4.1-mini, which no longer exists on the account (dead fallback)
+# ponytail: schema extraction is mechanical field-picking, not analysis, so the default reasoning budget
+# is pure waste on a 130-row batch. Dropped on a param error (see _responses_json) so an API that stops
+# accepting it degrades to a normal call instead of failing the run.
+LLM_REASONING = {"effort": "minimal"}
 MAX_INPUT_CHARS = 48_000       # keep the LLM call inside token budget
 
 
@@ -73,11 +77,17 @@ def _strip_fence(text: str) -> str:
 
 def _responses_json(client, model: str, system: str, user: str) -> str:
     try:
-        return client.responses.create(model=model, instructions=system, input=user).output_text
+        return client.responses.create(model=model, instructions=system, input=user,
+                                       reasoning=LLM_REASONING).output_text
     except Exception as e:  # noqa: BLE001 - fall back off the newest model on a model error
-        if model != LLM_FALLBACK and "model" in str(e).lower():
+        msg = str(e).lower()
+        if "reasoning" in msg or "unknown parameter" in msg or "unsupported" in msg:
+            print(f"[extract] {model} rejected reasoning={LLM_REASONING}; retrying plain", file=sys.stderr)
+            return client.responses.create(model=model, instructions=system, input=user).output_text
+        if model != LLM_FALLBACK and "model" in msg:
             print(f"[extract] {model} unavailable ({e}); falling back to {LLM_FALLBACK}", file=sys.stderr)
-            return client.responses.create(model=LLM_FALLBACK, instructions=system, input=user).output_text
+            return client.responses.create(model=LLM_FALLBACK, instructions=system, input=user,
+                                           reasoning=LLM_REASONING).output_text
         raise
 
 
