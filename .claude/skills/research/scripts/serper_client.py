@@ -7,8 +7,8 @@ from __future__ import annotations
 
 import sys
 
-from _env import get_key
-from _http import post_json
+from _env import get_keys
+from _http import post_json, with_key_rotation
 
 ENDPOINT = "https://google.serper.dev/search"
 
@@ -30,7 +30,9 @@ def search(query: str, *, num: int = 10, gl: str = "us", hl: str = "en",
     payload = {"q": query, "num": num, "gl": gl, "hl": hl}
     if tbs:
         payload["tbs"] = tbs
-    data = post_json(ENDPOINT, payload, headers={"X-API-KEY": get_key("SERPER_API_KEY")})
+    data = with_key_rotation(
+        get_keys("SERPER_API_KEY"),
+        lambda k: post_json(ENDPOINT, payload, headers={"X-API-KEY": k}))
     organic = data.get("organic", []) or []
     return {
         "query": query,

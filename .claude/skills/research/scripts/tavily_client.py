@@ -6,8 +6,8 @@ from __future__ import annotations
 
 import sys
 
-from _env import get_key
-from _http import post_json
+from _env import get_keys
+from _http import post_json, with_key_rotation
 
 ENDPOINT = "https://api.tavily.com/search"
 
@@ -36,8 +36,9 @@ def search(query: str, *, depth: str = "basic", max_results: int = 10,
         "include_raw_content": include_raw,
         "topic": topic,
     }
-    headers = {"Authorization": f"Bearer {get_key('TAVILY_API_KEY')}"}
-    data = post_json(ENDPOINT, payload, headers=headers)
+    data = with_key_rotation(
+        get_keys("TAVILY_API_KEY"),
+        lambda k: post_json(ENDPOINT, payload, headers={"Authorization": f"Bearer {k}"}))
     return {
         "query": query,
         "answer": data.get("answer"),

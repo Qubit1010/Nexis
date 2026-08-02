@@ -308,6 +308,15 @@ def backfill_founder_socials(sheet_id: str, tab: str, start_row: int, end_row: i
     if not candidates:
         return {"updated": 0, "skipped": len(batch["businesses"]), "errors": [], "results": []}
 
+    # ponytail: one probe before grinding N rows. Serper+Tavily both out of credit reads as "no backfill
+    # found" on every row, which is indistinguishable from a real negative -- and Exa can't return
+    # instagram.com/facebook.com at all, so there's no fallback worth trying here.
+    probe = R.research("linkedin", mode="general", depth="light", services="serper,tavily", num=1)
+    if probe.get("_error"):
+        print(f"ABORT: {probe['_error']}", file=sys.stderr)
+        return {"updated": 0, "skipped": 0, "aborted": probe["_error"],
+                "errors": [{"error": probe["_error"]}], "results": []}
+
     header = sheets.read_values(sheet_id, f"{tab}!1:1")[0]
     header = W.ensure_columns(sheet_id, tab, header)
     status_col = W.col_letter_for(header, W.STATUS_HEADER)

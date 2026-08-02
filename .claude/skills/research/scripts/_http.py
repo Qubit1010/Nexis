@@ -34,6 +34,29 @@ def post_json(url: str, payload: dict, headers: dict | None = None, timeout: int
         raise HttpError(f"POST {url} failed: {e.reason}") from e
 
 
+# A key that is out of credit/quota, vs a genuinely bad request. Serper says 400 "Not enough credits",
+# Tavily says 432 "exceeds your plan's set usage limit"; 401/403/429 cover revoked + rate-limited keys.
+_EXHAUSTED = ("not enough credits", "usage limit", "quota", "exceeded", "-> 401", "-> 403", "-> 429", "-> 432")
+
+
+def with_key_rotation(keys: list[str], call):
+    """Run call(key) over numbered keys, advancing only when one is exhausted. Raises the LAST error
+    if every key is spent, so the caller still sees a real reason. Mirrors web-scraper's engine rotation.
+    """
+    last: Exception | None = None
+    for i, key in enumerate(keys):
+        try:
+            return call(key)
+        except HttpError as e:
+            if not any(m in str(e).lower() for m in _EXHAUSTED):
+                raise                      # a real error (bad query, malformed payload) -- don't burn keys
+            last = e
+            if i + 1 < len(keys):
+                import sys
+                print(f"[rotate] key {i + 1} exhausted, trying key {i + 2}", file=sys.stderr)
+    raise last if last else HttpError("no API keys configured")
+
+
 def get_text(url: str, headers: dict | None = None, timeout: int = 25) -> str:
     hdrs = {"User-Agent": UA, **(headers or {})}
     req = urllib.request.Request(url, headers=hdrs, method="GET")

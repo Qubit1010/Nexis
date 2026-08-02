@@ -96,9 +96,16 @@ def research(query: str, *, mode: str = "general", depth: str = "light",
     if p.returncode != 0:
         return {"results": [], "_error": (p.stderr or "research failed")[:300]}
     try:
-        return json.loads(p.stdout)
+        out = json.loads(p.stdout)
     except json.JSONDecodeError:
         return {"results": [], "_error": "research emitted non-JSON"}
+    # ponytail: research.py exits 0 even when EVERY service errored (dead credits, quota, bad key), so
+    # an infrastructure outage looks identical to "genuinely nothing out there" -- a 2026-07-28 backfill
+    # logged "no backfill found" on 62 rows while Serper and Tavily were both out of credit. Surface it.
+    if not out.get("results") and "failed:" in (p.stderr or ""):
+        out["_error"] = "all search services failed: " + " | ".join(
+            ln.strip() for ln in p.stderr.splitlines() if "failed:" in ln)[:300]
+    return out
 
 
 def pick_socials(results: list[dict], *, allow_company: bool = False, verify_context: str = "") -> dict:
