@@ -1,0 +1,5238 @@
+{
+  "notebook_id": "c863f492-08a3-472e-93f0-a871a9f60c55",
+  "notebook_title": "SEO Complete Guide 2026 (NexusPoint)",
+  "generated_at": "2026-08-02",
+  "method": "11 deep passes via the in-repo research skill (Exa+Tavily+Serper+Jina fused, content-extracted), deduped by normalized URL, imported into NotebookLM by URL, then per-question ask --json synthesis",
+  "note": "inline [sN] in references/research-synthesis.md resolves to sources[N-1]",
+  "total_found": 399,
+  "source_count": 320,
+  "uuid_to_index": {
+    "c93e11dc-13c4-4e38-a23d-960bfe430cbe": 1,
+    "647ab1a1-d1e9-42bf-a17c-57f8ea88b839": 2,
+    "c9f8c21f-cd6d-4607-9c71-361ec24bab77": 3,
+    "14be9f71-6e99-4cee-b315-45f9ebcc8d82": 4,
+    "4ae7e41a-cf39-4b4a-8a0c-d1d401ac72eb": 5,
+    "fa7fecdd-173d-4b5f-8740-8bed4f8d7608": 6,
+    "980a18ad-194f-4a9e-a918-8b73912809cd": 7,
+    "8387c6c2-07fb-48c3-a962-b718b36b13f4": 8,
+    "ee506d19-f601-45c5-9a41-c9e9c2f352c9": 9,
+    "9f153031-0a3a-4a6c-9224-223a1eba724b": 10,
+    "666e06d8-2791-4c61-9c20-af0492c6648b": 11,
+    "26af0370-a2cf-408b-ba95-e64381100c18": 12,
+    "d4bd903a-b727-4068-8241-233f9f62cf3f": 13,
+    "4de1719f-e769-4626-aaf6-de6008b8d1c8": 14,
+    "195b8aab-4dbc-424a-93d4-db960c78a9bc": 15,
+    "085de605-1a51-492a-9ff7-5afee393dfab": 16,
+    "5e0d53a9-6284-48b9-aaf8-eaabed5a010b": 17,
+    "3e19c4e5-6a87-48c8-9349-6d353774e62f": 18,
+    "aca748f1-2da4-4d69-9277-c527167289c5": 19,
+    "6965205f-5769-4edd-82d9-feb3ac2e1733": 20,
+    "13a85499-ab51-42eb-8ab3-b14050c4bc5d": 21,
+    "e8f67f5e-c507-495f-9b15-d8c0cee713ad": 22,
+    "1ada6112-ced3-4b37-8f2d-5299546ce4b4": 23,
+    "6333ee7c-a27b-4b28-801c-fbc6e14ee6de": 24,
+    "3b38ff91-1c69-4204-a6a9-ba6a2bddc2f9": 25,
+    "c4a4be6e-85e5-4e76-8dbe-a346fa2448ba": 26,
+    "bb39d64a-b021-48d6-b0e8-4e119eed1698": 27,
+    "7ef36c05-1311-4f3c-b565-e9956f73e29f": 28,
+    "5fb8304e-4da4-4618-ba07-f95337d9cecd": 29,
+    "238acb55-8b44-453e-a918-5bf61cdd3638": 30,
+    "6643055f-a115-4295-bc47-a99edc396fa3": 31,
+    "51bcc249-e526-450d-9e2a-12134ee3be61": 32,
+    "6ebcb71a-8d53-43cb-8e68-1f6fd0eb05b5": 33,
+    "11d04671-79d3-427e-9326-c2cc2882b09b": 34,
+    "80d7787b-3afe-4e9d-99c6-24bae43899b2": 35,
+    "97ce9964-8d03-4cc2-968c-d151469cae92": 36,
+    "9aff37ae-a48f-4e07-b748-14110c65bbc4": 37,
+    "a8f002ad-0c5e-41c5-9b4d-ebd04e6c8534": 38,
+    "55f91f68-f33e-4d41-bf92-28bbb6cb7b93": 39,
+    "90f1a693-3df6-4e40-9dc3-59580a37a701": 40,
+    "788e702c-7109-4032-a714-fbf0c32aaf0d": 41,
+    "99ac497e-019a-4c60-b772-e948ec8d05e4": 42,
+    "12cf2264-495d-4b44-ab76-387737651b35": 43,
+    "f588ead2-24b5-4cd0-9bd5-4c00650401b2": 44,
+    "dd572d89-c3d7-4593-a0a8-4c12b4cba8b7": 45,
+    "f1d7ed01-081e-4726-b3fd-732e8f9e9f98": 46,
+    "58cbea21-78cc-40ca-9086-a60e4cb38e0d": 47,
+    "cadd2f20-ff0d-488f-8fd5-f2fae2f9a283": 48,
+    "ddc71f43-2727-466f-8329-8400c612b22d": 49,
+    "e4b209dd-47ae-4aa6-b01c-db4fe0ba79f1": 50,
+    "df9f85f6-8bfd-41ea-b952-93a85e14e30d": 51,
+    "6e71f908-0792-4afa-9a4d-0f1e5619058e": 52,
+    "36f3fdad-5aca-4ef3-86d8-67956e6cea94": 53,
+    "24c6c63d-d7cf-4bae-b46f-cceb829a8c05": 54,
+    "4aee9ef4-6581-4513-9c76-6923ebdae893": 55,
+    "72fa4839-9c81-4fec-bb12-2bcf9c1f0571": 56,
+    "6fe7666d-ef9b-4a3d-9a52-45b58c1b5c26": 57,
+    "8585ca2d-a366-4805-8a6a-abf74d3fb960": 58,
+    "e8c13307-8b9c-406e-934f-7bb20b3de563": 59,
+    "282667d2-821a-4028-a2c6-4f5d1194c567": 60,
+    "a1f9146b-f137-4fe7-9294-d96e7f1d557f": 61,
+    "a7182534-bc2d-4d19-bd0b-cef933ee6708": 62,
+    "fcacc22b-f18a-4e1d-a298-f3f0bcaa554c": 63,
+    "3666105f-1b6c-42ec-ba6a-9114556f5dd3": 64,
+    "873fe489-4b88-422d-bdb3-c51d9fd4c38d": 66,
+    "005c8183-b9b0-4163-9623-2e57456ecda6": 67,
+    "e600f2db-2d79-4702-8d14-b56bc0ce4f02": 69,
+    "959fb3fd-31c0-4536-8ffb-2942fdb637bb": 70,
+    "9d13c8c4-f3f6-41c1-a300-7ac2be58dbd1": 71,
+    "fba687b4-da42-4818-b4b7-86904bd1ee52": 72,
+    "91284363-1128-40b8-96d1-3eee136cb95d": 73,
+    "c1b96388-5f4c-4df9-9e67-0cad9520b18d": 74,
+    "efeb9b43-cf57-44fc-9936-453f154c5cd0": 75,
+    "b2c337eb-1819-4a9f-b718-1e96a5eb3880": 76,
+    "9a8c6fab-3095-4bc1-b1a2-8dd474e7203e": 77,
+    "ab155e84-21f6-460c-abed-86f02b701f9a": 78,
+    "e3327f4e-16b6-4248-80e1-257bf293ec33": 79,
+    "c41b3c3c-c5d1-4cb8-b99c-fc2aefcdc862": 80,
+    "f0ff61d8-791e-449d-947d-3c6fcffad339": 81,
+    "c23ab1f9-d35d-4f58-8438-6fb558cc6d7f": 82,
+    "c39a55a7-5335-4773-985d-2215e38847f7": 83,
+    "83a91f18-a54b-4243-ac8a-d496b6c83de1": 84,
+    "d6817466-8f8a-414b-a239-6ca043d5e21a": 85,
+    "3777a633-bf1f-496f-b0ce-2467d6391851": 86,
+    "67b24250-3564-4bd9-b00f-e99fab125d5d": 87,
+    "800b925d-a9a6-40d3-a8c6-50e077471094": 88,
+    "81a867b1-6e88-4d86-ab24-c34ef97c4809": 89,
+    "6ba1e796-6f65-4838-95e9-ec0b91acc583": 90,
+    "4a7c12ac-01bb-4b88-bb68-ba8c513c0a83": 91,
+    "32c13f85-bd3f-43c1-8ae2-d5b51291f13c": 92,
+    "652cabef-942c-4bdb-9690-0ba2a61ba92c": 93,
+    "ba66ab92-91fe-4ed7-8079-1573b42b87c0": 94,
+    "ac3062b3-601a-4ba1-bc3e-a7cd51cfc34e": 95,
+    "e0b023ab-6c2f-4c83-a4a4-99847afa042b": 96,
+    "346e58fa-2087-4f8b-bdf5-e0a04bb87830": 97,
+    "5eb4e8a0-4c55-46e0-a172-430bb3bec8ee": 98,
+    "df0db677-88c1-46d6-8ec2-541b38993e96": 99,
+    "141c9712-63ba-4cad-bd40-983443e311a5": 100,
+    "2e7cd2ac-4c1f-4140-83e0-0c1ff7f07dba": 102,
+    "71353bc5-69b1-4528-9385-0bf8f421bf02": 103,
+    "ad2ff9f7-2745-4660-9434-2b9c1aedce8d": 104,
+    "10736b9e-46c9-4073-a36e-12ed6b15cd5c": 105,
+    "7e7cac4e-b259-4c33-ac55-419c87e42fec": 106,
+    "aa8f7fd1-67fe-4b65-8c5d-26cf09f920f6": 107,
+    "dbf1b7bd-8115-46fb-9506-a11945953afd": 108,
+    "44b82fc9-5a68-4ecf-92bd-88701598748e": 109,
+    "215e9cd9-70f0-4bd3-a278-e68a413c3733": 110,
+    "d7796ec3-9437-45a7-aee3-722e45b6c346": 111,
+    "c4e0438a-d058-4cc1-981d-b769b8160706": 112,
+    "8315c2e6-c2bc-4286-aa70-5d83e0373a70": 113,
+    "df44af29-48c3-44f0-b47b-defe56337e79": 114,
+    "ffe0fc76-80d7-489b-950b-941b168d247c": 115,
+    "1eebaf74-7096-49c0-914c-8dcd59caa34c": 116,
+    "8984b71a-7c2a-43f7-93f4-84afcbd1ec37": 117,
+    "5963dbec-a29b-47d8-a3e7-1afefb47d54e": 118,
+    "052a141a-4e17-4719-9675-1b63ac02b258": 119,
+    "6239c6d2-3d29-4a0a-8bb5-f6fbb78b585b": 120,
+    "a44c12ea-eb87-4d12-bd7a-d2a092690629": 121,
+    "a0e604f5-15c4-4bf6-8f53-aa7ac8b8ced6": 122,
+    "cbe59ed9-0f93-4aef-b18a-7670dbbf498a": 123,
+    "b80b1af2-4346-4915-9f8e-11c5b7bab1ee": 124,
+    "7fcf9862-f935-465d-b3f3-c037fade9cb4": 125,
+    "3c54cc09-85a6-47e3-b344-15364609457f": 126,
+    "26e8788c-a4dc-4c43-8a0c-b0c02e40ee6c": 127,
+    "829933f7-fb2c-44fa-ba84-4eadac9edd83": 128,
+    "a448c903-2e4d-4099-973d-f0fff30c1b10": 129,
+    "ab688f44-02e5-49bb-b423-350683f8259f": 130,
+    "077bce35-4324-45ff-a44d-75ca41874eac": 131,
+    "29cda14b-ee2d-4f78-a078-51a7a3900fe1": 132,
+    "bf27d361-a29a-40b2-afde-6b3259261aa3": 133,
+    "27edc685-9c41-475e-8738-6bef1aa3b70f": 134,
+    "7db0fcf2-66a6-4f17-95d0-b28f00cfc0c2": 135,
+    "308fc45a-23ad-413b-8f9f-32e2a17a1103": 136,
+    "8e17756a-f077-4cd6-aa85-d65433f14f93": 137,
+    "00b1b970-5649-46f6-8937-1186a8a7cfcc": 138,
+    "16aac96d-2396-43ba-8dd8-c7b82f4d9269": 139,
+    "1fba2fc1-783f-443c-9b93-4960978825aa": 140,
+    "c67acaf1-7177-49fd-8bfe-30ff2d751e5d": 141,
+    "d52b47f6-6704-4990-87fd-94d0831404b7": 142,
+    "a57515e6-9c7f-4c15-b054-0c46e0c2fcb5": 143,
+    "9e84a1a2-76fd-4537-bb9a-f882411d02ba": 144,
+    "472202ee-b868-4a63-ae05-fdd70cb1da37": 145,
+    "102c26da-00ef-4fcb-bad9-fcb36d0d175f": 146,
+    "b29bca87-2f4c-4dd6-a7e4-5094a1f4e765": 147,
+    "cf5bc5c4-c657-4242-bd17-6cfd1123d314": 148,
+    "b7a14fb9-27c0-4dac-98b9-f8d4fbafcf8a": 149,
+    "94225907-5b60-4e8a-8f94-ea18752acbc1": 150,
+    "24100988-7946-4859-bcc4-08a7a44367c8": 151,
+    "5defb65b-f396-430c-957f-f5c7cde88f22": 152,
+    "47292f9f-1288-441a-82bb-57c570f937ce": 153,
+    "734cddfd-4481-49fd-9990-b98c11caf3a2": 154,
+    "2a9f0d36-1633-45b7-b6d4-0814ec94aa32": 155,
+    "22dbb248-cfb5-4b22-92b6-8d683f15e4d5": 156,
+    "f1d8ac33-08df-46f1-b8e8-39e37c8a3df7": 157,
+    "8189b055-72ad-46fd-89f0-2debd3fb51fb": 158,
+    "92c67aa0-e8d6-480d-90f8-6e35a2938730": 159,
+    "b1b6befc-7b23-4f4b-af06-e481952b3405": 160,
+    "0d20e831-60ce-4afa-94d6-9b6aebee596c": 161,
+    "33be678d-54b2-47c6-87d4-87df83c18516": 162,
+    "fbec175a-d831-44d3-a4d5-a1a90affc5ff": 163,
+    "8d002ac2-4892-492d-9d12-6154a349fe29": 164,
+    "61df1317-af91-43ba-9838-9c57ac98ebfd": 165,
+    "26d5df3e-230d-4a64-a558-13796ae9e211": 166,
+    "169c7aae-db3c-476c-a226-3f300139a3cd": 167,
+    "d471d44a-cebd-47c1-a3a3-f51444edb415": 168,
+    "74698a96-c229-42f1-84e4-5e33a13bcb25": 169,
+    "8202d890-7c6a-40cc-a560-f2f561f81857": 170,
+    "af98eabe-9ae1-411b-965d-7cfb67fca875": 171,
+    "4d145e2f-4e6e-4f38-8025-328353eeff34": 172,
+    "f9020ae1-7552-4a21-8d81-e7164fc802cb": 173,
+    "03a8c7b4-c0d1-4cb1-b13f-31b852b49fb1": 174,
+    "2aad8f2a-a53e-41c4-b81f-2611800642b4": 175,
+    "2307fc16-ac62-4b4e-b054-1cc6fb10818a": 176,
+    "b9f5964d-f81e-4d67-863c-ca3e308e2468": 177,
+    "6cab68b6-55c0-45df-9173-2d2735879fa3": 178,
+    "99b5be79-8e85-4b43-b44b-1f4eacc6fc09": 179,
+    "d26468f3-bb95-4a21-907d-124144942a9e": 180,
+    "2e330173-726c-499e-a78e-f696bb6f95d5": 181,
+    "7892a769-70bd-4544-a68b-b5ddef63aa48": 182,
+    "7df9a25b-2324-4e24-a943-a9dd8654ad51": 183,
+    "30bc5081-3043-4144-8c74-a206b1dafa0b": 184,
+    "e3efb01f-1731-4be0-9256-bcc45af741ad": 185,
+    "7d08ceb2-d986-4617-bddf-d02b491c1497": 186,
+    "b5d57dbd-4078-4e3c-adf3-5e0db4594696": 187,
+    "57bbf28a-6ae0-4bba-a668-e9c814867174": 188,
+    "00017de8-1fb5-47a1-9f2f-b125dcaf6043": 189,
+    "6b0aac99-73a4-4926-9315-ec8ea2c55bb6": 190,
+    "c3f0c31b-5a1b-4992-945f-4572f4ce508b": 191,
+    "9a8b4f5b-f2a1-495e-a64c-1334c425e780": 192,
+    "5976b92a-3685-4787-ae0d-31719a361953": 193,
+    "797cc6fd-fd32-4ca0-bdd3-ab8c7a6c73e9": 194,
+    "d4a4aa9b-d422-4955-95c7-ca9ae787ba07": 195,
+    "620f4b20-4b9b-4a30-9226-ad732b852040": 196,
+    "282b871c-e12e-4556-aa0d-0411fbd3bf8e": 197,
+    "11b7d5fc-1799-44ff-9170-c8d551746105": 198,
+    "c41488ad-b3b2-4a5e-9b36-a2ff1d74128b": 199,
+    "428e24a9-e9f2-4e58-890e-d8763c61ee84": 200,
+    "15adbb5d-ab46-4a80-a2a5-211e11c65f4c": 201,
+    "431dc6bb-8425-4ea0-976f-d3489764a13b": 202,
+    "b559bffd-a1bf-4045-94e7-4da0d208cbb4": 203,
+    "ba72f6f6-9b9a-47e8-88bf-a344c13e1daa": 204,
+    "2a467de0-9e31-40a0-a210-0b1fc5fcdf50": 205,
+    "adf1f08d-0be4-4468-9619-e5623d4faf83": 206,
+    "36ac6716-c8e1-435c-90e8-725176566b2d": 207,
+    "c44617d4-9552-4dfc-8969-ad11880d8ae9": 208,
+    "ec84c05e-71ac-4942-84f0-f5c9430a2f7b": 209,
+    "2760ec64-26ea-4a51-ac89-8fd1dd5b9ac5": 210,
+    "170129d4-0a8e-4929-86e4-d82108a129a6": 211,
+    "ec2145f6-0364-4e18-b8ce-89ed734ae092": 212,
+    "afeca306-ae95-4dbb-af86-d4ed903cc27c": 213,
+    "06f3c234-7739-4665-9ace-f5cada028ed2": 214,
+    "ab70c621-02c4-4bbe-9140-3e037023f694": 215,
+    "361d263b-1424-4e4d-96d3-d3afe4afe512": 216,
+    "4a5e6907-a9b8-47a3-b65f-bba9bc9682e0": 217,
+    "74916d3f-f3df-49cf-95fc-5cfeaf932e25": 218,
+    "18a69312-8538-4353-a44b-86a45edb1941": 219,
+    "a16017d8-b377-43c0-b449-37d1c0dbc117": 220,
+    "5107f8a5-bd97-41ca-84ad-1d39f4231ea6": 221,
+    "9f98f9f1-bee4-4c02-92f4-884910e67fd2": 222,
+    "a3ab4a2a-f183-440b-b5ee-77f2a7ea1101": 223,
+    "5719d25f-3b11-4c41-aa02-4c53327bb02c": 224,
+    "fe024fef-581a-4c3d-8884-0729317c0700": 225,
+    "c2d47c05-15b6-46cf-b8dd-d03539a82911": 226,
+    "8e6e6d23-c9d9-42d5-850e-178a4aff1c0b": 227,
+    "4adfa6cb-47dc-41a6-b713-0db2abe057c6": 228,
+    "6bd18af8-8a7d-4c6a-a2b2-1c0b90323842": 229,
+    "8ffb4a7e-890f-4b25-918d-1a18e95a29ce": 230,
+    "cb8978e2-6145-4956-a3a6-3376b69a147f": 231,
+    "b304b272-8d2c-487e-86a8-0b9eb82929cf": 232,
+    "14da9daa-2555-477e-aba0-a1cc569f93ea": 233,
+    "c027a888-05cb-4dfc-8562-a6538d1fee0f": 234,
+    "2c53d581-1c11-4db3-b721-ca1929e684dc": 235,
+    "d353c677-8b73-4551-9f61-a01468e033e1": 236,
+    "eb213523-5177-47e5-9549-5542be9d2639": 237,
+    "11d0cb56-5f53-4c19-994a-637ec8d2fa5e": 238,
+    "94df4d9b-86f0-4911-8225-a9d9139aa82d": 239,
+    "8fa837c7-e155-47d4-8377-fe5a40d5023e": 240,
+    "3876e5b0-f794-4d79-a296-58140eff10be": 241,
+    "071afffc-41e0-4e3a-93e6-a5497bd860c4": 242,
+    "6cc4dc83-4666-4b0e-b69f-071eb4423653": 243,
+    "5e3ba59e-dd94-4393-a89c-fba3db1edd3b": 244,
+    "71650dce-1608-445c-b995-318a77ef2532": 245,
+    "d34bdc7a-cd83-42d0-a951-78fcdb269fa1": 246,
+    "7e1bb013-6870-4326-bad0-7c19e8543721": 247,
+    "cf858214-7676-42ba-b0eb-792917e90dc5": 248,
+    "1ba01925-bb17-4159-b185-8c7996fcb437": 249,
+    "9aac74a1-49d6-43ba-bac3-71c3ad0a87f8": 250,
+    "3381536c-1e04-4030-872a-9bfa3117d282": 251,
+    "3325be9e-4bca-455b-b78d-63f0a2eceb97": 252,
+    "fbc5a8aa-1b22-4c4c-9182-c0eef3a90ebb": 253,
+    "78c41034-d805-4572-bcb3-02a4571b65c3": 254,
+    "ac2b2466-ebe7-426c-802c-728284eb70d9": 255,
+    "797dd511-ad04-48a0-8be5-ca1adaae91d7": 256,
+    "2bcea74f-74ea-4197-814e-579b1d7bb020": 257,
+    "49f8d8f8-6219-4e4f-bc41-bb98de5853ac": 258,
+    "8cc8a71a-4101-46a1-9425-27d60a85a324": 259,
+    "b64e8ca2-a584-45ba-accb-3b0841bf13e8": 260,
+    "595ef9b8-2b7c-437e-9af9-1f045f8d98c7": 261,
+    "560a5e47-bcad-46d3-9c69-02b7ddb66fc2": 262,
+    "b7bb199e-e902-40e3-aa30-39af73f869f6": 263,
+    "6287bf7a-33ff-40ce-aec5-58fdc0ea8cf3": 264,
+    "be993ada-77f9-41de-b78e-fc245d91e9cd": 265,
+    "dc5287d7-7a7c-42f3-90ba-fe227e7392b3": 266,
+    "276fec11-fda4-4e9a-9137-d0a7b45da513": 267,
+    "b78d5a51-f820-48a3-bf22-7d2d12330eb2": 268,
+    "92acfebd-6272-4051-8f87-c320613ef654": 269,
+    "5fcb5b2d-8ffc-41bc-9ca0-4252801eaf3a": 270,
+    "31ec867a-22ca-43e5-bc66-d5dc66618d65": 271,
+    "94a66ec3-0388-4083-9c02-987010a2ef07": 272,
+    "86accf3f-d27e-4ea7-9029-0c61baa4e424": 273,
+    "75461dfe-492b-4fde-82a7-f65feed932af": 274,
+    "6c848e57-6366-45f4-a7fa-274e3644097b": 275,
+    "40528066-7a7f-4abd-bb26-dfdddccc003a": 276,
+    "a28815a1-6a42-4c37-beec-958dd98184e7": 277,
+    "148290a0-5690-4bbc-a0b4-61e403426d0c": 278,
+    "67c420fa-3d0f-404e-b729-870c9918eb9c": 279,
+    "4309b5a3-4fad-438a-9ce1-3a14a047eb41": 280,
+    "0962fca3-e8e4-4bc3-9a45-bc3b8d365d0a": 281,
+    "45cb1eca-be7c-4cab-beb2-3da1ae87e671": 282,
+    "ddab2558-8a60-4b88-9bf4-aaf0ff335931": 283,
+    "247c0ad4-a095-4554-846d-4be745bc3b8d": 284,
+    "138a8b7d-f4de-4ed2-a67f-50fb5d69ad36": 285,
+    "892e3039-28ee-429b-89e9-ef837f8c0c4f": 286,
+    "4b5daa31-8065-4fc7-9ff6-1563c2ff0593": 287,
+    "b6c9053b-23f0-4975-946e-a9e9643ad018": 288,
+    "2a2e09f2-a0f9-4c16-a4d3-d8059ef64878": 289,
+    "3957a113-b2e4-442e-86fd-b99341dc5a1a": 290,
+    "c88c2840-5b21-421a-a64a-4db533f1bb94": 291,
+    "f5a37792-1847-4741-9b48-a7b94d2bb566": 292,
+    "1bdd3c96-e2b4-426c-9be9-0c9a364b9d38": 293,
+    "33594a2c-462c-4f7f-9b0a-e22956d3f36b": 294,
+    "0d5ae5ca-e049-4303-9071-44705c28e28e": 295,
+    "a2d9122d-e077-48f2-bd7c-d15081cc1383": 296,
+    "8b5d7a1f-a5d1-49c6-bd9c-da93ba5e9d19": 297,
+    "8bf3af50-3d8a-41c3-98bf-fdf29e39dce3": 298,
+    "17189698-d1ef-4f66-a3aa-66f18ca4ac13": 299,
+    "2307c6b2-4de1-427c-94e9-51fb187fa670": 300,
+    "416807a2-0852-4634-b26e-683a46e94b02": 301,
+    "a984b433-8e90-4ca5-9e69-01422e861c9d": 302,
+    "6f798393-defa-418f-9866-729f71b0cd95": 303,
+    "9236cd93-eeb9-4d3c-b6d9-3e5f45a6a2ab": 304,
+    "5cf1a73f-7a99-4ef0-bf66-57fff464dab4": 305,
+    "28623778-f05e-4067-89f2-d228900cc715": 306,
+    "ca341a66-8178-4e6d-8489-1e1eb4728700": 307,
+    "0e0b715b-eafb-4bfd-80a0-1f65dd3244fe": 308,
+    "55e258ad-629a-4bd1-a9d0-23ce5cd59273": 309,
+    "8b901dd6-47e2-494c-8421-724c1cb189b8": 310,
+    "f9cfbff3-a8ca-4278-8b0c-7c0e54b1a369": 311,
+    "00cd49b3-5163-455c-8ac5-7718f79a2f85": 312,
+    "60c89976-abd6-497d-8d3b-5eb1d0edabe6": 313,
+    "46286e84-3353-40c4-b6c4-3e3637909950": 314,
+    "0a19e943-f0f1-4445-97d5-88317cb21cbd": 315,
+    "e6f26bf7-6dc9-4a02-8710-603ee1d755b5": 316,
+    "cd28bd2d-8e55-4434-aaea-decff0e072cf": 317,
+    "9d43a175-3840-41fb-9c90-92852e503876": 318,
+    "0851544a-e73c-4157-ae0b-e17c7092d47a": 319,
+    "877f5945-3561-4946-b0bc-2c6973da087c": 320,
+    "63d76186-00fb-40be-bb08-3d8b09ebbfe9": 321,
+    "9b15f691-3c40-41a9-b7e8-3e6f51c8c3d9": 322,
+    "2d81330d-30aa-41c9-a638-b7761644d13c": 323
+  },
+  "sources": [
+    {
+      "index": 1,
+      "id": "c93e11dc-13c4-4e38-a23d-960bfe430cbe",
+      "title": "I Spent 2,000 Hours Learning GEO/AEO For This",
+      "url": "https://www.youtube.com/watch?v=t_Y5kznd2rk",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "curated"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 2,
+      "id": "647ab1a1-d1e9-42bf-a17c-57f8ea88b839",
+      "title": "AI SEO Course for Beginners: Complete AEO Tutorial",
+      "url": "https://www.youtube.com/watch?v=uza9GX0E2mw",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "curated"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 3,
+      "id": "c9f8c21f-cd6d-4607-9c71-361ec24bab77",
+      "title": "Complete SEO Course for Beginners: Learn to Rank #1 in Google",
+      "url": "https://www.youtube.com/watch?v=xsVTqzratPs",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "curated"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 4,
+      "id": "14be9f71-6e99-4cee-b315-45f9ebcc8d82",
+      "title": "SEO Starter Guide: The Basics | Google Search Central",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "tier": "confirmed",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Dec 10, 2025",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 5,
+      "id": "4ae7e41a-cf39-4b4a-8a0c-d1d401ac72eb",
+      "title": "Introducing Search Generative AI performance reports in ...",
+      "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "tier": "confirmed",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jun 3, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 6,
+      "id": "fa7fecdd-173d-4b5f-8740-8bed4f8d7608",
+      "title": "Understand JavaScript SEO Basics | Google Search Central",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
+      "tier": "confirmed",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 7,
+      "id": "980a18ad-194f-4a9e-a918-8b73912809cd",
+      "title": "In-Depth Guide to How Google Search Works",
+      "url": "https://developers.google.com/search/docs/fundamentals/how-search-works",
+      "tier": "confirmed",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 8,
+      "id": "8387c6c2-07fb-48c3-a962-b718b36b13f4",
+      "title": "Intro to How Structured Data Markup Works | Google Search Central",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+      "tier": "confirmed",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 9,
+      "id": "ee506d19-f601-45c5-9a41-c9e9c2f352c9",
+      "title": "Core Web Vitals report - Search Console Help",
+      "url": "https://support.google.com/webmasters/answer/9205520?hl=en",
+      "tier": "confirmed",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 10,
+      "id": "9f153031-0a3a-4a6c-9224-223a1eba724b",
+      "title": "What's new in Google Analytics",
+      "url": "https://support.google.com/analytics/answer/9164320?hl=en",
+      "tier": "confirmed",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 11,
+      "id": "666e06d8-2791-4c61-9c20-af0492c6648b",
+      "title": "A new era for AI Search",
+      "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+      "tier": "confirmed",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 19, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 12,
+      "id": "26af0370-a2cf-408b-ba95-e64381100c18",
+      "title": "How the Core Web Vitals metrics thresholds were defined | Articles",
+      "url": "https://web.dev/articles/defining-core-web-vitals-thresholds",
+      "tier": "confirmed",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 21, 2020",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 13,
+      "id": "d4bd903a-b727-4068-8241-233f9f62cf3f",
+      "title": "A Guide to Google Search Ranking Systems",
+      "url": "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+      "tier": "confirmed",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 14,
+      "id": "4de1719f-e769-4626-aaf6-de6008b8d1c8",
+      "title": "Google Search's Core Updates",
+      "url": "https://developers.google.com/search/docs/appearance/core-updates",
+      "tier": "confirmed",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 15,
+      "id": "195b8aab-4dbc-424a-93d4-db960c78a9bc",
+      "title": "Web Vitals | Articles",
+      "url": "https://web.dev/articles/vitals",
+      "tier": "confirmed",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-05-04T00:00:00.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 16,
+      "id": "085de605-1a51-492a-9ff7-5afee393dfab",
+      "title": "Rich Results Test - Google Search Console",
+      "url": "https://search.google.com/test/rich-results",
+      "tier": "confirmed",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 17,
+      "id": "5e0d53a9-6284-48b9-aaf8-eaabed5a010b",
+      "title": "Validator - Schema.org",
+      "url": "https://google.schema.org/docs/validator.html",
+      "tier": "confirmed",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 18,
+      "id": "3e19c4e5-6a87-48c8-9349-6d353774e62f",
+      "title": "Rich Results Test - Search Console Help",
+      "url": "https://support.google.com/webmasters/answer/7445569?hl=en",
+      "tier": "confirmed",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 19,
+      "id": "aca748f1-2da4-4d69-9277-c527167289c5",
+      "title": "Technical SEO in 2026",
+      "url": "https://www.involvedigital.com/insights/technical-seo-foundations-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level",
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Dec 13, 2025",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 20,
+      "id": "6965205f-5769-4edd-82d9-feb3ac2e1733",
+      "title": "What Is SEO? Search Engine Optimization Best Practices - Moz",
+      "url": "https://moz.com/learn/seo/what-is-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 14, 2025",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 21,
+      "id": "13a85499-ab51-42eb-8ab3-b14050c4bc5d",
+      "title": "What Is SEO? Search Engine Optimization Guide for 2026",
+      "url": "https://www.seo.com/basics/glossary/seo/",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 23, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 22,
+      "id": "e8f67f5e-c507-495f-9b15-d8c0cee713ad",
+      "title": "Beginner's Guide to SEO (Search Engine Optimization) - Moz",
+      "url": "https://moz.com/beginners-guide-to-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 23,
+      "id": "1ada6112-ced3-4b37-8f2d-5299546ce4b4",
+      "title": "What Is SEO - Search Engine Optimization?",
+      "url": "https://searchengineland.com/guide/what-is-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 18, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 24,
+      "id": "6333ee7c-a27b-4b28-801c-fbc6e14ee6de",
+      "title": "SEO Basics: Beginner's Guide to SEO From SEO.com",
+      "url": "https://www.seo.com/basics/",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 23, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 25,
+      "id": "3b38ff91-1c69-4204-a6a9-ba6a2bddc2f9",
+      "title": "Search engine optimization - Wikipedia",
+      "url": "https://en.m.wikipedia.org/wiki/Search_engine_optimization",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 26,
+      "id": "c4a4be6e-85e5-4e76-8dbe-a346fa2448ba",
+      "title": "Search Engine Optimization Tutorial (SEO Tutorial) - GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/techtips/search-engine-optimization-seo-basics/",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 24, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 27,
+      "id": "bb39d64a-b021-48d6-b0e8-4e119eed1698",
+      "title": "SEO: The Complete Guide for Beginners - Ahrefs",
+      "url": "https://ahrefs.com/seo",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement",
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 28,
+      "id": "7ef36c05-1311-4f3c-b565-e9956f73e29f",
+      "title": "The 2026 Google SEO Reality | Space & Story",
+      "url": "https://spaceandstory.co/blog/the-2026-google-seo-reality",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works",
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-26T10:00:08.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 29,
+      "id": "5fb8304e-4da4-4618-ba07-f95337d9cecd",
+      "title": "The Most Important Google Ranking Factors for 2026 | WordStream",
+      "url": "https://www.wordstream.com/blog/google-ranking-factors",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works",
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-24T12:30:59.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 30,
+      "id": "238acb55-8b44-453e-a918-5bf61cdd3638",
+      "title": "SEO Content Clusters 2026: Topic Authority Guide",
+      "url": "https://www.digitalapplied.com/blog/seo-content-clusters-2026-topic-authority-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "2026-02-15T23:00:00.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 31,
+      "id": "6643055f-a115-4295-bc47-a99edc396fa3",
+      "title": "What Are the Core Web Vitals? LCP, INP & CLS Explained (2026)",
+      "url": "https://www.corewebvitals.io/core-web-vitals",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 3, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 32,
+      "id": "51bcc249-e526-450d-9e2a-12134ee3be61",
+      "title": "Schema Markup After March 2026: Structured Data Update",
+      "url": "https://www.digitalapplied.com/blog/schema-markup-after-march-2026-structured-data-strategies",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 20, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 33,
+      "id": "6ebcb71a-8d53-43cb-8e68-1f6fd0eb05b5",
+      "title": "How to use Google Analytics 4 for SEO: Organic, AI traffic, and more",
+      "url": "https://seranking.com/blog/how-to-use-google-analytics-for-seo/",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jul 23, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 34,
+      "id": "11d04671-79d3-427e-9326-c2cc2882b09b",
+      "title": "Keyword Research and Analysis: Practical Guide (2026) - Cited",
+      "url": "https://cited.so/blog/keyword-research-and",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "2026-02-15T04:09:26.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 35,
+      "id": "80d7787b-3afe-4e9d-99c6-24bae43899b2",
+      "title": "Local SEO Ranking Factors 2026 [Full Algorithm]",
+      "url": "https://www.clickrank.ai/local-seo-ranking-factors/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "2026-05-08T15:53:59.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 36,
+      "id": "97ce9964-8d03-4cc2-968c-d151469cae92",
+      "title": "Technical SEO: The Complete Definitive Guide 2026",
+      "url": "https://www.crawlvision.com/blog/technical-seo-the-complete-guide-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "2026-04-22T09:02:50.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 37,
+      "id": "9aff37ae-a48f-4e07-b748-14110c65bbc4",
+      "title": "How Search Engines Work in 2026: Complete Technical ...",
+      "url": "https://www.digitalapplied.com/blog/how-search-engines-work-2026-technical-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Apr 9, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 38,
+      "id": "a8f002ad-0c5e-41c5-9b4d-ebd04e6c8534",
+      "title": "Keyword Research in 2026: Beyond Search Volume - Contadu",
+      "url": "https://contadu.com/keyword-research-in-2026-beyond-search-volume-2/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper"
+      ],
+      "published_date": "2026-04-28T11:38:35.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 39,
+      "id": "55f91f68-f33e-4d41-bf92-28bbb6cb7b93",
+      "title": "Structured Data in 2026: The Schema Markup AI Actually Uses",
+      "url": "https://globerunner.com/structured-data-schema-markup-ai-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jul 2, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 40,
+      "id": "90f1a693-3df6-4e40-9dc3-59580a37a701",
+      "title": "Off-Page SEO: The Complete Guide for 2026",
+      "url": "https://backlinko.com/off-page-seo-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Dec 29, 2025",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 41,
+      "id": "788e702c-7109-4032-a714-fbf0c32aaf0d",
+      "title": "SEO Analytics Guide (2026): 15 Diagnostic Scenarios",
+      "url": "https://improvado.io/blog/seo-analytics-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Aug 30, 2023",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 42,
+      "id": "99ac497e-019a-4c60-b772-e948ec8d05e4",
+      "title": "Master Keyword Research & Search Intent 2026 - SeekLab",
+      "url": "https://seeklab.io/blog/master-keyword-research-search-intent/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jan 29, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 43,
+      "id": "12cf2264-495d-4b44-ab76-387737651b35",
+      "title": "Ahrefs vs Semrush vs Moz: Which SEO Tool Is Best for Agencies?",
+      "url": "https://theblueprint.training/moz-vs-semrush-vs-ahrefs/",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 44,
+      "id": "f588ead2-24b5-4cd0-9bd5-4c00650401b2",
+      "title": "How Google Search Works in 2026 — Crawling, Indexing, Rankings & AI Overviews | SEO Scout",
+      "url": "https://seoscout.co/blog/how-google-search-works-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "exa",
+        "jina"
+      ],
+      "published_date": "2026-06-05T03:36:47.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 45,
+      "id": "dd572d89-c3d7-4593-a0a8-4c12b4cba8b7",
+      "title": "Off-Page SEO Statistics for 2026: Backlinks, Link Building, Digital PR ...",
+      "url": "https://www.shno.co/marketing-statistics/off-page-seo-statistics",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 46,
+      "id": "f1d7ed01-081e-4726-b3fd-732e8f9e9f98",
+      "title": "Local SEO After March 2026 Core Update: GBP Optimization",
+      "url": "https://www.digitalapplied.com/blog/local-seo-march-2026-core-update-gbp-optimization-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 16, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 47,
+      "id": "58cbea21-78cc-40ca-9086-a60e4cb38e0d",
+      "title": "Complete Guide to Generative Engine Optimization (GEO)",
+      "url": "https://www.oltre.ai/blog/generative-engine-optimization/",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Dec 1, 2025",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 48,
+      "id": "cadd2f20-ff0d-488f-8fd5-f2fae2f9a283",
+      "title": "GA4's New AI Assistant Channel: Measure AI Traffic in 2026",
+      "url": "https://www.digitalapplied.com/blog/ga4-ai-assistant-channel-2026-measure-ai-traffic-playbook",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jun 11, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 49,
+      "id": "ddc71f43-2727-466f-8329-8400c612b22d",
+      "title": "The Ultimate On-Page SEO Checklist for 2026",
+      "url": "https://www.tabscap.com/blog/the-ultimate-on-page-seo-checklist-for-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 21, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 50,
+      "id": "e4b209dd-47ae-4aa6-b01c-db4fe0ba79f1",
+      "title": "Backlinks vs Brand Mentions: Off-Page SEO Evolution in 2026",
+      "url": "https://searchatlas.com/blog/backlinks-to-mentions-evolution-off-page-signals-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Jan 15, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 51,
+      "id": "df9f85f6-8bfd-41ea-b952-93a85e14e30d",
+      "title": "Local SEO in 2026: The Complete Strategy Guide for Google Maps, AI Search, and Beyond",
+      "url": "https://www.mediasearchgroup.com/seo/local-seo-techniques/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "exa",
+        "jina"
+      ],
+      "published_date": "2026-04-26T05:56:19.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 52,
+      "id": "6e71f908-0792-4afa-9a4d-0f1e5619058e",
+      "title": "Generative Engine Optimization (GEO) 2026 - AIThinkerLab",
+      "url": "https://aithinkerlab.com/generative-engine-optimization-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 53,
+      "id": "36f3fdad-5aca-4ef3-86d8-67956e6cea94",
+      "title": "Best SEO Tools in 2026: Scored Vendor Comparison",
+      "url": "https://technovapartners.com/en/insights/best-seo-tools-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jun 2, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 54,
+      "id": "24c6c63d-d7cf-4bae-b46f-cceb829a8c05",
+      "title": "Google Search Changes 2026: What's New and How to ...",
+      "url": "https://www.yellowhead.com/blog/google-search-changes-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 55,
+      "id": "4aee9ef4-6581-4513-9c76-6923ebdae893",
+      "title": "What Is On-Page SEO? Complete Guide for 2026",
+      "url": "https://www.ranknibbler.com/what-is-on-page-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 56,
+      "id": "72fa4839-9c81-4fec-bb12-2bcf9c1f0571",
+      "title": "Core Web Vitals in 2026: What's Changed and How to Pass",
+      "url": "https://www.rivuletiq.com/core-web-vitals-2026-whats-changed-and-how-to-pass/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 57,
+      "id": "6fe7666d-ef9b-4a3d-9a52-45b58c1b5c26",
+      "title": "Core Web Vitals 2026: INP, LCP & CLS Thresholds",
+      "url": "https://webhelpagency.com/blog/core-web-vitals-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa",
+        "jina"
+      ],
+      "published_date": "Jul 7, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 58,
+      "id": "8585ca2d-a366-4805-8a6a-abf74d3fb960",
+      "title": "Structured Data AI Search: Schema Markup Guide (2026)",
+      "url": "https://www.stackmatix.com/blog/structured-data-ai-search",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jul 7, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 59,
+      "id": "e8c13307-8b9c-406e-934f-7bb20b3de563",
+      "title": "Off Page SEO in 2026: Strategies, Examples & 90-Day Plan",
+      "url": "https://rankingstudios.com/off-page-seo-guide-strategies-examples/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jul 21, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 60,
+      "id": "282667d2-821a-4028-a2c6-4f5d1194c567",
+      "title": "Local SEO — Complete Guide 2026",
+      "url": "https://digitalmarketingco.org/glossary/local-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jun 25, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 61,
+      "id": "a1f9146b-f137-4fe7-9294-d96e7f1d557f",
+      "title": "A Guide to How Search Engines Work in 2026",
+      "url": "https://nogood.io/blog/how-search-engines-work/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 10, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 62,
+      "id": "a7182534-bc2d-4d19-bd0b-cef933ee6708",
+      "title": "XML Sitemaps & Google Indexing: Technical SEO Guide 2026",
+      "url": "https://www.growthstats.io/blog/sitemaps-and-indexing-technical-seo-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina",
+        "tavily"
+      ],
+      "published_date": "May 24, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 63,
+      "id": "fcacc22b-f18a-4e1d-a298-f3f0bcaa554c",
+      "title": "Generative Engine Optimization (GEO): The 2026 Guide",
+      "url": "https://llmrefs.com/generative-engine-optimization",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 64,
+      "id": "3666105f-1b6c-42ec-ba6a-9114556f5dd3",
+      "title": "Full Technical SEO Checklist: The 2026 Guide",
+      "url": "https://www.yotpo.com/blog/full-technical-seo-checklist/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jun 2, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 66,
+      "id": "873fe489-4b88-422d-bdb3-c51d9fd4c38d",
+      "title": "Google Algorithm Updates: 2026 Ultimate Guide",
+      "url": "https://www.clickrank.ai/google-algorithm-updates/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 1, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 67,
+      "id": "005c8183-b9b0-4163-9623-2e57456ecda6",
+      "title": "Best Keyword Research Tools 2026: Complete Guide for ...",
+      "url": "https://topicalmap.ai/blog/auto/best-keyword-research-tools-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jan 30, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 69,
+      "id": "e600f2db-2d79-4702-8d14-b56bc0ce4f02",
+      "title": "Technical SEO Checklist for 2026: The Complete Audit Guide",
+      "url": "https://www.rivuletiq.com/technical-seo-checklist-2026-complete-audit-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 70,
+      "id": "959fb3fd-31c0-4536-8ffb-2942fdb637bb",
+      "title": "Core Web Vitals 2026: Fix Speed or Keep Losing Traffic",
+      "url": "https://ideafueled.com/blog/core-web-vitals-2026-explained/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Apr 6, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 71,
+      "id": "9d13c8c4-f3f6-41c1-a300-7ac2be58dbd1",
+      "title": "Local SEO in 2026: How to Rank in Google Maps and Local Search",
+      "url": "https://www.rankmax.com.au/articles/local-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jan 31, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 72,
+      "id": "fba687b4-da42-4818-b4b7-86904bd1ee52",
+      "title": "Website Performance & Core Web Vitals: The Technical Guide for 2026",
+      "url": "https://www.involvedigital.com/insights/seo-technical-foundations-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 21, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 73,
+      "id": "91284363-1128-40b8-96d1-3eee136cb95d",
+      "title": "SEO Ranking Factors in 2026: A Look Inside Google's Search Algorithm",
+      "url": "https://www.seo.com/basics/how-search-engines-work/ranking-factors/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "2025-04-15T00:00:00.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 74,
+      "id": "c1b96388-5f4c-4df9-9e67-0cad9520b18d",
+      "title": "Best Keyword Research for SEO in 2026: A Complete Guide",
+      "url": "https://successcityonline.com/how-to-conduct-keyword-research-for-seo-in-2025/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Nov 25, 2025",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 75,
+      "id": "efeb9b43-cf57-44fc-9936-453f154c5cd0",
+      "title": "Core Web Vitals 2026: LCP, INP & CLS Guide | Technova",
+      "url": "https://technovapartners.com/en/insights/core-web-vitals-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "jina",
+        "tavily"
+      ],
+      "published_date": "Jun 2, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 76,
+      "id": "b2c337eb-1819-4a9f-b718-1e96a5eb3880",
+      "title": "On-Page SEO: The Complete 2026 Guide | Elite Strategies",
+      "url": "https://elite-strategies.com/learn-seo/on-page-seo/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 77,
+      "id": "9a8c6fab-3095-4bc1-b1a2-8dd474e7203e",
+      "title": "ahrefs vs semrush vs moz - which one is the Best for ROI in 2026 | Lucidly",
+      "url": "https://lucidly.ae/blog/digital-marketing/ahrefs-vs-semrush-vs-moz",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Apr 22, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 78,
+      "id": "ab155e84-21f6-460c-abed-86f02b701f9a",
+      "title": "FAQ Rich Results Deprecated: Google's May 2026 Change",
+      "url": "https://www.getpassionfruit.com/blog/what-changed-with-google-drops-faq-rich-results-and-what-to-do-now",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "May 11, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 79,
+      "id": "e3327f4e-16b6-4248-80e1-257bf293ec33",
+      "title": "Off-Page SEO & Backlink Strategy: A Complete Guide to Building Authority in 2026",
+      "url": "https://www.neelnetworks.com/blog/off-page-seo-backlink-strategy-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa",
+        "jina"
+      ],
+      "published_date": "2026-03-24T05:05:11.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 80,
+      "id": "c41b3c3c-c5d1-4cb8-b99c-fc2aefcdc862",
+      "title": "AEO and GEO for AI Overviews, ChatGPT, Claude, Gemini, ...",
+      "url": "https://www.trevorlasn.com/blog/aeo-geo-vs-seo-google-ai-optimization",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "2026-05-17T00:00:00.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 81,
+      "id": "f0ff61d8-791e-449d-947d-3c6fcffad339",
+      "title": "On-page SEO Guide checklist · title tag optimization SEO · Service",
+      "url": "https://portlandpeakseo.com/on-guide-seo-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 82,
+      "id": "c23ab1f9-d35d-4f58-8438-6fb558cc6d7f",
+      "title": "How AI Search Engines Pick Sources: AI Platforms Compared",
+      "url": "https://webaloha.co/how-ai-search-engines-pick-sources-ai-platforms-compared/",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "2026-03-16T00:00:00.000Z",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 83,
+      "id": "c39a55a7-5335-4773-985d-2215e38847f7",
+      "title": "SEO Checklist for a New Website in 2026: The Complete 30-Point Guide",
+      "url": "https://www.itsbuzzinteractive.com/blog/seo-checklist-for-website",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 84,
+      "id": "83a91f18-a54b-4243-ac8a-d496b6c83de1",
+      "title": "Keyword Research Guide: Intent, Clusters & AI (2026)",
+      "url": "https://systemsarchitect.net/keyword-research-guide-search-intent-topic-clusters-and-ai-optimization-for-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 85,
+      "id": "d6817466-8f8a-414b-a239-6ca043d5e21a",
+      "title": "On-Page SEO: The Complete 2026 Guide (Title Tags, Meta …",
+      "url": "https://kerkarmedia.com/on-page-seo-complete-guide-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 22, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 86,
+      "id": "3777a633-bf1f-496f-b0ce-2467d6391851",
+      "title": "Technical SEO Guide 2026: Crawlability, Indexing & Site Architecture",
+      "url": "https://seoscout.co/guides/technical-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 1, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 87,
+      "id": "67b24250-3564-4bd9-b00f-e99fab125d5d",
+      "title": "Schema Markup in 2026: Which Structured Data Types Still Pay Off",
+      "url": "https://www.seoguru.ai/blog/schema-markup-in-2026-which-structured-data-types-still-pay-off",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 15, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 88,
+      "id": "800b925d-a9a6-40d3-a8c6-50e077471094",
+      "title": "Off-Page SEO Techniques That Still Work in 2026 (and What to Stop Doing)",
+      "url": "https://outreachfrog.com/blog/off-page-seo-techniques-2026-what-works-what-to-stop",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 89,
+      "id": "81a867b1-6e88-4d86-ab24-c34ef97c4809",
+      "title": "Local SEO 2026: How to Rank in Google Maps & Local Pack",
+      "url": "https://mettevo.com/blog/article/local-seo-in-2026-how-to-rank-in-google-maps-and-the-local-pack",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 27, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 90,
+      "id": "6ba1e796-6f65-4838-95e9-ec0b91acc583",
+      "title": "How Search Engines Work: Crawling, Indexing, and Ranking",
+      "url": "https://www.seo.com/basics/how-search-engines-work/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 24, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 91,
+      "id": "4a7c12ac-01bb-4b88-bb68-ba8c513c0a83",
+      "title": "Keyword Research in 2026: Intent Over Volume | SearchPod",
+      "url": "https://searchpod.com/blog/seo-keyword-research-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Nov 14, 2025",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 92,
+      "id": "32c13f85-bd3f-43c1-8ae2-d5b51291f13c",
+      "title": "On-Page SEO Checklist 2026: Title Tags & More",
+      "url": "https://growthkul.com/blogs/on-page-seo-checklist-2026-title-tags-meta-descriptions",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 93,
+      "id": "652cabef-942c-4bdb-9690-0ba2a61ba92c",
+      "title": "Technical SEO Audit: Crawlability, Indexing & Architecture",
+      "url": "https://2tentech.com/blog/technical-seo-audit/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 15, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 94,
+      "id": "ba66ab92-91fe-4ed7-8079-1573b42b87c0",
+      "title": "The Technical SEO Checklist for 2026: Managing LLMs, Bots, and …",
+      "url": "https://neuronwriter.com/technical-seo-checklist-2026-llm-bots-crawl-budget/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 21, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 95,
+      "id": "ac3062b3-601a-4ba1-bc3e-a7cd51cfc34e",
+      "title": "Schema Markup Guide: What Moves Rankings in 2026",
+      "url": "https://fieldari.com/en/blog/schema-org-markup-guide-ranking-in-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 29, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 96,
+      "id": "e0b023ab-6c2f-4c83-a4a4-99847afa042b",
+      "title": "Local SEO for Service Businesses: How to Dominate the Map Pack and ...",
+      "url": "https://www.brandvm.com/post/local-seo-for-service-businesses",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 7, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 97,
+      "id": "346e58fa-2087-4f8b-bdf5-e0a04bb87830",
+      "title": "How Search Engines Work: Crawling, Indexing, Ranking, and the AI …",
+      "url": "https://www.searchable.com/blog/how-search-engines-work",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 2, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 98,
+      "id": "5eb4e8a0-4c55-46e0-a172-430bb3bec8ee",
+      "title": "Keyword Research in 2026: Intent, Clusters, and AI Search",
+      "url": "https://embertribe.com/blog/keyword-research",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 99,
+      "id": "df0db677-88c1-46d6-8ec2-541b38993e96",
+      "title": "SEO Title Tags & Meta Descriptions: Best Practices For 2026",
+      "url": "https://seeklab.io/blog/on-page-seo-titles-metas-structure/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jan 26, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 100,
+      "id": "141c9712-63ba-4cad-bd40-983443e311a5",
+      "title": "Schema Markup After the March 2026 Google Update: A Complete …",
+      "url": "https://www.smartclouds.co/2026/05/20/schema-markup-after-the-march-2026-google-update-a-complete-structured-data-guide-for-digital-marketing/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 20, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 102,
+      "id": "2e7cd2ac-4c1f-4140-83e0-0c1ff7f07dba",
+      "title": "Google Map Pack Ranking Factors 2026: Data-Backed Guide to Local …",
+      "url": "https://slowseo.com/google-map-pack-ranking-factors-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 13, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 103,
+      "id": "71353bc5-69b1-4528-9385-0bf8f421bf02",
+      "title": "How Do AI Search Engines Work? The 5-Stage Pipeline ...",
+      "url": "https://clairon.ai/blog/how-ai-search-engines-work",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 28, 2026",
+      "notebook": "c863f492-08a3-472e-93f0-a871a9f60c55"
+    },
+    {
+      "index": 104,
+      "id": "ad2ff9f7-2745-4660-9434-2b9c1aedce8d",
+      "title": "Large Language Models (LLMs) with Google AI | Google Cloud",
+      "url": "https://cloud.google.com/ai/llms",
+      "tier": "confirmed",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 105,
+      "id": "10736b9e-46c9-4073-a36e-12ed6b15cd5c",
+      "title": "Introduction to Large Language Models - Google Developers",
+      "url": "https://developers.google.com/machine-learning/crash-course/llm",
+      "tier": "confirmed",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jan 9, 2026",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 106,
+      "id": "7e7cac4e-b259-4c33-ac55-419c87e42fec",
+      "title": "What is a Large Language Model (LLM)? | Stanford HAI",
+      "url": "https://hai.stanford.edu/ai-definitions/what-is-a-llm",
+      "tier": "confirmed",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 107,
+      "id": "aa8f7fd1-67fe-4b65-8c5d-26cf09f920f6",
+      "title": "SEO Pricing 2026: What SEO Services Cost by Agency",
+      "url": "https://www.digitalapplied.com/blog/seo-pricing-2026-what-seo-services-cost",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service",
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "2026-04-05T23:00:00.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 108,
+      "id": "dbf1b7bd-8115-46fb-9506-a11945953afd",
+      "title": "What SEO Services Include in 2026 (Pricing & Red Flags) · SEO Magics",
+      "url": "https://www.seomagics.com/journal/what-do-seo-services-include-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service",
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-10T03:41:52.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 109,
+      "id": "44b82fc9-5a68-4ecf-92bd-88701598748e",
+      "title": "SEO Retainer Pricing for Agencies: What to Charge Clients in 2026",
+      "url": "https://serpnetic.com/seo-retainer-pricing-agencies-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service",
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-05T21:53:19.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 110,
+      "id": "215e9cd9-70f0-4bd3-a278-e68a413c3733",
+      "title": "How Google AI Overviews Choose Citations: Query Fan-Out - Cory Maki",
+      "url": "https://corymaki.com/how-google-ai-overviews-choose-citations-query-fan-out/",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout",
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-16T01:06:59.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 111,
+      "id": "d7796ec3-9437-45a7-aee3-722e45b6c346",
+      "title": "AI Crawler Access Control: The 2026 Decision Matrix",
+      "url": "https://www.digitalapplied.com/blog/ai-crawler-access-control-2026-robots-llms-txt-decision-matrix",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "Jun 4, 2026",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 112,
+      "id": "c4e0438a-d058-4cc1-981d-b769b8160706",
+      "title": "SEO Agency Pricing Models (2026): Retainers, Hourly & Project Rates",
+      "url": "https://thestacc.com/blog/agency-pricing-models-seo-services/",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "2026-07-09T13:32:32.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 113,
+      "id": "8315c2e6-c2bc-4286-aa70-5d83e0373a70",
+      "title": "llms.txt vs robots.txt: What actually controls AI crawlers?",
+      "url": "https://kinsta.com/blog/llms-txt-vs-robots-txt-wordpress/",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "4 days ago",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 114,
+      "id": "df44af29-48c3-44f0-b47b-defe56337e79",
+      "title": "8 Key Metrics for Measuring GEO Success in 2026",
+      "url": "https://www.revvgrowth.com/geo/key-metrics-for-measuring-geo-success",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "May 19, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 115,
+      "id": "ffe0fc76-80d7-489b-950b-941b168d247c",
+      "title": "On-Page SEO Guide: How to Optimize Your Content in 2026",
+      "url": "https://www.straightnorth.com/blog/on-page-seo-a-comprehensive-overview/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Nov 21, 2025",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 116,
+      "id": "1eebaf74-7096-49c0-914c-8dcd59caa34c",
+      "title": "Designing Websites for AI Agents - llms.txt, Structured Data ...",
+      "url": "https://hidekazu-konishi.com/entry/designing_websites_for_ai_agents.html",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "7 days ago",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 117,
+      "id": "8984b71a-7c2a-43f7-93f4-84afcbd1ec37",
+      "title": "Large Language Model (LLM) - GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/artificial-intelligence/large-language-model-llm/",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 2, 2026",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 118,
+      "id": "5963dbec-a29b-47d8-a3e7-1afefb47d54e",
+      "title": "Monitor llms.txt and AI Crawler Access: robots.txt for ...",
+      "url": "https://pagecrawl.io/blog/llms-txt-robots-txt-ai-crawler-monitoring",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jul 20, 2026",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 119,
+      "id": "052a141a-4e17-4719-9675-1b63ac02b258",
+      "title": "SEO Pricing Plans: How Much Does SEO Cost in 2026?",
+      "url": "https://www.goodfirms.co/resources/seo-pricing-plans",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jul 9, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 120,
+      "id": "6239c6d2-3d29-4a0a-8bb5-f6fbb78b585b",
+      "title": "llms.txt vs robots.txt vs sitemap.xml: What AI Crawlers ...",
+      "url": "https://builtabot.com/blog/llms-txt-vs-robots-txt-vs-sitemap-xml-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 9, 2026",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 121,
+      "id": "a44c12ea-eb87-4d12-bd7a-d2a092690629",
+      "title": "How AI Search Platforms Leverage Entity Recognition",
+      "url": "https://ipullrank.com/ai-search-entity-recognition",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 122,
+      "id": "a0e604f5-15c4-4bf6-8f53-aa7ac8b8ced6",
+      "title": "What is Off-Page SEO and Why It Still Matters in the AI Era | 2026 ...",
+      "url": "https://www.seoauthori.com/en/blog/off-page-seo-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 10, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 123,
+      "id": "cbe59ed9-0f93-4aef-b18a-7670dbbf498a",
+      "title": "How AI Overviews Are Changing Local Search in 2026 | PinMeTo",
+      "url": "https://www.pinmeto.com/blog/ai-overviews-local-search-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 124,
+      "id": "b80b1af2-4346-4915-9f8e-11c5b7bab1ee",
+      "title": "AI Local SEO: How AI Is Changing Local Search in 2026",
+      "url": "https://www.searchquest.ai/guides/ai-local-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 125,
+      "id": "7fcf9862-f935-465d-b3f3-c037fade9cb4",
+      "title": "Best Open-Source LLM Models in 2026: Coding, Local, Agentic AI ...",
+      "url": "https://huggingface.co/blog/daya-shankar/open-source-llms",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Nov 13, 2025",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 126,
+      "id": "3c54cc09-85a6-47e3-b344-15364609457f",
+      "title": "SEO Pricing Guide: How Much Should You Actually Budget in 2026?",
+      "url": "https://thedigitalelevator.com/blog/seo-pricing-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jul 23, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 127,
+      "id": "26e8788c-a4dc-4c43-8a0c-b0c02e40ee6c",
+      "title": "Keyword Research in 2026: Beyond Volume and Difficulty",
+      "url": "https://brandingbytes.com/keyword-research-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 16, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 128,
+      "id": "829933f7-fb2c-44fa-ba84-4eadac9edd83",
+      "title": "On-Page SEO in 2026: The Full Technical and Editorial Checklist",
+      "url": "https://content-whale.com/blog/on-page-seo-in-2026-the-full-technical-and-editorial-checklist/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 13, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 129,
+      "id": "a448c903-2e4d-4099-973d-f0fff30c1b10",
+      "title": "Core Web Vitals Guide 2026: LCP, CLS & INP Explained + How to Fix",
+      "url": "https://www.w3era.com/blog/seo/core-web-vitals-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 26, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 130,
+      "id": "ab688f44-02e5-49bb-b423-350683f8259f",
+      "title": "Schema Markup 2026: The Complete Structured Data Guide",
+      "url": "https://webwise.digital/blog/schema-markup-structured-data-complete-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 19, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 131,
+      "id": "077bce35-4324-45ff-a44d-75ca41874eac",
+      "title": "Top Off-Page SEO Tactics 2026 | Build Quality Backlinks with ACSIUS",
+      "url": "https://www.acsius.com/blog/what-is-new-backlink-strategy-for-seo-in-2026-how-to-rank-in-the-ai-search-era/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Nov 10, 2025",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 132,
+      "id": "29cda14b-ee2d-4f78-a078-51a7a3900fe1",
+      "title": "Google Business Profile Optimization: 2026 Local SEO Guide",
+      "url": "https://fuelonline.com/seo/google-business-profile-optimization-2026-the-complete-local-seo-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 4, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 133,
+      "id": "bf27d361-a29a-40b2-afde-6b3259261aa3",
+      "title": "Structured Data for SEO: A Guide to Schema Markup in 2026",
+      "url": "https://www.gwcontent.com/blogs/news/structured-data-for-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 134,
+      "id": "27edc685-9c41-475e-8738-6bef1aa3b70f",
+      "title": "Local SEO AI Overviews: Best Visibility Guide for 2026",
+      "url": "https://hostmerchantservices.com/2026/07/local-seo-ai-overviews",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 135,
+      "id": "7db0fcf2-66a6-4f17-95d0-b28f00cfc0c2",
+      "title": "Structured Data for AI Search: 2026 Schema Guide",
+      "url": "https://nadiamohamed.me/insights/structured-data-for-ai-search",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 136,
+      "id": "308fc45a-23ad-413b-8f9f-32e2a17a1103",
+      "title": "Technical SEO Checklist 2026 | Crawl, CWV and Schema",
+      "url": "https://jondillemuth.fi/en/blog/technical-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 137,
+      "id": "8e17756a-f077-4cd6-aa85-d65433f14f93",
+      "title": "Local SEO: 6 Ranking Factors That Drive Maps Pack Results in 2026 | The Blueprint Training",
+      "url": "https://theblueprint.training/local-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 138,
+      "id": "00b1b970-5649-46f6-8937-1186a8a7cfcc",
+      "title": "Best SEO Tool Stack: 8 Tools That Run My Entire Agency in 2026 | The Blueprint Training",
+      "url": "https://theblueprint.training/best-seo-tool-stack",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 139,
+      "id": "16aac96d-2396-43ba-8dd8-c7b82f4d9269",
+      "title": "What is SEO? A complete guide to search engine optimization",
+      "url": "https://www.semrush.com/blog/what-is-seo/?msockid=386d0fcd6da462c01f3318646c586337",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 1, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 140,
+      "id": "1fba2fc1-783f-443c-9b93-4960978825aa",
+      "title": "Semrush vs Ahrefs: Which SEO Tool is Better? (2026)",
+      "url": "https://onelittleweb.com/top-tools/semrush-vs-ahrefs/",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 21, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 141,
+      "id": "c67acaf1-7177-49fd-8bfe-30ff2d751e5d",
+      "title": "What is SEO? A complete guide to search engine optimization",
+      "url": "https://www.semrush.com/blog/what-is-seo/?msockid=1e5cbf34de47653419fea89ddf506499",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 1, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 142,
+      "id": "d52b47f6-6704-4990-87fd-94d0831404b7",
+      "title": "Robots.txt For AI Bots: Control GPTBot, Google-Extended & ...",
+      "url": "https://capston.ai/robots-txt-for-ai-bots/",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 143,
+      "id": "a57515e6-9c7f-4c15-b054-0c46e0c2fcb5",
+      "title": "Complete Guide to Knowledge Graph & Entity SEO (2026)",
+      "url": "https://www.stackmatix.com/blog/organization-schema-knowledge-graph",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Mar 11, 2026",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 144,
+      "id": "9e84a1a2-76fd-4537-bb9a-f882411d02ba",
+      "title": "SEO Pricing for B2B Tech | daydream",
+      "url": "https://www.withdaydream.com/library/insights/seo-pricing",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 9, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 145,
+      "id": "472202ee-b868-4a63-ae05-fdd70cb1da37",
+      "title": "How Search Engines Work (2026): Crawling, Indexing & Ranking",
+      "url": "https://rankxdigital.com/seo-basics/how-search-engines-work/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 27, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 146,
+      "id": "102c26da-00ef-4fcb-bad9-fcb36d0d175f",
+      "title": "On-Page SEO Checklist 2026: Tags, Structure & Optimization",
+      "url": "https://optimizewithsanwal.com/on-page-seo-checklist-2026-tags-structure-optimization/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 27, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 147,
+      "id": "b29bca87-2f4c-4dd6-a7e4-5094a1f4e765",
+      "title": "Technical SEO Guide 2026: Master Crawl Budget & Schema",
+      "url": "https://www.kocakyazilim.com/en/blog/technical-seo-guide-2026-master-crawl-budget-schema",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Feb 4, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 148,
+      "id": "cf5bc5c4-c657-4242-bd17-6cfd1123d314",
+      "title": "Core Web Vitals 2026 Update — LCP, INP, CLS Targets & Fixes",
+      "url": "https://smartseoaudit.com/guides/core-web-vitals-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 30, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 149,
+      "id": "b7a14fb9-27c0-4dac-98b9-f8d4fbafcf8a",
+      "title": "Schema Markup for AI Search: 7 JSON-LD Wins",
+      "url": "https://ailabsaudit.com/blog/en/schema-markup-ai-visibility-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 16, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 150,
+      "id": "94225907-5b60-4e8a-8f94-ea18752acbc1",
+      "title": "Schema Markup After March 2026: The Complete Playbook for …",
+      "url": "https://siteup.ai/blog/schema-ai-search-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 20, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 151,
+      "id": "24100988-7946-4859-bcc4-08a7a44367c8",
+      "title": "6 Off-Page SEO Strategies That Still Work in 2026",
+      "url": "https://toandfrodigitalmarketing.com/6-off-page-seo-strategies-that-still-work-in-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 18, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 152,
+      "id": "5defb65b-f396-430c-957f-f5c7cde88f22",
+      "title": "Is Link Building Still Relevant to SEO in 2026? - iemlabs.com",
+      "url": "https://iemlabs.com/blogs/is-link-building-still-relevant-to-seo-in-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 153,
+      "id": "47292f9f-1288-441a-82bb-57c570f937ce",
+      "title": "Local SEO in 2026: How Listings, Reviews, and Content Work Together",
+      "url": "https://socialfirm.com/blog/local-seo-in-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 20, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 154,
+      "id": "734cddfd-4481-49fd-9990-b98c11caf3a2",
+      "title": "Technical SEO: The Complete Guide for 2026 | The Best SEO Podcast",
+      "url": "https://www.bestseopodcast.com/topics/technical-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 155,
+      "id": "2a9f0d36-1633-45b7-b6d4-0814ec94aa32",
+      "title": "Semrush vs Ahrefs: Complete SEO Tools Comparison 2026",
+      "url": "https://ighenatt.es/en/resources/auditoria-seo/semrush-vs-ahrefs",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 156,
+      "id": "22dbb248-cfb5-4b22-92b6-8d683f15e4d5",
+      "title": "7 Best SEO Tools in 2026: From Ahrefs and Screaming Frog to AI Visibility Trackers Like Peec AI",
+      "url": "https://www.portotheme.com/7-best-seo-tools-in-2026-from-ahrefs-and-screaming-frog-to-ai-visibility-trackers-like-peec-ai",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 157,
+      "id": "f1d8ac33-08df-46f1-b8e8-39e37c8a3df7",
+      "title": "23 AI Search Statistics for Local Businesses in 2026 — The Data You Need to Act Now",
+      "url": "https://growthproai.com/ai-search-statistics-local-businesses-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 158,
+      "id": "8189b055-72ad-46fd-89f0-2debd3fb51fb",
+      "title": "Core Web Vitals 2026: guide for businesses - Ighenatt Blog",
+      "url": "https://ighenatt.es/en/blog/core-web-vitals-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 159,
+      "id": "92c67aa0-e8d6-480d-90f8-6e35a2938730",
+      "title": "AI Strategies & Essential Guidelines for Local SEO In 2026",
+      "url": "https://bizrankspark.com/ai-strategies-for-local-seo-in-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 160,
+      "id": "b1b6befc-7b23-4f4b-af06-e481952b3405",
+      "title": "My Picks for SEO Software for Digital Agencies - Karl Hughes",
+      "url": "https://www.karllhughes.com/posts/seo-software-for-agencies",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 21, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 161,
+      "id": "0d20e831-60ce-4afa-94d6-9b6aebee596c",
+      "title": "AI Leaderboard 2026: Compare & Rank 300+ Top AI Models by …",
+      "url": "https://llm-stats.com/",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 162,
+      "id": "33be678d-54b2-47c6-87d4-87df83c18516",
+      "title": "Entity-Linking: How to Connect Your Content to the Knowledge Graph",
+      "url": "https://www.jasminedirectory.com/blog/entity-linking-how-to-connect-your-content-to-the-knowledge-graph/",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Dec 31, 2025",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 163,
+      "id": "fbec175a-d831-44d3-a4d5-a1a90affc5ff",
+      "title": "SEO Pricing in 2026: What SEO Really Costs - Arc4",
+      "url": "https://arc4.com/resources/seo-pricing/",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 164,
+      "id": "8d002ac2-4892-492d-9d12-6154a349fe29",
+      "title": "What is Pricing? Definition, Types, Strategies & Examples",
+      "url": "https://www.marketing91.com/pricing/",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 24, 2023",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 165,
+      "id": "61df1317-af91-43ba-9838-9c57ac98ebfd",
+      "title": "Keyword Research in 2026: The Complete Guide to Search Intent",
+      "url": "https://marketboosttools.com/keyword-research-in-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Feb 6, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 166,
+      "id": "26d5df3e-230d-4a64-a558-13796ae9e211",
+      "title": "On-Page SEO Checklist 2026: Complete Optimization Guide",
+      "url": "https://backlynk.io/blog/on-page-seo-checklist/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 20, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 167,
+      "id": "169c7aae-db3c-476c-a226-3f300139a3cd",
+      "title": "Technical SEO Checklist for 2026 | Speed, Crawlability & Indexing",
+      "url": "https://www.perfectionmarketing.com/technical-seo-checklist-speed-crawlability-indexation/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 6, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 168,
+      "id": "d471d44a-cebd-47c1-a3a3-f51444edb415",
+      "title": "Core Web Vitals explained: what they measure & how to actually improve ...",
+      "url": "https://www.luckyorange.com/blog/posts/core-web-vitals",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 4, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 169,
+      "id": "74698a96-c229-42f1-84e4-5e33a13bcb25",
+      "title": "Structured Data & Schema for SEO | AI Search, GEO & AEO",
+      "url": "https://opace.agency/blog/structured-data-schema-for-seo/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 9, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 170,
+      "id": "8202d890-7c6a-40cc-a560-f2f561f81857",
+      "title": "Link Building Strategies That Work (2026)",
+      "url": "https://outreacher.io/link-building-strategies/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jul 2, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 171,
+      "id": "af98eabe-9ae1-411b-965d-7cfb67fca875",
+      "title": "The Only Link Building Tactics Still Working in 2026 — SEO Indie",
+      "url": "https://www.seoindie.com/resources/link-building-tactics-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 172,
+      "id": "4d145e2f-4e6e-4f38-8025-328353eeff34",
+      "title": "Local SEO & Google Business Profile Guide 2026",
+      "url": "https://outpaceseo.com/article/local-seo-gbp/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 25, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 173,
+      "id": "f9020ae1-7552-4a21-8d81-e7164fc802cb",
+      "title": "Off-Page SEO Tactics That Work in 2026: Links, Mentions & Entity Authority | MaxGrowth Agency",
+      "url": "https://maxgrowthagency.com/blog/off-page-seo-tactics-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 174,
+      "id": "03a8c7b4-c0d1-4cb1-b13f-31b852b49fb1",
+      "title": "Best SEO Audit Tools for Website Optimization (2026) - SEOLEVELUP, LLC",
+      "url": "https://seolevelup.com/best-seo-audit-tools-for-website-optimization",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 175,
+      "id": "2aad8f2a-a53e-41c4-b81f-2611800642b4",
+      "title": "Does Schema Markup Still Matter for SEO and GEO? | Pixis",
+      "url": "https://pixis.ai/blog/does-schema-markup-still-matter-for-seo-and-geo",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 176,
+      "id": "2307fc16-ac62-4b4e-b054-1cc6fb10818a",
+      "title": "Semrush vs Ahrefs vs Moz (2026): Best SEO Tool?",
+      "url": "https://www.cswebsolutions.ca/blog/semrush-vs-ahrefs-vs-moz-features-pricing-comparison-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 177,
+      "id": "b9f5964d-f81e-4d67-863c-ca3e308e2468",
+      "title": "JSON-LD Structured Data: The Definitive Implementation Guide for 2026 | SEOAuthori Blog",
+      "url": "https://www.seoauthori.com/en/blog/json-ld-structured-data-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 178,
+      "id": "6cab68b6-55c0-45df-9173-2d2735879fa3",
+      "title": "Structured data: SEO and GEO optimization for AI in 2026",
+      "url": "https://www.digidop.com/blog/structured-data-secret-weapon-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 179,
+      "id": "99b5be79-8e85-4b43-b44b-1f4eacc6fc09",
+      "title": "GEO, AEO, and SEO in 2026: The enterprise guide to AI ...",
+      "url": "https://writer.com/blog/geo-aeo-optimization",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 180,
+      "id": "d26468f3-bb95-4a21-907d-124144942a9e",
+      "title": "15 Best SEO Tools for Agencies in 2026 (Tested Across 50+ Clients)",
+      "url": "https://dageno.ai/blog/best-seo-tools-for-agencies",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 181,
+      "id": "2e330173-726c-499e-a78e-f696bb6f95d5",
+      "title": "13 On Page SEO Factors You Must Focus on in 2026",
+      "url": "https://wellows.com/blog/on-page-seo-factors",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 182,
+      "id": "7892a769-70bd-4544-a68b-b5ddef63aa48",
+      "title": "Entity SEO Guide for Agencies: Start Here in 2026",
+      "url": "https://agencydashboard.io/blog/entity-seo-guide-for-agencies",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jul 6, 2026",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 183,
+      "id": "7df9a25b-2324-4e24-a943-a9dd8654ad51",
+      "title": "Ecommerce SEO Pricing in 2026: Costs, Models & Budget Planning",
+      "url": "https://seoprofy.com/blog/ecommerce-seo-pricing/",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 29, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 184,
+      "id": "30bc5081-3043-4144-8c74-a206b1dafa0b",
+      "title": "Google algorithm updates: The complete history",
+      "url": "https://searchengineland.com/library/platforms/google/google-algorithm-updates",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 185,
+      "id": "e3efb01f-1731-4be0-9256-bcc45af741ad",
+      "title": "How Search Engine Algorithms Rank Websites in 2026",
+      "url": "https://www.analyticsinsight.net/digital-marketing/how-search-engine-algorithms-like-google-work",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 12, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 186,
+      "id": "7d08ceb2-d986-4617-bddf-d02b491c1497",
+      "title": "AI for Keyword Research, Content & Search Intent in 2026",
+      "url": "https://websterztech.com/ai-for-keyword-research-content-optimization-search-intent-what-actually-works-in-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 187,
+      "id": "b5d57dbd-4078-4e3c-adf3-5e0db4594696",
+      "title": "On-Page SEO: The Complete 2026 Checklist - openhelm.ai",
+      "url": "https://openhelm.ai/blog/on-page-seo-checklist-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 13, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 188,
+      "id": "57bbf28a-6ae0-4bba-a668-e9c814867174",
+      "title": "How to Audit Robots.txt, XML Sitemaps, and Crawl Directives",
+      "url": "https://www.seoguru.ai/blog/how-to-audit-robots-txt-xml-sitemaps-and-crawl-directives",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 17, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 189,
+      "id": "00017de8-1fb5-47a1-9f2f-b125dcaf6043",
+      "title": "Core Web Vitals in 2026: INP, LCP & CLS Explained (With Fixes)",
+      "url": "https://nayananjalee.com/blog/core-web-vitals-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Dec 14, 2025",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 190,
+      "id": "6b0aac99-73a4-4926-9315-ec8ea2c55bb6",
+      "title": "Schema Markup for AI Search Visibility: 2026 Guide",
+      "url": "https://themarketingshelf.com/schema-markup-ai-search-visibility-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 3, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 191,
+      "id": "c3f0c31b-5a1b-4992-945f-4572f4ce508b",
+      "title": "2026 Local SEO Ranking Factors (Maps, Organic & AI Search)",
+      "url": "https://www.kyleeggleston.com/blog/2026-local-seo-ranking-factors/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jan 18, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 192,
+      "id": "9a8b4f5b-f2a1-495e-a64c-1334c425e780",
+      "title": "Off-Page SEO Strategies That Work in 2026",
+      "url": "https://www.chillybin.co/off-page-seo-strategies",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 193,
+      "id": "5976b92a-3685-4787-ae0d-31719a361953",
+      "title": "Link Building in 2026: What Actually Works for SEO Rankings | Ingenious Hitech",
+      "url": "https://www.ingenioushitech.com/blog/link-building-in-2026-what-actually-works",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 194,
+      "id": "797cc6fd-fd32-4ca0-bdd3-ab8c7a6c73e9",
+      "title": "FAQ on GEO and AEO: Where AI search and SEO overlap in 2026",
+      "url": "https://www.emarketer.com/content/faq-on-geo-aeo--where-ai-search-seo-overlap-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 195,
+      "id": "d4a4aa9b-d422-4955-95c7-ca9ae787ba07",
+      "title": "LCP, INP & CLS: Core Web Vitals Metrics Explained (2026)",
+      "url": "https://weblogic.ie/blog/website-speed-core-web-vitals",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 196,
+      "id": "620f4b20-4b9b-4a30-9226-ad732b852040",
+      "title": "50+ Backlink Statistics for 2026 (Survey Data)",
+      "url": "https://www.reporteroutreach.com/blog/link-building-statistics",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 197,
+      "id": "282b871c-e12e-4556-aa0d-0411fbd3bf8e",
+      "title": "AI Search Optimization In 2026: AEO, AIO & GEO | EisnerAmper",
+      "url": "https://eagrowthsolutions.com/ai-search-optimization",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 198,
+      "id": "11b7d5fc-1799-44ff-9170-c8d551746105",
+      "title": "Answer engine optimization vs traditional SEO — why brands need both GEO and AEO strategies in 2026 - Prime Avenue Group",
+      "url": "https://primeavenuegroup.com/answer-engine-optimization-vs-traditional-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 199,
+      "id": "c41488ad-b3b2-4a5e-9b36-a2ff1d74128b",
+      "title": "How to do keyword research in 2026 (6 ways + framework)",
+      "url": "https://www.semrush.com/blog/keyword-research",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 200,
+      "id": "428e24a9-e9f2-4e58-890e-d8763c61ee84",
+      "title": "10 best SEO audit tools for 2026 (tested)",
+      "url": "https://community.hubspot.com/t/10-best-seo-audit-tools-for-2026-tested/149826",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 29, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 201,
+      "id": "15adbb5d-ab46-4a80-a2a5-211e11c65f4c",
+      "title": "llms.txt vs robots.txt vs ai.txt: The Honest Guide to AI ...",
+      "url": "https://glasp.co/articles/llms-txt-ai-crawler-control",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 202,
+      "id": "431dc6bb-8425-4ea0-976f-d3489764a13b",
+      "title": "Using Entity SEO to Get Your Brand Recognized in Knowledge Graphs",
+      "url": "https://headlineconsultants.com/blog/entity-seo-knowledge-graphs",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Aug 6, 2025",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 203,
+      "id": "b559bffd-a1bf-4045-94e7-4da0d208cbb4",
+      "title": "How Much Does Content Marketing Cost in 2026?",
+      "url": "https://www.frac.tl/seo-pricing-and-cost/",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 204,
+      "id": "ba72f6f6-9b9a-47e8-88bf-a344c13e1daa",
+      "title": "How Search Engines Work: Crawling, Indexing & Ranking Explained …",
+      "url": "https://vjseomarketing.com/learn/seo/how-search-engines-work",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 205,
+      "id": "2a467de0-9e31-40a0-a210-0b1fc5fcdf50",
+      "title": "Keyword Research",
+      "url": "https://www.startups.com/lexicon/keyword-research",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 206,
+      "id": "adf1f08d-0be4-4468-9619-e5623d4faf83",
+      "title": "2026 Keyword Strategy: Intent Beyond Volume",
+      "url": "https://rankanddiscover.com/2026-keyword-strategy-beyond-volume-to-user-intent/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 8, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 207,
+      "id": "36ac6716-c8e1-435c-90e8-725176566b2d",
+      "title": "Title Tags and Meta Descriptions: The Masterclass for Higher CTR in …",
+      "url": "https://www.searchscaleai.com/blog/title-tags-meta-descriptions-masterclass-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 10, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 208,
+      "id": "c44617d4-9552-4dfc-8969-ad11880d8ae9",
+      "title": "Technical SEO B2B SaaS: Crawl Budget 2026",
+      "url": "https://mydigipal.com/en/blog/technical-seo-b2b-saas-crawl-budget-optimization-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 12, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 209,
+      "id": "ec84c05e-71ac-4942-84f0-f5c9430a2f7b",
+      "title": "Technical SEO: The Ultimate Guide for 2026 - Backlinko",
+      "url": "https://backlinko.com/technical-seo-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 24, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 210,
+      "id": "2760ec64-26ea-4a51-ac89-8fd1dd5b9ac5",
+      "title": "Core Web Vitals in 2026: The Complete INP, LCP, and CLS …",
+      "url": "https://usetoolsuite.com/blog/core-web-vitals-2026-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 15, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 211,
+      "id": "170129d4-0a8e-4929-86e4-d82108a129a6",
+      "title": "Structured Data in the AI Search Era",
+      "url": "https://www.brightedge.com/blog/structured-data-ai-search-era",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 22, 2025",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 212,
+      "id": "ec2145f6-0364-4e18-b8ce-89ed734ae092",
+      "title": "Structured Data for SEO (2026): Schema, Rich Results & AI Search",
+      "url": "https://thestacc.com/blog/structured-data-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 213,
+      "id": "afeca306-ae95-4dbb-af86-d4ed903cc27c",
+      "title": "Link Building in 2026: Strategies That Still Work (And What’s Dead)",
+      "url": "https://www.overthetopseo.com/link-building-in-2026-strategies-that-still-work-and-whats-dead/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 17, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 214,
+      "id": "06f3c234-7739-4665-9ace-f5cada028ed2",
+      "title": "Local SEO in 2026: Latest Trends, AI Updates & Best Practices",
+      "url": "https://www.seoworld.in/local-seo-in-2026-whats-changed-and-what-still-works/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 2, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 215,
+      "id": "ab70c621-02c4-4bbe-9140-3e037023f694",
+      "title": "The Ultimate Local SEO Guide For 2026: Dos And Don'ts",
+      "url": "https://ravenousravendesign.com/learn-how-to-seo/local-seo-guide-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 21, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 216,
+      "id": "361d263b-1424-4e4d-96d3-d3afe4afe512",
+      "title": "80 Link Building Statistics (Updated for 2026) - BuzzStream",
+      "url": "https://www.buzzstream.com/blog/link-building-statistics",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 217,
+      "id": "4a5e6907-a9b8-47a3-b65f-bba9bc9682e0",
+      "title": "What are the most effective link building strategies for 2026?",
+      "url": "https://www.awilix.ai/blog/uncategorized/link-building-strategies-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 218,
+      "id": "74916d3f-f3df-49cf-95fc-5cfeaf932e25",
+      "title": "SEO vs GEO vs AEO: The Complete Guide to AI Search Optimization",
+      "url": "https://magnetoitsolutions.com/blog/seo-vs-geo-vs-aeo",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 219,
+      "id": "18a69312-8538-4353-a44b-86a45edb1941",
+      "title": "Google May 2026 Core Update Complete What SEOs Need to Know",
+      "url": "https://evincedev.com/blog/google-may-2026-core-update-seo-impact",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 220,
+      "id": "a16017d8-b377-43c0-b449-37d1c0dbc117",
+      "title": "Answer Engine Optimization: The Complete AEO and GEO Guide for 2026 | Surmado Blog",
+      "url": "https://www.surmado.com/blog/answer-engine-optimization-aeo-geo-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 221,
+      "id": "5107f8a5-bd97-41ca-84ad-1d39f4231ea6",
+      "title": "AI Traffic in 2026 and What It Means for SEO",
+      "url": "https://fujisanmarketing.com/how-to-track-ai-traffic-in-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 14, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 222,
+      "id": "9f98f9f1-bee4-4c02-92f4-884910e67fd2",
+      "title": "Knowledge Sources in Entity SEO: What you need to Know",
+      "url": "https://jasonbarnard.com/digital-marketing/articles/articles-by/knowledge-sources-in-entity-seo-what-you-need-to-know/",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 223,
+      "id": "a3ab4a2a-f183-440b-b5ee-77f2a7ea1101",
+      "title": "SEO Pricing Models Explained: How to Choose the Right One for Your ...",
+      "url": "https://techbehemoths.com/blog/seo-pricing-models-explained-choose-right-one-business",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 12, 2026",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 224,
+      "id": "5719d25f-3b11-4c41-aa02-4c53327bb02c",
+      "title": "How Google Search Engine Works in 2026",
+      "url": "https://www.glorywebs.com/blog/google-search-works",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Dec 8, 2025",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 225,
+      "id": "fe024fef-581a-4c3d-8884-0729317c0700",
+      "title": "How does Google Search Works: Crawling, Indexing, Ranking and …",
+      "url": "https://www.geeksforgeeks.org/techtips/how-the-google-search-works-crawling-indexing-ranking-and-serving/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jul 23, 2025",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 226,
+      "id": "c2d47c05-15b6-46cf-b8dd-d03539a82911",
+      "title": "How to do keyword research in 2026: a step-by-step guide",
+      "url": "https://kumaseo.com/keyword-research-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 227,
+      "id": "8e6e6d23-c9d9-42d5-850e-178a4aff1c0b",
+      "title": "Technical SEO Audit: A Step-by-Step Guide for 2026",
+      "url": "https://www.eightysixcode.ae/insights/technical-seo-audit-a-step-by-step-guide-for-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 228,
+      "id": "4adfa6cb-47dc-41a6-b713-0db2abe057c6",
+      "title": "XML Sitemaps & Robots.txt: Crawl Budget Done Right (2026)",
+      "url": "https://www.straightnorth.com/blog/xml-sitemaps-and-robots-txt-how-to-guide-search-engines-effectively/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Feb 13, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 229,
+      "id": "6bd18af8-8a7d-4c6a-a2b2-1c0b90323842",
+      "title": "What are Core Web Vitals? LCP, CLS, INP and real SEO impact",
+      "url": "https://paperplanefactory.com/en/core-web-vitals-explained/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null,
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 230,
+      "id": "8ffb4a7e-890f-4b25-918d-1a18e95a29ce",
+      "title": "Core Web Vitals & SEO in 2026: LCP, INP, CLS Explained",
+      "url": "https://www.nicodigital.com/technical-seo/core-web-vitals-in-2025-why-page-experience-still-rules-seo-rankings/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 8, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 231,
+      "id": "cb8978e2-6145-4956-a3a6-3376b69a147f",
+      "title": "Google Business Profile Optimization (2026): Step-by-Step Proven …",
+      "url": "https://localseoup.com/local-seo-blog/google-business-profile-optimization/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 232,
+      "id": "b304b272-8d2c-487e-86a8-0b9eb82929cf",
+      "title": "23 LOCAL SEO RANKING FACTORS EVERY BUSINESS MUST KNOW ...",
+      "url": "https://sarmlife.com/local-seo-ranking-factors/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Mar 7, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 233,
+      "id": "14da9daa-2555-477e-aba0-a1cc569f93ea",
+      "title": "A Guide to the New Answer Engine Surfaces: AI Overviews ...",
+      "url": "https://www.siteimprove.com/blog/answer-engine-surfaces-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q9_ai_search_aeo_geo"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 4, 2026",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 234,
+      "id": "c027a888-05cb-4dfc-8562-a6538d1fee0f",
+      "title": "How to Build an SEO Strategy That Works for 2026",
+      "url": "https://thedigitalring.com/insights/how-to-build-an-seo-strategy-that-works-for-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 235,
+      "id": "2c53d581-1c11-4db3-b721-ca1929e684dc",
+      "title": "How to do Keyword Research in 2026 (8 Step Process) | Brafton",
+      "url": "https://www.brafton.com/keyword-research",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 236,
+      "id": "d353c677-8b73-4551-9f61-a01468e033e1",
+      "title": "What is LLM? - Large Language Models Explained - AWS",
+      "url": "https://aws.amazon.com/what-is/large-language-model/",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 237,
+      "id": "eb213523-5177-47e5-9549-5542be9d2639",
+      "title": "SEO Pricing Models: 7 Ways to Price Your Agency Services",
+      "url": "https://theblueprint.training/agency-pricing-models/",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 30, 2024",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 238,
+      "id": "11d0cb56-5f53-4c19-994a-637ec8d2fa5e",
+      "title": "How Search Engines Work: Complete Guide to Google's Ranking …",
+      "url": "https://www.webtonic.io/blog/how-search-engines-work-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 239,
+      "id": "94df4d9b-86f0-4911-8225-a9d9139aa82d",
+      "title": "Keyword Research in 2026: Tools, Methods, Intent",
+      "url": "https://searchpod.com/knowledge-base/keyword-research-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 240,
+      "id": "8fa837c7-e155-47d4-8377-fe5a40d5023e",
+      "title": "On-Page SEO: The Definitive Guide + FREE Template (2026)",
+      "url": "https://backlinko.com/on-page-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 31, 2026",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 241,
+      "id": "3876e5b0-f794-4d79-a296-58140eff10be",
+      "title": "Technical SEO Checklist for 2026: The Complete Audit Guide | 2POINT",
+      "url": "https://www.2pointagency.com/blog/technical-seo-checklist/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Mar 1, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 242,
+      "id": "071afffc-41e0-4e3a-93e6-a5497bd860c4",
+      "title": "Core Web Vitals: Complete 2026 Guide to LCP, INP & CLS",
+      "url": "https://vrid.ai/blog/core-web-vitals-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jan 22, 2026",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 243,
+      "id": "6cc4dc83-4666-4b0e-b69f-071eb4423653",
+      "title": "Google Business Profile Optimization in 2026: The Complete Map …",
+      "url": "https://maxgrowthagency.com/blog/google-business-profile-optimization-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_local_seo"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Apr 30, 2026",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 244,
+      "id": "5e3ba59e-dd94-4393-a89c-fba3db1edd3b",
+      "title": "Why Query Intent Still Matters in AI Search, and How Each Engine Has Reshaped It | BrightEdge",
+      "url": "https://www.brightedge.com/resources/weekly-ai-search-insights/ai-search-query-intent-evolution",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 245,
+      "id": "71650dce-1608-445c-b995-318a77ef2532",
+      "title": "25 On-Page SEO Tips that WORK in 2026 (+ Checklist)",
+      "url": "https://loganix.com/on-page-seo-tips",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 246,
+      "id": "d34bdc7a-cd83-42d0-a951-78fcdb269fa1",
+      "title": "Google Ranking Factors: 200+ Confirmed and Retired Signals",
+      "url": "https://www.stanventures.com/blog/google-ranking-factors",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 247,
+      "id": "7e1bb013-6870-4326-bad0-7c19e8543721",
+      "title": "The 6 Types of Search Intent (Including the New Generative AI Intent)",
+      "url": "https://seranking.com/blog/search-intent",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null,
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 248,
+      "id": "cf858214-7676-42ba-b0eb-792917e90dc5",
+      "title": "SEO Reporting and Analytics Guide: Complete Framework (2026)",
+      "url": "https://seoctopus.io/en/blog/seo-reporting-and-analytics-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-18T08:18:30.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 249,
+      "id": "1ba01925-bb17-4159-b185-8c7996fcb437",
+      "title": "How to Track AI Search Traffic & Referrals (ChatGPT, Perplexity, AI Overviews) — SeoMods",
+      "url": "https://seomods.com/blog/track-ai-search-traffic",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-23T23:45:23.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 250,
+      "id": "9aac74a1-49d6-43ba-bac3-71c3ad0a87f8",
+      "title": "Simple Monthly SEO Report Template 2026: 3-5 KPIs for Quick Decisions",
+      "url": "https://curratedbrief.com/simple-monthly-seo-report",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-09T00:40:43.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 251,
+      "id": "3381536c-1e04-4030-872a-9bfa3117d282",
+      "title": "Data Tracking Setup Guide for Organic Channels (2026)",
+      "url": "https://rankai.ai/articles/data-tracking-setup-guide-for-organic-channels",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-27T07:31:46.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 252,
+      "id": "3325be9e-4bca-455b-b78d-63f0a2eceb97",
+      "title": "17 SEO Data Reports to Track in 2026 (Complete Guide)",
+      "url": "https://thestacc.com/blog/seo-data-reports-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-09T14:20:41.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 253,
+      "id": "fbc5a8aa-1b22-4c4c-9182-c0eef3a90ebb",
+      "title": "Measure AI Referral Traffic in Google Analytics (2026)",
+      "url": "https://www.get-ryze.ai/blog/how-to-measure-ai-referral-traffic-in-google-analytics",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-13T23:45:22.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 254,
+      "id": "78c41034-d805-4572-bcb3-02a4571b65c3",
+      "title": "GA4 Organic Attribution Setup: 7-Step Measurement Checklist | OrganicSEO.org",
+      "url": "https://organicseo.org/blog/organic-channel-measurement-attribution-ga4",
+      "tier": "practitioner",
+      "topics": [
+        "q10_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-11T06:21:57.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 255,
+      "id": "ac2b2466-ebe7-426c-802c-728284eb70d9",
+      "title": "SEO Tool Stack vs Agency: True Cost Comparison for 2026 | SEO Companies Reviewed",
+      "url": "https://www.seocompaniesreviewed.com/blog/seo-tools-vs-agency-cost-comparison",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-09T08:55:42.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 256,
+      "id": "797dd511-ad04-48a0-8be5-ca1adaae91d7",
+      "title": "Best SEO Tools for Agencies (2026): 7 Platforms Reviewed Honestly",
+      "url": "https://agencypro.app/best/seo-tools-for-agencies",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-15T12:39:19.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 257,
+      "id": "2bcea74f-74ea-4197-814e-579b1d7bb020",
+      "title": "SEO Retainer vs Project Pricing in 2026 | Octopi Digital",
+      "url": "https://octopi-digital.com/blog/seo-retainer-vs-project-pricing",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-03T09:21:23.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 258,
+      "id": "49f8d8f8-6219-4e4f-bc41-bb98de5853ac",
+      "title": "SEO Audit Tools 2026: Ahrefs vs Semrush vs Screaming Frog vs Sitebulb",
+      "url": "https://netpartners.marketing/seo-audit-tools-2026-ahrefs-semrush-screaming-frog-sitebulb-comparison/",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-29T15:44:00.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 259,
+      "id": "8cc8a71a-4101-46a1-9425-27d60a85a324",
+      "title": "SEO Pricing: How Much Does SEO Cost in 2026? • SEO SHERPA™",
+      "url": "https://seosherpa.com/seo-pricing/",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-02T11:40:50.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 260,
+      "id": "b64e8ca2-a584-45ba-accb-3b0841bf13e8",
+      "title": "How Much Does SEO Cost for a Small Business? (2026 Complete Pricing Guide) | ConversionCrush Blogs",
+      "url": "https://conversioncrush.com/blog/how-much-does-seo-cost-small-business",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-16T16:01:29.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 261,
+      "id": "595ef9b8-2b7c-437e-9af9-1f045f8d98c7",
+      "title": "Monthly SEO Packages - What $1K vs $3.5K vs $8K Buys | LeadAdvisors",
+      "url": "https://leadadvisors.com/blog/monthly-seo-packages/",
+      "tier": "practitioner",
+      "topics": [
+        "q11_tools_and_service"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-07T17:01:02.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 262,
+      "id": "560a5e47-bcad-46d3-9c69-02b7ddb66fc2",
+      "title": "Robots.txt & AI Crawlers in 2026: The Full Guide",
+      "url": "https://dataimpulse.com/blog/robots-txt-ai-crawlers/",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-01T06:57:08.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 263,
+      "id": "b7bb199e-e902-40e3-aa30-39af73f869f6",
+      "title": "AI Crawler Access: Which Bots to Allow and How | AuditZap",
+      "url": "https://auditzap.io/guides/ai-crawler-access",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-09T01:58:34.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 264,
+      "id": "6287bf7a-33ff-40ce-aec5-58fdc0ea8cf3",
+      "title": "Controlling AI crawlers: llms.txt and robots.txt",
+      "url": "https://schoettler.io/en/blog/ki-crawler-steuern",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-28T16:55:41.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 265,
+      "id": "be993ada-77f9-41de-b78e-fc245d91e9cd",
+      "title": "Llms.txt Vs Robots.txt Vs Google-Extended: What Actually Stops GPTBot, ClaudeBot, And PerplexityBot - Design Copy",
+      "url": "https://designcopy.net/en/llms-txt-vs-robots-txt-ai-crawler-control/",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-12T09:00:00.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 266,
+      "id": "dc5287d7-7a7c-42f3-90ba-fe227e7392b3",
+      "title": "How AI Crawlers Actually Read Your Site: A Developer's Guide to GEO & llms.txt (2026) - DEV Community",
+      "url": "https://dev.to/garvit_sharda/how-ai-crawlers-actually-read-your-site-a-developers-guide-to-geo-llmstxt-2026-1d90",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-20T06:19:12.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 267,
+      "id": "276fec11-fda4-4e9a-9137-d0a7b45da513",
+      "title": "robots.txt vs llms.txt vs ai.txt in 2026: What Actually Controls AI Crawlers (and What Doesn't) | Coronium.io",
+      "url": "https://www.coronium.io/blog/robots-txt-llms-txt-ai-txt-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q12_ai_crawlers_llmstxt"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-27T08:27:44.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 268,
+      "id": "b78d5a51-f820-48a3-bf22-7d2d12330eb2",
+      "title": "Entity Optimization for AI Search | Searchbloom",
+      "url": "https://www.searchbloom.com/ai-seo/inclusion/entity-optimization/",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-16T21:20:15.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 269,
+      "id": "92acfebd-6272-4051-8f87-c320613ef654",
+      "title": "Everything Google knows about your brand, how it learned it, and what happens when ChatGPT takes over — Francesco Papagni",
+      "url": "https://www.francescopapagni.com/news/connected-entities",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-28T00:00:00.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 270,
+      "id": "5fcb5b2d-8ffc-41bc-9ca0-4252801eaf3a",
+      "title": "Knowledge Graph SEO: Entity Optimization for AI Search 2026",
+      "url": "https://jottler.co/blog/knowledge-graph-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-27T23:59:00.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 271,
+      "id": "31ec867a-22ca-43e5-bc66-d5dc66618d65",
+      "title": "What is Query Fan-Out? Understanding the Hidden Queries Driving AI Search",
+      "url": "https://ahrefs.com/blog/query-fan-out/",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-02T11:01:44.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 272,
+      "id": "94a66ec3-0388-4083-9c02-987010a2ef07",
+      "title": "Entity Clarity and Disambiguation: What They Are and Why They Matter for SEO and AI Search - Search Atlas - Advanced SEO Software",
+      "url": "https://searchatlas.com/blog/entity-clarity-and-disambiguation/",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-13T00:00:00.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 273,
+      "id": "86accf3f-d27e-4ea7-9029-0c61baa4e424",
+      "title": "Entity SEO for AI: Knowledge Graph & Machine-Readable Authority (2026)",
+      "url": "https://alicelabs.ai/en/insights/entity-seo-for-ai",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-06T16:01:52.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 274,
+      "id": "75461dfe-492b-4fde-82a7-f65feed932af",
+      "title": "Entity SEO: Build Your Brand in Google's Knowledge Graph",
+      "url": "https://www.reputationx.com/blog/entity-seo-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q13_entity_seo_fanout"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-13T17:33:29.000Z",
+      "notebook": "d761d412-69dc-4e62-9a62-7d1b69c220ae"
+    },
+    {
+      "index": 275,
+      "id": "6c848e57-6366-45f4-a7fa-274e3644097b",
+      "title": "How Much Does SEO Cost in 2026? Agency Pricing Breakdown",
+      "url": "https://agencypro.app/blog/how-much-does-seo-cost",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-11T01:00:59.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 276,
+      "id": "40528066-7a7f-4abd-bb26-dfdddccc003a",
+      "title": "SEO Company Pricing Guide (2026)",
+      "url": "https://www.designrush.com/agency/search-engine-optimization/pricing",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 277,
+      "id": "a28815a1-6a42-4c37-beec-958dd98184e7",
+      "title": "What to Look for When Hiring an SEO Agency in 2026",
+      "url": "https://aidev.com/guides/how-to-hire-an-seo-agency",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-17T22:02:22.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 278,
+      "id": "148290a0-5690-4bbc-a0b4-61e403426d0c",
+      "title": "SEO Contract Template: Every Clause You Need (2026)",
+      "url": "https://www.getsagely.co/post/seo-contract-template",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-31T22:54:15.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 279,
+      "id": "67c420fa-3d0f-404e-b729-870c9918eb9c",
+      "title": "SEO Pricing Models Explained: Find the Right Fit in 2026",
+      "url": "https://innoclick-solutions.com/seo-pricing-models/",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-13T00:00:00.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 280,
+      "id": "4309b5a3-4fad-438a-9ce1-3a14a047eb41",
+      "title": "Free SEO Services Contract Template | SEO Agreement",
+      "url": "https://agencypro.app/contracts/seo-contract",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null,
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 281,
+      "id": "0962fca3-e8e4-4bc3-9a45-bc3b8d365d0a",
+      "title": "SEO Package Pricing 2026: Costs & How to Choose - Searcle AI",
+      "url": "https://www.searcle.ai/insights/seo-packages-pricing",
+      "tier": "practitioner",
+      "topics": [
+        "q14_seo_pricing_scoping"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-23T17:37:21.000Z",
+      "notebook": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+    },
+    {
+      "index": 282,
+      "id": "45cb1eca-be7c-4cab-beb2-3da1ae87e671",
+      "title": "Google explains how crawling works in 2026",
+      "url": "https://searchengineland.com/google-explains-how-crawling-works-in-2026-473110",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-31T16:52:18.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 283,
+      "id": "ddab2558-8a60-4b88-9bf4-aaf0ff335931",
+      "title": "Google Ranking Factors (2026): Confirmed Signals + API Leak Data",
+      "url": "https://thestacc.com/blog/google-ranking-factors/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_how_search_works"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-09T01:21:04.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 284,
+      "id": "247c0ad4-a095-4554-846d-4be745bc3b8d",
+      "title": "Keyword Research Methodology: The Complete Guide | Digital Codex",
+      "url": "https://www.clarigital.com/codex/seo/on-page/keyword-research/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-04T07:34:49.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 285,
+      "id": "138a8b7d-f4de-4ed2-a67f-50fb5d69ad36",
+      "title": "How to Do Keyword Research in 2026: A Step-by-Step Guide | Dynamically",
+      "url": "https://dynamically.co.uk/insights/keyword-research-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-27T17:28:11.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 286,
+      "id": "892e3039-28ee-429b-89e9-ef837f8c0c4f",
+      "title": "Is keyword research still worth doing when AI rewrites every query?",
+      "url": "https://pathmonk.com/keyword-research-seo-ai/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-28T14:24:18.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 287,
+      "id": "4b5daa31-8065-4fc7-9ff6-1563c2ff0593",
+      "title": "How to Do Keyword Research in 2026 for AI Search & Clicks | Nuwtonic Blog | Nuwtonic",
+      "url": "https://nuwtonic.com/blog/how-to-do-keyword-research",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-26T08:59:18.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 288,
+      "id": "b6c9053b-23f0-4975-946e-a9e9643ad018",
+      "title": "Keyword Research in 2026: A Step-by-Step Guide to Finding Keywords That Actually Rank | Topify",
+      "url": "https://topify.ai/blog/keyword-research-seo-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-03T15:52:17.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 289,
+      "id": "2a2e09f2-a0f9-4c16-a4d3-d8059ef64878",
+      "title": "Search Keyword Analysis: Keyword Types & Analysis Framework (2026)",
+      "url": "https://www.beserp.com/learn/search-keyword-analysis/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-06T00:00:00.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 290,
+      "id": "3957a113-b2e4-442e-86fd-b99341dc5a1a",
+      "title": "Keyword Research Tool Accuracy 2026: The Data Gap You're Missing | OrganicSEO.org",
+      "url": "https://organicseo.org/blog/keyword-research-tools-missed-opportunities",
+      "tier": "practitioner",
+      "topics": [
+        "q2_keyword_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-02T06:41:08.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 291,
+      "id": "c88c2840-5b21-421a-a64a-4db533f1bb94",
+      "title": "Site Architecture for AI Search: Build Machine-Readable Websites in 2026 - SEO & AI learning practical guide, Tools, News, Projects, Insights | AI-SEO Pro Journal",
+      "url": "https://aiseojournal.net/site-architecture-for-ai-search-build-machine-readable-websites/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-18T09:00:00.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 292,
+      "id": "f5a37792-1847-4741-9b48-a7b94d2bb566",
+      "title": "On-Page SEO in 2026: The Complete Guide for AI Search",
+      "url": "https://www.madx.digital/learn/onsite-seo",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-13T09:21:31.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 293,
+      "id": "1bdd3c96-e2b4-426c-9be9-0c9a364b9d38",
+      "title": "SEO Onsite Checklist: The Complete Expert Guide",
+      "url": "https://authorityspecialist.com/guides/checklists/seo-onsite-checklist",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-02T12:32:41.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 294,
+      "id": "33594a2c-462c-4f7f-9b0a-e22956d3f36b",
+      "title": "On-Page SEO Factors That Matter Most in 2026 (5 Fixes) | Clienvora",
+      "url": "https://www.clienvora.com/2026/06/what-on-page-seo-factors-matter-most-in.html",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-08T11:49:00.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 295,
+      "id": "0d5ae5ca-e049-4303-9071-44705c28e28e",
+      "title": "The Complete On-Page SEO Checklist: 20 Factors That Move Rankings - Sky Storm Digital",
+      "url": "https://skystormdigital.com/on-page-seo-checklist-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-08T09:00:00.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 296,
+      "id": "a2d9122d-e077-48f2-bd7c-d15081cc1383",
+      "title": "Complete On-Page SEO Guide 2026: Factors, Schema, URLs, Internal Links & More",
+      "url": "https://www.neelnetworks.com/blog/on-page-technical-seo-complete-guide-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_onpage_site_level"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-24T04:37:45.000Z",
+      "notebook": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b"
+    },
+    {
+      "index": 297,
+      "id": "8b5d7a1f-a5d1-49c6-bd9c-da93ba5e9d19",
+      "title": "Technical SEO Complete Guide: The 2026 Senior Strategist Reference | Resocial Blog",
+      "url": "https://resocial.us/blog/technical-seo-complete-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-12T00:00:00.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 298,
+      "id": "8bf3af50-3d8a-41c3-98bf-fdf29e39dce3",
+      "title": "Technical SEO: The Complete Guide for 2026 | The Toolbox",
+      "url": "https://getthetoolbox.com/blog/technical-seo-complete-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-02T05:09:07.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 299,
+      "id": "17189698-d1ef-4f66-a3aa-66f18ca4ac13",
+      "title": "Complete Technical SEO Guide 2026: AI-First Framework",
+      "url": "https://techzenix.com/blog/technical-seo-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-25T09:20:32.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 300,
+      "id": "2307c6b2-4de1-427c-94e9-51fb187fa670",
+      "title": "The Ultimate Technical SEO Infrastructure Guide (2026)",
+      "url": "https://www.dbeta.co.uk/blog/ultimate-technical-seo-infrastructure-guide.html",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-28T20:00:00.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 301,
+      "id": "416807a2-0852-4634-b26e-683a46e94b02",
+      "title": "Technical SEO Audit Checklist 2026: 47 Checks We Run on Every Client Site | ECOSIRE",
+      "url": "https://ecosire.com/blog/technical-seo-audit-checklist-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-06T00:00:00.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 302,
+      "id": "a984b433-8e90-4ca5-9e69-01422e861c9d",
+      "title": "The Complete Guide to Technical SEO: A Thorough Handbook for 2026",
+      "url": "https://studiohawk.co.uk/blog/the-complete-guide-to-technical-seo-a-thorough-handbook-for-2026?hs_amp=true",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-19T10:54:52.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 303,
+      "id": "6f798393-defa-418f-9866-729f71b0cd95",
+      "title": "Technical SEO Audit Checklist: 35 Pass/Fail Checks (2026)",
+      "url": "https://www.thatdevpro.com/insights/framework-technicalseo/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-23T07:05:14.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 304,
+      "id": "9236cd93-eeb9-4d3c-b6d9-3e5f45a6a2ab",
+      "title": "Technical SEO Checklist for Modern Websites in 2026 | Ahmed Rehman",
+      "url": "https://ahmedrehman.com/technical-seo-checklist-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q4_technical_seo"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-09T17:32:23.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 305,
+      "id": "5cf1a73f-7a99-4ef0-bf66-57fff464dab4",
+      "title": "Core Web Vitals 2026: The Complete Guide to LCP, CLS & INP",
+      "url": "https://ighenatt.es/en/resources/core-web-vitals/core-web-vitals-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-14T00:00:00.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 306,
+      "id": "28623778-f05e-4067-89f2-d228900cc715",
+      "title": "Core Web Vitals Optimization: The Engineering Guide to LCP, INP, and CLS | performance.qa",
+      "url": "https://performance.qa/blog/frontend-performance-core-web-vitals/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-11T00:00:00.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 307,
+      "id": "ca341a66-8178-4e6d-8489-1e1eb4728700",
+      "title": "Page Speed and SEO: How Speed Affects Rankings (2026) | PageSpeed Matters",
+      "url": "https://www.pagespeedmatters.com/resources/guides/ultimate-page-speed-seo-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-26T13:31:44.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 308,
+      "id": "0e0b715b-eafb-4bfd-80a0-1f65dd3244fe",
+      "title": "How to Improve Core Web Vitals in 2026 (LCP, INP, CLS Guide)",
+      "url": "https://www.pagespeedmatters.com/resources/guides/complete-core-web-vitals-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-28T14:33:05.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 309,
+      "id": "55e258ad-629a-4bd1-a9d0-23ce5cd59273",
+      "title": "Core Web Vitals and Page Experience: The 2026 Playbook | Learn SEO | The SEO Company",
+      "url": "https://theseocompany.com.au/learn/core-web-vitals/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-21T16:31:40.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 310,
+      "id": "8b901dd6-47e2-494c-8421-724c1cb189b8",
+      "title": "Why Lighthouse and Real-User Core Web Vitals Show Different Results - DEV Community",
+      "url": "https://dev.to/vishal_singh_0610/why-lighthouse-and-real-user-core-web-vitals-show-different-results-16jj",
+      "tier": "practitioner",
+      "topics": [
+        "q5_core_web_vitals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-22T08:34:57.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 311,
+      "id": "f9cfbff3-a8ca-4278-8b0c-7c0e54b1a369",
+      "title": "Schema Markup: The Complete Technical Guide | Digital Codex",
+      "url": "https://www.clarigital.com/codex/seo/technical/schema-markup/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-04T14:25:13.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 312,
+      "id": "00cd49b3-5163-455c-8ac5-7718f79a2f85",
+      "title": "Every structured data type Google still rewards in 2026 (and the 8 that don't) | Space & Story",
+      "url": "https://spaceandstory.co/blog/structured-data-types-google-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-26T23:24:37.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 313,
+      "id": "60c89976-abd6-497d-8d3b-5eb1d0edabe6",
+      "title": "How to Write JSON-LD Schema Markup in 2026 — Rich Results, AI Visibility, and the Types That Still Ship | UDT",
+      "url": "https://ultimatedesigntools.com/blog/how-to-write-json-ld-schema/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-18T23:24:36.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 314,
+      "id": "46286e84-3353-40c4-b6c4-3e3637909950",
+      "title": "Schema Markup for AI Search (2026): What Works, What's Deprecated",
+      "url": "https://turboaudit.ai/schema-markup-for-ai",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-21T00:40:39.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 315,
+      "id": "0a19e943-f0f1-4445-97d5-88317cb21cbd",
+      "title": "Google Rich Results Test: 2026 Eligibility & Validation Guide",
+      "url": "https://squin.org/seo-tools/rich-results-test-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_structured_data"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-17T15:01:39.000Z",
+      "notebook": "458c5c68-ebfd-49a9-87ec-745f4e1ff087"
+    },
+    {
+      "index": 316,
+      "id": "e6f26bf7-6dc9-4a02-8710-603ee1d755b5",
+      "title": "Link Building in 2026: What Still Works (and What Kills Rankings)",
+      "url": "https://optiseon.com/blog/link-building-2026-what-still-works/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-14T23:09:56.000Z",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 317,
+      "id": "cd28bd2d-8e55-4434-aaea-decff0e072cf",
+      "title": "Link Building in 2026: The Complete Strategy Guide (With Proven Tactics)",
+      "url": "https://tabishkhalid.com/seo/off-page-seo/link-building-complete-strategy-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-11T02:36:06.000Z",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 318,
+      "id": "9d43a175-3840-41fb-9c90-92852e503876",
+      "title": "Link Building Strategies 2026: The Advanced Guide to High-Quality Backlinks | ToolsNest Blog | ToolsNest",
+      "url": "https://toolsnest.io/blog/link-building-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-18T00:00:00.000Z",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 319,
+      "id": "0851544a-e73c-4157-ae0b-e17c7092d47a",
+      "title": "The Off-Page Playbook: What It Actually Does (and Does Not Do) for Your Rankings | SEO by Subu",
+      "url": "https://seobysubu.com/off-page-seo/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-07T20:10:42.000Z",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 320,
+      "id": "877f5945-3561-4946-b0bc-2c6973da087c",
+      "title": "Backlinks 2026: What Works Today & What Died",
+      "url": "https://www.seokru.com/guides/seo/backlinks-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-28T00:00:00.000Z",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 321,
+      "id": "63d76186-00fb-40be-bb08-3d8b09ebbfe9",
+      "title": "Off-Page SEO: What Still Works in 2026 (and What Doesn't) | Ottawa SEO Inc.",
+      "url": "https://ottawaseo.com/guides/off-page-seo-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-26T21:49:04.000Z",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 322,
+      "id": "9b15f691-3c40-41a9-b7e8-3e6f51c8c3d9",
+      "title": "Link Building in 2026: Digital PR & Entity Authority Guide",
+      "url": "https://aiseojournal.net/link-building-digital-pr-entity-authority-ai-citation-strategies/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-16T09:00:00.000Z",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    },
+    {
+      "index": 323,
+      "id": "2d81330d-30aa-41c9-a638-b7761644d13c",
+      "title": "Link Building in 2026: What Works, What Doesn't, and What Gets You Penalized | Luciano Bonanno",
+      "url": "https://lucianobonanno.com/en/blog/link-building-strategy-2026/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_offpage_backlinks"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-25T11:22:36.000Z",
+      "notebook": "f3729c57-b836-4bd5-9a52-43fa3fc8b434"
+    }
+  ],
+  "notebooks": {
+    "A_core": "c863f492-08a3-472e-93f0-a871a9f60c55",
+    "B_foundations": "ee2af5a6-cdd5-4c0d-9b5d-39ea0352423b",
+    "C_technical": "458c5c68-ebfd-49a9-87ec-745f4e1ff087",
+    "D_authority_local": "f3729c57-b836-4bd5-9a52-43fa3fc8b434",
+    "E_ai_search": "d761d412-69dc-4e62-9a62-7d1b69c220ae",
+    "F_measure_business": "d6b96514-4e96-4476-8604-1f83ec2e48a0"
+  },
+  "imported_count": 320
+}

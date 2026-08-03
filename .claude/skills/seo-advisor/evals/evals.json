@@ -1,0 +1,76 @@
+{
+  "skill_name": "seo-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "organic traffic on my site dropped about 40% over the last three weeks. rankings look mostly the same in my rank tracker. what happened and what do i check first?",
+      "expected_output": "A diagnosis, not a guess. Recognizes that stable rankings plus falling traffic points at CTR loss (AI Overviews, SERP features, zero-click) rather than a ranking penalty, and orders the checks: GSC impressions vs clicks, AI Overview presence on the affected queries, seasonality, then indexation. Names the evidence that would confirm each hypothesis.",
+      "files": [],
+      "expectations": [
+        "Notices that flat rankings with falling traffic implicates CTR, not ranking loss",
+        "Orders hypotheses by likelihood and cost to check, rather than listing everything",
+        "Names the specific report or evidence that would confirm or rule out each cause",
+        "Asks for GSC data rather than asserting a single cause without it"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "whats the difference between AEO and GEO and do i actually need to care, or is it just SEO people rebranding stuff to sell courses",
+      "expected_output": "Takes the skepticism seriously rather than dismissing it. Distinguishes AEO and GEO, separates the peer-reviewed evidence from vendor marketing, and gives a straight answer on what genuinely changes versus what is repackaged SEO. Labels claims by source tier.",
+      "files": [],
+      "expectations": [
+        "Distinguishes AEO from GEO concretely rather than treating them as synonyms",
+        "Separates evidence-backed claims from vendor/practitioner claims explicitly",
+        "Engages the 'is this just rebranding' premise honestly instead of ignoring it",
+        "Does not quote a citation-lift percentage without naming whose study it is"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "what are the current core web vitals thresholds and how much do they actually matter for rankings",
+      "expected_output": "Gives the current LCP, INP and CLS thresholds as concrete numbers, notes these are field-data (CrUX) measurements at p75 rather than lab scores, and gives an honest answer on ranking weight (a real but small tiebreaker signal, not a primary factor) rather than overstating it.",
+      "files": [],
+      "expectations": [
+        "States all three metrics with their actual numeric thresholds",
+        "Distinguishes field data from lab data",
+        "Gives an honest, non-inflated account of how much they affect rankings",
+        "Attributes the thresholds to Google/web.dev rather than asserting them unsourced"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "a prospect asked me to quote for SEO on their 40-page services site. what do i charge and how long do i tell them it takes to see results?",
+      "expected_output": "Gives a concrete pricing range with the engagement shape (audit vs retainer), an honest timeline to results, and what deliverables to include. Flags that quoting a guaranteed ranking outcome is the trap. May hand pricing strategy to marketing-advisor and proposal production to proposal-generator.",
+      "files": [],
+      "expectations": [
+        "Gives a specific pricing range or model rather than 'it depends'",
+        "Gives an honest timeline and refuses to promise guaranteed rankings",
+        "Names concrete deliverables for the engagement",
+        "Hands off proposal writing rather than producing the full proposal itself"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "i want to learn SEO properly from scratch, where do i start",
+      "expected_output": "Points at the course curriculum, describes the four-tier structure and the capstone, and offers Section 1. Does not dump an unstructured list of SEO tips.",
+      "files": [],
+      "expectations": [
+        "Routes to the course curriculum rather than improvising a tip list",
+        "Describes the tier structure and roughly what each tier produces",
+        "Offers a concrete next action (start Section 1)"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "should i block GPTBot and ClaudeBot in my robots.txt to stop them training on my content?",
+      "expected_output": "Explains the training-bot versus search-bot distinction (GPTBot is not OAI-SearchBot; ClaudeBot is not the retrieval agent), warns that blocking indiscriminately removes the site from AI answers, and gives the actual robots.txt mechanics. Flags that llms.txt adoption is inconsistent and robots.txt plus WAF is what actually enforces.",
+      "files": [],
+      "expectations": [
+        "Distinguishes training crawlers from search/retrieval crawlers by name",
+        "Names the visibility tradeoff of blocking rather than just answering yes or no",
+        "Gives concrete robots.txt syntax or directive mechanics",
+        "Does not claim llms.txt is authoritatively honored"
+      ]
+    }
+  ]
+}
