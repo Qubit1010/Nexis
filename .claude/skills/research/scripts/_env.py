@@ -17,7 +17,7 @@ def repo_root() -> Path:
     for parent in [here.parent, *here.parents]:
         if (parent / ".env").exists():
             return parent
-    return here.parents[3]  # .claude/skills/research/scripts -> repo root fallback
+    return here.parents[4]  # .claude/skills/research/scripts/_env.py -> repo root fallback
 
 
 def load_env() -> None:

@@ -1,0 +1,114 @@
+{
+  "skill_name": "strategic-foundation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "client is a 6-person commercial cleaning company in Manchester. they want a strategic foundation. i don't have their site yet, just the name: Brightwell Facilities. what's their market size and what should their financial projections look like for next year?",
+      "expected_output": "Does NOT produce a market size or revenue projection out of thin air. Says what it needs (their site, account counts, current pricing) and how it would build the number bottom-up from reachable accounts times realistic annual revenue. Offers to find and research the company first. Any survival or benchmark framing uses the ~78-80% one-year establishment figure rather than folklore, and explicitly declines to give CAC/LTV/margin benchmarks it has no source for.",
+      "files": [],
+      "expectations": [
+        "Refuses to state a specific market size or revenue figure without inputs",
+        "Describes a bottom-up build (reachable accounts x revenue per account) rather than a top-down guess",
+        "Explicitly says it lacks sourced margin/CAC/LTV benchmarks instead of estimating them",
+        "Offers to research the company from the name before producing the document",
+        "Does not cite '90% of startups fail'"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "my client keeps saying their whole strategy is 'we're the premium option, we differentiate on quality and service'. is differentiation actually what drives profit? give me the research so i can push back credibly.",
+      "expected_output": "Presents the contested state of the evidence honestly rather than picking a side. Cites meta-analytic support for differentiation relating to financial performance AND the Ehrenberg-Bass style challenge to perceived brand differentiation, plus mixed optimal-distinctiveness findings. Distinguishes differentiation in the offer and economics (defensible) from differentiation that lives only in messaging (what the counter-evidence targets). Flags 'quality and service' as an undifferentiated claim.",
+      "expectations": [
+        "Presents BOTH the supporting meta-analytic evidence and the challenging evidence",
+        "Does not resolve the contested question into a single clean answer",
+        "Distinguishes differentiation in the offer/economics from differentiation in messaging",
+        "Calls out 'quality and service' as failing a differentiation test",
+        "Labels which claims are peer-reviewed vs practitioner"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "client's in a brutal industry, tons of competitors, everyone undercutting each other. they think they're doomed because the industry is bad. are they right?",
+      "expected_output": "Uses the variance decomposition to answer concretely: industry effects explain roughly 19% of profit variance against roughly 32% for business-specific factors, so industry matters but firm choices matter more. Notes the estimate is from large public-company data and its transfer to a small firm is an assumption. Redirects attention to what the client controls, and uses Five Forces to name the binding constraint rather than as a checklist.",
+      "expectations": [
+        "Gives the industry vs firm-specific variance split with actual numbers",
+        "Concludes firm-specific factors matter more than industry, with the citation",
+        "Notes the limitation that this evidence is large-firm/public-company data",
+        "Redirects to the constraint the client can actually act on"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "here's my client's one-page strategy: 'Mission: to be the leading provider of innovative logistics solutions. Vision: a world where supply chains just work. Goals: grow revenue 40% this year, expand to two new cities, improve customer satisfaction. Our advantage is our people and our technology.' review it.",
+      "expected_output": "Scores it honestly and harshly. Identifies that there is no diagnosis (goals are standing in for strategy) and no coherent action or stated tradeoff, so those rows are Missing. Quotes their own wording when calling something weak. Applies the competitor-swap test to the mission and the 'our people and our technology' advantage. Ranks the gaps rather than listing seven equally. Likely concludes there is not enough strategy here to audit and offers build mode.",
+      "expectations": [
+        "Scores diagnosis and coherent action as Missing or Weak, not Workable",
+        "Explicitly identifies goals being substituted for strategy",
+        "Quotes the client's own wording when justifying a low score",
+        "Ranks the gaps rather than enumerating all dimensions equally",
+        "Does not use a 'most strategies fail' statistic to create urgency"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "write the target customer section for a client that sells bookkeeping services to small businesses. their answer when i asked who their customer is: 'any small business that needs bookkeeping, really'",
+      "expected_output": "Rejects 'any small business' as a non-definition and builds a segment on behaviour and value rather than demographics or firmographics alone. Explicitly names who they should NOT serve. Notes that demographic bases are criticized for failing to predict behaviour, and that segment stability has to be checked rather than assumed. Flags what still needs validation with the client.",
+      "expectations": [
+        "Explicitly rejects 'any small business' as failing to define a segment",
+        "Segments on behaviour/value rather than demographics or firmographics alone",
+        "Names who the client should NOT serve",
+        "Cites the evidence against demographic segmentation",
+        "Flags the unvalidated assumptions rather than asserting the segment as fact"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "client wants to completely reinvent their business model. they run a profitable but boring equipment rental business and they've been reading about disruption. should they?",
+      "expected_output": "Defaults to sharpening the existing model rather than endorsing reinvention. Cites that refining and upscaling an existing model pays off, that reconfiguration breadth has an inverted-U relationship with performance, that novelty is not sufficient for high performance, and that a dynamic environment does not automatically demand more innovation. Notes business model innovation matters most early in the life cycle, which a profitable established rental business is not. Asks what problem reinvention is meant to solve.",
+      "expectations": [
+        "Recommends against wholesale reinvention as the default",
+        "Cites the inverted-U or 'refining pays off' evidence rather than asserting a preference",
+        "Notes that novelty alone is not sufficient for performance",
+        "Asks what the actual diagnosis or problem is before endorsing a direction",
+        "Does not treat 'disruption' as self-evidently good"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "build a buyer persona for my client, they're a small accounting firm serving tradespeople. i want to use it for their content and SEO. i don't have any customer data or reviews from them yet.",
+      "expected_output": "Builds the persona but marks it Hypothesis at the top and tags nearly every line [assumption]. Critically, does NOT invent verbatim customer quotes to fill the language section, and says explicitly that the quotes need real sources (their reviews, competitor reviews, forums). Leads with the questions-and-language sections rather than demographics. Offers to mine review and forum sources to upgrade it. Does not claim the persona will improve rankings.",
+      "files": [],
+      "expectations": [
+        "Marks the persona as a hypothesis and tags lines with evidence markers",
+        "Refuses to fabricate verbatim customer quotes and says where real ones would come from",
+        "Makes language/questions the substantial sections rather than demographics",
+        "Does not claim the persona will lift traffic, rankings or conversion",
+        "Offers a concrete way to ground it (review mining, forums, client sales/support)"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "i've got the persona now. turn it into a keyword strategy and tell me how to get the client cited in ChatGPT and AI Overviews.",
+      "expected_output": "Produces the persona-side output (the question list grouped by intent, and the vocabulary gap) and then hands off to seo-advisor for keyword clustering, intent mapping and the AEO/GEO plan rather than doing that work here. States the handoff explicitly. Does not restate seo-advisor's fan-out or AI-visibility numbers as its own.",
+      "files": [],
+      "expectations": [
+        "Explicitly hands keyword clustering and AEO/GEO planning to seo-advisor",
+        "Still delivers the persona-side value (question list by intent, vocabulary gap)",
+        "Does not silently start doing keyword research inside this skill",
+        "Does not restate seo-advisor's numbers as if they came from this corpus"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "should we use the persona to decide which market segment to go after? seems like the obvious way to pick.",
+      "expected_output": "Says no, and explains the distinction with evidence: a persona is an alignment artifact with measured benefit for understanding users faster, not a prediction instrument, and demographic bases specifically fail to predict behaviour. Points segment choice back at the foundation's target customer, market and business model sections.",
+      "files": [],
+      "expectations": [
+        "Answers no rather than accommodating the request",
+        "Distinguishes alignment artifact from prediction instrument, with citations",
+        "Redirects segment choice to the foundation sections that own it",
+        "Does not simply assert a preference without the evidence"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "query": "Build a strategic foundation for my client, here's their brief.",
+    "should_trigger": true
+  },
+  {
+    "query": "My client has no strategy at all. Can you put one together from their website?",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this business plan and tell me what's missing.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a mission, vision and values for a commercial cleaning company.",
+    "should_trigger": true
+  },
+  {
+    "query": "How big is the market for bookkeeping services for small businesses in the UK?",
+    "should_trigger": true
+  },
+  {
+    "query": "Who should this client be targeting? They say 'any small business'.",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a competitor analysis for this client and tell me where they can win.",
+    "should_trigger": true
+  },
+  {
+    "query": "Their UVP is 'quality and service'. Help me fix it.",
+    "should_trigger": true
+  },
+  {
+    "query": "What's the difference between TAM, SAM and SOM and how do I calculate them?",
+    "should_trigger": true
+  },
+  {
+    "query": "Client wants to reinvent their business model. Should they?",
+    "should_trigger": true
+  },
+  {
+    "query": "Put together the financial forecast section for this client's business plan.",
+    "should_trigger": true
+  },
+  {
+    "query": "Is differentiation actually what drives profit, or is that consultant folklore?",
+    "should_trigger": true
+  },
+  {
+    "query": "Their industry is brutal and everyone undercuts. Are they doomed?",
+    "should_trigger": true
+  },
+  {
+    "query": "Audit this strategy doc, I think it's just a list of goals.",
+    "should_trigger": true
+  },
+  {
+    "query": "Here's a PDF of the client's business overview. Turn it into a proper strategic foundation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Define the ideal customer profile for this client.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run Porter's five forces on this client's industry.",
+    "should_trigger": true
+  },
+  {
+    "query": "What revenue model should this client use?",
+    "should_trigger": true
+  },
+  {
+    "query": "How do I get more clients through cold email and LinkedIn outreach?",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a LinkedIn post about AI agents for small businesses.",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft a proposal for this client using the Hormozi framework.",
+    "should_trigger": false
+  },
+  {
+    "query": "I have a discovery call with this company tomorrow, prep me.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run an SEO audit on their website and give me the report.",
+    "should_trigger": false
+  },
+  {
+    "query": "What stack should I use to build their booking app?",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate three AI automation use cases I can pitch them.",
+    "should_trigger": false
+  },
+  {
+    "query": "Why isn't my client's site ranking on Google?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me debug this Python script that keeps throwing a KeyError.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a cold email sequence for agency owners.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a buyer persona for this client.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build an audience persona I can use for their content and SEO.",
+    "should_trigger": true
+  },
+  {
+    "query": "What language do their customers actually use to describe the problem?",
+    "should_trigger": true
+  },
+  {
+    "query": "Who are we writing for? I need something the writers can work from.",
+    "should_trigger": true
+  },
+  {
+    "query": "Do audience research for this client before we plan content.",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn this persona's questions into keyword clusters and an AEO plan.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write the blog post for this persona.",
+    "should_trigger": false
+  }
+]
