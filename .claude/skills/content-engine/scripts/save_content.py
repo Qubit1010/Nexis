@@ -30,6 +30,11 @@ SKILL_DIR = SCRIPT_DIR.parent
 FOLDER_CACHE = SKILL_DIR / ".folder_id"
 DRIVE_FOLDER_NAME = "Nexis Content"
 
+# Google Docs defaults list items to zero space below, so a list of long bullets renders as
+# one solid block. 6pt is the standard body-list gap and it is what makes a bulleted
+# findings list scannable rather than a wall.
+BULLET_SPACE_BELOW = {"magnitude": 6, "unit": "PT"}
+
 
 def find_gws():
     """Find gws and return (cmd_list, use_shell).
@@ -304,8 +309,11 @@ def build_text_requests(sections, tab_id=None):
                 requests.append({
                     "updateParagraphStyle": {
                         "range": rng(idx, idx + len(bullet_text)),
-                        "paragraphStyle": {"namedStyleType": "NORMAL_TEXT"},
-                        "fields": "namedStyleType"
+                        "paragraphStyle": {
+                            "namedStyleType": "NORMAL_TEXT",
+                            "spaceBelow": BULLET_SPACE_BELOW,
+                        },
+                        "fields": "namedStyleType,spaceBelow"
                     }
                 })
                 requests.append({
@@ -338,8 +346,11 @@ def build_text_requests(sections, tab_id=None):
             requests.append({
                 "updateParagraphStyle": {
                     "range": rng(idx, idx + len(bullet_text)),
-                    "paragraphStyle": {"namedStyleType": "NORMAL_TEXT"},
-                    "fields": "namedStyleType"
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "spaceBelow": BULLET_SPACE_BELOW,
+                    },
+                    "fields": "namedStyleType,spaceBelow"
                 }
             })
             requests.append({
@@ -413,6 +424,68 @@ def get_tab_body_content(doc_id, tab_id):
     return []
 
 
+def compute_column_widths(headers, rows, total_width_pt=468, min_width_pt=28):
+    """Proportional column widths from actual content length (header AND every
+    data row), not header length alone. Docs API tables default to
+    EVENLY_DISTRIBUTED, which is wrong in the other direction from pandoc's
+    docx tables (which size off the header text only) but has the same root
+    problem: a column with a short header and long data rows (e.g. a prose
+    "Note" column next to a single-digit "Rank" column) gets starved either
+    way unless something looks at the data itself.
+
+    A single proportional pass plus a min-width floor doesn't work: flooring
+    some columns and then rescaling the whole row to fit total_width_pt pulls
+    the floored columns back below the floor (rescaling downward undoes the
+    floor it was just given). Water-fill instead: floor whichever columns
+    can't clear min_width_pt on their share of the CURRENT remaining budget,
+    remove them from the pool, shrink the budget by what they took, repeat
+    against the shrinking pool until nothing left needs flooring, then split
+    what's left proportionally among the untouched columns."""
+    ncols = len(headers)
+    max_lens = []
+    for c in range(ncols):
+        vals = [headers[c]] + [r[c] for r in rows if c < len(r)]
+        max_lens.append(max((len(v) for v in vals), default=1))
+
+    widths = [None] * ncols
+    pool = list(range(ncols))
+    budget = total_width_pt
+    while pool:
+        pool_len = sum(max_lens[i] for i in pool) or len(pool)
+        floored = [i for i in pool if budget * max_lens[i] / pool_len < min_width_pt]
+        if not floored:
+            for i in pool:
+                widths[i] = round(budget * max_lens[i] / pool_len, 2)
+            break
+        for i in floored:
+            widths[i] = min_width_pt
+            budget -= min_width_pt
+            pool.remove(i)
+    return widths
+
+
+def set_column_widths(doc_id, table_location, widths, tab_id=None):
+    requests = [{
+        "updateTableColumnProperties": {
+            "tableStartLocation": table_location,
+            "columnIndices": [c],
+            "tableColumnProperties": {
+                "widthType": "FIXED_WIDTH",
+                "width": {"magnitude": w, "unit": "PT"}
+            },
+            "fields": "widthType,width"
+        }
+    } for c, w in enumerate(widths)]
+    try:
+        run_gws(
+            ["docs", "documents", "batchUpdate",
+             "--params", json.dumps({"documentId": doc_id})],
+            json_body={"requests": requests}
+        )
+    except RuntimeError as e:
+        print(f"Warning: Failed to set table column widths: {e}", file=sys.stderr)
+
+
 def insert_tables(doc_id, table_locations, tab_id=None):
     """Second pass: insert and populate tables."""
     if not table_locations:
@@ -458,17 +531,25 @@ def insert_tables(doc_id, table_locations, tab_id=None):
             print(f"Warning: Failed to read doc for table population: {e}", file=sys.stderr)
             continue
 
-        target_table = None
+        target_table, real_start = None, None
         for element in body_content:
             if "table" in element:
                 start = element.get("startIndex", 0)
                 if start >= insert_idx - 2:
                     target_table = element["table"]
+                    real_start = start
                     break
 
         if not target_table:
             print(f"Warning: Could not find inserted table near index {insert_idx}", file=sys.stderr)
             continue
+
+        # tableStartLocation must be the table's *actual* post-insert startIndex, not the
+        # pre-insert placeholder index insertTable was called with (the two can drift, which
+        # is exactly why the lookup above already tolerates a few characters of slack instead
+        # of comparing equal). Using the wrong index doesn't error, it just silently no-ops.
+        real_table_location = {"index": real_start, "tabId": tab_id} if tab_id else {"index": real_start}
+        set_column_widths(doc_id, real_table_location, compute_column_widths(headers, rows), tab_id=tab_id)
 
         cell_requests = []
         table_rows = target_table.get("tableRows", [])

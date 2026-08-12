@@ -14,7 +14,7 @@ Google's official stance and the AI-engine evidence agree: **write helpful, peop
 
 ## 2. Structure for extraction (the biggest AEO/GEO lever)
 - [ ] **Answer-first:** open the intro and each H2 with a short, self-contained, quotable answer before the elaboration. Explicit modular structure raises AI-citation likelihood over the same content in unstructured prose [s26]. **[peer-reviewed]**
-- [ ] Keep each extractable answer **tight (~40-60 words)** — **[practitioner]** window; the principle (short + self-contained) is what's evidence-backed, the exact count is convention [s26].
+- [ ] Keep the **direct answer that opens a section to 40-60 words**, and the **whole self-contained section to roughly 134-167 words** — both **[practitioner]**. These are two different measurements and they nest: the 40-60 is the answer, the 134-167 is the extractable unit around it. blog-writer's corpus carries the first [s26]; seo-advisor's carries the second. Canonical version in `seo-onpage/references/checks.md` §2. The principle (short + self-contained) is what is evidence-backed; the exact counts are convention.
 - [ ] **Headings map to questions:** one H1, H2/H3 phrased the way people ask (matches fan-out queries) [s3][s37][s9].
 - [ ] Use the **right block for the intent:** definition block (What is X), numbered steps (How to X), **comparison table** (X vs Y), pros/cons (evaluation), **FAQ** (related questions) [s37][s38]. Tables beat prose for comparisons; numbered lists beat paragraphs for process [s37].
 - [ ] One clear idea per paragraph; scannable [s3][s7].
@@ -26,8 +26,8 @@ Google's official stance and the AI-engine evidence agree: **write helpful, peop
 - [ ] AI citations aren't limited to page 1 — a well-structured page 2-3 post can still be cited ("SEO floor") [s29]. Structure earns the cite; don't skip it because you're not #1.
 
 ## 4. On-page & technical
-- [ ] **Title tag:** unique, descriptive, primary keyword near the front, ~50-60 chars **[practitioner]** [s3][s9].
-- [ ] **Meta description:** unique, benefit + keyword, ~150-160 chars **[practitioner]** [s3][s9].
+- [ ] **Title tag:** unique, descriptive, **50-60 chars**, primary keyword **inside the first 40 characters** **[practitioner]** [s3][s9]. Canonical: `seo-onpage/references/checks.md` §1.
+- [ ] **Meta description:** unique, benefit + keyword, **105-155 chars** with the key information in the **first 120** **[practitioner]** [s3][s9]. This supersedes the older ~150-160 guidance: seo-advisor's corpus puts the truncation risk lower and mobile cuts earlier. Canonical: `seo-onpage/references/checks.md` §1.
 - [ ] **URL slug:** short, hyphenated, keyword-bearing [s3][s7].
 - [ ] **Internal links:** 2-5 to related cluster/pillar posts with descriptive anchors [s0][s3][s7].
 - [ ] **External links:** 1-3 to authoritative sources you cite [s24].
@@ -48,4 +48,11 @@ No peer-reviewed evidence that a named format ranks/cites better [s76][s77]; pic
 
 ## The deliverable's SEO metadata block (always produced)
 Every finished blog ships with:
-`SEO title` (≤60) · `Meta description` (≤160) · `URL slug` · `Primary keyword` + `Supporting keywords` · `Answer-block callouts` (the extractable snippets under each H2) · `FAQ` (3-6 Q&A) + `FAQPage` JSON-LD · `Article/BlogPosting` JSON-LD stub · `Image alt texts` · `Internal-link suggestions` · `External sources cited` · `Last updated` date.
+`SEO title` (50-60, keyword in the first 40) · `Meta description` (105-155, key info in the first 120) · `URL slug` · `Primary keyword` + `Supporting keywords` · `Answer-block callouts` (the extractable snippets under each H2) · `FAQ` (3-6 Q&A) + `FAQPage` JSON-LD · `Article/BlogPosting` JSON-LD stub · `Image alt texts` · `Internal-link suggestions` · `External sources cited` · `Last updated` date.
+
+
+---
+
+## Citation namespaces do not cross skills
+
+`[sN]` here resolves via **blog-writer's own** `_research/sources.json` (83 sources). `seo-advisor` and `seo-onpage` use the same `[sN]` syntax against a **different** 320-source corpus, so `[s26]` in this file and `[s26]` there are different sources. Never copy a citation marker between the two. When this file cross-references an on-page threshold it names the file, not the marker.

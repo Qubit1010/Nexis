@@ -225,3 +225,49 @@ gets the worked example instead of a checkbox.
 decision applied many times (quoting "have to" / "get to" 19 times, a colon before an explanation
 7 times), and a real slice catches genuine errors of ours. Some volume is a creative director
 doing the job. The idea-boundary miss is the part that was ours and is now fixed.
+
+---
+
+## 2026-08-04 — Red Cajucom (Belle & Perry) — review of `05-hybrid` (Jim Heimler interview)
+
+One Doc comment on Segment 1 ("Double your rates"), the episode's top-ranked candidate at 19/20:
+**"For this entire segment, I'm finding it hard to make this land at a compelling POV. What I'm
+getting at is double your rate = double your workload, triple your rate = triple your workload.
+Well, that's obvious isn't it? I don't know if the generated transcripts are supposed to land on
+something eye-opening that I'm just missing."**
+
+He'd put his finger on a real scoring bug, not just a weak segment. The rubric had scored the
+segment highest of all nine candidates specifically *because* it was "the most immediately
+actionable, universally applicable piece of advice in the interview" — but Resonance's own
+1-anchor is "generic, could apply to anyone," which is that same fact stated as a failure instead
+of a strength. The segment is a reported line of advice ("a friend said...") and a number change
+(tripled his rates), with no scene under either. Nothing to picture, just something to accept.
+
+**Rule — universal applicability is not resonance, it's what genericness looks like from the
+inside.** A segment earns Resonance by giving a specific reader a specific detail, scene, or
+number to recognize themselves in, not by asserting something abstractly true for everyone.
+Advice or a claim with no scene under it also caps Conviction: certainty asserted in the abstract
+is a weaker screenshot line than certainty demonstrated inside a real moment. Added to
+`templates/05-hybrid.md` Step 1, directly under the scoring table.
+
+Applying the fix on this episode found a second instance in the same 9-candidate set: "One person
+can change the world" (originally 16/20) has the identical shape, an assertion about impact with
+no named mission or moment under it. Rescored, both segments fall to the bottom of the field (15
+and 14) while the three segments built on an actual scene (the puzzle, the counselor conversation,
+the flat-screen TV) hold their 18s untouched. Second time a human read has caught something the
+scoring/QA system was getting wrong, not a script (see the 2026-07-28 entry on Kyle's paragraph
+boundaries) — worth treating as a standing risk in this rubric, not a one-off.
+
+**Compounding, separate decision:** Min Rosales set the shipped count at exactly 3 for this
+episode in Slack ("For Jim let's just do 3 reels") rather than the 4 that cutting only Segment 1
+would have produced. The corrected rubric independently supports the same cut (3 clear the bar at
+18 each, the next tier sits at 15), but the headcount itself was Min's call, not a rubric output —
+recorded in `clients/jim-heimler.md`. Both segments cut were the episode's only Fearless Advocacy
+material; that trade-off was flagged to Min/Red in the output file rather than silently absorbed.
+
+**Also found while rebuilding this episode:** `scripts/qa_check.py` had never actually been run
+against the shipped file. 12 real failures across the 3 surviving segments (6 hooks opening with
+"I", 6 over the 12-word ceiling) sat behind a QA checklist that had ticked the corresponding boxes
+as passing. Same failure mode as 2026-07-27 and 2026-07-28: the script existed and would have
+caught this immediately, it just wasn't invoked before the file shipped. No new rule needed, the
+existing one already says to run it; this is a reminder that the rule has to actually fire.

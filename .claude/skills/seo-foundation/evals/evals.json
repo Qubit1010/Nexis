@@ -1,0 +1,58 @@
+{
+  "skill_name": "seo-foundation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Read a SERP for me: for the query \"best crm for small business\", tell me who owns page one, how consolidated it is, and whether a new site with no authority could realistically win it. Be specific about what you're basing it on.",
+      "expected_output": "A live SERP read using scripts/serp_features.py. Should report domain diversity, whether UGC/forum results appear on page one and at what position, the dominant content type, and a winnability score with stated reasons. Must NOT quote a keyword difficulty score or a search volume. Should flag that AI Overview presence is unknown from this data source and needs a manual incognito check. Should note that whether the ranking pages actually answer the query is a human judgment call it cannot make from the data.",
+      "assertions": [
+        "Runs an actual SERP fetch rather than answering from memory",
+        "Reports domain diversity and UGC presence as measured values",
+        "Does not state a search volume figure",
+        "Does not quote a 0-100 keyword difficulty score as if it were real data",
+        "Flags AI Overview presence as unknown / requiring manual check",
+        "Distinguishes what was measured from what needs human judgment"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I've got these 8 keywords for a client and I need them grouped into pages, then mapped so each group has exactly one target URL: \"seo audit\", \"seo site audit\", \"seo audit tool\", \"free seo audit\", \"website seo checker\", \"how to do an seo audit\", \"seo audit checklist\", \"seo audit cost\". Their site has /services/seo-audit and /blog/seo-audit-guide.",
+      "expected_output": "Clusters formed from SERP overlap rather than word similarity, using scripts/cluster.py. Should end with a keyword map where every cluster has exactly one target URL and no URL appears on two rows. Should surface borderline pairs for review rather than silently accepting the grouping. Should correctly recognise that 'seo audit tool' is a different intent from 'seo audit' despite the near-identical wording.",
+      "assertions": [
+        "Clusters by SERP overlap, not by string similarity",
+        "Produces the 8-column keyword map schema",
+        "Every cluster maps to exactly one URL and no URL is reused",
+        "Surfaces borderline pairs or explicitly flags uncertain groupings for human review",
+        "Separates tool-seeking intent from service-seeking intent"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "A client sent me their existing keyword strategy. It's a spreadsheet with 120 rows, columns are Keyword, Monthly Volume, Ahrefs KD, sorted by volume descending. No other columns. They want to know if it's any good before we start work.",
+      "expected_output": "A review-mode scorecard across the 7 dimensions, honestly scored. Should identify the two structural failures: sorted by volume (row 4) and no page mapping at all (row 6). Should not silently rebuild the strategy. Should sample a few keywords with a live SERP check rather than assessing purely on structure, and should offer build mode if too little exists to audit.",
+      "assertions": [
+        "Produces a scored 7-row rubric rather than prose impressions",
+        "Identifies volume-sorting as a specific failure and explains why",
+        "Identifies the absence of keyword-to-page mapping",
+        "Does not silently rebuild the strategy without agreement",
+        "Grounds at least part of the review in live SERP evidence rather than structure alone"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "New client, a dental practice in Bristol. No strategic foundation doc, no persona, just their website dentalexample.co.uk. Build their SEO foundation.",
+      "expected_output": "Should notice the missing upstream artifacts and offer to run strategic-foundation first, explaining why the persona matters for keyword vocabulary. If proceeding without it, should mark confidence as Partial. Should set gl/hl for the UK. Should state the Serper credit cost before running a large batch. Should include Local intent given the geographic business.",
+      "assertions": [
+        "Notices the missing persona/strategic foundation and offers the handoff",
+        "Marks confidence as Partial if proceeding without upstream artifacts",
+        "Sets UK geography for SERP calls rather than defaulting to US",
+        "States the credit cost before running a large SERP batch",
+        "Includes Local as an intent category for a geographic business"
+      ],
+      "files": []
+    }
+  ]
+}

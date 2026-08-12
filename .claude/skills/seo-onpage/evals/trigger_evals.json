@@ -1,0 +1,23 @@
+[
+  {"query": "can you look over https://tarrantroofing.com/services/flat-roof-repair before we push it live? the meta description is auto-generated garbage and i think theres two h1s on it. need the actual replacement copy not a lecture", "should_trigger": true},
+  {"query": "we've got 340 blog posts on the client's wordpress site going back to 2017 and most of them get nothing. what do i actually do with them, i can't rewrite 340 posts", "should_trigger": true},
+  {"query": "client's product pages show up in search a decent amount but nobody clicks through. sitting around position 8-11 for most of the terms. what would you change on the page itself", "should_trigger": true},
+  {"query": "i wrote a draft at C:/work/drafts/n8n-vs-make-2026.md, before it goes out can you check the headings and answer blocks are set up so chatgpt and perplexity can actually pull sections out of it", "should_trigger": true},
+  {"query": "just crawled belleandperry.com with screaming frog free and 40-odd pages have zero internal links pointing at them. is that actually a problem or is screaming frog being dramatic", "should_trigger": true},
+  {"query": "their homepage hero is like 2MB and everything below the fold is stock photos with no alt tags. how much of a difference does fixing that actually make and what do i tell them", "should_trigger": true},
+  {"query": "we want to build out a proper cluster around \"marketing automation for agencies\" - we've got the keyword map already from the last engagement. how many supporting posts and how do i wire the links", "should_trigger": true},
+  {"query": "client is a physio clinic and their about page is one paragraph with no author, no credentials, nothing. how do i make them look like they know what theyre doing without it being cringe", "should_trigger": true},
+  {"query": "im rewriting a post from 2023 that used to rank #3 and is now #14. what counts as a real refresh vs just bumping the date, i dont want to do the fake update thing", "should_trigger": true},
+  {"query": "two of my client's pages are basically the same article, /seo-services and /services/seo. which one do i keep and what do i do with the other one", "should_trigger": true},
+
+  {"query": "need a keyword list for a new client, mobile dog grooming in bristol. nothing exists yet, no site content, just the business name and a facebook page", "should_trigger": false},
+  {"query": "traffic dropped like 40% across the whole site after the march core update. what typically causes that and how do i even start figuring out which it is", "should_trigger": false},
+  {"query": "write me a 2000 word post on why most agencies fail at ai automation, my voice, needs to actually rank and get cited", "should_trigger": false},
+  {"query": "im about to pitch a prospect, can you crawl racineplumbing.com and give me a few things wrong with it plus an opening email i can send them", "should_trigger": false},
+  {"query": "what's the actual difference between AEO and GEO, everyone uses them interchangeably and i want to know if theres a real distinction before i put it in a proposal", "should_trigger": false},
+  {"query": "client's site takes forever to load, TTFB is like 1.8s and theyre on shared hosting. is that worth fixing or is it a hosting conversation", "should_trigger": false},
+  {"query": "how much should i charge for an seo retainer for a local business doing maybe 400k a year, and how long before they see anything", "should_trigger": false},
+  {"query": "we need backlinks. what actually works in 2026 that isnt buying them or guest posting on garbage sites", "should_trigger": false},
+  {"query": "their robots.txt is blocking GPTBot and ClaudeBot and the dev says thats for security. is he right and what do i say back", "should_trigger": false},
+  {"query": "should i be splitting these into separate pages or is one big page fine - \"emergency plumber bristol\" and \"emergency plumber bath\" and \"emergency plumber weston\"", "should_trigger": false}
+]

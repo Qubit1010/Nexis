@@ -239,3 +239,13 @@ agent/skills/slideshow/
 agent/skills/talking-head-recut/
 agent/skills/website-to-video/
 .claude/skills/hyperframes/
+
+# seo-foundation: cached SERP responses + scratch payloads.
+# Regenerable, and they contain client keyword research - this repo is public.
+.claude/skills/seo-foundation/.cache/
+.claude/skills/seo-foundation/tmp-*.json
+
+# seo-onpage: cached page HTML, Lighthouse responses and scratch payloads.
+# Regenerable, and the page cache holds whole client sites - this repo is public.
+.claude/skills/seo-onpage/.cache/
+.claude/skills/seo-onpage/tmp-*.json

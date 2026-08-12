@@ -1,0 +1,83 @@
+[
+  {
+    "query": "just signed a new client, they run a renaissance faire. i've already got their strategic foundation and audience persona in client-projects/example-client. need to build out the keyword side now - what they should rank for, grouped into pages",
+    "should_trigger": true
+  },
+  {
+    "query": "can you do keyword research for a plumbing company in leeds? they've got no seo at all right now, site is just 5 pages",
+    "should_trigger": true
+  },
+  {
+    "query": "i have a list of about 180 keywords in a sheet for a client and no idea which page each one should go on. can you group them and map them to urls",
+    "should_trigger": true
+  },
+  {
+    "query": "for the query \"best crm for small business\" who's actually ranking on page one and could we realistically beat them",
+    "should_trigger": true
+  },
+  {
+    "query": "client thinks their competitors are the two other agencies in town but i suspect the people beating them in google are totally different. can you check who owns page one for their main terms",
+    "should_trigger": true
+  },
+  {
+    "query": "our agency inherited this keyword strategy from the client's previous seo guy. it's sorted by search volume descending and there's no target url column. is it any good?",
+    "should_trigger": true
+  },
+  {
+    "query": "i think two of our client's blog posts are fighting each other for the same term, both keep swapping positions. how do i confirm that and what do i do about it",
+    "should_trigger": true
+  },
+  {
+    "query": "classify these into search intent for me: \"what is a renaissance faire\", \"example faire tickets\", \"best ren faire in new england\", \"renaissance faire near me\"",
+    "should_trigger": true
+  },
+  {
+    "query": "need to figure out what content to build for a new dental client. what are people actually searching for in that space and which of those are winnable for a site with basically no authority",
+    "should_trigger": true
+  },
+  {
+    "query": "put together the seo foundation for belle-perry and stick the keyword map in a google sheet please",
+    "should_trigger": true
+  },
+
+  {
+    "query": "our organic traffic dropped like 40% after the march core update and i can't work out why. what's the usual playbook for diagnosing that",
+    "should_trigger": false
+  },
+  {
+    "query": "is seo even worth investing in anymore now that everyone's using chatgpt instead of google? client keeps asking me this and i want a proper answer with numbers",
+    "should_trigger": false
+  },
+  {
+    "query": "how much should we be charging for an seo retainer for a mid-size ecommerce client? and how long before they see results",
+    "should_trigger": false
+  },
+  {
+    "query": "write me a 2000 word blog post targeting \"how to choose a crm for a small agency\" - make it actually rank and get cited by ai",
+    "should_trigger": false
+  },
+  {
+    "query": "can you crawl nexus-point.co and check the technical stuff - core web vitals, broken redirects, whether anything's blocked in robots.txt",
+    "should_trigger": false
+  },
+  {
+    "query": "i need a buyer persona for this client. who their customer actually is, what language they use, what makes them say no",
+    "should_trigger": false
+  },
+  {
+    "query": "teach me seo properly from scratch, start with section 1 and work through it",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what query fan-out is and why it matters for getting cited in ai overviews",
+    "should_trigger": false
+  },
+  {
+    "query": "what should i post on linkedin this week? been slacking and need to get back to 2x a week",
+    "should_trigger": false
+  },
+  {
+    "query": "the client wants to know their TAM and whether the market is actually big enough to justify hiring two more people. can you size it bottom up",
+    "should_trigger": false
+  }
+]

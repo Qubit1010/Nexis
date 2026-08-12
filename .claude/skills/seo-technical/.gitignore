@@ -1,0 +1,5 @@
+# Crawl graphs and audit results hold whole client sites. This repo is public.
+# Both are regenerable: one crawl rebuilds the cache, and every result file is
+# derived from it. Same convention as seo-authority-ai's local .gitignore.
+.cache/
+results/

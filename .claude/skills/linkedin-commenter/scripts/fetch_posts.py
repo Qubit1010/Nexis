@@ -20,14 +20,14 @@ How the ranking works, and why it is a score rather than a threshold:
   - dividing by comment count also does the audience-size normalisation that follower counts
     would have done. Big accounts have high likes AND high comments, so they self-normalise.
     This matters because the actor returns no follower count at all (verified 2026-07-31).
-  - a 48h window guarantees yesterday's posts reappear tomorrow, so a seen-ledger is load-bearing,
-    not a nicety.
+  - a 96h window guarantees the last few days' posts reappear on the next run, so a seen-ledger is
+    load-bearing, not a nicety.
 
 Usage:
     python fetch_posts.py                          # the daily run
     python fetch_posts.py --dry-run                # print the ranked table, write nothing
     python fetch_posts.py --dry-run --limit-profiles 3   # cheap schema check
-    python fetch_posts.py --max-age-h 72           # after a 2-3 day gap
+    python fetch_posts.py --max-age-h 168          # after a 5+ day gap (168h is the actor's own cap)
     python fetch_posts.py --ignore-seen            # re-surface posts already shown
 
 Profiles file (default `docs/linkedin-profiles-posts.txt`, gitignored):
@@ -300,12 +300,16 @@ def main() -> None:
     # 28 comments at 4.9h and 76 by 10.4h, so a 6h floor was excluding exactly the window where
     # being early is still possible. Being early is the entire play.
     p.add_argument("--min-age-h", type=float, default=1.0)
-    p.add_argument("--max-age-h", type=float, default=48.0)
+    # 96h (4 days), widened from 48h/2 days 2026-08-03 so profiles that post every 3-4 days still
+    # surface instead of aging out. Still well inside the actor's own "week" postedLimit below.
+    p.add_argument("--max-age-h", type=float, default=96.0)
     # A safety valve for the genuinely hopeless, not the main filter: crowding is priced into the
     # score, so a 250-comment post can still surface if nothing better exists, and will rank last.
     p.add_argument("--max-comments", type=int, default=400)
     p.add_argument("--per-profile", type=int, default=3)
-    p.add_argument("--top", type=int, default=12)
+    # 25, widened from 12 2026-08-03 alongside the age window so the wider pool actually reaches
+    # more of the drafted batch instead of being cut off at the old ceiling.
+    p.add_argument("--top", type=int, default=25)
     p.add_argument("--timeout", type=int, default=280)
     p.add_argument("--limit-profiles", type=int, default=0, help="only scrape the first N (cheap check)")
     p.add_argument("--ignore-seen", action="store_true", help="re-surface posts already shown")
@@ -318,8 +322,9 @@ def main() -> None:
     print(f"[targets] {len(targets)} profiles from {args.profiles}")
 
     gap = days_since_last_run()
-    if gap is not None and gap >= 2 and args.max_age_h <= 48:
-        print(f"[note] last run was {gap:.1f} days ago. Consider --max-age-h 72 to cover the gap.")
+    if gap is not None and gap * 24 > args.max_age_h:
+        print(f"[note] last run was {gap:.1f} days ago, wider than the {args.max_age_h:g}h window. "
+              f"Consider --max-age-h {min(gap * 24, 168):.0f} to cover the gap.")
 
     seen = set() if args.ignore_seen else load_seen()
     items = fetch_posts(targets, args.per_profile, args.timeout)
@@ -329,8 +334,8 @@ def main() -> None:
     dropped = ", ".join(f"{k}={v}" for k, v in drops.items() if v)
     print(f"[filter] {len(rows)} kept" + (f" | dropped: {dropped}" if dropped else ""))
     if not rows:
-        print("Nothing passed the filters. Try --max-age-h 72, a higher --max-comments, "
-              "or --ignore-seen if everything recent was already surfaced.")
+        print("Nothing passed the filters. Try --max-age-h 168 (the actor's own cap), a higher "
+              "--max-comments, or --ignore-seen if everything recent was already surfaced.")
         return
 
     print_table(rows)

@@ -71,10 +71,10 @@ Useful flags:
 
 | Flag | When |
 |---|---|
-| `--max-age-h 72` | It has been 2-3 days since the last run. The script prints a reminder when it detects this, so watch for that line and re-run with the wider window rather than accepting a thin result. |
+| `--max-age-h 168` | Default is 96h (4 days, widened from 48h 2026-08-03). Push to 168, the actor's own "week" cap, after a longer gap. The script prints a reminder when the actual gap exceeds the current window, so watch for that line. |
 | `--dry-run` | Check what would be surfaced without writing or spending a drafting pass. |
 | `--limit-profiles 3` | Cheap check that the actor and keys still work. |
-| `--top 20` | He wants a bigger round than the default 12. |
+| `--top 30` | Default is 25 (widened from 12 2026-08-03). Push higher for an even bigger round. |
 | `--ignore-seen` | Everything recent was already surfaced and he wants a second pass anyway. |
 | `--per-profile 5` | The list is small or a lot of it went quiet, and you want more candidates per person. |
 

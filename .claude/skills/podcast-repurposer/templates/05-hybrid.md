@@ -74,6 +74,20 @@ self-contained and quotable/opinionated criteria feed **Completeness** and **Con
 Saveability and sendability (the metrics that actually move distribution) live inside
 **Resonance**.
 
+**Do not reward broad applicability as Resonance.** Found on the Jim Heimler interview
+(2026-08-04): a segment that was purely reported advice or an asserted belief, with no scene
+under it, scored 19/20 because it was "universally applicable" — but the Resonance 1-anchor's own
+failure mode is "generic, could apply to anyone," which is the *same fact* read backwards. Broad
+applicability is not resonance; it's what genericness looks like from the inside. A segment earns
+a high Resonance score by giving a specific reader a specific detail, scene, or number to
+recognize themselves in, not by stating something that's abstractly true for everyone. When a
+segment's only anchor is a reported line ("a friend told me...") or an unnamed track record ("I've
+helped with a lot of nonprofits...") rather than a scene the viewer can picture, treat that as a
+ceiling on Resonance. Cap Conviction the same way: certainty asserted in the abstract is a weaker
+screenshot line than certainty demonstrated inside a real, specific moment. This is a scoring
+rule, not a topic filter — a segment can still ship if it clears the bar on its other criteria,
+but it will not out-rank a segment with a real scene just because its claim sounds bigger.
+
 **4. Rank by total score, highest first.** That order is the recommended posting order.
 
 **5. Select on quality, not a fixed number.** Ship every segment that clears both guardrails and

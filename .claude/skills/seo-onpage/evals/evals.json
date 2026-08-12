@@ -1,0 +1,59 @@
+{
+  "skill_name": "seo-onpage",
+  "evals": [
+    {
+      "id": 0,
+      "name": "optimize-blog-draft",
+      "prompt": "I've got a draft blog post at C:/tmp/seo-onpage-evals/agentic-workflows-draft.md targeting the keyword \"agentic ai workflows\". Before I publish it, can you go over the on-page side and tell me what needs fixing? I want the actual replacement title and meta description written out, not just told they're wrong.",
+      "expected_output": "A measured on-page report on the draft: title and meta description flagged against 50-60 and 105-155 char thresholds with written replacements, heading hierarchy problems named, evidence/citation gaps identified, and judgment calls (does the opening answer the query) surfaced rather than guessed.",
+      "files": [
+        "C:/tmp/seo-onpage-evals/agentic-workflows-draft.md"
+      ],
+      "assertions": [
+        "Writes out a concrete replacement SEO title (not just says the current one is too long)",
+        "The proposed title is between 50 and 60 characters",
+        "Writes out a concrete replacement meta description",
+        "The proposed meta description is between 105 and 155 characters",
+        "Identifies the skipped heading level (an H2 is followed by an H4)",
+        "Flags that the draft contains no outbound citations or named sources",
+        "Flags the non-descriptive anchor text 'Click here'",
+        "Flags the image for missing alt text or its camera-style filename (IMG_4471)",
+        "Flags the URL slug for using underscores, uppercase, or a date path",
+        "Treats 'does the opening actually answer the query' as a judgment call with evidence shown, rather than silently asserting a pass"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "audit-live-page",
+      "prompt": "Can you do an on-page audit of https://example.com/ ? They're a renaissance faire, main query is \"renaissance faire near me\". I need something I can actually send them - what's broken, in priority order.",
+      "expected_output": "A prioritized audit with a one-line diagnosis, roughly three ranked fixes each with measured evidence, a 'what is fine' section, and an explicit statement that Search Console is not connected. Not a list of forty findings.",
+      "files": [],
+      "assertions": [
+        "States explicitly that Google Search Console data is not available/connected",
+        "Contains a single-sentence diagnosis naming what is actually wrong, not a generic summary",
+        "Presents five or fewer top-priority fixes rather than an unranked list of every issue",
+        "Includes a section stating what is already fine / working",
+        "Cites at least one directly measured number (LCP seconds, image byte count, orphan page count, or character count)",
+        "Does not state any traffic, click, impression or CTR figure as fact",
+        "Identifies the title tag problem (no 'renaissance faire' variant in the title, or title/H1 disagreement)",
+        "Ranks fixes by impact rather than listing them in checklist order"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "diagnose-low-ctr",
+      "prompt": "one of my client's service pages is sitting on page 2 for its main keyword and getting basically no clicks even though it shows up in search a fair bit. the page is https://moz.com/learn/seo/meta-description and the keyword is \"meta description\". what would you actually change on the page? and is there stuff the top results cover that this page doesn't?",
+      "expected_output": "Diagnoses this as a metadata/CTR problem before a content problem, measures the page's title/meta against thresholds, runs a term-gap analysis against the live top 10 splitting body vs heading terms, and is honest that impressions/CTR figures cannot be confirmed without Search Console.",
+      "files": [],
+      "assertions": [
+        "Correctly works out whether this is a POSITION problem or a CTR problem rather than assuming CTR - a page on page 2 earns ~0.5-1.5% CTR no matter how good the snippet is",
+        "Measures the page's actual current title and/or meta description rather than speaking generically",
+        "Performs a real comparison against the pages currently ranking for the query",
+        "Separates missing heading/section topics from missing body concepts, or otherwise distinguishes structural gaps from prose gaps",
+        "States that the impressions/CTR claim cannot be verified without Search Console access",
+        "Does not prescribe a keyword density or a 'use this term N times' target",
+        "Proposes concrete rewritten metadata rather than only describing what to change"
+      ]
+    }
+  ]
+}

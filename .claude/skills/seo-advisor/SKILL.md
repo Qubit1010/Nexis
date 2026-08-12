@@ -20,8 +20,11 @@ description: >
   Trigger even when the user describes a search-visibility symptom without saying "SEO".
   Answers are grounded in a cited 320-source 2026 corpus, tagging every claim
   [confirmed] (Google docs, peer-reviewed) vs [practitioner] (vendor blog), never
-  presenting a vendor statistic as fact. To WRITE an optimized article use blog-writer;
-  to RUN a crawl-and-PageSpeed audit use website-audit-system.
+  presenting a vendor statistic as fact. This skill EXPLAINS and DIAGNOSES; it does not
+  produce the artifact. To actually DO keyword research for a client - find the keywords,
+  read the SERPs, score, cluster, and map them to pages, ending in a keyword-map Sheet -
+  use seo-foundation. To WRITE an optimized article use blog-writer; to RUN a
+  crawl-and-PageSpeed audit use website-audit-system.
 argument-hint: [an SEO question, a symptom to diagnose, or a course section to work through]
 ---
 
@@ -66,6 +69,8 @@ advises and diagnoses. It does not produce the artifact. Same split as
 
 | Hand off to | For |
 |---|---|
+| **seo-foundation** | Actually doing the keyword work for a client: discovery, live SERP reads, scoring, SERP-overlap clustering, the keyword map, and the 6-tab Sheet. This skill explains the method (course 04-08); that one executes it. If the ask is "do this for a client" rather than "explain this to me", route there. |
+| **seo-onpage** | Actually doing the on-page and content work for a client: measuring a page or a whole site against the Tier 2 thresholds, writing the replacement titles and metas, the internal-link and media passes, the content inventory with keep/update/merge/remove tracks, and the full on-page audit. This skill teaches course 11-20; that one executes them. Same rule as seo-foundation: "do this for a client" routes there. |
 | **blog-writer** | Actually writing an SEO/AEO-optimized article. It owns article-level SEO on its own 83-source corpus. Cross-cite it, never restate it. |
 | **website-audit-system** | Actually running a Firecrawl crawl + PageSpeed audit and producing the client Doc. |
 | **marketing-skills** (`seo-audit`, `schema`, `site-architecture`, `programmatic-seo`, `ai-seo`, `directory-submissions`) | Tactical checklists. These are useful but **entirely uncited** - re-ground any number against our corpus before repeating it. |
@@ -95,7 +100,7 @@ section for depth.
 |------|-----------------|------|
 | **learn** | "teach me SEO", "start the course", "next section", "section N", "curriculum", "roadmap", "where do I start" | `course/00-curriculum.md` + the section file |
 | **keywords** | "keyword research", "what keywords", "search volume", "keyword difficulty", "search intent", "content gap" | synthesis **Q2** |
-| **onpage** | "optimize this page", title tags, meta descriptions, headings, URLs, internal linking, topical authority, E-E-A-T | synthesis **Q3** (article-level -> `blog-writer`) |
+| **onpage** | "optimize this page", title tags, meta descriptions, headings, URLs, internal linking, topical authority, E-E-A-T | synthesis **Q3**. If the ask is "do this for a client" rather than "explain this to me", route to **`seo-onpage`** (the Tier 2 executor); article-level writing -> `blog-writer` |
 | **technical** | crawling, indexing, robots.txt, sitemap, canonical, redirects, JavaScript SEO, rendering, site architecture, mobile, hreflang | synthesis **Q4** |
 | **speed** | Core Web Vitals, LCP, INP, CLS, PageSpeed, page speed | synthesis **Q5** |
 | **schema** | structured data, JSON-LD, rich results, schema markup | synthesis **Q6** |

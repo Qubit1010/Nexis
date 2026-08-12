@@ -1,0 +1,158 @@
+{
+  "skill_name": "seo-technical",
+  "notes": "Trigger + behaviour evals. The behaviour ones exist because the failure modes here are claims, not crashes: a per-agent robots rule read as a site-wide block, a lab Lighthouse score presented as a field verdict, schema sold as a ranking lever, or an indexation number invented because Search Console is missing. Run with skill-creator's harness at --num-workers 2 (the harness is unreliable under higher concurrency and silently scores failed invocations as 'not triggered').",
+  "evals": [
+    {
+      "id": 0,
+      "name": "robots-per-agent-not-sitewide",
+      "prompt": "Here's my robots.txt, can you check it over?\n\nUser-agent: *\nAllow: /\nDisallow: *?lightbox=\n\n# Block PetalBot\nUser-agent: PetalBot\nDisallow: /\n\nSitemap: https://example.com/sitemap.xml",
+      "expected_output": "Correctly reads the Disallow: / as scoped to PetalBot only, does NOT report the site as blocked to all crawlers, and notes the missing AI crawler policy as a decision rather than a defect.",
+      "assertions": [
+        "Does NOT claim the site blocks all crawlers or that Googlebot is blocked",
+        "Explicitly attributes the Disallow: / to PetalBot",
+        "Notes the sitemap directive is present",
+        "Raises the AI crawler policy (GPTBot/ClaudeBot/OAI-SearchBot etc.) as undeclared",
+        "Frames the AI policy as a business decision, not a failure"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "indexation-without-search-console",
+      "prompt": "Can you tell me what percentage of my site's pages Google has actually indexed? The site is https://example.com",
+      "expected_output": "Says this is not measurable without Search Console, explains that a crawl reports what the crawler fetched rather than what Google stored, and gives the manual route (Search Console -> Pages, plus the Crawled-not-indexed vs Discovered-not-indexed split).",
+      "assertions": [
+        "Does NOT invent or estimate an indexation percentage",
+        "States that Search Console is the only source for this and is not connected",
+        "Distinguishes what a crawler can see from what Google indexed",
+        "Names the Search Console Pages report as the manual route",
+        "Mentions the 85% indexed-to-submitted healthy benchmark OR the Crawled/Discovered-not-indexed distinction"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "schema-is-not-a-ranking-lever",
+      "prompt": "I read that adding schema markup gets you 3x more citations in ChatGPT and helps you rank. Worth doing on my site?",
+      "expected_output": "Pushes back with the evidence conflict: the multiplier claims are correlational and from schema-tool vendors, Ahrefs (1,885 pages) and SearchAtlas found no causal uplift, and Google has confirmed structured data is not a direct ranking factor. Recommends it anyway for rich-result eligibility and entity clarity.",
+      "assertions": [
+        "Does NOT endorse the 3x citation claim as established",
+        "Names the counter-evidence (Ahrefs and/or SearchAtlas found no uplift)",
+        "States Google has confirmed structured data is not a direct ranking factor",
+        "Notes the vendor claims are correlational and self-interested",
+        "Still recommends schema, but for rich results and entity disambiguation"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "lighthouse-100-but-failing",
+      "prompt": "My PageSpeed score is 100 on mobile but my rankings haven't moved. What's going on with my Core Web Vitals?",
+      "expected_output": "Explains the lab-versus-field distinction: a 100 Lighthouse score is a simulation and Google ranks on CrUX field data at p75 over 28 days, so the page can score 100 and still fail. Also frames CWV as a floor, not a lever, so passing buys nothing further.",
+      "assertions": [
+        "Distinguishes lab (Lighthouse) from field (CrUX) data",
+        "States Google ranks on field data only",
+        "Mentions the 75th percentile and/or the 28-day rolling window",
+        "States Core Web Vitals are a floor/tiebreaker, not a ranking lever",
+        "Does NOT recommend further speed optimization for ranking reasons if already passing"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "csr-site-invisible-to-ai",
+      "prompt": "We built the site in React with client-side rendering. Google seems to index us fine and rankings are okay. Any technical SEO concern there?",
+      "expected_output": "Yes: Google renders in a second wave 24-72 hours later, but GPTBot, ClaudeBot and PerplexityBot frequently do not execute JavaScript at all, so the site can rank normally in Google and be absent from AI answers. Recommends the disable-JavaScript test and server-rendering the content, links and especially metadata.",
+      "assertions": [
+        "Explains Google's two-wave indexing with the 24-72 hour delay",
+        "States that AI crawlers frequently do not execute JavaScript at all",
+        "Makes the point that Google rankings looking fine does not rule this out",
+        "Recommends a concrete diagnostic (disable JavaScript and reload, or compare raw vs rendered HTML)",
+        "Recommends server-rendering content/links/metadata rather than a full rebuild"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "disallow-plus-noindex-conflict",
+      "prompt": "I want these thank-you pages out of Google. I've added noindex to them and also blocked /thank-you/ in robots.txt to be thorough. Good?",
+      "expected_output": "No: disallowed means Google never fetches the page, so it never reads the noindex, and if the URL is linked anywhere it can stay indexed as a bare URL indefinitely. Tell them to pick one - allow crawling and keep the noindex.",
+      "assertions": [
+        "Identifies the combination as broken, not thorough",
+        "Explains that a disallowed page is never fetched so the noindex is never read",
+        "Notes the URL can remain indexed as a bare URL with no description",
+        "Recommends removing the Disallow and keeping noindex (allow crawling)"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "hreflang-not-needed",
+      "prompt": "We sell to the US, UK and Australia from one English website. Should we set up hreflang?",
+      "expected_output": "Almost certainly not: one English site with no meaningful differences does not need hreflang, and implementing it adds permanent maintenance for no benefit. Recommends recording the decision as a documented not-applicable so nobody implements it later.",
+      "assertions": [
+        "Recommends against implementing hreflang for this case",
+        "Explains it is only needed with substantially different content per language or market",
+        "Notes that implementing it unnecessarily adds maintenance for no benefit",
+        "Suggests documenting the not-applicable decision rather than leaving it blank",
+        "Does NOT claim hreflang would improve rankings"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "tier-order-over-easy-wins",
+      "prompt": "Technical audit came back with: no Organization schema, no breadcrumbs, LCP at 3.1s on the blog template, sitemap contains 40 URLs that 404, and robots.txt returns a 500. What should we fix first?",
+      "expected_output": "robots.txt 500 first - it stops Googlebot crawling the entire site. Then the sitemap 404s. Schema and speed last, because fixing schema on a site that cannot be crawled is polishing something invisible.",
+      "assertions": [
+        "Puts the robots.txt 5xx first",
+        "Explains a 5xx on robots.txt stops Googlebot crawling the whole site",
+        "Puts the sitemap 404s ahead of schema and speed",
+        "Puts schema last or near-last",
+        "Articulates the tier principle: a lower-layer failure invalidates work above it"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "faq-schema-retired-but-keep-it",
+      "prompt": "Google killed FAQ rich results. Should I strip the FAQPage schema off my 60 pages?",
+      "expected_output": "No: the Google rich result sunset on 7 May 2026, but ChatGPT, Perplexity and Bing Copilot still consume FAQPage markup. Leave it, just stop expecting Google output.",
+      "assertions": [
+        "Recommends leaving the markup in place",
+        "Confirms the Google rich result is retired",
+        "States that non-Google engines (ChatGPT/Perplexity/Bing Copilot) still use it",
+        "Reframes the expectation rather than the markup"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "full-audit-triggers-crawl-first",
+      "prompt": "Run a full technical SEO audit on https://example.com",
+      "expected_output": "Invokes the skill, crawls once with crawl.py, then runs technical.py / schema.py / vitals.py / render_diff.py off that one graph, and reports in tier order with Search Console named as not connected.",
+      "assertions": [
+        "Uses scripts/crawl.py first rather than fetching pages ad hoc",
+        "Runs the check scripts against the crawl graph rather than re-fetching",
+        "Reports findings grouped or ordered by the tier pyramid",
+        "Names Search Console as not connected rather than approximating indexation",
+        "Does not present more than about five top-priority findings"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "build-mode-artifacts",
+      "prompt": "Generate me a corrected robots.txt and a clean sitemap for https://example.com based on what's actually wrong with it.",
+      "expected_output": "Runs emit.py (BUILD mode), produces the files, and reports what changed and why. Does not deploy anything.",
+      "assertions": [
+        "Uses scripts/emit.py rather than hand-writing the files",
+        "The generated robots.txt contains a Sitemap: directive",
+        "The generated robots.txt declares an AI crawler policy without the deprecated anthropic-ai agent",
+        "Explains each change rather than silently applying it",
+        "States that nothing was deployed"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "does-not-poach-onpage",
+      "prompt": "My title tags are all too long and my blog posts don't have enough internal links. Can you fix the on-page stuff?",
+      "expected_output": "Hands off to seo-onpage rather than answering from this skill. Title tags, content and internal linking are Tier 2.",
+      "assertions": [
+        "Routes the request to seo-onpage",
+        "Does NOT run the technical crawl scripts for this",
+        "Correctly identifies titles and internal linking as on-page/Tier 2, not technical/Tier 3"
+      ]
+    }
+  ]
+}

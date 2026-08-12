@@ -17,11 +17,12 @@ Aleem's research-backed engine for one thing done well: a finished, **SEO + AI-s
 ## Boundary (avoid overlap)
 - **blog-writer (this):** ONE deep, SEO/AEO/GEO-optimized, human-toned long-form article, from a topic or from scratch, with a full metadata package. The single-article specialist.
 - **content-engine:** the multi-platform content *system* - idea sourcing, scoring, the Blog -> LinkedIn + Instagram repurposing flywheel, logging. Use it for "what should I post", "full content run", "repurpose this". (blog-writer reuses its `voice-principles.md` and `save_content.py`.)
+- **seo-onpage:** the on-page and content EXECUTION skill (Tier 2). It owns the canonical on-page thresholds and measures them - titles, metas, headings, structure, internal links, media, E-E-A-T, schema - against a draft or a live URL, and audits whole sites. blog-writer writes the article and calls it in Step 5b to validate; it does not carry its own copies of those numbers.
 - **ai-seo** (installed): the exhaustive AEO/GEO audit methodology (robots.txt for AI bots, llms.txt, OKF, full schema tables, the Princeton table). Cross-reference for site-level audits; blog-writer distills the article-relevant parts.
 
 ## Context to load first
 1. `content-engine/references/voice-principles.md` - Aleem's voice (always).
-2. `references/seo-aeo-geo-checklist.md` - the optimization scoreboard (always).
+2. `references/seo-aeo-geo-checklist.md` - the optimization scoreboard (always). It owns the AEO/GEO and query-fan-out half; the on-page thresholds it cites are owned by `seo-onpage/references/checks.md` and cross-referenced, not duplicated.
 Then load the workflow-specific reference(s) below. Pull citations/depth from `references/research-synthesis.md` when you need the evidence behind a claim.
 
 ---
@@ -31,7 +32,7 @@ Then load the workflow-specific reference(s) below. Pull citations/depth from `r
 |---|---|---|
 | **from-topic** | a topic/title/keyword is given | confirm intent + angle, go |
 | **from-scratch** | "write a blog", no topic | propose 3 angles from Aleem's pillars + a niche, let him pick |
-| **optimize-existing** | a draft/URL + "optimize for SEO/AI" | skip drafting; run steps 5-7 on the existing text |
+| **optimize-existing** | a draft/URL + "optimize for SEO/AI" | skip drafting; run steps 5a-7. Start by measuring: `seo-onpage/scripts/onpage.py --draft <file>` (or `--url`) so the edit is aimed at something real rather than at a re-read. |
 
 ---
 
@@ -54,18 +55,34 @@ Set primary + 3-6 supporting keywords mapped to intent. Pick the format template
 ### Step 4 - Write in Aleem's voice (level 7+)
 Draft the post per `voice-principles.md`: real hook (never "In this post..."), strong POV, lived experience with specific anchors, the So-What test on every paragraph, the Golden Pattern arc for case-study/opinion. **Draft in layers** (`human-tone-rules.md`): idea pass, then evidence pass, then a rhythm/voice pass. Weave cited stats in naturally as interpretation, not a data dump. If Aleem hasn't shipped the exact thing, use the No-Experience Fallback (bridge to adjacent work, frame as hypothesis) - never fake authority.
 
-### Step 5 - SEO / AEO / GEO / AIO pass
+### Step 5a - SEO / AEO / GEO / AIO pass
 Run the draft through `references/seo-aeo-geo-checklist.md`:
-- Answer-first intro + each H2 opens with a short (~40-60 word) self-contained answer.
+- Answer-first intro + each H2 opens with a **40-60 word** direct answer, inside a section that stands alone at roughly **134-167 words**. These are two different numbers and both matter: the 40-60 is the answer that opens the section, the 134-167 is the whole extractable unit. See `seo-onpage/references/checks.md` §2.
 - Headings map to real queries; comparison table where the intent is "vs/best"; FAQ (3-6 fan-out Q&A).
 - Cite sources + include specific dated stats (direction, not the exact Princeton %); first-hand experience for E-E-A-T.
-- Build the **SEO metadata block**: SEO title (<=60), meta description (<=160), URL slug, primary + supporting keywords, the extractable answer callouts, FAQ + `FAQPage` JSON-LD, `Article`/`BlogPosting` JSON-LD stub, image alt texts, internal-link suggestions, external sources cited, "last updated" date.
+- Build the **SEO metadata block**: SEO title (**50-60**, primary keyword in the first 40 characters), meta description (**105-155**, key info in the first 120), URL slug, primary + supporting keywords, the extractable answer callouts, FAQ + `FAQPage` JSON-LD, `Article`/`BlogPosting` JSON-LD stub, image alt texts, internal-link suggestions, external sources cited, "last updated" date.
+
+### Step 5b - Validate the draft (mechanical)
+Nothing above verifies itself, so measure it. `seo-onpage` owns the on-page thresholds and runs them against the draft file:
+```bash
+python .claude/skills/seo-onpage/scripts/onpage.py --draft content/blog/<slug>.md \
+  --primary-keyword "<primary keyword>" --fails-only
+```
+Fix every `fail`. Read every `review` and decide - those are the judgment calls (does the opening actually answer the query, is a section padding), and the script attaches the evidence rather than guessing.
+
+Optionally, to see what the pages currently ranking cover that this draft does not:
+```bash
+python .claude/skills/seo-onpage/scripts/terms.py --query "<primary keyword>" --draft content/blog/<slug>.md
+```
+Treat that as coverage, never as a keyword quota. If you edit in response, edit under the Revise-Don't-Rewrite contract in `seo-onpage/references/terms-workflow.md` - the failure mode is regenerating a smoother, blander post that has lost the first-hand detail. Then re-run and report the delta.
+
+Carry the results into Step 7. Do **not** add a second human checkpoint.
 
 ### Step 6 - Human-tone pass (mandatory)
 Run `references/human-tone-rules.md`: phrase audit (purge "game-changer/leverage/dive into", empty "Furthermore/Moreover" openers, "it's not X it's Y"), cadence/burstiness (vary sentence length, no 3 equal-length in a row), first-person specificity, no em dashes / smart quotes, and the **read-aloud self-check**. Also run `what-not-to-do.md`. The point is genuine voice, not detector-gaming.
 
 ### Step 7 - Review gate (single checkpoint)
-Present the finished post + the SEO metadata block inline for approval. State the format, target keyword, and word count. Ask for a go before saving. This is the one human checkpoint.
+Present the finished post + the SEO metadata block inline for approval, **plus the Step 5b check result** (fails fixed, and the `review` calls you made with your reasoning). State the format, target keyword, and word count. Ask for a go before saving. This is the one human checkpoint - 5b reports into it rather than adding another.
 
 ### Step 8 - Save (on approval)
 Always write the markdown file (post + metadata block) to `content/blog/<slug>.md` (or a path Aleem names). Then, if he wants a Google Doc:
