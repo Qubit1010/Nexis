@@ -1,0 +1,82 @@
+[
+  {
+    "query": "build the visual identity for this client - color, type, logo direction, the written spec not the pictures",
+    "should_trigger": true
+  },
+  {
+    "query": "define a color system for the architecture client, primary secondary neutrals and where each one gets used",
+    "should_trigger": true
+  },
+  {
+    "query": "pick typography for this brand. needs a display face and something that works for long body copy",
+    "should_trigger": true
+  },
+  {
+    "query": "what direction should their logo go in? give me concepts with reasoning, not just 'make it modern'",
+    "should_trigger": true
+  },
+  {
+    "query": "assemble the full brand guidelines document for belle-perry now that strategy and voice are done",
+    "should_trigger": true
+  },
+  {
+    "query": "audit this client's current visual identity, here's their site and their old brand pdf",
+    "should_trigger": true
+  },
+  {
+    "query": "their brand colors fail contrast checks on half the site. fix the palette without losing the brand",
+    "should_trigger": true
+  },
+  {
+    "query": "we approved the palette. turn it into design tokens the devs can actually use",
+    "should_trigger": true
+  },
+  {
+    "query": "client wants to know if their fonts are licensed for commercial web use and what to switch to if not",
+    "should_trigger": true
+  },
+  {
+    "query": "their identity looks fine on the website and falls apart on packaging and social. sort out the visual system",
+    "should_trigger": true
+  },
+  {
+    "query": "generate the actual brand kit image board, 3x3 grid, premium identity deck look",
+    "should_trigger": false
+  },
+  {
+    "query": "define their brand personality and what the brand stands for",
+    "should_trigger": false
+  },
+  {
+    "query": "write their tone of voice guide",
+    "should_trigger": false
+  },
+  {
+    "query": "build me the landing page for this client",
+    "should_trigger": false
+  },
+  {
+    "query": "design a linkedin infographic from this post",
+    "should_trigger": false
+  },
+  {
+    "query": "make an instagram carousel for this topic",
+    "should_trigger": false
+  },
+  {
+    "query": "what's the research on the color blue and trust",
+    "should_trigger": false
+  },
+  {
+    "query": "design the dashboard UI for this app",
+    "should_trigger": false
+  },
+  {
+    "query": "turn this infographic post into a reel",
+    "should_trigger": false
+  },
+  {
+    "query": "audit this client's website for seo and performance issues",
+    "should_trigger": false
+  }
+]

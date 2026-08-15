@@ -1,0 +1,82 @@
+[
+  {
+    "query": "what's the actual difference between brand identity, brand image and brand reputation? i keep using them interchangeably on calls and i think a client is going to catch me out",
+    "should_trigger": true
+  },
+  {
+    "query": "someone in a pitch deck told me color increases brand recognition by 80%. is that real or is it one of those numbers everyone repeats",
+    "should_trigger": true
+  },
+  {
+    "query": "client's asking whether they should rebrand or just refresh the logo. what does the evidence actually say about when a rebrand is worth the risk",
+    "should_trigger": true
+  },
+  {
+    "query": "explain brand archetypes to me. is there anything behind them or is it just jung cosplay",
+    "should_trigger": true
+  },
+  {
+    "query": "a client keeps saying their brand 'feels inconsistent' but can't explain what they mean. how do i diagnose what's actually wrong",
+    "should_trigger": true
+  },
+  {
+    "query": "how would a small business with no research budget actually measure brand awareness",
+    "should_trigger": true
+  },
+  {
+    "query": "differentiation vs distinctiveness - byron sharp says one thing and every positioning book says another. which is right",
+    "should_trigger": true
+  },
+  {
+    "query": "do brand guidelines documents actually get used in practice or do they just sit in a drive folder",
+    "should_trigger": true
+  },
+  {
+    "query": "how much does a logo actually matter to business outcomes, honestly",
+    "should_trigger": true
+  },
+  {
+    "query": "what is keller's CBBE pyramid and is it worth structuring a client deliverable around",
+    "should_trigger": true
+  },
+  {
+    "query": "build out the brand strategy for belle-perry, they're in client-projects already",
+    "should_trigger": false
+  },
+  {
+    "query": "write the tone of voice guidelines for this client so their writers stop sounding like four different companies",
+    "should_trigger": false
+  },
+  {
+    "query": "pick a color palette and font pairing for the architecture client",
+    "should_trigger": false
+  },
+  {
+    "query": "what's this client's unique value proposition and how big is their addressable market",
+    "should_trigger": false
+  },
+  {
+    "query": "how do i get more clients into the pipeline this quarter",
+    "should_trigger": false
+  },
+  {
+    "query": "generate a premium brand kit image board with the logo on a 3x3 grid",
+    "should_trigger": false
+  },
+  {
+    "query": "take this hex code and give me the full css design token set",
+    "should_trigger": false
+  },
+  {
+    "query": "write me a linkedin post about why branding matters for small businesses",
+    "should_trigger": false
+  },
+  {
+    "query": "audit this client's website and give me the seo issues",
+    "should_trigger": false
+  },
+  {
+    "query": "research the market size and competitive landscape for the plumbing industry in leeds",
+    "should_trigger": false
+  }
+]

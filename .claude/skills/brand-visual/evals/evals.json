@@ -1,0 +1,83 @@
+{
+  "skill_name": "brand-visual",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "build the colour system for a client - premium architecture practice, positioned against the big corporate firms, wants to feel considered and quiet rather than loud. give me the palette.",
+      "expected_output": "Produces roles rather than a swatch row: primary, secondary, accent, a real neutral ramp, and semantic colours, each with where it is used and where it must not be. Ties choices back to the stated positioning rather than to taste. Should query ui-ux-pro-max's colour data for candidates rather than inventing from scratch. Critically, must compute WCAG contrast ratios for the real text and background pairs and report the numbers, not assert accessibility. Should note category colour norms and state whether it is conforming or deviating and why.",
+      "files": [],
+      "expectations": [
+        "Assigns roles with usage rules rather than listing swatches",
+        "Specifies a neutral ramp rather than treating neutrals as an afterthought",
+        "Computes and reports actual contrast ratios as numbers",
+        "Ties colour choices back to the stated positioning",
+        "Addresses category norms and whether it conforms or deviates"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "client's marketing lead says we should pick their brand colour carefully because colour increases brand recognition by 80%, and she wants a serif font because serifs are more legible and will make them look trustworthy. put together the visual direction.",
+      "expected_output": "Corrects both claims without being condescending. The 80% figure has no traceable primary source and two independent traces call it a myth. The serif legibility claim is genuinely contested with no universal rule. Should then supply what the evidence does support: hue maps to brand personality, colour appropriateness to the brand matters more than hue alone, and typefaces carry semantic associations that transfer to the message, which is a different and defensible reason to choose a serif. Should still deliver the visual direction rather than only correcting.",
+      "files": [],
+      "expectations": [
+        "States the 80% colour claim has no traceable primary source",
+        "States there is no universal serif-versus-sans legibility rule",
+        "Offers the typeface semantic-association evidence as the real reason to choose a serif",
+        "Offers colour appropriateness and hue-personality evidence in place of the myth",
+        "Still delivers the visual direction rather than stopping at the correction"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "client's brand blue is #208ec7 on white backgrounds and their designer says it's fine. their site has body text in it. check it.",
+      "expected_output": "Computes the actual contrast ratio rather than judging by eye, and reports the number. #208ec7 on white is approximately 3.65:1, which fails WCAG AA for body text (4.5:1 required) while passing the 3:1 threshold for large text and UI components. Should not tell them to abandon the brand colour: the correct fix is an accessible darker variant for body text while keeping the original for large display use and non-text elements. Should give the corrected hex with its computed ratio.",
+      "files": [],
+      "expectations": [
+        "Computes and reports the actual ratio rather than judging visually",
+        "Correctly identifies it as failing AA for body text",
+        "Notes it still passes the large-text and UI-component threshold",
+        "Supplies an accessible variant rather than discarding the brand colour",
+        "Gives the corrected value with its own computed ratio"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "client wants to know what a logo redesign will do for them commercially, and whether it's worth about £12k. they're a 15-year-old regional building supplier with a dated but well-known logo.",
+      "expected_output": "Refuses to supply an ROI figure, because no traceable primary study supports one. Should raise the recognition cost specifically: a 15-year-old well-known mark carries accumulated recognition that a replacement discards, the most loyal customers react worst to identity change, and backlash risk is documented. Should distinguish refresh from replacement as materially different products with different risk, and reframe the spend question toward whether £12k buys a system or a single mark. Should recommend diagnosis before agreeing it is a logo problem at all.",
+      "files": [],
+      "expectations": [
+        "Refuses to give a revenue or ROI figure for the redesign",
+        "Raises the accumulated-recognition cost of replacing a known mark",
+        "Notes that high-identifying customers react worst to identity change",
+        "Distinguishes refresh from full replacement as different risk levels",
+        "Reframes toward whether the spend buys a system or a single mark"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "assemble the full brand guidelines document for client-projects/belle-perry so we can send it over.",
+      "expected_output": "Checks that 13-brand-strategy.md, 14-brand-voice.md and 15-brand-visual-identity.md all exist before assembling. If any is missing, says which and offers to build it rather than inventing the section. Pulls finished sections rather than re-deriving, and if the three disagree, stops and fixes the source document instead of silently reconciling in the assembly. Drops internal scaffolding (fact tables, assumption lists, what-we-could-not-establish) from the client manual, carrying genuinely open items into a short closing section. Contains no mention of NexusPoint or Aleem.",
+      "files": [],
+      "expectations": [
+        "Verifies 13, 14 and 15 exist before assembling",
+        "Names any missing document and offers to build it rather than inventing content",
+        "Pulls finished sections rather than re-deriving them",
+        "Strips internal scaffolding from the client-facing manual",
+        "Contains no mention of NexusPoint or Aleem"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "client has a 40-page brand book from 2019 and says their branding still looks inconsistent everywhere. audit it.",
+      "expected_output": "Samples the live site for actual hex values and loaded fonts rather than reading the brand book and trusting it, and treats any divergence between document and production as a finding. Scores against the rubric, expecting the common failures: no spacing or grid layer, no computed contrast, no design tokens, so the document is unbuildable even though it looks complete. Should recognise that a 40-page book plus persistent inconsistency often means non-adoption rather than incompleteness, and that adoption is an organizational problem a more beautiful document will not fix.",
+      "files": [],
+      "expectations": [
+        "Samples live values rather than trusting the brand book",
+        "Treats document-versus-production divergence as a finding",
+        "Checks for the spacing/grid layer and computed contrast specifically",
+        "Distinguishes an unusable document from an ignored one",
+        "Notes adoption is organizational and not solved by redesigning the document"
+      ]
+    }
+  ]
+}

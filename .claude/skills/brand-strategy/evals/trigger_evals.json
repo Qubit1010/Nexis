@@ -1,0 +1,82 @@
+[
+  {
+    "query": "just closed a new client, architecture firm. they've got no brand at all beyond a logo their nephew made. build the brand strategy",
+    "should_trigger": true
+  },
+  {
+    "query": "we need to define this client's brand identity - who they are, what they stand for, the whole core",
+    "should_trigger": true
+  },
+  {
+    "query": "define the brand personality and pick an archetype for the coffee roaster client",
+    "should_trigger": true
+  },
+  {
+    "query": "what should their brand promise be? they keep saying 'quality and service' like everyone else",
+    "should_trigger": true
+  },
+  {
+    "query": "write the brand story for this client, here's their founding history doc",
+    "should_trigger": true
+  },
+  {
+    "query": "client sent over their existing brand deck. audit it and tell me what's actually broken",
+    "should_trigger": true
+  },
+  {
+    "query": "their brand feels completely generic and interchangeable with every competitor. fix the positioning",
+    "should_trigger": true
+  },
+  {
+    "query": "i want to build out my own founder brand properly - what i stand for, how i'm positioned, not just posting more",
+    "should_trigger": true
+  },
+  {
+    "query": "we already did the strategic foundation for rw-winship. now do the brand layer on top of it",
+    "should_trigger": true
+  },
+  {
+    "query": "define the founder brand for this client's CEO, she's becoming the face of the company",
+    "should_trigger": true
+  },
+  {
+    "query": "what's their UVP and who exactly is the ideal customer profile",
+    "should_trigger": false
+  },
+  {
+    "query": "how big is this market and who are the main players",
+    "should_trigger": false
+  },
+  {
+    "query": "write the tone of voice guide and the messaging framework",
+    "should_trigger": false
+  },
+  {
+    "query": "choose fonts and a color system for them",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what a brand archetype is and whether they're evidence-based",
+    "should_trigger": false
+  },
+  {
+    "query": "should this client rebrand or not? just want your read on it",
+    "should_trigger": false
+  },
+  {
+    "query": "write a blog post for this client about their new service",
+    "should_trigger": false
+  },
+  {
+    "query": "generate the logo concept board as an image",
+    "should_trigger": false
+  },
+  {
+    "query": "what should i post on linkedin this week",
+    "should_trigger": false
+  },
+  {
+    "query": "build a buyer persona for their content and seo work",
+    "should_trigger": false
+  }
+]

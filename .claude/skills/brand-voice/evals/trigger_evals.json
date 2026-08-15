@@ -1,0 +1,82 @@
+[
+  {
+    "query": "write the brand voice guidelines for this client - their site, emails and instagram all sound like different companies",
+    "should_trigger": true
+  },
+  {
+    "query": "define the tone of voice for the architecture client, something their freelance writers can actually follow",
+    "should_trigger": true
+  },
+  {
+    "query": "build them a messaging framework, they've got no consistent way of describing what they do",
+    "should_trigger": true
+  },
+  {
+    "query": "they want a messaging house - core message, pillars, proof points, the whole thing",
+    "should_trigger": true
+  },
+  {
+    "query": "come up with tagline options for this client and tell me which one you'd actually ship",
+    "should_trigger": true
+  },
+  {
+    "query": "we're naming their new productized service. give me name candidates and check they're not obviously taken",
+    "should_trigger": true
+  },
+  {
+    "query": "here's their existing voice guide. audit it, most of it is adjectives like 'friendly but professional' which tells a writer nothing",
+    "should_trigger": true
+  },
+  {
+    "query": "write the do's and don'ts for how this brand writes, with before and after examples",
+    "should_trigger": true
+  },
+  {
+    "query": "define my own writing voice as a founder so ghostwritten posts actually sound like me",
+    "should_trigger": true
+  },
+  {
+    "query": "their copy is full of corporate filler. give me a voice spec that kills it and rewrite a page as proof",
+    "should_trigger": true
+  },
+  {
+    "query": "write a blog post for this client in their brand voice",
+    "should_trigger": false
+  },
+  {
+    "query": "write the instagram caption and hashtags for this client",
+    "should_trigger": false
+  },
+  {
+    "query": "pick a typeface that matches their personality",
+    "should_trigger": false
+  },
+  {
+    "query": "define their brand archetype and brand promise",
+    "should_trigger": false
+  },
+  {
+    "query": "what's a messaging house and do i actually need one",
+    "should_trigger": false
+  },
+  {
+    "query": "write a cold email sequence for our outreach",
+    "should_trigger": false
+  },
+  {
+    "query": "draft an upwork proposal for this job post",
+    "should_trigger": false
+  },
+  {
+    "query": "repurpose this podcast episode into clips and captions",
+    "should_trigger": false
+  },
+  {
+    "query": "draft a reply to this prospect's DM, they said we're too expensive",
+    "should_trigger": false
+  },
+  {
+    "query": "write the welcome email for the client we just onboarded",
+    "should_trigger": false
+  }
+]

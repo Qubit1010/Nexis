@@ -1,0 +1,83 @@
+{
+  "skill_name": "brand-voice",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "client wants their brand voice to be 'friendly but professional, approachable yet authoritative'. write up the voice guidelines from that.",
+      "expected_output": "Does not accept the adjectives as a voice definition. Should point out that 'friendly but professional' excludes nothing and would fit most B2B brands, then convert to dimensions expressed as scales with a marked position and named exclusions at both ends. Should ask for or read their existing copy before specifying, since a voice guide written without reading the client is prescription rather than description. Should end with before-and-after rewrites of their real copy where each change traces to a stated rule.",
+      "files": [],
+      "expectations": [
+        "Rejects the adjective pair as a usable voice definition and explains why",
+        "Converts to scales with marked positions and exclusions at both ends",
+        "Asks for or reads existing client copy before specifying the voice",
+        "Includes before-and-after rewrites tied to specific rules",
+        "Does not simply expand the adjectives into paragraphs"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "b2b client selling £40k+ compliance software to finance directors. the agency before us told them to be much more casual and conversational, use humour, drop the formality. write the voice guide on that basis.",
+      "expected_output": "Raises the evidence that informal brand communication can backfire rather than accepting the brief uncritically. Should note the mismatch between a casual register and a high-consideration purchase made by a risk-averse buyer, argue register from audience and context rather than from fashion, and offer a defensible position on the scales instead of either extreme. Should not simply refuse the brief: if the client insists after the pushback, it follows the call and records it.",
+      "files": [],
+      "expectations": [
+        "Raises the finding that informal brand communication can backfire",
+        "Ties register to audience and purchase context rather than to trend",
+        "Proposes a specific defensible scale position rather than either extreme",
+        "Does not accept the casual brief uncritically",
+        "Would still proceed if the client insists, noting the decision"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "we're naming a new productized service for a client - an AI onboarding audit for mid-market SaaS. give me name candidates and confirm they're available so they can buy the domain and start printing.",
+      "expected_output": "Produces candidates using the naming evidence, particularly pronounceability, which is the most defensible single criterion, and sound symbolism. Critically, it must state plainly that whatever checking it did is NOT a trademark clearance, and must not say a name is 'available' on the basis of a web search. Should point at the real registries (USPTO or the relevant national registry) and advise clearing before any spend on domain, signage or print.",
+      "files": [],
+      "expectations": [
+        "Generates candidates with stated rationale, not just a list",
+        "Uses pronounceability and/or sound symbolism as explicit criteria",
+        "States explicitly that a search is not a trademark clearance",
+        "Does not declare any name 'available'",
+        "Points at a real trademark registry before the client spends money"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "client's asking what kind of recall lift they should expect from a good tagline, and whether a rhyming one performs better. what do I tell them?",
+      "expected_output": "Declines to give a recall lift figure, because no such number is supported. Should surface the one genuine tagline finding available: a brief pause between the tagline and the brand name increases brand name recognition. Should be honest that rhyme specifically is not covered, and should not extrapolate from the general sound-symbolism naming research to a rhyming-tagline claim, since those are different constructs.",
+      "files": [],
+      "expectations": [
+        "Refuses to supply a recall lift percentage",
+        "Surfaces the tagline-pause finding as the one solid piece of evidence",
+        "States that rhyme specifically is not covered by the evidence",
+        "Does not extrapolate naming sound-symbolism findings to taglines as if equivalent",
+        "Offers a practical way forward despite the evidence gap"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "here's the tone of voice section from our client's existing brand guide. audit it.\n\nTONE OF VOICE\nWe are warm, human and never corporate. We speak to our customers like a knowledgeable friend. We are confident but never arrogant. We use plain English and avoid jargon. Our tone flexes to suit the situation - more formal in professional contexts, more relaxed on social media.",
+      "expected_output": "Scores it as largely unusable despite reading well. Should identify that every line is an adjective pair that excludes nothing, that 'flexes to suit the situation' is not instruction, that there is no vocabulary list, no mechanics, and no rewrites, so no writer can act on it. Should apply the five-minute test: try to rewrite a paragraph using only this document and show where it forces a guess. Should produce a scorecard and rewrite the dimensions properly rather than only critiquing.",
+      "files": [],
+      "expectations": [
+        "Identifies that the adjective pairs exclude nothing",
+        "Flags 'flexes to suit the situation' as non-instruction",
+        "Notes the absence of vocabulary, mechanics and rewrites",
+        "Applies or describes an apply-it test to expose the holes",
+        "Rewrites the dimensions as scales rather than only critiquing"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "i ghostwrite linkedin posts for a client's founder and people can tell it isn't him. build me a voice guide that fixes it.",
+      "expected_output": "Recognises this as the founder variant, where the job is descriptive rather than prescriptive: capture how he already writes rather than install a new voice. Should ask for transcripts, voice notes, sent emails and his own past posts, in roughly that order of value, and prioritise unperformed speech over marketing copy. Should include a tells section covering the specific verbal habits that make it recognisably him, and warn that polishing those out is exactly what makes ghostwriting detectable. Should include positions he has publicly held so ghostwritten copy does not contradict him.",
+      "files": [],
+      "expectations": [
+        "Treats the task as descriptive capture rather than prescriptive design",
+        "Requests transcripts, voice notes or sent emails as primary source material",
+        "Includes a tells section of specific verbal habits",
+        "Warns that polishing removes the markers that make it sound like him",
+        "Includes publicly held positions to avoid contradicting him"
+      ]
+    }
+  ]
+}

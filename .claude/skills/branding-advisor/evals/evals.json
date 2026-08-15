@@ -1,0 +1,109 @@
+{
+  "skill_name": "branding-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "putting together a branding pitch deck. i want to open with the stat that color increases brand recognition by 80% and back it with the one about consistent branding increasing revenue by 23%. can you give me the sources for both so i can cite them properly on the slide?",
+      "expected_output": "Does not supply a clean academic citation for either figure, because neither has one. Should say plainly that the 80% color claim has no traceable primary study behind it and that the 23% consistency figure comes from a vendor survey rather than peer-reviewed research, and should not launder either into a fact by attributing it to a plausible-sounding journal. Should then offer what the evidence actually supports about color and consistency in branding, with real sources, so the slide can still be made. Should not invent a DOI, author name or study title.",
+      "files": [],
+      "expectations": [
+        "Does not present the 80% color figure as an established fact with a real citation",
+        "Identifies the 23% consistency figure as vendor-survey origin, not peer-reviewed",
+        "Does not fabricate a study title, author, journal or DOI for either claim",
+        "Offers substantiated alternatives with real sources rather than just refusing",
+        "Distinguishes peer-reviewed evidence from practitioner or vendor material"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "client is a 12-year-old regional HVAC company. new marketing director wants a full rebrand - new name, new logo, everything. owner is nervous. what do i tell them?",
+      "expected_output": "Gives a decision framework grounded in the rebranding evidence rather than a generic 'it depends'. Should distinguish a cosmetic identity refresh from a name change, note that name changes and identity changes carry measurable downside risk including loss of accumulated recognition, and that a 12-year-old regional business has brand assets worth auditing before discarding. Should ask what problem the rebrand is meant to solve, and flag that 'the new marketing director wants it' is not a diagnosis. Should route the actual audit work to brand-strategy and brand-visual rather than performing the whole engagement inline.",
+      "files": [],
+      "expectations": [
+        "Separates identity refresh from full rebrand including name change, with different risk levels",
+        "Cites evidence on rebranding downside risk rather than asserting it",
+        "Asks what problem the rebrand is meant to solve before recommending",
+        "Flags the accumulated recognition a 12-year-old business would be discarding",
+        "Routes execution to the spoke skills instead of doing the full engagement inline"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "explain brand archetypes to me. i want to use the 12 jungian archetypes as the backbone of a client deliverable and i want to know if that's defensible if they push back",
+      "expected_output": "Separates two things a baseline answer usually merges: Jennifer Aaker's brand personality scale, which is a real psychometric instrument with published dimensions and replication history, and the 12 Jungian brand archetypes, which are a practitioner framework with no comparable empirical basis. Should say the archetype system is usable as an alignment and creative-direction device but must not be presented to a client as evidence-based. Should be specific about what the cross-cultural replication picture for the personality scale looks like rather than asserting it holds universally.",
+      "files": [],
+      "expectations": [
+        "Distinguishes Aaker's brand personality scale from Jungian archetypes as different kinds of claim",
+        "States that the 12-archetype system lacks an empirical basis",
+        "Still allows archetypes as a creative or alignment tool rather than dismissing them",
+        "Notes limits or cross-cultural issues with the brand personality scale rather than overselling it",
+        "Labels which parts are practitioner convention and which are researched"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "byron sharp says differentiation is basically a myth and you should chase distinctiveness and mental availability instead. but every positioning book i've read says differentiation is the whole game. which one is actually right? i need to pick one for how we advise clients.",
+      "expected_output": "Does not resolve the disagreement to make the answer tidier. Should present both positions with their evidence bases, note that the Ehrenberg-Bass empirical generalizations are genuine findings rather than opinion, note that differentiation also has supporting evidence, and explain the conditions under which each matters. Should point out the two are less mutually exclusive than the framing implies: distinctive assets are about recognition and retrieval, differentiation is about the reason to choose. Should say what this means practically for advising a small client versus a large one, and flag any critiques of the Ehrenberg-Bass position rather than presenting it as settled.",
+      "files": [],
+      "expectations": [
+        "Presents both positions with evidence rather than declaring a winner",
+        "Notes the Ehrenberg-Bass work is empirical, not merely a contrarian opinion",
+        "Explains distinctiveness and differentiation answer different questions",
+        "Includes at least one critique or limit of the Ehrenberg-Bass position",
+        "Translates the tension into practical advice for a client engagement"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "small client, maybe 400k revenue, no research budget at all. they want to know if their branding is 'working'. what can i actually measure for them and what should i tell them is off the table?",
+      "expected_output": "Distinguishes brand awareness from brand salience and explains why the difference matters for what gets measured. Should be concrete about what a business this size can genuinely do - share of search, direct and branded search volume, unaided recall via a small customer survey with stated sample limitations, repeat and referral rates - and explicit that formal brand tracking studies, brand valuation and statistically reliable awareness percentages are not achievable on no budget. Should refuse to supply benchmark figures for what a good awareness percentage looks like in their category unless it has a source. Should warn that a small-sample survey produces a directional signal, not a percentage to put in a report.",
+      "files": [],
+      "expectations": [
+        "Distinguishes brand awareness from brand salience",
+        "Names specific low-cost measures available to a business this size",
+        "States explicitly what is not measurable on no budget",
+        "Does not invent category benchmark percentages for brand awareness",
+        "Warns that small-sample results are directional rather than reportable percentages"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "client keeps telling me their brand 'feels inconsistent' but they can't tell me what they actually mean. their site, their instagram and their proposals all look different. where do i even start?",
+      "expected_output": "Treats this as a diagnosis problem rather than jumping to a logo redesign. Should separate the possible causes: no documented visual system, no documented voice, a documented system nobody follows, or a genuine strategy problem where the brand has no settled position to be consistent about. Should give a concrete way to tell these apart by looking at the three surfaces named. Should then route to the right place - brand-visual for the visual system, brand-voice for the language, brand-strategy if the underlying position is the problem - rather than doing all three inline. Should note that guidelines existing and guidelines being followed are different failures with different fixes.",
+      "files": [],
+      "expectations": [
+        "Diagnoses causes rather than immediately proposing a redesign",
+        "Distinguishes missing system from unfollowed system from missing strategy",
+        "Gives a concrete method to tell the causes apart using the surfaces named",
+        "Routes to the correct spoke skill for each cause",
+        "Does not produce the full deliverable inline"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "how much does a logo actually matter? client wants to spend 8k on a logo and i genuinely don't know if i should talk them out of it or not.",
+      "expected_output": "Gives an evidence-based answer rather than either 'logos are everything' or 'logos don't matter'. Should reference what the logo research actually establishes about design characteristics and recognition, note the evidence on redesign risk, and be honest that the link from logo to business outcomes is weaker than agencies claim and stronger than pure cynicism allows. Should reframe the spend question: what matters is whether they have a settled brand position for the logo to express, and whether 8k buys a system or a single mark. Should not invent an ROI figure for logo investment.",
+      "files": [],
+      "expectations": [
+        "Cites what logo research actually establishes rather than asserting importance",
+        "Does not invent an ROI or revenue figure for logo investment",
+        "Notes redesign or recognition risk as part of the answer",
+        "Reframes toward whether a brand position exists for the logo to express",
+        "Distinguishes buying a single mark from buying an identity system"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "what's the difference between brand identity, brand image, brand equity and brand reputation? i've been using them interchangeably on client calls and i want to stop.",
+      "expected_output": "Gives clean, non-overlapping definitions anchored to where each term comes from: identity as what the company projects, image as what the customer actually perceives, equity as the commercial value of that perception, reputation as the accumulated judgment across stakeholders. Should name the models these come from and be honest about which have empirical support and which are consultant scaffolding. Should point out the gap between identity and image is itself the thing most brand work is trying to close, which is the practically useful part. Should not present Kapferer's prism or Keller's pyramid as validated instruments if the evidence does not support that.",
+      "files": [],
+      "expectations": [
+        "Gives distinct non-overlapping definitions for all four terms",
+        "Attributes the terms to their source models",
+        "Distinguishes which models have empirical support from which are practitioner scaffolding",
+        "Identifies the identity-versus-image gap as the practical point",
+        "Does not overstate the validation status of the named frameworks"
+      ]
+    }
+  ]
+}

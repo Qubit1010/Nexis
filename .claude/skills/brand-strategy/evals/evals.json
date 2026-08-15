@@ -1,0 +1,86 @@
+{
+  "skill_name": "brand-strategy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "new client, Meridian Facilities - commercial cleaning, 14 staff, Leeds. they want a brand strategy. no existing brand doc, no strategic foundation, just their website meridianfacilities.co.uk. build it.",
+      "expected_output": "Resolves the site first rather than writing from assumption. Flags that no 07-strategic-foundation.md exists and either recommends running strategic-foundation or proceeds with a working position explicitly labelled as an assumption. Runs category research and the five-site test. Batches questions into one round of 2-4, and the questions asked are ones that cannot be inferred (which customers they do not want, what they refuse to do) rather than 'what are your values'. Produces the document with a real 'what this rules out' section. Does not produce three positive adjectives as the personality.",
+      "files": [],
+      "expectations": [
+        "Resolves the website before writing rather than inventing a company",
+        "Explicitly flags the missing strategic foundation and offers to run it or labels the position an assumption",
+        "Runs competitor/category research rather than positioning in a vacuum",
+        "Asks 2-4 batched questions that are genuinely non-inferable",
+        "Produces a populated 'what this rules out' section",
+        "Personality traits carry behavioural definitions, not bare adjectives"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "i want to use the 12 jungian brand archetypes as the spine of this client's brand strategy. they're a premium dental practice. give me the archetype and build the personality section off it.",
+      "expected_output": "Uses archetypes as requested but labels them explicitly as a creative alignment device with no empirical basis, and does not present them to the client as research-backed. Distinguishes them from Aaker's brand personality scale, which is genuinely peer-reviewed, rather than blurring the two to borrow credibility. Still produces a usable personality section with behavioural definitions rather than stopping at the archetype label.",
+      "files": [],
+      "expectations": [
+        "Delivers the archetype work rather than refusing",
+        "States the 12-archetype system has no empirical basis",
+        "Distinguishes archetypes from Aaker's brand personality scale",
+        "Does not claim archetypes are validated or research-backed",
+        "Produces behavioural trait definitions, not just an archetype name"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "client says their brand feels completely generic, they're indistinguishable from every competitor. it's an architecture firm. what do you actually do about it?",
+      "expected_output": "Diagnoses before prescribing. Should run or describe the five-site test (competitor homepages with logos covered) as a concrete first step. Should separate the possibilities: no position at all, a position that exists but is never articulated, or a position that is articulated but has no distinctive assets carrying it. Should raise distinctiveness versus differentiation and note that for a smaller firm the recognition deficit usually bites before the differentiation one, without presenting that as a settled law. Should not jump to a visual refresh.",
+      "files": [],
+      "expectations": [
+        "Proposes a concrete diagnostic (five-site test or equivalent) before recommending",
+        "Separates no-position from unarticulated-position from no-distinctive-assets",
+        "Raises distinctiveness vs differentiation without flattening the disagreement",
+        "Does not jump straight to a logo or visual redesign",
+        "Routes visual and voice execution to the sibling skills rather than doing everything inline"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "here's the brand platform our client's previous agency produced. audit it.\n\nBRAND PLATFORM - NORTHWIND LOGISTICS\nPurpose: To deliver excellence in logistics.\nVision: To be the most trusted logistics partner in the region.\nValues: Integrity. Innovation. Teamwork. Customer focus.\nPersonality: Professional, reliable, friendly, forward-thinking.\nPositioning: Northwind Logistics is the leading provider of integrated logistics solutions for businesses that demand quality and reliability.\nPromise: We go the extra mile.",
+      "expected_output": "Scores it harshly and specifically rather than politely. Should identify that the positioning is a category description that any competitor could sign, the values are the canonical interchangeable set with no trade-offs, the personality traits all fail the opposite test, the promise is a cliche with no mechanism, and there are no exclusions anywhere. Should produce a Strong/Workable/Weak/Missing scorecard where most rows are Weak or Missing, and should rewrite the highest-leverage pieces rather than only describing what better would look like.",
+      "files": [],
+      "expectations": [
+        "Produces a scorecard with most rows Weak or Missing rather than softening",
+        "Identifies the positioning as a category description a competitor could also sign",
+        "Applies the opposite test to the personality traits",
+        "Notes the values carry no trade-offs",
+        "Flags the complete absence of exclusions",
+        "Rewrites at least the highest-leverage sections rather than only critiquing"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "our client's CEO wants to build her personal brand alongside the company. she runs a 30-person recruitment firm. what does the founder brand strategy look like and what does the research say about whether this actually works?",
+      "expected_output": "Produces the founder brand work but is honest that this is the weakest-evidenced area: one confirmed source on CEO visibility in the corpus. Uses the founder-story-to-authenticity finding, which is real, as the anchor. Raises key-person concentration risk and explicitly labels it a reasoned argument rather than a research finding. Includes the separation section covering what is shared with the company brand and what happens if she steps back. Routes content pillars and posting cadence to marketing-advisor and content-engine rather than producing a posting schedule.",
+      "files": [],
+      "expectations": [
+        "States plainly that the founder-brand evidence base is thin",
+        "Uses the founder-story authenticity finding as the evidenced anchor",
+        "Raises key-person concentration risk and labels it reasoning, not research",
+        "Includes separation between founder brand and company brand",
+        "Routes content pillars/cadence to marketing-advisor or content-engine",
+        "Does not produce a posting schedule as the deliverable"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "we already did the strategic foundation for rw-winship last month. now do the brand layer on top.",
+      "expected_output": "Reads client-projects/rw-winship/07-strategic-foundation.md and 08-audience-persona.md before writing anything, and takes the positioning and target customer from them rather than re-deriving. If the brand work suggests a different position, names the conflict explicitly and says which was changed and why rather than silently diverging. Does not duplicate market sizing, ICP or competitor analysis, which belong to the upstream document.",
+      "files": [],
+      "expectations": [
+        "Reads the existing 07 and 08 files before producing anything",
+        "Takes positioning from the strategic foundation rather than re-deriving it",
+        "Does not duplicate market sizing or ICP work",
+        "If it diverges from the foundation, names the conflict explicitly",
+        "Writes to 13-brand-strategy.md in the existing client-projects folder"
+      ]
+    }
+  ]
+}

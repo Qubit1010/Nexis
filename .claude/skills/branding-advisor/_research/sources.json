@@ -1,0 +1,3403 @@
+{
+  "generated_at": "2026-08-14",
+  "method": "14 deep passes via the in-repo research skill (Exa+Tavily+Serper+Jina fused, content-extracted), deduped by normalized URL, junk-filtered, per-domain capped, tiered confirmed vs practitioner",
+  "note": "inline [sN] in references/research-synthesis.md resolves to sources[N-1]",
+  "total_found": 303,
+  "source_count": 260,
+  "confirmed": 132,
+  "practitioner": 128,
+  "sources": [
+    {
+      "index": 1,
+      "title": "Evidence concerning the Importance of Perceived Brand Differentiation",
+      "url": "https://journals.sagepub.com/doi/10.1016/S1441-3582%2807%2970042-3",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency",
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 2,
+      "title": "The Natural Monopoly Effect in Brand Image Associations",
+      "url": "https://journals.sagepub.com/doi/10.1016/j.ausmj.2017.11.003",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency",
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 3,
+      "title": "Brand and Advertising Awareness: A Replication and Extension of a Known Empirical Generalisation",
+      "url": "https://journals.sagepub.com/doi/10.1016/S1441-3582%2804%2970107-X",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency",
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 4,
+      "title": "The name's the game: Does marketing impact the value of corporate name changes?",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296314002380",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk",
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 5,
+      "title": "Celebrity CEOs and firm innovation investment - PMC - NIH",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9719994/",
+      "tier": "confirmed",
+      "topics": [
+        "q15_founder_ceo_reputation_evidence"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 6,
+      "title": "Frontiers | When “I” or “S/He” uses the product: the impact of narrative perspective on consumers’ brand attitudes in storytelling ads",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1338249/full",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": "2024-07-12T00:00:00.000Z"
+    },
+    {
+      "index": 7,
+      "title": "Differentiation versus distinctiveness |",
+      "url": "https://marketingscience.info/news-and-insights/differentiation-versus-distinctiveness",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 8,
+      "title": "Professor Jenni Romaniuk |",
+      "url": "https://marketingscience.info/staff/professor-jenni-romaniuk",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 9,
+      "title": "How has the effect of brand personality on customer-based brand equity changed over time? Longitudinal evidence from a panel data set spanning 18 years - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9375090",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 10,
+      "title": "Frontiers | Design and validation of the brand personality scale in food industries",
+      "url": "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1600664/full",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 11,
+      "title": "The Shape of a Logo Has a Powerful Impact on Consumers – Association for Psychological Science – APS",
+      "url": "https://www.psychologicalscience.org/news/minds-business/the-shape-of-a-logo-has-a-powerful-impact-on-consumers120911.html",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 12,
+      "title": "How do you measure 'How Brands Grow'? |",
+      "url": "https://marketingscience.info/news-and-insights/how-do-you-measure-how-brands-grow",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 13,
+      "title": "Color and psychological functioning: a review of theoretical and empirical work",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4383146",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 14,
+      "title": "Dimensions of Language in Marketing-Effective Brands: A Lexicogrammatical Exploration",
+      "url": "https://www.mdpi.com/2076-3387/15/12/492",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 15,
+      "title": "Neuroscientific Analysis of Logo Design: Implications for Luxury Brand Marketing",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12024241",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 16,
+      "title": "Understanding the effect of brand identity driven by consumer ...",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9521331",
+      "tier": "confirmed",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 17,
+      "title": "Improving Design System Adoption with Inner Source",
+      "url": "https://doi.org/10.1145/3706599.3706705",
+      "tier": "confirmed",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-04-23T00:00:00.000Z"
+    },
+    {
+      "index": 18,
+      "title": "Understanding and supporting the design systems practice | Empirical Software Engineering",
+      "url": "https://dl.acm.org/doi/10.1007/s10664-022-10181-y",
+      "tier": "confirmed",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 19,
+      "title": "The Role of Style Tokens in Modern Design Systems: Ensuring Consistency and Flexibility",
+      "url": "https://doi.org/10.52783/jisem.v10i30s.4770",
+      "tier": "confirmed",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-03-31T00:00:00.000Z"
+    },
+    {
+      "index": 20,
+      "title": "Exploring Current Understandings of ‘Design Systems’: Toward a Conceptual Framework",
+      "url": "https://doi.org/10.21606/drs.2026.1307",
+      "tier": "confirmed",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-02T00:00:00.000Z"
+    },
+    {
+      "index": 21,
+      "title": "Scaling UX with design systems",
+      "url": "https://dl.acm.org/doi/10.1145/3352681",
+      "tier": "confirmed",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 22,
+      "title": "Brand experience manual: bridging the gap between brand strategy and customer experience | Review of Managerial Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11846-020-00399-9",
+      "tier": "confirmed",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-06-16T00:00:00.000Z"
+    },
+    {
+      "index": 23,
+      "title": "Assessing branding strength: comparing marketer judgement and consumer data for brand identity elements",
+      "url": "https://doi.org/10.1057/s41262-025-00395-y",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-06-07T00:00:00.000Z"
+    },
+    {
+      "index": 24,
+      "title": "The Double Jeopardy Law as a Nes Challenge to Marketing Communication",
+      "url": "https://doi.org/10.34135/mmidentity-2025-63",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-12-19T00:00:00.000Z"
+    },
+    {
+      "index": 25,
+      "title": "Three laws of branding: Neuroscientific foundations of effective brand building | Journal of Brand Management | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1057/palgrave.bm.2550139",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2007-12-28T00:00:00.000Z"
+    },
+    {
+      "index": 26,
+      "title": "Competition for memory retrieval between private label and national brands - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S014829630900277X",
+      "tier": "confirmed",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 27,
+      "title": "What’s in a name? What leads a firm to change its name and what the new name foreshadows - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0378426609003264",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 28,
+      "title": "Consumer reaction to service rebranding",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0969698914000927",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 29,
+      "title": "Identity Concerns or Functional Concerns? High vs Low Identifiers Reaction to Brand Identity Change | Corporate Reputation Review | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1057/crr.2011.26",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2012-02-14T00:00:00.000Z"
+    },
+    {
+      "index": 30,
+      "title": "The effects of corporate name changes on firm information environment and earnings management",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1057521921001812",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 31,
+      "title": "Consumer responses to rebranding to address racism | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0280873",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-02-08T00:00:00.000Z"
+    },
+    {
+      "index": 32,
+      "title": "Preservation, rejuvenation, or confusion? Changing package designs for heritage brands",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mar.21215",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 33,
+      "title": "Corporate Rebranding and the Implications for Brand Architecture Management: The Case of Guinness (Diageo) Ireland: Journal of Strategic Marketing: Vol 16, No 4",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/09652540802264124",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 34,
+      "title": "Investigating nexus between corporate re-branding and stock market performance: a study of Indian service sector",
+      "url": "https://doi.org/10.1108/mf-05-2023-0275",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-01-11T00:00:00.000Z"
+    },
+    {
+      "index": 35,
+      "title": "Goodbye Aunt Jemima: Consumer Preferences for Pancake Mix Following Rebranding",
+      "url": "https://doi.org/10.1017/aae.2024.25",
+      "tier": "confirmed",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-08-01T00:00:00.000Z"
+    },
+    {
+      "index": 36,
+      "title": "Consumer-Based Brand Equity Conceptualisation and Measurement:  A Literature Review",
+      "url": "https://journals.sagepub.com/doi/10.2501/S1470785310201053",
+      "tier": "confirmed",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 37,
+      "title": "Assessment of Brand Equity Measures",
+      "url": "https://journals.sagepub.com/doi/10.2501/IJMR-2014-037",
+      "tier": "confirmed",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 38,
+      "title": "The International Brand Valuation Manual: A Complete Overview and Analysis of Brand Valuation Techniques, Methodologies and Applications",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119206408.ch6",
+      "tier": "confirmed",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 39,
+      "title": "What is Brand Equity Anyway, and how do you Measure it?",
+      "url": "https://journals.sagepub.com/doi/10.1177/147078539603800201",
+      "tier": "confirmed",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 40,
+      "title": "Disentangling the Dynamics of Brand Awareness: Sources and Effects on Brand Equity and Market Performance",
+      "url": "https://doi.org/10.31124/advance.172968154.44889489/v1",
+      "tier": "confirmed",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-10-23T00:00:00.000Z"
+    },
+    {
+      "index": 41,
+      "title": "Revenue Premium as an Outcome Measure of Brand Equity",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmkg.67.4.1.18688",
+      "tier": "confirmed",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 42,
+      "title": "Brand Attitudes and Search Engine Queries",
+      "url": "https://journals.sagepub.com/doi/abs/10.1016/j.intmar.2016.10.002?journalCode=jnma",
+      "tier": "confirmed",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 43,
+      "title": "Salience Effects in Brand Recall",
+      "url": "https://doi.org/10.1177/002224378602300406",
+      "tier": "confirmed",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "1986-11-01T00:00:00.000Z"
+    },
+    {
+      "index": 44,
+      "title": "Managing Corporate Visual Identity: Exploring the Differences Between Manufacturing and Service, and Profit-Making and Nonprofit Organizations",
+      "url": "https://doi.org/10.1177/0021943605285476",
+      "tier": "confirmed",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2006-04-01T00:00:00.000Z"
+    },
+    {
+      "index": 45,
+      "title": "Corporate identity management and employees’ responses",
+      "url": "https://doi.org/10.1080/0965254x.2015.1076876",
+      "tier": "confirmed",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-08-28T00:00:00.000Z"
+    },
+    {
+      "index": 46,
+      "title": "Corporate visual identity: exploring the dogma of consistency",
+      "url": "https://doi.org/10.1108/ccij-10-2017-0088",
+      "tier": "confirmed",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-05-23T00:00:00.000Z"
+    },
+    {
+      "index": 47,
+      "title": "The Saliency of Olins' Visual Identity Structure in Relation to UK Companies Operating in Malaysia | Corporate Reputation Review | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1057/palgrave.crr.1540114",
+      "tier": "confirmed",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2000-07-01T00:00:00.000Z"
+    },
+    {
+      "index": 48,
+      "title": "Internal Perspectives on Visual Identities in Higher Education: A Case Study of Top-Ranked Universities in Indonesia",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11729185/",
+      "tier": "confirmed",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 49,
+      "title": "The Face of the Brand: How Art Directors Understand Visual Brand Identity: Journal of Advertising: Vol 43, No 4",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00913367.2013.867824",
+      "tier": "confirmed",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 50,
+      "title": "Managing brand identity: effects on the employees",
+      "url": "https://doi.org/10.1108/ijbm-10-2015-0148",
+      "tier": "confirmed",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2017-01-16T00:00:00.000Z"
+    },
+    {
+      "index": 51,
+      "title": "The Effect of Brand Attitude and Brand Image on Brand Equity",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/10696679.2001.11501897",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 52,
+      "title": "Developing and validating a multidimensional consumer-based brand equity scale",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296399000983",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 53,
+      "title": "Marketing Images:  Construct Definition, Measurement Issues, and Theory Development",
+      "url": "https://journals.sagepub.com/doi/10.1177/147059310100100203",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 54,
+      "title": "Corporate Reputation:  Focusing the Zeitgeist",
+      "url": "https://journals.sagepub.com/doi/10.1177/0007650302238777",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 55,
+      "title": "The Impact of Brand Equity on Customer Acquisition, Retention, and Profit Margin",
+      "url": "https://journals.sagepub.com/doi/10.1509/jm.10.0522",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 56,
+      "title": "Validation of a Fashion Brand Image Scale Capturing Cognitive, Sensory, and Affective Associations: Testing Its Role in an Extended Brand Equity Model",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mar.20762",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 57,
+      "title": "A Social Actor Conception of Organizational Identity and Its Implications for the Study of Organizational Reputation",
+      "url": "https://journals.sagepub.com/doi/10.1177/0007650302238775",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 58,
+      "title": "The Reality of Brands:",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1536-7150.1998.tb03475.x",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 59,
+      "title": "Creating Brand Meaning: A Review and Research Agenda",
+      "url": "https://myscp.onlinelibrary.wiley.com/doi/10.1002/jcpy.1122",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 60,
+      "title": "Taking Up the Challenge of Corporate Branding: An Integrative Framework",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/emre.12010",
+      "tier": "confirmed",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 61,
+      "title": "Evaluating the effectiveness of brand‐positioning strategies from a consumer perspective",
+      "url": "https://doi.org/10.1108/03090561011079873",
+      "tier": "confirmed",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2010-11-06T00:00:00.000Z"
+    },
+    {
+      "index": 62,
+      "title": "Customer‐Perceived Positioning Effectiveness: Conceptualization, Operationalization, and Implications for New Product Managers",
+      "url": "https://doi.org/10.1111/j.1540-5885.2011.00892.x",
+      "tier": "confirmed",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2012-01-20T00:00:00.000Z"
+    },
+    {
+      "index": 63,
+      "title": "Positioning options for achieving brand association: a psychological categorization framework",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S014829630000165X",
+      "tier": "confirmed",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 64,
+      "title": "The Antecedents and Consequences of Effective Brand Positioning",
+      "url": "https://doi.org/10.15830/amj.2015.17.3.33",
+      "tier": "confirmed",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-10-31T00:00:00.000Z"
+    },
+    {
+      "index": 65,
+      "title": "Determining a Firm’s Linear Market Position: In Search of an Effective Methodology",
+      "url": "https://journals.sagepub.com/doi/10.1177/109634800102500204",
+      "tier": "confirmed",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 66,
+      "title": "A decision support model for selecting product/service benefit positionings - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0377221701002831",
+      "tier": "confirmed",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2002-10-01T00:00:00.000Z"
+    },
+    {
+      "index": 67,
+      "title": "Product Design Strategies for Target-Market Positioning",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1540-5885.830189",
+      "tier": "confirmed",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 68,
+      "title": "Wiley International Encyclopedia of Marketing",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781444316568.wiem01049",
+      "tier": "confirmed",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 69,
+      "title": "Dimensions of Brand Personality",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/002224379703400304",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 70,
+      "title": "Moderators of the self-congruity effect on consumer decision-making: A meta-analysis ☆",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296311002670",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 71,
+      "title": "Emotional Brand Attachment and Brand Personality: The Relative Importance of the Actual and the Ideal Self",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmkg.75.4.35",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 72,
+      "title": "Brand personality: Current insights and future research directions",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0148296323004204",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 73,
+      "title": "Brand Personality Structures in the United States and Korea: Common and Culture-Specific Factors",
+      "url": "https://myscp.onlinelibrary.wiley.com/doi/10.1207/s15327663jcp1504_8",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 74,
+      "title": "Humanizing brands: When brands seem to be like me, part of me, and in a relationship with me",
+      "url": "https://myscp.onlinelibrary.wiley.com/doi/10.1016/j.jcps.2016.12.003",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 75,
+      "title": "A Conceptual and Measurement Comparison of Self-Congruity and Brand Personality:  The Impact of Socially Desirable Responding",
+      "url": "https://journals.sagepub.com/doi/10.1177/147078530404600201",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 76,
+      "title": "Advertising between Archetype and Brand Personality",
+      "url": "https://mdpi.com/2076-3387/6/2/5",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 77,
+      "title": "Rethinking Archetypal Branding: Investigating the Effects of Authenticity and Flawed Archetypes on Brand Attachment, Self-Congruence and Purchase Intent",
+      "url": "https://doi.org/10.17615/tzx2-mc49",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-08-21T00:00:00.000Z"
+    },
+    {
+      "index": 78,
+      "title": "Cultural Factors That Impact Brand Personification Strategy Effectiveness",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mar.20676",
+      "tier": "confirmed",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 79,
+      "title": "“Don't pretend to be my friend!” When an informal brand communication style backfires on social media",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296317300255",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 80,
+      "title": "Brand language on social media: a systematic literature review | Italian Journal of Marketing | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s43039-026-00131-7",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-12T00:00:00.000Z"
+    },
+    {
+      "index": 81,
+      "title": "“Don't Forget that Others Are Watching, Too!” The Effect of Conversational Human Voice and Reply Length on Observers’ Perceptions of Complaint Handling in Social Media",
+      "url": "https://journals.sagepub.com/doi/10.1016/j.intmar.2020.02.002",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 82,
+      "title": "Brand linguistics: A theory-driven framework for the study of language in branding ☆",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167811617300058",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 83,
+      "title": "Understanding consumer engagement with brand posts on social media: The effects of post linguistic styles",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1567422321000405",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 84,
+      "title": "Do Organizational Personification and Personality Matter? The Effect of Interaction and Conversational Tone on Relationship Quality in Social Media",
+      "url": "https://journals.sagepub.com/doi/10.1177/2329488418796631",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 85,
+      "title": "Brand conversation: Linguistic practices on social media in the light of face-work theory",
+      "url": "https://journals.sagepub.com/doi/10.1177/2051570720974511",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 86,
+      "title": "Move structure and communication style of leaders’ messages in corporate discourse: A cross-cultural perspective",
+      "url": "https://journals.sagepub.com/doi/10.1177/1750481317697860",
+      "tier": "confirmed",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 87,
+      "title": "Verbal persuasion in marketing: A multimethod meta-analysis of analytical and narrative processing | Journal of the Academy of Marketing Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11747-025-01095-4",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-03-20T00:00:00.000Z"
+    },
+    {
+      "index": 88,
+      "title": "Storytelling in the digital era: A meta-analysis of relevant moderators of the narrative transportation effect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296318305356",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 89,
+      "title": "Impact of narrative versus factual print ad copy on product evaluation: The mediating role of ad message involvement",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mar.20172",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 90,
+      "title": "The Role of Narratives in the Advertising of Experiential Services",
+      "url": "https://journals.sagepub.com/doi/10.1177/109467050031003",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 91,
+      "title": "It's about our values: How founder's stories influence brand authenticity",
+      "url": "https://doi.org/10.1002/mar.21252",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-07-29T00:00:00.000Z"
+    },
+    {
+      "index": 92,
+      "title": "Narrative transportation: A systematic literature review and future research agenda",
+      "url": "https://doi.org/10.1002/mar.22011",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-05-04T00:00:00.000Z"
+    },
+    {
+      "index": 93,
+      "title": "Predicting the Relationships Between Narrative Transportation, Consumer Brand Experience, Love and Loyalty in Video Storytelling Advertising",
+      "url": "https://journals.sagepub.com/doi/10.1177/0973258620984262",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 94,
+      "title": "The persuasive effectiveness of mini-films: Narrative transportation and fantasy proneness",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/cb.1494",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 95,
+      "title": "Full Length Article Narrative persuasion by corporate CSR messages: The impact of narrative richness on attitudes and behavioral intentions  via  character identification, transportation, and message credibility",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0363811121001004",
+      "tier": "confirmed",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 96,
+      "title": "The effect of brand names and logos’ figurativeness on memory: An experimental approach - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0148296323003028",
+      "tier": "confirmed",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 97,
+      "title": "A Brief Pause between a Tagline and Brand Increases Brand Name Recognition and Preference",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/acp.1797",
+      "tier": "confirmed",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 98,
+      "title": "Company name fluency, investor recognition, and firm value ☆",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0304405X13001141",
+      "tier": "confirmed",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 99,
+      "title": "Is this product easy to control? Liabilities of using difficult-to-pronounce product names",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0749597821000480",
+      "tier": "confirmed",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 100,
+      "title": "The connotative meanings of sound symbolism in brand names: A conceptual framework",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296322005458",
+      "tier": "confirmed",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 101,
+      "title": "Creating Meaningful New Brand Names: A Study of Semantics and Sound Symbolism",
+      "url": "https://doi.org/10.1080/10696679.2001.11501889",
+      "tier": "confirmed",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2001-04-01T00:00:00.000Z"
+    },
+    {
+      "index": 102,
+      "title": "Frontiers | What's in and what's out in branding? A novel articulation effect for brand names",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00585/full",
+      "tier": "confirmed",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-05-13T00:00:00.000Z"
+    },
+    {
+      "index": 103,
+      "title": "Does brand spelling influence memory? The case of auditorily presented brand names",
+      "url": "https://myscp.onlinelibrary.wiley.com/doi/10.1016/j.jcps.2012.02.003",
+      "tier": "confirmed",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 104,
+      "title": "The interactive effects of colors and products on perceptions of brand logo appropriateness",
+      "url": "https://journals.sagepub.com/doi/10.1177/1470593106061263",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 105,
+      "title": "Are You Selling the Right Colour? A Cross‐cultural Review of Colour as a Marketing Cue",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/13527260500247827",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 106,
+      "title": "Color research in marketing: Theoretical and technical considerations for conducting rigorous and impactful color research",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mar.21359",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 107,
+      "title": "Exciting red and competent blue: the importance of color in marketing",
+      "url": "https://doi.org/10.1007/s11747-010-0245-y",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2011-01-27T00:00:00.000Z"
+    },
+    {
+      "index": 108,
+      "title": "Color Preference and Familiarity in Performance on Brand Logo Recall",
+      "url": "https://journals.sagepub.com/doi/10.2466/pms.107.2.587-596",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 109,
+      "title": "Blue or Red? Exploring the Effect of Color on Cognitive Task Performances | Science",
+      "url": "https://www.science.org/doi/10.1126/science.1169144",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 110,
+      "title": "The Marketers’ Prismatic Palette: A Review of Color Research and Future Directions",
+      "url": "https://doi.org/10.1002/mar.20597",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2013-01-10T00:00:00.000Z"
+    },
+    {
+      "index": 111,
+      "title": "Color in Context: Psychological Context Moderates the Influence of Red on Approach- and Avoidance-Motivated Behavior | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0040333",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2012-07-11T00:00:00.000Z"
+    },
+    {
+      "index": 112,
+      "title": "One color fits all: product category color norms and (a)typical package colors | Review of Managerial Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11846-018-0325-9",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-01-03T00:00:00.000Z"
+    },
+    {
+      "index": 113,
+      "title": "Trustworthy Blue or Untrustworthy Red: The Influence of Colors on Trust",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/10696679.2019.1616560",
+      "tier": "confirmed",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 114,
+      "title": "All Dressed Up With Something to Say: Effects of Typeface Semantic Associations on Brand Perceptions and Consumer Memory",
+      "url": "https://myscp.onlinelibrary.wiley.com/doi/10.1207/S15327663JCP1202_03",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 115,
+      "title": "Impression Management using Typeface Design",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmkg.68.4.60.42736",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 116,
+      "title": "Serif or sans serif typefaces? The effects of typefaces on consumers’ perceptions of activity and potency of brand logos",
+      "url": "https://doi.org/10.1108/ejm-06-2023-0497",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-03-12T00:00:00.000Z"
+    },
+    {
+      "index": 117,
+      "title": "Effects of typographic factors in advertising-based persuasion: A general model and initial empirical tests",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mar.10030",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 118,
+      "title": "The massage in the medium: Transfer of connotative meaning from typeface to names and products",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/acp.1468",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 119,
+      "title": "Towards a standardisation of reading charts: Font effects on reading performance—Times New Roman with serifs versus the sans serif font Helvetica | Ophthalmic and Physiological Optics | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1111/opo.13039",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-08-16T00:00:00.000Z"
+    },
+    {
+      "index": 120,
+      "title": "Serifs and font legibility - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4612630/",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 121,
+      "title": "Visual word identification beyond common words: The role of font and letter case in brand names | Memory & Cognition | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.3758/s13421-024-01570-3",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-05-09T00:00:00.000Z"
+    },
+    {
+      "index": 122,
+      "title": "The Effect of Typeface on the Perception of Onscreen Documents",
+      "url": "https://journals.sagepub.com/doi/10.1177/154193120705100508",
+      "tier": "confirmed",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 123,
+      "title": "Guidelines for Selecting or Modifying Logos",
+      "url": "https://doi.org/10.1177/002224299806200202",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "1998-04-01T00:00:00.000Z"
+    },
+    {
+      "index": 124,
+      "title": "Let the Logo Do the Talking: The Influence of Logo Descriptiveness on Brand Equity",
+      "url": "https://journals.sagepub.com/doi/10.1177/0022243719845000",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 125,
+      "title": "Logo design in marketing communications: Brand logo complexity moderates exposure effects on brand recognition and brand attitude: Journal of Marketing Communications: Vol 22, No 3",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/13527266.2013.866593",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 126,
+      "title": "How re‐designing angular logos to be rounded shapes brand attitude: consumer brand commitment and self‐construal",
+      "url": "https://doi.org/10.1108/07363761111165958",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2011-09-13T00:00:00.000Z"
+    },
+    {
+      "index": 127,
+      "title": "Breaking Through Complexity: Visual and Conceptual Dimensions in Logo Evaluation across Exposures",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mar.20741",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 128,
+      "title": "A CHANGE WILL DO YOU GOOD: PARADOXICAL EFFECTS OF HIGHER DEGREES OF LOGO CHANGE ON LOGO RECOGNITION, LOGO APPRECIATION, CORE VALUES FIT, AND BRAND ATTITUDES",
+      "url": "https://doi.org/10.13140/rg.2.1.1860.0804",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 129,
+      "title": "The Visual Asymmetry Effect: An Interplay of Logo Design and Brand Personality on Brand Equity",
+      "url": "https://journals.sagepub.com/doi/10.1177/0022243718820548",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 130,
+      "title": "The role of brand logos in firm performance",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296312002068",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 131,
+      "title": "An evaluation for rebranding: the impact of logo change on brand attitude and brand loyalty",
+      "url": "https://doi.org/10.17261/pressacademia.2021.1384",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-03-29T00:00:00.000Z"
+    },
+    {
+      "index": 132,
+      "title": "Brand Strategy And Business Performance: How Does Logo Changes Affect Sales And Stock Prices?",
+      "url": "https://doi.org/10.56734/ijbms.v5n10a5",
+      "tier": "confirmed",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-10-12T00:00:00.000Z"
+    },
+    {
+      "index": 133,
+      "title": "Effects of Brand Visual Identity on Consumer Attitude",
+      "url": "https://www.preprints.org/manuscript/202405.1109",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management",
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 134,
+      "title": "(PDF) Celebrity CEOs' credibility, image of their brands ...",
+      "url": "https://www.researchgate.net/publication/352904514_Celebrity_CEOs'_credibility_image_of_their_brands_and_consumer_materialism",
+      "tier": "practitioner",
+      "topics": [
+        "q15_founder_ceo_reputation_evidence"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Jan 18, 2026"
+    },
+    {
+      "index": 135,
+      "title": "Celebrity Chief Executive Officers Influence on Firm ...",
+      "url": "https://www.hilarispublisher.com/abstract/celebrity-chief-executive-officers-influence-on-firm-performance-a-review-of-theory-and-evidence-21396.html",
+      "tier": "practitioner",
+      "topics": [
+        "q15_founder_ceo_reputation_evidence"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 136,
+      "title": "[PDF] Celebrity Chief Executive Officers Influence on Firm ...",
+      "url": "https://www.semanticscholar.org/paper/Celebrity-Chief-Executive-Officers-Influence-on-A-B.-E./9e62c05390e611472430b41e9f53272a2f349a8d",
+      "tier": "practitioner",
+      "topics": [
+        "q15_founder_ceo_reputation_evidence"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 137,
+      "title": "The Costs and Benefits of CEO Reputation",
+      "url": "https://myweb.ecu.edu/furnerc/zpubs/papers/2.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q15_founder_ceo_reputation_evidence"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 138,
+      "title": "(PDF) Celebrity chief executive officers influence on firm ...",
+      "url": "https://www.academia.edu/81057088/Celebrity_chief_executive_officers_influence_on_firm_performance_a_review_of_theory_and_evidence",
+      "tier": "practitioner",
+      "topics": [
+        "q15_founder_ceo_reputation_evidence"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 139,
+      "title": "Brand Identity Models: Aaker and Kapferer's Frameworks • Journalism University",
+      "url": "https://journalism.university/online-brand-management/brand-identity-aaker-kapferer-frameworks",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 140,
+      "title": "Strengthen Identity with the Aaker Brand Identity Model",
+      "url": "https://umbrex.com/resources/frameworks/marketing-frameworks/aaker-brand-identity-model",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 141,
+      "title": "Influence of Colors on Brand Recognition and Consumer Behavior",
+      "url": "https://straitsresearch.com/statistic/role-of-color-in-branding-and-marketing",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 142,
+      "title": "Strengthen Recognition with Distinctive Brand Assets",
+      "url": "https://umbrex.com/resources/frameworks/marketing-frameworks/distinctive-brand-assets-framework-ehrenberg-bass",
+      "tier": "practitioner",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 143,
+      "title": "Define Brand Identity with Kapferer Brand Identity Prism",
+      "url": "https://umbrex.com/resources/frameworks/marketing-frameworks/kapferer-brand-identity-prism",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 144,
+      "title": "Color Increases Brand Recognition - What’s the Truth?",
+      "url": "https://reviewinc.com/2024/08/14/color-increases-brand-recognition",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 145,
+      "title": "The Psychology Of Typography: How Fonts Influence Your Brand",
+      "url": "https://dot2shape.com/blog/the-psychology-of-typography-how-fonts-influence-your-brands-message",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 146,
+      "title": "Brand Guidelines vs Design Systems: A Comprehensive Comparison",
+      "url": "https://whatifdesign.co/feeds/blog/brand-guidelines-vs-design-system",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 147,
+      "title": "The Impact of Color on Brand Recognition: Re-evaluating the 80% Claim A guest post, by Google Gemini Deep Research AI - insights4print.ceo",
+      "url": "https://www.insights4print.ceo/2025/03/the-impact-of-color-on-brand-recognition-re-evaluating-the-80-claim-a-guest-article-from-gemini-deep-research",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 148,
+      "title": "What Is Brand Positioning? The Complete Guide (2026) | Storyflow",
+      "url": "https://storyflow.so/blog/what-is-brand-positioning-complete-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 149,
+      "title": "Brand Personality: Understanding Aaker's 5 Dimension Model - LiveInnovation.org",
+      "url": "https://liveinnovation.org/brand-personality-understanding-aakers-5-dimension-model",
+      "tier": "practitioner",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 150,
+      "title": "Brand Guidelines: Definition & How to Create Them",
+      "url": "https://www.bynder.com/en/glossary/brand-guidelines-definition",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 151,
+      "title": "How to Measure Brand Equity in 2026: Key Metrics, Models & Methods | YouScan",
+      "url": "https://youscan.io/blog/how-to-measure-brand-equity",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 152,
+      "title": "Narrative Transportation and Brand Persuasion in Advertising",
+      "url": "https://research.mental-momentum.ai/r/narrative-transportation-brand-qi68mn",
+      "tier": "practitioner",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 153,
+      "title": "Differentiation and distinctiveness - part two",
+      "url": "https://better.agency/blog/differentiation-and-distinctiveness-part-two",
+      "tier": "practitioner",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 154,
+      "title": "Customer-Based Brand Equity (CBBE) Models: Keller vs. Aaker",
+      "url": "https://www.qualtrics.com/articles/strategy-research/keller-vs-aaker",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 155,
+      "title": "Customer-Based Brand Equity (CBBE) Models: Keller vs. Aaker",
+      "url": "https://www.qualtrics.com/en-au/articles/strategy-research/keller-vs-aaker",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 156,
+      "title": "What Is the Aaker Brand Equity Model? Definition and Components",
+      "url": "https://www.formpl.us/blog/what-is-the-aaker-brand-equity-model-definition-and-components",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 157,
+      "title": "Advertising Narratives: Transportation, Imagination, and Brand Storytelling",
+      "url": "https://think.taylorandfrancis.com/special_issues/advertising-narratives-transportation-imagination-and-brand-storytelling",
+      "tier": "practitioner",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 158,
+      "title": "The power of distinctive brand assets | Lesniak Swann",
+      "url": "https://lesniakswann.com/insights/thought-leadership/distinctive-brand-assets-the-secret-weapon-for-b2b-marketers",
+      "tier": "practitioner",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 159,
+      "title": "How to Measure Brand Awareness: 6 Proven Metrics",
+      "url": "https://onclusive.com/resources/blog/how-to-measure-brand-awareness",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 160,
+      "title": "The Psychology of Font Choice and Brand Personality",
+      "url": "https://crisiscommunications.com/the-psychology-of-font-choice-and-brand-personality",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 161,
+      "title": "The Psychology of Color in Marketing: How Visual Elements Affect Consumer Perception | Journal of Marketing & Social Research",
+      "url": "https://www.jmsr-online.com/article/the-psychology-of-color-in-marketing-how-visual-elements-affect-consumer-perception-142",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 162,
+      "title": "Brand Typography Guide: Font Selection & Typeface Branding",
+      "url": "https://celerart.com/blog/brand-typography",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 163,
+      "title": "Brand Equity Models Explained: Keller vs. Aaker",
+      "url": "https://www.manypixels.co/blog/marketing-design/brand-awareness-models",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 164,
+      "title": "Distinctive Brand Assets | Build & Strengthen Your Brand Codes",
+      "url": "https://www.distinctivebat.com/distinctive-brand-assets",
+      "tier": "practitioner",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 165,
+      "title": "Dimensions of Brand Personality: Journal Article",
+      "url": "https://www.gsb.stanford.edu/faculty-research/publications/dimensions-brand-personality",
+      "tier": "practitioner",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 166,
+      "title": "Some thoughts about brand personality - How Brands Are Built",
+      "url": "https://howbrandsarebuilt.com/some-thoughts-about-brand-personality",
+      "tier": "practitioner",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 167,
+      "title": "Aaker’s 5 Dimensions of Brand Personality Explained | JoyfloBec",
+      "url": "https://www.joyflo.co/blog/aakers-5-dimension-model-crafting-an-impactful-brand-identity",
+      "tier": "practitioner",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 168,
+      "title": "Measurement, validity, and dimensionality of Jennifer Aaker’s brand personality scale for a mobile telephone brand in a developing country | JBRMR",
+      "url": "https://jbrmr.com/details&cid=493",
+      "tier": "practitioner",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 169,
+      "title": "Brand Archetypes vs Personality: Strategic Framework Guide",
+      "url": "https://iconicfox.com.au/brand-archetypes-vs-personality",
+      "tier": "practitioner",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 170,
+      "title": "The Aaker Model: A simple way to build brand identity | Canto",
+      "url": "https://www.canto.com/blog/aaker-model",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 171,
+      "title": "What is Brand Equity? Aaker vs. Keller's Brand Equity Model | Criterion Global",
+      "url": "https://criterionglobal.com/faq/brand-equity-theory-models",
+      "tier": "practitioner",
+      "topics": [
+        "q1_brand_identity_models"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 172,
+      "title": "Design System vs Style Guide vs Brand Guidelines: What's the Difference? (2026) — Digital Polo Blog",
+      "url": "https://www.digitalpolo.com/design-system-vs-style-guide-vs-brand-guidelines",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 173,
+      "title": "Congruence Between Self-concept and Brand Personality, Its Effect on Brand Emotional Attachment",
+      "url": "https://www.abacademies.org/articles/congruence-between-selfconcept-and-brand-personality-its-effect-on-brand-emotional-attachment-7676.html",
+      "tier": "practitioner",
+      "topics": [
+        "q3_brand_personality_archetypes"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 174,
+      "title": "Font Readability Research: Serif vs Sans Serif Font",
+      "url": "https://geniusee.com/single-blog/font-readability-research-famous-designers-vs-scientists",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 175,
+      "title": "Huck Finch 2021",
+      "url": "https://www.huckfinchbranding.com/blog/design-systems-vs-brand-guidelines-what-you-need-to-know",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 176,
+      "title": "59: Corporate visual identity in: Elgar Encyclopedia of Corporate Communication",
+      "url": "https://www.elgaronline.com/display/book/9781802200874/ch59.xml",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 177,
+      "title": "[PDF] The Use of Colour in Branding to Attract Customers - ijrti",
+      "url": "https://ijrti.org/papers/IJRTI2602076.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 178,
+      "title": "Brand consistency: How enterprises maintain and build ...",
+      "url": "https://penpot.app/blog/brand-consistency-how-enterprises-maintain-and-build-their-brands",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 179,
+      "title": "Typography Matters: How do fonts affect the perception of your brand? | 247Studio",
+      "url": "https://www.247studio.co/en/knowledge/typografia-ma-znaczenie-jak-fonty-wplywaja-na-odbior-twojej-marki",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 180,
+      "title": "Brand Refresh vs. Rebrand: Decision Framework | Connective",
+      "url": "https://connectivewebdesign.com/blog/brand-refresh-vs-rebrand-decision-framework",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 181,
+      "title": "Medium",
+      "url": "https://www.designsystemscollective.com/when-brand-style-meets-design-system-ee8abc638f67",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 182,
+      "title": "The Power of Color in Advertising: Theory, Evidence & Strategy - Royalty Free Music by The Music Case",
+      "url": "https://www.themusicase.com/blog/the-power-of-color-in-advertising-theory-evidence-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 183,
+      "title": "Exciting red and competent blue: the importance of color in marketing",
+      "url": "https://www.academia.edu/8635094/Exciting_red_and_competent_blue_the_importance_of_color_in_marketing",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 184,
+      "title": "The Psychology of Color in Marketing and Branding — Insights, The Parlor",
+      "url": "https://theparlor.be/insights/the-psychology-of-color-in-marketing-and-branding",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 185,
+      "title": "Step-by-Step Brand Voice Guidelines + Framework",
+      "url": "https://www.brandedagency.com/blog/brand-voice-guidelines",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 186,
+      "title": "The Effects of Corporate Identity Management, Internal ...",
+      "url": "https://www.atlantis-press.com/article/125957941.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 187,
+      "title": "Font Psychology: How Typeface Choices Affect Brand Perception - Bethany Works® LLC",
+      "url": "https://bethanyworks.com/font-psychology-101",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 188,
+      "title": "Influence of Colors as a Key Element in Consumer Marketing – Expert Journal of Marketing",
+      "url": "https://marketing.expertjournals.com/23446773-803",
+      "tier": "practitioner",
+      "topics": [
+        "q7_color_in_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 189,
+      "title": "Avondale Type Co.",
+      "url": "https://avondaletypeco.com/news/how-to-use-typography-to-build-trust-with-your-audience",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 190,
+      "title": "Design systems vs. brand guidelines: key differences",
+      "url": "https://userq.com/design-systems-vs-brand-guidelines-understanding-the-key-differences",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 191,
+      "title": "How to Measure Brand Equity: A Quantitative Guide for CMOs",
+      "url": "https://vivaldigroup.com/how-to-measure-brand-equity-a-quantitative-guide-for-cmos-and-brand-leaders",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 192,
+      "title": "How to Measure Brand Awareness | Helms Workshop",
+      "url": "https://helmsworkshop.com/blog/how-to-measure-brand-awareness",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 193,
+      "title": "Ultimate Guide to Brand Voice Frameworks - Bigeye",
+      "url": "https://www.bigeyeagency.com/insights/ultimate-brand-voice-frameworks-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 194,
+      "title": "Phonetic sound patterns in top brand names",
+      "url": "https://static1.squarespace.com/static/586d3b8c579fb3b92bfadb89/t/58725a088419c2902d0983f7/1483889162049/Sounds+good_Phonetic+sound+patterns+in+top+brand+names+2015.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 195,
+      "title": "How To Measure Brand Awareness | PlanBeyond Research",
+      "url": "https://planbeyond.com/blog/how-to-measure-brand-awareness",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 196,
+      "title": "A Step-by-Step Guide to Brand Positioning (with Examples)",
+      "url": "https://wynter.com/post/brand-positioning",
+      "tier": "practitioner",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 197,
+      "title": "Brand Positioning And Perceptual Maps - Branding Strategy Insider",
+      "url": "https://brandingstrategyinsider.com/2009/09/brand-positioning-and-perceptual-maps",
+      "tier": "practitioner",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 198,
+      "title": "The Impact of Logo Shapes Redesign on Brand Loyalty ...",
+      "url": "https://econjournals.com/index.php/irmm/article/download/10308/pdf/25252",
+      "tier": "practitioner",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 199,
+      "title": "Which Are More Legible: Serif or Sans Serif Typefaces? – Alex Poole",
+      "url": "https://alexpoole.info/blog/which-are-more-legible-serif-or-sans-serif-typefaces",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 200,
+      "title": "Brand Equity Explained: How to Build and Measure Success",
+      "url": "https://online.hbs.edu/blog/post/brand-equity",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 201,
+      "title": "[PDF] Logo Impact on Consumer's Perception, Attitude, Brand Image and ...",
+      "url": "https://kwpublications.com/papers_submitted/9836/logo-impact-on-consumers-perception-attitude-brand-image-and-purchase-intention-a-5-years-systematic-review.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 202,
+      "title": "The Ehrenberg-Bass Institute's Scientific Marketing Findings",
+      "url": "https://clickz.com/ehrenberg-bass-institutes-scientific-marketing-learnings/269656",
+      "tier": "practitioner",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 203,
+      "title": "Corporate identity | Business and Management | Research Starters | EBSCO Research",
+      "url": "https://www.ebsco.com/research-starters/business-and-management/corporate-identity",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 204,
+      "title": "Brand Awareness: How To Measure And Improve It | SurveyMonkey",
+      "url": "https://www.surveymonkey.com/learn/market-research/brand-awareness",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 205,
+      "title": "What Makes a Good Brand Name: Linguistic Principles That Work",
+      "url": "https://vibelo.ai/blog/what-makes-a-good-brand-name",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 206,
+      "title": "Brand Strategy and Positioning: Your Ultimate Guide to ...",
+      "url": "https://iconicfox.com.au/brand-strategy-and-positioning",
+      "tier": "practitioner",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 207,
+      "title": "The ultimate font face-off: Serif vs sans serif in the psychological battle of font personalities — Type Tasting",
+      "url": "https://www.typetasting.com/blog-1/2023/2/16/the-ultimate-font-face-off-serif-vs-sans-serif-in-the-psychological-battle-of-font-personalities",
+      "tier": "practitioner",
+      "topics": [
+        "q8_typography_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 208,
+      "title": "Brand Lift vs Brand Awareness vs Brand Recognition: Guide",
+      "url": "https://happydemics.com/blog/en/brand-lift-vs-brand-awareness-vs-brand-recognition-key-differences-and-how-to-measure-each",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 209,
+      "title": "HOW DOES LOGO CHANGES AFFECT SALES AND ...",
+      "url": "https://ijbms.net/assets/files/1728821222.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 210,
+      "title": "Brand Voice Strategy: How to Build Brand Guidelines - Sprinklr",
+      "url": "https://www.sprinklr.com/blog/brand-voice",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 211,
+      "title": "[PDF] Brand Positioning - DR.RIZVI DIGITAL LIBRARY",
+      "url": "https://www.librarydrdl.com/pdf/econtent/Brand_Positioning.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 212,
+      "title": "[PDF] Corporate Rebranding and its Effect on Customer Perception",
+      "url": "https://ibunion.dk/wp-content/uploads/2023/09/2022-January-grade-12_1.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 213,
+      "title": "Brand Positioning Map Explained",
+      "url": "https://umbrex.com/resources/frameworks/strategy-frameworks/brand-positioning-map",
+      "tier": "practitioner",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 214,
+      "title": "Understanding Narrative Transportation Using NotebookLM",
+      "url": "https://www.storytellingwithimpact.com/understanding-narrative-transportation-using-notebooklm",
+      "tier": "practitioner",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 215,
+      "title": "(PDF) Brand logo design: examining consumer response ...",
+      "url": "https://www.researchgate.net/publication/273094782_Brand_Logo_Design_Examining_Consumer_Response_to_Naturalness",
+      "tier": "practitioner",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 216,
+      "title": "How to Craft the Perfect Brand Positioning Statement",
+      "url": "https://online.hbs.edu/blog/post/brand-positioning-statement",
+      "tier": "practitioner",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 217,
+      "title": "[PDF] The impact of corporate rebranding on the firm's market value",
+      "url": "https://www.um.edu.mt/library/oar/bitstream/123456789/68565/1/The_impact_of_corporate_rebranding_on_the_firms_market_value.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 218,
+      "title": "The connotative meanings of sound symbolism in brand ...",
+      "url": "https://ora.ox.ac.uk/objects/uuid:39ccf1b1-1b79-497f-944c-a7e3f815ecbc/files/rpn89d721s",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 219,
+      "title": "Design Systems Guide - IRON Creative",
+      "url": "https://ironcreative.com/design-systems-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 220,
+      "title": "8 Brand Voice Guidelines Examples for Impactful Messaging",
+      "url": "https://www.smashcreate.com/uncategorized/brand-voice-guidelines-examples",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 221,
+      "title": "Differences Between Brand Equity & Brand Awareness | Latana",
+      "url": "https://resources.latana.com/post/brand-equity-brand-awareness-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 222,
+      "title": "How To Build A Unified Brand Voice",
+      "url": "https://www.siteimprove.com/blog/messaging-framework",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 223,
+      "title": "Brand Tone of Voice Examples: 12 Companies That Nail It",
+      "url": "https://iconicfox.com.au/brand-tone-of-voice-examples",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 224,
+      "title": "Brand Valuation: How to Measure and Maximize the Value of Your Brand - August Brown",
+      "url": "https://augustbrown.com/news-item/brand-valuation-how-to-measure-and-maximize-the-value-of-your-brand",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 225,
+      "title": "The Importance of Consistency in Brand Visual Identity",
+      "url": "https://platinagency.com/en/blog/the-importance-of-consistency-in-brand-visual-identity",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 226,
+      "title": "[PDF] Corporate rebranding : an internal perspective",
+      "url": "https://eprints.whiterose.ac.uk/161887/8/Corp_Rebranding_JBR_REF_versionpdf.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 227,
+      "title": "Self-Referencing and Persuasion: Narrative Transportation ...",
+      "url": "http://www.communicationcache.com/uploads/1/0/8/8/10887248/self-referencing_and_persuasion-_narrative_transportation_versus_analytical_elaboration.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 228,
+      "title": "Creating Effective Brand Names: A Study of the ...",
+      "url": "https://digital.wpi.edu/downloads/g445cd54j?locale=en",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 229,
+      "title": "The Power of Storytelling in Marketing: Science & Strategies",
+      "url": "https://www.restlessstories.com/news/the-power-of-storytelling-in-marketing-science-strategies",
+      "tier": "practitioner",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 230,
+      "title": "What is Brand Positioning, and Why is it Important… | Helms Workshop",
+      "url": "https://helmsworkshop.com/blog/what-is-brand-positioning-and-why-is-it-important-to-businesses",
+      "tier": "practitioner",
+      "topics": [
+        "q2_brand_positioning"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 231,
+      "title": "Phonetic Effects of Brand Names on Consumer Judgments",
+      "url": "https://web.stanford.edu/class/linguist62n/yorkston.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 232,
+      "title": "Brand Tone of Voice: Guide with Real Examples - Lokalise Blog",
+      "url": "https://lokalise.com/blog/how-to-adapt-your-tone-of-voice-for-new-markets",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 233,
+      "title": "Storytelling in the digital era: A meta-analysis of relevant moderators of the narrative transportation effect",
+      "url": "https://www.academia.edu/43339040/Storytelling_in_the_digital_era_A_meta_analysis_of_relevant_moderators_of_the_narrative_transportation_effect",
+      "tier": "practitioner",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 234,
+      "title": "Using sound symbolism to influence perceptions of brand names | The Identity Bureau",
+      "url": "https://www.theidbureau.com/blog/using-sound-symbolism",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 235,
+      "title": "Phonetic Symbolism and Brand Name Preference",
+      "url": "https://www.academia.edu/24250963/Phonetic_Symbolism_and_Brand_Name_Preference",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 236,
+      "title": "thesis the effects of narrative transportation and character ...",
+      "url": "https://mountainscholar.org/bitstreams/b461ccba-b842-4470-8a27-777443014738/download",
+      "tier": "practitioner",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 237,
+      "title": "How to Conduct Effective Brand Naming Research?",
+      "url": "https://www.smashbrand.com/articles/brand-naming-research",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 238,
+      "title": "Engaging Hearts and Minds: Examining Narrative Transportation and Its Impact on Affective Engagement, Purchase Intention, and Online Brand Advocacy | Journal of Digital Marketing and Communication",
+      "url": "https://tecnoscientifica.com/journal/jdmc/article/view/770",
+      "tier": "practitioner",
+      "topics": [
+        "q5_brand_story_narrative"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 239,
+      "title": "Rebranding vs. Brand Refresh: How to Choose the Right Scale of Change",
+      "url": "https://celerart.com/blog/rebranding-vs-brand",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 240,
+      "title": "Ensure consistent brand voice across touchpoints | Mural",
+      "url": "https://www.mural.co/blog/brand-voice",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 241,
+      "title": "Evolutionary vs Transformational Rebrands (Guide)",
+      "url": "https://www.brandedagency.com/blog/evolutionary-vs-transformational-rebrand",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 242,
+      "title": "Sound symbolism effects across languages: Implications for global brand names",
+      "url": "https://www.academia.edu/24250949/Sound_symbolism_effects_across_languages_Implications_for_global_brand_names",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 243,
+      "title": "Rebrand vs brand refresh | The MTM Agency",
+      "url": "https://themtmagency.com/blog/rebrand-vs-brand-refresh-exploring-ways-to-boost-equity",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 244,
+      "title": "Understanding rebranding | Verve",
+      "url": "https://verveagency.com/insights/understandingrebranding",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 245,
+      "title": "Why Do Companies Rebrand? 7 Reasons and Examples",
+      "url": "https://www.metabrand.digital/learn/why-companies-rebrand-reasons-and-examples",
+      "tier": "practitioner",
+      "topics": [
+        "q12_rebrand_risk"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 246,
+      "title": "What are the most effective types of logo? - Cutting Edge PR",
+      "url": "https://cuttingedgepr.com/articles/most-effective-types-of-logo",
+      "tier": "practitioner",
+      "topics": [
+        "q9_logo_design_research"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 247,
+      "title": "Brand Localization versus Globalization: A Comparative Analysis of Adaptation Strategies in Diverse Markets | IntechOpen",
+      "url": "https://www.intechopen.com/chapters/1236927",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 248,
+      "title": "Visual consistency powers successful brands",
+      "url": "https://www.siteimprove.com/blog/visual-consistency-meaning",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 249,
+      "title": "Understanding Global Branding: What It Means for Your ...",
+      "url": "https://online.hbs.edu/blog/post/global-branding",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 250,
+      "title": "Archives of Design Research",
+      "url": "https://aodr.org/_common/do.php?a=full&b=12&bidx=4169&aidx=46036",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 251,
+      "title": "Governing an evolving in-house design system",
+      "url": "https://aaltodoc.aalto.fi/handle/123456789/123090",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-09-03T00:00:00.000Z"
+    },
+    {
+      "index": 252,
+      "title": "Modularity in Practice: Design Systems in Digital Banking",
+      "url": "http://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Asu%3Adiva-253557",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 253,
+      "title": "Why most Brand Manuals fail when it comes to defining Brand Colors; And how to determine acceptable color deviations for specific Brand Colors",
+      "url": "https://www.researchgate.net/publication/308326152_Why_most_Brand_Manuals_fail_when_it_comes_to_defining_Brand_Colors_And_how_to_determine_acceptable_color_deviations_for_specific_Brand_Colors",
+      "tier": "practitioner",
+      "topics": [
+        "q10_brand_guidelines_design_systems"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 254,
+      "title": "Conceptualizing &amp; measuring brand salience",
+      "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.1024.8332",
+      "tier": "practitioner",
+      "topics": [
+        "q11_distinctive_assets_consistency"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2004-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 255,
+      "title": "Share of Search – Exploratory research into new marketing metric in the context of Finnish parliamentary elections",
+      "url": "https://aaltodoc.aalto.fi/handle/123456789/121542",
+      "tier": "practitioner",
+      "topics": [
+        "q14_brand_measurement"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 256,
+      "title": "International Corporate Visual Iden tity: Standardization or Localization?",
+      "url": "http://palgrave-journals.com/jibs/journal/v30/n3/full/8490084a.html",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2016-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 257,
+      "title": "Corporate Visual Identity Implementation and Management in SMEs : Case study: NDTC Group, Happy Foreigner World",
+      "url": "http://theseus.fi/handle/10024/154873",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-11-23T00:00:00.000Z"
+    },
+    {
+      "index": 258,
+      "title": "The Impact of Corporate Social Responsibility and Coprorate Identity Management on Image and Performance: The Case of City Hotels in Klang Valley, Malaysia",
+      "url": "https://pdfs.semanticscholar.org/2e27/5453e1451c08fcf32a83766fad980c9d101a.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q16_corporate_visual_identity_management"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 259,
+      "title": "Linguistic Elements of Conversational Human Voice in Online Brand Communication: Manipulations and Perceptions",
+      "url": "https://osf.io/sxp8u",
+      "tier": "practitioner",
+      "topics": [
+        "q4_brand_voice_messaging"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-11-13T00:00:00.000Z"
+    },
+    {
+      "index": 260,
+      "title": "Brand names that work: A study of the effectiveness of different types of brand names",
+      "url": "https://www.researchgate.net/publication/312753566_Brand_names_that_work_A_study_of_the_effectiveness_of_different_types_of_brand_names",
+      "tier": "practitioner",
+      "topics": [
+        "q6_naming_taglines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    }
+  ]
+}
