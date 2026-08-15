@@ -1,0 +1,3675 @@
+{
+  "generated_at": "2026-08-05",
+  "method": "8 deep passes via the in-repo research skill (Exa+Tavily+Serper+Jina fused, content-extracted), deduped by normalized URL, junk-filtered, per-domain capped, tiered confirmed vs practitioner",
+  "note": "inline [sN] in references/research-synthesis.md resolves to sources[N-1]",
+  "total_found": 380,
+  "source_count": 275,
+  "confirmed": 79,
+  "practitioner": 196,
+  "sources": [
+    {
+      "index": 1,
+      "title": "The Five Forces - Institute For Strategy And Competitiveness",
+      "url": "https://www.isc.hbs.edu/strategy/business-strategy/Pages/the-five-forces.aspx",
+      "tier": "confirmed",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 2,
+      "title": "Does organizational vision really matter? An empirical ... - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8139162/",
+      "tier": "confirmed",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 3,
+      "title": "Business Model Innovation Through the Lens of Time: An Empirical Study of Performance Implications Across Venture Life Cycles | Schmalenbach Journal of Business Research | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s41471-021-00116-6",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 4,
+      "title": "Business model innovation and firm performance: Evidence from manufacturing SMEs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10220359",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 5,
+      "title": "Structure-Conduct-Performance Paradigm - an overview",
+      "url": "https://www.sciencedirect.com/topics/economics-econometrics-and-finance/structure-conduct-performance-paradigm",
+      "tier": "confirmed",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 6,
+      "title": "Competitive strategy, development zone policy and firm growth: Empirical evidence from China - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10584104",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 7,
+      "title": "Why do startups fail? A core competency deficit model",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10881814",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 8,
+      "title": "1-year survival rates for new business establishments by year and location : The Economics Daily : U.S. Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/opub/ted/2024/1-year-survival-rates-for-new-business-establishments-by-year-and-location.htm",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 9,
+      "title": "What are the key success factors for strategy formulation and implementation? Perspectives of managers in the hotel industry",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7271847",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 10,
+      "title": "Learning what our target audiences think and do: extending segmentation to all four bases",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6451251",
+      "tier": "confirmed",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 11,
+      "title": "Supermarket customers segments stability",
+      "url": "https://link.springer.com/article/10.1057/palgrave.jt.5750052",
+      "tier": "confirmed",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2007-11-12T00:00:00.000Z"
+    },
+    {
+      "index": 12,
+      "title": "Toward an Individual Customer Profitability Model:  A Segment-Based Approach",
+      "url": "https://journals.sagepub.com/doi/10.1177/1094670502005001007",
+      "tier": "confirmed",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 13,
+      "title": "An Empirical Evaluation of Aggregation Approaches for Developing Market Segments",
+      "url": "https://journals.sagepub.com/doi/10.1177/002224298204600408",
+      "tier": "confirmed",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 14,
+      "title": "A dynamic segmentation approach for targeting and customizing direct marketing campaigns",
+      "url": "https://journals.sagepub.com/doi/10.1002/dir.20066",
+      "tier": "confirmed",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 15,
+      "title": "Differentiation and financial performance: a meta-analysis",
+      "url": "https://doi.org/10.1108/cr-10-2018-0067",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-10-21T00:00:00.000Z"
+    },
+    {
+      "index": 16,
+      "title": "Does a differentiation strategy lead to more sustainable financial performance than a cost leadership strategy?",
+      "url": "https://doi.org/10.1108/md-05-2013-0282",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2014-06-10T00:00:00.000Z"
+    },
+    {
+      "index": 17,
+      "title": "Multilevel optimal distinctiveness: Examining the impact of within‐ and between‐organization distinctiveness of product design on market performance",
+      "url": "https://doi.org/10.1002/smj.3377",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-01-03T00:00:00.000Z"
+    },
+    {
+      "index": 18,
+      "title": "The Evolution of Resource-Based Inquiry: A Review and Meta-Analytic Integration of the Strategic Resources–Actions–Performance Pathway",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/0149206321994182",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 19,
+      "title": "Optimal distinctiveness across different benchmarks: Implications for platform complementors to strategically position new products",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0148296324003503",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 20,
+      "title": "Evidence concerning the Importance of Perceived Brand Differentiation",
+      "url": "https://journals.sagepub.com/doi/10.1016/S1441-3582%2807%2970042-3",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 21,
+      "title": "The competitive implications of the deployment of unique resources",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/smj.2018",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 22,
+      "title": "Two paths to customer loyalty: the moderating effect of the differentiation level strategy in the performance-satisfaction-value-intentions relationship",
+      "url": "https://doi.org/10.1108/jpbm-01-2015-0789",
+      "tier": "confirmed",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2016-04-18T00:00:00.000Z"
+    },
+    {
+      "index": 23,
+      "title": "Business model design and innovation: Unlocking the performance benefits of innovation",
+      "url": "https://journals.sagepub.com/doi/10.1177/0312896215587315",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 24,
+      "title": "Learning while (re)configuring: Business model innovation processes in established firms",
+      "url": "https://journals.sagepub.com/doi/10.1177/1476127016632758",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 25,
+      "title": "To replicate or to renew your business model? The performance effect in dynamic environments",
+      "url": "https://www.sciencedirect.com/science/article/pii/S002463012400027X",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 26,
+      "title": "Disentangling the complex longitudinal relationships between business model innovation and firm performance",
+      "url": "https://doi.org/10.1016/j.jbusres.2023.114229",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-08-21T00:00:00.000Z"
+    },
+    {
+      "index": 27,
+      "title": "The breadth of business model reconfiguration and firm performance",
+      "url": "https://journals.sagepub.com/doi/10.1177/1476127020955138",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 28,
+      "title": "When Business Model Innovation Creates Value for Companies: A Meta‐Analysis on Institutional Contingencies",
+      "url": "https://doi.org/10.1111/joms.12966",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-07-03T00:00:00.000Z"
+    },
+    {
+      "index": 29,
+      "title": "Does market power drive business model innovation? Evidence from Italian family manufacturing firms | Small Business Economics | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11187-023-00834-7",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-10-16T00:00:00.000Z"
+    },
+    {
+      "index": 30,
+      "title": "Performance implications of business model design in a disruptive global environment",
+      "url": "https://doi.org/10.1016/j.indmarman.2026.06.006",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-23T00:00:00.000Z"
+    },
+    {
+      "index": 31,
+      "title": "When Do Novel Business Models Lead to High Performance? A Configurational Approach to Value Drivers, Competitive Strategy, and Firm Environment",
+      "url": "https://doi.org/10.5465/amj.2020.0969",
+      "tier": "confirmed",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-12-22T00:00:00.000Z"
+    },
+    {
+      "index": 32,
+      "title": "The Liability of Volatility and How it Changes Over Time Among New Ventures",
+      "url": "https://journals.sagepub.com/doi/10.1177/1042258719867564",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 33,
+      "title": "Predicting startup survival using first years financial statements",
+      "url": "https://doi.org/10.1080/00472778.2020.1750302",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-08-10T00:00:00.000Z"
+    },
+    {
+      "index": 34,
+      "title": "A tale of two startups: the loss and gain of startups in the U.S. economy in the pandemic | Small Business Economics | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11187-025-01171-7",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-16T00:00:00.000Z"
+    },
+    {
+      "index": 35,
+      "title": "Firm age dynamics and causes of corporate bankruptcy: age dependent explanations for business failure | Review of Managerial Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11846-018-0303-2",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-09-18T00:00:00.000Z"
+    },
+    {
+      "index": 36,
+      "title": "A Study on Revenue Models and Financial Sustainability Patterns in Startups",
+      "url": "https://doi.org/10.56726/irjmets87320",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-12-27T00:00:00.000Z"
+    },
+    {
+      "index": 37,
+      "title": "Predicting new venture survival and growth: Does the fog lift? | Small Business Economics | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11187-016-9713-1",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2016-03-17T00:00:00.000Z"
+    },
+    {
+      "index": 38,
+      "title": "The risk of death in newborn businesses during the first years in market",
+      "url": "https://doi.org/10.48550/arxiv.2011.11776",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-11-23T00:00:00.000Z"
+    },
+    {
+      "index": 39,
+      "title": "Survival of the funded: Econometric analysis of startup longevity and success",
+      "url": "https://doi.org/10.7341/20211742",
+      "tier": "confirmed",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 40,
+      "title": "Does Strategic Planning Improve Organizational Performance? A Meta-Analysis",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/puar.13104",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 41,
+      "title": "Strategy implementation: What is the failure rate? | Journal of Management & Organization | Cambridge Core",
+      "url": "https://www.cambridge.org/core/journals/journal-of-management-and-organization/article/abs/strategy-implementation-what-is-the-failure-rate/6A048C7CC0D46D8CA22C6D4375CFC4BA",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-01-14T00:00:00.000Z"
+    },
+    {
+      "index": 42,
+      "title": "Creating effective strategy implementation: a systematic review of managerial and organizational levers | Review of Managerial Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11846-025-00880-3",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-03-27T00:00:00.000Z"
+    },
+    {
+      "index": 43,
+      "title": "Meta‐analysis of the corporate planning–organizational performance relationship: A research note",
+      "url": "https://doi.org/10.1002/smj.3476",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-11-22T00:00:00.000Z"
+    },
+    {
+      "index": 44,
+      "title": "STRATEGIC PLANNING AND FINANCIAL PERFORMANCE: A META-ANALYTIC REVIEW*",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1467-6486.1991.tb00286.x",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 45,
+      "title": "Effects of Formal Strategic Planning on Financial Performance in Small Firms: A Meta-Analysis",
+      "url": "https://journals.sagepub.com/doi/10.1177/104225879301700304",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 46,
+      "title": "The value of formal planning for strategic decisions: Review of empirical research",
+      "url": "https://doi.org/10.1002/smj.4250030303",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "1982-07-01T00:00:00.000Z"
+    },
+    {
+      "index": 47,
+      "title": "STRATEGY ALIGNMENT: KEY FACTORS FOR EFFECTIVE STRATEGY IMPLEMENTATION",
+      "url": "https://doi.org/10.32815/jibeka.v18i3.1459",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-11-11T00:00:00.000Z"
+    },
+    {
+      "index": 48,
+      "title": "Obstacles to strategy implementation and success factors: A review of empirical literature",
+      "url": "https://doi.org/10.5937/straman2102012v",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 49,
+      "title": "Are 90% of Organizations Still Failing to Execute on Strategy?",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jcaf.21946",
+      "tier": "confirmed",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 50,
+      "title": "HOW MUCH DOES INDUSTRY MATTER, REALLY?",
+      "url": "https://doi.org/10.1002/(sici)1097-0266(199707)18:1+",
+      "tier": "confirmed",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "1997-07-01T00:00:00.000Z"
+    },
+    {
+      "index": 51,
+      "title": "How Much Do Industry, Corporation, and Business Matter, Really? A Meta-Analysis",
+      "url": "https://doi.org/10.1287/stsc.2017.0029",
+      "tier": "confirmed",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2017-06-01T00:00:00.000Z"
+    },
+    {
+      "index": 52,
+      "title": "On the Matter of How Much Industry Matters",
+      "url": "https://doi.org/10.1561/111.00000045",
+      "tier": "confirmed",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-07-21T00:00:00.000Z"
+    },
+    {
+      "index": 53,
+      "title": "Is performance driven by industry-or firm-specific factors? A new look at the evidence",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/smj.278",
+      "tier": "confirmed",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 54,
+      "title": "How much does industry matter?",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/smj.4250120302",
+      "tier": "confirmed",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 55,
+      "title": "The effect of Porter’s competitive forces on competitive advantage and organisational performance and the moderating role of management accounting practices | Journal of Management Control | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s00187-024-00375-4",
+      "tier": "confirmed",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-07-08T00:00:00.000Z"
+    },
+    {
+      "index": 56,
+      "title": "Industry effects and firm effects: No effect is an island",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296308000702",
+      "tier": "confirmed",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 57,
+      "title": "Effectiveness of mission statements in organizations – A review | Journal of Management & Organization | Cambridge Core",
+      "url": "https://www.cambridge.org/core/journals/journal-of-management-and-organization/article/abs/effectiveness-of-mission-statements-in-organizations-a-review/DB54DF7C451F1488BA8BEEF06A721E54",
+      "tier": "confirmed",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-02-02T00:00:00.000Z"
+    },
+    {
+      "index": 58,
+      "title": "Looking for the value of mission statements: a meta‐analysis of 20 years of research",
+      "url": "https://www.emerald.com/insight/content/doi/10.1108/00251741111120806/full/html",
+      "tier": "confirmed",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 59,
+      "title": "The Inspirational Executive: Strategy Planning Through Mission, Vision, and Values",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-030-70720-0_4",
+      "tier": "confirmed",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 60,
+      "title": "Mission Statement Quality and Financial Performance - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0263237305001507",
+      "tier": "confirmed",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2006-02-01T00:00:00.000Z"
+    },
+    {
+      "index": 61,
+      "title": "Bridging the understanding of corporate purpose with its effectiveness: A systematic literature review and research directions | Journal of Management & Organization | Cambridge Core",
+      "url": "https://www.cambridge.org/core/journals/journal-of-management-and-organization/article/bridging-the-understanding-of-corporate-purpose-with-its-effectiveness-a-systematic-literature-review-and-research-directions/CF43CCCBDFBDBA8A57B7475977A71EB9",
+      "tier": "confirmed",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-08-29T00:00:00.000Z"
+    },
+    {
+      "index": 62,
+      "title": "Is There Crowd Wisdom in Accounting? Evidence From Forecasts in Equity-Based Crowdfunding",
+      "url": "https://journals.sagepub.com/doi/10.1177/0148558X20912100",
+      "tier": "confirmed",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 63,
+      "title": "Are individuals entering self-employment overly optimistic? an empirical test of plans and projections on nascent entrepreneur expectations",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/smj.833",
+      "tier": "confirmed",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 64,
+      "title": "The sandwich game: Founder-CEOs and forecasting as impression management ☆",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0883902620306832",
+      "tier": "confirmed",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 65,
+      "title": "The changing form of overconfidence and its effect on growth expectations at the early stages of startups | Small Business Economics | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11187-019-00297-9",
+      "tier": "confirmed",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-11-30T00:00:00.000Z"
+    },
+    {
+      "index": 66,
+      "title": "Calibration accuracy of a judgmental process that predicts the commercial success of new product ideas",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/bdm.559",
+      "tier": "confirmed",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 67,
+      "title": "Forecasting Errors of New Venture Survival",
+      "url": "https://doi.org/10.1002/sej.1187",
+      "tier": "confirmed",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2014-12-01T00:00:00.000Z"
+    },
+    {
+      "index": 68,
+      "title": "The Relationship among Biases, Misperceptions, and the Introduction of Pioneering Products: Examining Differences in Venture Decision Contexts",
+      "url": "https://journals.sagepub.com/doi/10.1111/1540-8520.00002",
+      "tier": "confirmed",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 69,
+      "title": "Are individuals entering self‐employment overly optimistic? an empirical test of plans and projections on nascent entrepreneur expectations",
+      "url": "https://doi.org/10.1002/smj.833",
+      "tier": "confirmed",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2009-11-23T00:00:00.000Z"
+    },
+    {
+      "index": 70,
+      "title": "Business Model vs Revenue Model vs Pricing Strategy | Think Insights",
+      "url": "https://thinkinsights.net/insights/business-model-vs-revenue-model-vs-pricing-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q12_business_model_evidence",
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "jina",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 71,
+      "title": "Market Sizing Guide: Calculating TAM, SAM, SOM",
+      "url": "https://hginsights.com/blog/market-sizing-the-complete-guide-to-calculating-tam-sam-som-and-building-a-data-driven-growth-strategy/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "May 19, 2026"
+    },
+    {
+      "index": 72,
+      "title": "Industry analysis frameworks: how consultants evaluate ...",
+      "url": "https://strategyu.co/industry-analysis-frameworks/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 17, 2026"
+    },
+    {
+      "index": 73,
+      "title": "Good Strategy Bad Strategy: Rumelt's Diagnosis Framework",
+      "url": "https://aydoo.services/en/articles/good-strategy-bad-strategy/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Mar 17, 2026"
+    },
+    {
+      "index": 74,
+      "title": "TAM SAM SOM: How to Size Markets Investors Actually ...",
+      "url": "https://ainna.ai/resources/faq/market-sizing-tam-sam-som-faq",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "2026-02-22T06:04:46.000Z"
+    },
+    {
+      "index": 75,
+      "title": "Financial Modelling for Startups: Complete Founder Guide (+ ...",
+      "url": "https://www.mbcconsultant.com/blog/financial-modelling-for-startups",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "May 24, 2026"
+    },
+    {
+      "index": 76,
+      "title": "Book Review: Good Strategy / Bad Strategy",
+      "url": "https://www.perdoo.com/resources/blog/book-review-good-strategy-bad-strategy-by-richard-rumelt",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jun 16, 2026"
+    },
+    {
+      "index": 77,
+      "title": "Jobs to be Done vs Personas: The Ultimate Guide to Unified Customer ...",
+      "url": "https://www.thrv.com/blog/jobs-to-be-done-vs-personas-the-ultimate-guide-to-unified-customer-understanding-in-product-development",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "2025-09-19T12:32:08.000Z"
+    },
+    {
+      "index": 78,
+      "title": "The ultimate guide to financial modeling for startups",
+      "url": "https://www.ey.com/en_nl/services/finance-navigator/the-ultimate-guide-to-financial-modeling-for-startups",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "2024-09-15T19:31:41.000Z"
+    },
+    {
+      "index": 79,
+      "title": "Market Sizing for Startups 2026: Top-down vs Bottom-up",
+      "url": "https://waveup.com/blog/top-down-and-bottom-up-market-size-calculation/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Apr 27, 2026"
+    },
+    {
+      "index": 80,
+      "title": "Segmentation, ICP, and Jobs-to-be-Done | DrinkBird",
+      "url": "https://blog.drinkbird.com/courses/engineers-mba/03-markets-customers-gtm/01-icp-and-jtbd/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "2026-05-25T16:20:36.000Z"
+    },
+    {
+      "index": 81,
+      "title": "How to write vision, values and mission statements",
+      "url": "https://www.phoenix.edu/articles/business/how-to-write-vision-values-and-mission-statements.html",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Nov 24, 2025"
+    },
+    {
+      "index": 82,
+      "title": "A Product Positioning Exercise",
+      "url": "https://www.aprildunford.com/post/a-product-positioning-exercise",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 83,
+      "title": "Market Sizing - How to Calculate Using Two Methods",
+      "url": "https://www.mymarketresearchmethods.com/market-sizing/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 84,
+      "title": "Porter's Five Forces Explained and How to Use the Model",
+      "url": "https://www.investopedia.com/terms/p/porter.asp",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 85,
+      "title": "The Difference between Mission, Vision, and Values Statements",
+      "url": "https://www.aespire.com/blog/what-is-the-difference-between-mission-vision-and-values-statements",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Dec 24, 2022"
+    },
+    {
+      "index": 86,
+      "title": "Revenue Streams in Business Model Canvas",
+      "url": "https://digitalleadership.com/blog/revenue-streams/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Dec 31, 2023"
+    },
+    {
+      "index": 87,
+      "title": "CAC Payback and LTV/CAC Ratio: what is it, how to ...",
+      "url": "https://www.airtree.vc/open-source-vc/startup-metrics-cac-payback-and-ltv-cac-ratio",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 88,
+      "title": "Ideal Customer Profile vs Buyer Persona",
+      "url": "https://miro.com/persona/ideal-customer-profile-vs-buyer-persona/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Apr 8, 2026"
+    },
+    {
+      "index": 89,
+      "title": "Revenue model types and examples",
+      "url": "https://www.altexsoft.com/blog/revenue-model-types/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Sep 6, 2024"
+    },
+    {
+      "index": 90,
+      "title": "Good Strategy/Bad Strategy: The Difference and Why It Matters by ...",
+      "url": "https://itsadeliverything.com/good-strategy-bad-strategy-the-difference-and-why-it-matters-by-richard-rumelt",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Aug 12, 2025"
+    },
+    {
+      "index": 91,
+      "title": "Revenue Model: Guide to Choosing and Building Yours - Fullcast",
+      "url": "https://www.fullcast.com/content/revenue-model/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "tavily"
+      ],
+      "published_date": "2026-03-09T00:00:00.000Z"
+    },
+    {
+      "index": 92,
+      "title": "April Dunford: How Your Differentiated Value Should Drive Your Sales Pitch",
+      "url": "https://businessofsoftware.org/talks/your-differentiated-value/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "exa",
+        "jina",
+        "serper"
+      ],
+      "published_date": "2023-05-04T16:05:28.000Z"
+    },
+    {
+      "index": 93,
+      "title": "Good Strategy/Bad Strategy by Richard P. Rumelt",
+      "url": "https://andrewclark.co.uk/product-book-summaries/good-strategy-bad-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 94,
+      "title": "How to run a market sizing and TAM validation study",
+      "url": "https://cleverx.com/blog/how-to-run-a-market-sizing-and-tam-validation-study/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "6 days ago"
+    },
+    {
+      "index": 95,
+      "title": "Mastering B2B Tech Positioning: Expert Insights from April Dunford",
+      "url": "https://www.thegrowthsyndicate.com/resources/b2b-tech-positioning-dunford",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Nov 21, 2024"
+    },
+    {
+      "index": 96,
+      "title": "Jobs to Be Done (JTBD): The Original Framework by Tony Ulwick",
+      "url": "https://strategyn.com/jobs-to-be-done/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "jina",
+        "serper",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 97,
+      "title": "Business Model Canvas Explained",
+      "url": "https://umbrex.com/resources/frameworks/strategy-frameworks/business-model-canvas/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 98,
+      "title": "Financial Modeling for Tech Startups",
+      "url": "https://www.finrofca.com/news/startup-financial-model",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "jina",
+        "tavily"
+      ],
+      "published_date": "Dec 12, 2023"
+    },
+    {
+      "index": 99,
+      "title": "Notes from “Good Strategy / Bad Strategy”",
+      "url": "https://jlzych.com/2018/06/27/notes-from-good-strategy-bad-strategy/",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Jun 27, 2018"
+    },
+    {
+      "index": 100,
+      "title": "Business Model: Definition and 13 Examples",
+      "url": "https://www.investopedia.com/terms/b/businessmodel.asp",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 101,
+      "title": "SaaS unit economics: the complete guide to CAC, LTV ...",
+      "url": "https://www.fiscallion.io/blog/saas-unit-economics",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 102,
+      "title": "Definition of top-down market sizing - Kadence International",
+      "url": "https://kadence.com/en-us/knowledge/what-is-top-down-market-sizing/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 103,
+      "title": "Industry Structure Analysis (Porter's Five Forces) - SI Labs",
+      "url": "https://www.si-labs.com/en/articles/porters-five-forces/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Mar 1, 2026"
+    },
+    {
+      "index": 104,
+      "title": "The Difference Between Top-Down and Bottom-Up TAM ...",
+      "url": "https://www.scalepath.io/post/top-down-bottom-up-difference-total-addressable-market-tam",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 105,
+      "title": "Jobs-to-be-done segmentation in consumer research",
+      "url": "https://aytm.com/post/jobs-to-be-done-segmentation",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Aug 31, 2022"
+    },
+    {
+      "index": 106,
+      "title": "Harnessing the Power of Differentiated Value: How To Win ...",
+      "url": "https://www.positioning.show/harnessing-the-power-of-differentiated-value-how-to-win-over-customers-and-outperform-competitors-1/",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Aug 1, 2024"
+    },
+    {
+      "index": 107,
+      "title": "The Ultimate Competitive Landscape Analysis Guide",
+      "url": "https://vivaldigroup.com/competitive-landscape-analysis-guide/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "Dec 30, 2023"
+    },
+    {
+      "index": 108,
+      "title": "Mastering revenue streams in the Business Model Canvas",
+      "url": "https://www.businessmodelhacking.com/revenue-streams-business-model-canvas/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Oct 29, 2024"
+    },
+    {
+      "index": 109,
+      "title": "JTBD Analysis, What It Is and How to Do It",
+      "url": "https://athenno.com/insights/jtbd-analysis-what-is-it-and-how-to-do-it",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Dec 15, 2022"
+    },
+    {
+      "index": 110,
+      "title": "Business Model Canvas Explained: Free Template + Real Examples ...",
+      "url": "https://thepower.education/en/blog/business-model-canvas",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 111,
+      "title": "3.3 The Roles of Mission, Vision, and Values",
+      "url": "https://rvcc.pressbooks.pub/principlesofmanagement/chapter/4-3-the-roles-of-mission-vision-and-values/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 112,
+      "title": "TAM, SAM & SOM: How To Calculate The Size Of Your ...",
+      "url": "https://www.antler.co/blog/tam-sam-som",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 113,
+      "title": "Porter's Five Forces: A Framework for Competitive Strategy ...",
+      "url": "https://www.hardingloevner.com/porters-five-forces-a-framework-for-competitive-strategy-analysis/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "jina",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 114,
+      "title": "How to Build Investor-Ready Financial Models",
+      "url": "https://www.lucid.now/blog/build-investor-ready-financial-models/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Feb 17, 2026"
+    },
+    {
+      "index": 115,
+      "title": "Creating a Financial Forecast for Your Startup Business Plan",
+      "url": "https://www.uschamber.com/co/run/finance/financial-forecast-for-business-plan",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "jina",
+        "tavily"
+      ],
+      "published_date": "Jun 17, 2025"
+    },
+    {
+      "index": 116,
+      "title": "Good Strategy, Bad Strategy Book Summary",
+      "url": "https://youexec.com/resources/good-strategy-bad-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 117,
+      "title": "A Quickstart Guide to Positioning  - April Dunford",
+      "url": "https://www.aprildunford.com/post/a-quickstart-guide-to-positioning",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 118,
+      "title": "Vision, Mission And Values: How They Differ And Why They Matter",
+      "url": "https://www.forbes.com/councils/forbesagencycouncil/2024/05/03/vision-mission-and-values-how-they-differ-and-why-they-matter/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 3, 2024"
+    },
+    {
+      "index": 119,
+      "title": "Calculating a LTV:CAC ratio correctly for hardware-as-a- ...",
+      "url": "https://blog.hardfin.com/calculating-the-ltv-to-cac-ratio-metric-correctly-for-hardware-as-a-service-haas",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jan 8, 2026"
+    },
+    {
+      "index": 120,
+      "title": "The Differences Between Mission, Vision and Values Statements",
+      "url": "https://www.shrm.org/topics-tools/tools/hr-answers/difference-mission-vision-values-statements",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 121,
+      "title": "A Guide to Organizational Values, Mission, & Vision",
+      "url": "https://parthenonmgmt.com/a-guide-to-organizational-values-mission-vision/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Oct 8, 2024"
+    },
+    {
+      "index": 122,
+      "title": "JTBD vs Traditional Research: Key Differences Explained",
+      "url": "https://www.sivoinsights.com/blog/how-jobs-to-be-done-jtbd-differs-from-traditional-market-research-methods",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "6 days ago"
+    },
+    {
+      "index": 123,
+      "title": "How Jobs To Be Done Uncovers New Customer Segments",
+      "url": "https://www.sivoinsights.com/blog/using-jobs-to-be-done-to-discover-untapped-customer-segments",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 124,
+      "title": "Build Financial Forecasts for Startups: A Founder's Guide",
+      "url": "https://k38consulting.com/financial-forecasts-for-startups/",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 125,
+      "title": "Crafting a Mission Statement: Purpose, Examples & Impact",
+      "url": "https://www.investopedia.com/terms/m/missionstatement.asp",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 126,
+      "title": "Business Model Canvas: What It Is, How It Works, and Real-World ...",
+      "url": "https://www.thestrategyinstitute.org/insights/business-model-canvas-what-it-is-how-it-works-and-real-world-examples",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 24, 2026"
+    },
+    {
+      "index": 127,
+      "title": "What is the difference between a mission, vision, and values?",
+      "url": "https://www.toistersolutions.com/blog/what-is-the-difference-between-a-mission-vision-and-values",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 17, 2026"
+    },
+    {
+      "index": 128,
+      "title": "Tessl • The package manager for agent skills",
+      "url": "https://tessl.io/registry/skills/github/wondelai/skills/good-strategy-bad-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 129,
+      "title": "Mission Vs. Vision Statement. How to Write a Mission Statement You ...",
+      "url": "https://msc.northwestern.edu/mission-vs-vision-statements/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Dec 11, 2018"
+    },
+    {
+      "index": 130,
+      "title": "Vision Statement vs. Mission Statement: Differences, ...",
+      "url": "https://www.tability.io/odt/articles/vision-statement-and-a-mission-statement-whats-the-difference",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jul 9, 2026"
+    },
+    {
+      "index": 131,
+      "title": "Understanding unit economics: what LTV CAC really ...",
+      "url": "https://www.forecastr.co/blog/unit-economics-startups",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 19, 2026"
+    },
+    {
+      "index": 132,
+      "title": "Good Strategy, Bad Strategy | Richard Rumelt",
+      "url": "https://www.lennysnewsletter.com/p/good-strategy-bad-strategy-richard",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 133,
+      "title": "Good Strategy Bad Strategy: The Difference and Why It Matters by Richard P. Rumelt | Goodreads",
+      "url": "https://www.goodreads.com/en/book/show/11721966-good-strategy-bad-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 134,
+      "title": "(PDF) Mission, vision, and values: What do they say?",
+      "url": "https://www.researchgate.net/publication/259265396_Mission_vision_and_values_What_do_they_say",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 135,
+      "title": "Mission vs. Vision",
+      "url": "https://www.workboard.com/resources/blog/mission-vs-vision",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 136,
+      "title": "7 Powerful Competitor Analysis Frameworks - Frictionless",
+      "url": "https://frictionlesshq.com/7-powerful-competitor-analysis-frameworks/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 137,
+      "title": "porter five forces criticism",
+      "url": "https://siebel-db.siebelinstitute.com/project/PorterFiveForcesCriticism.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 138,
+      "title": "Vision Statement vs. Mission Statement (With Examples)",
+      "url": "https://www.indeed.com/career-advice/career-development/vision-vs-mission-statement",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Jun 15, 2026"
+    },
+    {
+      "index": 139,
+      "title": "Purpose, Mission, and Values Alignment Guide",
+      "url": "https://beehivepr.biz/purpose-mission-values-alignment/",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jul 22, 2024"
+    },
+    {
+      "index": 140,
+      "title": "Common Frameworks for Evaluating the Business ...",
+      "url": "https://courses.lumenlearning.com/suny-mcc-supervision/chapter/common-frameworks-for-evaluating-the-business-environment/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 141,
+      "title": "The Five Competitive Forces That Shape Strategy",
+      "url": "https://piazza.com/class_profile/get_resource/iyd2tysc6fj5aa/iyxgbroqf172cb",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 142,
+      "title": "What is a business model?",
+      "url": "https://www.xero.com/us/guides/what-is-a-business-model/",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "May 15, 2026"
+    },
+    {
+      "index": 143,
+      "title": "Market Sizing - How to Calculate Using Two Methods",
+      "url": "https://www.mymarketresearchmethods.com/market-sizing/amp",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 144,
+      "title": "Porter's Five Forces Analysis: How to Use It",
+      "url": "https://www.workboard.com/resources/blog/porters-5-forces",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 145,
+      "title": "good strategy vs bad strategy",
+      "url": "https://sfo2.digitaloceanspaces.com/cdswi3ix8d8tnz2di/good-strategy-vs-bad-strategy-1.html",
+      "tier": "practitioner",
+      "topics": [
+        "q8_strategy_diagnosis"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 146,
+      "title": "TAM, SAM, and SOM: Made Simple for Growing Businesses",
+      "url": "https://www.salesforce.com/blog/small-business/tam-sam-som",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 147,
+      "title": "What is market sizing and how do investors evaluate it? - Aexus",
+      "url": "https://aexus.com/what-is-market-sizing-and-how-do-investors-evaluate-it",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 148,
+      "title": "What is Top‑Down Market Sizing? | Kadence",
+      "url": "https://kadence.com/knowledge/what-is-top-down-market-sizing",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 149,
+      "title": "Bottom-Up Market Sizing for Startups: Precise TAM Calculation Guide",
+      "url": "https://qubit.capital/blog/bottom-up-market-sizing",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 150,
+      "title": "April Dunford's Positioning Framework / Canvas / Worksheet",
+      "url": "https://www.kathirvel.com/guide-april-dunford-positioning-framework",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 151,
+      "title": "Company Mission vs. Values vs. Vision Statements",
+      "url": "https://status.net/articles/company-mission-vs-values-vs-vision-statements",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 152,
+      "title": "Firm and industry effects on firm profitability: an empirical analysis of KSE Munich Personal RePEc Archive",
+      "url": "https://mpra.ub.uni-muenchen.de/36797",
+      "tier": "practitioner",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 153,
+      "title": "[PDF] Firm and Industry Effects on Firm Profitability: An Empirical Analysis ...",
+      "url": "https://mpra.ub.uni-muenchen.de/36797/1/Firm_and_Industry_Effects_on_Firm_Profitability_IRJFE.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 154,
+      "title": "Porter's Five Forces: Complete Guide, Examples & Template",
+      "url": "https://www.cascade.app/blog/porters-5-forces",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 155,
+      "title": "Revenue Streams Business Model Canvas - FourWeekMBA",
+      "url": "https://fourweekmba.com/revenue-streams-business-model-canvas",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 156,
+      "title": "Mission, Vision, Values, and Purpose - Definitions and Differences",
+      "url": "https://boardsource.org/resources/mission-vision-values-and-purpose",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 157,
+      "title": "Revenue streams Business Model Canvas | Example revenu model",
+      "url": "https://www.businessmodelhacking.com/nl/revenue-streams-business-model-canvas",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 158,
+      "title": "Competitive Intelligence: The Ultimate Guide",
+      "url": "https://www.safegraph.com/guides/competitive-intelligence",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 159,
+      "title": "Financial forecasting for startups",
+      "url": "https://www.svb.com/startup-insights/raising-capital/financial-forecasting",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 160,
+      "title": "Porter's Five Forces: Definition, Examples & Case Use",
+      "url": "https://www.roadtooffer.com/blog/porters-five-forces",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 161,
+      "title": "Competitive Strategy | Business and Management | Research Starters | EBSCO Research",
+      "url": "https://www.ebsco.com/research-starters/business-and-management/competitive-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 162,
+      "title": "Effects of Formal Strategic Planning on Financial Performance in Small ...",
+      "url": "https://members.bestbusinesscoach.ca/wp-content/uploads/2022/11/Effects-of-Formal-Strategic-Planning-on-Financial-Performance-in-Small-Firms-A-Meta-Analysis.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 163,
+      "title": "Strategy Execution vs. Planning: Bridge the Gap",
+      "url": "https://www.spiderstrategies.com/blog/strategic-planning-vs-strategy-execution",
+      "tier": "practitioner",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 164,
+      "title": "Breaking Down the Financial Challenges of Startups: A Comprehensive Study of Failures",
+      "url": "https://www.preprints.org/manuscript/202505.1576",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 165,
+      "title": "Corporate mission and vision statements: Turning values into brand guidelines",
+      "url": "https://reinaphics.com/corporate-brand-mission-vision-statements",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 166,
+      "title": "Survival of the funded: Econometric analysis of startup longevity and success",
+      "url": "https://jemi.edu.pl/vol-17-issue-4-2021/survival-of-the-funded-econometric-analysis-of-startup-longevity-and-success",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 167,
+      "title": "Startup Failure Rate: What the Data Actually Shows (And Why Acquisitions Succeed at 2x the Rate) - Angora | Home",
+      "url": "https://joinangora.com/blog/startup-or-acquisition-failure-rates",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 168,
+      "title": "How to Write Mission, Vision, and Values Statements - 100 Examples to Help Guide You Through the Process — Bâton Global",
+      "url": "https://www.batonglobal.com/post/how-to-write-mission-vision-and-values-statements-with-examples",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 169,
+      "title": "Strategic Planning and Organizational Performance: An Empirical Study on the Manufacturing Sector",
+      "url": "https://www.mdpi.com/2071-1050/16/15/6690",
+      "tier": "practitioner",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 170,
+      "title": "5 reasons a bottom-up financial model is the best to forecast revenue",
+      "url": "https://www.forecastr.co/blog/bottom-up-financial-model?hs_amp=true",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 171,
+      "title": "Business Model Canvas - Revenue — DigitalBizModels",
+      "url": "https://www.digitalbizmodels.com/blog/business-model-canvas-revenue",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 172,
+      "title": "Positioning With April Dunford",
+      "url": "https://www.positioning.show",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 173,
+      "title": "The difference: Mission vs Vision Statements | The Workstream",
+      "url": "https://www.atlassian.com/work-management/strategic-planning/mission-and-vision",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 174,
+      "title": "Resource Based View (RBV) of Competitive Advantage",
+      "url": "https://www.academia.edu/74691383/Resource_Based_View_RBV_of_Competitive_Advantage",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 175,
+      "title": "[PDF] 13 PRODUCT DIFFERENTIATION AND MARKET ...",
+      "url": "https://risumarketingjournals.com.ng/wp-content/uploads/2025/01/JMD-10-1-2-PRODUCT-DIFFERENTIATION-AND-MARKET-COMPETITIVENESS-OF-FIRMS.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 176,
+      "title": "Of Mission and Vision Statements and Their Potential Impact on Employee ...",
+      "url": "https://ijbss.thebrpi.org/journals/Vol_3_No_14_Special_Issue_July_2012/11.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 177,
+      "title": "Porter's five forces analysis - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Porter%27s_five_forces_analysis",
+      "tier": "practitioner",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 178,
+      "title": "Business Model Canvas: What It Is, How to Build & Use It | Creately",
+      "url": "https://creately.com/guides/business-model-canvas-explained",
+      "tier": "practitioner",
+      "topics": [
+        "q6_business_model_revenue"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 179,
+      "title": "Demand Forecast Accuracy vs Bias",
+      "url": "https://www.forthcast.io/blog/bias-accuracy-demand-forecasting",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 180,
+      "title": "Business Failure Statistics: What the Data Says About Startup Survival - Founder Reports",
+      "url": "https://founderreports.com/business-failure-statistics",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 181,
+      "title": "Porter's Five Forces vs. PESTLE: Strategic Planning Tools Explained",
+      "url": "https://www.investopedia.com/ask/answers/041015/whats-difference-between-porters-5-forces-and-pestle-analysis.asp",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 182,
+      "title": "Value proposition: win customers & drive business growth",
+      "url": "https://www.strategyzer.com/value-proposition",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 183,
+      "title": "Business Models, Business Strategy and Innovation",
+      "url": "https://v-assets.cdnsw.com/fs/root/8jig8-businessmodelsbusinessstrategy.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 184,
+      "title": "LTV vs CAC: Common Calculation Errors",
+      "url": "https://www.lucid.now/blog/ltv-vs-cac-missteps-to-watch-for",
+      "tier": "practitioner",
+      "topics": [
+        "q7_financial_forecast"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 185,
+      "title": "Is Sustainable Competitive Advantage an Achievable Holy Grail",
+      "url": "https://jbm.johogo.com/pdf/volume/1302/JBM-1302-02-full.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 186,
+      "title": "Firm and industry effects on firm profitability: an empirical analysis of KSE",
+      "url": "https://ideas.repec.org/p/pra/mprapa/36797.html",
+      "tier": "practitioner",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 187,
+      "title": "Porter's Five-Forces Analysis of Market Structure",
+      "url": "https://info.eaglenet.jbu.edu/depts/odl/om/resources/om4224/portersfiveforces.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 188,
+      "title": "The Ultimate Startup Guide With Statistics (2024–2025)",
+      "url": "https://ff.co/startup-statistics-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 189,
+      "title": "What is The Value Proposition Canvas — updated 2026 | IxDF",
+      "url": "https://ixdf.org/literature/topics/value-proposition-canvas",
+      "tier": "practitioner",
+      "topics": [
+        "q5_positioning_uvp"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 190,
+      "title": "The Links between Proactive Environmental Strategy, Competitive Advantages and Firm Performance: An Empirical Study in Vietnam",
+      "url": "https://www.mdpi.com/2071-1050/12/12/4962",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 191,
+      "title": "Jobs To Be Done Framework: Pros, Cons & Business Use",
+      "url": "https://www.sivoinsights.com/blog/jobs-to-be-done-framework-what-it-is-and-when-to-use-it",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 192,
+      "title": "Undercapitalization-as-a-Contributor-to-Business-Failure-for ...",
+      "url": "https://www.nwbc.gov/wp-content/uploads/2023/11/Undercapitalization-as-a-Contributor-to-Business-Failure-for-Women-Entpreneurs.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 193,
+      "title": "Strategic Resources and Sustainable Competitive Advantage: Explaining the Resource-Based View for Business Students",
+      "url": "https://www.swissuniversity.com/post/strategic-resources-and-sustainable-competitive-advantage-explaining-the-resource-based-view-for-bu",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 194,
+      "title": "The Ehrenberg-Bass Institute's Scientific Marketing Findings",
+      "url": "https://clickz.com/ehrenberg-bass-institutes-scientific-marketing-learnings/269656",
+      "tier": "practitioner",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 195,
+      "title": "Market Segmentation: Types, Examples & Frameworks",
+      "url": "https://www.typeform.com/blog/market-segmentation-types-examples-and-frameworks",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 196,
+      "title": "Jobs-to-be-Done and Personas with Claire Menke (Full Transcript)",
+      "url": "https://jobstobedone.org/radio/jobs-to-be-done-and-personas",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 197,
+      "title": "What is Firmographic segmentation? Examples & Best Practices",
+      "url": "https://www.latentview.com/glossary/firmographic-segmentation",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 198,
+      "title": "Forecast accuracy vs. forecast bias: what retail planners need to track",
+      "url": "https://www.invent.ai/blog/forecast-accuracy-vs.-forecast-bias-what-retail-planners-need-to-track",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 199,
+      "title": "Capital Structure and the Profitability of a Firm: Empirical Evidence from Insurance Industry in Ghana",
+      "url": "https://www.abacademies.org/articles/capital-structure-and-the-profitability-of-a-firm-empirical-evidence-from-insurance-industry-in-ghana-16208.html",
+      "tier": "practitioner",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 200,
+      "title": "BRIDGING THE GAP BETWEEN STRATEGY AND EXECUTION: AN EMPIRICAL STUDY OF PERFORMANCE MANAGEMENT SYSTEMS\n\t\t\t\t\t\t\t| Lex localis - Journal of Local Self-Government",
+      "url": "https://lex-localis.org/index.php/LexLocalis/article/view/800827",
+      "tier": "practitioner",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 201,
+      "title": "Effects of Formal Strategic Planning on Financial Performance in Small Firms: A Meta-Analysis",
+      "url": "https://ideas.repec.org/a/sae/entthe/v17y1993i3p53-64.html",
+      "tier": "practitioner",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 202,
+      "title": "The resource-based theory of competitive advantage",
+      "url": "https://ftms.edu.my/images/Document/MOD001074%20-%20Strategic%20Management%20Analysis/WK6_SR_MOD001074_Grant_1991.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 203,
+      "title": "The role of strategy implementation practices on performance of the public sector organisations | Mwanza | Africa’s Public Service Delivery & Performance Review",
+      "url": "https://apsdpr.org/index.php/apsdpr/article/view/891/1782",
+      "tier": "practitioner",
+      "topics": [
+        "q14_strategy_process_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 204,
+      "title": "Competitive Strategies: Structures and Power – Mental Models 4 Life",
+      "url": "https://mentalmodels4life.net/2025/06/16/competitive-strategies-structures-and-power",
+      "tier": "practitioner",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 205,
+      "title": "An Exploration of and Case Studies in Demand Forecast ...",
+      "url": "https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=osu1506682418566979&disposition=inline",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 206,
+      "title": "Customer RFM Analysis: Segmentation, Lifetime Value & Targeting | ECOSIRE",
+      "url": "https://ecosire.com/blog/customer-rfm-analysis-segmentation-ltv",
+      "tier": "practitioner",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 207,
+      "title": "Sales Forecast Accuracy: How to Measure and Improve It | GrowthFactor",
+      "url": "https://www.growthfactor.ai/resources/blog/sales-forecast-accuracy",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 208,
+      "title": "Measuring forecast accuracy: The complete guide | RELEX Solutions",
+      "url": "https://www.relexsolutions.com/resources/measuring-forecast-accuracy",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 209,
+      "title": "Curbing Optimism Bias and Strategic Misrepresentation in Planning: Reference Class Forecasting in Practice",
+      "url": "https://www.academia.edu/20497637/Curbing_Optimism_Bias_and_Strategic_Misrepresentation_in_Planning_Reference_Class_Forecasting_in_Practice",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 210,
+      "title": "Determinants of early-stage startup performance: Survey ...",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/21-057_0c4f5410-3dcb-4c2f-8c4e-6fcbc358b92f.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 211,
+      "title": "Customer Segmentation as a Revenue Generator for Profit Purposes",
+      "url": "https://www.mdpi.com/2227-7390/11/21/4425",
+      "tier": "practitioner",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 212,
+      "title": "Reasons Why Small Businesses Fail and How to Avoid Them",
+      "url": "https://www.uschamber.com/co/start/strategy/why-small-businesses-fail",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 213,
+      "title": "Strategy VPR-Align Model For Positioning and Differentiation in Marketing Consulting: An Empirical Framework Linking Value Proposition to Revenue Model\n\t\t\t\t\t\t\t| Journal of Public Relations",
+      "url": "https://carijournals.org/journals/JPR/article/view/3665",
+      "tier": "practitioner",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 214,
+      "title": "Product Differentiation, Industry Concentration and Market Share Turbulence",
+      "url": "https://ideas.repec.org/a/taf/ijecbs/v14y2007i1p37-57.html",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 215,
+      "title": "Is Porter's Five Forces Framework Still Relevant? A study of the capital/labour intensity continuum via mining and IT industries | TIM Review",
+      "url": "https://timreview.ca/article/1366",
+      "tier": "practitioner",
+      "topics": [
+        "q15_industry_structure_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 216,
+      "title": "The market-based assets theory of brand competition",
+      "url": "https://irp.cdn-website.com/b1aacc79/files/uploaded/Ehrenberg-Bass_Institute_Study.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 217,
+      "title": "Sales Forecasting Accuracy Guide: Methods, Benchmarks & Best Practices",
+      "url": "https://forecastio.ai/blog/sales-forecasting-accuracy-and-analysis",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 218,
+      "title": "Home | Ehrenberg-Bass Institute for Marketing Science",
+      "url": "https://marketingscience.info",
+      "tier": "practitioner",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 219,
+      "title": "Assessing the Effectiveness of Marketing Customer ...",
+      "url": "https://www.multiresearchjournal.com/admin/uploads/archives/archive-1769154403.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 220,
+      "title": "The Operating Model for Recurring Revenue",
+      "url": "https://winningbydesign.com/wp-content/uploads/2022/06/Research-Paper_-The-Fundamental-Models-of-Recurring-Revenue.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 221,
+      "title": "Answering critics |",
+      "url": "https://marketingscience.info/news-and-insights/answering-critics",
+      "tier": "practitioner",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 222,
+      "title": "Advances In Intermittent Demand Forecasting",
+      "url": "https://www.research.unipd.it/retrieve/240d831d-431f-4004-bcb7-1883ce5ac3bd/Final_Thesis_Parvaneh_Rafieisangari.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 223,
+      "title": "Sense-Making Distorts Perceptions of Consumer Segments",
+      "url": "https://thearf-org-unified-admin.s3.amazonaws.com/MSI_Report_23-120.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q10_segmentation_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 224,
+      "title": "Startup Financial Forecasting: Key Pitfalls and Solutions | Finro",
+      "url": "https://www.finrofca.com/news/financial-forecast-pitfalls",
+      "tier": "practitioner",
+      "topics": [
+        "q9_sizing_forecast_accuracy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 225,
+      "title": "Subscription Business Model Guide: Build Predictable Recurring Revenue with Pricing, Onboarding & Retention - Journeys in Business",
+      "url": "https://journeysinbusiness.com/subscription-business-model-guide-build-predictable-recurring-revenue-with-pricing-onboarding-retention",
+      "tier": "practitioner",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 226,
+      "title": "Develop Your Recurring Revenue Business Model Strategy – FINTech NewsRoom",
+      "url": "https://www.fintechnewsroom.com/business/develop-your-recurring-revenue-business-model-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 227,
+      "title": "Law Firms and the Future of a Recurring Revenue Business Model | Stride Services",
+      "url": "https://stride.services/accounting/law-firms-recurring-revenue-business-model",
+      "tier": "practitioner",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 228,
+      "title": "Strategic orientations, generic strategies, and export performance: a meta-analysis",
+      "url": "http://hdl.handle.net/10362/39722",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-01-26T00:00:00.000Z"
+    },
+    {
+      "index": 229,
+      "title": "The Effect of the Positioning Strategy on the Firms' Performance Moderated by the Product Market Competition",
+      "url": "https://www.redalyc.org/journal/841/84176391003/",
+      "tier": "practitioner",
+      "topics": [
+        "q11_differentiation_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 230,
+      "title": "Business Model Design and the Performance of Entrepreneurial Firms | Organization Science",
+      "url": "https://dl.acm.org/doi/10.1287/orsc.1060.0232",
+      "tier": "practitioner",
+      "topics": [
+        "q12_business_model_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 231,
+      "title": "The Impact of Equity Funding Dynamics on Venture Success: An Empirical Analysis Based on Crunchbase Data",
+      "url": "https://www.mdpi.com/2227-7099/11/1/19",
+      "tier": "practitioner",
+      "topics": [
+        "q13_startup_financial_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-01-09T00:00:00.000Z"
+    },
+    {
+      "index": 232,
+      "title": "Analysis of Vision and Mission Statements Characteristics and their Association with Organizational Performance: A Guide to Writing Effective Vision and Mission Statements",
+      "url": "https://www.researchgate.net/publication/357850463_Analysis_of_Vision_and_Mission_Statements_Characteristics_and_their_Association_with_Organizational_Performance_A_Guide_to_Writing_Effective_Vision_and_Mission_Statements",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-10-22T00:00:00.000Z"
+    },
+    {
+      "index": 233,
+      "title": "Mission statement effectiveness: investigating managers' sensemaking role",
+      "url": "https://openresearch.lsbu.ac.uk/item/8y8vx",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 234,
+      "title": "ANALYSIS OF VISION AND MISSION STATEMENTS AND THEIR ASSOCIATION WITH ORGANIZATIONAL PERFORMANCE AND IMPROVING STRATEGIC PLANNING MATRICES THROUGH INCORPORATION OF AQCD FACTORS",
+      "url": "http://hdl.handle.net/2437/303698",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-03-07T00:00:00.000Z"
+    },
+    {
+      "index": 235,
+      "title": "Mission, Vision, and Value Appropriation: A Correlational Analysis\n\t\t\t\t\t\t\t| Cuadernos de Administración",
+      "url": "https://cuadernosdeadministracion.univalle.edu.co/index.php/cuadernos_de_administracion/article/view/11955",
+      "tier": "practitioner",
+      "topics": [
+        "q1_mission_vision_values"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 236,
+      "title": "How to Calculate Market Size: Step-by-Step (2026) | VantaInsights",
+      "url": "https://vantainsights.com/insights/how-to-calculate-market-size",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-16T00:00:00.000Z"
+    },
+    {
+      "index": 237,
+      "title": "Market Sizing Methodology (TAM/SAM/SOM) | knowledgelib.io",
+      "url": "https://knowledgelib.io/business/market-research/market-sizing-methodology/2026",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-11T00:00:00.000Z"
+    },
+    {
+      "index": 238,
+      "title": "How to Size a Market: A Step-by-Step Guide for Consultants, Investors, and Founders | Sectorial",
+      "url": "https://sectorial.io/resources/blog/how-to-size-a-market",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-10T00:00:00.000Z"
+    },
+    {
+      "index": 239,
+      "title": "Market Sizing: TAM, SAM, SOM Explained for Startup Founders",
+      "url": "https://www.bridginglocal.com/post/tam-sam-som-market-sizing-startup",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-01T00:00:00.000Z"
+    },
+    {
+      "index": 240,
+      "title": "Market Sizing Framework: TAM, SAM, SOM Done Right",
+      "url": "https://themarketingjuice.com/market-sizing-framework/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-06T00:00:00.000Z"
+    },
+    {
+      "index": 241,
+      "title": "Market Sizing Research: What It Means and Why It Matters - Moody Media",
+      "url": "https://moodymedia.io/blog/market-sizing-research/",
+      "tier": "practitioner",
+      "topics": [
+        "q2_market_research_sizing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-23T00:00:00.000Z"
+    },
+    {
+      "index": 242,
+      "title": "How to Do Customer Segmentation Research in 2026: Beyond Demographics | Blog | Perspective AI",
+      "url": "https://getperspective.ai/blog/how-to-do-customer-segmentation-research-2026-beyond-demographics",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-06T00:00:00.000Z"
+    },
+    {
+      "index": 243,
+      "title": "The Complete Guide to ICP (2026) | Clay",
+      "url": "https://www.clay.com/guides/ideal-customer-profile",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-26T00:00:00.000Z"
+    },
+    {
+      "index": 244,
+      "title": "Jobs-Based Segmentation: Beyond Personas and Demographics",
+      "url": "https://nextmovetheory.com/library/canon/advanced-jobs-to-be-done/segmentation",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 245,
+      "title": "Buyer Persona: Why Marketing Science Rejects Them (2026) | Deep Marketing",
+      "url": "https://www.deepmarketing.it/en/blog/buyer-persona-pseudoscience-targeting-evidence-based",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-20T00:00:00.000Z"
+    },
+    {
+      "index": 246,
+      "title": "Jobs-to-Be-Done Interview Guide: JTBD Framework & Questions (2026)",
+      "url": "https://www.koji.so/blog/jobs-to-be-done-interview-guide-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "index": 247,
+      "title": "Ideal Customer Profile (ICP): Template, Examples, and AI Validation | Koji",
+      "url": "https://www.koji.so/docs/ideal-customer-profile-icp",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 248,
+      "title": "Buyer Persona Survey Guide: Build Data-Driven Personas with Research | Koji",
+      "url": "https://www.koji.so/docs/buyer-persona-survey-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 249,
+      "title": "ICP Development: The Complete Guide | Erik R. Miller",
+      "url": "https://erikrmiller.com/icp/",
+      "tier": "practitioner",
+      "topics": [
+        "q3_target_customer_icp"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-11T00:00:00.000Z"
+    },
+    {
+      "index": 250,
+      "title": "4.12: Common Frameworks for Evaluating the Business Environment - Business LibreTexts",
+      "url": "https://biz.libretexts.org/Courses/Lumen_Learning/Principles_of_Management_(Lumen)/04%3A_Environments_and_Strategic_Management/4.12%3A_Common_Frameworks_for_Evaluating_the_Business_Environment",
+      "tier": "practitioner",
+      "topics": [
+        "q4_competitive_industry_analysis"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-07-01T00:00:00.000Z"
+    },
+    {
+      "index": 251,
+      "title": "Natural language processing for analyzing online customer reviews",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11323031/",
+      "tier": "confirmed",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 252,
+      "title": "Driving innovation through social data: a methodology for building buyer personas",
+      "url": "https://doi.org/10.34626/g79w-kb78",
+      "tier": "confirmed",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-07-09T00:00:00.000Z"
+    },
+    {
+      "index": 253,
+      "title": "Persona Transparency: Analyzing the Impact of Explanations on Perceptions of Data-Driven Personas",
+      "url": "https://doi.org/10.1080/10447318.2019.1688946",
+      "tier": "confirmed",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-11-19T00:00:00.000Z"
+    },
+    {
+      "index": 254,
+      "title": "How to Use the Six-Step Digital Ethnography Framework to Develop Buyer Personas: The Case of Fan Fit",
+      "url": "https://doi.org/10.2196/41489",
+      "tier": "confirmed",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-11-25T00:00:00.000Z"
+    },
+    {
+      "index": 255,
+      "title": "Personas and Analytics: A Comparative User Study of Efficiency and Effectiveness for a User Identification Task",
+      "url": "https://doi.org/10.1145/3313831.3376770",
+      "tier": "confirmed",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-04-21T00:00:00.000Z"
+    },
+    {
+      "index": 256,
+      "title": "Research Article Data-Driven Personas for Enhanced User Understanding: Combining Empathy with Rationality for Better Insights to Analytics",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2543925122000560",
+      "tier": "confirmed",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 257,
+      "title": "Data-Driven Personas for Enhanced User Understanding: Combining Empathy with Rationality for Better Insights to Analytics",
+      "url": "https://doi.org/10.2478/dim-2020-0005",
+      "tier": "confirmed",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-03-01T00:00:00.000Z"
+    },
+    {
+      "index": 258,
+      "title": "[2303.15870] A Multi-Granularity Matching Attention Network for Query Intent Classification in E-commerce Retrieval",
+      "url": "https://ar5iv.labs.arxiv.org/html/2303.15870",
+      "tier": "confirmed",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 259,
+      "title": "IntentTune: Using user demand and personalization to resolve “unknown” query intents for e-commerce search",
+      "url": "https://arxiv.org/html/2607.01530v1",
+      "tier": "confirmed",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 260,
+      "title": "Bridging the Semantic Gap Between Customer Needs and Design Specifications Using User-Generated Content",
+      "url": "https://doi.org/10.1109/tem.2020.3021698",
+      "tier": "confirmed",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-09-21T00:00:00.000Z"
+    },
+    {
+      "index": 261,
+      "title": "5 Seriously Smart Ways to Figure Out What Your Audience is Searching For",
+      "url": "https://www.laurajawadmarketing.com/blog/how-to-figure-out-what-your-audience-is-searching-for/",
+      "tier": "practitioner",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Dec 17, 2025"
+    },
+    {
+      "index": 262,
+      "title": "Conversational Search and AI Search Intent Explained",
+      "url": "https://business.adobe.com/blog/user-intent-and-conversational-search",
+      "tier": "practitioner",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Jun 17, 2026"
+    },
+    {
+      "index": 263,
+      "title": "Where to Reach Customers Through Conversational Search Intent",
+      "url": "https://www.2pointagency.com/glossary/where-to-reach-customers-through-conversational-search-intent/",
+      "tier": "practitioner",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Feb 2, 2026"
+    },
+    {
+      "index": 264,
+      "title": "From Keywords to Conversations: How Search Intent Is Changing ...",
+      "url": "https://emfluence.com/blog/from-keywords-to-conversations-how-search-intent-is-changing-content-strategy",
+      "tier": "practitioner",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "Oct 7, 2025"
+    },
+    {
+      "index": 265,
+      "title": "Why Voice Search and Conversational Marketing Are the ...",
+      "url": "https://socialfirm.com/blog/voice-search-and-conversational-marketing/",
+      "tier": "practitioner",
+      "topics": [
+        "q17_audience_language_intent"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Nov 25, 2025"
+    },
+    {
+      "index": 266,
+      "title": "Persona (user experience) | Marketing | Research Starters | EBSCO Research",
+      "url": "https://www.ebsco.com/research-starters/marketing/persona-user-experience",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 267,
+      "title": "Persona Research - Buyer Persona Research | NewtonX",
+      "url": "https://www.newtonx.com/capabilities/customer-segmentation-research/persona-research",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 268,
+      "title": "Developing Buyer Personas in B2B: The Workshop Guide for Accurate Target Audience Definitions | Brixon Blog",
+      "url": "https://brixongroup.com/en/developing-buyer-personas-in-b2b-the-workshop-guide-for-accurate-target-audience-definitions",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 269,
+      "title": "Leverage Personas & Customer Research for Smarter Hypotheses",
+      "url": "https://www.convert.com/blog/a-b-testing/personas-in-ab-testing",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 270,
+      "title": "Data-driven Buyer Personas: What They Are and How to Build them",
+      "url": "https://www.magnolia-cms.com/blog/data-driven-buyer-personas.html",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 271,
+      "title": "The Full Guide to Audience Research: Creating Buyer Personas Through Data - Valchanova.me",
+      "url": "https://valchanova.me/buyer-persona-tools-template",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 272,
+      "title": "Customer Personas – Foundations in Digital Marketing",
+      "url": "https://opentextbc.ca/foundationsdigitalmarketing/chapter/customer-personas",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 273,
+      "title": "AI Buyer Persona Tool for B2B Teams | Marketing Mary",
+      "url": "https://www.marketingmary.ai/interactive-buyer-personas",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 274,
+      "title": "Buyer personas: Your blueprint to market success",
+      "url": "https://www.simon-kucher.com/en/insights/buyer-personas-your-blueprint-market-success",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 275,
+      "title": "What is a persona in marketing? Buyer & user ...",
+      "url": "https://www.productmarketingalliance.com/your-guide-to-personas",
+      "tier": "practitioner",
+      "topics": [
+        "q16_persona_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    }
+  ]
+}

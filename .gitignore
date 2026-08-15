@@ -74,15 +74,17 @@ archives/
 # Decision log (private/sensitive)
 /decisions/
 
-# Research source indexes and run logs (large, regenerable)
-**/_research/sources.json
+# Research raw dumps and run logs (large, regenerable)
 **/_research/sources-raw.json
 **/_research/*.log
 
-# Exception: seo-advisor's source index MUST stay tracked. It is the only thing that
-# resolves the [sN] citations in references/research-synthesis.md, and losing it is
-# what left claude-advisor's citations dangling. Public URLs only, nothing private.
-!.claude/skills/seo-advisor/_research/sources.json
+# sources.json is deliberately NOT ignored. It is the only thing that resolves the [sN]
+# citations in a research-backed skill's references/, so ignoring it silently breaks every
+# citation on clone - which is what left claude-advisor's dangling. This used to be an ignore
+# with a single `!` exception for seo-advisor, which meant strategic-foundation's and
+# branding-advisor's indexes were being dropped without anyone noticing. They are ~100-170KB
+# of public URLs, nothing private, and one per research-backed skill. Tracking them by default
+# is cheaper than remembering to add an exception every time a skill is built.
 
 # Playwright CLI session logs
 **/.playwright-cli/
