@@ -5,17 +5,54 @@ description: Complete API for Google NotebookLM - full programmatic access inclu
 
 # NotebookLM Skill
 
-Full programmatic access to Google NotebookLM via the `notebooklm-py` CLI (v0.7.1). Installed system-wide on this machine.
+Full programmatic access to Google NotebookLM via the `notebooklm-py` CLI.
 
-## Setup (Already Done)
+## Setup (current machine, verified 2026-08-15)
 
-- **CLI:** `$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe`
+- **CLI:** `$env:APPDATA\Python\Python314\Scripts\notebooklm.exe` (**v0.8.1**, Python 3.14)
 - **Auth:** `$env:USERPROFILE\.notebooklm\profiles\default\storage_state.json`
-- **Invoke via PowerShell:** `& "$env:LOCALAPPDATA\Programs\Python\Python312\Scripts\notebooklm.exe" <command>`
+- **Invoke via PowerShell:** `& "$env:APPDATA\Python\Python314\Scripts\notebooklm.exe" <command>`
 
 Always run notebooklm commands via PowerShell, not Bash (Python is not on the Bash PATH).
 
-## Re-Authentication (When Session Expires)
+> **Machine move (2026-08-15).** The repo moved from the `qubit` profile to `zh838` and the
+> CLI did not come with it - nothing was installed and `~/.notebooklm/` did not exist. It was
+> reinstalled at the path above. If a fresh machine hits `CLI NOT FOUND`, the fix is
+> installation, not re-auth:
+> ```powershell
+> & "C:\Program Files\Python314\python.exe" -m pip install notebooklm-py playwright
+> & "C:\Program Files\Python314\python.exe" -m playwright install chromium
+> ```
+> The old Python 3.12 path in this file's history does not exist on this machine.
+
+## v0.8.1 differences from the v0.7.1 this skill was written for
+
+Three things changed and each one silently breaks old code:
+
+1. **`login` is one step, not two.** `notebooklm login` opens the browser and **saves auth
+   automatically once login is detected**. The `scripts/relogin.py open` -> kill -> `capture`
+   dance below is the v0.7.1 flow and is no longer needed (`relogin.py` also hardcodes the
+   dead Python 3.12 path).
+2. **JSON responses are wrapped.** `list` returns `{"notebooks": [...]}` and `create` returns
+   `{"notebook": {"id": ...}}`, where v0.7.1 returned them bare. Code doing
+   `($out | ConvertFrom-Json).Count` or `res["id"]` gets zero or a crash. Accept both shapes.
+3. **`source list` needs `-n`.** `source list <id>` is a validation error in v0.8.1; it is
+   `source list -n <id>`.
+
+## Re-Authentication (v0.8.1)
+
+`notebooklm list --json` fails with `AUTH_REQUIRED`. Run login as a **background task** so
+the browser is not torn down when the call returns:
+
+```powershell
+& "$env:APPDATA\Python\Python314\Scripts\notebooklm.exe" login
+```
+
+Tell the user a Chromium window titled **"Google Chrome for Testing"** is open, and that
+signing into their normal Chrome does nothing since this profile is isolated. Auth writes
+itself on detection; then verify with `list --json`.
+
+## Re-Authentication (legacy v0.7.1 two-step - only if that version is reinstalled)
 
 `notebooklm list` will fail with "Authentication expired". `scripts/relogin.py` handles it.
 
