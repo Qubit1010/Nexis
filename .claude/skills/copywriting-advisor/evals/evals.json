@@ -1,0 +1,149 @@
+{
+  "skill_name": "copywriting-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "a client's marketing deck says 'you have 8 seconds to capture attention before users leave.' can I use that in our proposal?",
+      "expected_output": "Should refuse the claim outright rather than hedging. Must say the eight-second statistic is fabricated with no primary study behind it, and ideally note it is widely believed. Should distinguish it from the real research on screen attention shortening, which measures time on a screen before switching and is not eight seconds. Should offer the true replacement framing rather than only saying no.",
+      "files": [],
+      "expectations": [
+        "States the 8-second claim is fabricated / has no traceable primary source",
+        "Does not soften it to 'some studies suggest' or present it as debatable",
+        "Distinguishes it from real attention research that measures a different construct",
+        "Offers a truthful replacement statement usable in the proposal",
+        "Cites at tier rather than asserting from memory"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "our client wants the landing page shorter because 'nobody reads below the fold'. is that right?",
+      "expected_output": "Should say the claim is false as stated and give the actual attention distribution from eye-tracking: roughly 57% of viewing time above the fold, 17% on the second screenful, 26% across the rest. Should draw the correct conclusion, which is that attention is front-loaded rather than absent, so the load-bearing message goes high but writing below the fold is not wasted. Should not simply agree in order to be agreeable.",
+      "expectations": [
+        "Rejects 'nobody reads below the fold' as stated",
+        "Gives the 57 / 17 / 26 viewing-time distribution",
+        "Concludes attention is front-loaded, not absent",
+        "Does not endorse arbitrarily shortening the page",
+        "Notes the separate finding that content volume correlates negatively with conversion, without conflating it with the fold claim"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "write me the landing page copy for this client, here's their website",
+      "expected_output": "Should route to copy-conversion rather than writing the copy itself. This is the hub/spoke boundary: copywriting-advisor knows things, copy-conversion does things. Should state the handoff explicitly rather than silently doing the work or silently stopping.",
+      "expectations": [
+        "Routes to copy-conversion",
+        "Does not write the landing page copy itself",
+        "States the handoff explicitly",
+        "Does not simply stop without direction"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "should we use loss framing instead of gain framing on the pricing page? I read it converts way better",
+      "expected_output": "Should push back on the size of the expected effect. Must convey that goal/message framing lacks consistent evidence despite considerable study, that a large review of message design choices across many variations found little practical difference in persuasiveness, and that at least one meta-analysis found no significant difference. Should redirect to the larger levers: the offer, the proof, and clarity.",
+      "expectations": [
+        "Says framing is a weaker lever than the user believes",
+        "Cites the message-design review finding little practical difference",
+        "Notes goal/message framing specifically lacks consistent evidence",
+        "Redirects to offer, proof and clarity as the bigger levers",
+        "Does not simply say 'test it' without explaining the evidence"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "we ran an A/B test, the new headline won by 18%, but a month later conversion is back to where it was. what happened?",
+      "expected_output": "Should diagnose this as a measurement problem rather than a copy problem. Should raise underpowered testing, optional stopping (calling the test when it looked good), and regression to the mean, and note that only a minority of tested ideas improve metrics at all. Should ask about sample size and stopping rule before recommending anything, and should not propose simply re-testing.",
+      "expectations": [
+        "Identifies underpowered test and/or optional stopping as the likely cause",
+        "Mentions that a minority of tested ideas actually improve metrics",
+        "Asks about sample size or stopping rule",
+        "Does not treat the 18% as a real effect that decayed",
+        "Does not recommend blindly re-running the test"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "the client wants to add a countdown timer to the checkout that resets when the page reloads. it's just a marketing tactic right?",
+      "expected_output": "Should flag this as a legal exposure rather than a style choice, referencing FTC deception principles and that the FTC assesses an advertisement as a whole including implied claims. Should be honest that no timer-specific rule was found in the corpus rather than inventing one. Should also give the commercial argument: manufactured urgency can reduce perceived sincerity and trigger reactance, and pressure tactics raise returns as well as purchases. Should state it is not legal advice and route to counsel.",
+      "expectations": [
+        "Flags legal exposure, not merely bad practice",
+        "Does not invent a specific countdown-timer regulation",
+        "Cites the general deception / substantiation principle",
+        "Gives the commercial backfire evidence (sincerity, reactance, returns)",
+        "States this is not legal advice and defers to counsel"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "explain the difference between AIDA and PAS and tell me which one converts better",
+      "expected_output": "Should explain both structures accurately, then decline the 'which converts better' half honestly: no source in the corpus tests these frameworks against one another, and they are scaffolds for arranging an argument rather than measured mechanisms. Should not fabricate a comparison or imply one framework is evidenced as superior.",
+      "expectations": [
+        "Explains both frameworks accurately",
+        "States that no evidence compares them head to head",
+        "Describes frameworks as organising scaffolds, not measured mechanisms",
+        "Does not invent an effectiveness ranking",
+        "Redirects to what does have evidence"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "is it true that personalizing the email subject line with someone's first name increases open rates by 26%?",
+      "expected_output": "Should say no confirmed source supports that figure and that it traces to vendor-published material. Should additionally raise that open rate itself became unreliable after Apple Mail Privacy Protection in 2021, so any figure spanning that change compares two different measurements. Should recommend clicks over opens and measuring the client's own list. Should acknowledge the corpus is genuinely thin on email rather than implying full coverage.",
+      "expectations": [
+        "States the 26% figure has no confirmed source and is vendor-published",
+        "Raises Apple MPP and what it did to open-rate measurement",
+        "Recommends a more reliable metric than open rate",
+        "Admits the corpus is weak on email specifically",
+        "Does not repeat the figure as approximately true"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "client says their copy underperforms so they want a full rewrite. traffic is decent, competitors with worse-looking sites do better.",
+      "expected_output": "Should diagnose before agreeing to a rewrite, and should raise the offer as the likely root cause given the stated symptom that competitors with worse copy convert better. Should apply the diagnostic question of whether a strong competitor selling the identical thing would convert this traffic. Should be willing to say the copy may not be the problem and that a rewrite sold as a fix for an offer problem will fail and get blamed on the copy.",
+      "expectations": [
+        "Diagnoses rather than accepting the rewrite brief at face value",
+        "Raises the offer as the likely root cause from the stated symptom",
+        "Willing to say 'nothing is wrong with the copy' as a legitimate finding",
+        "Warns that a rewrite will not fix an offer problem",
+        "Routes to strategic-foundation or the offer rather than only to copy-conversion"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "what's the character limit for a LinkedIn ad headline in 2026?",
+      "expected_output": "Should decline to quote a number from memory or from the corpus, because no confirmed source exists for platform limits, and should say why. Should instruct verification against LinkedIn's own documentation with the date recorded, and note that truncation point matters more than the field limit.",
+      "expectations": [
+        "Does not state a specific character limit as fact",
+        "Explains that platform limits have no confirmed source and change without notice",
+        "Directs to the platform's own documentation",
+        "Recommends recording the verification date",
+        "Notes truncation point differs from field limit"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "does social proof actually work or is it just something agencies say?",
+      "expected_output": "Should affirm it with real effect sizes rather than a vague yes: valence and volume effect sizes from a meta-analysis of online reviews and retail sales, and the finding that elasticities are larger on third-party sites and for high-involvement products. Should also give the countervailing evidence that reviews suspected of being fake cause consumers to discount the reviewer and harm brand attitude, which is why over-polished testimonials cost more than they earn.",
+      "expectations": [
+        "Gives specific effect sizes rather than a directional yes",
+        "Notes the third-party-site finding and its practical implication",
+        "Raises the fake-review suspicion cost",
+        "Distinguishes confirmed evidence from agency assertion",
+        "Gives an actionable recommendation, not just the evidence"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "we always say benefits not features. that's basically a law of copywriting isn't it?",
+      "expected_output": "Should qualify it as a moderated claim rather than a law, grounded in construal level: whether attributes or benefits persuade more depends on how near and concrete the purchase decision is. Should warn about the practical consequence, that stripping specifications from a product page for a near-term concrete purchase can reduce conversion.",
+      "expectations": [
+        "Rejects 'law' framing and describes it as moderated",
+        "Invokes construal level / psychological distance as the moderator",
+        "Names the practical failure case of removing specifications",
+        "Cites confirmed evidence rather than asserting",
+        "Does not simply agree with the received wisdom"
+      ]
+    }
+  ]
+}

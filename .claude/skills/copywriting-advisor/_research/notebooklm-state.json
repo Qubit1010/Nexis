@@ -1,0 +1,71 @@
+{
+  "persuasion": {
+    "id": "194233dd-698a-4060-96bb-a8a84ad2231e",
+    "title": "Copywriting 2026 - Persuasion Evidence (NexusPoint)"
+  },
+  "aisearch_law": {
+    "id": "1b846aaf-9fee-4793-9eca-ae10e6b814b5",
+    "title": "Copywriting 2026 - AI Search, Law & Folklore (NexusPoint)"
+  },
+  "known_unfetchable": [
+    "https://cazyweb.com/research/statistical-power-sample-size-ab-testing",
+    "https://doi.org/10.1016/j.dss.2024.114340",
+    "https://doi.org/10.1016/j.jbusres.2025.115645",
+    "https://doi.org/10.1016/j.jesp.2017.09.012",
+    "https://epub.jku.at/download/pdf/8623290.pdf",
+    "https://kellercenter.hankamer.baylor.edu/news/story/2014/explicit-marketing-personalization-email-subject-line",
+    "https://link.springer.com/article/10.1007/s10618-008-0114-1",
+    "https://link.springer.com/article/10.1007/s11301-022-00312-6",
+    "https://link.springer.com/article/10.1007/s11747-019-00707-0",
+    "https://link.springer.com/article/10.1023/A:1016675822931",
+    "https://link.springer.com/article/10.1186/s13104-017-2524-x",
+    "https://link.springer.com/article/10.1186/s41235-025-00629-2",
+    "https://nature.com/articles/s41598-024-81575-9.pdf",
+    "https://onlinelibrary.wiley.com/doi/10.1002/acp.1178",
+    "https://onlinelibrary.wiley.com/doi/10.1002/acp.2350080107",
+    "https://onlinelibrary.wiley.com/doi/10.1002/cb.116",
+    "https://onlinelibrary.wiley.com/doi/10.1002/ijop.12042",
+    "https://onlinelibrary.wiley.com/doi/10.1002/j.1545-7249.2008.tb00142.x",
+    "https://onlinelibrary.wiley.com/doi/10.1002/mar.20111",
+    "https://onlinelibrary.wiley.com/doi/10.1002/nvsm.412",
+    "https://onlinelibrary.wiley.com/doi/10.1111/1756-2171.12493",
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2725251",
+    "https://pubmed.ncbi.nlm.nih.gov/26501228",
+    "https://sgu.ac.id/the-decline-of-attention-span-in-the-digital-era",
+    "https://www.academia.edu/70844744/Online_Controlled_Experiments_and_A_B_Tests",
+    "https://www.nature.com/articles/s41562-023-01538-4",
+    "https://www.researchgate.net/publication/323439461_Personalization_in_Email_Marketing_The_Role_of_Noninformative_Advertising_Content",
+    "https://www.researchgate.net/publication/334372550_The_Effect_of_Subject_Lines_on_Open_Rates_of_Email_Marketing_Messages",
+    "https://www.researchgate.net/publication/407287604_Generative_Engine_Optimization_at_Scale_Measuring_Brand_Visibility_Across_AI_Search_Engines",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0022435914000293",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0022435919300193",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0022435925001022?dgcid=rss_sd_all",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0148296308000337",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0148296313003354",
+    "https://www.sciencedirect.com/science/article/abs/pii/S014829631400349X",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0148296320308249",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0148296322001278",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0148296322005446",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0148296323001388",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0148296324006131",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0167487013001372",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0167811616300519",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0969698920313254",
+    "https://www.sciencedirect.com/science/article/abs/pii/S1447677021000437",
+    "https://www.sciencedirect.com/science/article/abs/pii/S156742231930016X",
+    "https://www.sciencedirect.com/science/article/pii/S0022435922000434",
+    "https://www.sciencedirect.com/science/article/pii/S0167811615300422"
+  ],
+  "persuasion_part2": {
+    "id": "a238e518-0412-4ca1-b203-fd7dc21d5782",
+    "title": "Copywriting 2026 - Persuasion Evidence II (NexusPoint)"
+  },
+  "craft": {
+    "id": "a6e88004-d22c-4c11-9663-059b7a852bdc",
+    "title": "Copywriting 2026 - Craft & Examples (NexusPoint)"
+  },
+  "persuasion_part3": {
+    "id": "ea384bc3-d95d-44e4-bd72-a5a5c820870e",
+    "title": "Copywriting 2026 - Persuasion Evidence III (NexusPoint)"
+  }
+}

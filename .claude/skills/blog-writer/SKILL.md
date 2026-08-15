@@ -1,8 +1,8 @@
 ---
 name: blog-writer
 description: >
-  Research-backed long-form blog engine for Aleem's personal brand. Writes a complete, SEO + AI-search optimized blog post - from scratch (topic proposed) or from a given topic - that reads unmistakably human, not AI-generated, in Aleem's voice. Every post is engineered for traditional SEO AND for citation by AI answer engines (AEO / GEO / AIO - ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews): answer-first structure, query fan-out coverage, extractable blocks, comparison tables, FAQ + schema, E-E-A-T, plus a full SEO metadata package. Grounded in an 83-source cited 2026 corpus (references/research-synthesis.md) and Aleem's voice-principles; honestly separates peer-reviewed findings from practitioner heuristics. Outputs a markdown file and, on request, a Google Doc. Use whenever Aleem says "write a blog", "write a blog post", "SEO blog", "optimize this blog for AI/search", "blog about X", "long-form article on X", "write me a blog that ranks", "blog that gets cited by AI", "AEO/GEO blog", "create a blog from scratch", or gives a topic and asks for a finished post. For the multi-platform content flywheel (ideas -> LinkedIn + Instagram + blog, repurposing), use content-engine; for the exhaustive AEO/GEO audit methodology, cross-reference ai-seo. This skill is the deep single-article writer.
-argument-hint: [topic, or "from scratch" + niche/angle]
+  Research-backed long-form blog engine for Aleem's personal brand AND for client brands. Writes a complete, SEO + AI-search optimized blog post - from scratch (topic proposed) or from a given topic - that reads unmistakably human, not AI-generated, in the resolved brand voice: Aleem's by default, or a client's when a client-projects slug is named. Every post is engineered for traditional SEO AND for citation by AI answer engines (AEO / GEO / AIO - ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews): answer-first structure, query fan-out coverage, extractable blocks, comparison tables, FAQ + schema, E-E-A-T, plus a full SEO metadata package. Grounded in an 83-source cited 2026 corpus (references/research-synthesis.md) and the resolved voice source; honestly separates peer-reviewed findings from practitioner heuristics. Outputs a markdown file and, on request, a Google Doc. Use whenever Aleem says "write a blog", "write a blog post", "SEO blog", "optimize this blog for AI/search", "blog about X", "long-form article on X", "write me a blog that ranks", "blog that gets cited by AI", "AEO/GEO blog", "create a blog from scratch", "write a blog for [client]", "client blog post", or gives a topic and asks for a finished post. For the multi-platform content flywheel (ideas -> LinkedIn + Instagram + blog, repurposing), use content-engine; for a full-site AEO/GEO audit and AI-visibility measurement, use seo-authority-ai; for landing pages, sales pages, emails and ads rather than articles, use copy-conversion. This skill is the deep single-article writer.
+argument-hint: [topic, or "from scratch" + niche/angle, or "for <client-slug>"]
 ---
 
 # Blog Writer
@@ -12,16 +12,37 @@ Aleem's research-backed engine for one thing done well: a finished, **SEO + AI-s
 ## Read once (provenance + honesty)
 - Built research-first on an **83-source cited 2026 corpus** (`references/research-synthesis.md`, audit trail in `_research/sources.json`) covering blog SEO, AEO/GEO, Google AI Overviews, human-tone writing, and blog formats.
 - **Honesty rule:** the corpus flags every claim **[peer-reviewed]** vs **[practitioner]**. Peer-reviewed: people-first/E-E-A-T, answer-first structure drives AI citation, query intent > rank, query fan-out, human-tone craft. Practitioner (attributed, not invented): the Princeton GEO per-method boosts, the "40-60 word answer block," format citation-share numbers. Never present a practitioner heuristic as measured fact, and never quote a number that isn't in the corpus or a live query.
-- **Voice:** this writes as **Aleem, personal brand.** `content-engine/references/voice-principles.md` is the voice source of truth. Hard rules from it: never name the agency, never mention university/BSAI/student; no em dashes or smart quotes in the body; level 7+ content only (POV/case study/framework, never a neutral explainer).
+## Voice resolution (do this before anything else)
+
+This skill writes in **one resolved voice source**. Everything downstream - including every
+place `blog-structure-playbook.md` and `human-tone-rules.md` say "voice-principles" - means
+**the voice source resolved here**, not always Aleem's.
+
+| Subject | Voice source of truth | Hard rules |
+|---|---|---|
+| **Aleem, personal brand** (default) | `content-engine/references/voice-principles.md` | Never name the agency; never mention university/BSAI/student; level 7+ only (POV/case study/framework, never a neutral explainer) |
+| **A client brand** (a `client-projects/<slug>` is named, or the post is for someone else's site) | `client-projects/<slug>/14-brand-voice.md` (dimensions, tone shifts, use/never-use vocabulary) + `13-brand-strategy.md` (positioning, what the brand rules out) | Apply the client's never-use list; **the Aleem-specific rules above do not apply** and must not be carried over. Never mention NexusPoint or Aleem in the article |
+
+Both, always: no em dashes or smart quotes in the body.
+
+**If a client run finds no `14-brand-voice.md`,** say so and offer to run `brand-voice` first -
+writing a client article with an invented voice is how a brand ends up sounding like its
+agency. If Aleem declines, derive a working voice from the client's live copy and label it an
+assumption in the handoff, rather than presenting it as their voice.
+
+First-hand experience for E-E-A-T is Aleem's on a personal post and **the client's** on a
+client post. Never attribute Aleem's projects to a client, or a client's results to Aleem.
 
 ## Boundary (avoid overlap)
 - **blog-writer (this):** ONE deep, SEO/AEO/GEO-optimized, human-toned long-form article, from a topic or from scratch, with a full metadata package. The single-article specialist.
 - **content-engine:** the multi-platform content *system* - idea sourcing, scoring, the Blog -> LinkedIn + Instagram repurposing flywheel, logging. Use it for "what should I post", "full content run", "repurpose this". (blog-writer reuses its `voice-principles.md` and `save_content.py`.)
 - **seo-onpage:** the on-page and content EXECUTION skill (Tier 2). It owns the canonical on-page thresholds and measures them - titles, metas, headings, structure, internal links, media, E-E-A-T, schema - against a draft or a live URL, and audits whole sites. blog-writer writes the article and calls it in Step 5b to validate; it does not carry its own copies of those numbers.
-- **ai-seo** (installed): the exhaustive AEO/GEO audit methodology (robots.txt for AI bots, llms.txt, OKF, full schema tables, the Princeton table). Cross-reference for site-level audits; blog-writer distills the article-relevant parts.
+- **seo-authority-ai:** the in-house AEO/GEO audit and AI-visibility MEASUREMENT skill (Tier 4). It owns robots.txt vs the AI-bot matrix, llms.txt, entity resolution, and sampling whether answer engines actually cite the brand. Hand off site-level AEO work to it; blog-writer distills only the article-relevant parts. (`marketing-skills/ai-seo` is the installed third-party equivalent - use the in-house one first.)
+- **copy-conversion:** conversion copy rather than articles - landing pages, sales pages, emails, ads, CTAs, product descriptions. If the ask is a page that sells rather than an article that ranks, route there.
+- **copywriting-advisor:** the knowledge and factcheck hub for copywriting claims. If the ask is "is that statistic real" or "explain why this copy underperforms", route there.
 
 ## Context to load first
-1. `content-engine/references/voice-principles.md` - Aleem's voice (always).
+1. The **resolved voice source** (see Voice resolution above) - always. Aleem's is `content-engine/references/voice-principles.md`; a client's is `client-projects/<slug>/14-brand-voice.md`.
 2. `references/seo-aeo-geo-checklist.md` - the optimization scoreboard (always). It owns the AEO/GEO and query-fan-out half; the on-page thresholds it cites are owned by `seo-onpage/references/checks.md` and cross-referenced, not duplicated.
 Then load the workflow-specific reference(s) below. Pull citations/depth from `references/research-synthesis.md` when you need the evidence behind a claim.
 
@@ -33,6 +54,7 @@ Then load the workflow-specific reference(s) below. Pull citations/depth from `r
 | **from-topic** | a topic/title/keyword is given | confirm intent + angle, go |
 | **from-scratch** | "write a blog", no topic | propose 3 angles from Aleem's pillars + a niche, let him pick |
 | **optimize-existing** | a draft/URL + "optimize for SEO/AI" | skip drafting; run steps 5a-7. Start by measuring: `seo-onpage/scripts/onpage.py --draft <file>` (or `--url`) so the edit is aimed at something real rather than at a re-read. |
+| **client** | a `client-projects/<slug>`, a client name, or "blog for [client]" | resolve the client voice source FIRST (see Voice resolution), then run from-topic or from-scratch as normal. Combines with the other modes rather than replacing them |
 
 ---
 
@@ -103,9 +125,13 @@ Both always. Never a Doc without the markdown.
 |---|---|
 | Vague / no topic | from-scratch mode: propose 3 angles, one keyword each, let him pick |
 | Asked for a stat not in the corpus | run the live query (`notebook-live-query.md`); if still nothing, say so - never invent |
-| Client/company blog (not Aleem's brand) | this skill is personal-brand; flag it and offer client-content-creator instead |
+| Client/company blog (not Aleem's brand) | **client mode** - resolve the client voice source, then proceed normally. Aleem-specific rules do not carry over |
+| Client mode, no `14-brand-voice.md` exists | Say so and offer `brand-voice` first. If declined, derive a working voice from their live copy and label it an assumption |
+| Client mode, no first-hand experience to draw on | Use the client's own projects and results, never Aleem's. If they have none, use the No-Experience Fallback rather than borrowing someone else's |
 | Wants ideas / repurposing / multi-platform | hand off to content-engine |
-| Wants a full site AEO audit | hand off to ai-seo |
+| Wants a full site AEO audit or AI-visibility measurement | hand off to seo-authority-ai |
+| Wants a landing page, sales page, email or ad | hand off to copy-conversion - this skill writes articles |
+| Asked whether a copywriting statistic is real | hand off to copywriting-advisor (factcheck mode) |
 | Practitioner number requested as fact | give it labeled ("industry heuristic, not measured"), cite the honesty flag |
 | save/publish fails | output inline, note the failure |
 
@@ -124,4 +150,4 @@ scripts/
 └── publish.py                  # blog .md -> Google Doc (reuses content-engine/save_content.py)
 evals/evals.json
 ```
-Reuses: `content-engine/references/voice-principles.md` (voice), `content-engine/scripts/save_content.py` (Docs). Siblings: **content-engine** (content system), **ai-seo** (AEO/GEO audit), **research** (topic sources), **client-content-creator** (client-brand blogs).
+Reuses: the resolved voice source - `content-engine/references/voice-principles.md` (Aleem) or `client-projects/<slug>/14-brand-voice.md` (client) - and `content-engine/scripts/save_content.py` (Docs). Siblings: **content-engine** (content system), **seo-authority-ai** (AEO/GEO audit + AI-visibility measurement), **seo-onpage** (on-page thresholds), **copy-conversion** (conversion copy), **copywriting-advisor** (copy factcheck + diagnosis), **research** (topic sources), **brand-voice** (defines the client voice this consumes).

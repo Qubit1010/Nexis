@@ -1,0 +1,151 @@
+{
+  "skill_name": "copy-conversion",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "write the landing page copy for client-projects/acme. they've got a strategic foundation and a brand strategy in there but no brand voice doc.",
+      "expected_output": "Should read 07-strategic-foundation.md and 13-brand-strategy.md and take their positioning and UVP rather than re-deriving them. Must notice 14-brand-voice.md is missing, say so explicitly, and offer to run brand-voice first, explaining that writing without it produces copy that sounds like the agency rather than the client. Should then proceed rather than stalling, deriving a working voice from the client's live copy and labelling it an assumption in the fact table.",
+      "files": [],
+      "expectations": [
+        "Reads and takes from 07 and 13 rather than re-deriving positioning",
+        "Explicitly flags the missing 14-brand-voice.md",
+        "Offers to run brand-voice first with a reason",
+        "Proceeds anyway rather than blocking, if not told to stop",
+        "Labels the derived voice as an assumption rather than presenting it as the client's"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "here's the client's brief. write the hero section. they want it to say they're a world-class innovative partner delivering seamless solutions.",
+      "expected_output": "Should refuse to ship the adjective stack and explain why: claims whose opposite is absurd carry no information and cannot be substantiated. Should ask for or mine actual proof points, and rewrite with specificity. If no proof exists, should say that plainly as a finding rather than papering over it with better-sounding adjectives.",
+      "expectations": [
+        "Rejects 'world-class / innovative / seamless' as unusable claims",
+        "Explains why (unfalsifiable, unprovable, no information)",
+        "Asks for or mines real proof points",
+        "Produces a specific rewrite rather than only criticising",
+        "Treats absence of proof as a finding to report, not something to write around"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "we need a testimonial for the sales page. just write one that sounds like what their customers would say.",
+      "expected_output": "Must refuse to fabricate a testimonial. Should explain both the ethical and the legal position: FTC endorsement rules govern testimonials and require substantiation and disclosure of material connections. Should offer concrete alternatives, such as drafting interview questions to obtain a real testimonial, or inserting a clearly marked placeholder for the client to fill.",
+      "expectations": [
+        "Refuses to write a fabricated testimonial",
+        "Raises the FTC endorsement / substantiation dimension",
+        "Offers interview questions or a marked placeholder as the alternative",
+        "Does not produce a 'sample' testimonial that could be pasted as real",
+        "Does not moralise at length; refuses briefly and offers the path forward"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "audit this client's homepage copy and tell me what to fix. [homepage copy pasted]",
+      "expected_output": "Should run the five-second test first, then score against the seven-row rubric with honest grades, expecting Weak or Missing on specificity, proof and honest claims. Should rank fixes by leverage rather than severity and actually rewrite the top three pieces (hero, primary CTA and surrounding copy, weakest unsupported claim) rather than only describing what is wrong. Should include the measurement warning and not promise a lift figure.",
+      "expectations": [
+        "Applies the five-second test before detailed scoring",
+        "Gives honest grades rather than defaulting everything to Workable",
+        "Ranks fixes by leverage, not by how wrong each is",
+        "Actually rewrites the highest-leverage pieces",
+        "Includes the measurement caveat and promises no percentage lift"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "the client wants us to guarantee this rewrite will lift conversion at least 20%. can we put that in the proposal?",
+      "expected_output": "Should decline to promise a number and explain why: outcomes are unknowable in advance, only a minority of tested ideas improve metrics at all, and most SMB traffic volumes cannot resolve the difference conclusively. Should offer what can honestly be committed to instead: the argument for each change, what will be measured, and what the measurement can and cannot establish.",
+      "expectations": [
+        "Declines to guarantee a percentage lift",
+        "Explains that a minority of tested changes improve metrics at all",
+        "Raises the traffic-volume / statistical-power constraint",
+        "Offers an honest alternative commitment",
+        "Does not hedge into a lower but still invented number"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "give me 40 headline variations for their pricing page",
+      "expected_output": "Should push back on volume as a deliverable and give a small number of genuinely distinct angles instead, each labelled with the angle it takes rather than 'Option B'. Should explain that many variants of the same sentence is not a choice and hands the selection work back to the client. Should also present headlines with the subhead and CTA beneath, since a headline cannot be judged in isolation.",
+      "expectations": [
+        "Declines to produce 40 near-duplicate variants",
+        "Gives a small number of strategically distinct angles",
+        "Labels each by its angle rather than by letter or number alone",
+        "Presents headlines in context with subhead and CTA",
+        "Explains the reasoning briefly rather than silently producing fewer"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "write the welcome email sequence. make it more conversational and friendly, that always performs better.",
+      "expected_output": "Should not accept 'more conversational' as automatically correct. Should check 14-brand-voice.md, which decides register, and note that informal register is a decision to argue from audience and context rather than a safe default, particularly for high-consideration purchases. Should then write the sequence with each email having a distinct purpose and a single CTA, rather than the same ask reworded.",
+      "expectations": [
+        "Questions 'conversational always performs better' rather than complying",
+        "Defers to the brand voice document for register",
+        "Gives each email in the sequence a distinct purpose",
+        "One CTA per email rather than the same ask repeated",
+        "Specifies subject line, preview text and body per email"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "here's the client's meta ads copy, rewrite it. keep it under the character limits.",
+      "expected_output": "Should write the copy but must not quote character limits from memory. Should state that platform limits have no confirmed source and change without notice, direct verification against Meta's own documentation, and record the verification date in the deliverable. Should also check that the ad promise matches the destination page.",
+      "expectations": [
+        "Does not assert specific character limits as fact",
+        "Directs verification to the platform's own documentation with a date",
+        "Raises ad-to-landing-page message match",
+        "Still delivers usable rewritten copy",
+        "Notes truncation point matters more than the raw field limit"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "client has no case studies, no numbers, no testimonials, but wants a sales page that sounds credible.",
+      "expected_output": "Should treat the absence of proof as the central finding and say so plainly rather than compensating with stronger adjectives. Should write the strongest page the available proof supports, list precisely what to collect to make stronger claims writable, and mark placeholders clearly. Should not invent proof or imply credibility the client has not earned.",
+      "expectations": [
+        "Names the missing proof as the primary finding",
+        "Does not substitute adjectives or vague authority language for proof",
+        "Writes what the available evidence supports",
+        "Lists specifically what to collect and what it would unlock",
+        "Uses clearly marked placeholders rather than invented specifics"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "write a blog post for this client optimized for AI search",
+      "expected_output": "Should route to blog-writer rather than writing the article, since blog-writer owns long-form structure and the AEO/GEO checklist, and now has a client-brand path. Should state the handoff explicitly and note that the client voice resolution applies there too.",
+      "expectations": [
+        "Routes to blog-writer rather than writing the article",
+        "Explains the boundary (articles vs conversion copy)",
+        "Notes blog-writer's client-brand path exists",
+        "Does not attempt its own AEO/GEO article structure",
+        "States the handoff rather than stopping silently"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "we've got this case study written up. how should we format it for LinkedIn vs Instagram?",
+      "expected_output": "Should not paste the same text to both. Should apply platform formatting: on LinkedIn the pre-truncation first line carries the claim or the number, short paragraphs, length justified by substance; on Instagram the hook must survive a much shorter truncation and the caption works with the image as one unit. Should also apply the TOPIC shape for a case study: situation, what was actually done, outcome with a real number, what transfers. Should state that any character limit must be verified against the platform's own docs and dated, and should flag engagement conventions (hashtags, in-post links) as unverified rather than as rules.",
+      "files": [],
+      "expectations": [
+        "Produces genuinely different text per platform, not one text reposted",
+        "Puts the load-bearing line before the truncation point on each",
+        "Applies the case-study topic shape with a concrete outcome",
+        "Does not assert character limits from memory; says to verify and date",
+        "Flags hashtag/link conventions as unverified rather than stating them as rules"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "what's the character limit for meta ad primary text and should I write to it?",
+      "expected_output": "Should give the vendor-reported figure (~125 characters primary text, ~40 headline, ~25 description, ~27 headline on Facebook Feed to avoid truncation) explicitly labelled as vendor recommendations rather than the official spec page, and should note that Google's own RSA page does not even state its character counts, which is why verification matters. Should distinguish the field limit from the truncation point and say truncation is the one that decides whether the copy works. Should answer the 'should I write to it' half: fill the field usefully rather than padding to the maximum.",
+      "expectations": [
+        "Labels the numbers as vendor-reported, not official spec",
+        "Distinguishes field limit from truncation point",
+        "Directs verification to Meta's own documentation with a date",
+        "Answers whether to write to the limit rather than only quoting it",
+        "Does not present any figure as measured or authoritative"
+      ]
+    }
+  ]
+}

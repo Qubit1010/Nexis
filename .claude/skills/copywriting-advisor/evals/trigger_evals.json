@@ -1,0 +1,82 @@
+[
+  {
+    "query": "is it actually true that you only have 8 seconds to grab someone's attention",
+    "should_trigger": true
+  },
+  {
+    "query": "a client sent me a deck claiming personalized subject lines lift open rates 26% - is that a real number",
+    "should_trigger": true
+  },
+  {
+    "query": "explain the difference between AIDA and PAS and when you'd use each",
+    "should_trigger": true
+  },
+  {
+    "query": "what does the research actually say about long copy vs short copy",
+    "should_trigger": true
+  },
+  {
+    "query": "our landing page gets traffic but nobody converts, what's likely wrong",
+    "should_trigger": true
+  },
+  {
+    "query": "does button colour affect conversion or is that a myth",
+    "should_trigger": true
+  },
+  {
+    "query": "why did our A/B test win last month and then the lift disappear",
+    "should_trigger": true
+  },
+  {
+    "query": "explain CTA psychology to me, I need to justify a recommendation to a client",
+    "should_trigger": true
+  },
+  {
+    "query": "is the $300 million button story real",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the evidence on social proof actually working",
+    "should_trigger": true
+  },
+  {
+    "query": "do people read below the fold in 2026",
+    "should_trigger": true
+  },
+  {
+    "query": "benefits vs features - is there real research behind that advice",
+    "should_trigger": true
+  },
+  {
+    "query": "our email open rates collapsed after 2021 and I can't explain it to the client",
+    "should_trigger": true
+  },
+  {
+    "query": "should we use urgency and scarcity on this page or will it backfire",
+    "should_trigger": true
+  },
+  {
+    "query": "write the landing page copy for this client",
+    "should_trigger": false
+  },
+  {
+    "query": "draft a cold email sequence for my own agency outreach",
+    "should_trigger": false
+  },
+  {
+    "query": "write a blog post about AI automation",
+    "should_trigger": false
+  },
+  {
+    "query": "define the brand voice for this client",
+    "should_trigger": false
+  },
+  {
+    "query": "audit this site's technical SEO",
+    "should_trigger": false
+  },
+  {
+    "query": "what should I post on LinkedIn today",
+    "should_trigger": false
+  }
+]

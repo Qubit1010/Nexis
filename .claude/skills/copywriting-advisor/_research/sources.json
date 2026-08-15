@@ -1,0 +1,5519 @@
+{
+  "generated_at": "2026-08-15",
+  "method": "28 deep passes via the in-repo research skill (Exa+Tavily+Serper+Jina fused, content-extracted), deduped by normalized URL, junk-filtered, per-domain capped, tiered confirmed / craft / practitioner",
+  "note": "inline [sN] in references/research-synthesis.md resolves to sources[N-1]. tier=craft means technique and worked examples only - never usable to support a factual claim, and invisible to factcheck mode",
+  "total_found": 544,
+  "source_count": 422,
+  "confirmed": 211,
+  "craft": 66,
+  "practitioner": 145,
+  "sources": [
+    {
+      "index": 1,
+      "title": "How Content Volume on Landing Pages Influences Consumer Behavior: Empirical Evidence",
+      "url": "https://doi.org/10.28945/4016",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length",
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 2,
+      "title": "Frontiers | Effects of verbatim repetition of the headline message on the proceed button on click-through rates in online retail",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1187798/full",
+      "tier": "confirmed",
+      "topics": [
+        "q2_cta_button_copy",
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-08-22T00:00:00.000Z"
+    },
+    {
+      "index": 3,
+      "title": "Why our attention spans are shrinking, with Gloria Mark, PhD",
+      "url": "https://www.apa.org/news/podcasts/speaking-of-psychology/attention-spans",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 4,
+      "title": "Appealing to fear: A Meta-Analysis of Fear Appeal Effectiveness and Theories",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5789790",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 5,
+      "title": "When curiosity gaps backfire: effects of headline concreteness on information selection decisions - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11704130",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 6,
+      "title": "Linguistic effects on news headline success: Evidence from thousands of online field experiments (Registered Report) - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10038272",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 7,
+      "title": "Fear and Humor Appeals in “The Real Cost” Campaign: Evidence of Potential Effectiveness in Message Pretesting",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13033204",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 8,
+      "title": "The Epistemic Status of Processing Fluency as Source for Judgments of Truth",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3339024",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 9,
+      "title": "Crafting Influence in Social Media Advertising: How Creative Appeals and Message Strategies Shape Consumer Behavior",
+      "url": "https://www.mdpi.com/0718-1876/21/1/3",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 10,
+      "title": "Construal-Level Theory of Psychological Distance",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3152826",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 11,
+      "title": "A systematic review of risky-choice framing effects",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10620856",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 12,
+      "title": "Frontiers | The Effects of Processing Fluency in Prosocial Campaigns: Effort for Self-Benefit Produces Unpleasant Feelings",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.01221/full",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 13,
+      "title": "Scarcity tactics in marketing: A meta-analysis of product scarcity effects on consumer purchase intentions",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022435922000434",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 14,
+      "title": "Social Advertising Effectiveness in Driving Action: A Study of Positive, Negative and Coactive Appeals on Social Media",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8199559",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 15,
+      "title": "The Impact of Online Reviews on Consumers’ Purchasing Decisions: Evidence From an Eye-Tracking Study",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9216200",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 16,
+      "title": "The Impact of Online Reviews on Consumers&rsquo; Purchase Intentions: Examining the Social Influence of Online Reviews, Group Similarity, and Self-Construal",
+      "url": "https://www.mdpi.com/0718-1876/19/2/55",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 17,
+      "title": "Frontiers | A study on the influence of online reviews of new products on consumers’ purchase decisions: An empirical study on JD.com",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.983060/full",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 18,
+      "title": "What makes an online review credible? A systematic review of the literature and future research directions",
+      "url": "https://link.springer.com/article/10.1007/s11301-022-00312-6",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 19,
+      "title": "The psychology of scarcity",
+      "url": "https://www.apa.org/monitor/2014/02/scarcity",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 20,
+      "title": "A Matching Study on the Influence of Advertised Information Expression and Product Type on Consumer Purchase Intention",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9012164",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 21,
+      "title": "SCARCITY | definition in the Cambridge English Dictionary",
+      "url": "https://dictionary.cambridge.org/us/dictionary/english/scarcity",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 22,
+      "title": "Perceived usefulness of online customer reviews: A review mining approach using machine learning & exploratory data analysis",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296322005446",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 23,
+      "title": "Cognitive processing of persuasive message cues: A meta‐analytic review of the effects of supporting information on attitudes",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/03637758609376128",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 24,
+      "title": "The readability of direct-mail copy:  A test of its effect on response rates",
+      "url": "https://journals.sagepub.com/doi/10.1002/dir.4000050106",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 25,
+      "title": "CONCLUSION EXPLICITNESS IN ADVERTISING: The Moderating Role of Need for Cognition (NFC) and Argument Quality (AQ) on Persuasion: Journal of Advertising: Vol 32, No 4",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00913367.2003.10639148",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 26,
+      "title": "Advertising time expansion, compression, and cognitive processing influences on consumer acceptance of message and brand",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296308000337",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 27,
+      "title": "Are longer reviews always more helpful? Disentangling the interplay between review length and line of argumentation - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296322001278",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 28,
+      "title": "Achieving more by saying less? On the Moderating Effect of Information Cues in Paid Search",
+      "url": "https://doi.org/10.24251/hicss.2017.470",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2017-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 29,
+      "title": "How much is too much? The effects of information quantity on crowdfunding performance | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0192012",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-03-14T00:00:00.000Z"
+    },
+    {
+      "index": 30,
+      "title": "Attitude change as a function of the number of words in which thoughts are expressed",
+      "url": "https://doi.org/10.1016/j.jesp.2017.09.012",
+      "tier": "confirmed",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2017-10-16T00:00:00.000Z"
+    },
+    {
+      "index": 31,
+      "title": "More than Words: The Influence of Affective Content and Linguistic Style Matches in Online Reviews on Conversion Rates",
+      "url": "https://journals.sagepub.com/doi/10.1509/jm.11.0560",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 32,
+      "title": "Validating Computer-Generated Measures of Linguistic Style Matching and Accommodation in Patient-Clinician Communication - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/11349046",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 33,
+      "title": "Customer satisfaction and natural language processing",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296320308249",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 34,
+      "title": "Frontiers | The influence of firm’s feedbacks on user-generated content’s linguistic style matching–An explanation based on communication accommodation theory",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.949968/full",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-07-22T00:00:00.000Z"
+    },
+    {
+      "index": 35,
+      "title": "It's Not Just What You Say, But How You Say It: The Effect of Language Style Matching on Perceived Quality of Consumer Reviews",
+      "url": "https://doi.org/10.1016/j.intmar.2018.11.001",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-03-26T00:00:00.000Z"
+    },
+    {
+      "index": 36,
+      "title": "The Language Backfire Effect: How Frontline Employees Decrease Customer Satisfaction through Language Use",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022435919300193",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 37,
+      "title": "“Why do you find similar reviews helpful?”: Psychological mechanisms of the effect of linguistic style matching on review helpfulness",
+      "url": "https://doi.org/10.1016/j.dss.2024.114340",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-09-20T00:00:00.000Z"
+    },
+    {
+      "index": 38,
+      "title": "She Said, She Said: Differential Interpersonal Similarities Predict Unique Linguistic Mimicry in Online Word of Mouth",
+      "url": "https://doi.org/10.1086/690942",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2017-02-17T00:00:00.000Z"
+    },
+    {
+      "index": 39,
+      "title": "Examining the relationship between language divergence and word-of-mouth intentions - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296313003354",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2014-08-01T00:00:00.000Z"
+    },
+    {
+      "index": 40,
+      "title": "How Language Shapes Word of Mouth's Impact",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmr.15.0248",
+      "tier": "confirmed",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 41,
+      "title": "Attributes Versus Benefits: The Role of Construal Levels and Appeal Type on the Persuasiveness of Marketing Messages: Journal of Advertising: Vol 44, No 3",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00913367.2014.967425",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 42,
+      "title": "Effects of construal level and need for cognition on consumers' responses to temporally framed benefits",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/cb.1753",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 43,
+      "title": "Claiming single or multiple product benefits: Moderating role of intergoal association - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296324006131",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-02-01T00:00:00.000Z"
+    },
+    {
+      "index": 44,
+      "title": "Is it better to communicate product information abstractly or concretely? The role of consumer product expertise and shopping-stage mindset",
+      "url": "https://doi.org/10.1108/jpbm-05-2021-3470",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-09-28T00:00:00.000Z"
+    },
+    {
+      "index": 45,
+      "title": "Showing a tree to sell the forest: The impact of attribute- and alternative-based information presentation on consumers’ choices",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167487013001372",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 46,
+      "title": "The Effects of Feature and Benefit Sentences in Advertising Copy on Consumers’ Memory and Attitudes",
+      "url": "https://doi.org/10.11648/j.ijber.20180705.12",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 47,
+      "title": "Everyday “low price” or everyday “value”? The interactive effects of framing and construal level on consumer purchase intentions",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0969698920313254",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 48,
+      "title": "Which Hierarchical Levels of Value Description of Design Concepts Enhance Anticipated UX? Effects of Product Type on User Expectations",
+      "url": "https://www.mdpi.com/2079-8954/11/5/230",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-05-06T00:00:00.000Z"
+    },
+    {
+      "index": 49,
+      "title": "Can Your Advertisement Go Abstract Without Affecting Willingness to Pay?",
+      "url": "https://doi.org/10.2501/jar-2019-005",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-02-20T00:00:00.000Z"
+    },
+    {
+      "index": 50,
+      "title": "Full Length Article What to stress, to whom and where? A cross-country investigation of the effects of perceived brand benefits on buying intentions",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167811616300519",
+      "tier": "confirmed",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 51,
+      "title": "Appealing to fear: A meta-analysis of fear appeal effectiveness and theories",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26501228/",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 52,
+      "title": "Threatening communication: a critical re-analysis and a revised meta-analytic test of fear appeal theory",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3678850/",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 53,
+      "title": "Advertising Appeals, Moderators, And Impact on Persuasion",
+      "url": "https://doi.org/10.2501/jar-2017-017",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2017-05-15T00:00:00.000Z"
+    },
+    {
+      "index": 54,
+      "title": "Sixty years of fear appeal research: Current state of the evidence",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ijop.12042",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 55,
+      "title": "The Extended Parallel Process Model - Lucy Popova, 2012",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/1090198111418108",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 56,
+      "title": "Advertising appeals effectiveness: a systematic literature review",
+      "url": "https://doi.org/10.1093/heapro/daab204",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-12-14T00:00:00.000Z"
+    },
+    {
+      "index": 57,
+      "title": "Mixing emotions: The use of humor in fear advertising",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/cb.389",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 58,
+      "title": "Is all anger created equal? A meta-analytic assessment of anger elicitation in persuasion research - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38512202/",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 59,
+      "title": "The Influence of affective and cognitive appeals on persuasion outcomes: a cross-cultural meta-analysis",
+      "url": "https://doi.org/10.1093/joc/jqae042",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-12-04T00:00:00.000Z"
+    },
+    {
+      "index": 60,
+      "title": "Beyond valence: a meta-analysis of discrete emotions in firm-customer encounters | Journal of the Academy of Marketing Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11747-019-00707-0",
+      "tier": "confirmed",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-12-09T00:00:00.000Z"
+    },
+    {
+      "index": 61,
+      "title": "Structural Feature Engineering for Generative Engine Optimization: How Content Structure Shapes Citation Behavior",
+      "url": "https://doi.org/10.48550/arxiv.2603.29979",
+      "tier": "confirmed",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-31T00:00:00.000Z"
+    },
+    {
+      "index": 62,
+      "title": "GEO: Generative Engine Optimization",
+      "url": "https://doi.org/10.1145/3637528.3671900",
+      "tier": "confirmed",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-08-24T00:00:00.000Z"
+    },
+    {
+      "index": 63,
+      "title": "The SEO Floor: Measuring Google Rank Distribution of AI-Cited Pages",
+      "url": "https://doi.org/10.5281/zenodo.19787654",
+      "tier": "confirmed",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-26T00:00:00.000Z"
+    },
+    {
+      "index": 64,
+      "title": "From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms",
+      "url": "https://doi.org/10.48550/arxiv.2604.25707",
+      "tier": "confirmed",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-28T00:00:00.000Z"
+    },
+    {
+      "index": 65,
+      "title": "Think Before Writing: Feature-Level Multi-Objective Optimization for Generative Citation Visibility",
+      "url": "https://doi.org/10.48550/arxiv.2604.19113",
+      "tier": "confirmed",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-21T00:00:00.000Z"
+    },
+    {
+      "index": 66,
+      "title": "Retrieval Collapses When AI Pollutes the Web | Proceedings of the ACM Web Conference 2026",
+      "url": "https://dl.acm.org/doi/10.1145/3774904.3792955",
+      "tier": "confirmed",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 67,
+      "title": "The influence of search engine optimization on Google's results:  A multi-dimensional approach for detecting SEO",
+      "url": "https://dl.acm.org/doi/10.1145/3447535.3462479",
+      "tier": "confirmed",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 68,
+      "title": "AgenticGEO: A Self-Evolving Agentic System for Generative Engine Optimization",
+      "url": "https://doi.org/10.48550/arxiv.2603.20213",
+      "tier": "confirmed",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-02T00:00:00.000Z"
+    },
+    {
+      "index": 69,
+      "title": "Linguistic effects on news headline success: Evidence from thousands of online field experiments (Registered Report) | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0281682",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-03-24T00:00:00.000Z"
+    },
+    {
+      "index": 70,
+      "title": "When curiosity gaps backfire: effects of headline concreteness on information selection decisions - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39762307/",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-01-06T00:00:00.000Z"
+    },
+    {
+      "index": 71,
+      "title": "Negativity drives online news consumption | Nature Human Behaviour",
+      "url": "https://www.nature.com/articles/s41562-023-01538-4",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-03-16T00:00:00.000Z"
+    },
+    {
+      "index": 72,
+      "title": "The Impact of Headline Characteristics on Clicks: A Case Study of a Chinese Local Medium: Journalism Practice: Vol 20, No 4",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/17512786.2024.2411624",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 73,
+      "title": "Negativity drives online news consumption - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36928780/",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 74,
+      "title": "",
+      "url": "https://nature.com/articles/s41598-024-81575-9.pdf",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 75,
+      "title": "The effects of an experimental attention economy on the production and consumption of news headlines",
+      "url": "https://doi.org/10.31234/osf.io/ntsg9_v1",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-05-09T00:00:00.000Z"
+    },
+    {
+      "index": 76,
+      "title": "Reading dies in complexity: Online news consumers prefer simple writing - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11152133/",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 77,
+      "title": "Click me…! The influence of clickbait on user engagement in social media and the role of digital nudging | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0266743",
+      "tier": "confirmed",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-06-29T00:00:00.000Z"
+    },
+    {
+      "index": 78,
+      "title": "Words Matter! Toward a Prosocial Call-to-Action for Online Referral: : Evidence from Two Field Experiments: Information Systems Research: Vol 31, No 1",
+      "url": "https://dl.acm.org/doi/10.1287/isre.2019.0873",
+      "tier": "confirmed",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 79,
+      "title": "Words Matter: Focus on Your Call to Action: How a Few Words Can Make a Huge Difference",
+      "url": "https://doi.org/10.1002/9781119176459.ch5",
+      "tier": "confirmed",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2012-01-02T00:00:00.000Z"
+    },
+    {
+      "index": 80,
+      "title": "Designing Call to Action: Users’ Perception of Different Characteristics",
+      "url": "https://doi.org/10.18690/978-961-286-485-9.30",
+      "tier": "confirmed",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 81,
+      "title": "The effects of donation button design on aid agency transactional trust",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/nvsm.412",
+      "tier": "confirmed",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 82,
+      "title": "LINGUISTIC PECULIARITIES OF CALL-TO-ACTION PHRASES IN DIGITAL DISCOURSE",
+      "url": "https://doi.org/10.46991/flhe.2025.29.2.005",
+      "tier": "confirmed",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-12-17T00:00:00.000Z"
+    },
+    {
+      "index": 83,
+      "title": "Mobilize  Is a Verb: The Use of Verbs and Concrete Language Is Associated With Authors’ and Readers’ Perceptions of a Text’s Action Orientation and Persuasiveness",
+      "url": "https://journals.sagepub.com/doi/10.1177/01461672241238418",
+      "tier": "confirmed",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 84,
+      "title": "An Experiment to Study Touchscreen “Button” Design",
+      "url": "https://journals.sagepub.com/doi/10.1177/154193128502900207",
+      "tier": "confirmed",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 85,
+      "title": "The effect of landing page design and structure on conversion rates",
+      "url": "https://doi.org/10.69554/annv1551",
+      "tier": "confirmed",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-03-01T00:00:00.000Z"
+    },
+    {
+      "index": 86,
+      "title": "When Less Is More: Empirical Study of the Relation Between Consumer Behavior and Information Provision on Commercial Landing Pages",
+      "url": "https://doi.org/10.28945/4015",
+      "tier": "confirmed",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 87,
+      "title": "Empirical evaluation of 20 web form optimization guidelines",
+      "url": "https://dl.acm.org/doi/10.1145/2468356.2468695",
+      "tier": "confirmed",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 88,
+      "title": "The effects of the amount of information on cognitive responses in online purchasing tasks | Electronic Commerce Research and Applications",
+      "url": "https://dl.acm.org/doi/10.1016/j.elerap.2009.03.004",
+      "tier": "confirmed",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 89,
+      "title": "What kind of information attracts consumers' attention? Studying the differences in the amount of information on the landing page of a product",
+      "url": "https://doi.org/10.5821/conference-9788419184849.73",
+      "tier": "confirmed",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-09-01T00:00:00.000Z"
+    },
+    {
+      "index": 90,
+      "title": "Designing for mobile experience beyond the native ad click: Exploring landing page presentation style and media usage",
+      "url": "https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.24016",
+      "tier": "confirmed",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 91,
+      "title": "Key Variables for Effective eHealth Designs for Individuals With and Without Mental Health Disorders: 2^12-4 Fractional Factorial Experiment",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8262839/",
+      "tier": "confirmed",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 92,
+      "title": "What happens after an ad click? | Proceedings of the 18th ACM conference on Information and knowledge management",
+      "url": "https://dl.acm.org/doi/10.1145/1645953.1645964",
+      "tier": "confirmed",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 93,
+      "title": "A New Method to Aid Copy Testing of Paid Search Text Advertisements",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmr.14.0186",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 94,
+      "title": "The Impact of Advertising Creative Strategy on Advertising Elasticity",
+      "url": "https://journals.sagepub.com/doi/10.1177/00222429221074960",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 95,
+      "title": "Creative That Sells: How Advertising Execution Affects Sales: Journal of Advertising: Vol 45, No 1",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00913367.2015.1077491",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 96,
+      "title": "Advertising Repetition: A Meta-Analysis on Effective Frequency in Advertising: Journal of Advertising: Vol 44, No 4",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00913367.2015.1018460?journalCode=ujoa20",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 97,
+      "title": "A Dynamic Model for Digital Advertising: The Effects of Creative Format, Message Content, and Targeting on Engagement",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmr.14.0117",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 98,
+      "title": "The Impact of Content and Design Elements on Banner Advertising Click-through Rates",
+      "url": "https://www.cambridge.org/core/journals/journal-of-advertising-research/article/abs/impact-of-content-and-design-elements-on-banner-advertising-clickthrough-rates/087D319CA00A5A20CC7E14354464E85B",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 99,
+      "title": "Effects of Television Commercial Repetition, Receiver Knowledge, and Commercial Length: A Test of the Two-Factor Model",
+      "url": "https://journals.sagepub.com/doi/10.1177/002224378602300106",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 100,
+      "title": "A Meta-Analysis of Marketing Communication Carryover Effects",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmr.13.0580",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 101,
+      "title": "Literal versus extended symbolic messages and advertising effectiveness: The moderating role of need for cognition",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/mar.20111",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 102,
+      "title": "Driving Online and Offline Sales: The Cross-Channel Effects of Traditional, Online Display, and Paid Search Advertising",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmr.11.0466",
+      "tier": "confirmed",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 103,
+      "title": "Health message framing effects on attitudes, intentions, and behavior: a meta-analytic review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21993844/",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 104,
+      "title": "The role of dispositional factors in moderating message framing effects",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22924446/",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 105,
+      "title": "Can Emotions Capture the Elusive Gain-Loss Framing Effect? A Meta-Analysis",
+      "url": "https://journals.sagepub.com/doi/10.1177/0093650219861256",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 106,
+      "title": "It's the Mind-Set that Matters: The Role of Construal Level and Message Framing in Influencing Consumer Efficacy and Conservation Behaviors",
+      "url": "https://journals.sagepub.com/doi/10.1509/jmkr.48.3.472",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 107,
+      "title": "Frontiers | Message Design Choices Don't Make Much Difference to Persuasiveness and Can't Be Counted On—Not Even When Moderating Conditions Are Specified",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.664160/full",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-06-29T00:00:00.000Z"
+    },
+    {
+      "index": 108,
+      "title": "The relative effectiveness of gain-framed and loss-framed messages in charity advertising: Meta-analytic evidence and implications",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/nvsm.1675",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 109,
+      "title": "“For Your Health” Versus “For the Environment”: Exploring Congruency and Incongruency Between Message Appeals and Temporal Framing",
+      "url": "https://doi.org/10.1080/10641734.2025.2495919",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-05-14T00:00:00.000Z"
+    },
+    {
+      "index": 110,
+      "title": "An Updated Meta-Analysis on Goal Message Framing for Encouraging Healthy Behavioral Attitudes, Behavioral Intentions, and Behaviors – Investigating Health Behavioral Characteristics Moderators and Cultural-Level Moderators",
+      "url": "https://doi.org/10.31234/osf.io/2gzum",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-10-31T00:00:00.000Z"
+    },
+    {
+      "index": 111,
+      "title": "Gain-Framed Messages Do Not Motivate Sun Protection: A Meta-Analytic Review of Randomized Trials Comparing Gain-Framed and Loss-Framed Appeals for Promoting Skin Cancer Prevention - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3397368/",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 112,
+      "title": "Effects of Message Framing on Cancer Prevention and Detection Behaviors, Intentions, and Attitudes: Systematic Review and Meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34528887/",
+      "tier": "confirmed",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-09-16T00:00:00.000Z"
+    },
+    {
+      "index": 113,
+      "title": "The Differential Effects of Online Peer Review and Expert Review on Service Evaluations:  The Roles of Confidence and Information Convergence",
+      "url": "https://journals.sagepub.com/doi/10.1177/1094670518779456",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 114,
+      "title": "How Online Product Reviews Affect Retail Sales: A Meta-analysis",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022435914000293",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 115,
+      "title": "Suspicion of online product reviews as fake: Cues and consequences",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296323001388",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 116,
+      "title": "Source Credibility, Legal Liability, and the Law of Endorsements",
+      "url": "https://journals.sagepub.com/doi/10.1177/074391569201100102",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 117,
+      "title": "Full Length Article The effect of review valence and variance on product evaluations: An examination of intrinsic and extrinsic cues ☆",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167811615300422",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 118,
+      "title": "What makes online reviews helpful? A diagnosticity-adoption framework to explain informational and normative influences in e-WOM",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S014829631400349X",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 119,
+      "title": "Taking a deeper look at online reviews: The asymmetric effect of valence intensity on shopping behaviour",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/0267257X.2013.776620",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 120,
+      "title": "Differential Effects of Provider Recommendations and Consumer Reviews in E-Commerce Transactions: An Experimental Study",
+      "url": "https://www.tandfonline.com/doi/abs/10.2753/MIS0742-1222290107",
+      "tier": "confirmed",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 121,
+      "title": "When product scarcity backfires (or doesn’t): Limited quantities affect perceived retailer sincerity in online promotions - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022435925001022?dgcid=rss_sd_all",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 122,
+      "title": "Limited time or limited quantity? The impact of other consumer existence and perceived competition on the scarcity messaging - Purchase intention relation",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1447677021000437",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 123,
+      "title": "Scarcity tactics in marketing: A meta-analysis of product scarcity effects on consumer purchase intentions",
+      "url": "https://doi.org/10.1016/j.jretai.2022.06.003",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-07-09T00:00:00.000Z"
+    },
+    {
+      "index": 124,
+      "title": "Units of time do matter: How countdown time units affect consumers’ intentions to participate in group-buying offers",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S156742231930016X",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 125,
+      "title": "Consumer flexibility and the effectiveness of limited time offers: the role of psychological reactance",
+      "url": "https://doi.org/10.1016/j.jbusres.2025.115645",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-08-13T00:00:00.000Z"
+    },
+    {
+      "index": 126,
+      "title": "“Limited Time Offer”: Impact of Time Scarcity Messages on Consumer’s Impulse Purchase: Journal of Promotion Management: Vol 30, No 2",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/10496491.2023.2253228",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-09-03T00:00:00.000Z"
+    },
+    {
+      "index": 127,
+      "title": "The Effects of Pressure and Self-Assurance Nudges on Product Purchases and Returns in Online Retailing: Evidence from a Randomized Field Experiment",
+      "url": "https://doi.org/10.1177/00222437231180494",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-05-24T00:00:00.000Z"
+    },
+    {
+      "index": 128,
+      "title": "Effect of effort and deadlines on consumer product returns",
+      "url": "https://myscp.onlinelibrary.wiley.com/doi/10.1016/j.jcps.2011.05.002",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 129,
+      "title": "Scarcity-Based Price Promotions: How Effective are they in a Revenue Management Environment?",
+      "url": "https://journals.sagepub.com/doi/10.1177/1096348020917734",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 130,
+      "title": "Use it or lose it: purchase acceleration effects of time-limited promotions",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/cb.116",
+      "tier": "confirmed",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 131,
+      "title": "Designing persuasive health materials using processing fluency: a literature review",
+      "url": "https://link.springer.com/article/10.1186/s13104-017-2524-x",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2017-06-08T00:00:00.000Z"
+    },
+    {
+      "index": 132,
+      "title": "The Effects of Linguistic Devices on Consumer Information Processing and Persuasion: A Language Complexity × Processing Mode Framework",
+      "url": "https://doi.org/10.1002/jcpy.1052",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-04-17T00:00:00.000Z"
+    },
+    {
+      "index": 133,
+      "title": "Assessing Text Readability Using Cognitively Based Indices",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/j.1545-7249.2008.tb00142.x",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 134,
+      "title": "Resolving the Effects of Concreteness on Interest, Comprehension, and Learning Important Ideas From Text | Educational Psychology Review | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1023/A:1016675822931",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 135,
+      "title": "More is easier? Testing the role of fluency in the more-credible effect | Judgment and Decision Making | Cambridge Core",
+      "url": "https://www.cambridge.org/core/journals/judgment-and-decision-making/article/more-is-easier-testing-the-role-of-fluency-in-the-morecredible-effect/0C28BC1EA5CE6F6DC3C8C3C4FD09BE99",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 136,
+      "title": "Consequences of erudite vernacular utilized irrespective of necessity: problems with using long words needlessly",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/acp.1178",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 137,
+      "title": "Processing of veracity cues: how processing difficulty affects the memory of event description and judgment of confidence | Cognitive Research: Principles and Implications | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1186/s41235-025-00629-2",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-05-28T00:00:00.000Z"
+    },
+    {
+      "index": 138,
+      "title": "Influence of high versus low readability level of written health information on self-efficacy: A randomized controlled study of the processing fluency effect",
+      "url": "https://journals.sagepub.com/doi/10.1177/2055102920905627",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 139,
+      "title": "Reversing the truth effect: learning the interpretation of processing fluency in judgments of truth - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17201563/",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 140,
+      "title": "Comprehension of legal contracts by non-experts: Effectiveness of plain language redrafting",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/acp.2350080107",
+      "tier": "confirmed",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 141,
+      "title": "Research on Advertising Research",
+      "url": "https://www.copytesting.org/research",
+      "tier": "practitioner",
+      "topics": [
+        "q10_copy_length",
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 142,
+      "title": "Email Subject Line Best Practices & Examples to Boost Open Rates",
+      "url": "https://www.klaviyo.com/blog/subject-lines-best-practices",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "6 hours ago"
+    },
+    {
+      "index": 143,
+      "title": "(PDF) The Effect of Subject Lines on Open Rates of Email Marketing ...",
+      "url": "https://www.researchgate.net/publication/334372550_The_Effect_of_Subject_Lines_on_Open_Rates_of_Email_Marketing_Messages",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 144,
+      "title": "29 Subject Line Effectiveness Statistics Every E-commerce Brand ...",
+      "url": "https://mailmend.io/blogs/subject-line-effectiveness-statistics",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Jan 7, 2026"
+    },
+    {
+      "index": 145,
+      "title": "Open This, [NAME]! Why Personalized Email Subject Lines Work",
+      "url": "https://www.chicagobooth.edu/review/open-name-why-personalized-email-subject-lines-work",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Oct 12, 2018"
+    },
+    {
+      "index": 146,
+      "title": "How to Write Email Subject Lines That Get Opened - GetVero",
+      "url": "https://www.getvero.com/resources/winning-email-subject-lines-and-examples/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 147,
+      "title": "Personalization in Email Marketing - Stanford Graduate School of Business",
+      "url": "https://www.gsb.stanford.edu/faculty-research/working-papers/personalization-email-marketing-role-non-informative-advertising",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 148,
+      "title": "17 Subject Line Statistics to Transform Your Email Marketing - Salesgenie",
+      "url": "https://www.salesgenie.com/blog/subject-line-statistics/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 149,
+      "title": "Explicit Marketing: Personalization of Email Subject Line",
+      "url": "https://kellercenter.hankamer.baylor.edu/news/story/2014/explicit-marketing-personalization-email-subject-line",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Dec 1, 2014"
+    },
+    {
+      "index": 150,
+      "title": "Best Practices for Email Subject Lines - Mailchimp",
+      "url": "https://mailchimp.com/help/best-practices-for-email-subject-lines/",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 151,
+      "title": "Personalized Subject Line - Documentation Bloomreach",
+      "url": "https://documentation.bloomreach.com/engagement/docs/personalized-subject-line",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 152,
+      "title": "Are attention spans really collapsing? Data shows UK ...",
+      "url": "https://www.kcl.ac.uk/news/are-attention-spans-really-collapsing-data-shows-uk-public-are-worried-but-also-see-benefits-from-technology",
+      "tier": "practitioner",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 16, 2022"
+    },
+    {
+      "index": 153,
+      "title": "Email Subject Line Length: What the Data Actually Says ...",
+      "url": "https://www.buzzstream.com/?p=12083",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 1, 2026"
+    },
+    {
+      "index": 154,
+      "title": "Attention Span: What Science Actually Says About Focus",
+      "url": "https://www.reachlink.com/advice/adhd/attention-span/",
+      "tier": "practitioner",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 13, 2026"
+    },
+    {
+      "index": 155,
+      "title": "Meta Ad Copy Specs: Every Character Limit for 2026",
+      "url": "https://adsuploader.com/blog/meta-ad-copy-specs",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 5, 2026"
+    },
+    {
+      "index": 156,
+      "title": "The Decline of Attention Span in the Digital Era",
+      "url": "https://sgu.ac.id/the-decline-of-attention-span-in-the-digital-era/",
+      "tier": "practitioner",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 2, 2026"
+    },
+    {
+      "index": 157,
+      "title": "Social media post length, ideal sizes for each platform",
+      "url": "https://blog.hootsuite.com/ideal-social-media-post-length/",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 158,
+      "title": "Data Says: The Best Email Subject Line Length",
+      "url": "https://www.mailpro.com/blog/email-subject-line-lenght",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 159,
+      "title": "Busting the attention span myth",
+      "url": "https://www.bbc.com/news/health-38896790",
+      "tier": "practitioner",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Mar 10, 2017"
+    },
+    {
+      "index": 160,
+      "title": "LinkedIn Character Limits: Every Limit You Need to Know",
+      "url": "https://authoredup.com/blog/linkedin-character-limit",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "2 days ago"
+    },
+    {
+      "index": 161,
+      "title": "Google Ads character limits 2026: table + free checker",
+      "url": "https://kunidadesigns.com/blog/google-ads-character-limits-guide/?srsltid=AfmBOorKDCjtXWrectOo3KW3jNbOSv2vuXpq_E2_DkKNhZJhBO6hQoK8",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 1, 2026"
+    },
+    {
+      "index": 162,
+      "title": "Attention Span Statistics 2026: Focus Duration, Digital ...",
+      "url": "https://speakwiseapp.com/blog/attention-span-statistics",
+      "tier": "practitioner",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 28, 2026"
+    },
+    {
+      "index": 163,
+      "title": "How AI Search Works: RAG, Vectors, and GEO Explained (2026)",
+      "url": "https://www.xseek.io/blogs/articles/how-ai-search-works-rag-vectors-and-geo-explained-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 164,
+      "title": "What Actually Gets You Cited in AI Search (2026 Data)",
+      "url": "https://www.digitalapplied.com/blog/ai-search-citation-ranking-factors-2026-data-study",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 165,
+      "title": "Google AI Overviews Ranking Factors: 2026 Guide to Winning Citations",
+      "url": "https://wellows.com/blog/google-ai-overviews-ranking-factors",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 166,
+      "title": "Headline writing research outputs · GitHub",
+      "url": "https://gist.github.com/NHagar/77c3f2e9df9c211d2abce7982f794135",
+      "tier": "practitioner",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 167,
+      "title": "5.2: Emotional Appeals - Social Sci LibreTexts",
+      "url": "https://socialsci.libretexts.org/Courses/Bakersfield_College/The_Persuasion_Playbook%3A_Your_Guide_to_Influence_and_Impact/05%3A_Motivational_Appeals/5.02%3A_Emotional_Appeals",
+      "tier": "practitioner",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 168,
+      "title": "AI Search Ranking Factors: What ChatGPT, Perplexity, and Google AI Overviews Actually Weigh | Fokal Guides",
+      "url": "https://www.fokal.com/ai-seo/ai-ranking-factors",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 169,
+      "title": "AI Overviews Ranking Factors: SEO Guide (2026) | SEOcrawl AI",
+      "url": "https://seocrawl.ai/blog/ai-overview-ranking-factors",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 170,
+      "title": "High-Converting Landing Page Design 2026",
+      "url": "https://www.involvedigital.com/insights/landing-page-design-high-conversion-2026",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 171,
+      "title": "AI Search Optimization Strategies: How to Rank in AI- ...",
+      "url": "https://www.convert.com/blog/growth-marketing/how-to-optimize-content-for-generative-ai",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 172,
+      "title": "AI Search Ranking Optimization: A Complete Guide | Jam",
+      "url": "https://www.spreadjam.com/blogs/ai-search-ranking-optimization",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 173,
+      "title": "Landing Page Statistics 2026: 120+ Conversion Data",
+      "url": "https://www.digitalapplied.com/blog/landing-page-statistics-2026-conversion-data-points",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 174,
+      "title": "Positive or Negative? The Influence of Message Framing, ...",
+      "url": "https://ijoc.org/index.php/ijoc/article/viewFile/7601/2266",
+      "tier": "practitioner",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 175,
+      "title": "How AI Search Engines Decide What to Cite (Not SEO)",
+      "url": "https://authoritytech.io/blog/how-ai-search-engines-decide-what-to-cite",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 176,
+      "title": "A Meta-Analysis of Fear Appeals: Implications for Effective ...",
+      "url": "https://regulatorwatch.com/wp-content/uploads/2020/06/Witte-and-Allen-2000-A-Meta-Analysis-of-Fear-Appeals-Implications-for-.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 177,
+      "title": "[PDF] GAIN-FRAMED AND LOSS-FRAMED PERSUASIVE MESSAGES ...",
+      "url": "http://www.communicationcache.com/uploads/1/0/8/8/10887248/the_advantages_of_compliance_or_the_disadvantages_of_noncompliance_-_a_meta-analytic_review_of_the_relative_persuasive_effectiveness_of_gain-framed_and_loss-framed_messages.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 178,
+      "title": "Gain vs. Loss Framing in Rational and Emotional Appeals: Effects on Consumer Attitudes, Reactance, and Brand Choice. | Published in Marketing Management Journal",
+      "url": "https://marketingmanagementjournal.scholasticahq.com/article/154848-gain-vs-loss-framing-in-rational-and-emotional-appeals-effects-on-consumer-attitudes-reactance-and-brand-choice",
+      "tier": "practitioner",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 179,
+      "title": "Fear Appeals and Persuasion: A Review and Update of the ...",
+      "url": "https://marialapinski.wordpress.com/wp-content/uploads/2012/08/eppm-published-maloney-lapinski-witte.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 180,
+      "title": "Thinking rationally about emotion — Alex Murrell",
+      "url": "https://www.alexmurrell.co.uk/articles/thinking-rationally-about-emotion",
+      "tier": "practitioner",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 181,
+      "title": "Voice of Customer: What Is It and Methods to Collect | M1-Project",
+      "url": "https://www.m1-project.com/blog/voice-of-customer-what-is-it-and-methods-to-collect",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 182,
+      "title": "The prevalence of emotional and rational tone in social advertising appeals",
+      "url": "https://www.redalyc.org/journal/5538/553868287003/html",
+      "tier": "practitioner",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 183,
+      "title": "Readers of online news prefer simple headlines, research suggests.",
+      "url": "https://journalistsresource.org/media/simple-headlines-online-news-readers",
+      "tier": "practitioner",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 184,
+      "title": "A Systematic Large-scale Analysis of Headline Experiments.",
+      "url": "https://home.uchicago.edu/ourminsky/Banerjee_Urminsky_Headlines.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 185,
+      "title": "Connect Values and Benefits with Means-End Chain",
+      "url": "https://umbrex.com/resources/frameworks/marketing-frameworks/means-end-chain-laddering-framework",
+      "tier": "practitioner",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 186,
+      "title": "The influence of quantity scarcity and time restrictions on ...",
+      "url": "https://edepot.wur.nl/313388",
+      "tier": "practitioner",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 187,
+      "title": "Processing fluency - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Processing_fluency",
+      "tier": "practitioner",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 188,
+      "title": "How to Do Voice of Customer Research (Step-by-Step + Real Examples)",
+      "url": "https://getthematic.com/insights/voice-of-customer-research",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 189,
+      "title": "High Converting Landing Pages: 12 Elements That Drive ...",
+      "url": "https://www.apexure.com/blog/the-complete-guide-to-high-converting-landing-page-design",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 190,
+      "title": "Voice of the Customer (VoC) Research: Guide on Review Mining",
+      "url": "https://www.readstoleads.com/blog-article/voc-research-find-your-copy-by-mining-customer-reviews",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 191,
+      "title": "Understanding the Effects of Fear and Humor Appeals ... - arno",
+      "url": "http://arno.uvt.nl/show.cgi?fid=172814",
+      "tier": "practitioner",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 192,
+      "title": "Rational Versus Emotional Creative: Short-Term And Long-Term Impact | Westwood One",
+      "url": "https://www.westwoodone.com/blog/2018/06/25/rational-versus-emotional-creative-short-term-and-long-term-impact",
+      "tier": "practitioner",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 193,
+      "title": "3 reasons to write CTAs from readers' point of view | VerticalResponse",
+      "url": "https://verticalresponse.com/blog/3-reasons-why-you-should-write-ctas-from-the-readers-point-of-view",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 194,
+      "title": "How Web Design Affects Conversion Rates | Clique Studios",
+      "url": "https://cliquestudios.com/university/resources/designing-for-success-how-smart-web-design-can-skyrocket-your-conversions",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 195,
+      "title": "GEO: Generative Engine Optimization - Princeton University",
+      "url": "https://collaborate.princeton.edu/en/publications/geo-generative-engine-optimization",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 196,
+      "title": "Lessons learned: A negative headline makes it more likely you'll click | Harvard T.H. Chan School of Public Health",
+      "url": "https://hsph.harvard.edu/health-communication/news/negative-news-headline-more-clicks",
+      "tier": "practitioner",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 197,
+      "title": "[PDF] Do Loss-Framed Persuasive Messages Engender Greater ...",
+      "url": "https://jakobdjensen.com/wp-content/uploads/2016/02/2008_OKeefeJensen_Com-Studies.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 198,
+      "title": "The $300M Button: When Removing a Single UX Decision Created a Year's Worth of Revenue | Atticus Li",
+      "url": "https://atticusli.com/blog/posts/300m-button-friction-jared-spool-checkout-ux",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 199,
+      "title": "The $300 million button that changed checkout behaviour | YourStory",
+      "url": "https://yourstory.com/2026/02/300-million-button-checkout-behaviour",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 200,
+      "title": "The Interpersonal Consequences of Processing Ease",
+      "url": "http://socialvisionlab.pre.ss.ucla.edu/wp-content/uploads/sites/126/2022/11/LickJohnsonCDPS.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 201,
+      "title": "Framing of the health information message in either negative or positive words | Cochrane",
+      "url": "https://www.cochrane.org/evidence/CD006777_framing-health-information-message-either-negative-or-positive-words",
+      "tier": "practitioner",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 202,
+      "title": "How to Build a High Converting Landing Page (2026 Guide)",
+      "url": "https://sevenseaswebdesign.com/how-to-build-a-high-converting-landing-page",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 203,
+      "title": "Application of Message Framing Theory to HPV Vaccination in undergradu | JMDH | Dove Medical Press",
+      "url": "https://www.dovepress.com/application-of-message-framing-theory-to-hpv-vaccination-in-undergradu-peer-reviewed-fulltext-article-JMDH",
+      "tier": "practitioner",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 204,
+      "title": "Message Framing: Theory & Psychology | Vaia",
+      "url": "https://www.vaia.com/en-us/explanations/media-studies/strategic-communication-in-media/message-framing",
+      "tier": "practitioner",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 205,
+      "title": "Voice of Customer Research Template: Gather Insights That Change Your Messaging | GTM Playbook",
+      "url": "https://discover.gtmplaybook.co/voice-of-customer-research-template",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 206,
+      "title": "Processing Fluency",
+      "url": "https://itsacademic.co.uk/processing-fluency",
+      "tier": "practitioner",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 207,
+      "title": "Voice of customer research: how to build a VoC programme that actually influences decisions",
+      "url": "https://skimle.com/blog/voice-of-customer-research-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 208,
+      "title": "The $300 Million Button — UX Articles by Center Centre",
+      "url": "https://articles.centercentre.com/three_hund_million_button",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 209,
+      "title": "Emotional Ads Work Best - Neuromarketing",
+      "url": "https://www.neurosciencemarketing.com/blog/articles/emotional-ads-work-best.htm",
+      "tier": "practitioner",
+      "topics": [
+        "q13_emotional_appeals"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 210,
+      "title": "When, How and Why is Loss-Framing More Effective than Gain- and Non-Gain-Framing in the Promotion of Detection Behaviors? | International Review of Social Psychology",
+      "url": "https://rips-irsp.com/articles/10.5334/irsp.15",
+      "tier": "practitioner",
+      "topics": [
+        "q6_message_framing"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 211,
+      "title": "Simplifying VoC Research: Methods, Tools & Best Practices",
+      "url": "https://heymarvin.com/resources/voc-research",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 212,
+      "title": "Ecommerce Hero Sections: What to Include, What to Test, and What's Costing You Sales",
+      "url": "https://splitbase.com/blog/hero-section",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 213,
+      "title": "The $300M Button (2009) | Hacker News",
+      "url": "https://news.ycombinator.com/item?id=11235886",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 214,
+      "title": "Laddering Method - Laddering Technique | NewtonX",
+      "url": "https://www.newtonx.com/article/unlocking-value-with-the-laddering-method",
+      "tier": "practitioner",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 215,
+      "title": "Replo Blog | How Landing Pages Affect Ad Conversion Rate",
+      "url": "https://www.replo.app/blog/how-landing-pages-affect-ad-conversion-rate",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 216,
+      "title": "5 Ad Copy Testing Methods (+ Why They Work)",
+      "url": "https://www.askattest.com/blog/articles/copy-testing",
+      "tier": "practitioner",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 217,
+      "title": "Collecting Voice of Customer Data From Existing Sources",
+      "url": "https://wynter.com/post/collecting-voice-of-customer-data",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 218,
+      "title": "When it Comes to Advertising Effectiveness, What is Key?",
+      "url": "https://www.nielsen.com/insights/2017/when-it-comes-to-advertising-effectiveness-what-is-key",
+      "tier": "practitioner",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 219,
+      "title": "[PDF] Effects of perceptual fluency on judgments of truth. | Semantic Scholar",
+      "url": "https://www.semanticscholar.org/paper/Effects-of-Perceptual-Fluency-on-Judgments-of-Truth-Reber-Schwarz/5a14c99cae5603943848d43273242a4c06e9e72c",
+      "tier": "practitioner",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 220,
+      "title": "Linguistic effects on news headline success",
+      "url": "https://www.cs.toronto.edu/~ashton/pubs/text-success-upworthy-plosone2021.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 221,
+      "title": "37 Landing Page Design Element Impact on Conversion ...",
+      "url": "https://www.flint.com/articles/landing-page-design-element-conversion-statistics",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 222,
+      "title": "How to Conduct Effective Voice of Customer Research  VisionEdge Marketing",
+      "url": "https://visionedgemarketing.com/effective-voice-customer-research",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 223,
+      "title": "How Landing Page Optimization Affects Conversion Rates",
+      "url": "https://www.workshopdigital.com/blog/how-landing-page-optimization-affects-conversion-rates",
+      "tier": "practitioner",
+      "topics": [
+        "q3_landing_page_structure"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 224,
+      "title": "The Influence of Online Customer Reviews and Ratings on ...",
+      "url": "https://eudl.eu/pdf/10.4108/eai.28-4-2025.2358091",
+      "tier": "practitioner",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 225,
+      "title": "Experimenting with Science News Headline Format to Maximize Engagement | KQED",
+      "url": "https://www.kqed.org/about/13722/experimenting-with-science-news-headline-format-to-maximize-engagement",
+      "tier": "practitioner",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 226,
+      "title": "Three Steps of a Successful Voice of Customer Analysis",
+      "url": "https://www.hanoverresearch.com/insights-blog/corporate/three-steps-of-a-successful-voice-of-customer-analysis",
+      "tier": "practitioner",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 227,
+      "title": "Disfluency effects in comprehension: How new information can become accessible",
+      "url": "https://www.academia.edu/20858196/Disfluency_effects_in_comprehension_How_new_information_can_become_accessible",
+      "tier": "practitioner",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 228,
+      "title": "Cognitive Fluency as a Driver of Trust and Behavioral Intention: Mechanisms, Applications, and Boundary ConditionsIntroduction: The Metacognitive Architecture of Human Judgment · Global Council for Behavioral Science",
+      "url": "https://gc-bs.org/articles/cognitive-fluency-driver-trust-behavioral-intention",
+      "tier": "practitioner",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 229,
+      "title": "Customer Interviews: How to Use the Jobs-to-Be-Done Framework | CXL",
+      "url": "https://cxl.com/blog/customer-interviews",
+      "tier": "craft",
+      "topics": [
+        "q11_voice_of_customer_language"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 230,
+      "title": "7 Tips to Craft Compelling Call-to-action Copy",
+      "url": "https://www.keepitusable.com/blog/7-tips-to-craft-compelling-call-to-action-copy",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 231,
+      "title": "Means-end theory and customer experience | Talon.One",
+      "url": "https://www.talon.one/glossary/means-end-theory",
+      "tier": "practitioner",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 232,
+      "title": "Why curiosity is killing the art of the headline",
+      "url": "https://www.restlesscommunications.com/why-curiosity-is-killing-the-art-of-the-headline",
+      "tier": "practitioner",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 233,
+      "title": "Means – End Chain Theory and Laddering Technique: Applications in Consumer Behavior Research",
+      "url": "https://ideas.repec.org/a/ris/buecrj/0119.html",
+      "tier": "practitioner",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 234,
+      "title": "Overview of Laddering Theory – Creative Business Research and Development",
+      "url": "https://researchmethods.imem.nl/wp/2025/02/12/overview-of-laddering-theory",
+      "tier": "practitioner",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 235,
+      "title": "The Role of Processing Fluency in Product Innovativeness Judgment",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001813539",
+      "tier": "practitioner",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 236,
+      "title": "Ad Copy Testing Meaning, Importance, and Example",
+      "url": "https://www.rebid.co/ad-copy-testing",
+      "tier": "practitioner",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 237,
+      "title": "[PDF] The Impact of Online Customer Reviews (OCRs) on Customers ...",
+      "url": "https://bura.brunel.ac.uk/bitstream/2438/14853/2/FullText.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 238,
+      "title": "Understanding Consumer Decision-Making with Means-End Research — Greenbook",
+      "url": "https://www.greenbook.org/marketing-research/consumer-decision-making",
+      "tier": "practitioner",
+      "topics": [
+        "q12_benefits_features_construal"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 239,
+      "title": "The impact of Online Customer Reviews (OCRs) on Consumer Purchasing Decision",
+      "url": "https://www.academia.edu/104711764/The_impact_of_Online_Customer_Reviews_OCRs_on_Consumer_Purchasing_Decision",
+      "tier": "practitioner",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 240,
+      "title": "How to Create Effective Ad Copy Testing Strategies - Addiction Treatment Marketing, SaaS Marketing, and B2B Healthcare Marketing Agency",
+      "url": "https://www.activemarketing.com/blog/paid-advertising/how-to-create-effective-ad-copy-testing-strategies",
+      "tier": "practitioner",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 241,
+      "title": "\"The Role of Processing Fluency in Product Innovativeness Judgment\" by Hye Jeung Cho",
+      "url": "https://amj.kma.re.kr/journal/vol15/iss3/3",
+      "tier": "practitioner",
+      "topics": [
+        "q9_readability_fluency_specificity"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 242,
+      "title": "Six things you didn’t know about headline writing: Sensationalistic form in viral news content from traditional and digitally native news organizations – International Symposium on Journalism",
+      "url": "https://isoj.org/research/six-things-you-didnt-know-about-headline-writing-sensationalistic-form-in-viral-news-content-from-traditional-and-digitally-native-news-organizations",
+      "tier": "practitioner",
+      "topics": [
+        "q1_headline_evidence"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 243,
+      "title": "Scarcity - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Scarcity",
+      "tier": "practitioner",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 244,
+      "title": "Shorter TV Ads Drive More Site Visits, But Longer Ads Fuel Conversions - MNTN Research",
+      "url": "https://research.mountain.com/creative-analysis/the-long-and-the-short-of-it-shorter-ads-drive-more-site-visits-but-longer-ads-fuel-conversions",
+      "tier": "practitioner",
+      "topics": [
+        "q10_copy_length"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 245,
+      "title": "What Is Copy Testing and Is It Necessary? - Directive",
+      "url": "https://directiveconsulting.com/blog/copy-testing",
+      "tier": "practitioner",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 246,
+      "title": "Scarcity - The Decision Lab",
+      "url": "https://thedecisionlab.com/reference-guide/anthropology/scarcity",
+      "tier": "practitioner",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 247,
+      "title": "5 Rules for Choosing the Right Words on Button Labels",
+      "url": "https://uxmovement.com/buttons/5-rules-for-choosing-the-right-words-on-button-labels",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 248,
+      "title": "Advertising Analytics Guide: 15 Metrics & Attribution (2026)",
+      "url": "https://improvado.io/blog/advertising-analytics",
+      "tier": "practitioner",
+      "topics": [
+        "q5_ad_copy_effectiveness"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 249,
+      "title": "Risk Reversal Marketing Strategies for Increasing Sales | Predictable Profits",
+      "url": "https://predictableprofits.com/3-ways-to-increase-sales-almost-instantly-with-risk-reversal",
+      "tier": "practitioner",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 250,
+      "title": "Scarcity - Econlib",
+      "url": "https://www.econlib.org/library/Topics/College/scarcity.html",
+      "tier": "practitioner",
+      "topics": [
+        "q8_scarcity_urgency_guarantees"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 251,
+      "title": "what- WordWeb dictionary definition",
+      "url": "https://www.wordwebonline.com/en/WHAT",
+      "tier": "practitioner",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 252,
+      "title": "(PDF) Generative Engine Optimization at Scale: Measuring Brand Visibility Across AI Search Engines",
+      "url": "https://www.researchgate.net/publication/407287604_Generative_Engine_Optimization_at_Scale_Measuring_Brand_Visibility_Across_AI_Search_Engines",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-21T00:00:00.000Z"
+    },
+    {
+      "index": 253,
+      "title": "C-SEO Bench: Does Conversational SEO Work?",
+      "url": "https://papers.neurips.cc/paper_files/paper/2025/file/27aa3aeff0f8460a7b43d30fa6c5c032-Paper-Datasets_and_Benchmarks_Track.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q14_aeo_geo_copy_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 254,
+      "title": "Does the form of text play a role in click throgh the button on websites?",
+      "url": "https://doaj.org/article/aded47cb125e470ba54a91158ec5b14d",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 255,
+      "title": "Online persuasion in a B2B market using call to action buttons: the effects of the buying funnel stage and framing effect on message effectiveness",
+      "url": "https://thesis.eur.nl/pub/35749",
+      "tier": "practitioner",
+      "topics": [
+        "q2_cta_button_copy"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2016-07-26T00:00:00.000Z"
+    },
+    {
+      "index": 256,
+      "title": "FTC GUIDeLINes ON eNDORseMeNTs AND ONLINe CONsUMeR ReVIeWs: BIAsING CONsUMeRs' INTeNT TO BUY",
+      "url": "https://scholarworks.uark.edu/inquiry/vol11/iss1/8",
+      "tier": "practitioner",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2010-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 257,
+      "title": "Consumer-Generated Media and Advertising—Are They One and the Same? An Analysis of the Amended FTC Guides Concerning the Use of Endorsements and Testimonials in Advertising, 10 J. Marshall Rev. Intell. Prop. L. 206 (2010)",
+      "url": "https://repository.jmls.edu/ripl/vol10/iss1/5",
+      "tier": "practitioner",
+      "topics": [
+        "q7_social_proof_testimonials"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2010-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 258,
+      "title": "The Role of Non-Informative Advertising Content",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2725251",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 259,
+      "title": "Scrolling and Attention - NN/G",
+      "url": "https://www.nngroup.com/articles/scrolling-and-attention",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 260,
+      "title": "Guides Concerning the Use of Endorsements and ...",
+      "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/P204500%20Guides%20Concerning%20Endors%20and%20Testimonials.pdf",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 261,
+      "title": "Text Scanning Patterns: Eyetracking Evidence - NN/G",
+      "url": "https://www.nngroup.com/articles/text-scanning-patterns-eyetracking",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 262,
+      "title": "F-Shaped Pattern For Reading Web Content (original eyetracking research) - NN/G",
+      "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 263,
+      "title": "Guides Concerning the Use of Endorsements and ...",
+      "url": "https://www.ftc.gov/sites/default/files/attachments/press-releases/ftc-publishes-final-guides-governing-endorsements-testimonials/091005revisedendorsementguides.pdf",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 264,
+      "title": "FTC Policy Statement Regarding Advertising Substantiation | Federal Trade Commission",
+      "url": "https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 265,
+      "title": "16 CFR Part 255: Guides Concerning the Use of Endorsements and Testimonials in Advertising | Federal Trade Commission",
+      "url": "https://www.ftc.gov/legal-library/browse/federal-register-notices/16-cfr-part-255-guides-concerning-use-endorsements-testimonials-advertising",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 266,
+      "title": "F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant (Even on Mobile) - NN/G",
+      "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 267,
+      "title": "Challenges, Best Practices and Pitfalls in Evaluating Results of Online Controlled Experiments | Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining",
+      "url": "https://dl.acm.org/doi/10.1145/3292500.3332297",
+      "tier": "confirmed",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 268,
+      "title": "All about sample-size calculations for A/B testing: Novel extensions and practical guide",
+      "url": "https://doi.org/10.48550/arxiv.2305.16459",
+      "tier": "confirmed",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-05-25T00:00:00.000Z"
+    },
+    {
+      "index": 269,
+      "title": "Trustworthy online controlled experiments",
+      "url": "https://doi.org/10.1145/2339530.2339653",
+      "tier": "confirmed",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2012-08-12T00:00:00.000Z"
+    },
+    {
+      "index": 270,
+      "title": "A Dirty Dozen:  Twelve Common Metric Interpretation Pitfalls in Online Controlled Experiments",
+      "url": "https://dl.acm.org/doi/10.1145/3097983.3098024",
+      "tier": "confirmed",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 271,
+      "title": "Sequential Testing for Early Stopping of Online Experiments",
+      "url": "https://dl.acm.org/doi/10.1145/2766462.2767729",
+      "tier": "confirmed",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 272,
+      "title": "Controlled experiments on the web: survey and practical guide | Data Mining and Knowledge Discovery | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s10618-008-0114-1",
+      "tier": "confirmed",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2008-07-30T00:00:00.000Z"
+    },
+    {
+      "index": 273,
+      "title": "Online controlled experiments at large scale",
+      "url": "https://doi.org/10.1145/2487575.2488217",
+      "tier": "confirmed",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2013-08-11T00:00:00.000Z"
+    },
+    {
+      "index": 274,
+      "title": "Eye Movements on a Single-Column and Double-Column Text Web Page",
+      "url": "https://journals.sagepub.com/doi/10.1177/154193120805201962",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 275,
+      "title": "Eye Tracking Analysis in Reading Online Newspapers | MDPI",
+      "url": "https://www.mdpi.com/1995-8692/2/4/26",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2008-11-26T00:00:00.000Z"
+    },
+    {
+      "index": 276,
+      "title": "The impact of hyperlinks, skim reading and perceived importance when reading on the Web | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0263669",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 277,
+      "title": "Eye Tracking Scanpath Analysis Techniques on Web Pages: A Survey, Evaluation and Comparison",
+      "url": "https://www.mdpi.com/1995-8692/9/1/2",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-12-30T00:00:00.000Z"
+    },
+    {
+      "index": 278,
+      "title": "The Impact of Advertising Location and User Task on the Emergence of Banner Ad Blindness: An Eye-Tracking Study: International Journal of Human–Computer Interaction: Vol 30, No 3",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/10447318.2013.847762",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 279,
+      "title": "Eye tracking to identify strategies used by readers seeking information from on-line texts",
+      "url": "https://dl.acm.org/doi/10.1145/1274892.1274913",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 280,
+      "title": "Eye-tracking analysis of user behavior and performance in web search on large and small screens",
+      "url": "https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.23187",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 281,
+      "title": "Investigating Effects of Typographic Variables on Webpage Reading Through Eye Movements | Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-019-49051-x",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-09-03T00:00:00.000Z"
+    },
+    {
+      "index": 282,
+      "title": "The impact of skim reading and navigation when reading hyperlinks on the web | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0239134",
+      "tier": "confirmed",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-09-17T00:00:00.000Z"
+    },
+    {
+      "index": 283,
+      "title": "Commercial Speech in User-Generated Media: An Analysis of the FTC's Revised Guides Concerning Use of Endorsements and Testimonials in Advertising",
+      "url": "https://doi.org/10.17161/1808.20183",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2011-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 284,
+      "title": "Credible Effects: The Impact of Disclosure of Material Connections Within Online Product Reviews",
+      "url": "https://journals.sagepub.com/doi/10.1177/0743915619864543",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 285,
+      "title": "Implied Claims in Drug Advertising: A Review of Recent Literature and Regulatory Actions",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36825849/",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 286,
+      "title": "Fake reviews on online platforms: perspectives from the US, UK and EU legislations - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8294234/",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 287,
+      "title": "The Effects of Advertising Disclosure Regulations on Social Media: Evidence From Instagram",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1756-2171.12493",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 288,
+      "title": "Deception in Advertising: A Content Analysis of the Legal Parameters of Deception",
+      "url": "https://doi.org/10.25777/2ys7-mq28",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-05-02T00:00:00.000Z"
+    },
+    {
+      "index": 289,
+      "title": "Effects of different sponsorship disclosure message types on consumers’ trust and attitudes: International Journal of Advertising: Vol 40, No 1",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/02650487.2020.1807229",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 290,
+      "title": "Losing Weight with Charles and Dan: Examining Potential Liability for Endorser Claims in Weight Loss Advertisements",
+      "url": "https://doi.org/10.32731/smq.292.062020.05",
+      "tier": "confirmed",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-06-01T00:00:00.000Z"
+    },
+    {
+      "index": 291,
+      "title": "Personalization in Email Marketing: The Role of ...",
+      "url": "https://www.researchgate.net/publication/323439461_Personalization_in_Email_Marketing_The_Role_of_Noninformative_Advertising_Content",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 292,
+      "title": "Personalization in Email Marketing: Journal Article",
+      "url": "https://www.gsb.stanford.edu/faculty-research/publications/personalization-email-marketing-role-non-informative-advertising",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 293,
+      "title": "Personalization in Email Marketing: The Role of Non- ...",
+      "url": "https://ideas.repec.org/p/ecl/stabus/3409.html",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 294,
+      "title": "A Field Experiment Using the Authority Principle to Improve",
+      "url": "https://epub.jku.at/download/pdf/8623290.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 295,
+      "title": "[PDF] Personalization in Email Marketing: The Role of ...",
+      "url": "https://www.semanticscholar.org/paper/Personalization-in-Email-Marketing%3A-The-Role-of-Sahni-Wheeler/04f887daf98f23dfd928879082e6825dfd538a2c",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "Mar 1, 2018"
+    },
+    {
+      "index": 296,
+      "title": "The impact of customization on email marketing ...",
+      "url": "https://aaltodoc.aalto.fi/bitstreams/74a4e36d-0181-43a0-aec9-58e6e7d020a2/download",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "jina",
+        "serper"
+      ],
+      "published_date": "by T Pham · 2023"
+    },
+    {
+      "index": 297,
+      "title": "[PDF] The Influence of Email Marketing on Customer Loyalty in the E ...",
+      "url": "https://norma.ncirl.ie/7822/1/tarunyogananda.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 298,
+      "title": "F-pattern reading: what eye-tracking research reveals about how we scan text | warpread.app",
+      "url": "https://warpread.app/blog/f-pattern-reading",
+      "tier": "practitioner",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 299,
+      "title": "[PDF] Online Controlled Experiments and A/B Testing",
+      "url": "https://netman.aiops.org/~peidan/ANM2017/14.QED/ReadingList/2015Encyclopedia_Online%20Controlled%20Experiments.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 300,
+      "title": "[PDF] Online Controlled Experiments and A/B Testing - ExP Platform",
+      "url": "https://www.exp-platform.com/Documents/2015%20Online%20Controlled%20Experiments_EncyclopediaOfMLDM.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 301,
+      "title": "Federal Register :: Guides Concerning the Use of Endorsements and Testimonials in Advertising",
+      "url": "https://www.federalregister.gov/documents/2023/07/26/2023-14795/guides-concerning-the-use-of-endorsements-and-testimonials-in-advertising",
+      "tier": "practitioner",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 302,
+      "title": "[PDF] Online Controlled Experiments and A/B Tests - ExP Platform",
+      "url": "https://exp-platform.com/Documents/2023-03-11EncyclopeiaMLDSABTestingFinal.pdf",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 303,
+      "title": "16 CFR § 255.0 - Purpose and definitions. | Electronic Code of Federal Regulations (e-CFR) | US Law | LII / Legal Information Institute",
+      "url": "https://www.law.cornell.edu/cfr/text/16/255.0",
+      "tier": "practitioner",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 304,
+      "title": "How Users Scan: Learning from Eye Tracking Research | Codecademy",
+      "url": "https://www.codecademy.com/article/how-users-scan",
+      "tier": "practitioner",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 305,
+      "title": "Statistical Power, Sample Size, and Minimum Detectable Effect in A/B Testing | cazyweb",
+      "url": "https://cazyweb.com/research/statistical-power-sample-size-ab-testing",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 306,
+      "title": "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing by Ron Kohavi | Goodreads",
+      "url": "https://www.goodreads.com/book/show/51635906-trustworthy-online-controlled-experiments",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 307,
+      "title": "Online Controlled Experiments and A / B Tests",
+      "url": "https://www.academia.edu/70844744/Online_Controlled_Experiments_and_A_B_Tests",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 308,
+      "title": "How Humans Read Webpages: Reducing Banner Blindness",
+      "url": "https://www.adpushup.com/blog/banner-blindness",
+      "tier": "practitioner",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 309,
+      "title": "Writing for the Web | How People Read on the Web - Center for Parent Information and Resources",
+      "url": "https://www.parentcenterhub.org/web-reading",
+      "tier": "practitioner",
+      "topics": [
+        "q19_reading_scanning_eye_tracking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 310,
+      "title": "[Book Review] Trustworthy Online Controlled Experiments, Ron Kohavi et – mojan.ca",
+      "url": "https://mojan.ca/blogs/recommended-reading/book-review-trustworthy-online-controlled-experiments",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 311,
+      "title": "Guide to FTC Consumer Review and Testimonial Rules",
+      "url": "https://ftcattorney.com/guide-to-ftc-consumer-review-and-testimonial-rule",
+      "tier": "practitioner",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 312,
+      "title": "Statistical Power in A/B Testing: A Practical Guide",
+      "url": "https://www.convert.com/blog/a-b-testing/statistical-power",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 313,
+      "title": "A Startup’s Guide to FTC Endorsement Guidelines (16 CFR Part 255): Ensuring Transparency in Endorsements and Testimonials",
+      "url": "https://blog.promise.legal/startup-central/a-startups-guide-to-ftc-endorsement-guidelines-16-cfr-part-255-ensuring-transparency-in-endorsements-and-testimonials",
+      "tier": "practitioner",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 314,
+      "title": "The FTC Finalizes Changes to Endorsement Guides | Epstein Becker Green",
+      "url": "https://www.commerciallitigationupdate.com/the-ftc-finalizes-changes-to-endorsement-guides",
+      "tier": "practitioner",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 315,
+      "title": "Effects of verbatim repetition of the headline message on the proceed button on click-through rates in online retail",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1187798/pdf",
+      "tier": "confirmed",
+      "topics": [
+        "q21_landing_page_teardowns",
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 316,
+      "title": "Designing “Landing Page” for Websites Based on the User Experience: Review, Analysis, and Interpretation",
+      "url": "https://doi.org/10.5772/intechopen.109240",
+      "tier": "confirmed",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-01-03T00:00:00.000Z"
+    },
+    {
+      "index": 317,
+      "title": "Analysis on the AIDCA Method in Website UX Design Copywriting",
+      "url": "https://doi.org/10.70865/ijsscs.v2i4.52",
+      "tier": "confirmed",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-10-30T00:00:00.000Z"
+    },
+    {
+      "index": 318,
+      "title": "Creating Effective Marketing Messages Through Moderately Surprising Syntax",
+      "url": "https://journals.sagepub.com/doi/10.1177/00222429231153582",
+      "tier": "confirmed",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 319,
+      "title": "The Language That Drives Engagement: A Systematic Large-scale Analysis of Headline Experiments",
+      "url": "https://doi.org/10.1287/mksc.2021.0018",
+      "tier": "confirmed",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-11-04T00:00:00.000Z"
+    },
+    {
+      "index": 320,
+      "title": "How message appeals and prior product use influence information processing, risk perceptions, trust, attitudes, and genetic test purchase intentions",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0283102&type=printable",
+      "tier": "confirmed",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 321,
+      "title": "You won't believe what's in this paper! Clickbait, relevance and the curiosity gap",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0378216621000229",
+      "tier": "confirmed",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 322,
+      "title": "The Science of the First Three Seconds: An Empirical Analysis of Emotional Tone, Rhetorical Style, and Category Norms in Viral TikTok Hooks",
+      "url": "https://doi.org/10.31235/osf.io/rj2mz_v1",
+      "tier": "confirmed",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-08-08T00:00:00.000Z"
+    },
+    {
+      "index": 323,
+      "title": "Creating captivating and searchable titles in technical writing: Practical guides and sample analyses - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2949919425000615",
+      "tier": "confirmed",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 324,
+      "title": "I’ll Read That!: What Title Elements Attract Readers to an Article?",
+      "url": "https://journals.sagepub.com/doi/10.1177/0098628320959948",
+      "tier": "confirmed",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 325,
+      "title": "The impact of linguistic features on CTR in Instagram ads: A study of supplement and cosmetic products | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0338313",
+      "tier": "confirmed",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "index": 326,
+      "title": "A Methodological Framework for Rigorous Meta Ads Experimentation",
+      "url": "https://doi.org/10.20944/preprints202601.0162.v1",
+      "tier": "confirmed",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-05T00:00:00.000Z"
+    },
+    {
+      "index": 327,
+      "title": "Scalable Query N-Gram Embedding for Improving Matching and Relevance in Sponsored Search | Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining",
+      "url": "https://dl.acm.org/doi/10.1145/3219819.3219897",
+      "tier": "confirmed",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 328,
+      "title": "Influence in the caption: how mega influencers use language in sponsored Instagram posts",
+      "url": "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2026.1799090/pdf",
+      "tier": "confirmed",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 329,
+      "title": "Running field experiments using Facebook split test - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7331542/",
+      "tier": "confirmed",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 330,
+      "title": "Comparable 2022 General Election Advertising Datasets from Meta and Google | Scientific Data",
+      "url": "https://www.nature.com/articles/s41597-025-05228-w",
+      "tier": "confirmed",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-06-09T00:00:00.000Z"
+    },
+    {
+      "index": 331,
+      "title": "AI Visibility Hypothesis: Meta Description Length and LLM Corpus Selection – Testing Shallow Pass Budget Allocation",
+      "url": "https://doi.org/10.5281/zenodo.18647152",
+      "tier": "confirmed",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-15T00:00:00.000Z"
+    },
+    {
+      "index": 332,
+      "title": "Artificial intelligence in Facebook Ads targeted advertising",
+      "url": "https://doi.org/10.15276/mdt.10.2.2026.7",
+      "tier": "confirmed",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-16T00:00:00.000Z"
+    },
+    {
+      "index": 333,
+      "title": "The Influence of Microcopy on User Decision-Making",
+      "url": "https://doi.org/10.54941/ahfe1005131",
+      "tier": "confirmed",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 334,
+      "title": "Enhancing Checkout Conversion Rates Through Machine Learning and UI/UX Design Patterns",
+      "url": "https://doi.org/10.1109/icssas66150.2025.11080778",
+      "tier": "confirmed",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-06-11T00:00:00.000Z"
+    },
+    {
+      "index": 335,
+      "title": "When payment options stand out: Payment option salience on the product page increases purchase ikelihood - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022435926000059?dgcid=rss_sd_all",
+      "tier": "confirmed",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 336,
+      "title": "It’s how you say it: Systematic A/B testing of digital messaging cut hospital no-show rates | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0234817",
+      "tier": "confirmed",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-06-23T00:00:00.000Z"
+    },
+    {
+      "index": 337,
+      "title": "Optimalisasi Microcopy dalam Desain Web Aplikasi dan Dampaknya pada Conversion Rate",
+      "url": "https://doi.org/10.32672/jnkti.v8i5.9723",
+      "tier": "confirmed",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-10-08T00:00:00.000Z"
+    },
+    {
+      "index": 338,
+      "title": "Inductively Versus Deductively Structured Product Descriptions: Effects on Chinese and Western Readers",
+      "url": "https://journals.sagepub.com/doi/10.1177/1050651920932192",
+      "tier": "confirmed",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 339,
+      "title": "The Impact of Sentiment Scores Extracted from Product Descriptions on Customer Purchase Intention | New Generation Computing | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s00354-024-00242-9",
+      "tier": "confirmed",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-02-24T00:00:00.000Z"
+    },
+    {
+      "index": 340,
+      "title": "Is Creative Description Always Effective in Purchase Intention? The Construal Level Theory as a Moderating Effect",
+      "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2021.619340/pdf",
+      "tier": "confirmed",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 341,
+      "title": "Creating Effective Online Customer Experiences",
+      "url": "https://journals.sagepub.com/doi/10.1177/0022242918809930",
+      "tier": "confirmed",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 342,
+      "title": "Perspective Chapter: Optimizing the Brand-Product Narrative for a Direct-to-Consumer Webstore",
+      "url": "https://doi.org/10.5772/intechopen.113402",
+      "tier": "confirmed",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-11-22T00:00:00.000Z"
+    },
+    {
+      "index": 343,
+      "title": "Narrative information on secondhand products in e-commerce | Marketing Letters | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11002-022-09637-4",
+      "tier": "confirmed",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-06-24T00:00:00.000Z"
+    },
+    {
+      "index": 344,
+      "title": "Impact of seller- and buyer-created content on product sales in the electronic commerce platform: The role of informativeness, readability, multimedia richness, and extreme valence",
+      "url": "https://doi.org/10.1016/j.jretconser.2022.103141",
+      "tier": "confirmed",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-09-20T00:00:00.000Z"
+    },
+    {
+      "index": 345,
+      "title": "ASSESSMENT OF THE USEFULNESS OF AI-GENERATED CONTENT FOR SEO",
+      "url": "https://doi.org/10.5281/zenodo.19000570",
+      "tier": "confirmed",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-13T00:00:00.000Z"
+    },
+    {
+      "index": 346,
+      "title": "Comparative Analysis of Brand Copywriting in the Generative Ai Advertising Era",
+      "url": "https://doi.org/10.47772/ijriss.2026.100300069",
+      "tier": "confirmed",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 347,
+      "title": "An Exploratory Study on the Impact of Generative AI (Search Generative Experience - SGE) on Traditional SEO Strategies",
+      "url": "https://doi.org/10.55041/isjem06077",
+      "tier": "confirmed",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-03T00:00:00.000Z"
+    },
+    {
+      "index": 348,
+      "title": "Consumer Trust in AI-Generated Marketing Content: A Systematic Literature Review and Research Agenda",
+      "url": "https://doi.org/10.66308/air.e2026024",
+      "tier": "confirmed",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-17T00:00:00.000Z"
+    },
+    {
+      "index": 349,
+      "title": "LLM-Generated vs. Human-Authored Advertising Copy: A Comparative Analysis of Persuasiveness, Brand Alignment, and Linguistic Naturalness",
+      "url": "https://doi.org/10.2139/ssrn.6789380",
+      "tier": "confirmed",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 350,
+      "title": "A Comparative Analysis of AI-Generated vs. Human-Written Marketing Content Using Readability and SEO Metrics",
+      "url": "https://doi.org/10.5281/zenodo.19479733",
+      "tier": "confirmed",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-09T00:00:00.000Z"
+    },
+    {
+      "index": 351,
+      "title": "From Keywords to Intelligence: A Comparative Framework Analysis of SEO, AEO, and GEO in AI-Driven Digital Ecosystems",
+      "url": "https://doi.org/10.5281/zenodo.20362079",
+      "tier": "confirmed",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-24T00:00:00.000Z"
+    },
+    {
+      "index": 352,
+      "title": "AIGC New Media Copywriting: Development Trajectories and Industry-Education Integration Pathways",
+      "url": "https://doi.org/10.54691/8vq1ye49",
+      "tier": "confirmed",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-16T00:00:00.000Z"
+    },
+    {
+      "index": 353,
+      "title": "How to Write an Effective Abandoned Cart Email - Dos, Don'ts ...",
+      "url": "https://www.youtube.com/watch?v=wn2o_rXixIg",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "2 years ago"
+    },
+    {
+      "index": 354,
+      "title": "The Best Abandoned Cart Email Examples & Designs",
+      "url": "https://reallygoodemails.com/categories/abandoned-cart",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 355,
+      "title": "5 key elements of high converting landing pages (with examples)",
+      "url": "https://copyhackers.com/2022/09/high-converting-landing-pages-examples",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 356,
+      "title": "Writing Product Descriptions That Convert (With Examples)",
+      "url": "https://cxl.com/blog/product-descriptions",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 357,
+      "title": "7 Landing Page Examples to Swipe for Inspiration - CXL",
+      "url": "https://cxl.com/blog/landing-page-examples",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 358,
+      "title": "Landing Page Teardown: Is this page too short?",
+      "url": "https://copyhackers.com/2013/09/landing-page",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 359,
+      "title": "The 15-pt Sales-Page- in-a-Day Template | Copyhackers",
+      "url": "https://copyhackers.com/wp-content/uploads/2019/03/The-15-pt-Sales-Page-Template.pdf",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 360,
+      "title": "A Case Study For Writing a Great Home Page (Updated November 2020)",
+      "url": "https://copyhackers.com/2016/06/great-home-page-copy",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 361,
+      "title": "Headlines — VeryGoodCopy: Blogs 1 — VeryGoodCopy - Copywriting & Content Marketing",
+      "url": "https://www.verygoodcopy.com/2qioqdho4mzzgx3s7w6ay8r0g7yrop/tag/Headlines",
+      "tier": "craft",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 362,
+      "title": "4 steps to crafting professional-grade headlines that won't be ignored — VeryGoodCopy - Copywriting & Content Marketing",
+      "url": "https://www.verygoodcopy.com/2qioqdho4mzzgx3s7w6ay8r0g7yrop/how-to-write-a-headline",
+      "tier": "craft",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 363,
+      "title": "Abandoned Cart Emails: 12 Best Practices with Examples",
+      "url": "https://www.klaviyo.com/blog/abandoned-cart-email",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 364,
+      "title": "10 successful Welcome Emails examples: Tips and best ...",
+      "url": "https://www.justrelate.com/ux-design/welcome-emails",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 365,
+      "title": "Abandoned Cart Email Examples: 15+ High-Converting ...",
+      "url": "https://www.chasedimond.com/abandoned-cart-email-examples-15-highconverting-templates-that-recover-lost-sales",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 366,
+      "title": "Crafting an Onboarding Email Sequence - Grasp",
+      "url": "https://paths.grasp.study/modules/f2db8802-cece-46fe-b2f6-daed493719b8/lessons/71d3aed3-361b-4c6c-9cd0-ba46fe9393a0",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Aug 2, 2026"
+    },
+    {
+      "index": 367,
+      "title": "Examples of Automated Email Sequences",
+      "url": "https://www.business.com/articles/automated-email-sequence-examples/",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 21, 2026"
+    },
+    {
+      "index": 368,
+      "title": "The 6 key Email Sequences, real-world examples ...",
+      "url": "https://kit.com/resources/blog/email-sequence",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Aug 6, 2024"
+    },
+    {
+      "index": 369,
+      "title": "TOP 20 AI VS HUMAN COPYWRITER PERFORMANCE STATISTICS 2026 THAT EXPOSE SHOCKING CONTENT RESULTS",
+      "url": "https://www.amraandelma.com/ai-vs-human-copywriter-performance-statistics",
+      "tier": "craft",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 370,
+      "title": "How to Write Google Ads Like a Pro in 2026 (+Examples!) | WordStream",
+      "url": "https://www.wordstream.com/blog/google-ads-copy",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 371,
+      "title": "Google Ad Copy Best Practices | How to Write Strong Ad Copy",
+      "url": "https://www.interteammarketing.com/blog/google-ad-copy-best-practices",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 372,
+      "title": "Copywriting: Our Selection of the Best Generative AI Tools for 2026",
+      "url": "https://aivancity.ai/en/blog/redaction-publicitaire-notre-selection-des-meilleurs-outils-ia-generatives-de-2026",
+      "tier": "craft",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 373,
+      "title": "AI Copywriting | CDP.com",
+      "url": "https://cdp.com/glossary/ai-copywriting",
+      "tier": "craft",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 374,
+      "title": "How to Use AI for Copywriting in 2026",
+      "url": "https://sintra.ai/blog/how-to-use-ai-in-copywriting",
+      "tier": "craft",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 375,
+      "title": "Microcopy: 30 Real Examples That Boost Conversion | CorsoUX | EULE Institute",
+      "url": "https://euleinstitute.com/en/blog/microcopy-examples",
+      "tier": "craft",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 376,
+      "title": "Microcopy in UX Writing: 7 UI Elements with Examples",
+      "url": "https://productwithmustache.com/ux-writing-microcopy",
+      "tier": "craft",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 377,
+      "title": "Copywriting Trends, Tools & The Future AI vs. Human Copywriting: What Corporates Need to Know - Call PM",
+      "url": "https://callpm.com/copywriting-trends-tools-the-future-ai-vs-human-copywriting-what-corporates-need-to-know",
+      "tier": "craft",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 378,
+      "title": "7 Best AI Copywriting Tools 2026 (Compared & Scored)",
+      "url": "https://www.marketingmary.ai/blog/best-ai-copywriting-tools",
+      "tier": "craft",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 379,
+      "title": "Is AI Taking Over Copywriting in 2026?",
+      "url": "https://filthyrichwriter.com/can-copywriting-software-replace-skilled-copywriters",
+      "tier": "craft",
+      "topics": [
+        "q28_copywriting_2026_technique_shifts"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 380,
+      "title": "How to write winning product descriptions that sell – with 8 best-in-class ecommerce copywriting examples used by top brands",
+      "url": "https://www.ocula.tech/resources/how-to-write-winning-product-descriptions-that-sell-with-8-best-in-class-ecommerce-copywriting-examples-used-by-top-brands",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 381,
+      "title": "E-commerce product descriptions. The art of writing compelling copy that drives sales",
+      "url": "https://orbitvu.com/blog/e-commerce-product-descriptions-art-writing-compelling-copy-drives-sales",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 382,
+      "title": "10x Landing Pages",
+      "url": "https://10xlandingpages.com",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 383,
+      "title": "The Simple 7-Step Process for Writing Enticing Product Descriptions - Marketing Words Blog : Work Less, Convert Better, Sell More",
+      "url": "https://blog.marketingwords.com/the-seven-step-process-for-writing-enticing-product-descriptions",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 384,
+      "title": "E-commerce Product Description Writing",
+      "url": "https://brandicopywriter.com/ecommerce-product-description-writing",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 385,
+      "title": "Responsive Search Ads (RSAs): 2026 Guide + 6 Best Practices",
+      "url": "https://growthmindedmarketing.com/blog/responsive-search-ads",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 386,
+      "title": "Top Digital Ad Copy Strategies for Google, Facebook, Instagram, and Other Platforms",
+      "url": "https://www.aztekweb.com/blog/post/top-digital-ad-copy-strategies-for-google-facebook-instagram-and-other-platforms",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 387,
+      "title": "9 High-Performing CTA Button Examples and Why They Work",
+      "url": "https://www.crazyegg.com/blog/high-converting-cta-buttons",
+      "tier": "craft",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 388,
+      "title": "Landing Page Copywriting: A Step-by-Step Guide to Conversions | VWO",
+      "url": "https://vwo.com/blog/landing-page-copywriting",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 389,
+      "title": "Landing Pages: Copywriting That Converts",
+      "url": "https://www.theagentsofchange.com/joanna-wiebe",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 390,
+      "title": "Microcopy Guide: Action-Oriented Microcopy Examples and Common Microcopy Mistakes",
+      "url": "https://www.owlestudio.com/microcopy-examples-guide/18519",
+      "tier": "craft",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 391,
+      "title": "10 Powerful Advertising Copy Examples for Meta Ads",
+      "url": "https://adlibrary.com/posts/10-powerful-advertising-copy-examples-to-boost-your-meta-ads",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 392,
+      "title": "How to Write Meta Ad Copy: A Guide to Primary, Headline and Description Text - Ridge Marketing",
+      "url": "https://ridgemarketing.com/blog/how-to-write-meta-ad-copy-a-guide-to-primary-headline-and-description-text",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 393,
+      "title": "Microcopy Research: Testing Labels, Buttons, and Empty States",
+      "url": "https://www.userintuition.ai/reference-guides/microcopy-research-testing-labels-buttons-and-empty-states",
+      "tier": "craft",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 394,
+      "title": "Powerful Copywriting Techniques for Your Product Pages | Sales Layer",
+      "url": "https://blog.saleslayer.com/copywriting-techniques-for-product-pages",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 395,
+      "title": "LinkedIn Ad Copy & Creative Best Practices (B2B Guide)",
+      "url": "https://www.factors.ai/blog/linkedin-ad-copy-best-practices",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 396,
+      "title": "15 Google Ads Best Practices Driving B2B Growth in 2026 - Directive",
+      "url": "https://directiveconsulting.com/blog/the-b2b-marketers-guide-to-google-ads-best-practices-2026",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 397,
+      "title": "Great Product Description Examples for the Modern eCommerce Era",
+      "url": "https://www.nostra.ai/blogs-collection/great-product-description-examples-ecommerce",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 398,
+      "title": "Microcopy: Definition, UX Writing Tips & Examples for SaaS",
+      "url": "https://jimo.ai/glossary/microcopy",
+      "tier": "craft",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 399,
+      "title": "Google Ads Campaign Management Guide 2026 | Improvado",
+      "url": "https://improvado.io/blog/google-ads-campaign-guide",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 400,
+      "title": "What are You Really Selling on Your Landing Page? [CASE STUDY] - Conversion Sciences",
+      "url": "https://conversionsciences.com/really-selling-landing-page-case-study",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 401,
+      "title": "Copywriting Hooks: 47 Proven Opening Lines That Stop the Scroll | Rob Palmer",
+      "url": "https://robpalmer.com/blog/copywriting-hooks",
+      "tier": "craft",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 402,
+      "title": "How to Optimize Product Listings on Amazon, Etsy, Shopify | Shotova Blog",
+      "url": "https://shotova.com/blog/how-to-optimize-product-listing",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 403,
+      "title": "35 Headline Formulas That Actually Convert (Sorted By What You're Trying To Do) - BDOW! (formerly Sumo)",
+      "url": "https://bdow.com/stories/headline-formulas",
+      "tier": "craft",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 404,
+      "title": "UX Microcopy: Examples, Formulas & Best Practices for SaaS (2026)",
+      "url": "https://kompassify.com/blog/ux-microcopy-guide",
+      "tier": "craft",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 405,
+      "title": "Meta ads best practices to follow in 2026",
+      "url": "https://leadsbridge.com/blog/meta-ads-best-practices",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 406,
+      "title": "Headline and Button Copywriting: Joanna From Copy Hackers Got A 123.9% Lift With This Trick - SaaS Copywriter & Conversion Optimizer - Sway Copy",
+      "url": "https://swaycopy.com/headline-button-copywriting-joanna-copy-hackers-increase-conversion",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 407,
+      "title": "Microcopy in a nutshell: Past, present and future - UX WRITING HUB",
+      "url": "https://uxwritinghub.com/what-is-microcopy",
+      "tier": "craft",
+      "topics": [
+        "q25_cta_microcopy_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 408,
+      "title": "How to Write Killer Product Page Copy That Actually Converts",
+      "url": "https://ironcreative.com/blog/how-to-write-killer-product-page-copy-that-actually-converts",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 409,
+      "title": "Hooks, Headlines, & Leads: Copywriting How-To | Breakthrough Marketing Secrets",
+      "url": "https://www.breakthroughmarketingsecrets.com/blog/hooks-headlines-leads-copywriting-how-to",
+      "tier": "craft",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 410,
+      "title": "21 Powerful Headline Examples (+ How to Write Ones That Actually Get Read)",
+      "url": "https://theintuitivewritingschool.com/blog/learn-how-to-write-powerful-headlines-and-21-samples-to-inspire",
+      "tier": "craft",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 411,
+      "title": "Very Good Copy: 207 Micro-Lessons on Thinking and Writing Like a Copywriter: Shleyner, Eddie: 9798990910607: Amazon.com: Books",
+      "url": "https://www.amazon.com/Very-Good-Copy-Micro-Lessons-Copywriter/dp/B0DB2NKS9P",
+      "tier": "craft",
+      "topics": [
+        "q22_headline_hook_formulas"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 412,
+      "title": "A User-Centered Approach to Landing Page Optimization in a Software-as-a-Service Business",
+      "url": "https://aaltodoc.aalto.fi/handle/123456789/44930",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-06-16T00:00:00.000Z"
+    },
+    {
+      "index": 413,
+      "title": "OSF | The Upworthy Research Archive",
+      "url": "https://osf.io/jd64p/overview",
+      "tier": "craft",
+      "topics": [
+        "q21_landing_page_teardowns"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-11-02T00:00:00.000Z"
+    },
+    {
+      "index": 414,
+      "title": "Achieving more by saying less? On the Moderating Effect of Information Cues in Paid Search",
+      "url": "https://pdfs.semanticscholar.org/06ef/a58fe7bdeebdbb57295af6008e03db5fb618.pdf",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 415,
+      "title": "Optimizing Click-Through and Conversion Rates in Meta Advertising: A Data-Driven Analysis of Static Ad Creatives for Lag-om Food Oy, Finland",
+      "url": "http://theseus.fi/handle/10024/919905",
+      "tier": "craft",
+      "topics": [
+        "q24_ad_copy_craft_by_platform"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 416,
+      "title": "The quality assessment of text contents in commercial websites: A corpus-based study in product detail page localization from Spanish to Chinese",
+      "url": "https://www.redalyc.org/journal/7319/731980765019/html/",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 417,
+      "title": "Is it better to communicate product information abstractly or concretely? The role of consumer product expertise",
+      "url": "https://pdfs.semanticscholar.org/b023/9a0b82952afe303ebe808c3de6621e7b4e64.pdf",
+      "tier": "craft",
+      "topics": [
+        "q26_product_description_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 418,
+      "title": "About responsive search ads",
+      "url": "https://support.google.com/google-ads/answer/7684791?hl=en",
+      "tier": "practitioner",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 419,
+      "title": "Ad Copy Character Counter — Free Online Tool | Marketos",
+      "url": "https://marketos.fr/tools/ad-copy-counter/",
+      "tier": "practitioner",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 23, 2026"
+    },
+    {
+      "index": 420,
+      "title": "Ad Character Limits: An Always-up-to-Date Guide",
+      "url": "https://www.rakacreative.com/blog/digital-advertising/ad-character-limits-an-always-up-to-date-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Sep 12, 2024"
+    },
+    {
+      "index": 421,
+      "title": "Trustworthy online controlled experiments: Five puzzling outcomes explained",
+      "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.294.8275",
+      "tier": "practitioner",
+      "topics": [
+        "q18_experiment_validity_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2012-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 422,
+      "title": "Influencers: Not So Fluent in Disclosure Compliance",
+      "url": "https://digitalcommons.lmu.edu/elr/vol41/iss1/3",
+      "tier": "practitioner",
+      "topics": [
+        "q20_endorsement_disclosure_law"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-01-01T00:00:00.000Z"
+    }
+  ]
+}
