@@ -35,16 +35,61 @@ _SERVICES = {
     "general":    {"light": ["tavily"], "medium": ["exa", "tavily", "serper"], "deep": ["exa", "tavily", "serper", "jina"]},
     "entity":     {"light": ["serper"], "medium": ["serper", "exa"], "deep": ["serper", "exa", "jina"]},
     "scientific": {"light": ["exa"], "medium": ["exa", "tavily"], "deep": ["exa", "tavily"]},
+    # Serper at EVERY depth, not just deep: it is the only service that runs
+    # _craft_queries, so dropping it drops the site:youtube.com variant and the whole
+    # video/teardown tier with it. Exa is still useful here but runs with _ACADEMIC_HOSTS
+    # excluded, so it contributes practitioner pages rather than papers.
+    "practical":  {"light": ["serper"], "medium": ["serper", "exa", "tavily"],
+                   "deep": ["serper", "exa", "tavily", "jina"]},
 }
-_PERSON_HINT = re.compile(r"\b(founder|co-?founder|ceo|cto|owner|president|who is|email|contact)\b", re.I)
-_SCI_HINT = re.compile(r"\b(study|studies|meta-?analysis|clinical|peer-?reviewed|journal|paper|trial|efficacy|effect size)\b", re.I)
+# Entity mode forces Exa category="people" and runs LinkedIn X-ray dorks, so a false
+# positive here does not merely add noise - it makes the whole pass search for PEOPLE.
+#
+# The bare words `email` and `contact` used to be in this list for email-discovery
+# lookups, and they silently routed every question ABOUT email down the people path.
+# Seven passes of the copywriting corpus ran this way, which is the actual reason the
+# email and platform-format sections came back with no usable evidence and why a query
+# about ad character limits returned the LinkedIn profile of a medical editor. Both now
+# require an explicit discovery phrasing.
+_PERSON_HINT = re.compile(
+    r"\b(founder|co-?founder|ceo|cto|owner|president|who is|"
+    r"email address|find (?:the |their )?email|contact details|contact info(?:rmation)?)\b",
+    re.I)
+# "case study" is a marketing artifact, not a scientific one, and the bare word `study`
+# was routing "how do I format a case study for LinkedIn" down the journal path.
+_SCI_HINT = re.compile(
+    r"\b((?<!case )study|(?<!case )studies|meta-?analysis|clinical|peer-?reviewed|"
+    r"journal|paper|trial|efficacy|effect size)\b", re.I)
+
+
+# Practitioner/craft intent: how something is done, shown or formatted, rather than
+# whether it is true. Added 2026-08-15 after a corpus built for copywriting came back
+# 2 craft sources out of 314 - the queries were all phrased in research register, so the
+# engines returned journals for questions that only practitioners can answer.
+_CRAFT_HINT = re.compile(
+    r"\b(how (?:to|do i|does one)|step[- ]by[- ]step|tutorial|walkthrough|teardown|"
+    r"breakdown|swipe file|template|examples?|worked example|checklist|cheat ?sheet|"
+    r"best practices?|tips|playbook|guide to|format(?:ting)?|caption|hook|thumbnail|"
+    r"hashtag|algorithm|engagement|going viral|content calendar|character limit|"
+    r"case stud(?:y|ies)|copywriting|headline|landing page|ad copy|subject line)\b",
+    re.I)
+# Platform names are a strong craft signal on their own: nobody asks a journal how to
+# post on TikTok.
+_PLATFORM_HINT = re.compile(
+    r"\b(instagram|tiktok|linkedin|youtube|twitter|threads|facebook|pinterest|snapchat|"
+    r"reels?|shorts?|stories|substack|newsletter|podcast)\b", re.I)
 
 
 def detect_mode(query: str) -> str:
     if _PERSON_HINT.search(query):
         return "entity"
+    # Scientific wins over craft on purpose. A question that asks for evidence gets the
+    # evidence path even when it also names a platform ("meta-analysis of instagram
+    # engagement" is a research question, not a how-to).
     if _SCI_HINT.search(query):
         return "scientific"
+    if _CRAFT_HINT.search(query) or _PLATFORM_HINT.search(query):
+        return "practical"
     return "general"
 
 
@@ -56,20 +101,46 @@ def _entity_queries(query: str) -> list[str]:
     return qs
 
 
+# Journal and preprint hosts, excluded from Exa in `practical` mode only. Not a quality
+# judgement: these are the right answer for `scientific` and the wrong one for "how do I
+# format a LinkedIn post", where neural search otherwise drifts to whatever academic text
+# is semantically nearest.
+_ACADEMIC_HOSTS = [
+    "sciencedirect.com", "springer.com", "link.springer.com", "onlinelibrary.wiley.com",
+    "tandfonline.com", "journals.sagepub.com", "cambridge.org", "academic.oup.com",
+    "jstor.org", "pubmed.ncbi.nlm.nih.gov", "pmc.ncbi.nlm.nih.gov", "frontiersin.org",
+    "mdpi.com", "arxiv.org", "researchgate.net", "academia.edu", "semanticscholar.org",
+    "ssrn.com", "papers.ssrn.com", "dl.acm.org", "ieeexplore.ieee.org",
+]
+
+
+def _craft_queries(query: str) -> list[str]:
+    """Serper is plain Google, so a site: variant is the cheapest way to guarantee the
+    video and practitioner layer actually appears instead of hoping it ranks."""
+    qs = [query]
+    low = query.lower()
+    if "youtube" not in low and "site:" not in low:
+        qs.append(f"{query} site:youtube.com")
+    return qs
+
+
 def _run_service(name: str, query: str, mode: str, depth: str, num: int) -> dict:
     """Call one backend, return {results:[...], answer?:str}. Raises on failure (caller catches)."""
     if name == "exa":
         cat = {"scientific": "research paper",
                "entity": "people" if _PERSON_HINT.search(query) else "company"}.get(mode)
-        return exa_adapter.search(query, num=num, category=cat, text=(depth == "deep"))
+        return exa_adapter.search(
+            query, num=num, category=cat, text=(depth == "deep"),
+            exclude_domains=_ACADEMIC_HOSTS if mode == "practical" else None)
     if name == "tavily":
         return tavily_client.search(query, depth="advanced" if depth == "deep" else "basic",
                                     max_results=num, include_answer=True)
     if name == "serper":
-        if mode == "entity":
+        if mode in ("entity", "practical"):
+            variants = _entity_queries(query) if mode == "entity" else _craft_queries(query)
             merged: list[dict] = []
             box = kg = None
-            for q in _entity_queries(query):
+            for q in variants:
                 d = serper_client.search(q, num=num)
                 merged.extend(d["results"])
                 box = box or d.get("answer_box")
@@ -182,7 +253,8 @@ def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="Meta-research orchestrator (Exa/Tavily/Serper/Jina).")
     p.add_argument("--query", required=True)
     p.add_argument("--depth", choices=["light", "medium", "deep"], default="medium")
-    p.add_argument("--mode", choices=["auto", "general", "entity", "scientific"], default="auto")
+    p.add_argument("--mode", choices=["auto", "general", "entity", "scientific", "practical"],
+                   default="auto")
     p.add_argument("--services", default="", help="Comma list to override auto (exa,tavily,serper,jina,openai).")
     p.add_argument("--single", action="store_true", help="Run only the given service(s) as a single-backend deep pass.")
     p.add_argument("--no-synth", action="store_true", help="Skip LLM synthesis (medium/deep).")

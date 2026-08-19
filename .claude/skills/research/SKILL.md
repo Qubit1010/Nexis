@@ -5,8 +5,12 @@ description: >
   Tavily, Serper/Google, Jina) at three depths — light (fast answer), medium (2-3 engines
   fused + ranked), deep (all engines + content extraction + a cited, saved report) — and cross-
   checks them so you get the best fused result, or deep single-service research on demand. Handles
-  three task shapes: general-topic research, finding a specific person/company/founder (entity mode,
-  Google-dork + LinkedIn X-ray + email discovery), and scientific/academic research. Grounded in a
+  four task shapes: general-topic research, finding a specific person/company/founder (entity mode,
+  Google-dork + LinkedIn X-ray + email discovery), scientific/academic research, and PRACTICAL mode
+  for how-to / examples / teardowns / social-and-platform questions, which excludes journal hosts
+  from Exa and pulls in blogs and YouTube instead of research papers. Scientific still wins when a
+  question genuinely asks for evidence, so "meta-analysis of Instagram engagement" stays a research
+  question while "how do I format an Instagram caption" does not. Grounded in a
   research-first corpus of 108 cited 2026 sources (references/research-synthesis.md) on research
   methodology, Google-dork query crafting, people/company OSINT, SERP-vs-neural-vs-extraction service
   selection, and answer verification. FIRST routes free-tool / API / software / service lookups to the
@@ -67,11 +71,35 @@ before spending any live-research effort — they're instant and free:
 | Market/competitor/strategic deep dive | general | deep |
 | Find a person/founder/decision-maker; company profile/email/tech-stack | entity | medium or deep |
 | Scientific/academic, papers, evidence | scientific | medium or deep |
+| **How-to, examples, teardowns, templates, platform/social topics** | **practical** | medium or deep |
 | "cross-check across engines" / "combine the searches" | (any) | medium/deep, `--fuse` |
 | "deep research with just Exa" / "only Serper" | (any) | `--single --services <x>` |
 
-`--mode auto` also detects entity (founder/CEO/email…) and scientific (study/meta-analysis/paper…)
-from the query if you don't set it.
+`--mode auto` detects entity (founder/CEO/"email address"…), scientific
+(meta-analysis/peer-reviewed/trial…) and practical (how-to, teardown, examples, template,
+best practices, character limit, or any platform name) from the query if you don't set it.
+
+### Match the source mix to the domain
+
+**This is the decision that most often goes wrong, and it is the reason a whole corpus can come
+back useless.** Ask what would actually count as a good answer:
+
+| If the question is… | Use | Because |
+|---|---|---|
+| "Does X work / is this claim true / what's the effect size" | `scientific` | Only research answers it. Vendor pages will confidently say yes |
+| "How do I do X / what does a good one look like / what's the convention" | `practical` | **Only practitioners answer it.** No journal publishes how to format a TikTok caption |
+| Both at once | Run **two passes**, one per mode, and tier the results separately | Mixing them is how craft opinion ends up cited as evidence |
+
+`practical` mode excludes 21 journal and preprint hosts from Exa so neural search cannot drift
+academic, and adds a `site:youtube.com` variant on Serper so the video layer actually appears.
+
+**Scientific deliberately wins over practical** when both are detected: "meta-analysis of
+Instagram engagement" is a research question that happens to name a platform.
+
+> **Building a corpus for a new skill?** Read
+> `.claude/rules/research-backed-skills.md` first - it now specifies which mix a given skill
+> domain needs, and the three-tier pattern (confirmed / craft / practitioner) for domains that
+> need both.
 
 ## Workflow
 1. **Classify.** Tool lookup → Layer 0. Else pick mode (general/entity/scientific) + depth.

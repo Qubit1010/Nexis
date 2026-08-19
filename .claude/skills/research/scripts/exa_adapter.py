@@ -28,9 +28,15 @@ def _norm(r: dict) -> dict:
 
 
 def search(query: str, *, num: int = 10, category: str | None = None,
-           type: str = "auto", text: bool = False) -> dict:
+           type: str = "auto", text: bool = False,
+           include_domains: list[str] | None = None,
+           exclude_domains: list[str] | None = None) -> dict:
+    """The underlying client has always supported domain filters; this adapter did not
+    expose them, which is why `practical` mode had no way to steer Exa's neural search
+    away from journal publishers."""
     data = _search(query, num_results=num, type=type, category=category,
-                   text=text, highlights=True, summary=False)
+                   text=text, highlights=True, summary=False,
+                   include_domains=include_domains, exclude_domains=exclude_domains)
     return {"query": query, "results": [_norm(r) for r in data.get("results", [])]}
 
 
