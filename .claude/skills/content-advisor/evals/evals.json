@@ -1,0 +1,90 @@
+{
+  "skill_name": "content-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A client's marketing deck says 'buyers are 57% of the way through the purchase journey before they contact a vendor.' Can we use that in our proposal?",
+      "expected_output": "Should refuse the claim rather than hedging. Must say it traces to a consultancy publication rather than a controlled study, that no primary source with a disclosed method exists behind it, and that the specific percentage varies between 57% and 70% depending on which retelling you read, which is itself the tell. Should offer what is actually defensible about buyer self-education instead of only saying no.",
+      "files": [],
+      "expectations": [
+        "States the 57% claim has no traceable primary study",
+        "Does not soften it to 'some research suggests' or present it as broadly true",
+        "Notes the figure shifts between retellings, which indicates folklore",
+        "Offers a defensible replacement framing for the proposal",
+        "Cites at tier rather than asserting from memory"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our Instagram Reels got 40,000 views and the YouTube video got 12,000. So Instagram is performing three times better for us, right?",
+      "expected_output": "Should refuse the comparison on the grounds that the two numbers do not measure the same event. Should give the actual counting rules, note that platforms have restated these definitions over time, and explain that a cross-platform view ratio is not interpretable regardless of the arithmetic. Should offer what can legitimately be compared instead, such as within-platform trend or a downstream action.",
+      "expectations": [
+        "Refuses the cross-platform comparison as not interpretable",
+        "Gives the differing counting rules with their tier",
+        "Notes platform definitions have been restated over time",
+        "Does not offer a 'rough adjustment' to make them comparable",
+        "Proposes what can legitimately be compared instead"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "What's the best structure for a whitepaper for a B2B client in 2026?",
+      "expected_output": "Should load format-specs/written.md and answer in the standard sub-template shape: what it is for, structure, the opening, length and pacing, 2026 optimization, distribution, fails when, who executes it. Should mark which parts are confirmed evidence and which are practitioner convention, and should route the actual writing to content-production rather than drafting it.",
+      "expectations": [
+        "Loads format-specs rather than answering from memory",
+        "Answers in the standard eight-part format sub-template",
+        "Distinguishes confirmed evidence from practitioner convention within the answer",
+        "Includes the 'fails when' test, not only the happy path",
+        "Routes the writing to content-production and says so"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Pew says 33% of US adults regularly get news on TikTok. So we should move the client's budget to TikTok because that's where the audience is and video outperforms text.",
+      "expected_output": "Should accept the Pew figure as confirmed-tier while explicitly separating it from the performance conclusion drawn on top of it. Must say that a population consumption survey supports where people are and says nothing about whether video outperforms text for this client. Should name this as the specific misuse the corpus is most vulnerable to, and ask what the client's audience actually is before any budget conclusion.",
+      "expectations": [
+        "Accepts the Pew number and identifies it as confirmed-tier population survey data",
+        "Explicitly separates consumption data from performance claims",
+        "States that 'video outperforms text' does not follow and is not supported",
+        "Does not endorse the budget shift on this basis",
+        "Asks about the client's actual audience before concluding"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "The client publishes three blog posts a week and gets nothing. What's wrong?",
+      "expected_output": "Should diagnose rather than list improvements, working through root causes in order of how often each is actually the answer. Should establish that distribution, not production, is the most common cause, and should ask what evidence would confirm each hypothesis instead of guessing at one. Should be willing to conclude that nothing is wrong with the content itself. Should not respond by recommending more content.",
+      "expectations": [
+        "Diagnoses root cause rather than listing everything improvable",
+        "Ranks hypotheses by how often each is genuinely the cause",
+        "Identifies distribution as a leading candidate over production volume",
+        "States what evidence would confirm or eliminate each hypothesis",
+        "Does not recommend increasing publishing volume as the fix"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "What's the character limit for a LinkedIn post and what aspect ratio should Reels be?",
+      "expected_output": "Should give the figures from first-party platform documentation marked as [P*] with a retrieval date, and should distinguish the field limit from the truncation point, noting truncation is what decides whether the first line works and varies by device and placement. Should state that these change and must be re-verified on the day they are used, rather than presenting them as stable facts.",
+      "expectations": [
+        "Sources the numbers from first-party platform docs, marked [P*]",
+        "Attaches a retrieval date rather than presenting them as timeless",
+        "Distinguishes the field limit from the truncation point",
+        "Notes truncation varies by device and placement",
+        "Instructs re-verification on the day of use"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Everyone says one long video can be repurposed into thirty pieces of content. Should we build the client's whole strategy around that?",
+      "expected_output": "Should say the thirty-piece multiplier has no traceable source and is a marketing claim rather than a finding. Should make the substantive point that derivative quality is bounded by the source asset, so thirty derivatives of a thin recording is thirty thin pieces. Should still endorse repurposing as sound where the asset can carry it, and route the actual mapping to content-strategy.",
+      "expectations": [
+        "States the thirty-piece multiplier is unsourced",
+        "Explains that derivative quality is bounded by the source asset",
+        "Does not substitute a different invented multiplier",
+        "Still endorses repurposing where the asset genuinely supports it",
+        "Routes the repurposing map to content-strategy"
+      ]
+    }
+  ]
+}

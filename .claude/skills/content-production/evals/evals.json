@@ -1,0 +1,78 @@
+{
+  "skill_name": "content-production",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a blog post for this client about how AI is changing their industry.",
+      "expected_output": "Should not write the blog post. Should route to blog-writer and say why: blog-writer owns articles and carries its own 83-source AEO/GEO corpus, so writing it here would produce an article without that behind it. Should state the handoff rather than silently stopping or quietly writing it anyway.",
+      "files": [],
+      "expectations": [
+        "Routes to blog-writer rather than writing the article",
+        "Gives the reason: blog-writer owns articles and its own AEO/GEO corpus",
+        "States the handoff explicitly rather than stopping silently",
+        "Does not produce a partial article as a compromise",
+        "Correctly distinguishes this from the formats it does own"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write a whitepaper for this client arguing that their approach cuts costs by 40%.",
+      "expected_output": "Should inventory what the client can actually evidence before drafting, and establish whether the 40% figure exists anywhere. If it cannot be substantiated, it must say the whitepaper cannot carry that claim and rewrite the argument around what they can prove, rather than publishing the number with a hedge. Must not invent supporting statistics or a customer quote.",
+      "expectations": [
+        "Inventories available proof before writing",
+        "Challenges the 40% claim rather than repeating it",
+        "Refuses to publish an unsubstantiated central claim, even hedged",
+        "Invents no statistic, customer name or quote",
+        "Rewrites the argument around what is actually provable"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Turn this blog post into an X thread. [a post is supplied]",
+      "expected_output": "Should read the format spec for threads rather than working from memory, and produce a thread where post 1 carries the whole claim standalone rather than functioning as a teaser. Every post should carry one idea, with no post existing only to set up the next. Should end with one action.",
+      "expectations": [
+        "Loads the thread format spec rather than writing from memory",
+        "Post 1 stands alone and carries the claim, not a teaser",
+        "No post exists only to set up the next",
+        "One idea per post, concrete",
+        "Ends with a single clear action"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "What's the character limit for a LinkedIn post? Put it in the deliverable.",
+      "expected_output": "Should take the number from the format spec with its retrieval date, or verify it against LinkedIn's own documentation, rather than quoting from memory. Should distinguish the field limit from the truncation point, noting that truncation is what decides whether the first line works and that it varies by placement and device.",
+      "expectations": [
+        "Does not quote a character limit from memory",
+        "Takes it from the format spec with a date, or verifies against platform docs",
+        "Distinguishes the field limit from the truncation point",
+        "Notes truncation varies by placement and device",
+        "Records the verification date in the deliverable"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Draft a meme for this B2B compliance software client to post on LinkedIn.",
+      "expected_output": "Should work through brand fit and be willing to conclude that this brand should not post a meme. Recommending against it is a legitimate output, not a failure to complete the task. If it does proceed, it should name the specific template and the in-group tension rather than producing generic humour.",
+      "expectations": [
+        "Evaluates brand licence to use the format at all",
+        "Treats 'they should not post this' as a valid answer",
+        "Names a specific template rather than describing a joke",
+        "Identifies the in-group tension the meme lands on",
+        "Does not produce generic humour to satisfy the request"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Write the client's newsletter. There's no 14-brand-voice.md for them.",
+      "expected_output": "Should say the voice file is missing and offer to run brand-voice, then proceed anyway rather than stalling, deriving a working voice from the client's existing copy and labelling it as an assumption. Should still load the newsletter format spec and produce a complete issue, not an outline.",
+      "expectations": [
+        "Names the missing 14-brand-voice.md and offers brand-voice by name",
+        "Proceeds rather than stalling the deliverable",
+        "Derives a working voice from their live copy, labelled [assumption]",
+        "Loads the newsletter format spec",
+        "Produces a complete issue rather than an outline"
+      ]
+    }
+  ]
+}

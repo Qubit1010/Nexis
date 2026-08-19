@@ -1,0 +1,78 @@
+{
+  "skill_name": "content-strategy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a content strategy for client-projects/rw-winship. They want to publish more.",
+      "expected_output": "Should read 07-strategic-foundation.md and 08-audience-persona.md and take their positioning and audience language rather than re-deriving it, then say out loud that 13-brand-strategy.md and 14-brand-voice.md do not exist in that folder and offer to run brand-strategy and brand-voice. It should then proceed anyway, producing 18-content-strategy.md with the voice-dependent parts labelled as assumptions rather than stalling. It must ask about capacity before setting any cadence.",
+      "files": [],
+      "expectations": [
+        "Reads 07 and 08 and takes them rather than re-deriving positioning",
+        "States that 13 and 14 are missing and offers the producing skills by name",
+        "Proceeds anyway with the gaps labelled [assumption], not stalling",
+        "Asks about production capacity before proposing a cadence",
+        "Writes to client-projects/rw-winship/18-content-strategy.md"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "This client has two part-time marketers. They want to publish a daily blog post, three LinkedIn posts a week, a weekly newsletter, a podcast and daily TikToks. Build the plan.",
+      "expected_output": "Should not deliver the requested plan as stated. Should show the arithmetic of what that cadence costs in hours against the capacity that exists, build the plan the team can actually hold, and name explicitly what was cut and why. Should treat an abandoned cadence as more expensive than a smaller sustained one, and say so.",
+      "expectations": [
+        "Refuses to deliver the unstaffable plan as requested",
+        "Shows the hours-versus-capacity arithmetic explicitly",
+        "Delivers a plan sized to the team rather than a compromise hidden in the detail",
+        "Names what was cut and why, in the document",
+        "Frames abandonment risk as the real cost, not ambition"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "The client asks what educational-to-promotional ratio we should use. They read somewhere it's 80/20.",
+      "expected_output": "Should say the 80/20 ratio, and the 4-1-1 variant, have no traceable primary source, without softening it to 'some studies suggest'. Should then set the mix from the client's own funnel and audience awareness level, state that this is the basis, and not substitute a different invented number in its place.",
+      "expectations": [
+        "States 80/20 and 4-1-1 have no traceable primary source",
+        "Does not soften the refusal or present it as debatable",
+        "Does not replace it with another unsourced ratio",
+        "Derives the mix from the client's funnel and audience instead",
+        "Says explicitly what the mix was based on"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Audit this content strategy. [a document containing a 12-month calendar of blog titles and nothing else]",
+      "expected_output": "Should identify that the document is a calendar rather than a strategy and say so as the headline finding, then offer build mode. If it scores at all, distribution, measurement and pillars should come back Missing. Should run the Monday test and report that a reader could not tell who publishes what.",
+      "expectations": [
+        "Names that this is a calendar, not a strategy, as the headline finding",
+        "Offers build mode rather than only scoring the wrong artifact",
+        "Scores distribution and measurement Missing",
+        "Applies the Monday test and reports the missing owners",
+        "Returns three prioritised fixes rather than a long list of findings"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "The client wants to know how much traffic and how many leads this content strategy will produce in six months.",
+      "expected_output": "Should refuse to give a forecast. Should explain that content attribution is genuinely hard, that observational and experimental estimates diverge, and that their stack likely cannot resolve content's contribution to revenue. Should offer leading indicators they can actually read instead, and state what would have to be instrumented to measure more.",
+      "expectations": [
+        "Refuses the traffic and lead forecast outright",
+        "Does not offer a hedged range as a substitute forecast",
+        "Explains why content attribution specifically is unreliable",
+        "Offers concrete leading indicators instead",
+        "States what would need instrumenting to measure the rest"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Their pillars are 'Industry Insights', 'Company News' and 'Tips & Tricks'. Are these good?",
+      "expected_output": "Should identify that none of these excludes anything, and that a pillar which rules nothing out is a topic area that will absorb whatever anyone wants to write. Should rewrite them properly against the audience's actual questions rather than only describing the problem, and each rewritten pillar should carry an explicit exclusion.",
+      "expectations": [
+        "Identifies that none of the three excludes anything",
+        "Explains the consequence: the calendar fills with whatever is easy",
+        "Rewrites them rather than only critiquing them",
+        "Each rewritten pillar names what it excludes",
+        "Ties the rewrites to audience questions, not to the category"
+      ]
+    }
+  ]
+}

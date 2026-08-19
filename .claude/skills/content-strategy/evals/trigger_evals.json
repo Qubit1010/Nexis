@@ -1,0 +1,28 @@
+[
+  { "query": "build a content strategy for this client", "should_trigger": true },
+  { "query": "define content pillars for Belle & Perry", "should_trigger": true },
+  { "query": "they post but nothing happens, what should they be publishing", "should_trigger": true },
+  { "query": "audit this client's content strategy", "should_trigger": true },
+  { "query": "how often should this client be publishing", "should_trigger": true },
+  { "query": "map their content to the funnel", "should_trigger": true },
+  { "query": "we need a distribution plan for their content", "should_trigger": true },
+  { "query": "build a repurposing map for the client's webinar recordings", "should_trigger": true },
+  { "query": "what's the right evergreen vs trending mix for them", "should_trigger": true },
+  { "query": "their blog is dead, what do we do", "should_trigger": true },
+  { "query": "how do we prove content is working for this client", "should_trigger": true },
+  { "query": "build a 12 week editorial calendar for the client", "should_trigger": true },
+
+  { "query": "what should I post today", "should_trigger": false },
+  { "query": "content ideas for this week", "should_trigger": false },
+  { "query": "full content run", "should_trigger": false },
+  { "query": "make me a post for LinkedIn", "should_trigger": false },
+  { "query": "repurpose this into an Instagram carousel", "should_trigger": false },
+  { "query": "what channels should NexusPoint focus on", "should_trigger": false },
+  { "query": "how do I get more clients", "should_trigger": false },
+  { "query": "write the whitepaper", "should_trigger": false },
+  { "query": "write a blog post about AI automation", "should_trigger": false },
+  { "query": "explain what content pillars are", "should_trigger": false },
+  { "query": "is the 80/20 content ratio real", "should_trigger": false },
+  { "query": "do keyword research for this client", "should_trigger": false },
+  { "query": "write the landing page copy", "should_trigger": false }
+]

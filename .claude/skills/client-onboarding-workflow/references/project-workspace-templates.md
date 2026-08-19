@@ -39,6 +39,40 @@ client-projects/<client-slug>/
   06-improvements.md   value-add ideas, expansion/upsell paths to pitch as the relationship grows (INTERNAL)
 ```
 
+## The numbered-file registry (07 and up)
+
+**This skill owns 01-06 only.** Everything above 07 is written by a different skill, and the
+numbers are a shared namespace across the whole repo. Check this table before allocating a new
+one, and add a row when a new producing skill ships.
+
+| # | File | Written by | Read by |
+|---|---|---|---|
+| 01-06 | the onboarding block above | **client-onboarding-workflow** (Phase 2) | this skill, Phase 3 |
+| 07 | `07-strategic-foundation.md` | **strategic-foundation** (build) | brand-strategy, brand-voice, copy-conversion, content-strategy, the seo-* chain |
+| 08 | `08-audience-persona.md` | **strategic-foundation** (persona) | brand-strategy, brand-voice, copy-conversion, content-strategy, content-production, the seo-* chain |
+| 09 | `09-seo-foundation.md` | **seo-foundation** | seo-onpage, seo-technical, seo-authority-ai, content-strategy |
+| 10 | `10-seo-onpage.md` | **seo-onpage** | seo-technical, seo-authority-ai |
+| 11 | `11-seo-technical.md` | **seo-technical** | seo-authority-ai |
+| 12 | `12-seo-authority-ai.md` | **seo-authority-ai** | content-strategy |
+| 13 | `13-brand-strategy.md` | **brand-strategy** | brand-voice, brand-visual, copy-conversion, blog-writer, content-strategy, content-production |
+| 14 | `14-brand-voice.md` | **brand-voice** | brand-strategy, brand-visual, copy-conversion, blog-writer, content-strategy, content-production |
+| 15 | `15-brand-visual-identity.md` | **brand-visual** | brand-visual (assembly into 16) |
+| 16 | `16-brand-guidelines.md` | **brand-visual** (assembled from 13+14+15) | - |
+| 17 | `17-conversion-copy.md` | **copy-conversion** | - |
+| 18 | `18-content-strategy.md` | **content-strategy** | content-production |
+| - | `content/<format>-<slug>.md` | **content-production** | - (unnumbered on purpose: many files per client, not one artifact) |
+
+**Next free number: 19.**
+
+Two rules that exist because the convention has already failed once:
+
+1. **Numbers are contiguous per domain.** 09-12 is the SEO chain, 13-16 the brand chain. A new
+   domain takes the next free block, not a scattered number.
+2. **Do not invent a number outside this table.**
+   `client-projects/gidich-sepulveda-architecture/08-seo-task-list.md` occupies slot 08, which
+   is `08-audience-persona.md` everywhere else. That collision is why this registry exists. If
+   a client folder needs a one-off document, give it a name without a number.
+
 ## Authoring rules
 
 - **Ground every claim in the source docs.** The onboarding guide, proposal, and call
