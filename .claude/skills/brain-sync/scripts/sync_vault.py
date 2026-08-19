@@ -41,7 +41,7 @@ from datetime import datetime
 
 NEXIS = Path(__file__).resolve().parents[4]
 VAULT = Path(os.environ.get("OBSIDIAN_VAULT_PATH")
-             or r"C:\Users\zh838\OneDrive\Documents\agency-brain")
+             or r"C:\Users\qubit\OneDrive\Documents\agency-brain")
 
 DECISIONS_KEY = "decisions/log.md"
 
