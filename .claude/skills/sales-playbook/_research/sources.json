@@ -1,0 +1,798 @@
+{
+  "notebook_id": "f5ad3db7-87ee-4e2d-b674-3f977e797bb2",
+  "sources": [
+    {
+      "index": 0,
+      "source_id": "0569f5f5-5c54-4da1-a740-e877f93187a0",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "Advanced Outbound Architecture 2025-2026: Empirical Benchmarks, Conversational Engineering, and Multi-Channel Frameworks",
+      "url": null,
+      "resolved": true
+    },
+    {
+      "index": 1,
+      "source_id": "f767ac94-1884-4545-b244-25c2fae1340b",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "How to Find More Customers on LinkedIn | Justin Welsh",
+      "url": "https://www.justinwelsh.me/newsletter/how-to-find-more-customers-on-linkedin",
+      "resolved": true
+    },
+    {
+      "index": 2,
+      "source_id": "8acaa2c2-c601-4a8c-af83-8367bb154a85",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "Cold Email vs LinkedIn Outreach 2026 - GetReplies",
+      "url": "https://getreplies.ai/blog/cold-email-vs-linkedin-outreach-2026/",
+      "resolved": true
+    },
+    {
+      "index": 3,
+      "source_id": "d7c631a0-7b9f-4dba-bb37-676044ffaec3",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "Cold Email Statistics 2026 | Open Rates, Reply Rates & Best Practices - Searchlab",
+      "url": "https://searchlab.nl/en/statistics/cold-email-statistics-2026",
+      "resolved": true
+    },
+    {
+      "index": 4,
+      "source_id": "05257fbb-e93a-4fc4-9168-c49e25ca0aee",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "",
+      "url": "",
+      "resolved": false
+    },
+    {
+      "index": 5,
+      "source_id": "2c41ce6e-75f9-4ff3-80c2-64e8bdc89b40",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "",
+      "url": "",
+      "resolved": false
+    },
+    {
+      "index": 6,
+      "source_id": "c6211b42-01fe-4278-9d12-279ff9fd9434",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "Average Cold Email Response Rates 2026 - Mailforge",
+      "url": "https://www.mailforge.ai/blog/average-cold-email-response-rates",
+      "resolved": true
+    },
+    {
+      "index": 7,
+      "source_id": "646e1765-8b1b-489d-847b-0f9722122f16",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "Instagram DM Outreach Script Guide | InfluenceFlow",
+      "url": "https://influenceflow.io/resources/instagram-dm-outreach-script-the-complete-guide-for-creators-in-2026/",
+      "resolved": true
+    },
+    {
+      "index": 8,
+      "source_id": "0fb0d8a6-32e1-470f-8a9d-3ccb268a541d",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "How to Write a (Successful) Cold DM — Justin Welsh",
+      "url": "https://justinwelsh.me/essays/how-to-write-a-successful-cold-dm",
+      "resolved": true
+    },
+    {
+      "index": 9,
+      "source_id": "f85b46e1-2ff2-4ba1-b142-71975472fc5a",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "Instagram DM Outreach Template Guide | InfluenceFlow",
+      "url": "https://influenceflow.io/resources/instagram-dm-outreach-template-the-complete-guide-for-creators-brands-in-2026/",
+      "resolved": true
+    },
+    {
+      "index": 10,
+      "source_id": "83c5846a-efd7-4ed4-ae59-be90f00999ac",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "25 Instagram DM Automation Templates That Convert Buyers - CreatorFlow",
+      "url": "https://creatorflow.so/blog/instagram-dm-automation-templates/",
+      "resolved": true
+    },
+    {
+      "index": 11,
+      "source_id": "b03321d0-c09a-47f3-bdf6-4edb9bbe4408",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "How to Create Your Own Cold Email Template Using the REPLY ...",
+      "url": "https://gtmnow.com/cold-email-template/",
+      "resolved": true
+    },
+    {
+      "index": 12,
+      "source_id": "b5a45955-a7a8-459e-9862-420e486c59bd",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "",
+      "url": "",
+      "resolved": false
+    },
+    {
+      "index": 13,
+      "source_id": "26aafde8-e1dd-471c-87ed-207b61fa0484",
+      "origin": "notebooklm",
+      "q": "Q1",
+      "title": "The Data-Backed Cold Email Formula (The Exact Words & Length) | Sales Newsletter",
+      "url": "https://www.30mpc.com/newsletter/the-data-backed-cold-email-formula-the-exact-words-length",
+      "resolved": true
+    },
+    {
+      "index": 14,
+      "source_id": "4a2ddcc0-01fb-4e35-aa5e-ba6c93952301",
+      "origin": "notebooklm",
+      "q": "Q2",
+      "title": "Advanced Outbound Architecture 2025-2026: Empirical Benchmarks, Conversational Engineering, and Multi-Channel Frameworks",
+      "url": null,
+      "resolved": true
+    },
+    {
+      "index": 15,
+      "source_id": "9ab3632a-2752-4fd4-808e-f436cbde23c9",
+      "origin": "notebooklm",
+      "q": "Q2",
+      "title": "LinkedIn Outreach Benchmarks 2026: 13.2M Data Points - Expandi",
+      "url": "https://expandi.io/blog/linkedin-outreach-benchmarks-2026/",
+      "resolved": true
+    },
+    {
+      "index": 16,
+      "source_id": "48ffa531-4485-4851-bf59-09e8f8ec8738",
+      "origin": "notebooklm",
+      "q": "Q3",
+      "title": "Key Instagram DM Metrics That Matter for Sales - CreatorFlow",
+      "url": "https://creatorflow.so/blog/instagram-dm-metrics-that-matter/",
+      "resolved": true
+    },
+    {
+      "index": 17,
+      "source_id": "7e28317d-773e-45bd-aed6-5e1dbb1e48b7",
+      "origin": "notebooklm",
+      "q": "Q3",
+      "title": "",
+      "url": "",
+      "resolved": false
+    },
+    {
+      "index": 18,
+      "source_id": "7e0537b8-f7f6-4443-b633-ac01520b435e",
+      "origin": "notebooklm",
+      "q": "Q3",
+      "title": "",
+      "url": "",
+      "resolved": false
+    },
+    {
+      "index": 19,
+      "source_id": "efd5b48b-5568-454f-8d7b-f248905d7750",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "Advanced Conversational Architectures in High-Ticket Closing: Integrating Tactical Empathy, Diagnostic Disqualification, and Mathematical Value Models",
+      "url": null,
+      "resolved": true
+    },
+    {
+      "index": 20,
+      "source_id": "09eba430-6db8-4460-8eef-b107f2833d88",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "Sandler Selling System: Principles, Steps, and Examples - Salesmotion",
+      "url": "https://salesmotion.io/blog/sandler",
+      "resolved": true
+    },
+    {
+      "index": 21,
+      "source_id": "cf917fa0-d180-499f-82d0-5f0ad5ac0b4e",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "Sandler Pain Funnel: 8 Questions, 5 Minutes to Pain - Skipcall",
+      "url": "https://skipcall.io/en/blog/sandler-pain-funnel",
+      "resolved": true
+    },
+    {
+      "index": 22,
+      "source_id": "b336f738-79bb-4fa9-b06b-36357101e806",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "How To Use Calibrated Questions In A Negotiation - Nate Anglin",
+      "url": "https://www.nateanglin.com/blog/how-to-use-calibrated-questions-in-a-negotiation",
+      "resolved": true
+    },
+    {
+      "index": 23,
+      "source_id": "27cf5244-753e-41c2-859d-4d60b465418e",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "How to Close Sales with Chris Voss's FBI Negotiation Secrets ...",
+      "url": "https://www.badgermapping.com/blog/how-to-close-sales-chris-voss-negotiation/",
+      "resolved": true
+    },
+    {
+      "index": 24,
+      "source_id": "6fd76bdb-a003-4e71-9a07-605ec1e29d13",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "Using Calibrated Questions™️ to Win More Deals - The Black Swan Group",
+      "url": "https://www.blackswanltd.com/newsletter/using-calibrated-questions%EF%B8%8F-to-win-more-deals",
+      "resolved": true
+    },
+    {
+      "index": 25,
+      "source_id": "993e5aca-8567-4787-89b7-3ff67ac5ed14",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "How to Win Your Negotiation Battle Using Calibrated Questions - Psychotactics",
+      "url": "https://www.psychotactics.com/negotiation-battle/",
+      "resolved": true
+    },
+    {
+      "index": 26,
+      "source_id": "2465b6c5-4d38-4ef8-9d4a-1210759349bd",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "Alex Hormozi's Value Equation Explained (and How to Use It to Monetize an App)",
+      "url": "https://quantumbyte.ai/articles/alex-hormozi-value-equation-app-monetization",
+      "resolved": true
+    },
+    {
+      "index": 27,
+      "source_id": "a483382e-78f1-4be2-9c43-681d240c0408",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "I stopped selling marketing and started diagnosing. Here's how the Value Equation looks when you flip it : r/alexhormozi - Reddit",
+      "url": "https://www.reddit.com/r/alexhormozi/comments/1qz6c5v/i_stopped_selling_marketing_and_started/",
+      "resolved": true
+    },
+    {
+      "index": 28,
+      "source_id": "9f5347c1-bc53-4080-b18d-6201549c2ed4",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "My 8-Step Process to Closing Your Next Deal - The Sales Evangelist",
+      "url": "https://thesalesevangelist.com/episode1575/",
+      "resolved": true
+    },
+    {
+      "index": 29,
+      "source_id": "aeccbfc1-8042-4e6a-8297-ccf60946d9b2",
+      "origin": "notebooklm",
+      "q": "Q4",
+      "title": "Break-the-Script-Using-Pattern-Interrupts - Sandler",
+      "url": "https://go.sandler.com/praxis/insights/blog/categories/sales-process/break-the-script-using-pattern-interrupts/",
+      "resolved": true
+    },
+    {
+      "index": 30,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "How Prospects Spot AI-Written Cold Emails",
+      "url": "https://firstsales.io/blog/how-prospects-spot-ai-written-emails",
+      "resolved": true
+    },
+    {
+      "index": 31,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "Humanize AI-Written LinkedIn Outreach: 9-Point Pass",
+      "url": "https://linkedinsider.blog/humanize-ai-written-linkedin-outreach",
+      "resolved": true
+    },
+    {
+      "index": 32,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "How to Personalize Outreach at Scale Without Sounding Like AI",
+      "url": "https://www.unifygtm.com/explore/ai-outreach-without-sounding-like-ai",
+      "resolved": true
+    },
+    {
+      "index": 33,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "Email Outreach in 2026: How to Get Replies, Not Deletes",
+      "url": "https://nealschaffer.com/email-outreach",
+      "resolved": true
+    },
+    {
+      "index": 34,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "Read It Out Loud: The Cold Email Test That Improves Response Rates",
+      "url": "https://www.marketingprofs.com/articles/2026/55155/b2b-cold-email-fixes",
+      "resolved": true
+    },
+    {
+      "index": 35,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "AI Sales Messaging: Why Buyers Spot It Instantly",
+      "url": "https://www.thesellingcollective.com/post/ai-sales-messaging",
+      "resolved": true
+    },
+    {
+      "index": 36,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "Why your AI cold emails sound AI (and what actually fixes it)",
+      "url": "https://www.experimentoutbound.com/field-notes/why-ai-cold-emails-sound-ai",
+      "resolved": true
+    },
+    {
+      "index": 37,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "AI-Written Outreach That Doesn't Sound AI-Written: The Rules We Use",
+      "url": "https://www.anaboo.ai/blog/ai-outreach-that-doesnt-sound-ai-written",
+      "resolved": true
+    },
+    {
+      "index": 38,
+      "origin": "exa",
+      "q": "Q6",
+      "title": "Cold DM Script: Landing AI Agency Clients on Instagram and Facebook",
+      "url": "https://nicherly.com/blog/how-to-use-a-cold-dm-script-to-land-ai-agency-clients-on-instagram",
+      "resolved": true
+    },
+    {
+      "index": 39,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "828K AI DM Conversations Analyzed: What Books Calls",
+      "url": "https://setsmart.io/blog/ai-dm-conversation-study",
+      "resolved": true
+    },
+    {
+      "index": 40,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "LinkedIn DM Outreach: The Complete Strategy for B2B in 2026",
+      "url": "https://growtoro.com/blog/linkedin-dm-outreach-complete-strategy-b2b-2026",
+      "resolved": true
+    },
+    {
+      "index": 41,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "From DM to Deal: Mapping the Conversation Journey",
+      "url": "https://pursuenetworking.com/blog/linkedin-dm-to-meeting",
+      "resolved": true
+    },
+    {
+      "index": 42,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "Why My LinkedIn DMs Get Ignored",
+      "url": "https://getgangly.com/blog/why-my-linkedin-dms-get-ignored",
+      "resolved": true
+    },
+    {
+      "index": 43,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "Re-Engage Cold LinkedIn Leads: The Playbook",
+      "url": "https://linkedinsider.blog/re-engage-cold-linkedin-leads",
+      "resolved": true
+    },
+    {
+      "index": 44,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "Close High-Ticket Coaching Sales in DMs",
+      "url": "https://sellbychat.ai/blog/high-ticket-closing-dms",
+      "resolved": true
+    },
+    {
+      "index": 45,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "LinkedIn Message Sequence Template for Higher Conversions",
+      "url": "https://scaliq.ai/blogs/linkedin-message-sequence-template-3-message-momentum",
+      "resolved": true
+    },
+    {
+      "index": 46,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "Facebook Groups for Coaches and Consultants: 2026 Playbook",
+      "url": "https://multiplegroupposter.com/blog/facebook-groups-for-coaches-consultants",
+      "resolved": true
+    },
+    {
+      "index": 47,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "LinkedIn Outreach Benchmarks 2026: B2B Acceptance (132M attempts)",
+      "url": "https://yadulink.com/en/blog/linkedin-outreach-benchmarks-2026-acceptance-and-response-rates-from-132m-attempts-689",
+      "resolved": true
+    },
+    {
+      "index": 48,
+      "origin": "exa",
+      "q": "Q7",
+      "title": "Facebook Messenger Marketing: 2026 DM Playbook",
+      "url": "https://setsmart.io/blog/facebook-messenger-marketing",
+      "resolved": true
+    },
+    {
+      "index": 49,
+      "origin": "exa",
+      "q": "Q8",
+      "title": "How to Inbox Someone on Facebook: Quick Guide",
+      "url": "https://clepher.com/how-to-inbox-someone-on-facebook",
+      "resolved": true
+    },
+    {
+      "index": 50,
+      "origin": "exa",
+      "q": "Q8",
+      "title": "Facebook Messenger Marketing: A Practitioner Playbook",
+      "url": "https://www.avansaber.com/blog/messenger-marketing-guide",
+      "resolved": true
+    },
+    {
+      "index": 51,
+      "origin": "exa",
+      "q": "Q8",
+      "title": "How to Get Clients From Facebook Groups Without Getting Banned",
+      "url": "https://growthmodels.co/close-clients-free-groups",
+      "resolved": true
+    },
+    {
+      "index": 52,
+      "origin": "exa",
+      "q": "Q8",
+      "title": "Steal Our Exact Facebook DM SOP (Scripts Inside)",
+      "url": "https://www.sixfigureaioutreach.com/p/steal-our-exact-facebook-dm-sop-scripts-inside",
+      "resolved": true
+    },
+    {
+      "index": 53,
+      "origin": "exa",
+      "q": "Q9",
+      "title": "LinkedIn Follow-Up Messages: The Science of Persistence 2026",
+      "url": "https://lhunter.cc/blog/linkedin-follow-up-messages-the-science-of",
+      "resolved": true
+    },
+    {
+      "index": 54,
+      "origin": "exa",
+      "q": "Q9",
+      "title": "The Ultimate LinkedIn Follow Up Sequence for Higher Response Rates",
+      "url": "https://phantombuster.com/blog/social-selling/linkedin-follow-up-sequence",
+      "resolved": true
+    },
+    {
+      "index": 55,
+      "origin": "exa",
+      "q": "Q9",
+      "title": "LinkedIn Follow Up Sequence: Optimal Length and Timing",
+      "url": "https://linkedinsider.blog/linkedin-follow-up-sequence",
+      "resolved": true
+    },
+    {
+      "index": 56,
+      "origin": "exa",
+      "q": "Q9",
+      "title": "Stalled Opportunity Follow-Up: The Recovery Framework",
+      "url": "https://www.itsjustrevenue.com/insights/stalled-opportunity-follow-up",
+      "resolved": true
+    },
+    {
+      "index": 57,
+      "origin": "exa",
+      "q": "Q9",
+      "title": "Sales Conversations That Convert: Spot the Signals Early",
+      "url": "https://www.blazeo.com/blog/sales-conversations-that-convert",
+      "resolved": true
+    },
+    {
+      "index": 58,
+      "origin": "exa",
+      "q": "Q9",
+      "title": "Why Prospects Ghost You in DMs (And How to Win Them Back)",
+      "url": "https://sellbychat.ai/blog/why-prospects-ghost-in-dms",
+      "resolved": true
+    },
+    {
+      "index": 59,
+      "origin": "exa",
+      "q": "Q9",
+      "title": "DM Sequence Framework: Guide, Examples & Tool Fit",
+      "url": "https://prospectingmanual.com/linkedin-automation/workflows/dm-sequence-framework",
+      "resolved": true
+    },
+    {
+      "index": 60,
+      "origin": "exa",
+      "q": "Q9",
+      "title": "Why Your Team Answers Questions But Still Loses Deals",
+      "url": "https://www.iangenius.co.uk/sales-training-online-reactive-sales-conversations",
+      "resolved": true
+    },
+    {
+      "index": 61,
+      "source_id": "https://docs.google.com/document/d/1hOVQiOOFeWUb6N6454pP1Oy7QLrLBvZaRrt0fJQr2Mo/edit",
+      "origin": "transcript",
+      "q": "SRC",
+      "title": "Alex Hormozi - 4-Hour Sales (Ultimate Guide to Sales), user-provided transcript",
+      "url": "https://docs.google.com/document/d/1hOVQiOOFeWUb6N6454pP1Oy7QLrLBvZaRrt0fJQr2Mo/edit",
+      "resolved": true
+    },
+    {
+      "index": 62,
+      "source_id": "https://www.geisheker.com/b2b-marketing-guide/",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "Geisheker, The Ultimate B2B Marketing Guide 2026 (Gartner 6-10 buying group)",
+      "url": "https://www.geisheker.com/b2b-marketing-guide/",
+      "resolved": true
+    },
+    {
+      "index": 63,
+      "source_id": "https://www.autobound.ai/blog/b2b-sales-prospecting-guide",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "Autobound, B2B Sales Prospecting Guide 2026",
+      "url": "https://www.autobound.ai/blog/b2b-sales-prospecting-guide",
+      "resolved": true
+    },
+    {
+      "index": 64,
+      "source_id": "https://livvvv.com/blog/white-label-playbook",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "LIVV Creative, The White-Label Playbook 2026",
+      "url": "https://livvvv.com/blog/white-label-playbook",
+      "resolved": true
+    },
+    {
+      "index": 65,
+      "source_id": "https://geeksforgrowth.com/sell-white-label-services/",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "GeeksForGrowth, How Do Agencies Sell White-Label Services Confidently 2026",
+      "url": "https://geeksforgrowth.com/sell-white-label-services/",
+      "resolved": true
+    },
+    {
+      "index": 66,
+      "source_id": "https://gruv.ai/blog/how-to-structure-a-white-label-partnership-with-another-agency",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "Gruv.ai, How to Structure a White-Label Partnership (MSA/SOW/SLA)",
+      "url": "https://gruv.ai/blog/how-to-structure-a-white-label-partnership-with-another-agency",
+      "resolved": true
+    },
+    {
+      "index": 67,
+      "source_id": "https://www.salesforce.com/marketing/b2b-automation/b2b-marketing-guide/b2b-digital-marketing/",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "Salesforce, B2B Digital Marketing: The Ultimate Guide",
+      "url": "https://www.salesforce.com/marketing/b2b-automation/b2b-marketing-guide/b2b-digital-marketing/",
+      "resolved": true
+    },
+    {
+      "index": 68,
+      "source_id": "https://taskip.net/how-to-offer-white-label-services-for-agencies/",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "Taskip, How to Offer White-Label Services for Agencies 2026",
+      "url": "https://taskip.net/how-to-offer-white-label-services-for-agencies/",
+      "resolved": true
+    },
+    {
+      "index": 69,
+      "source_id": "https://www.vendasta.com/blog/ai-for-resellers/",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "Vendasta, AI for Resellers (agency white-label AI model)",
+      "url": "https://www.vendasta.com/blog/ai-for-resellers/",
+      "resolved": true
+    },
+    {
+      "index": 70,
+      "source_id": "https://yourgpt.ai/blog/general/selling-white-label-ai-services",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "YourGPT, Selling White-Label AI to Clients 2026",
+      "url": "https://yourgpt.ai/blog/general/selling-white-label-ai-services",
+      "resolved": true
+    },
+    {
+      "index": 71,
+      "source_id": "https://www.onemagnify.com/blog/b2b-digital-marketing-trends-2026",
+      "origin": "exa",
+      "q": "Q10",
+      "title": "OneMagnify, B2B Digital Marketing Trends 2026",
+      "url": "https://www.onemagnify.com/blog/b2b-digital-marketing-trends-2026",
+      "resolved": true
+    },
+    {
+      "index": 72,
+      "source_id": "https://getgangly.com/blog/objection-handling-psychology",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "GetGangly, Objection Handling Psychology: Why Prospects Push Back 2026",
+      "url": "https://getgangly.com/blog/objection-handling-psychology",
+      "resolved": true
+    },
+    {
+      "index": 73,
+      "source_id": "https://scienceofselling.co/learn/what-cognitive-biases-influence-buying-decisions",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "Science of Selling, What Cognitive Biases Influence Buying Decisions",
+      "url": "https://scienceofselling.co/learn/what-cognitive-biases-influence-buying-decisions",
+      "resolved": true
+    },
+    {
+      "index": 74,
+      "source_id": "https://prospeo.io/s/objection-handling",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "Prospeo, Objection Handling: What 67,149 Sales Calls Reveal 2026",
+      "url": "https://prospeo.io/s/objection-handling",
+      "resolved": true
+    },
+    {
+      "index": 75,
+      "source_id": "https://kayvon.com/articles/disarm-objection-handling-framework",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "Kayvon, DISARM Objection Handling Framework 2026",
+      "url": "https://kayvon.com/articles/disarm-objection-handling-framework",
+      "resolved": true
+    },
+    {
+      "index": 76,
+      "source_id": "https://courses.lumenlearning.com/cerritos-sales-1/chapter/types-of-objections-and-how-to-handle-them/",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "Lumen Learning, Types of Objections and How to Handle Them",
+      "url": "https://courses.lumenlearning.com/cerritos-sales-1/chapter/types-of-objections-and-how-to-handle-them/",
+      "resolved": true
+    },
+    {
+      "index": 77,
+      "source_id": "https://unleashyourpower.com/blog/cognitive-reframing-techniques-sales/",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "UnleashYourPower, Cognitive Reframing Techniques That Close More Sales 2026",
+      "url": "https://unleashyourpower.com/blog/cognitive-reframing-techniques-sales/",
+      "resolved": true
+    },
+    {
+      "index": 78,
+      "source_id": "https://www.itsconvo.com/blog/sales-closing-techniques",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "ITSConvo, Best Sales Closing Techniques 2026 (RAIN Group 472-seller survey)",
+      "url": "https://www.itsconvo.com/blog/sales-closing-techniques",
+      "resolved": true
+    },
+    {
+      "index": 79,
+      "source_id": "https://www.trellus.ai/post/sales-objection-handling-techniques",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "Trellus, Proven Sales Objection Handling Techniques (threat response)",
+      "url": "https://www.trellus.ai/post/sales-objection-handling-techniques",
+      "resolved": true
+    },
+    {
+      "index": 80,
+      "source_id": "https://www.salesarmor.app/blog/50-sales-objections",
+      "origin": "exa",
+      "q": "Q11",
+      "title": "SalesArmor, 50 Sales Objections Field Guide (Sandler)",
+      "url": "https://www.salesarmor.app/blog/50-sales-objections",
+      "resolved": true
+    },
+    {
+      "index": 81,
+      "source_id": "https://www.linkedin.com/posts/tejasjhaveri_coldemail-b2bsales-outboundsales-activity-7479112204135493632-vnhb",
+      "origin": "exa",
+      "q": "Q12",
+      "title": "Tejas Jhaveri, Boost Cold Email Open Rates with Human Touch (LinkedIn)",
+      "url": "https://www.linkedin.com/posts/tejasjhaveri_coldemail-b2bsales-outboundsales-activity-7479112204135493632-vnhb",
+      "resolved": true
+    },
+    {
+      "index": 82,
+      "source_id": "https://linkedin.com/in/morganjingramamp",
+      "origin": "exa",
+      "q": "Q12",
+      "title": "Morgan J Ingram (AMP), sound human in outbound",
+      "url": "https://linkedin.com/in/morganjingramamp",
+      "resolved": true
+    },
+    {
+      "index": 83,
+      "source_id": "https://www.reddit.com/r/ChatGPTPro/comments/1peagev/b2b_cold_email_prompt_that_actually_sounds_human/",
+      "origin": "exa",
+      "q": "Q12",
+      "title": "r/ChatGPTPro, B2B cold email prompt that actually sounds human",
+      "url": "https://www.reddit.com/r/ChatGPTPro/comments/1peagev/b2b_cold_email_prompt_that_actually_sounds_human/",
+      "resolved": true
+    },
+    {
+      "index": 84,
+      "source_id": "https://linkedin.com/in/adam-ht-closer",
+      "origin": "exa",
+      "q": "Q12",
+      "title": "Adam Lilizai, no-pressure closing (LinkedIn)",
+      "url": "https://linkedin.com/in/adam-ht-closer",
+      "resolved": true
+    },
+    {
+      "index": 85,
+      "source_id": "https://linkedin.com/in/morassouline",
+      "origin": "exa",
+      "q": "Q12",
+      "title": "Mor Assouline (Demo to Close), scripts are the wrong thing",
+      "url": "https://linkedin.com/in/morassouline",
+      "resolved": true
+    },
+    {
+      "index": 86,
+      "source_id": "https://www.devcommx.com/blogs/cold-email-templates-that-get-replies-2026",
+      "origin": "exa",
+      "q": "Q12",
+      "title": "DevCommX, Cold Emails That Get Replies 2026 (signal-based ~23%)",
+      "url": "https://www.devcommx.com/blogs/cold-email-templates-that-get-replies-2026",
+      "resolved": true
+    },
+    {
+      "index": 87,
+      "source_id": "https://es.linkedin.com/in/charlottelloydsales",
+      "origin": "exa",
+      "q": "Q12",
+      "title": "Charlotte Lloyd, no-pressure buyer-led selling",
+      "url": "https://es.linkedin.com/in/charlottelloydsales",
+      "resolved": true
+    }
+  ],
+  "uuid_to_index": {
+    "0569f5f5-5c54-4da1-a740-e877f93187a0": 0,
+    "f767ac94-1884-4545-b244-25c2fae1340b": 1,
+    "8acaa2c2-c601-4a8c-af83-8367bb154a85": 2,
+    "d7c631a0-7b9f-4dba-bb37-676044ffaec3": 3,
+    "05257fbb-e93a-4fc4-9168-c49e25ca0aee": 4,
+    "2c41ce6e-75f9-4ff3-80c2-64e8bdc89b40": 5,
+    "c6211b42-01fe-4278-9d12-279ff9fd9434": 6,
+    "646e1765-8b1b-489d-847b-0f9722122f16": 7,
+    "0fb0d8a6-32e1-470f-8a9d-3ccb268a541d": 8,
+    "f85b46e1-2ff2-4ba1-b142-71975472fc5a": 9,
+    "83c5846a-efd7-4ed4-ae59-be90f00999ac": 10,
+    "b03321d0-c09a-47f3-bdf6-4edb9bbe4408": 11,
+    "b5a45955-a7a8-459e-9862-420e486c59bd": 12,
+    "26aafde8-e1dd-471c-87ed-207b61fa0484": 13,
+    "4a2ddcc0-01fb-4e35-aa5e-ba6c93952301": 14,
+    "9ab3632a-2752-4fd4-808e-f436cbde23c9": 15,
+    "48ffa531-4485-4851-bf59-09e8f8ec8738": 16,
+    "7e28317d-773e-45bd-aed6-5e1dbb1e48b7": 17,
+    "7e0537b8-f7f6-4443-b633-ac01520b435e": 18,
+    "efd5b48b-5568-454f-8d7b-f248905d7750": 19,
+    "09eba430-6db8-4460-8eef-b107f2833d88": 20,
+    "cf917fa0-d180-499f-82d0-5f0ad5ac0b4e": 21,
+    "b336f738-79bb-4fa9-b06b-36357101e806": 22,
+    "27cf5244-753e-41c2-859d-4d60b465418e": 23,
+    "6fd76bdb-a003-4e71-9a07-605ec1e29d13": 24,
+    "993e5aca-8567-4787-89b7-3ff67ac5ed14": 25,
+    "2465b6c5-4d38-4ef8-9d4a-1210759349bd": 26,
+    "a483382e-78f1-4be2-9c43-681d240c0408": 27,
+    "9f5347c1-bc53-4080-b18d-6201549c2ed4": 28,
+    "aeccbfc1-8042-4e6a-8297-ccf60946d9b2": 29
+  }
+}

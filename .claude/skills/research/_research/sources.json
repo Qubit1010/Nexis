@@ -1,0 +1,764 @@
+{
+  "origin": "exa",
+  "generated": "2026-07-14",
+  "note": "inline [n] in research-synthesis.md resolves to sources[index-1]",
+  "total": 108,
+  "sources": [
+    {
+      "index": 1,
+      "title": "From Question to Citation: A Complete Modern Research Workflow (2026 Guide) | Rhino Scholar",
+      "url": "https://rhinoscholar.com/blog/question-to-citation-research-workflow-2026",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 2,
+      "title": "The Research Process Explained: Steps and Examples (2026)",
+      "url": "https://methodologyhub.com/methods/research-process/",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 3,
+      "title": "Research Methodology Guide 2026: Complete Overview",
+      "url": "https://tesify.app/research-methodology-guide-2026/",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 4,
+      "title": "How to Write a Research Methodology in 2026",
+      "url": "https://paperpal.com/blog/academic-writing-guides/what-is-research-methodology",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 5,
+      "title": "How to Do Deep Research with AI in 2026",
+      "url": "https://blog.rixx.app/post/how-to-do-deep-research-with-ai-2026/",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 6,
+      "title": "From Research Question to a Defensible Literature Review",
+      "url": "https://www.desci.com/blog/from-research-question-to-a-defensible-literature-review-a-workflow-that-scales",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 7,
+      "title": "Moving up the ladder of source assessment: Expanding the CRAAP test with critical thinking and metacognition | Liu | College & Research Libraries News",
+      "url": "https://crln.acrl.org/index.php/crlnews/article/view/24811/32641",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 8,
+      "title": "Diving Below the Surface: A Layered Approach to Teaching Online Source Evaluation through Lateral and Critical Reading",
+      "url": "https://rdw.rowan.edu/cgi/viewcontent.cgi?article=1038&context=lib_scholarship",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 9,
+      "title": "Evaluating Online Sources: Introducing a 4-Step Strategy | Liu | College & Research Libraries News",
+      "url": "https://crln.acrl.org/index.php/crlnews/article/view/26242/34195",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 10,
+      "title": "Evaluating Sources - The Research Process: A Step-By-Step Guide - Schauffler Library at Schauffler Library, Northfield Mount Hermon School",
+      "url": "https://libguides.nmhschool.org/ResearchProcess/Evaluate",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 11,
+      "title": "Evaluating Online Sources: Initial Moves - Evaluating Online Sources: A Toolkit - Research Guides (LibGuides) at Butler University",
+      "url": "https://libguides.butler.edu/c.php?g=1255142&p=9194967",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 12,
+      "title": "Lateral Reading and the Nature of Expertise: Reading Less and Learning More When Evaluating Digital Information - Sam Wineburg, Sarah McGrew, 2019",
+      "url": "https://journals.sagepub.com/doi/10.1177/016146811912101102",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 13,
+      "title": "The Systematic Review Process - Evidence Synthesis, Knowledge Synthesis, Systematic Review Services - Research Guides at University of Wisconsin-Madison",
+      "url": "https://researchguides.library.wisc.edu/literature_review/process",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 14,
+      "title": "Systematic Reviews: CRD's guidance for undertaking reviews in health care",
+      "url": "https://www.york.ac.uk/media/crd/newpagesspring2025/Systematic_Reviews_CRD_guidance.pdf",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 15,
+      "title": "Steps in a Systematic Review - Systematic Reviews & Evidence Synthesis Methods - Research Guides at University of California Irvine",
+      "url": "https://guides.lib.uci.edu/evidence-synthesis/systematic-review-steps",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 16,
+      "title": "11 Step Process for Evidence Synthesis - Systematic Reviews & Evidence Synthesis - LibGuides at University of Victoria Libraries",
+      "url": "https://libguides.uvic.ca/systematic_reviews/11stepprocess",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 17,
+      "title": "Writing a Systematic Review and Meta-analysis: A Step-by ...",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12402582/",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 18,
+      "title": "Step-by-Step Process - Systematic Reviews & Evidence Synthesis - Research Guides at Colorado State University Fort Collins",
+      "url": "https://libguides.colostate.edu/sres/Process",
+      "q": "q1_methodology",
+      "origin": "exa"
+    },
+    {
+      "index": 19,
+      "title": "Google Search Operators - Google Guide",
+      "url": "https://www.googleguide.com/advanced_operators_reference.html",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 20,
+      "title": "Google Search Operators Cheat Sheet",
+      "url": "https://static.semrush.com/blog/uploads/files/39/12/39121580a18160d3587274faed6323e2.pdf",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 21,
+      "title": "Google Search Operators: In-Depth List of 40 Commands to Know in 2026",
+      "url": "https://kinsta.com/blog/google-search-operators/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 22,
+      "title": "Google Advanced Search Operators",
+      "url": "https://gwern.net/doc/technology/google/2024-02-08-danielmrussell-googleadvancedsearchoperators-alltheoperators.pdf",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 23,
+      "title": "Google Advanced Search",
+      "url": "https://www.google.com/advanced_search?hl=en",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 24,
+      "title": "8gudbits/dork-operators-current",
+      "url": "https://github.com/8gudbits/dork-operators-current",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 25,
+      "title": "How to Formulate Effective Search Strategies for Information Retrieval - LIS (Library & Information Science) Academy",
+      "url": "https://lis.academy/information-processing-retrieval/how-to-formulate-effective-search-strategies/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 26,
+      "title": "Search Strategy | UNE Library Services",
+      "url": "https://library.une.edu/research-help/searching/effective-searching/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 27,
+      "title": "Understanding Search Techniques",
+      "url": "https://ww2.nscc.edu/technology/searchingtheinternet/searchtechniques.htm",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 28,
+      "title": "Effective Strategies for Searching the Internet - LIS (Library & Information Science) Academy",
+      "url": "https://lis.academy/ict-applications/effective-strategies-internet-search/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 29,
+      "title": "4.5 Search strategies – Technical Writing",
+      "url": "https://openoregon.pressbooks.pub/technicalwriting/chapter/4-5-search-strategies/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 30,
+      "title": "Effective Web Search Strategies Using Search Engines • Sociology.Institute",
+      "url": "https://sociology.institute/research-methodologies-methods/effective-web-search-strategies-tips/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 31,
+      "title": "19 advanced Google search operators you need to know (and some we’ve said goodbye to)",
+      "url": "https://searchengineland.com/advanced-google-search-operators-388355",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 32,
+      "title": "Refine Google searches - Google Search Help",
+      "url": "https://support.google.com/websearch/answer/2466433",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 33,
+      "title": "Google Search Operators Cheatsheet | Lawrence Hitches",
+      "url": "https://www.lawrencehitches.com/google-search-operators-cheatsheet/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 34,
+      "title": "Search Operators: Complete Guide + 50 Examples (2026) | Cited",
+      "url": "https://cited.so/blog/search-operators",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 35,
+      "title": "Google Search Operators: Full List & Examples | GreenGeeks",
+      "url": "https://www.greengeeks.com/blog/google-search-operators-full-list-and-examples/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 36,
+      "title": "The Complete List of Google Search Operators (35+ Advanced Commands)",
+      "url": "https://techpp.com/2026/04/24/google-search-operators-commands/",
+      "q": "q2_query_craft",
+      "origin": "exa"
+    },
+    {
+      "index": 37,
+      "title": "How to Find a LinkedIn Profile on Google (X-Ray Search Guide)",
+      "url": "https://www.powerin.io/blog/how-to-find-a-linkedin-profile-on-google-x-ray",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 38,
+      "title": "LinkedIn for OSINT: tips and tricks – Compass Security Blog",
+      "url": "https://blog.compass-security.com/2025/06/linkedin-for-osint-tips-and-tricks/",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 39,
+      "title": "The Manual Search Guide: Essential Google Search Operators for OSINT",
+      "url": "https://www.social-searcher.com/2025/12/24/the-manual-search-guide-essential-google-search-operators-for-osint/",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 40,
+      "title": "SOCMINT on LinkedIn: How OSINT Investigators Map People, Companies, and Networks | OSINT Bay Blog",
+      "url": "https://osintbay.com/blog/post/socmint-on-linkedin",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 41,
+      "title": "LinkedIn X-Ray Search 2026: Find Anyone for Free",
+      "url": "https://lagrowthmachine.com/linkedin-xray/",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 42,
+      "title": "Free LinkedIn X-Ray Search: Find Hidden Profiles With Google",
+      "url": "https://connectsafely.ai/articles/linkedin-xray-search",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 43,
+      "title": "How to Find a Decision-Maker's Email (2026) | GetSalesClaw",
+      "url": "https://getsalesclaw.com/blog/find-decision-maker-email",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 44,
+      "title": "How to Find a CEO Email Address in 2026: 10 Methods That Still Work",
+      "url": "https://lessie.ai/blog/find-ceo-email",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 45,
+      "title": "How to Find CEO and Decision Maker Emails: Complete 2025 Guide",
+      "url": "https://whomails.com/blog/how-to-find-ceo-decision-maker-emails",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 46,
+      "title": "9 Proven Methods to Find CEO Email Addresses (Free + Paid)",
+      "url": "https://www.saleshandy.com/blog/find-ceo-email-address/",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 47,
+      "title": "CEO email addresses: 10 methods that work | Datalane Blog",
+      "url": "https://www.datalane.com/post/ceo-email-addresses",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 48,
+      "title": "How to Find CEO & Founder Emails for B2B Outreach | Ziniks",
+      "url": "https://ziniks.com/how-to-find-ceo-and-founder-email-addresses-for-b2b-outreach/",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 49,
+      "title": "Free Email Guesser & Verifier",
+      "url": "https://prospectecho.com/tools/email-guesser",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 50,
+      "title": "Free Email Permutator - Find Anyone's Email | Lessie AI",
+      "url": "https://lessie.ai/email-permutator",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 51,
+      "title": "Email Permutator — Generate & Verify All Email Formats Free | Sendburg",
+      "url": "https://send-burg.com/email-permutator",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 52,
+      "title": "apifyforge/email-pattern-finder",
+      "url": "https://github.com/apifyforge/email-pattern-finder",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 53,
+      "title": "emeth-/Email-Permutator",
+      "url": "https://github.com/emeth-/Email-Permutator",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 54,
+      "title": "Email Permutator: Free Email Address Generator",
+      "url": "https://www.emailchaser.com/email-permutator",
+      "q": "q3_finding_people",
+      "origin": "exa"
+    },
+    {
+      "index": 55,
+      "title": "Company OSINT: How to Research Any Business - DEV Community",
+      "url": "https://dev.to/kylebrennan_dev/company-osint-how-to-research-any-business-cl",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 56,
+      "title": "Automate Company Intelligence: Scrape Tech Stacks & Hiring Signals in Seconds (A tutorial) - DEV Community",
+      "url": "https://dev.to/kain/automate-company-intelligence-scrape-tech-stacks-hiring-signals-in-seconds-a-tutorial-kcl",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 57,
+      "title": "Tech Stacks of Companies: Public Signal Guide",
+      "url": "https://softwareinspect.com/blog/tech-stacks-of-companies",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 58,
+      "title": "Technographics: The Definitive Guide to Technographic Data - JobsPipe",
+      "url": "https://jobspipe.dev/technographics",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 59,
+      "title": "How to Find Any Company's Tech Stack (A Developer's Guide) - DEV Community",
+      "url": "https://dev.to/henley_wing_9424eb9a3177c/how-to-find-any-companys-tech-stack-a-developers-guide-53h7",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 60,
+      "title": "How to Detect Your Competitor's Entire Tech Stack in 15 Minutes",
+      "url": "https://oscom.ai/blog/tech-stack-detection-guide",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 61,
+      "title": "Crunchbase Pro - Crunchbase",
+      "url": "https://about.crunchbase.com/products/crunchbase-pro",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 62,
+      "title": "How can I search using Crunchbase Pro? – Crunchbase | Knowledge Center",
+      "url": "https://support.crunchbase.com/hc/en-us/articles/360046653554-How-can-I-search-using-Crunchbase-Pro",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 63,
+      "title": "About Crunchbase Data",
+      "url": "https://about.crunchbase.com/data",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 64,
+      "title": "Guide: How to Build B2B Leads with LinkedIn and Crunchbase",
+      "url": "https://www.simular.ai/workflow/guide-how-to-build-b2b-leads-with-linkedin-and-crunchbase",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 65,
+      "title": "Crunchbase | Private Company Data & Predictive Intelligence",
+      "url": "https://about.crunchbase.com/",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 66,
+      "title": "What is LinkedIn Xray, And How To Get The Best Out Of It?",
+      "url": "https://skylead.io/blog/linkedin-xray-search-guide/",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 67,
+      "title": "BuiltWith Technology Lookup",
+      "url": "https://builtwith.com/",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 68,
+      "title": "Technology lookup - Wappalyzer",
+      "url": "https://www.wappalyzer.com/lookup/",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 69,
+      "title": "Wappalyzer: Find out what websites are built with",
+      "url": "https://www.wappalyzer.com/",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 70,
+      "title": "WhatStack — Website Technology Detection",
+      "url": "https://whatstack.ai/lookup",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 71,
+      "title": "WhatBuilt — Instantly reveal any website's tech stack",
+      "url": "https://whatbuilt.com/",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 72,
+      "title": "Wappalyzer - Technology profiler - Chrome Web Store",
+      "url": "https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg",
+      "q": "q4_finding_companies",
+      "origin": "exa"
+    },
+    {
+      "index": 73,
+      "title": "Web Search API Types: SERP, AI Retrieval, Deep Research | NewsCatcher",
+      "url": "https://www.newscatcherapi.com/blog-posts/web-search-api-types-2026",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 74,
+      "title": "How to Choose a Search API for Your AI Product | serp.fast",
+      "url": "https://serp.fast/guides/choosing-search-api-for-ai",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 75,
+      "title": "Web Search APIs for AI Agents Compared",
+      "url": "https://www.joinmassive.com/blog/web-search-apis-for-ai-agents-compared-seltz-exa-brave-and-render-apis",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 76,
+      "title": "Best SERP API for AI Agents (2026) - Data4AI",
+      "url": "https://data4ai.com/blog/tool-comparisons/best-serp-api-for-ai-agents/",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 77,
+      "title": "SERP APIs vs. AI Search APIs - A full Comparison - Data4AI",
+      "url": "https://data4ai.com/blog/search-api/serp-apis-vs-ai-search/",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 78,
+      "title": "SERP API vs Content Scraping API: Two Different Tools for AI Agents | KnowledgeSDK Blog",
+      "url": "https://knowledgesdk.com/blog/serp-vs-content-scraping",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 79,
+      "title": "Serper - The World's Fastest and Cheapest Google Search API",
+      "url": "https://serper.dev/",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 80,
+      "title": "Google Search Engine Results API",
+      "url": "https://serpapi.com/search-api",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 81,
+      "title": "SerpApi: Google Search API",
+      "url": "https://serpapi.com/",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 82,
+      "title": "SerpApi vs Serper.dev: 500 Queries Through Both, Tested",
+      "url": "https://apiserpent.com/blog/serpapi-vs-serper-benchmark",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 83,
+      "title": "serpapi/google-scraper",
+      "url": "https://github.com/serpapi/google-scraper",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 84,
+      "title": "SerpApi VS Serper VS  ValueSERP VS SearchApi (2026)",
+      "url": "https://serpapi.com/blog/compare-serpapi-with-the-alternatives-serper-and-searchapi/",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 85,
+      "title": "type: neural vs keyword vs auto | Exa Api Beginner Course | The Neural Base",
+      "url": "https://theneuralbase.com/exa-api/learn/beginner/type-neural-vs-keyword-vs-auto/",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 86,
+      "title": "How We're Building the Next Generation of Search with Semantic Search Technology | Exa Blog",
+      "url": "https://exa.ai/blog/how-to-build-nextgen-search",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 87,
+      "title": "Exa Search API - Exa",
+      "url": "https://exa.ai/docs/reference/search-api-guide",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 88,
+      "title": "type=\"neural\": semantic | Exa Api Beginner Course | The Neural Base",
+      "url": "https://theneuralbase.com/exa-api/learn/beginner/type-neural-semantic/",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 89,
+      "title": "Web Search API Evals: Exa's Neural Network Search Engine vs. The Competition | Exa Blog",
+      "url": "https://exa.ai/blog/api-evals",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 90,
+      "title": "Semantic Search vs. Keyword Search: What’s the Difference? - The Couchbase Blog",
+      "url": "https://www.couchbase.com/blog/semantic-search-vs-keyword-search-whats-the-difference/",
+      "q": "q5_serp_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 91,
+      "title": "Exa vs Tavily vs Serper vs Brave Search for AI Agents | Rhumb",
+      "url": "https://rhumb.dev/blog/exa-vs-tavily-vs-serper-vs-brave-search",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 92,
+      "title": "Firecrawl vs Tavily vs Exa vs Jina: Which Web Data API Fits Your AI Agent Stack in 2026 | Pondero",
+      "url": "https://pondero.ai/agents/guides/firecrawl-vs-tavily-vs-exa-web-search-api-agents-june-2026/",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 93,
+      "title": "The Best Search API for AI Agents (2026): Data-Backed Guide | GroundRoute",
+      "url": "https://groundroute.ai/best-search-api-for-ai-agents",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 94,
+      "title": "Tavily vs Exa vs Serper vs API Pick: Which Web Search API for LLMs?",
+      "url": "https://www.apipick.com/blog/tavily-exa-serper-vs-apipick",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 95,
+      "title": "AI Search APIs Compared: Exa vs Tavily vs Perplexity vs Linkup (2026) | serp.fast",
+      "url": "https://serp.fast/guides/ai-search-apis-compared",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 96,
+      "title": "Agentic Search in 2026: Benchmark 8 Search APIs for Agents",
+      "url": "https://aimultiple.com/agentic-search",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 97,
+      "title": "CaLM: Contrasting Large and Small Language Models to Verify Grounded Generation",
+      "url": "https://arxiv.org/pdf/2406.05365",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 98,
+      "title": "CiteGuard: Faithful Citation Attribution for LLMs via Retrieval-Augmented Validation",
+      "url": "https://aclanthology.org/2026.acl-long.282.pdf",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 99,
+      "title": "Effective Large Language Model Adaptation for Improved Grounding and Citation Generation",
+      "url": "https://arxiv.org/html/2311.09533v3",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 100,
+      "title": "Citation-Enhanced Generation for LLM-based Chatbots",
+      "url": "https://arxiv.org/html/2402.16063v3",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 101,
+      "title": "CHAIN-OF-VERIFICATION REDUCES HALLUCINATION IN LARGE LANGUAGE MODELS",
+      "url": "https://openreview.net/pdf?id=VP20ZB6DHL",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 102,
+      "title": "100% Elimination of Hallucinations on RAGTruth for GPT-4 and GPT-3.5 Turbo",
+      "url": "https://arxiv.org/pdf/2412.05223",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 103,
+      "title": "Semantic reranking | Elastic Docs",
+      "url": "https://www.elastic.co/docs/solutions/search/ranking/semantic-reranking",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 104,
+      "title": "A practical guide to search relevance metrics and evaluation",
+      "url": "https://www.meilisearch.com/blog/search-relevance-metrics",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 105,
+      "title": "How Does Google Determine Ranking Results",
+      "url": "https://www.google.com/intl/en_us/search/howsearchworks/how-search-works/ranking-results",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 106,
+      "title": "What is Search Relevance? | A Comprehensive ...",
+      "url": "https://www.elastic.co/what-is/search-relevance",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 107,
+      "title": "Mastering Search Relevance: Metrics for Effective Evaluation",
+      "url": "https://www.mongodb.com/resources/basics/search-relevance",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    },
+    {
+      "index": 108,
+      "title": "How to Evaluate Search Relevance and Ranking",
+      "url": "https://towardsdatascience.com/metrics-that-matter-a-simple-guide-to-search-ranking-evaluation-4030084c35b4/",
+      "q": "q6_service_optimization",
+      "origin": "exa"
+    }
+  ]
+}

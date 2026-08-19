@@ -1,0 +1,995 @@
+{
+  "origin": "exa",
+  "generated": "2026-07-14",
+  "note": "inline [n] in research-synthesis.md resolves to sources[index-1]",
+  "total": 141,
+  "sources": [
+    {
+      "index": 1,
+      "title": "Web Scraping Infrastructure Guide: APIs vs Proxies vs Headless Browsers (2026) - DEV Community",
+      "url": "https://dev.to/agenthustler/web-scraping-infrastructure-guide-apis-vs-proxies-vs-headless-browsers-2026-4gj",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 2,
+      "title": "Web Scraping Best Practices 2026: Architecture, Ethics, and Production Patterns | Use Apify",
+      "url": "https://use-apify.com/blog/web-scraping-best-practices-2026",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 3,
+      "title": "Designing a Large-Scale Web Scraping Architecture in 2026 | ZooData",
+      "url": "https://apiclaw.io/en/blog/large-scale-web-scraping-architecture-guide",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 4,
+      "title": "Web Scraping Best Practices: Complete 2026 Guide",
+      "url": "https://oxylabs.io/blog/web-scraping-best-practices",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 5,
+      "title": "Headless Browser vs Scraping API: The Right Architecture for AI Agents | KnowledgeSDK Blog",
+      "url": "https://knowledgesdk.com/blog/headless-browser-vs-api",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 6,
+      "title": "Headless Browser vs API Scraping in 2026",
+      "url": "https://webscraper.uk/headless-browser-vs-api-scraping-for-ai-training-data-which-",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 7,
+      "title": "How to Build a Scalable Web Scraping Pipeline from Scratch - Programming Insider",
+      "url": "https://programminginsider.com/how-to-build-a-scalable-web-scraping-pipeline-from-scratch/",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 8,
+      "title": "Build a Web Scraping Pipeline That Lasts",
+      "url": "https://scrapes.us/how-to-build-a-web-scraping-pipeline",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 9,
+      "title": "How Companies Keep Important Scrapers Reliable (6-Layer Stack)",
+      "url": "https://blog.scrapeup.com/how-to-keep-scrapers-reliable/",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 10,
+      "title": "Production Web Scraping with Python — Architecture, Not Scripts | ThinkGenius",
+      "url": "https://thinkgenius.com/articles/production-web-scraping-with-python/",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 11,
+      "title": "Build a Web Scraping Pipeline That Survives Changes",
+      "url": "https://webscraper.app/how-to-build-a-web-scraping-pipeline-that-survives-site-changes",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 12,
+      "title": "Decision Framework: Browser vs API vs SERP-API, APIs, SERPs & Reverse Engineering | Scraping Central",
+      "url": "https://scrapingcentral.com/learn/api-scraping/decision-framework-browser-vs-api-vs-serp",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 13,
+      "title": "Playwright vs Scraping API: When Each Approach Makes Sense for AI | KnowledgeSDK Blog",
+      "url": "https://knowledgesdk.com/blog/playwright-vs-api-scraping",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 14,
+      "title": "Choosing Between Scraping APIs, Browser Sessions, and Self-Managed Playwright - DEV Community",
+      "url": "https://dev.to/anakin_writers/choosing-between-scraping-apis-browser-sessions-and-self-managed-playwright-3d3i",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 15,
+      "title": "Best Python Scraping Libraries in 2026: 6 Compared | cloro",
+      "url": "https://cloro.dev/blog/python_scraping_libraries_2026/",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 16,
+      "title": "Playwright Scraping vs Scraping API in 2026",
+      "url": "https://scraper.page/playwright-scraping-vs-scraping-api-which-stack-handles-anti-bot-defenses-better-in-2026",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 17,
+      "title": "Web Extraction API vs Browser Automation: Full Decision Guide | KnowledgeSDK Blog",
+      "url": "https://knowledgesdk.com/blog/web-extraction-vs-browser-automation",
+      "q": "q1_architecture",
+      "origin": "exa"
+    },
+    {
+      "index": 18,
+      "title": "How to Bypass Cloudflare When Web Scraping (2026): Every Method Ranked | Use Apify",
+      "url": "https://use-apify.com/blog/how-to-bypass-cloudflare-web-scraping",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 19,
+      "title": "How to Bypass Cloudflare Anti-Bot Protection: Complete Guide 2026 | ScrapeBadger",
+      "url": "https://scrapebadger.com/blog/how-to-bypass-cloudflare-anti-bot-protection-a-complete-technical-guide-2026",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 20,
+      "title": "Web Scraping Anti-Detection Techniques: The Definitive 2026 Reference | Use Apify",
+      "url": "https://use-apify.com/blog/web-scraping-anti-detection-2026",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 21,
+      "title": "Scrape Behind Cloudflare — Architecture Guide (2026) | Aethyn.io",
+      "url": "https://www.aethyn.io/solutions/scrape-behind-cloudflare",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 22,
+      "title": "How to Bypass Cloudflare When Scraping (What Still Works in 2026)",
+      "url": "https://thunderbit.com/blog/how-to-bypass-cloudflare-scraping",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 23,
+      "title": "How to Bypass Cloudflare Protection with Proxies (2026 Guide) | SpyderProxy Blog",
+      "url": "https://spyderproxy.com/blog/how-to-bypass-cloudflare",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 24,
+      "title": "Common Residential Proxy Mistakes That Trigger Detection | Shifter Blog",
+      "url": "https://shifter.io/blog/common-residential-proxy-mistakes-that-trigger-detection",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 25,
+      "title": "Anti-Bot Bypass: TLS Fingerprinting and Residential Proxies | Go4Scrap.in - Enterprise Web Scraping Solutions",
+      "url": "https://go4scrap.in/kb/technical/anti-bot-bypass/",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 26,
+      "title": "How Rotating Residential Proxies Work: A Technical Deep-Dive for Developers - CHARFEN.CO.UK",
+      "url": "https://charfen.co.uk/how-rotating-residential-proxies-work-a-technical-deep-dive-for-developers/",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 27,
+      "title": "How to Rotate Residential IPs Automatically (2026 Guide) | Aethyn.io",
+      "url": "https://www.aethyn.io/solutions/rotate-residential-ips-automatically",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 28,
+      "title": "Browser Fingerprinting vs Proxy Rotation: What Actually Prevents Detection? | Medium",
+      "url": "https://medium.com/@barbarajreddington/browser-fingerprinting-vs-proxy-rotation-d7fdaebf970a",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 29,
+      "title": "How to Avoid Bot Detection When Scraping (Step-by-Step Guide)",
+      "url": "https://mrscraper.com/blog/bypass-bot-detection",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 30,
+      "title": "Web Scraping Rate Limiting: Production Best Practices for 2026 | KnowledgeSDK Blog",
+      "url": "https://knowledgesdk.com/blog/web-scraping-rate-limiting",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 31,
+      "title": "Policy‑Aware Scraper Best Practices (2026)",
+      "url": "https://webscraper.cloud/developer-guide-writing-reliable-scrapers-that-respect-publi",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 32,
+      "title": "Ethical Web Scraping: Rate Limiting & robots.txt Guide (2026) - SparkProxy",
+      "url": "https://www.sparkproxy.io/blog/guide-on-ethical-scraping-and-rate-limiting",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 33,
+      "title": "Rate Limiting for Web Scrapers",
+      "url": "https://webscraper.uk/rate-limiting-for-web-scrapers-how-to-crawl-responsibly-without-getting-blocked",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 34,
+      "title": "Polite Scraping, robots.txt, Delays, Rate Limits, Static Scraping | Scraping Central",
+      "url": "https://scrapingcentral.com/learn/static-scraping/polite-scraping",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 35,
+      "title": "Rate Limiting for Web Scrapers",
+      "url": "https://webscraper.app/rate-limiting-for-web-scrapers",
+      "q": "q2_antibot",
+      "origin": "exa"
+    },
+    {
+      "index": 36,
+      "title": "LLM Extraction vs CSS Selectors: Which Should You Use in 2026?",
+      "url": "https://blog.scrapeup.com/llm-extraction-vs-css-selectors-2026/",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 37,
+      "title": "Structured Data Extraction from HTML 🧰",
+      "url": "https://www.contextractor.com/structured-data-extraction/",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 38,
+      "title": "LLM Zero-Shot JSON Extraction for Resilient Web Scraping | AlterLab",
+      "url": "https://alterlab.io/blog/replacing-fragile-css-selectors-with-llm-powered-zero-shot-json-extraction",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 39,
+      "title": "Web Scraping with AI: How LLMs Are Transforming Data Extraction in 2026 | Use Apify",
+      "url": "https://use-apify.com/blog/web-scraping-with-ai-llms-2026",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 40,
+      "title": "LLM-Powered Data Extraction: Schema-Driven Scraping with Structured Output | ByteTunnels",
+      "url": "https://bytetunnels.com/posts/llm-powered-data-extraction-schema-driven-scraping-with-structured-output/",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 41,
+      "title": "What are CSS selectors and XPath in web extraction? | Firecrawl Glossary",
+      "url": "https://www.firecrawl.dev/glossary/web-extraction-apis/what-are-css-selectors-xpath-web-extraction",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 42,
+      "title": "LLMStructBench: Benchmarking Large Language Model Structured Data Extraction",
+      "url": "https://arxiv.org/html/2602.14743",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 43,
+      "title": "AXE: Low-Cost Cross-Domain Web Structured Information Extraction",
+      "url": "https://arxiv.org/pdf/2602.01838",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 44,
+      "title": "PARSE: LLM Driven Schema Optimization for Reliable ...",
+      "url": "https://arxiv.org/html/2510.08623v1",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 45,
+      "title": "Schema-Driven Scraping with LLMs: Pydantic, Zod, and Structured Output | ByteTunnels",
+      "url": "https://bytetunnels.com/posts/schema-driven-scraping-llms-pydantic-zod-structured-output/",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 46,
+      "title": "PARSE: LLM Driven Schema Optimization for Reliable Entity Extraction",
+      "url": "https://aclanthology.org/2025.emnlp-industry.184.pdf",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 47,
+      "title": "Co-Scraper: query-aware DOM Pruning and Reusable Scraper Synthesis for Lightweight Web Data Extraction",
+      "url": "https://arxiv.org/html/2606.14821",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 48,
+      "title": "How to Clean Scraped Data Properly",
+      "url": "https://webscraper.uk/how-to-clean-scraped-data-deduplication-normalisation-and-validation",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 49,
+      "title": "Building a Web Data Quality Layer - Deduping, Canonicalization, and Drift Alerts | ScrapingAnt",
+      "url": "https://scrapingant.com/blog/building-a-web-data-quality-layer-deduping-canonicalization",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 50,
+      "title": "Data Cleaning Checklist for Web Scraping",
+      "url": "https://scraper.page/data-cleaning-checklist-for-web-scraping-pipelines",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 51,
+      "title": "Data Quality in Web Scraping: Validation, Cleaning, and Deduplication - DEV Community",
+      "url": "https://dev.to/agenthustler/data-quality-in-web-scraping-validation-cleaning-and-deduplication-502k",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 52,
+      "title": "",
+      "url": "https://tendem.ai/blog/cleaning-scraped-data-guide",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 53,
+      "title": "6 Steps to Clean & Ingest Scraped Data for Data Warehouses",
+      "url": "https://www.scrapehero.com/data-notes/6-steps-to-clean-ingest-scraped-data-for-data-warehouses/",
+      "q": "q3_extraction",
+      "origin": "exa"
+    },
+    {
+      "index": 54,
+      "title": "",
+      "url": "https://apify.com/salahboussettah/b2b-lead-scraper/api/python",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 55,
+      "title": "Ultimate Local Business Intelligence Scraper · Apify",
+      "url": "https://apify.com/muhammad-bilal/ultimate-local-business-intelligence-scraper",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 56,
+      "title": "The Complete Guide to Scraping Business Data (2026) — Thirdwatch",
+      "url": "https://thirdwatch.dev/blog/guide-scraping-business-data",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 57,
+      "title": "Business Directory Data Scraping | B2B Leads Extraction - ScraperScoop",
+      "url": "https://www.scraperscoop.com/business-directory-data-scraping/",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 58,
+      "title": "mrsudo404/leadhunter",
+      "url": "https://github.com/mrsudo404/leadhunter",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 59,
+      "title": "Business Directory Data Scraping Service | MyDataScraper.com",
+      "url": "https://mydatascraper.com/business-directory-data-scraping-service/",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 60,
+      "title": "How to Handle Pagination in Web Scraping",
+      "url": "https://scraper.page/how-to-handle-pagination-in-web-scraping",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 61,
+      "title": "List Crawling in 2026: Guide to Paginated, and Infinite Scroll | DataFlirt Blog",
+      "url": "https://dataflirt.com/blog/list-crawling/",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 62,
+      "title": "Scraping Pagination, Infinite Scroll, and Load More",
+      "url": "https://webscraper.uk/how-to-handle-pagination-infinite-scroll-and-load-more-buttons-when-scraping",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 63,
+      "title": "How to Scrape Infinite Scroll Websites Reliably",
+      "url": "https://scraper.page/how-to-scrape-infinite-scroll-websites-without-missing-data",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 64,
+      "title": "How to Master Web Scraping Pagination: Hidden Techniques Experts Use",
+      "url": "https://www.scrapingbee.com/blog/web-scraping-pagination/",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 65,
+      "title": "How to Handle Pagination in Web Scraping: URL Patterns, Infinite Scroll, and Load More - DEV Community",
+      "url": "https://dev.to/agenthustler/how-to-handle-pagination-in-web-scraping-url-patterns-infinite-scroll-and-load-more-3320",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 66,
+      "title": "Web Scraping For Lead Generation: The Ultimate Guide To Building A High-Quality Sales Pipeline With Automated Data Extraction In 2026 | MyDataScraper",
+      "url": "https://mydatascraper.com/web-scraping-for-lead-generation-the-ultimate-guide-to-building-a-high-quality-sales-pipeline-with-automated-data-extraction-in-2026/",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 67,
+      "title": "B2B Data Enrichment: Building Quality Lead Lists with Web Scraping",
+      "url": "https://finedata.ai/blog/b2b-data-enrichment/",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 68,
+      "title": "Web Scraping for Lead Generation: The Complete Guide",
+      "url": "https://tendem.ai/blog/web-scraping-lead-generation-complete-guide",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 69,
+      "title": "B2B Lead Scraping: How to Build Targeted Prospect Lists in 2026",
+      "url": "https://tendem.ai/blog/b2b-lead-scraping-guide",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 70,
+      "title": "Web Scraping for Lead Enrichment | fastCRW",
+      "url": "https://fastcrw.com/use-cases/lead-enrichment",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 71,
+      "title": "What Is the Best Way to Build Targeted Prospect Lists Using Public Web Data? A 2026 Guide",
+      "url": "https://hirinfotech.com/what-is-the-best-way-to-build-targeted-prospect-lists-using-public-web-data-a-2026-guide/",
+      "q": "q4_directory_leadgen",
+      "origin": "exa"
+    },
+    {
+      "index": 72,
+      "title": "Collecting LLM Fine-Tuning Data with Web Scraping and Proxies",
+      "url": "https://dataresearchtools.com/collecting-llm-fine-tuning-data-web-scraping-proxies/",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 73,
+      "title": "Leveraging LLMS for Automatic Forum Scraper Generation",
+      "url": "https://doi.org/10.15308/sinteza-2025-78-85",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 74,
+      "title": "LLM-Based Web Data Collection for Research Dataset Creation",
+      "url": "https://aclanthology.org/2025.findings-emnlp.674.pdf",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 75,
+      "title": "How to Scrape Data for AI Training Datasets: Complete 2026 Guide | ScrapeBadger",
+      "url": "https://scrapebadger.com/blog/how-to-scrape-data-for-ai-training-datasets-2026-guide",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 76,
+      "title": "Scraping LLM Training Data at Scale",
+      "url": "https://mobileproxies.org/blog/scraping-llm-training-data",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 77,
+      "title": "The Largest Collection of Ethical Data for LLM Pre-Training",
+      "url": "https://arxiv.org/html/2506.01732v3",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 78,
+      "title": "Web Dataset Curation for ML Training | fastCRW",
+      "url": "https://fastcrw.com/use-cases/dataset-curation",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 79,
+      "title": "How to Build LLM Training Datasets From the Web (2026) | Aethyn.io",
+      "url": "https://www.aethyn.io/solutions/build-llm-training-datasets",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 80,
+      "title": "leeroopedia/workflow-huggingface-datatrove-fineweb-dataset-creation",
+      "url": "https://github.com/leeroopedia/workflow-huggingface-datatrove-fineweb-dataset-creation",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 81,
+      "title": "How to extract web data for AI training pipelines | Spidra Blog",
+      "url": "https://spidra.io/blog/extract-web-data-for-ai-training-pipeline",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 82,
+      "title": "How to Design Scraping Systems for LLM Training Pipelines | Grepsr",
+      "url": "https://www.grepsr.com/blog/llm-data-pipelines-web-scraping-grepsr/",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 83,
+      "title": "Web Scraping for LLM Training Data | fastCRW",
+      "url": "https://fastcrw.com/use-cases/llm-training-data",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 84,
+      "title": "[2310.16787] The Data Provenance Initiative: A Large Scale Audit of Dataset Licensing & Attribution in AI",
+      "url": "https://ar5iv.labs.arxiv.org/html/2310.16787",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 85,
+      "title": "Do Not Trust Licenses You See: Dataset Compliance Requires Massive-Scale AI-Powered Lifecycle Tracing",
+      "url": "https://arxiv.org/html/2503.02784",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 86,
+      "title": "The Data Provenance Project",
+      "url": "https://blog.genlaw.org/CameraReady/20.pdf",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 87,
+      "title": "How to Collect Reddit Data for AI Training Datasets — Practical Tools Blog",
+      "url": "https://www.practical.tools/blog/how-to-collect-reddit-data-for-ai-training-datasets",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 88,
+      "title": "An investigation of licensing of datasets for machine learning based on the GQM model",
+      "url": "https://arxiv.org/pdf/2303.13735",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 89,
+      "title": "Crownelius/arxiv-corpus-builder",
+      "url": "https://github.com/Crownelius/arxiv-corpus-builder",
+      "q": "q5_ml_data",
+      "origin": "exa"
+    },
+    {
+      "index": 90,
+      "title": "Scrape Zillow, Redfin & Rightmove Without Getting Blocked (2026) | ScrapeBadger",
+      "url": "https://scrapebadger.com/blog/how-to-scrape-zillow-redfin-rightmove-without-getting-blocked-best-apis-compared",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 91,
+      "title": "How to Scrape Real Estate Data in 2026: Zillow, Redfin, Realtor.com, and Trulia - DEV Community",
+      "url": "https://dev.to/agenthustler/how-to-scrape-real-estate-data-in-2026-zillow-redfin-realtorcom-and-trulia-3agl",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 92,
+      "title": "How to Scrape Zillow in 2026: Property Data, Listings, and Home Prices - DEV Community",
+      "url": "https://dev.to/agenthustler/how-to-scrape-zillow-in-2026-property-data-listings-and-home-prices-d9i",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 93,
+      "title": "Real Estate Data Api · Apify",
+      "url": "https://apify.com/ai_solutionist/real-estate-data-api",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 94,
+      "title": "Zillow, Realtor & Redfin Scraper | US Real Estate Data API in Python · Apify",
+      "url": "https://apify.com/jonn/us-realestate-multisource/api/python",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 95,
+      "title": "Tired of Zillow Blocking Scrapers — Here's What Actually Works in 2026 - DEV Community",
+      "url": "https://dev.to/realtyapi/tired-of-zillow-blocking-scrapers-heres-what-actually-works-in-2026-5ef5",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 96,
+      "title": "Zillow Property Scraper · Apify",
+      "url": "https://apify.com/brilliant_gum/zillow-property-scraper",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 97,
+      "title": "Crexi Commercial Real Estate Yield & Off-Market Scraper · Apify",
+      "url": "https://apify.com/xtracto/crexi-yield-scraper",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 98,
+      "title": "Zillow Scraper — Listings, Zestimate & Investor KPIs · Apify",
+      "url": "https://apify.com/sian.agency/zillow-property-scraper",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 99,
+      "title": "Commercial Property Data Scraping Services | MyDataScraper",
+      "url": "https://mydatascraper.com/commercial-property-data-scraping-services/",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 100,
+      "title": "Real Estate Data Scraping Services | Property Extraction - ScraperScoop",
+      "url": "https://www.scraperscoop.com/real-estate-data-scraping-services/",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 101,
+      "title": "Crexi Property Details Scraper · Apify",
+      "url": "https://apify.com/ecomscrape/crexi-property-details-scraper",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 102,
+      "title": "Is It Legal to Scrape Real Estate Listings? 2026",
+      "url": "https://www.clymin.com/resources/is-it-legal-to-scrape-real-estate-listings",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 103,
+      "title": "Real Estate Data Scraping: Use Cases, & Legal Considerations",
+      "url": "https://kanhasoft.com/blog/real-estate-data-scraping-use-cases-tools-legal-considerations/",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 104,
+      "title": "Is Scraping Zillow Legal? Web Scraping Laws And Ethics Explained (2026)",
+      "url": "https://softwarecosmos.com/is-scraping-zillow-legal/",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 105,
+      "title": "Real Estate Data Scraping: Best Practices & Legal Tips",
+      "url": "https://www.datahen.com/blog/scraping-real-estate-data-best-practices-and-legal-tips/",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 106,
+      "title": "The Legal Landscape of Web Scraping",
+      "url": "https://www.quinnemanuel.com/media/b04dr0qa/the-legal-landscape-of-web-scraping.pdf",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 107,
+      "title": "Is It Legal to Scrape a Website in 2026? US Law",
+      "url": "https://legaloverview.com/is-it-legal-to-scrape-a-website/",
+      "q": "q6_realestate",
+      "origin": "exa"
+    },
+    {
+      "index": 108,
+      "title": "Web Scraping Legal Guide 2026: GDPR, robots.txt, and Terms of Service Explained | KnowledgeSDK Blog",
+      "url": "https://knowledgesdk.com/blog/web-scraping-legal-guide",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 109,
+      "title": "Guidelines 03/2026 on web scraping in the context of generative AI",
+      "url": "https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_2020603_webscraping_v1_en_0.pdf",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 110,
+      "title": "Is Web Scraping Legal in 2026? What Developers Need to Know | KnowledgeSDK Blog",
+      "url": "https://knowledgesdk.com/blog/is-web-scraping-legal",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 111,
+      "title": "Is Web Scraping Legal in 2026? hiQ, Bright Data, GDPR & AI Act | Use Apify",
+      "url": "https://use-apify.com/docs/what-is-apify/is-apify-legal",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 112,
+      "title": "Web Scraping in the Age of AI: Guidance for Data Owners ...",
+      "url": "https://www.ropesgray.com/en/insights/alerts/2026/05/web-scraping-in-the-age-of-ai-guidance-for-data-owners-and-scrapers",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 113,
+      "title": "The legal basis of legitimate interest: focus sheet on the measures to implement in the case of data collection by web scraping | CNIL",
+      "url": "https://cnil.fr/en/legal-basis-legitimate-interest-focus-sheet-measures-implement-case-data-collection-web-scraping",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 114,
+      "title": "EDPB sheds light on anonymisation and web scraping for generative AI and adopts final version of guidelines on blockchain | European Data Protection Board",
+      "url": "https://www.edpb.europa.eu/news/edpb-sheds-light-on-anonymisation-and-web-scraping-for-generative-ai-and-adopts-final-version_en",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 115,
+      "title": "GDPR Compliance Checklist for Data Scrapers | Lection Blog",
+      "url": "https://www.lection.app/blogs/gdpr-compliance-checklist-data-scrapers-2026",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 116,
+      "title": "Web Scraping Under GDPR and CCPA: Compliance Guide for 2026",
+      "url": "https://iswebscrapinglegal.com/blog/gdpr-ccpa-web-scraping/",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 117,
+      "title": "GDPR and Web Scraping - What the Rules Actually Require in 2025 | DataFlirt Blog",
+      "url": "https://dataflirt.com/blog/web-scraping-gdpr/",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 118,
+      "title": "HIQ LABS, INC. V. LINKEDIN CORPORATION, No. 17- ...",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/17-16783/17-16783-2022-04-18.html",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 119,
+      "title": "HiQ Labs, Inc. v. LinkedIn Corp.",
+      "url": "https://casetext.com/case/hiq-labs-inc-v-linkedin-corp-5",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 120,
+      "title": "hiQ Labs, Inc. v. LinkedIn Corp., No. 17-16783 (9th Cir. 2019) :: Justia",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/17-16783/17-16783-2019-09-09.html",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 121,
+      "title": "UNITED STATES COURT OF APPEALS FOR THE NINTH CIRCUIT",
+      "url": "https://storage.courtlistener.com/pdf/2019/09/09/hiq_labs_inc._v._linkedin_corporation.pdf",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 122,
+      "title": "UNITED STATES COURT OF APPEALS FOR THE NINTH CIRCUIT",
+      "url": "https://cases.justia.com/federal/appellate-courts/ca9/17-16783/17-16783-2019-09-09.pdf?ts=1568048483",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 123,
+      "title": "Ninth Circuit Provides Guidance on Web Scraping - Troutman Pepper Locke",
+      "url": "https://www.troutman.com/insights/ninth-circuit-provides-guidance-on-web-scraping/",
+      "q": "q7_legal_ethics",
+      "origin": "exa"
+    },
+    {
+      "index": 124,
+      "title": "Crawl4AI vs Firecrawl vs Apify 2026 — PkgPulse Guides",
+      "url": "https://www.pkgpulse.com/guides/crawl4ai-vs-firecrawl-vs-apify-ai-web-scraping-2026",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 125,
+      "title": "Crawl4AI vs. Firecrawl",
+      "url": "https://blog.apify.com/crawl4ai-vs-firecrawl/",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 126,
+      "title": "10 Best AI Web Scrapers in 2026 (Reviewed & Ranked)",
+      "url": "https://dataimpulse.com/blog/best-ai-web-scrapers/",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 127,
+      "title": "Crawl4AI vs Firecrawl (2026) | Respan",
+      "url": "https://www.respan.ai/market-map/compare/crawl4ai-vs-firecrawl",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 128,
+      "title": "2026 Web Crawler Guide: From Indexing to Agentic Intelligence",
+      "url": "https://aimultiple.com/web-crawler",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 129,
+      "title": "Firecrawl vs Crawl4AI (2026) - Honest Web Scraping for AI Comparison | Webfuse",
+      "url": "https://www.webfuse.com/compare/firecrawl-vs-crawl4ai",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 130,
+      "title": "The 7 Best Web Scraping APIs for AI in 2026 - Spider.cloud",
+      "url": "https://spider.cloud/blog/best-web-scraping-apis-for-ai-2026/",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 131,
+      "title": "CrawlForge vs Apify vs ScrapingBee: 2026 Web Scraping Comparison - CrawlForge Blog",
+      "url": "https://www.crawlforge.dev/blog/crawlforge-vs-apify-vs-scrapingbee-comparison",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 132,
+      "title": "Firecrawl vs ScrapingBee 2026: API Scraping Services Compared | Use Apify",
+      "url": "https://use-apify.com/blog/firecrawl-vs-scrapingbee",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 133,
+      "title": "Firecrawl vs ScrapingBee: which one should you actually pay for? | Filip Konecny",
+      "url": "https://filipkonecny.com/firecrawl-vs-scrapingbee/",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 134,
+      "title": "Apify vs Firecrawl: which one should you actually pay for? | Filip Konecny",
+      "url": "https://filipkonecny.com/2026/03/29/apify-vs-firecrawl/",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 135,
+      "title": "Firecrawl vs ScrapingBee: Which Web Scraping API for AI Developers? | KnowledgeSDK Blog",
+      "url": "https://knowledgesdk.com/blog/firecrawl-vs-scrapingbee",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 136,
+      "title": "Self-Hosting Guide - Crawl4AI Documentation (v0.9.x)",
+      "url": "https://docs.crawl4ai.com/core/self-hosting/",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 137,
+      "title": "unclecode/crawl4ai",
+      "url": "https://github.com/unclecode/crawl4AI",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 138,
+      "title": "Crawl4AI Review — The Free Open-Source Web Crawler Built for LLM Data Pipelines — aicoolies",
+      "url": "https://aicoolies.com/reviews/crawl4ai-review",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 139,
+      "title": "Crawl4AI Review 2026: Pros, Cons & Verdict (crawl4ai review) | aitoolsatlas.ai",
+      "url": "https://aitoolsatlas.ai/tools/crawl4ai/review",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 140,
+      "title": "Crawl4ai Guide: Open Source AI Web Crawler (2026)",
+      "url": "https://dataresearchtools.com/crawl4ai-guide/",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    },
+    {
+      "index": 141,
+      "title": "Best Open Source Web Crawlers in 2026 | WebcrawlerAPI Blog",
+      "url": "https://webcrawlerapi.com/blog/best-open-source-web-crawlers",
+      "q": "q8_tool_comparison",
+      "origin": "exa"
+    }
+  ]
+}
