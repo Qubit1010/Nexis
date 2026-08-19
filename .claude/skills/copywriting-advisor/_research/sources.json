@@ -2,11 +2,11 @@
   "generated_at": "2026-08-15",
   "method": "28 deep passes via the in-repo research skill (Exa+Tavily+Serper+Jina fused, content-extracted), deduped by normalized URL, junk-filtered, per-domain capped, tiered confirmed / craft / practitioner",
   "note": "inline [sN] in references/research-synthesis.md resolves to sources[N-1]. tier=craft means technique and worked examples only - never usable to support a factual claim, and invisible to factcheck mode",
-  "total_found": 544,
-  "source_count": 422,
-  "confirmed": 211,
-  "craft": 66,
-  "practitioner": 145,
+  "total_found": 530,
+  "source_count": 494,
+  "confirmed": 256,
+  "craft": 75,
+  "practitioner": 163,
   "sources": [
     {
       "index": 1,
@@ -5514,6 +5514,954 @@
         "exa"
       ],
       "published_date": "2021-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 423,
+      "title": "Do You Want $150 for FREE? Measuring the effect of language on marketing email open rates",
+      "url": "https://doi.org/10.1016/j.amper.2026.100271",
+      "tier": "confirmed",
+      "topics": [
+        "q15_platform_format_conventions_2026",
+        "q27_platform_format_conventions_craft",
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-02T00:00:00.000Z"
+    },
+    {
+      "index": 424,
+      "title": "May I have your attention, please? An investigation on opening effectiveness in e-mail marketing | Review of Managerial Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11846-022-00517-9",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication",
+        "q17_email_field_experiments",
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-04-20T00:00:00.000Z"
+    },
+    {
+      "index": 425,
+      "title": "Enhancing reach and effectiveness of recruitment through email: a study within a trial (SWAT) | Trials | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1186/s13063-026-09902-1",
+      "tier": "confirmed",
+      "topics": [
+        "q15_platform_format_conventions_2026",
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "index": 426,
+      "title": "Personalized subject lines in email marketing",
+      "url": "https://doi.org/10.1007/s11002-023-09701-7",
+      "tier": "confirmed",
+      "topics": [
+        "q15_platform_format_conventions_2026",
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-09-08T00:00:00.000Z"
+    },
+    {
+      "index": 427,
+      "title": "Personalized subject lines in email marketing | Marketing Letters | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11002-023-09701-7",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments",
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-09-08T00:00:00.000Z"
+    },
+    {
+      "index": 428,
+      "title": "Scrolling and Attention (Original Research Study)",
+      "url": "https://www.nngroup.com/articles/scrolling-and-attention-original-research",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 429,
+      "title": "The impact of linguistic features on CTR in Instagram ads: A study of supplement and cosmetic products",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0338313&type=printable",
+      "tier": "confirmed",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 430,
+      "title": "How do text characteristics impact user engagement in social media posts: Modeling content readability, length, and hashtags number in Facebook",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667096822000118",
+      "tier": "confirmed",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 431,
+      "title": "Click me…! The influence of clickbait on user engagement in social media and the role of digital nudging",
+      "url": "https://journals.plos.org/plosone/article/file?id=10.1371%2Fjournal.pone.0266743&type=printable",
+      "tier": "confirmed",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 432,
+      "title": "Advertising Content and Consumer Engagement on Social Media: Evidence from Facebook: Management Science: Vol 64, No 11",
+      "url": "https://dl.acm.org/doi/10.1287/mnsc.2017.2902",
+      "tier": "confirmed",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 433,
+      "title": "Is banner blindness genuine? Eye tracking internet text advertising",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/acp.1742",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 434,
+      "title": "\"Which half Is wasted?\":  controlled experiments to measure online-advertising effectiveness",
+      "url": "https://dl.acm.org/doi/10.1145/2020408.2020535",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 435,
+      "title": "A/B Testing Foundations: The Math, the History, and Message Match (Three References Rescued)",
+      "url": "https://doi.org/10.5281/zenodo.19991480",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-02T00:00:00.000Z"
+    },
+    {
+      "index": 436,
+      "title": "Internet advertising: Is anybody watching?",
+      "url": "https://journals.sagepub.com/doi/10.1002/dir.10063",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 437,
+      "title": "The Upworthy Research Archive, a time series of 32,487 experiments in U.S. media",
+      "url": "https://www.nature.com/articles/s41597-021-00934-7.pdf?error=cookies_not_supported&code=e1eef798-c08a-4c1b-83e3-0d1011b6535d",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 438,
+      "title": "Do Students Really Have an Inability to Concentrate During Lectures?",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5373483/",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 439,
+      "title": "Attention During Lectures: Beyond Ten Minutes",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00986280701291291",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 440,
+      "title": "Attention span during lectures: 8 seconds, 10 minutes, or more?",
+      "url": "https://doi.org/10.1152/advan.00109.2016",
+      "tier": "confirmed",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2016-11-09T00:00:00.000Z"
+    },
+    {
+      "index": 441,
+      "title": "Personalization in Email Marketing: The Role of Noninformative Advertising Content",
+      "url": "https://doi.org/10.1287/mksc.2017.1066",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-02-27T00:00:00.000Z"
+    },
+    {
+      "index": 442,
+      "title": "An Experimental Investigation of the Effects of Retargeted Advertising: The Role of Frequency and Timing - Navdeep S. Sahni, Sridhar Narayanan, Kirthi Kalyanam, 2019",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0022243718813987",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 443,
+      "title": "Linking Clicks to Bricks: : Understanding the Effects of Email Advertising on Multichannel Sales: Information Systems Research: Vol 36, No 1",
+      "url": "https://dl.acm.org/doi/10.1287/isre.2020.0557",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 444,
+      "title": "How effective is targeted advertising?",
+      "url": "https://dl.acm.org/doi/10.1145/2187836.2187852",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 445,
+      "title": "Data-Driven Approaches to Targeting Promotion E-mails: The Case of Delayed Incentives",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/poms.13316",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 446,
+      "title": "Investigating cross-media effects in a multichannel marketing environment: the role of email, catalog, television, and radio | Marketing Letters | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11002-021-09592-6",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-08-19T00:00:00.000Z"
+    },
+    {
+      "index": 447,
+      "title": "What's in a “Name”? Impact of Use of Customer Information in E-Mail Advertisements",
+      "url": "https://doi.org/10.1287/isre.1110.0384",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2011-11-04T00:00:00.000Z"
+    },
+    {
+      "index": 448,
+      "title": "Direct mail to prospects and email to current customers? Modeling and field-testing multichannel marketing | Journal of the Academy of Marketing Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11747-023-00962-2",
+      "tier": "confirmed",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-08-05T00:00:00.000Z"
+    },
+    {
+      "index": 449,
+      "title": "Assessment of Purchasing Influence of Email Campaigns Using Eye Tracking",
+      "url": "https://www.mdpi.com/2414-4088/8/10/87",
+      "tier": "confirmed",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-10-10T00:00:00.000Z"
+    },
+    {
+      "index": 450,
+      "title": "The Effectiveness of Triggered Email Marketing in Addressing Browse Abandonments",
+      "url": "https://journals.sagepub.com/doi/abs/10.1016/j.intmar.2021.02.002?journalCode=jnma",
+      "tier": "confirmed",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 451,
+      "title": "Large Language Models and Creative Content Design: a case study of email marketing at Wine Access",
+      "url": "https://doi.org/10.1007/s11129-025-09303-9",
+      "tier": "confirmed",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-13T00:00:00.000Z"
+    },
+    {
+      "index": 452,
+      "title": "An empirical examination of the effects of design elements of email newsletters on consumers’ email responses and their purchase",
+      "url": "https://doi.org/10.1016/j.jretconser.2020.102349",
+      "tier": "confirmed",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-10-20T00:00:00.000Z"
+    },
+    {
+      "index": 453,
+      "title": "The Effect of Personalized Marketing on Repeat Purchase Behavior: A Study of Subscription Box Companies",
+      "url": "https://doi.org/10.66308/air.e2026019",
+      "tier": "confirmed",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-27T00:00:00.000Z"
+    },
+    {
+      "index": 454,
+      "title": "From Fashion to Electronics: Analyzing Shopee Indonesia Email Marketing Content Across Different Product Categories",
+      "url": "https://doi.org/10.7454/amj.v17i2.1275",
+      "tier": "confirmed",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-12-01T00:00:00.000Z"
+    },
+    {
+      "index": 455,
+      "title": "Multiple Treatment Modeling for Target Marketing Campaigns: A Large-Scale Benchmark Study | Information Systems Frontiers | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s10796-022-10283-4",
+      "tier": "confirmed",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-06-02T00:00:00.000Z"
+    },
+    {
+      "index": 456,
+      "title": "Customer‐Centric Outbound (Oops, Sales Time!)",
+      "url": "https://doi.org/10.1002/9781394319701.ch22",
+      "tier": "confirmed",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-12-28T00:00:00.000Z"
+    },
+    {
+      "index": 457,
+      "title": "Examining the relationship between content length and engagement with news outlets on multiple social media platforms",
+      "url": "https://doi.org/10.1016/j.techfore.2026.124668",
+      "tier": "confirmed",
+      "topics": [
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-02T00:00:00.000Z"
+    },
+    {
+      "index": 458,
+      "title": "Understanding User Engagement with Cross-Platform Social Media Content Created by Humans Versus AI: An Evaluation of ChatGPT in Content Marketing",
+      "url": "https://doi.org/10.1145/3756014",
+      "tier": "confirmed",
+      "topics": [
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-20T00:00:00.000Z"
+    },
+    {
+      "index": 459,
+      "title": "May I have your attention, please? An investigation on opening effectiveness in e-mail marketing",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9020557/",
+      "tier": "confirmed",
+      "topics": [
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 460,
+      "title": "Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search",
+      "url": "https://doi.org/10.48550/arxiv.2606.15911",
+      "tier": "confirmed",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-14T00:00:00.000Z"
+    },
+    {
+      "index": 461,
+      "title": "Leveraging email marketing: Using the subject line to anticipate the open rate",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0957417422012040",
+      "tier": "confirmed",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 462,
+      "title": "Boost your email marketing campaign! Emojis as visual stimuli to influence customer engagement",
+      "url": "https://doi.org/10.1108/jrim-02-2021-0033",
+      "tier": "confirmed",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-04-11T00:00:00.000Z"
+    },
+    {
+      "index": 463,
+      "title": "“We Need a Big Revolution in Email Advertising”: Users’ Perception of Persuasion in Permission-based Advertising Emails | Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+      "url": "https://dl.acm.org/doi/10.1145/3544548.3581163",
+      "tier": "confirmed",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 464,
+      "title": "Nudges in email marketing campaigns: The role of the authority principle and time-sensitive dynamics",
+      "url": "https://doi.org/10.1016/j.elerap.2025.101534",
+      "tier": "confirmed",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-07-22T00:00:00.000Z"
+    },
+    {
+      "index": 465,
+      "title": "PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0276072",
+      "tier": "confirmed",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 466,
+      "title": "Power Lines: Unobtrusive Assessment of E-mail Subject Line Impact on Organization Website Use",
+      "url": "https://doi.org/10.1080/15377857.2016.1207125",
+      "tier": "confirmed",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2016-07-12T00:00:00.000Z"
+    },
+    {
+      "index": 467,
+      "title": "Why You've Got Mail: Evaluating Inbox Privacy Implications of Email Marketing Practices in Online Apps and Services",
+      "url": "https://doi.org/10.48550/arxiv.2410.08302",
+      "tier": "confirmed",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-10-10T00:00:00.000Z"
+    },
+    {
+      "index": 468,
+      "title": "Meta Ad Formats 2026: All Types Explained (+ Specs)",
+      "url": "https://www.get-ryze.ai/blog/meta-ads-ad-formats-guide-beginners",
+      "tier": "craft",
+      "topics": [
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 469,
+      "title": "The Welcome Email Sequence: A 2026 Onboarding ...",
+      "url": "https://www.digitalapplied.com/blog/welcome-email-onboarding-sequence-2026-framework",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 470,
+      "title": "Onboarding Email Sequence Examples: 10 Real SaaS Sequences That Convert | Sequenzy",
+      "url": "https://www.sequenzy.com/blog/onboarding-email-sequence-examples",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 471,
+      "title": "Welcome Email Series: A 6-Email Welcome Sequence You Can Steal | ActiveCampaign",
+      "url": "https://www.activecampaign.com/blog/welcome-email-series",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 472,
+      "title": "Analysis and Best Practices from 15 Abandoned Cart Emails - Rejoiner",
+      "url": "https://www.rejoiner.com/resources/best-abandoned-cart-email-examples-2025",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 473,
+      "title": "Subject Lines for Ecommerce Email Marketing That Just Work [7-8 Figure Proven and Tested]",
+      "url": "https://www.youtube.com/watch?v=ANLvE0oUNyk",
+      "tier": "craft",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 474,
+      "title": "Optimization of e-mail marketing of JUSTFAB in European countries",
+      "url": "http://theseus.fi/handle/10024/263497",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-01-01T00:00:00.000Z"
+    },
+    {
+      "index": 475,
+      "title": "Copywriting Examples: 8 Techniques to Turn Email Leads Into Returning Clients",
+      "url": "http://archive.org/details/6hzfzadn5i3klgcojc9u8lzdddvjek7bnn5llu75",
+      "tier": "craft",
+      "topics": [
+        "q23_email_sequence_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-06-01T00:00:00.000Z"
+    },
+    {
+      "index": 476,
+      "title": "Text on Instagram as emerging genre: A framework for analyzing discursive communication on a visual platform",
+      "url": "https://pdfs.semanticscholar.org/e56b/c07543948eec3716bad432bf755facdbf0c3.pdf",
+      "tier": "craft",
+      "topics": [
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 477,
+      "title": "Google Ads character limits: the complete 2026 guide",
+      "url": "https://kunidadesigns.com/blog/google-ads-character-limits-guide",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026",
+        "q27_platform_format_conventions_craft",
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 478,
+      "title": "Google Ads character limits 2026 | ClickPatrol™",
+      "url": "https://clickpatrol.com/google-ads-character-limits-2026-guide-headlines",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026",
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 479,
+      "title": "Social Media Character Limits 2026: All Platforms, One Table | TypeCount",
+      "url": "https://typecount.com/blog/social-media-character-limits",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026",
+        "q27_platform_format_conventions_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 480,
+      "title": "Mail Privacy Protection & Email Open Rate Tracking Where ...",
+      "url": "https://blog.pinpointe.com/mail-privacy-protection-email-open-rate-tracking",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments",
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 481,
+      "title": "Google Ads Character Limits 2026: The Ultimate Cheat Sheet",
+      "url": "https://www.leadember.com/post/character-limit-for-google-search-ads",
+      "tier": "practitioner",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 482,
+      "title": "AI Ad Copy Generator | Free | BlazeHive",
+      "url": "https://www.blazehive.io/tools/ai-ad-copy-generator",
+      "tier": "practitioner",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 483,
+      "title": "An Introduction to Google Ads Character Limits",
+      "url": "https://www.somar.co.nz/blog/an-introduction-to-google-ads-character-limits",
+      "tier": "practitioner",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 484,
+      "title": "Guide to Google Display Ad Sizes & Specs (2026)",
+      "url": "https://www.blog.udonis.co/digital-marketing/google-ads/google-display-ad-sizes",
+      "tier": "practitioner",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 485,
+      "title": "Meta ad specifications and templates by The Brief | 2026 - The Brief AI",
+      "url": "https://www.thebrief.ai/blog/meta-ad-specs",
+      "tier": "practitioner",
+      "topics": [
+        "q29_platform_character_specs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 486,
+      "title": "Google Ads Character Limits 2026: The Complete Cheat Sheet | AdsPreview.us",
+      "url": "https://adspreview.us/guides/google-ads-character-limits",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 487,
+      "title": "Average Attention Span By Generation: The Data | Roon",
+      "url": "https://www.takeroon.com/blog/average-attention-span-by-generation",
+      "tier": "practitioner",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 488,
+      "title": "TOP 10 EMAIL SUBJECT LINE STATISTICS 2026 THAT EXPOSE SHOCKING OPEN RATE SECRETS",
+      "url": "https://www.amraandelma.com/best-email-subject-line-statistics",
+      "tier": "practitioner",
+      "topics": [
+        "q15_platform_format_conventions_2026"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 489,
+      "title": "How Apple’s Mail Privacy Changes Affect Email Open Tracking | Postmark",
+      "url": "https://postmarkapp.com/blog/how-apples-mail-privacy-changes-affect-email-open-tracking",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 490,
+      "title": "Impact of Apple MPP on Open Rates (And What To Track Instead) | beehiiv Blog",
+      "url": "https://www.beehiiv.com/blog/apple-mpp-open-rate",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 491,
+      "title": "Does Personalization Still Work in Email Marketing? New ...",
+      "url": "https://www.marketingsciencelab.org/p/does-personalization-still-work-in",
+      "tier": "practitioner",
+      "topics": [
+        "q17_email_field_experiments"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 492,
+      "title": "Improve Email Engagement with Open Rate Alternatives",
+      "url": "https://www.nutshell.com/blog/farewell-to-email-open-rates",
+      "tier": "practitioner",
+      "topics": [
+        "q4_email_copy_subject_lines"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 493,
+      "title": "Email Marketing Benchmarks & Industry Statistics",
+      "url": "https://mailchimp.com/resources/email-marketing-benchmarks",
+      "tier": "practitioner",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 494,
+      "title": "Study: Personalized Emails Deliver 6X Higher Transaction Rates, But 70% Of Brands Fail To Use Them",
+      "url": "https://martech.org/study-70-brands-personalizing-emails-missing-higher-transaction-rates-revenue",
+      "tier": "practitioner",
+      "topics": [
+        "q16_folklore_provenance_replication"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
     }
   ]
 }

@@ -32,6 +32,7 @@ not by how often the tactic gets recommended.
 | Mirroring customer language | Helps for perceived quality `[C]` [s35][s37]; **backfires** via identity threat when it reads as accommodation | `[C]` [s36] |
 | Fluency increases liking, confidence and judged truth | Also makes false statements feel true; a persuasion tool with an ethics edge | `[C]` [s131][s8][s137] |
 | Fewer words in paid search | Field experiment, 280,877 observations | `[C]` [s28] |
+| Email subject-line personalisation (recipient's first name) lifts opens ~20% | Randomized field experiments across millions of emails, plus a published replication testing whether it still holds | `[C]` [s441][s426][s427] |
 | Humour rescues high-fear appeals | Reduces the defensive response that suppresses persuasion | `[C]` [s57] |
 | Information volume | Inverted U — too little fails as surely as too much | `[C]` [s88][s89] |
 

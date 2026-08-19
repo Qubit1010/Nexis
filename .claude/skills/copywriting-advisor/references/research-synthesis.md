@@ -2,7 +2,7 @@
 
 The cited master document. Everything the hub and `copy-conversion` assert traces back here.
 
-**Corpus:** 422 sources, **211 confirmed / 66 craft / 145 practitioner**, built 2026-08-15
+**Corpus:** 494 sources, **256 confirmed / 75 craft / 163 practitioner**, built 2026-08-15
 from 29 deep research passes. Audit trail in `_research/sources.json`; `[sN]` resolves to
 `sources[N-1]`.
 
@@ -21,6 +21,13 @@ was carried over to swipe files and YouTube. For copywriting it is backwards - a
 page that shipped is exactly the practitioner evidence, and per-platform format conventions
 live nowhere else. Passes q21-q29 were added in practitioner register to fix it.
 
+**They only half-fixed it, and weakness 3 below explains why.** The queries were re-worded
+into practitioner register, but the shared `SUFFIX` appended to all of them contains
+"peer-reviewed", which routed every one of them back into `scientific` mode. So the craft
+passes ran against Exa's research-paper index rather than against Google and YouTube. The
+tier grew from 2 to 75 because the *provenance* rule caught whatever those passes returned,
+not because the right material was retrieved. Read any `[K]` citation here with that in mind.
+
 Craft tier is assigned **by provenance, not by domain**: a source found only by the craft
 passes is craft whatever its domain, because a domain allowlist caught 11 sources out of 154.
 Confirmed still wins, so a peer-reviewed paper surfacing in a craft pass stays evidence. The
@@ -31,18 +38,48 @@ rule errs safe: a few real papers sit in craft, which only costs us the right to
 email/CRM/landing-page SaaS benchmark report is practitioner regardless of sample size,
 because it measures its own customers with an interest in the result.
 
-**Three honest weaknesses in this corpus**, stated up front rather than discovered later:
+**A corpus-wide correction, 2026-08-15.** Seven passes originally ran under the wrong search
+mode. The `research` skill's `_PERSON_HINT` regex matched the bare words "email" and
+"contact", and entity mode does not merely re-rank - it forces Exa `category="people"` and
+runs LinkedIn X-ray dorks. So q4, q15, q16, q17, q23, q27 and q29 were **searching for people**
+while asking about email copy, platform formats and folklore provenance. That is why a query
+about ad character limits returned the LinkedIn profile of a medical editor, and why the email
+section originally reported zero confirmed sources.
 
-1. **Email is the thin section.** q4 returned 0 confirmed against 10 practitioner and the
-   remedial q17 recovered only 1. The academic email literature exists but did not retrieve;
-   almost everything this corpus holds on email is vendor-published. Treat every email
-   benchmark accordingly.
-2. **Platform format limits have no confirmed source** (q15, 0 confirmed). This is expected -
-   character limits are vendor-documented by nature - and it is why `copy-conversion` requires
-   verification against platform documentation at time of writing rather than quoting a
-   remembered number.
-3. **Baymard Institute returned nothing** despite being whitelisted, so checkout and form
-   evidence here rests on `[s87]` and the NN/g set rather than Baymard's larger body.
+The regex is fixed, those seven passes were re-run, and the corpus went from 422 sources
+(211 confirmed) to **494 (256 confirmed)**. Email went from 0 confirmed to 21; folklore
+provenance from 1 to 11; platform formatting from 0 to 13. Anyone reading an older version of
+this document should treat its "email is the weakest section" caveat as withdrawn.
+
+**Remaining honest weaknesses:**
+
+1. **Character limits have no confirmed source**, and will not get one - a platform
+   documenting its own product is practitioner-tier by nature. `copy-conversion` therefore
+   requires verification against the platform's own docs with a date, rather than quoting a
+   remembered number. **Corrected 2026-08-15:** this corpus did not merely fail to *confirm*
+   those docs, it never retrieved them. `JUNK_DOMAINS` holds the platform apexes and
+   `is_junk` matches `d.endswith("." + j)`, so `help.instagram.com`, `business.linkedin.com`
+   and `support.tiktok.com` were all discarded by their apex entry. The corpus contains zero
+   linkedin.com, facebook.com, x.com, instagram.com and tiktok.com sources; its single
+   platform document is `support.google.com` [s418], which survived only because google.com
+   was never junked. `content-advisor` fixes this with a `PLATFORM_DOC_HOSTS` carve-out.
+2. **Baymard Institute returned nothing** despite being whitelisted, so checkout and form
+   evidence rests on `[s87]` and the NN/g set rather than Baymard's larger body.
+3. **The craft tier is thin on video: 2 YouTube sources in 494.** The original wording
+   blamed the search engines for surfacing few videos "even in practical mode".
+   **That was wrong, and the real cause is worth recording.** No pass in this corpus ever
+   ran in practical mode. `gather.py`'s single shared `SUFFIX` contains the words
+   "peer-reviewed", which matches `research.py`'s `_SCI_HINT`, and `detect_mode` checks
+   `_SCI_HINT` before `_CRAFT_HINT`. Measured across these 29 queries: 14 detect as
+   `practical` on their own, **0 with the suffix attached**. So all nine craft passes ran
+   `scientific`, which uses Exa and Tavily only. Serper never ran, and Serper is the only
+   service that fires the `site:youtube.com` variant. Exa also ran with
+   `category="research paper"` against questions asking for teardowns, which is why the
+   craft tier's top domains include `pdfs.semanticscholar.org` and `theseus.fi`, a Finnish
+   polytechnic thesis repository, rather than practitioner video. **Treat the craft tier of
+   this corpus as under-sampled and partly mis-tiered, not as evidence that craft material
+   is scarce.** `content-advisor` splits the suffix per register and asserts the routing in
+   its `selftest`; a re-run of q21-q28 here would repair this corpus, and has not been done.
 
 ---
 
@@ -139,27 +176,56 @@ eHealth design study `[C]` [s91].
 
 ## Q4 / Q17 — Email
 
-**This is the weakest section in the corpus and the skill says so.** Zero confirmed sources in
-q4 [s142]-[s151], one in the remedial q17. Everything below is `[P]` unless marked.
+**Rebuilt 2026-08-15.** This section previously said email was the corpus's weakest area with
+zero confirmed sources. That was an artifact of a bug in the `research` skill, not a property
+of the literature: `_PERSON_HINT` matched the bare word "email", so every email pass ran in
+**entity mode** and searched Exa for *people*. With the routing fixed, q4 and q17 returned
+**21 confirmed sources**. The email evidence base is now one of the better ones here.
 
-The claim that personalised subject lines lift open rates by a specific percentage traces to
-vendor sources here `[P]` [s142][s144][s148]. Two academic-adjacent sources report real
-research on subject-line personalisation - a Chicago Booth Review write-up `[P]` [s145] and a
-Stanford GSB working paper on personalisation in email marketing `[P]` [s147] - but the
-published journal versions did not retrieve, so **no specific personalisation lift figure in
-this corpus is confirmed-tier.**
+### Personalisation: the real number, and its decay
 
-**Never quote an email benchmark to a client as measured fact.** Vendor benchmarks measure
-that vendor's customers, exclude non-users entirely, and are published by a party selling
-email software.
+**Sahni, Wheeler and Chintagunta** ran randomized field experiments with three companies,
+sending experimentally tailored email ads to **millions** of individuals, and found
+consistently that adding consumer-specific information such as the recipient's name benefited
+advertisers `[C]` [s441]. The widely cited figure from that work is that adding the first name
+to the subject line **increased opening rates by about 20%** `[C]` [s426].
+
+**And it has been tested again.** A Marketing Letters replication explicitly set out to see
+whether the Sahni result reproduces in another experimental setting, noting that in the
+intervening years the tactic became commonplace `[C]` [s427][s426]. **This is the honest shape
+of the answer:** a real, large, peer-reviewed effect, with a live question about whether it
+still holds now that everyone does it.
+
+So when a client quotes "26%" from a vendor page `[P]` [s142][s144], the correct reply is not
+"that's made up" - it is that the real evidence gives ~20% from randomized field experiments,
+and that the effect's durability is itself under study.
+
+### Other confirmed email findings
+
+- **Scholars generally find email effects LIMITED**, despite consultant claims that
+  personalisation and emotional content make campaigns more successful `[C]` [s466].
+- Linguistic structure of **31,812 subject lines** analysed against open rate `[C]` [s423].
+- **Authority-principle nudges** in sender names and subject lines, randomized field
+  experiment with an e-commerce retailer `[C]` [s464].
+- **Emojis** as visual stimuli in email, four studies examining type, repetition and position
+  `[C]` [s462].
+- **10 million email ads to 600,000 customers**, comparing personalisation by product
+  preference against personalisation by name `[C]` [s447].
+- Two pre-registered field experiments plus a survey experiment on whether a **consistent vs
+  varied "envelope"** helps, finding it depends on expected message value `[C]` [s465].
+- Email advertising's effect on **multichannel** spending, online and in physical stores
+  `[C]` [s443]; retargeting frequency and timing `[C]` [s442].
+
+**Still true:** a vendor benchmark measures that vendor's customers, excludes non-users, and
+is published by a party selling email software. Prefer the field experiments above.
 
 ### Open rate after Apple Mail Privacy Protection
 
-The corpus did not retrieve a confirmed technical source on MPP. **Flagged as not in sources.**
-State the mechanism from the client's own data instead: since 2021 Apple Mail pre-fetches
-images for users who enable protection, which registers as an open regardless of whether the
-message was read. Any open-rate comparison spanning 2021 is comparing two different
-measurements. Do not present a pre-2021 email benchmark as comparable to a current number.
+Still **not in sources** as a confirmed technical reference. State the mechanism rather than a
+figure: since 2021 Apple Mail pre-fetches images for protected users, registering an open
+regardless of whether the message was read, so any comparison spanning 2021 compares two
+different measurements. Note this sits alongside [s466]'s finding that email effects are
+smaller than practitioners assume.
 
 ---
 
@@ -418,33 +484,82 @@ owns article structure. This corpus does not restate their numbers.
 
 ---
 
-## Q15 — Platform format constraints
+## Q15 / Q27 / Q29 — Platform formatting
 
-**Zero confirmed sources.** All platform limits here are third-party blogs `[P]`
-[s153][s155][s157][s158][s160][s161], not platform documentation.
+**Rebuilt 2026-08-15**, same entity-mode bug. Previously zero confirmed; now 13 across the
+three passes, and the character-limit question has separated cleanly from the far more useful
+**what-actually-engages** question.
 
-**Therefore:** never quote a character limit from this corpus or from memory. Verify against
-the platform's own documentation at time of writing and record the date. Truncation point -
-what a reader sees before the "more" link on their device - matters more than the field limit
-and is the thing that actually changes.
+### Character limits: unchanged rule
+
+Still **no confirmed source states a limit**, and that is correct rather than a gap - limits
+are vendor-documented by nature. Google's own responsive-search-ad page does not state counts,
+so the ubiquitous 30/90 figures come from third-party counter tools `[P]` [s419][s420]; Meta's
+125/40/25 are vendor recommendations `[P]` [s419].
+
+**Verify against the platform's own documentation and date it.** Truncation point beats field
+limit, and it varies by placement and device.
+
+### What actually engages, per platform - now evidenced
+
+- **Facebook:** 106,316 messages across 782 companies, content-coded, relating social media
+  advertising content to user engagement `[C]` [s432] (Management Science). A separate study
+  relates readability indices, text length and hashtag count in branded image posts to
+  engagement and brand awareness `[C]` [s430].
+- **Instagram:** 21,692 ads analysed with psycholinguistic dimensions against click-through
+  rate computed from Meta's Ads Manager `[C]` [s431]. Mega-influencer caption language,
+  including punctuation, examined separately `[C]` [s328].
+- **Length:** a direct test of the popular assumption that "users favour shorter content and
+  brevity enhances engagement", across multiple outlets `[C]` [s457]. Do not assert brevity
+  wins as settled.
+- **Clickbait:** effect on engagement and its costs `[C]` [s431].
+- **AI-generated vs human content** across platforms `[C]` [s458] - directly relevant to
+  whether AI-drafted posts perform.
+- **Meta ads experimentation** methodology, with power analysis and sample-ratio-mismatch
+  diagnostics `[C]` [s326], for anyone proposing to test any of the above.
+
+**Practical read:** stop arguing about character counts and hashtags, which are conventions,
+and use the engagement literature, which is real. Detail in
+`copy-conversion/references/platform-formatting.md`.
 
 ---
 
 ## Q16 — The eight-second attention span
 
-**The claim is fabricated.** No primary study supports it `[P]` [s154], and the BBC traced the
-"down from 12 seconds in 2000 to 8 seconds now, less than a goldfish" formulation and found
-no supporting source `[P]` [s159]. It is widely believed: 50% of the UK public accept it
-`[P]` [s152].
+**Rebuilt 2026-08-15**, same entity-mode bug as Q4. This pass now carries 11 confirmed
+sources instead of one.
 
-**What is real, and what it actually measures:** attention spans **on screens** have shrunk in
-measurable ways over the past two decades, per Gloria Mark's research `[C]` [s3]. That work
-measures how long someone stays on one screen before switching - a different construct from a
-biological attention span, and not eight seconds.
+**The claim is fabricated.** No primary study supports it `[P]` [s154]; the BBC traced the
+"down from 12 seconds in 2000 to 8 seconds now, less than a goldfish" formulation and found no
+supporting source `[P]` [s159]; 50% of the UK public believe it `[P]` [s152].
 
-**How to answer a client:** the goldfish statistic is not real; the underlying concern is.
-People switch attention on screens faster than they used to, which is an argument for getting
-to the point, not evidence of an eight-second cliff.
+**Now with the academic literature behind it.** The attention-span question has been examined
+directly and repeatedly in education research, which is where the empirical work lives:
+
+- A review asking the question in its own title - "Attention span during lectures: 8 seconds,
+  10 minutes, or more?" - examined the literature behind the "common knowledge" that attention
+  declines after 10-15 minutes `[C]` [s440].
+- "Attention During Lectures: Beyond Ten Minutes" reviewed note-taking studies, observational
+  studies, self-reports and physiological measures, and found the received claim **not
+  supported** by the research `[C]` [s439].
+- A further paper questions the premise outright `[C]` [s438].
+
+**What is real:** attention **on screens** has measurably shortened over two decades, per
+Gloria Mark `[C]` [s3] - a different construct (time on one screen before switching), and not
+eight seconds.
+
+**How to answer a client:** the goldfish statistic is not real, and the adjacent classroom
+claim it is often bundled with does not survive review either. The underlying concern is real
+- people switch faster - which argues for getting to the point, not for an eight-second cliff.
+
+### Related folklore now sourced
+
+- **Banner blindness** has been tested directly with eye-tracking rather than inferred from
+  recall `[C]` [s433][s436] - the usual evidence for it was indirect.
+- **The Upworthy Research Archive**: a time series of **32,487 randomized headline
+  experiments**, the actual dataset behind much headline folklore `[C]` [s437].
+- Controlled experiments on measuring online advertising effectiveness, against the Wanamaker
+  "half my advertising is wasted" framing `[C]` [s434].
 
 ---
 
@@ -564,7 +679,7 @@ Claims to reject, with what to say instead. `what-not-to-do.md` carries the shor
 | "You have 8 seconds" | Fabricated `[P]` [s154][s159] | Screen attention has measurably shortened `[C]` [s3]; get to the point |
 | "Nobody reads below the fold" | False as stated. Above the fold takes 57% of viewing time, the second screenful 17%, the rest 26% `[C]` [s259] | People scroll; attention is front-loaded |
 | "The $300M button proves X" | Uncontrolled single case, consultant-reported `[P]` [s208][s198] | Useful illustration of friction, not an effect size |
-| "Personalised subject lines lift opens 26%" | No confirmed source `[P]` [s142][s144] | The email evidence here is vendor-published; measure your own |
+| "Personalised subject lines lift opens 26%" | The 26% is vendor `[P]` [s142][s144], but the underlying effect is REAL: ~20% from randomized field experiments across millions of emails `[C]` [s441][s426], with a published replication testing whether it still holds `[C]` [s427] | Give the ~20% field-experiment figure, and note the effect may be decaying now the tactic is universal |
 | "Long copy outsells short copy" | No confirmed support; a controlled direct-mail test found no readability effect `[C]` [s24], and content volume correlates negatively with landing page conversion `[C]` [s1] | Length follows what the reader needs to decide |
 | "Red buttons convert better" | Not supported. A donation-button design experiment found no significant effect on trust `[C]` [s81] | Contrast and clarity of what happens next |
 | "Switch to loss framing for a big lift" | Goal/message framing lacks consistent evidence `[C]` [s11]; across 1,149 studies message form makes little practical difference `[C]` [s107] | Fix the offer, proof and clarity first |

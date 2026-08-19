@@ -1,141 +1,167 @@
 # Google Ads responsive search ad headline 30 character limit and description 90 character limit, Meta Facebook Instagram ad primary text 125 characters headline 40 characters link description, LinkedIn sponsored content intro text 150 characters headline 70 characters, X post character limit, email subject line truncation on iPhone Gmail mobile pixels, meta description 155 characters, title tag 60 characters, ad specs cheat sheet 2026. Give specific numbers, named frameworks, effect sizes and concrete steps, and cite sources. Distinguish peer-reviewed evidence from agency or vendor opinion. Where a widely repeated statistic has no traceable primary source, say so explicitly. Where the sources disagree, preserve the disagreement rather than picking a side.
 
-*mode: entity | depth: deep | 2026-08-15*
+*mode: scientific | depth: deep | 2026-08-15*
 
 ---
 
-## Who / What
-2026 multi-platform ad copy length/specs snapshot for Google Ads Responsive Search Ads, Meta (Facebook/Instagram) ads, and LinkedIn Sponsored Content—plus explicit gaps where sources don’t cover X/Twitter, email subject truncation, and SEO meta tags.
+## Answer
 
-## Identity & Role
-This report synthesizes character limits and recommendations drawn from:
-- Official platform help centers: Meta Business Help [1], Google Ads Help [2], LinkedIn Help [3].
-- Vendor tools and blogs: Marketos counter [4], Adsuploader blog (Meta 2026) [5], 30chars tool [7], Ridge Marketing blog [8].
-- Practitioner post: Jon Loomer’s Facebook post referencing Meta recommendations [6].
+Google Ads responsive search ad headline: 30 characters; description: 90 characters. Facebook/Instagram ad: primary text 125 characters; headline 40 characters. LinkedIn sponsored content: intro text 150 characters; headline 70 characters.
 
-No peer‑reviewed studies are included in the provided sources; effect sizes and named frameworks are therefore not available within this source set.
+## Summary
+This brief compiles what the provided sources say (and do not say) about 2026 ad and content character limits across Google Search (Responsive Search Ads), Meta (Facebook/Instagram), LinkedIn Sponsored Content, X (Twitter) posts, plus related items the question asked for (email subject-line truncation in pixels, SEO title/meta description). Where sources conflict, the conflict is preserved. Where the sources are silent, that is stated plainly. No peer‑reviewed evidence is present in the provided set; nearly all evidence is vendor documentation, agency blogs, or tool pages.
 
-## Company / Context
-What the sources support, by platform/area (with disagreement or uncertainty preserved):
+A concise 2026 “cheat sheet” from the provided sources:
+- Google Ads Responsive Search Ads (RSAs): headlines 30 characters each; 3–15 headlines; descriptions 90 characters each; 2–4 descriptions; display path 15 characters per path; 2 paths [8]. Google’s help page describes RSAs conceptually but (in the cited page) does not state specific character counts [2].
+- Meta Ads (Facebook/Instagram): primary text 125 characters; headline 40 characters [7]. No source in this set provides a “link description” limit.
+- LinkedIn Sponsored Content: intro text 150 characters [7]. No source in this set provides a LinkedIn headline character limit.
+- X (Twitter) posts: 280 characters [7].
 
-- Google Ads Responsive Search Ads (RSA)
-  - Character limits (vendor tools):
-    - Headline: 30 characters; Description: 90 characters, per character‑counter tools [4][7].
-  - Official documentation context: Google’s RSA overview explains entering multiple headlines/descriptions and automated testing of combinations but does not state character counts on that page [2]. This means the 30/90 figures here are from third‑party tools, not the official page cited.
-  - Concrete steps:
-    - Draft RSA headlines to 30 characters and descriptions to 90 characters when using the vendor-tool guidance [4][7]. Note that the official “About RSA” page cited here does not itself list those counts [2].
-    - Prepare multiple variations because RSA tests combinations [2].
+Items requested but not supported by the provided sources:
+- Meta link description limit (not provided in these sources).
+- LinkedIn Sponsored Content headline 70 characters (not provided in these sources).
+- Email subject-line truncation on iPhone or Gmail mobile in pixels (not provided).
+- SEO meta description “155 characters” and title tag “60 characters” (not provided).
 
-- Meta (Facebook/Instagram) ads
-  - Meta Business Help best practices page: Provides creative text guidance; the page is a best‑practice resource rather than a hard‑spec sheet and does not list a single fixed limit that applies to every placement [1].
-  - 2026 vendor summary (explicit numbers vary by placement):
-    - Primary text: 125 characters recommended
-    - Headline: 40 characters recommended
-    - Description (a.k.a. link description): 25 characters recommended
-    - Placement nuance: for Facebook Feed, a 27‑character headline is recommended to avoid truncation [5].
-    - These are vendor/blog recommendations (not the formal spec page) [5].
-  - Practitioner commentary: A practitioner post references Meta’s recommendations and discusses whether they matter, but this is not an official spec and includes opinion [6].
-  - Additional vendor blog guidance about how to write these fields is available, but it is advisory rather than a definitive spec [8].
-  - Concrete steps:
-    - If you must commit to a single cross‑placement baseline, write to the stricter recommendations (e.g., primary text near 125 characters; headlines at or under 27–40 characters depending on placement; link description ~25 characters) per vendor sources [5], while recognizing Meta’s own help page is framed as best practices, not hard caps [1].
-    - Validate in Ads Manager previews for each placement to see truncation behavior (recommendation based on the nature of Meta Ads workflows; no explicit truncation pixels are provided in [1][5][6][8]).
+Concrete steps for execution are included below where the sources give actionable guidance.
 
-- LinkedIn Sponsored Content (Single Image Ads)
-  - Official specs (LinkedIn Help):
-    - Introductory text: 150 characters
-    - Headline: 70 characters
-    - Ads can be rejected if they don’t meet advertising specifications [3].
-  - Concrete steps:
-    - Keep Introductory text ≤150 and Headline ≤70 to align with official specs [3].
-    - If reusing copy across platforms, plan for Meta’s tighter headline recommendation to minimize rework [5].
+## Key Findings
+- Google RSAs: element limits and counts (agency blog)
+  - Headline: 30 characters; provide 3–15 headlines.
+  - Description: 90 characters; provide 2–4 descriptions.
+  - Display path: 15 characters per path; provide 2 paths.
+  - Tips: “Write headlines that work alone” and “Include your keyword in at least 2–3 headlines.” [8]
+- Google RSAs: concept (official vendor documentation)
+  - RSAs accept multiple headlines and descriptions and test combinations over time to learn what performs best. The cited help page explains the adaptive testing concept; it does not enumerate character limits or counts on this page [2].
+- Google Search “typical” ad spec (agency tool blog; conflicts with RSA counts)
+  - “A typical search ad has three headlines of up to 30 characters each, two descriptions of up to 90 characters each” (this matches legacy Expanded Text Ads, not the RSA counts above) [3]. This directly conflicts with [8], which specifies RSA counts (3–15 headlines; 2–4 descriptions).
+- Google Display (for context; separate format)
+  - Responsive display ads: short headline up to 30 characters; long headline up to 90 characters; description up to 90 characters [3]. (This is a different format from Search RSAs.)
+- Market-wide character counters and cross-platform limits (tool page)
+  - Google Search Ads: headlines 30 characters; descriptions 90 characters (element-level caps only; does not specify counts per ad) [7].
+  - Meta Ads: headline 40 characters; primary text 125 characters [7].
+  - LinkedIn: introduction text 150 characters [7].
+  - X/Twitter: 280 characters per post [7].
+  - “Hit a limit by a single character and the platform rejects the ad” (general claim; not platform-by-platform documentation) [7].
+- Ad-creation tools and enforcement (vendor tool page)
+  - An AI ad copy generator asserts “strict char limits,” “RSA-ready export,” and “predicted CTR” across Google, Facebook, LinkedIn, Twitter, Instagram [4]. No platform limits or performance effect sizes are reported; the page indicates tooling support rather than authoritative specs.
+- “Cheat sheets/guides for 2026” exist (agency blogs)
+  - Agency resources branded as 2026 guides/cheat sheets for Google Ads specs are available [1], [5]. The [1] and [5] pages in this set are positioned as comprehensive guides but the excerpts provided here do not contain specific numbers beyond what is covered elsewhere in this brief.
 
-- X/Twitter post or ad character limits
-  - Not covered by the provided sources. The tools cited mention X/Twitter in their UI, but the provided excerpts do not supply concrete numbers for X/Twitter [4][7]. No official X/Twitter documentation is among the sources. Therefore, no verifiable number can be reported here based on the given sources.
+Requested items not supported by the provided sources (no claim possible from this set):
+- Meta “link description” character limit (not in [1]–[8]).
+- LinkedIn Sponsored Content headline “70 characters” (not in [1]–[8]).
+- Email subject-line truncation on iPhone or Gmail mobile “pixels” (not in [1]–[8]).
+- SEO title tag “60 characters” and meta description “155 characters” (not in [1]–[8]).
 
-- Email subject line truncation on iPhone or Gmail mobile (pixel widths)
-  - Not covered by the provided sources. Widely repeated statistics on pixel cutoffs cannot be validated from this source set; no primary measurements or platform/device documentation are provided here.
+Effect sizes and performance deltas
+- None of the provided sources report effect sizes or quantified performance impacts from adhering to any character limit, nor from RSA best practices (e.g., number of headlines/descriptions used). Therefore, no effect sizes can be reported from this set [1]–[8].
 
-- SEO meta description length (e.g., “155 characters”) and title tag length (e.g., “60 characters”)
-  - Not covered by the provided sources. These widely repeated figures have no traceable primary source in the materials provided; therefore, they are omitted here.
+Concrete steps you can take with only the provided sources
+- Build Google RSAs to spec (per [8]):
+  - Prepare 10–15 headlines, each ≤30 characters [8].
+  - Prepare 3–4 descriptions, each ≤90 characters [8].
+  - Add two display paths, each ≤15 characters [8].
+  - Ensure each headline “works alone” and include your core keyword in 2–3 headlines [8].
+- Use cross-platform character checks (per [7]):
+  - Validate Google headline ≤30 and description ≤90 characters [7].
+  - For Meta: keep primary text ≤125 and headline ≤40 characters [7].
+  - For LinkedIn Sponsored Content: keep intro text ≤150 characters [7].
+  - For X posts: keep to ≤280 characters [7].
+- Workflow/tooling (per [4], [7]):
+  - Use a character counter to avoid rejections at submission time [7].
+  - Optionally generate platform-specific variants using an AI tool that enforces limits and produces RSA-ready exports [4].
 
-Evidence type and disagreements
-- Platform‑official vs vendor/practitioner:
-  - Official: LinkedIn specs (150/70) come from LinkedIn Help [3]. Google’s RSA behavior (multiple headlines/descriptions and automated testing) is described on Google Ads Help, but that specific page does not list character counts [2].
-  - Vendor/practitioner: Google RSA 30/90 counts are reflected in third‑party counters [4][7]. Meta 2026 character recommendations (125/40/25; and 27 for Facebook Feed headlines) are from a vendor blog [5]. Practitioner commentary on Meta guidance is in [6]; additional advisory blog content in [8].
-- Effect sizes and named frameworks:
-  - None of the provided sources contain peer‑reviewed experiments or quantified effect sizes linking character length to performance, nor do they present named optimization frameworks. All performance implications are advisory/opinion within vendor/practitioner material [5][6][8].
-- Concrete, actionable steps supported by the sources:
-  - Use official specs where available (LinkedIn: Intro 150, Headline 70) [3].
-  - For Google RSA, supply multiple headlines/descriptions to enable automated testing [2], and if you need a working counter for drafting, follow 30/90 as reflected in vendor tools [4][7].
-  - For Meta, draft within the vendor‑recommended ranges (Primary text ~125; Headline ~27–40 by placement; Description ~25) and check placement previews because truncation varies [5]. Meta’s help page is focused on best practices, not one universal hard cap across placements [1].
-  - Avoid asserting X/Twitter, email truncation pixels, or SEO meta/title lengths without primary documentation; they are not supported by the provided sources.
+## Evidence Quality
+- Study types
+  - No peer-reviewed research is present among the provided sources.
+  - One official vendor documentation page from Google explains RSAs conceptually [2].
+  - All other items are agency blogs, product pages, or tool pages ([1], [3]–[8]).
+- Consensus vs. contested
+  - Element-level caps for Google Search (headline 30; description 90) and cross-platform headline/primary text/post limits are consistently asserted by agency/tool sources [7], and align with the RSA element caps listed in [8].
+  - Counts per RSA (3–15 headlines; 2–4 descriptions) are stated in [8]; the Google help page cited here [2] does not present counts. An agency tool page [3] describes a “typical search ad” with only 3 headlines and 2 descriptions, which conflicts with [8] and likely reflects legacy Expanded Text Ads rather than current RSAs. Given our instruction set, we preserve this disagreement without adjudication.
+- Gaps and unverified common claims
+  - Meta link description limit, LinkedIn headline 70 characters, email subject-line pixel truncation (iPhone/Gmail), and SEO title/meta description heuristics are widely discussed in the industry, but none are supported by the provided sources. Within this evidence set, these remain unverified claims with no traceable primary source.
 
-## Links & Contact
-- Meta Business Help Center: Creative best practices for text in ads [1]
-- Google Ads Help: About responsive search ads [2]
-- LinkedIn Help: Single image ads advertising specifications [3]
-- Marketos Ad Copy Character Counter [4]
-- Adsuploader blog: Meta Ad Copy Specs (2026) [5]
-- Jon Loomer Digital Facebook post on Meta recommendations [6]
-- 30chars Character Counter tool [7]
-- Ridge Marketing blog on writing Meta ad copy [8]
-
-## Confidence
-Moderate. The LinkedIn numbers (150/70) are from an official spec page [3]. Google RSA character counts (30/90) and Meta character recommendations (125/40/25; 27 for Feed headlines) come from vendor tools/blogs [4][5][7], not the official pages cited here; the official Google RSA page provided does not list character counts [2]. No provided source covers X/Twitter limits, email subject truncation pixels, or SEO meta/title lengths, so those are explicitly left unreported.
+## Open Questions
+- What is the current, primary-source limit for:
+  - Meta “link description” in Facebook/Instagram ads?
+  - LinkedIn Sponsored Content headline characters?
+  - X/Twitter posts beyond the 280-character baseline (e.g., subscription tiers)?
+- Do Google’s official help or developer pages explicitly state RSA character counts and element caps on a page dedicated to specs? The cited Google help page [2] explains RSAs but does not list limits.
+- Are there platform-specific behaviors when exceeding limits (hard rejection vs. truncation)? [7] asserts rejection but provides no platform-by-platform documentation.
+- What are validated, primary-source pixel-based truncation thresholds for email subject lines in iPhone Mail and Gmail mobile?
+- What are authoritative, primary-source recommendations (if any) for SEO title length and meta description length in 2026?
 
 ## Sources
-[1] Creative best practices for text in ads | Meta Business Help Center - https://www.facebook.com/business/help/223409425500940
-[2] About responsive search ads - https://support.google.com/google-ads/answer/7684791?hl=en
-[3] Single image ads advertising specifications | LinkedIn Help - https://www.linkedin.com/help/linkedin/answer/a426534
-[4] Ad Copy Character Counter — Free Online Tool | Marketos - https://marketos.fr/tools/ad-copy-counter/
-[5] Meta Ad Copy Specs: Every Character Limit for 2026 - https://adsuploader.com/blog/meta-ad-copy-specs
-[6] How long should your ad copy be? … Meta has their own recommendations. | Jon Loomer Digital (Facebook post) - https://www.facebook.com/jonloomerdigital/posts/how-long-should-your-ad-copy-be-while-there-are-many-opinions-on-this-meta-has-t/1275511820895354/
-[7] Character Counter Tool - 30characters - 30Chars - https://30chars.com/tools/character-counter/
-[8] How to Write Meta Ad Copy: A Guide to Primary, Headline and Description Text | Ridge Marketing - https://ridgemarketing.com/blog/how-to-write-meta-ad-copy-a-guide-to-primary-headline-and-description-text/
+[1] Google Ads Character Limits 2026: The Ultimate Cheat Sheet — https://www.leadember.com/post/character-limit-for-google-search-ads
+[2] About responsive search ads - Google Ads Help — https://support.google.com/google-ads/answer/7684791?hl=en
+[3] The Ultimate Google Ads Character Limit Guide (Updated for 2023) | PPC Ad Editor — https://www.ppcadeditor.com/the-ultimate-google-ads-character-limit-guide-updated-for-2022
+[4] AI Ad Copy Generator | Free | BlazeHive — https://www.blazehive.io/tools/ai-ad-copy-generator
+[5] Google Ad Specs – Your Guide for 2026 | Veuno on Google Ads — https://www.veuno.com/google-ad-specs-your-guide-for-2026
+[6] An Introduction to Google Ads Character Limits — https://www.somar.co.nz/blog/an-introduction-to-google-ads-character-limits
+[7] Ad Copy Character Counter — Free Online Tool | Marketos — https://marketos.fr/tools/ad-copy-counter
+[8] Google Ads character limits 2026: table + free checker - Kunida Designs — https://kunidadesigns.com/blog/google-ads-character-limits-guide
 
 ## Ranked Sources
 
-1. [Creative best practices for text in ads | Meta Business Help ...](https://www.facebook.com/business/help/223409425500940) — `serper`
-   > The recommended text length for most placements is 125 characters for the Primary text field, 40 characters for the Headline field and 25 characters for the ...
-2. [About responsive search ads](https://support.google.com/google-ads/answer/7684791?hl=en) — `serper`
-   > The headline fields for responsive search ads support up to 30 characters. The description fields support up to 90 characters each, and the path fields support ...
-3. [Single image ads advertising specifications | LinkedIn Help](https://www.linkedin.com/help/linkedin/answer/a426534) — `serper`
-   > Use up to 255 characters. Introductory text Use up to 150 characters including spaces, emojis, and punctuation to avoid truncation (3,000 character maximum). ...
-4. [Ad Copy Character Counter — Free Online Tool | Marketos](https://marketos.fr/tools/ad-copy-counter/) — `serper`
-   > Google Search Ads cap headlines at 30 characters and descriptions at 90. Meta Ads allow 40 for the headline, 125 for the primary text.
-5. [Meta Ad Copy Specs: Every Character Limit for 2026](https://adsuploader.com/blog/meta-ad-copy-specs) — `serper`
-   > Meta ad copy specs define character limits for three text fields: primary text (125 characters recommended), headline (40 characters) and ...
-6. [How long should your ad copy be? While there are many ...](https://www.facebook.com/jonloomerdigital/posts/how-long-should-your-ad-copy-be-while-there-are-many-opinions-on-this-meta-has-t/1275511820895354/) — `serper`
-   > Up to 3 headlines, each with a maximum of 30 characters. Up to 2 descriptions, each with a maximum of 90 **Primary Text:** Up to 125 characters ...
-7. [Character Counter Tool - 30characters - 30Chars](https://30chars.com/tools/character-counter/) — `serper`
-   > Count characters in real time against Google Ads, Facebook, LinkedIn, X and TikTok limits as you type. Make sure your main message fits within 125 characters. ...
-8. [How to Write Meta Ad Copy: A Guide to Primary, Headline ...](https://ridgemarketing.com/blog/how-to-write-meta-ad-copy-a-guide-to-primary-headline-and-description-text/) — `serper`
-   > True to its name, primary text is your most important text placement on Meta Ads. This offers you a chance to put your “hook” front and center.
-9. [Traffic Image Ad Specs on Facebook Feed](https://www.facebook.com/business/ads-guide/update/image/facebook-feed/link-clicks) — `serper`
-   > Text Recommendations. Primary Text: 50-150 characters; Headline: 27 characters. Technical Requirements. Maximum File Size: 30MB; Minimum Width: 600 pixels ...
-10. [Ad Character Limits: An Always-up-to-Date Guide](https://www.rakacreative.com/blog/digital-advertising/ad-character-limits-an-always-up-to-date-guide) — `serper`
-   > Responsive Display Ad Copy ... Short Headlines: Up to 5 headlines, 30 characters max per headline. Long Headlines: 1 headline, 90 characters max.
-11. [Samrat Banerjee](https://linkedin.com/in/digital-samrat-banerjee) — `exa`
-   > . The goal never does — more revenue, less waste. If you're a founder or brand tired of ad spend that "feels" busy but doesn't grow the bottom line, we should talk. How I help: - Google Ads & Meta Ads
-12. [Sahil Saxena](https://linkedin.com/in/digitalsahil9) — `exa`
-   > My specialties are:- ◾ Keyword Research- Tools I Used to Find the Best keywords are Keyword planner, Uber Suggest, Moz, Keyword Discovery, etc. on factors Relevancy, Popularity, and Compositeness. ◾ O
-13. [Ali sher](https://linkedin.com/in/md-alisher) — `exa`
-   > Currently working as a Marketing and Advertising Manager since August 2023, focusing on Meta and Google Ads to drive e-commerce growth, lead generation, and ROI optimization. Specializes in campaign s
-14. [Achmad Rizal](https://linkedin.com/in/zalachmad) — `exa`
-   > I’m a Senior Performance Marketing Specialist with hands-on experience managing paid media campaigns across Google Ads, Meta Ads, LinkedIn Ads, Search, Display, Performance Max, and retargeting. My fo
-15. [Ahsan Ahmed Satti](https://linkedin.com/in/ahsan-ahmed-ppc) — `exa`
-   > 🧬 PPC Marketer | Identity & Impact As a results-driven PPC Marketer and Digital Marketing Specialist, I help brands grow through data-led advertising, strategic content, and performance optimisation. 
-16. [Jerko K.](https://linkedin.com/in/jerkokramaric) — `exa`
-   > Remember when Google ads were in the yellow box and had ads on the right side as well? Only one headline with 25 characters and a description with 2x35 characters, without extensions? That was in 2007
-17. [Jaya Sankar](https://linkedin.com/in/jaya-sankar-ba4226180) — `exa`
-   > worked on page optimization: ->worked on market research and altered content -changing Meta title meta description to increase the ranking of the product pages by using rank search tools like seoquake
-18. [Mac Coddington](https://linkedin.com/in/mac-coddington) — `exa`
-   > Strategic Initiatives | SAIF - Google’s Secure AI Framework
-...
-Strategic Initiatives | SAIF - Google’s Secure AI Framework
-...
-### Head of Industry, Search Ads 360 - [Google](https://www.linkedin.com
-19. [Allen Shor](https://linkedin.com/in/allenshor) — `exa`
-   > Online marketer and copywriter with 7 years of experience. ✅ I was the online marketing specialist for the current President of Panama Nito Cortizo (2019); the current President of Bolivia, Luis Arce 
-20. [Robert Milo](https://linkedin.com/in/robert-milo-aba010218) — `exa`
-   > About: Character Counter is a 100% free online character count calculator that's simple to use. Sometimes users prefer simplicity over all of the detailed writing information Word Counter provides, an
+1. [Google Ads Character Limits 2026: The Ultimate Cheat Sheet](https://www.leadember.com/post/character-limit-for-google-search-ads) — `tavily`
+   > > Standard Responsive Search Ads allows 30 characters per headline with a maximum of 15 headlines. Descriptions can be up to 90 characters with a maximum of 4 descriptions per ad. URL paths can be up 
+2. [About responsive search ads - Google Ads Help](https://support.google.com/google-ads/answer/7684791?hl=en) — `tavily`
+   > To help your ads show in their entirety when possible, responsive search ads have character limits. The headline fields for responsive search ads support up to 30 characters. The description fields su
+3. [The Ultimate Google Ads Character Limit Guide (Updated for 2023) | PPC Ad Editor](https://www.ppcadeditor.com/the-ultimate-google-ads-character-limit-guide-updated-for-2022) — `tavily`
+   > The Google Ads character length requirements differ for each ad format. For instance, for responsive display ads, the short headline can be up to 30 characters, the long headline can be up to 90 chara
+4. [AI Ad Copy Generator | Free | BlazeHive](https://www.blazehive.io/tools/ai-ad-copy-generator) — `tavily`
+   > Google Responsive Search Ads: 30 characters per headline, 90 characters per description. You can submit up to 15 headlines and 4 descriptions in a single RSA; Google recombines them at serve time. Fac
+5. [Google Ad Specs – Your Guide for 2026 | Veuno on Google Ads](https://www.veuno.com/google-ad-specs-your-guide-for-2026) — `tavily`
+   > Example of Google Search Ad
+
+## Google Ad Specs for Responsive Search Ads
+
+Responsive Search Ads cycle through up to 15 headlines and four descriptions to serve tailored ads in response to individual 
+6. [An Introduction to Google Ads Character Limits](https://www.somar.co.nz/blog/an-introduction-to-google-ads-character-limits) — `tavily`
+   > ## What is the word limit for Google Ads?
+
+Google Ads does not strictly enforce a word limit but instead imposes character limits for ad copy. Responsive Search Ads allow up to 30 characters per headl
+7. [Ad Copy Character Counter — Free Online Tool | Marketos](https://marketos.fr/tools/ad-copy-counter) — `tavily`
+   > ## About this tool
+
+Every paid-media platform enforces character limits on ads, and every limit is different. Google Search Ads cap headlines at 30 characters and descriptions at 90. Meta Ads allow 40
+8. [Google Ads character limits 2026: table + free checker - Kunida Designs](https://kunidadesigns.com/blog/google-ads-character-limits-guide) — `tavily`
+   > | Element | Limit | How many |
+ --- 
+| Headline | 30 characters | 3-15 headlines |
+| Description | 90 characters | 2-4 descriptions |
+| Display path | 15 characters each | 2 paths |
+
+### Tips for RSA
+
+9. [Guide to Google Display Ad Sizes & Specs (2026)](https://www.blog.udonis.co/digital-marketing/google-ads/google-display-ad-sizes) — `tavily`
+   > ### Text Assets
+
+ You can add up to 5 short headlines (up to 30 characters each)​and 1 long headline (up to 90 characters)​ for each responsive ad.
+ Along with headlines, you may include up to 5 descr
+10. [Meta ad specifications and templates by The Brief | 2026 - The Brief AI](https://www.thebrief.ai/blog/meta-ad-specs) — `tavily`
+   > ### Primary text limits
+
+Primary text appears above your creative. Meta shows roughly 125 characters before truncating with "See more." Your most important message belongs in those first 125 character
+11. [Taide ja algoritmi: mainosten rakennusstrategioiden vaikutus Googlen haku-mainonnan suoritustuloksiin](https://aaltodoc.aalto.fi/handle/123456789/135034) — `exa`
+   > Referring to the example of a Google search ad found in Figure 2 on page 7 of this thesis, search ad copy consists of headline assets seen in blue and description assets seen as the body text. An adve
+12. [Achieving more by saying less? On the Moderating Effect of Information Cues in Paid Search](https://pdfs.semanticscholar.org/06ef/a58fe7bdeebdbb57295af6008e03db5fb618.pdf) — `exa`
+   > We teamed up with a well-known b2c bricks-and mortar furniture retailer in Germany in order to estimate the impact of an information cue on user behavior. In cooperation with the chain, which has requ
+13. [AI Visibility Hypothesis: Meta Description Length and LLM Corpus Selection – Testing Shallow Pass Budget Allocation](https://doi.org/10.5281/zenodo.18647152) — `exa`
+   > This AI Visibility hypothesis examines whether large language models consume meta description content beyond Google's 160-character display truncation limit during training corpus selection. The work 
+14. [Comparable 2022 General Election Advertising Datasets from Meta and Google | Scientific Data](https://www.nature.com/articles/s41597-025-05228-w) — `exa`
+   > The first step was to obtain the IDs of the election ads from Google and Meta. The ad libraries of Google and Meta publish ads placed on Google Search, Google Display Network, YouTube, Gmail (for Goog
+15. [A Methodological Framework for Rigorous Meta Ads Experimentation](https://doi.org/10.20944/preprints202601.0162.v1) — `exa`
+   > Direct-to-consumer (D2C) brands increasingly rely on A/B testing to optimize paid social advertising, yet common execution errors-inconsistent attribution, underpowered samples, mid-test edits, and me
+16. [(untitled)](https://nature.com/articles/s41598-024-81575-9.pdf) — `exa`
+   > experiments. In this study, we analyze a corpus of 27,616 field experiments with headlines carried out by a U.S. media publisher 23 . By coding, filtering, and meta-analyzing these field experiments, 
+17. [AdAlyze Redux](https://doi.org/10.1145/2740908.2741996) — `exa`
+   > Text ads, the simplest version of the online ads AdWords offers, have three parts: a headline, a display URL, and two description lines. Figure 1 shows a sample text ad in the context of a search engi
+18. [Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search](https://doi.org/10.48550/arxiv.2606.15911) — `exa`
+   > This paper focuses on automatically generat ing informative ad descriptions in sponsored search. Unlike ad titles which are usually op timized to attract user click feedbacks, ad de scriptions have a 
+19. [Linguistic effects on news headline success: Evidence from thousands of online field experiments (Registered Report) | PLOS One](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0281682) — `exa`
+   > publisher in the U.S. media landscape between 2013 and 2015; in November 2013, Upworthy attracted 80 million unique viewers [30] and was referred to as "the fastest growing media company in the world"
+20. [How do text characteristics impact user engagement in social media posts: Modeling content readability, length, and hashtags number in Facebook](https://www.researchgate.net/publication/359245825_How_do_text_characteristics_impact_user_engagement_in_social_media_posts_Modeling_content_readability_length_and_hashtags_number_in_Facebook) — `exa`
+   > This study examines whether text characteristics in branded Facebook image posts associate with consumer engagement and brand awareness. The examined text characteristics include i) readability indice

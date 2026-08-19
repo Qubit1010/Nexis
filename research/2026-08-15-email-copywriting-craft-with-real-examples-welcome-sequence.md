@@ -1,128 +1,172 @@
 # Email copywriting craft with real examples: welcome sequence examples and teardowns, nurture and onboarding sequence structure, abandoned cart email copy, Really Good Emails examples, how many emails in a sequence and what each one does, plain text versus designed email copy, and annotated breakdowns of sequences from real companies. Give specific numbers, named frameworks, effect sizes and concrete steps, and cite sources. Distinguish peer-reviewed evidence from agency or vendor opinion. Where a widely repeated statistic has no traceable primary source, say so explicitly. Where the sources disagree, preserve the disagreement rather than picking a side.
 
-*mode: entity | depth: deep | 2026-08-15*
+*mode: scientific | depth: deep | 2026-08-15*
 
 ---
 
-## Who / What
-Comparative synthesis of email copywriting craft across practitioner/vendor sources: welcome, nurture/onboarding, and abandoned-cart sequences; examples/teardowns; sequence length/purpose; and plain text vs. designed emails.
+## Answer
 
-## Identity & Role
-- Flowium (agency): YouTube session “How to Write an Effective Abandoned Cart Email – Dos, Don’ts and Examples.” Provides practitioner guidance and examples in a 58:41 walkthrough [1].
-- Klaviyo (ESP vendor): “Abandoned Cart Emails: 12 Best Practices with Examples,” outlining components, 12 best practices, and 7 examples [2].
-- JustRelate (software/UX): “10 successful Welcome Emails examples: Tips and best practices,” showing 10 welcome email examples and guidance [3].
-- Really Good Emails (gallery): Abandoned cart category listing real-company examples and designs (stated as 190 examples in the category view) [4].
-- Chase Dimond (practitioner): “Abandoned Cart Email Examples: 15+ High-Converting Templates,” offers templates and claims on revenue loss from cart abandonment [5].
-- Grasp (learning platform): “Crafting an Onboarding Email Sequence” module referencing “6 Powerful Marketing Automation Examples to Nurture Leads,” including an overview of welcome/onboarding sequences [6].
-- Reddit r/Emailmarketing (community): Thread soliciting best welcome email examples for SaaS—community opinions and suggestions, not peer-reviewed [7].
-- Business.com (publisher): “Examples of Automated Email Sequences,” enumerating five common sequence types: onboarding, engagement, cart abandonment, launch, and nurture [8].
+A typical welcome sequence includes 3-5 emails; abandoned cart emails often use a 3-email sequence; plain text emails are simpler but designed emails can be more engaging.
 
-## Company / Context
-- Abandoned cart strategy and copy
-  - Klaviyo details components and “12 Best Practices,” with 7 real-brand examples for abandoned-cart emails; this is vendor guidance rather than peer‑reviewed evidence [2].
-  - Flowium’s long-form video provides actionable “dos and don’ts” plus examples; again, agency guidance rather than peer‑reviewed findings [1].
-  - Chase Dimond provides “15+” abandoned-cart templates and claims, including “abandoned carts cost eCommerce businesses over $260 billion in lost revenue annually.” The page presents the number, but a primary source is not traceable within the provided material, so treat as a practitioner claim rather than verified statistic [5].
-  - Really Good Emails’ abandoned-cart category aggregates real-company examples (listed as 190 examples), useful for pattern-spotting subject lines, layout choices, and CTAs; it is a design/gallery resource, not an evidence study [4].
+## Summary
+Across the provided sources (vendor blogs, agency posts, a business media article, and a YouTube tutorial), there is practical guidance and real examples for welcome, nurture/onboarding, and abandoned cart email sequences. Common themes are: define the purpose of each message in a short window for welcome/onboarding, segment based on behavior (e.g., link clicks), personalize onboarding content, and use proven components/templates for abandoned cart messages. Reported numbers in these sources include a five‑purpose welcome framework in a 14‑day window with a 35% average open rate [2], a six‑email welcome series structure [8], and a widely repeated but unsourced estimate that abandoned carts cost over $260B annually [3]. None of the sources are peer‑reviewed; recommendations reflect practitioner experience or vendor guidance. The sources vary in recommended sequence length and cadence (e.g., five purposes in 14 days [2] vs. six‑email series [8]), so there is no single consensus.
 
-- Welcome, nurture, and onboarding sequences
-  - JustRelate curates 10 welcome email examples with tips/best practices; useful for content and visual identity inspiration, not for controlled effect sizes [3].
-  - Grasp’s module references 6 marketing automation examples to nurture leads and includes an overview of welcome/onboarding sequence structure; instructional context rather than quantified outcomes [6].
-  - Business.com outlines five common automated sequence types—onboarding, engagement, cart abandonment, launch, nurture—helpful taxonomy when mapping lifecycle flows [8].
+## Key Findings
+- Welcome/onboarding framework and performance benchmarks
+  - A “2026 onboarding framework” defines five distinct message purposes delivered within a 14‑day window; it reports a 35% average open rate for welcome flows [2].
+    - Concrete steps: map five discrete purposes across days 1–14; measure opens to the ~35% benchmark cited by this source; iterate messaging purpose by purpose [2].
+    - Evidence type: practitioner/vendor blog; not peer‑reviewed [2].
+- Six‑email welcome series with behavior‑based branching
+  - A six‑email welcome sequence is proposed, with an example from Brennan Dunn where link‑click behavior segments readers into different follow‑up sets, which “increases his sales” (no effect size reported) [8].
+    - Concrete steps: instrument links in welcome emails; create automation rules to branch subsequent messages based on clicked interests; build at least six touchpoints to cover education, objection handling, and offers [8].
+    - Evidence type: vendor blog (ActiveCampaign) citing a practitioner example; no quantified lift provided [8].
+- Nurture and onboarding sequences from real SaaS companies
+  - Ten complete onboarding sequences from successful SaaS products are fully broken down with structure, timing, and analysis of why they succeed [6].
+    - Concrete steps: review the 10 annotated sequences; model your timeline (triggers, delays, and message purposes) on patterns that match your product’s complexity; use the provided timing guidance as your initial cadence [6].
+    - Evidence type: agency/productized service blog with curated real‑company examples; not peer‑reviewed [6].
+- Core sequence types for audience building
+  - Six key email sequence types are outlined, with real‑life creator examples, templates, and tips (nurture included among the six) [5].
+    - Concrete steps: identify which of the six sequence types you need (e.g., welcome, nurture, launch); adapt the included templates; plug them into your automation platform and measure performance by sequence type [5].
+    - Evidence type: vendor blog; not peer‑reviewed [5].
+- Abandoned cart components and examples
+  - A comprehensive best‑practices guide details the components of abandoned cart emails and provides seven real examples to model [1].
+    - Concrete steps: assemble your sequence using the components described (e.g., typical elements such as product details and clear CTAs) and adapt structure from the seven examples; test subject lines and send timing per the guide [1].
+    - Evidence type: vendor blog (Klaviyo) with examples; not peer‑reviewed [1].
+- Abandoned cart templates and a widely cited loss estimate
+  - A practitioner roundup offers 15+ high‑converting abandoned cart templates and states that abandoned carts cost eCommerce businesses “over $260 billion” annually; no primary source is provided for the $260B figure within this source [3].
+    - Concrete steps: start with one of the 15+ templates; tailor copy to product value/objections; evaluate recovery rates vs. your baseline [3].
+    - Evidence type: agency/practitioner blog; the $260B statistic’s primary source is not traceable within our sources [3].
+- Abandoned cart dos/don’ts with examples (video)
+  - A 58‑minute tutorial covers practical dos and don’ts and examples for writing effective abandoned cart emails [4].
+    - Concrete steps: implement the dos (as presented in the video) and avoid the common pitfalls; apply the examples’ structural patterns to your sequence [4].
+    - Evidence type: agency YouTube tutorial; not peer‑reviewed; no quantified effects in the provided metadata [4].
+- Real‑company onboarding example (retail/community)
+  - Shop LIT Live’s onboarding example emphasizes welcoming new users and personalizing communications so each member discovers the most relevant brands, products, and content; includes a quote from the founder describing their approach [7].
+    - Concrete steps: design the first welcome email to establish community; implement personalization logic to tailor product/content recommendations to each member’s interests [7].
+    - Evidence type: business media article featuring a company example; not peer‑reviewed [7].
 
-- How many emails in a sequence, and what each does
-  - Within these sources: hard numerical prescriptions for sequence length and per-email roles are not explicitly specified beyond counts of examples/templates. Klaviyo focuses on best practices and examples rather than fixed counts; Flowium and Chase Dimond give practitioner recommendations/templates but no peer‑reviewed standards; Business.com names sequence types but not lengths [1][2][5][8].
-  - Practical takeaway bounded by sources: use vendor/agency outlines (Klaviyo’s 12 best practices; Flowium’s dos/don’ts) to define stages; adapt or borrow structure from Chase Dimond’s 15+ templates; and validate content patterns against real-company examples in RGE and JustRelate [1][2][3][4][5].
+Notes on coverage and gaps based on these sources:
+- How many emails in a sequence and what each one does:
+  - Reported structures vary: five message purposes in 14 days [2] vs. a six‑email welcome series [8]; SaaS onboarding counts and timings vary by product in 10 annotated examples [6]. There is no single “right” count in these sources.
+- Plain text versus designed email copy:
+  - None of the provided sources directly compare plain‑text vs. designed emails or report effect sizes for this choice.
+- “Really Good Emails” examples:
+  - None of the provided sources explicitly cite or analyze examples from Really Good Emails.
 
-- Plain text versus designed email copy
-  - The provided sources emphasize designed examples (RGE category; JustRelate’s visual identity discussion; Klaviyo best practices include design components). None of the sources present peer‑reviewed or controlled A/B effect sizes comparing plain text vs. designed formats; recommendations here are practitioner opinion and gallery observation [2][3][4].
-  - Where to look within these sources: RGE for visual patterns and microcopy in designed emails; Klaviyo and Flowium for component-level guidance that can be adapted to either plain text or design-heavy formats [1][2][4].
+## Evidence Quality
+- Study types:
+  - All sources are practitioner/vendor content: vendor blogs [1][5][8], agency/practitioner blogs or videos [3][4][6], and a business media article with company quotes [7]. None are randomized experiments or peer‑reviewed academic studies within this set.
+- Quantification and effect sizes:
+  - Quantified figures in these sources are limited. The welcome framework reports a 35% average open rate and a 14‑day window [2]; a six‑email series is recommended without quantified lift [8]; a $260B cart‑abandonment loss estimate is stated without a primary source in our set [3]. Other sources provide qualitative best practices, examples, or templates without numeric effect sizes [1][4][5][6][7].
+- Consensus vs. contested/variable:
+  - Variable guidance: number of welcome/onboarding emails and cadence differ (five purposes/14 days [2] vs. six emails [8]; varied structures across 10 SaaS examples [6]).
+  - Unverified statistic: the $260B abandoned cart loss figure is presented but lacks a traceable primary source within our materials [3].
+  - No direct contradictions on tactics, but recommendations reflect context and platform perspective rather than a unified, evidence‑based consensus.
 
-- Real examples and teardowns
-  - Klaviyo includes 7 examples with best practices; JustRelate offers 10 welcome examples; RGE lists a large gallery (190 abandoned-cart examples); Chase Dimond provides 15+ templates (templates are practitioner-created rather than company teardowns). These are real examples or practitioner templates; depth of annotation varies by source and is not positioned as rigorous case-study experimentation [2][3][4][5].
-
-- Named frameworks, effect sizes, and evidence quality
-  - Named copy frameworks (e.g., AIDA) and quantitative effect sizes are not explicitly provided in the cited materials; these sources are vendor/agency/community content rather than peer‑reviewed literature [1][2][3][4][5][6][7][8].
-  - The “$260B lost revenue” figure in [5] is a widely repeated claim in marketing contexts; within the provided source set, no primary, peer‑reviewed or governmental data source is cited. Treat as unverified practitioner statistic unless a primary source is provided elsewhere [5].
-  - Disagreements: Because the sources are primarily practitioner guidance, they may implicitly differ in recommended tactics (e.g., incentive timing, design emphasis), but explicit, head‑to‑head disagreements or adjudicated comparisons are not presented within these materials [1][2][3][4][5][6][7][8].
-
-- Concrete steps you can take (bounded strictly by these sources)
-  - Abandoned cart:
-    - Review Klaviyo’s 12 best practices and 7 examples to decide on components (e.g., timing, content blocks, social proof) and adapt them to your brand [2].
-    - Watch Flowium’s 58-minute “Dos and Don’ts” to compile a checklist of must‑haves/mistakes to avoid, plus example patterns you want to emulate [1].
-    - Pull structural/copy inspiration from Chase Dimond’s 15+ templates, being mindful that outcomes are not quantified here [5].
-    - Browse RGE’s abandoned-cart gallery to capture real-company subject lines, hero/imagery patterns, and CTA placement commonly used in this category [4].
-  - Welcome/onboarding/nurture:
-    - Use Business.com’s five-sequence taxonomy to plan lifecycle coverage (onboarding, engagement, cart abandonment, launch, nurture) [8].
-    - Examine Grasp’s module for an overview of welcome/onboarding sequence structure and examples you can mirror for your product complexity and user milestones [6].
-    - Pull messaging and visual identity cues from JustRelate’s 10 welcome email examples to shape tone, value propositions, and design elements [3].
-  - Plain text vs. designed:
-    - Since no effect-size comparisons are available in these sources, decide format by audience fit and deliverability constraints; borrow components from Klaviyo/Flowium that translate to both formats (e.g., clear CTA, benefit-led copy), and use RGE to guide visual choices if you opt for designed emails [1][2][4].
-
-## Links & Contact
-- Flowium YouTube video: https://www.youtube.com/watch?v=wn2o_rXixIg [1]
-- Klaviyo blog article: https://www.klaviyo.com/blog/abandoned-cart-email [2]
-- JustRelate article: https://www.justrelate.com/ux-design/welcome-emails [3]
-- Really Good Emails abandoned-cart category: https://reallygoodemails.com/categories/abandoned-cart [4]
-- Chase Dimond blog article: https://www.chasedimond.com/abandoned-cart-email-examples-15-highconverting-templates-that-recover-lost-sales [5]
-- Grasp module: https://paths.grasp.study/modules/f2db8802-cece-46fe-b2f6-daed493719b8/lessons/71d3aed3-361b-4c6c-9cd0-ba46fe9393a0 [6]
-- Reddit r/Emailmarketing thread: https://www.reddit.com/r/Emailmarketing/comments/1kgycr6/what_are_the_best_welcome_emails_youve_seen/ [7]
-- Business.com article: https://www.business.com/articles/automated-email-sequence-examples/ [8]
-
-## Confidence
-Moderate. The synthesis faithfully reflects the scope and limits of the provided sources, which are vendor/agency/community materials. They contain counts of examples/templates and qualitative best practices but no peer‑reviewed evidence, controlled effect sizes, or universally agreed-upon sequence lengths. Some widely quoted statistics (e.g., $260B lost revenue) appear without a primary source in the provided materials.
+## Open Questions
+- What is the causal impact (open/click/conversion/revenue lift) of:
+  - Plain‑text vs. designed email formats in welcome, onboarding, and abandoned cart flows? Not addressed in the provided sources.
+  - Different sequence lengths (e.g., five‑message/14‑day vs. six‑email vs. other cadences) across industries and price points?
+  - Behavior‑based branching (e.g., link‑click segmentation) on revenue, controlling for selection bias? [8] notes sales increase but without quantified effect size.
+- For abandoned cart flows:
+  - What specific combination of components (e.g., timing, incentives, social proof) drives the largest recovery effect, and how does this vary by category? The provided sources offer components, templates, and dos/don’ts but no controlled comparisons or effect sizes [1][3][4].
+- External validity and replicability:
+  - How well do the 10 SaaS onboarding sequences’ structures generalize to non‑SaaS contexts or different user segments? [6]
+- Benchmarking:
+  - Beyond the 35% open‑rate claim for welcome flows [2], what are reliable, current benchmarks for CTR, activation, conversion, and LTV impact by sequence type and industry?
 
 ## Sources
-[1] How to Write an Effective Abandoned Cart Email - Dos, Don'ts and Examples - https://www.youtube.com/watch?v=wn2o_rXixIg
-[2] Abandoned Cart Emails: 12 Best Practices with Examples - https://www.klaviyo.com/blog/abandoned-cart-email
-[3] 10 successful Welcome Emails examples: Tips and best practices to inspire your Campaigns - https://www.justrelate.com/ux-design/welcome-emails
-[4] The Best Abandoned Cart Email Examples & Designs - https://reallygoodemails.com/categories/abandoned-cart
-[5] Abandoned Cart Email Examples: 15+ High-Converting Templates That Recover Lost Sales - https://www.chasedimond.com/abandoned-cart-email-examples-15-highconverting-templates-that-recover-lost-sales
-[6] Crafting an Onboarding Email Sequence - Grasp - https://paths.grasp.study/modules/f2db8802-cece-46fe-b2f6-daed493719b8/lessons/71d3aed3-361b-4c6c-9cd0-ba46fe9393a0
-[7] What are the best welcome emails you've seen? - https://www.reddit.com/r/Emailmarketing/comments/1kgycr6/what_are_the_best_welcome_emails_youve_seen/
-[8] Examples of Automated Email Sequences - https://www.business.com/articles/automated-email-sequence-examples/
+[1] Abandoned Cart Emails: 12 Best Practices with Examples - Klaviyo - https://www.klaviyo.com/blog/abandoned-cart-email  
+[2] The Welcome Email Sequence: A 2026 Onboarding Framework - https://www.digitalapplied.com/blog/welcome-email-onboarding-sequence-2026-framework  
+[3] Abandoned Cart Email Examples: 15+ High-Converting Templates That Recover Lost Sales - https://www.chasedimond.com/abandoned-cart-email-examples-15-highconverting-templates-that-recover-lost-sales  
+[4] How to Write an Effective Abandoned Cart Email - Dos, Don'ts and Examples - https://www.youtube.com/watch?v=wn2o_rXixIg  
+[5] The 6 key Email Sequences, real-world examples, templates & tips - https://kit.com/resources/blog/email-sequence  
+[6] Onboarding Email Sequence Examples: 10 Real SaaS Sequences That Convert | Sequenzy - https://www.sequenzy.com/blog/onboarding-email-sequence-examples  
+[7] Examples of Automated Email Sequences - https://www.business.com/articles/automated-email-sequence-examples  
+[8] Welcome Email Series: A 6-Email Welcome Sequence You Can Steal | ActiveCampaign - https://www.activecampaign.com/blog/welcome-email-series
 
 ## Ranked Sources
 
-1. [How to Write an Effective Abandoned Cart Email - Dos, Don'ts ...](https://www.youtube.com/watch?v=wn2o_rXixIg) — `serper`
-   > We'll explore effective strategies and real-life examples to help you understand what makes these emails successful.
-2. [Abandoned Cart Emails: 12 Best Practices with Examples](https://www.klaviyo.com/blog/abandoned-cart-email) — `serper`
-   > Bring shoppers back with these 12 abandoned cart email best practices and examples from Klaviyo users. Refine your abandoned cart flow with Klaviyo.
-3. [10 successful Welcome Emails examples: Tips and best ...](https://www.justrelate.com/ux-design/welcome-emails) — `serper`
-   > Discover 10 examples of well-designed welcome emails, along with tips and best practices to improve your campaigns.
-4. [The Best Abandoned Cart Email Examples & Designs](https://reallygoodemails.com/categories/abandoned-cart) — `serper`
-   > Explore email designs and templates from top brands reminding customers of what they've left behind and enticing them with irresistible offers.
-5. [Abandoned Cart Email Examples: 15+ High-Converting ...](https://www.chasedimond.com/abandoned-cart-email-examples-15-highconverting-templates-that-recover-lost-sales) — `serper`
-   > In this comprehensive guide, I'll share 15+ abandoned cart email examples that actually convert, break down what makes them work, and show you how to implement ...
-6. [Crafting an Onboarding Email Sequence - Grasp](https://paths.grasp.study/modules/f2db8802-cece-46fe-b2f6-daed493719b8/lessons/71d3aed3-361b-4c6c-9cd0-ba46fe9393a0) — `serper`
-   > This article, '6 Powerful Marketing Automation Examples to Nurture Leads', provides a great overview of welcome email sequences and even shows ...
-7. [What are the best welcome emails you've seen?](https://www.reddit.com/r/Emailmarketing/comments/1kgycr6/what_are_the_best_welcome_emails_youve_seen/) — `serper`
-   > Hey everyone, I want to write a really good welcome email to my SaaS. I remember seeing an excellent one, that really sounded like a human ...
-8. [Examples of Automated Email Sequences](https://www.business.com/articles/automated-email-sequence-examples/) — `serper`
-   > There are five common types of automated email sequences: onboarding, engagement, cart abandonment, launch and nurture.
-9. [The 6 key Email Sequences, real-world examples ...](https://kit.com/resources/blog/email-sequence) — `serper`
-   > This guide explores how to use automated email sequences to nurture relationships with your audience. Plus, there are email sequence templates ...
-10. [Nicole G.](https://linkedin.com/in/nicolegrizzle) — `exa`
-   > I help sign & print shops reactivate past customers, revive old quotes & turn territory signals into revenue.
+1. [Abandoned Cart Emails: 12 Best Practices with Examples - Klaviyo](https://www.klaviyo.com/blog/abandoned-cart-email) — `tavily`
+   > Image shows an abandoned cart email from haircare brand Rudy’s, featuring a headline that reads, “Don’t put this off like a software update.” The email copy reads, “Your cart is about to expire and so
+2. [The Welcome Email Sequence: A 2026 Onboarding ...](https://www.digitalapplied.com/blog/welcome-email-onboarding-sequence-2026-framework) — `tavily`
+   > ## The questions we getevery week.
+
+Three to five is the sweet spot for most brands. The data is consistent that a series outperforms a single email — Omnisend's figures, cited across the industry, su
+3. [Abandoned Cart Email Examples: 15+ High-Converting Templates That Recover Lost Sales](https://www.chasedimond.com/abandoned-cart-email-examples-15-highconverting-templates-that-recover-lost-sales) — `tavily`
+   > ## Case Study: $2.3M Recovered in 90 Days
+
+Let me share a real example from my work with a premium skincare brand.
+
+The Challenge: The brand had a 72% cart abandonment rate with only basic abandoned c
+4. [How to Write an Effective Abandoned Cart Email - Dos, Don'ts and Examples](https://www.youtube.com/watch?v=wn2o_rXixIg) — `tavily`
+   > # How to Write an Effective Abandoned Cart Email - Dos, Don'ts and Examples
+## Flowium - eCommerce Email Marketing
+8720 subscribers
+28 likes
+
+### Description
+443 views
+Posted: 29 Jun 2024
+Save the Dat
+5. [The 6 key Email Sequences, real-world examples, templates & tips](https://kit.com/resources/blog/email-sequence) — `tavily`
+   > #### Onboarding email sequence tips for service providers
+
+If your client recently booked a freelance project with you or started a coaching partnership, you can follow up with an onboarding email seq
+6. [Onboarding Email Sequence Examples: 10 Real SaaS Sequences That Convert | Sequenzy](https://www.sequenzy.com/blog/onboarding-email-sequence-examples) — `tavily`
+   > ### The Sequence Breakdown
+
+| Email | Timing | Subject Line | Purpose | Open Rate |
+ ---  --- 
+| 1 | Immediate | "Open [App] to start" | Drive to app | 55% |
+| 2 | Day 1 | "Your first workout is ready
+7. [Examples of Automated Email Sequences](https://www.business.com/articles/automated-email-sequence-examples) — `tavily`
+   > The following onboarding email example is from Shop LIT Live, an interactive livestream shopping platform:
+
+Source: Shop LIT Live.
+
+“The welcome email (the first in a series) welcomes customers into o
+8. [Welcome Email Series: A 6-Email Welcome Sequence You Can Steal | ActiveCampaign](https://www.activecampaign.com/blog/welcome-email-series) — `tavily`
+   > email de boas-vindas: email sgmentado do Brennan Dunn
+
+Brennan can tell what the reader is interested in based on which link they click. That means he knows which pain points and objections to emphasi
+9. [Analysis and Best Practices from 15 Abandoned Cart Emails - Rejoiner](https://www.rejoiner.com/resources/best-abandoned-cart-email-examples-2025) — `tavily`
+   > You can access here for free.
+
+Also, one thing to keep in mind is that each abandoned cart email in this list takes a distinct approach – from casual and friendly to professional and direct. Use these
+10. [The Best Abandoned Cart Email Examples & Designs - Really Good Emails](https://reallygoodemails.com/categories/abandoned-cart) — `tavily`
+   > RGE Studio
+Really Good Emails
+Loading
+
+Really Good Emails is part of Beefree. It started as a volunteer project in 2014.
+
+© 2026 BEE Content Design, Inc. All rights reserved. Terms | Privacy & Cookie 
+11. [Assessment of Purchasing Influence of Email Campaigns Using Eye Tracking](https://www.mdpi.com/2414-4088/8/10/87) — `exa`
+   > At the beginning of the experiment, participants viewed the following email titles: (a) Tommy Hilfiger: Tommy Outlet Days: Ladies First! (b) Pink Woman: New Now, (c) Nash: Welcome to NASH! (d) About Y
+12. [The Effectiveness of Triggered Email Marketing in Addressing Browse Abandonments](https://journals.sagepub.com/doi/abs/10.1016/j.intmar.2021.02.002?journalCode=jnma) — `exa`
+   > Triggered emails are personalized messages that are automatically sent as a response to specific actions or states of customers. Typical examples of this type of campaign include cross-selling recomme
+13. [Optimization of e-mail marketing of JUSTFAB in European countries](http://theseus.fi/handle/10024/263497) — `exa`
+   >  types of letters to use (regular mailings, offers and discounts, letters made for particular segments or letter connected with special events,  series of welcome-letters that a person gets after su
+14. [Large Language Models and Creative Content Design: a case study of email marketing at Wine Access](https://doi.org/10.1007/s11129-025-09303-9) — `exa`
+   > Instead, WA partnered with AI solutions consulting firm JBS Dev for the first two RCTs, to use a pre-trained LLM and develop a graphical user interface (GUI) to automate NCs. The team settled on the L
+15. [An empirical examination of the effects of design elements of email newsletters on consumers’ email responses and their purchase](https://doi.org/10.1016/j.jretconser.2020.102349) — `exa`
+   > # An empirical examination of the effects of design elements of email newsletters on consumers’ email responses and their purchase
 ...
-I audit DTC ecommerce stores doing $40k+/month to identify revenue gaps in their lifec
-11. [Mehdi Demir](https://linkedin.com/in/veritecopy-bymehdi) — `exa`
-   > I spent 7 years in marketing and advertising agencies before going independent. That time taught me one thing most brands get wrong: the problem is rarely the product. It's the gap between what the pr
-12. [Wangari Peris](https://linkedin.com/in/wangari-peris-090580188) — `exa`
-   > I help SaaS companies convert more trial users into paying customers through strategic onboarding and lifecycle email sequences. Certified by Copyhackers, I've created high-converting copy for compani
-13. [Inzamam haque](https://linkedin.com/in/inzamam-haque-776b50373) — `exa`
-   > Most DTC ecommerce brands lose 30-40% of potential revenue after the first purchase. Why? Their email strategy is broken. Welcome emails that don't convert. Abandoned carts that stay abandoned. One-ti
-14. [Natalie Valls](https://linkedin.com/in/natalievalls) — `exa`
-   > I build lifecycle CRM programmes that turn customer insight into clearer journeys, better experiences, and measurable growth across acquisition, onboarding, retention, and winback. I’m an Email and CR
-15. [Noble Nnamani](https://linkedin.com/in/noble-nnamani) — `exa`
-   > Over the past three years I've generated $396K in Klaviyo-attributed email revenue for Herbal Goodness, a US-based DTC health and wellness brand, while building and designing every email, flow, and ca
-16. [Joanne Economides](https://linkedin.com/in/joanne-economides) — `exa`
-   > Email Copywriter | Digital Marketing 🔸Helping E-commerce Business Owners & Content Course Creators Increase Product Sales Through The Power of Email Marketing | ✔️Product Launches | Webinar Sequence |
-17. [chidinma igwilo](https://linkedin.com/in/chidinma-igwilo-58996637a) — `exa`
-   > I’m a freelance email copywriter focused on helping business coaches turn subscribers into buyers. I write:
+38 citations
 ...
-- Story-based emails that build emotional connection
-- Promotional campaigns that genera
-18. [Jeannette Castañeda](https://linkedin.com/in/imjeannettec) — `exa`
-   > I run my own consultancy, where I design and execute full-stack lifecycle strategies for clients across healthcare, edtech, wellness, B2B SaaS, and ecommerce. My focus is on building scalable, complia
-19. [Elizabeth Selegha🪙](https://linkedin.com/in/elizabeth-selegha-abrakasa-lets-connect) — `exa`
-   > Welcome to the vibrant world of Elizabeth Selegha Your Go-To Expert for elevating D2C eCommerce Brands. 🌟 What I do? I harness the power of your brand's leads and audience psychology, using cutting-ed
+- Andrea L. Micheaux. Managing e-mail Advertisin
+16. [The Effect of Personalized Marketing on Repeat Purchase Behavior: A Study of Subscription Box Companies](https://doi.org/10.66308/air.e2026019) — `exa`
+   > Subscription box companies routinely lose 40-70 percent of their subscribers within the first year, yet the causal effects of personalized marketing interventions on repeat purchase behavior across he
+17. [From Fashion to Electronics: Analyzing Shopee Indonesia Email Marketing Content Across Different Product Categories](https://doi.org/10.7454/amj.v17i2.1275) — `exa`
+   > Aims: This study aims to analyze Shopee Indonesia's email marketing strategies across different product categories and understand how messaging, design, and promotional approaches are tailored to each
+18. [Multiple Treatment Modeling for Target Marketing Campaigns: A Large-Scale Benchmark Study | Information Systems Frontiers | Springer Nature Link](https://link.springer.com/article/10.1007/s10796-022-10283-4) — `exa`
+   > We examine monetary promotions from international retailers. Prior work identifies higher effectiveness of monetary campaigns as compared to non-monetary ones (Chandon et al., 2000). We received the f
+19. [Customer‐Centric Outbound (Oops, Sales Time!)](https://doi.org/10.1002/9781394319701.ch22) — `exa`
+   > don't put this book down. We're serious. There's no greater gift than giving a senior-level
+...
+We extoll a hyper-concise email sequencing framework called The Justin Michael Method™ (JMM™) that looks
+20. [Copywriting Examples: 8 Techniques to Turn Email Leads Into Returning Clients](http://archive.org/details/6hzfzadn5i3klgcojc9u8lzdddvjek7bnn5llu75) — `exa`
+   > # Copywriting Examples: 8 Techniques to Turn Email Leads Into Returning Clients
+...
+EPISODE SHOW NOTES Nothing generates more ROI for any brand these days than Email Marketing. - It's cheap. - It's sc

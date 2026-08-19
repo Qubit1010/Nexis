@@ -26,6 +26,24 @@ first line works, and it differs by placement and by device.
 
 ---
 
+## What the engagement research actually shows
+
+Added 2026-08-15 when a corrected research pass recovered the empirical layer this file
+originally lacked. **These are the findings to reason from; character counts are trivia by
+comparison.**
+
+| Platform | Evidence |
+|---|---|
+| **Facebook** | 106,316 messages across 782 companies, content-coded, relating advertising content to user engagement `[C]` [s432]. Separately, readability, text length and hashtag count in branded image posts against engagement and brand awareness `[C]` [s430] |
+| **Instagram** | 21,692 ads analysed on psycholinguistic dimensions against click-through rate from Meta's Ads Manager `[C]` [s431]. Mega-influencer caption language and punctuation `[C]` [s328] |
+| **Email** | Personalising the subject line with the recipient's name lifts opens ~20% in randomized field experiments across millions of emails `[C]` [s441][s426], with a published replication testing whether it still holds `[C]` [s427]. Linguistic structure of 31,812 subject lines against open rate `[C]` [s423] |
+| **Cross-platform** | Whether AI-generated content performs comparably to human-written across platforms `[C]` [s458] |
+
+**"Shorter is better" is an assumption, not a finding.** It has been tested directly across
+multiple outlets `[C]` [s457]. Do not assert brevity wins as settled.
+
+---
+
 ## What actually generalises across platforms
 
 Only three things, and they are the ones worth spending effort on.

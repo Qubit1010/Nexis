@@ -47,16 +47,24 @@ never an effect size to plan against."
 
 ### "Personalised subject lines lift open rates by 26%"
 
-**No confirmed source.** Vendor-published `[P]` [s142][s144][s148]. Real academic work on
-subject-line personalisation exists `[P]` [s145][s147] but its published versions are not in
-this corpus, so **no personalisation lift figure here is confirmed-tier.**
+**Corrected 2026-08-15. This one is now a "yes, but" rather than a refusal** - and the
+correction matters, because refusing a claim that turns out to be broadly true damages trust
+as much as repeating a fake one.
 
-Compounding it: **open rate has meant something different since 2021.** Apple Mail Privacy
-Protection pre-fetches images for protected users, registering opens regardless of reading.
-Any comparison spanning 2021 compares two different measurements.
+The **26%** is a vendor figure `[P]` [s142][s144][s148]. But the underlying effect is real and
+well evidenced: Sahni, Wheeler and Chintagunta ran randomized field experiments across
+**millions** of emails with three companies and found personalisation benefited advertisers
+`[C]` [s441], with adding the recipient's first name to the subject line **increasing opens by
+about 20%** `[C]` [s426]. A Marketing Letters paper then **replicated** it, explicitly testing
+whether the result still holds now the tactic is commonplace `[C]` [s427].
 
-**Say:** "That's a vendor number from a company selling email software, and open rate stopped
-being a clean metric in 2021. Measure your own list and use clicks."
+**Say:** "The 26% is a vendor number, but don't throw the finding out. Randomized field
+experiments put it near 20%, and there's live research on whether it's decaying now everyone
+does it."
+
+**Two things that still hold:** scholars generally find email effects **more limited** than
+consultants claim `[C]` [s466]; and **open rate has meant something different since 2021**, as
+Apple MPP pre-fetches images for protected users. Use clicks.
 
 ### "Long copy outsells short copy"
 

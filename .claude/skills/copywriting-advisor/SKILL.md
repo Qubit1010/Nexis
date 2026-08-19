@@ -22,11 +22,14 @@ description: >
   real", "does button colour matter", "long copy or short copy", "why isn't this page
   converting", "why did our A/B test win then stop working", "explain AIDA vs PAS", "does
   social proof actually work", "will urgency backfire", "can we say this in an ad".
-  Built research-first on a 314-source cited 2026 corpus, 173 confirmed against 141
-  practitioner, with every claim tiered. Its most valuable output is refusal: the eight-second
-  attention span is fabricated, the fold claim is false as stated, no confirmed source supports
-  "long copy outsells short", the $300M button was never a controlled experiment, and message
-  framing makes far less practical difference than the industry sells.
+  Built research-first on a 494-source cited 2026 corpus across three tiers, 256 confirmed /
+  75 craft / 163 practitioner, with every claim tagged. Its most valuable output is refusal:
+  the eight-second attention span is fabricated and the classroom claim behind it does not
+  survive review either, the fold claim is false as stated, no confirmed source supports "long
+  copy outsells short", the $300M button was never a controlled experiment, and message framing
+  makes far less practical difference than the industry sells. It corrects in both directions:
+  email subject-line personalisation IS real at roughly 20% from randomized field experiments,
+  even though the 26% everyone quotes is a vendor number.
   Owns the corpus that copy-conversion cites. To actually WRITE or AUDIT client copy use
   copy-conversion. For articles and blogs use blog-writer. For the voice itself use
   brand-voice. For NexusPoint's own outreach use sales-playbook or marketing-advisor.
@@ -45,7 +48,7 @@ for `copy-conversion`.
 
 ## Read once (provenance and honesty)
 
-- Built on a **422-source cited 2026 corpus**, **211 confirmed / 66 craft / 145
+- Built on a **494-source cited 2026 corpus**, **256 confirmed / 75 craft / 163
   practitioner**, from 29 deep research passes. Master document:
   `references/research-synthesis.md` (Q1-Q29). Audit trail: `_research/sources.json`. Every
   `[sN]` resolves.
@@ -60,9 +63,12 @@ for `copy-conversion`.
   most-read words" - none of it sourced.
 - **Never present a `[P]` number to a client as measured fact**, and never quote a number that
   is in neither the corpus nor a live query.
-- **Three corpus weaknesses to state when they are relevant**, not to hide: email evidence is
-  almost entirely vendor-published, platform character limits have no confirmed source, and
-  Baymard did not retrieve. Details in the synthesis header.
+- **Corpus corrected 2026-08-15.** Seven passes had run under the wrong search mode (a
+  `research` skill regex matched the bare word "email" and forced entity/people search), so
+  earlier versions of this skill wrongly reported email as the weakest section. Re-run, the
+  corpus went 422 -> 494 sources and email went 0 -> 21 confirmed. Remaining honest gaps:
+  character limits have no confirmed source by nature, Baymard did not retrieve, and the craft
+  tier is thin on video.
 - **This skill does not give legal advice.** Q20 covers FTC endorsement and substantiation
   rules from primary sources; that is a flag to raise with the client and their counsel, never
   a compliance opinion.
