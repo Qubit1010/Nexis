@@ -23,6 +23,15 @@ import argparse
 import mimetypes
 import subprocess
 from pathlib import Path
+
+# Windows consoles default to cp1252, which cannot encode the arrows in this script's
+# progress output. Without this, every run dies with UnicodeEncodeError before uploading
+# a single file -- including the unattended weekly task, which would fail silently.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
 from datetime import datetime, timezone
 
 # ── optional deps ─────────────────────────────────────────────────────────────
