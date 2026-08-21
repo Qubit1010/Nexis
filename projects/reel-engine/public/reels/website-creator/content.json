@@ -1,0 +1,33 @@
+{
+  "voiceScript": "Every client site used to start the same way. I'd eyeball the colors and guess a font. Most redesigns stop right there, and they miss the shadow system, the spacing scale, the motion timing. So I built something that reads the site instead. It scanned over two thousand elements in under two minutes and handed me the exact palette, type scale, and shadows as a file. I shipped eight sections in under four hundred lines of new code, for about a quarter in AI cost. Every pattern I solve once carries forward. Site ten ships faster than site two. Follow for more.",
+  "scenes": [
+    {
+      "id": "hook",
+      "voiceText": "Every client site used to start the same way. I'd eyeball the colors and guess a font. "
+    },
+    {
+      "id": "shallow",
+      "voiceText": "Most redesigns stop right there, and they miss the shadow system, the spacing scale, the motion timing. "
+    },
+    {
+      "id": "core",
+      "voiceText": "So I built something that reads the site instead. "
+    },
+    {
+      "id": "strata",
+      "voiceText": "It scanned over two thousand elements in under two minutes and handed me the exact palette, type scale, and shadows as a file. "
+    },
+    {
+      "id": "proof",
+      "voiceText": "I shipped eight sections in under four hundred lines of new code, for about a quarter in AI cost. "
+    },
+    {
+      "id": "compound",
+      "voiceText": "Every pattern I solve once carries forward. Site ten ships faster than site two. "
+    },
+    {
+      "id": "outro",
+      "voiceText": "Follow for more."
+    }
+  ]
+}

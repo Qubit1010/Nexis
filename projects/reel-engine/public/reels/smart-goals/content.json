@@ -1,0 +1,33 @@
+{
+  "voiceScript": "Ask most small business owners if their marketing is working and you get a shrug. Get more customers was never something you could check in a week. So I turn it into one number with a deadline. Forty qualified leads by the end of Q1. Then I break that number into a weekly target. Forty over twelve weeks is three to four leads a week, checked every Monday. Then I name the metric that actually predicts revenue, not the one that is easiest to screenshot. A goal you check in twelve weeks is a wish. A goal you check every Monday is a system. Follow for more.",
+  "scenes": [
+    {
+      "id": "shrug",
+      "voiceText": "Ask most small business owners if their marketing is working and you get a shrug. "
+    },
+    {
+      "id": "vague",
+      "voiceText": "Get more customers was never something you could check in a week. "
+    },
+    {
+      "id": "crystal",
+      "voiceText": "So I turn it into one number with a deadline. Forty qualified leads by the end of Q1. "
+    },
+    {
+      "id": "divide",
+      "voiceText": "Then I break that number into a weekly target. Forty over twelve weeks is three to four leads a week, checked every Monday. "
+    },
+    {
+      "id": "metric",
+      "voiceText": "Then I name the metric that actually predicts revenue, not the one that is easiest to screenshot. "
+    },
+    {
+      "id": "punch",
+      "voiceText": "A goal you check in twelve weeks is a wish. A goal you check every Monday is a system. "
+    },
+    {
+      "id": "outro",
+      "voiceText": "Follow for more."
+    }
+  ]
+}

@@ -7,7 +7,7 @@
  *   npx tsx scripts/daily-digest.ts                 # digest today, log + email
  *   npx tsx scripts/daily-digest.ts 2026-07-18      # a specific date
  *   npx tsx scripts/daily-digest.ts --no-email      # log to the sheet only
- *   npx tsx scripts/daily-digest.ts --schedule      # register the noon task
+ *   npx tsx scripts/daily-digest.ts --schedule      # register the 8am task
  *   npx tsx scripts/daily-digest.ts --unschedule    # remove it
  */
 import { config } from "dotenv";
@@ -229,13 +229,13 @@ function schedule(): void {
   const target = `"${join(__dirname, "run-digest.cmd")}"`;
   const r = spawnSync(
     "schtasks",
-    ["/Create", "/SC", "DAILY", "/ST", "12:00", "/TN", TASK_NAME, "/TR", target, "/F"],
+    ["/Create", "/SC", "DAILY", "/ST", "08:00", "/TN", TASK_NAME, "/TR", target, "/F"],
     { encoding: "utf-8" }
   );
   if (r.status === 0) {
-    console.log(`Scheduled task '${TASK_NAME}' daily at 12:00 (local time).`);
+    console.log(`Scheduled task '${TASK_NAME}' daily at 08:00 (local time).`);
     console.log(`Target: ${target}`);
-    console.log("Note: the machine must be on and signed in at noon for it to fire.");
+    console.log("Note: the machine must be on and signed in at 8am for it to fire.");
   } else {
     console.error(`Failed to schedule: ${r.stderr || r.stdout}`);
     process.exit(1);

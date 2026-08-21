@@ -124,6 +124,14 @@ def pick_socials(results: list[dict], *, allow_company: bool = False, verify_con
         hit = url_filters.social_profile(url, allow_company=allow_company)
         if hit:
             platform, cu = hit
+            # allow_company=True means we are filling the COMPANY LinkedIn column. The flag only
+            # PERMITS /company/ pages -- it never rejected /in/ ones, so a person's profile passed
+            # straight into the company slot (measured live 2026-08-13: 36 of 164, 22%). That is the
+            # wrong column: leads-to-crm pushes a Company-type row off this value and writes
+            # brand-voice copy aimed at what is actually a human. The founder pass finds founders
+            # on its own; the company column takes company pages only.
+            if platform == "linkedin" and allow_company and url_filters.is_person_linkedin(cu):
+                continue
             out.setdefault(platform, cu)
     return out
 
@@ -172,6 +180,27 @@ def _verify_founder_context(company: str, ctx: str) -> bool:
     return bool(pat.search(ctx))
 
 
+# "…founder of Acme is Dr. Jane Doe" -> captures the name AFTER the role, the shape a synthesized
+# search answer actually uses. Honorifics are consumed so they don't eat the capture.
+# No "." inside the name tokens: with it, "…is Jamin Mootz. Optimal is a…" captured
+# "Jamin Mootz. Optimal", bridging the sentence boundary into the next clause.
+_FOUNDER_IS_NAME = re.compile(
+    _FOUNDER_WORDS_CASED + r"[^.]{0,80}?\bis\s+(?:Dr\.?|Mr\.?|Mrs\.?|Ms\.?|Prof\.?)?\s*"
+    r"([A-Z][\w'-]+(?:\s+(?:bin|bint|al|van|von|de|der|del|da|di|du|la|le)\s+[A-Z][\w'-]+|"
+    r"\s[A-Z][\w'-]+){0,3})")
+
+# Articles/determiners and role words are never a person's name. Without this guard the leading
+# "The" of "The founder of…" is a syntactically valid capture for the name pattern.
+_NOT_A_NAME = {"the", "a", "an", "its", "his", "her", "their", "this", "that", "founder",
+               "co-founder", "owner", "ceo", "president", "principal", "founders", "company"}
+
+
+def _plausible_person(name: str) -> bool:
+    """Reject an article, a bare role word, or a single letter posing as a founder name."""
+    n = (name or "").strip()
+    return bool(n) and len(n) > 2 and n.split()[0].lower() not in _NOT_A_NAME
+
+
 def _founder_from_answer(answer: str, company: str) -> dict:
     """Parse a research 'answer' string (Tavily's own synthesized answer) for an explicit
     'Name is/was the founder/CEO/... of ...' statement, then require the company's distinctive token to
@@ -187,8 +216,18 @@ def _founder_from_answer(answer: str, company: str) -> dict:
     core_pat = re.compile(_flexible_token(core), re.I)
     for m in name_pat.finditer(answer):
         tail = answer[m.end(): m.end() + 60]
-        if core_pat.search(tail):
+        if core_pat.search(tail) and _plausible_person(m.group(1).strip()):
             return {"name": m.group(1).strip(), "source_text": answer[:300]}
+    # Reversed phrasing: "The founder of <Company> is <Name>." The pattern above only reads
+    # "<Name> ... founder", so on this shape it matched the leading article and returned the literal
+    # word "The" as the founder -- 10 rows live on 2026-08-13, each of whose answer text plainly
+    # named the real person ("The founder of Optimal IT Solutions ... is Jamin Mootz").
+    for m in _FOUNDER_IS_NAME.finditer(answer):
+        name = m.group(1).strip()
+        # The company sits INSIDE this match ("founder of <Company> is <Name>"), so the window has
+        # to span the match, not just precede it.
+        if _plausible_person(name) and core_pat.search(answer[max(0, m.start() - 60): m.end()]):
+            return {"name": name, "source_text": answer[:300]}
     return {}
 
 
@@ -503,9 +542,40 @@ def demo():
     assert len(cands) == 1 and cands[0]["name"] == "Jane Doe", cands
     assert cands[0]["linkedin"] == "https://www.linkedin.com/in/jane-doe", cands
 
+    # A person's /in/ profile must NEVER land in the COMPANY LinkedIn column. The assertion above
+    # passed all along only because /company/ happens to precede /in/ in `results` and setdefault
+    # keeps the first hit -- so it never actually exercised the reject. Order reversed here, plus
+    # the person-only case, which is where it really bit (36 of 164 rows live, 2026-08-13).
+    reversed_order = [results[4], results[3]]                      # /in/ first, then /company/
+    assert pick_socials(reversed_order, allow_company=True).get("linkedin") \
+        == "https://www.linkedin.com/company/acme", "company column must skip /in/ and keep /company/"
+    assert "linkedin" not in pick_socials([results[4]], allow_company=True), \
+        "person-only -> company LinkedIn stays blank, never a personal profile"
+    # ...but the founder path (allow_company=False) must still accept /in/.
+    assert pick_socials([results[4]]).get("linkedin") == "https://www.linkedin.com/in/jane-doe"
+
     # verify_context: same-named-stranger rejection (the Jamie Rourke failure mode).
     assert pick_socials(results, verify_context="acme").get("instagram") == "https://instagram.com/acme.co"
     assert not pick_socials(results, verify_context="wisecorp").get("instagram")
+
+    # _founder_from_answer: a synthesized answer usually phrases it "The founder of X is <Name>",
+    # the reverse of the "<Name> is the founder" shape the original pattern assumed -- so it captured
+    # the leading article and wrote the literal word "The" as the founder on 10 live rows (2026-08-13),
+    # every one of which named the real person in the very same sentence.
+    assert _founder_from_answer(
+        "The founder of Optimal IT Solutions Digital Marketing in Texas City, Texas, is Jamin Mootz. "
+        "Optimal is a digital marketing agency.", "Optimal IT Solutions").get("name") == "Jamin Mootz"
+    # honorific consumed, multi-particle name kept whole
+    assert _founder_from_answer(
+        "The founder of The Portal Agency Software Development in Riyadh is Dr. Sultan bin Saleh Al-Salem.",
+        "The Portal Agency").get("name") == "Sultan bin Saleh Al-Salem"
+    # the name must not bridge a sentence boundary into the next clause
+    assert _founder_from_answer("The founder of Zamratech Web Development is Rao. The company was founded in 2012.",
+                                "Zamratech").get("name") == "Rao"
+    assert _plausible_person("Jane Doe") and not _plausible_person("The") and not _plausible_person("a")
+    # original phrasing still works, and a DIFFERENT company still yields nothing
+    assert _founder_from_answer("Jane Doe is the founder of Acme Design, a studio.", "Acme Design").get("name") == "Jane Doe"
+    assert _founder_from_answer("The founder of Wisecorp is Bob Smith.", "Acme Design") == {}
 
     # _company_core: brand-first, not longest-token; fully-generic names yield "" (refuse to guess).
     assert _company_core("Meridian Rank") == "meridian", _company_core("Meridian Rank")

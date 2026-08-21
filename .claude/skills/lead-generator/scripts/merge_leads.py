@@ -113,6 +113,14 @@ def _clean_reviews(val):
     return f"{int(n)} reviews" if n is not None else ""
 
 
+def _clean_location(val):
+    """A location with no letters isn't one. DesignRush's scrape leaks a numeric artifact
+    ('-92', '-6') into the Location column on 479/536 rows; blank it rather than write junk
+    onto Main, where it would poison the name+city dedup key and any later geo filter."""
+    v = (val or "").strip()
+    return v if re.search(r"[A-Za-z]", v) else ""
+
+
 def normalize_row(row, col_map):
     company = _cell(row, col_map, "company")
     if not company:
@@ -123,7 +131,7 @@ def normalize_row(row, col_map):
         "rating": _cell(row, col_map, "rating"),
         "reviews": _clean_reviews(_cell(row, col_map, "reviews")),
         "experience": _cell(row, col_map, "experience"),
-        "location": _cell(row, col_map, "location"),
+        "location": _clean_location(_cell(row, col_map, "location")),
         "phone": _clean_phone(_cell(row, col_map, "phone")),
         "note": _cell(row, col_map, "note"),
         "website": _cell(row, col_map, "website"),
@@ -161,51 +169,86 @@ def ensure_main_header(sheet_id, main_tab):
 
 
 def existing_keys(sheet_id, main_tab):
+    """(tiered identity keys, normalized company names) for everything already on Main."""
     rows = sheets.read_values(sheet_id, main_tab)
     if not rows:
-        return set()
+        return set(), set()
     col_map = build_col_map(rows[0])
-    keys = set()
+    keys, names = set(), set()
     for row in rows[1:]:
         rec = normalize_row(row, col_map)
         if rec:
             keys.add(dedup_key(rec))
-    return keys
+            names.add(_norm_name(rec["company"]))
+    return keys, names
 
 
-def merge(sheet_id, main_tab, requested_tabs):
+def merge(sheet_id, main_tab, requested_tabs, per_tab_limit=None):
+    """Append new uniques from each source tab to Main, best-scoring first.
+
+    Duplicates are caught on the tiered identity key OR the normalized company name. The name
+    tier is load-bearing for directory tabs: Clutch and Sortlist export no website and no usable
+    city (Clutch stamps every row 'World Wide'), so their key collapses to name+city and matches
+    nothing on Main. Measured on this batch, key-only caught 110 duplicates and missed 266 that
+    are the same agency listed under a different directory's city string.
+    """
     header = ensure_main_header(sheet_id, main_tab)
-    seen = existing_keys(sheet_id, main_tab)
+    seen, seen_names = existing_keys(sheet_id, main_tab)
     tabs = source_tab_titles(sheet_id, main_tab, requested_tabs)
 
-    per_tab, dropped, uniques = {}, 0, []
+    per_tab, dropped, uniques = {}, [], []
     for tab in tabs:
         rows = sheets.read_values(sheet_id, tab)
         if not rows:
             per_tab[tab] = 0
             continue
         col_map = build_col_map(rows[0])
-        count = 0
-        for row in rows[1:]:
-            rec = normalize_row(row, col_map)
-            if not rec:
-                continue
-            count += 1
-            key = dedup_key(rec)
-            if key in seen:
-                dropped += 1
+        recs = [r for r in (normalize_row(row, col_map) for row in rows[1:]) if r]
+        # Best-first, so a per-tab quota keeps the strongest leads, not the top of the scrape.
+        # Ranking is only meaningful WITHIN a directory -- DesignRush exports no review counts at
+        # all, so its rows would lose every cross-directory comparison on volume alone.
+        recs.sort(key=lambda r: score.score_one(r["rating"], r["reviews"]), reverse=True)
+        kept = 0
+        for rec in recs:
+            if per_tab_limit is not None and kept >= per_tab_limit:
+                break
+            key, name = dedup_key(rec), _norm_name(rec["company"])
+            matched = "website/phone/city" if key in seen else ("company name" if name in seen_names else "")
+            if matched:
+                dropped.append((tab, rec, matched))
                 continue
             seen.add(key)
+            seen_names.add(name)
             rec["_source"] = tab
             uniques.append(rec)
-        per_tab[tab] = count
+            kept += 1
+        per_tab[tab] = len(recs)
 
     if uniques:
         out_rows = [[str(rec.get(COL_TO_KEY.get(h, ""), "") or "") for h in header] for rec in uniques]
-        if not sheets.append_rows(sheet_id, main_tab, out_rows):
+        # batch_size=5 for the same measured reason sort_main_by_score uses it: Note runs to ~3.9K
+        # chars/row and a bigger batch blows past Windows' ~32K CreateProcess limit.
+        if not sheets.append_rows(sheet_id, main_tab, out_rows, batch_size=5):
             raise RuntimeError(f"Append failed for {sheet_id} [{main_tab}].")
-    return {"tabs": per_tab, "dropped": dropped, "appended": len(uniques),
-            "appended_by_tab": _count_by(uniques)}
+    return {"tabs": per_tab, "dropped": len(dropped), "dropped_rows": dropped,
+            "appended": len(uniques), "appended_by_tab": _count_by(uniques)}
+
+
+def log_duplicates(sheet_id, dup_tab, dropped):
+    """Append each dropped duplicate to the Duplicates tab with what it matched on. Dropping
+    leads on a name heuristic is lossy, so it stays auditable -- the tab and this schema
+    (Source Tab / Matched Existing Lead / Matched On / ...) already existed in the sheet."""
+    if not dropped:
+        return 0
+    rows = sheets.read_values(sheet_id, f"{dup_tab}!1:1")
+    header = rows[0] if rows and rows[0] else ["Source Tab", "Matched Existing Lead", "Matched On"] + MAIN_COLUMNS
+    out = []
+    for tab, rec, matched in dropped:
+        lead = {"Source Tab": tab, "Matched Existing Lead": rec["company"], "Matched On": matched}
+        out.append([str(lead.get(h) or rec.get(COL_TO_KEY.get(h, ""), "") or "") for h in header])
+    if not sheets.append_rows(sheet_id, dup_tab, out, batch_size=5):
+        raise RuntimeError(f"Duplicate-log append failed for {sheet_id} [{dup_tab}].")
+    return len(out)
 
 
 def _count_by(uniques):
@@ -380,6 +423,21 @@ def demo():
     assert slug_to_name("https://clutch.co/profile/bop-design") == "Bop Design"
     assert slug_to_name("https://example.com/not-a-directory-link") == ""
     assert slug_to_name("") == ""
+    # location junk: a value with no letters is not a location (DesignRush's '-92'), blank it
+    assert _clean_location("-92") == "" and _clean_location("New Jersey") == "New Jersey"
+    assert _clean_location("") == ""
+    # name-tier dedup catches what the key tier structurally cannot: Clutch stamps every row
+    # 'World Wide' and exports no website, so the same agency under two directories keeps two
+    # different keys but ONE normalized name.
+    clutch = {"company": "League Design Agency", "website": "", "phone": "", "location": "World Wide"}
+    other = {"company": "League Design Agency", "website": "", "phone": "", "location": "Warsaw, Poland"}
+    assert dedup_key(clutch) != dedup_key(other), "city differs, so the key tier misses it"
+    assert _norm_name(clutch["company"]) == _norm_name(other["company"]), "name tier catches it"
+    # per-tab quota keeps the BEST rows, not the first ones scraped
+    recs = [{"company": f"C{i}", "rating": r, "reviews": v}
+            for i, (r, v) in enumerate([("4.0", "5"), ("5.0", "120"), ("4.9", "80")])]
+    recs.sort(key=lambda r: score.score_one(r["rating"], r["reviews"]), reverse=True)
+    assert [r["company"] for r in recs[:2]] == ["C1", "C2"], recs
     print("merge_leads self-check OK")
 
 
@@ -388,6 +446,9 @@ def main():
     p.add_argument("--sheet-id")
     p.add_argument("--main-tab", default="Main")
     p.add_argument("--source-tabs", default="", help="Comma list; default = all tabs except Main.")
+    p.add_argument("--per-tab-limit", type=int, default=None,
+                   help="Keep at most N new uniques per source tab, best-scoring first (e.g. 50 x 4 tabs = 200).")
+    p.add_argument("--dup-tab", default="", help="Tab name: log every dropped duplicate there with what it matched on.")
     p.add_argument("--sort", action="store_true", help="After merging, sort all of Main by the rating+review score (best first).")
     p.add_argument("--dedupe-existing", action="store_true",
                     help="Collapse rows already in Main that share the same Link (accumulated across past sessions), keeping the most-resolved row per group.")
@@ -409,10 +470,14 @@ def main():
         print(f"Backfilled {r['filled']} company names on [{args.backfill_names}] ({r['unrecoverable']} unrecoverable, no Link to derive from).")
 
     requested = [t for t in args.source_tabs.split(",")] if args.source_tabs else None
-    result = merge(args.sheet_id, args.main_tab, requested)
+    result = merge(args.sheet_id, args.main_tab, requested, per_tab_limit=args.per_tab_limit)
     print(f"Read per tab: {result['tabs']}")
     print(f"Duplicates dropped: {result['dropped']}")
     print(f"Uniques appended: {result['appended']}  {result['appended_by_tab']}")
+
+    if args.dup_tab:
+        n = log_duplicates(args.sheet_id, args.dup_tab, result["dropped_rows"])
+        print(f"Logged {n} dropped duplicates to [{args.dup_tab}].")
 
     if args.dedupe_existing:
         n = dedupe_main_by_link(args.sheet_id, args.main_tab)

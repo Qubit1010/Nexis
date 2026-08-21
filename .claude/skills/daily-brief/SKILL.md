@@ -2,7 +2,7 @@
 name: daily-brief
 description: |
   Generate and manage the daily AI/tech intelligence brief, the Practical AI (SMB
-  marketing) brief, and the YouTube Intelligence brief, plus the scheduled noon
+  marketing) brief, and the YouTube Intelligence brief, plus the scheduled 8am
   digest that logs both to a Google Sheet and emails it.
   Use this skill when the user asks to generate a brief, check AI news, see what's
   happening in AI/tech today, run the news pipeline, generate Practical AI, run the
@@ -80,13 +80,13 @@ The Practical AI page has a **"Look up any tool"** search (`/api/practical/searc
 filter keeps GitHub issues and forum threads out. Older lookup rows that predate the
 research rebuild keep their "Grounded via NotebookLM" badge; new rows don't use it.
 
-## Scheduled Daily Digest (noon) — Sheet + email
+## Scheduled Daily Digest (8am) — Sheet + email
 
 A once-a-day job that generates both briefs, logs a one-row-per-day summary to a Google
 Sheet, and emails the digest to `DIGEST_EMAIL` (defaults to the gws-authed account).
 
 ```bash
-# Register / remove the Windows scheduled task (fires daily at 12:00 local time)
+# Register / remove the Windows scheduled task (fires daily at 08:00 local time)
 npx tsx scripts/daily-digest.ts --schedule
 npx tsx scripts/daily-digest.ts --unschedule
 
@@ -98,7 +98,7 @@ npx tsx scripts/daily-digest.ts --no-email          # log to the sheet only
 
 - **Scheduled target:** `scripts/run-digest.cmd` runs `daily-cron` -> `daily-tools` ->
   `daily-digest` in order, so the sheet + email reflect fresh briefs. The task
-  (`NexisDailyBrief`) needs the machine on and signed in at noon.
+  (`NexisDailyBrief`) needs the machine on and signed in at 8am.
 - **Sheet:** self-bootstrapping — the first run creates "NexusPoint Daily Brief" (two
   tabs, News Brief + Practical AI) and remembers its ID in `data/digest-sheet.json`.
   One row per day per tab, upserted (re-running a date overwrites that day's row). Pin a
@@ -145,6 +145,6 @@ Dashboard: `/youtube/[date]`. Full details in the `youtube-daily-brief` skill.
 | "No articles fetched" | Every research query failed — check internet + keys; research.py fails open per query and exits 0 even when all engines fail |
 | Brief header shows a low source count | Expected when few results are cross-corroborated; the stat now counts real publisher domains |
 | Digest email didn't arrive | Run `npx tsx scripts/daily-digest.ts` by hand and read the output; gws must be authenticated (`gws` account = the digest recipient default) |
-| Scheduled task didn't fire | Machine must be on + signed in at noon; check `schtasks /Query /TN NexisDailyBrief` |
+| Scheduled task didn't fire | Machine must be on + signed in at 8am; check `schtasks /Query /TN NexisDailyBrief` |
 | "ANTHROPIC_API_KEY is not set" | Add the key to `projects/daily-news-brief/.env` |
 | Build errors after changes | `npm run build` to surface TypeScript errors |

@@ -212,7 +212,7 @@ def _tier(rv: dict) -> str:
 
 
 def write_founders_from_queue(sheet_id: str, tab: str, jsonl_path: Path, tiers: set[str],
-                              *, dry_run: bool = False) -> dict:
+                              *, dry_run: bool = False, rows: tuple[int, int] | None = None) -> dict:
     """Write the founder guesses from the durable review queue onto the sheet -- the human-confirm step,
     now that Aleem has reviewed. `tiers` selects which confidence tiers to write (website / search_low /
     search_ambiguous). Founder name + any found founder socials go to their columns; the row's status is
@@ -224,6 +224,12 @@ def write_founders_from_queue(sheet_id: str, tab: str, jsonl_path: Path, tiers: 
         if line.strip():
             rv = json.loads(line)
             merged[rv.get("row")] = rv
+    # The queue accumulates across ALL past sessions, so an unscoped tier write reaches rows this
+    # batch never touched. Writing the loose search_* tiers over the whole queue was measured live
+    # (2026-08-13) to overwrite 8 older rows whose existing founder was BETTER than the guess
+    # replacing it (Goji Labs: David Barlev -> "Adam Sumner"). --rows bounds the blast radius.
+    if rows:
+        merged = {r: v for r, v in merged.items() if rows[0] <= r <= rows[1]}
 
     header = sheets.read_values(sheet_id, f"{tab}!1:1")[0]
     header = W.ensure_columns(sheet_id, tab, header)
@@ -459,7 +465,8 @@ def main():
         tiers = all_tiers if args.write_founders.strip().lower() == "all" else \
             {t.strip() for t in args.write_founders.split(",") if t.strip()}
         out = write_founders_from_queue(args.sheet_id, args.tab,
-                                        args.review_out.with_suffix(".jsonl"), tiers, dry_run=args.dry_run)
+                                        args.review_out.with_suffix(".jsonl"), tiers,
+                                        dry_run=args.dry_run, rows=args.rows)
         print(json.dumps(out, indent=2, ensure_ascii=False))
         return
 

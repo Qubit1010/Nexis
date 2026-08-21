@@ -1,0 +1,33 @@
+{
+  "voiceScript": "The Claude Skills ecosystem crossed two million listed entries this year, and almost nobody is talking about the part that should worry you. A skill looks like a folder of instructions. It is not. It is code that runs with access to your files, your shell, and your API keys. Snyk audited almost four thousand public skills in February. Thirty six percent had a security flaw. Thirteen percent had a critical one. Seventy six were confirmed malicious. Credential theft, backdoors, data leaks. I run six collections myself, and I could not tell you what every script inside them does. Treat it like installing software. Follow for more.",
+  "scenes": [
+    {
+      "id": "hook",
+      "voiceText": "The Claude Skills ecosystem crossed two million listed entries this year, and almost nobody is talking about the part that should worry you. "
+    },
+    {
+      "id": "disguise",
+      "voiceText": "A skill looks like a folder of instructions. It is not. "
+    },
+    {
+      "id": "reveal",
+      "voiceText": "It is code that runs with access to your files, your shell, and your API keys. "
+    },
+    {
+      "id": "audit",
+      "voiceText": "Snyk audited almost four thousand public skills in February. Thirty six percent had a security flaw. Thirteen percent had a critical one. "
+    },
+    {
+      "id": "malicious",
+      "voiceText": "Seventy six were confirmed malicious. Credential theft, backdoors, data leaks. "
+    },
+    {
+      "id": "punch",
+      "voiceText": "I run six collections myself, and I could not tell you what every script inside them does. Treat it like installing software. "
+    },
+    {
+      "id": "outro",
+      "voiceText": "Follow for more."
+    }
+  ]
+}

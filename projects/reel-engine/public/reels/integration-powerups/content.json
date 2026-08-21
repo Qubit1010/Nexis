@@ -1,0 +1,33 @@
+{
+  "voiceScript": "Most people think a smarter model is what makes an AI agent useful. Wrong lever. Mine got useful the day it could touch my Gmail. Same model, it just got access. It reads my email, writes into my sheets, pulls live research, builds calendar events, moves files. One protocol does that, MCP, and it is barely two years old. Already adopted by OpenAI and Google DeepMind. Already handed to the Linux Foundation. Over seventeen thousand public servers now. So I stopped asking how smart an agent is. I ask how many of my real tools it can reach. Follow for more.",
+  "scenes": [
+    {
+      "id": "hook",
+      "voiceText": "Most people think a smarter model is what makes an AI agent useful. Wrong lever. "
+    },
+    {
+      "id": "access",
+      "voiceText": "Mine got useful the day it could touch my Gmail. Same model, it just got access. "
+    },
+    {
+      "id": "reach",
+      "voiceText": "It reads my email, writes into my sheets, pulls live research, builds calendar events, moves files. "
+    },
+    {
+      "id": "standard",
+      "voiceText": "One protocol does that, MCP, and it is barely two years old. "
+    },
+    {
+      "id": "ratified",
+      "voiceText": "Already adopted by OpenAI and Google DeepMind. Already handed to the Linux Foundation. Over seventeen thousand public servers now. "
+    },
+    {
+      "id": "punch",
+      "voiceText": "So I stopped asking how smart an agent is. I ask how many of my real tools it can reach. "
+    },
+    {
+      "id": "outro",
+      "voiceText": "Follow for more."
+    }
+  ]
+}
