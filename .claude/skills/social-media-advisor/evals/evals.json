@@ -1,0 +1,109 @@
+{
+  "skill_name": "social-media-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "How does the LinkedIn algorithm work in 2026?",
+      "expected_output": "Should answer from the corpus but keep the three registers apart rather than flattening them into one confident account: what LinkedIn itself documents (tagged [P*], quoted with a retrieval date), what vendors measured on their own customers (tagged [P], attributed), and what research establishes about algorithmic feeds as a class (tagged [C]). It must state plainly that no confirmed source establishes how LinkedIn ranks a post, because the ranker is proprietary and undocumented. It must not present a vendor number as measured fact.",
+      "files": [],
+      "expectations": [
+        "Separates [P*] platform statements from [P] vendor measurement from [C] research on feeds generally",
+        "States outright that no confirmed source establishes LinkedIn's actual ranking",
+        "Quotes any first-party platform claim with a retrieval date",
+        "Does not assert a specific reach-penalty or dwell-time multiple as fact",
+        "Does not hand off to content-advisor, which owns the post rather than the platform"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What's the best time to post on Instagram?",
+      "expected_output": "A refusal, not a table. Should say the best-time-to-post tables have no traceable controlled-test origin, explain that they are typically derived from a vendor's own customer base and confound audience composition with time, and redirect to what is actually knowable: the client's own audience-activity data in their native analytics. Should not produce a day-by-day grid of optimal hours.",
+      "files": [],
+      "expectations": [
+        "Refuses to give a best-time table and says why",
+        "Names the provenance problem rather than just saying 'it depends'",
+        "Redirects to the client's own native analytics as the only real answer",
+        "Does not soften into 'studies suggest mornings perform better'",
+        "Offers what IS defensible instead of leaving the user with nothing"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our client's Facebook page reach has collapsed. What do we do?",
+      "expected_output": "Should diagnose before prescribing: distinguish a platform-wide decline in unpaid Page distribution (structural, not fixable by posting better) from an account-specific problem, and say which one the evidence supports. Should be willing to conclude that a Facebook Page is the wrong surface for this client and that Groups or another platform is the better answer, rather than assuming the goal is to rescue the Page.",
+      "files": [],
+      "expectations": [
+        "Separates structural platform-wide decline from an account-specific cause",
+        "Does not open with generic 'post more engaging content' advice",
+        "Is willing to recommend abandoning the Page as a surface",
+        "Cites the tier of any reach number it gives",
+        "Names what would need measuring to tell the two causes apart"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "What social platforms should client-projects/rw-winship be on?",
+      "expected_output": "Should read 07-strategic-foundation.md and 08-audience-persona.md from that folder and ground the recommendation in the actual business and audience rather than answering generically. Should state that 13-brand-strategy.md, 14-brand-voice.md and 18-content-strategy.md are absent from that folder, offer the producing skills by name, then proceed anyway with the affected reasoning labelled [assumption]. Must not stall waiting for them.",
+      "files": [],
+      "expectations": [
+        "Reads 07 and 08 and uses the real business and audience, not a generic answer",
+        "Names 13, 14 and 18 as missing and offers brand-strategy, brand-voice and content-strategy by name",
+        "Proceeds anyway with gaps labelled [assumption]",
+        "Recommends against at least one platform rather than listing all ten",
+        "Does not write a numbered client file - this skill is advisory and produces no artifact"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Marketing-advisor says links in the post body cost you 60-68% reach on LinkedIn. Is that true?",
+      "expected_output": "Should name the disagreement rather than resolving it silently or deferring to the sibling skill. The number is practitioner-tier; content-advisor and copy-conversion already classify this class of claim as unsourced convention. Should explain which register the figure comes from, that no confirmed source establishes it, and that the two skills genuinely differ on how firm it is - then say what to do given the uncertainty.",
+      "files": [],
+      "expectations": [
+        "Identifies the claim as practitioner-tier, not measured fact",
+        "Names the disagreement between the skills explicitly instead of papering over it",
+        "Does not simply defer to marketing-advisor because it is the older skill",
+        "Does not claim the number is definitively false either - the honest verdict is no traceable source",
+        "Gives an actionable recommendation despite the uncertainty"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Write me a LinkedIn post about our new AI automation service.",
+      "expected_output": "Should recognise this as execution, not advice, and route it rather than writing the post. The right destinations are content-production or post-creator for NexusPoint's own content, or copy-conversion if the post's job is to make someone act. Should state the handoff rather than silently stopping or quietly writing the post anyway.",
+      "files": [],
+      "expectations": [
+        "Does not write the post",
+        "Routes to a named skill rather than a vague suggestion",
+        "States the handoff explicitly",
+        "Correctly identifies this as execution rather than platform advice",
+        "Offers what it CAN contribute if useful, e.g. how the platform will treat the format"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "How do I grow a TikTok account from zero for a local business?",
+      "expected_output": "Should give platform-specific growth mechanics for TikTok drawn from the corpus, tagging first-party TikTok documentation as [P*] with dates and practitioner tactics as [P]. Should be honest that TikTok's For You ranking is undocumented in detail. Should also address whether TikTok is right for a local business at all rather than assuming the premise, and give a realistic effort-to-return read.",
+      "files": [],
+      "expectations": [
+        "Gives TikTok-specific mechanics, not generic social media advice",
+        "Tags first-party TikTok documentation as [P*] with a retrieval date",
+        "Questions the premise - whether TikTok suits a local business - rather than assuming it",
+        "States what about For You ranking is genuinely not knowable",
+        "Gives a realistic effort estimate rather than implying growth is straightforward"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Should we block AI crawlers, and does posting more often help reach?",
+      "expected_output": "Two questions with different owners. The AI-crawler question belongs to seo-technical or seo-authority-ai and should be routed there, not answered from this corpus. The posting-frequency question is this skill's: it should answer from the evidence tier on frequency and audience growth, and be honest that the relationship is weaker and more conditional than the industry implies.",
+      "files": [],
+      "expectations": [
+        "Splits the two questions rather than answering both from one corpus",
+        "Routes the AI-crawler half to seo-technical or seo-authority-ai by name",
+        "Answers the frequency half from the evidence tier with a tag",
+        "Does not overstate the frequency-to-growth relationship",
+        "States the handoff explicitly rather than silently dropping the first question"
+      ]
+    }
+  ]
+}

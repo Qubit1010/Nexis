@@ -1,6 +1,17 @@
 # Instagram & Reels Playbook 2026
 
-**Source basis:** Distilled from `references/research-synthesis.md` Q3 (234-source NotebookLM synthesis). Citations map to `_research/sources.json`. Covers organic Reels strategy for personal brand + B2B. For 1:1 DM copy/sequences, hand off to the **sales-playbook** skill (instagram DM sequences live there).
+> **Platform mechanics now live in `social-media-advisor`.** How Instagram ranks and
+> distributes across Feed, Reels, Stories and Explore, what changed in 2026, account
+> growth, engagement strategy and profile optimisation are owned there, tagged
+> `[C]`/`[P]`/`[P*]` by evidence tier. **What follows is NexusPoint's application of those
+> mechanics.** The two skills disagree on how firm the platform numbers below are; cite one
+> or the other, never both.
+
+**Source basis:** Distilled from `references/research-synthesis.md` Q3 (234-source NotebookLM synthesis). Covers organic Reels strategy for personal brand + B2B. For 1:1 DM copy/sequences, hand off to the **sales-playbook** skill (instagram DM sequences live there).
+
+**Citation caveat (verified 2026-08-21):** this file previously said citations map to
+`_research/sources.json`. **That file does not exist** — see the same note in
+`linkedin-playbook.md`. Treat numbers below as practitioner-tier until it is fixed.
 
 ---
 

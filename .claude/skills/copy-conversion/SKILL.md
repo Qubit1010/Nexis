@@ -104,6 +104,7 @@ It writes the words. It does not define the voice, and it does not decide the of
 | `sales-playbook` / `marketing-advisor` | NexusPoint's OWN cold email, DMs and outreach |
 | `proposal-generator` | Client proposals and offer construction |
 | `content-engine` / `post-creator` / `carousel` | Aleem's own social content: idea sourcing, the posting schedule, the repurposing flywheel. **Formatting a post for a platform lives HERE** (`platform-formatting.md`); what to post about lives there |
+| `social-media-advisor` | How a platform *ranks and distributes* a post, account and follower growth, engagement strategy, profile optimisation, community management, social listening. **Formatting still lives HERE**: character limits, the "see more" cut, per-platform structure. That skill explains the system the formatted post lands in |
 | `client-content-creator` | A broad multi-piece content package rather than conversion assets |
 
 State the handoff when you make it. Do not silently stop.

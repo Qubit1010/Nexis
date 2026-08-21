@@ -1,6 +1,19 @@
 # LinkedIn Playbook 2026 (Organic + Outreach Strategy)
 
-**Source basis:** Distilled from `references/research-synthesis.md` Q2 (234-source NotebookLM synthesis). Citations map to `_research/sources.json`. This file covers organic content strategy and outreach STRATEGY/benchmarks. For the actual 1:1 connection note + DM copy, hand off to the **sales-playbook** skill (clean split).
+> **Platform mechanics now live in `social-media-advisor`.** How LinkedIn ranks and
+> distributes, what changed in 2026, account growth, engagement strategy and profile
+> optimisation are owned there, tagged `[C]`/`[P]`/`[P*]` by evidence tier. **What follows
+> is NexusPoint's application of those mechanics**, meaning Aleem's baseline, his weekly
+> rhythm and his decision rules, and it is the right file for that. The two skills
+> disagree on how firm the platform numbers below are; cite one or the other, never both.
+
+**Source basis:** Distilled from `references/research-synthesis.md` Q2 (234-source NotebookLM synthesis). This file covers organic content strategy and outreach STRATEGY/benchmarks. For the actual 1:1 connection note + DM copy, hand off to the **sales-playbook** skill (clean split).
+
+**Citation caveat (verified 2026-08-21):** this file previously said citations map to
+`_research/sources.json`. **That file does not exist** — `_research/` holds only the raw
+`q1`-`q8` JSON with opaque NotebookLM UUIDs and no title/URL map, so `[sN]` here currently
+resolves to nothing. The prose is still sourced; the audit trail is not reconstructable
+without a rebuild. Treat numbers below as practitioner-tier until it is fixed.
 
 ---
 

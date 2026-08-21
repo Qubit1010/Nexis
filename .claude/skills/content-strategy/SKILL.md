@@ -97,6 +97,7 @@ Upstream is taken, never re-derived. Downstream is routed, never duplicated.
 | `copy-conversion` | Copy whose job is to make someone act, and how a post is formatted for a platform |
 | `brand-voice` / `brand-strategy` / `strategic-foundation` | The upstream documents, when they are missing |
 | `content-engine` / `post-creator` | NexusPoint's own content, Aleem's pillars, and the weekly posting schedule. **Not this skill** |
+| `social-media-advisor` | Platform-native mechanics this skill deliberately stops short of: how a platform ranks content, per-platform cadence and hashtag strategy, organic account and follower growth, engagement strategy, profile optimisation, community management and social listening. This skill decides *which channel and when*; that one explains *how the channel behaves* |
 | `marketing-advisor` | NexusPoint's own channel strategy, and pricing a content retainer |
 
 State the handoff when you make it. Do not silently stop.

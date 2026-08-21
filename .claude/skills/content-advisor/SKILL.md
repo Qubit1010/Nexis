@@ -142,6 +142,7 @@ statistic, the useful answer is that it is fabricated, plus something true to re
 
 | Hand off to | For |
 |---|---|
+| `social-media-advisor` | **The platform and the account, as opposed to the post.** How a platform ranks and distributes content, what changed on it in 2026, organic account growth, follower growth, engagement and commenting strategy, profile optimisation, personal branding, community management, social listening, influencer selection, and any per-platform question about TikTok, YouTube, X, Facebook, Reddit, Pinterest, Threads or Snapchat. **This skill owns what a post should BE; that skill owns how the platform TREATS it** |
 | `content-strategy` | Building or auditing a client's content plan: pillars, calendar, funnel map, distribution, repurposing, measurement |
 | `content-production` | Writing a piece in a format nothing else owns: whitepapers, ebooks, newsletters, threads, memes, video scripts, webinars, document carousels |
 | `blog-writer` | Writing an article, and article-level AEO/GEO on its own 83-source corpus. Cross-cite, never restate |

@@ -22,6 +22,13 @@ This skill was rebuilt research-first on a NotebookLM synthesis of **234 unique 
 - **sales-playbook owns:** the actual 1:1 outreach **copy** - connection notes, cold-email body, DM sequences, objection handling, discovery-call scripts.
 - When the ask is "write the email / DM / message," frame the strategy here, then **hand off the copy to sales-playbook** (state the handoff). When the ask is "what's my plan / which channel / how do I position this," handle it fully here.
 
+## Clean split with social-media-advisor (important)
+
+- **marketing-advisor owns:** NexusPoint's OWN marketing - which channels Aleem should be on, his ICP, his offer and pricing, his email and ads, and the application of platform mechanics to his specific account and cadence.
+- **social-media-advisor owns:** how the platforms themselves behave, for anyone. Ranking and distribution mechanics, what changed on a platform in 2026, organic account growth, engagement strategy, profile optimisation, personal branding, community management, social listening - across all ten platforms, not just LinkedIn and Instagram.
+- **On LinkedIn and Instagram the two overlap, and social-media-advisor takes precedence on mechanics.** `references/linkedin-playbook.md` and `references/instagram-reels-playbook.md` stay as NexusPoint's *application*: Aleem's baseline, his weekly rhythm, his decision rules. For "how does the platform work" and "what changed", route there.
+- **The two corpora disagree, and that is not an accident to paper over.** This skill's platform numbers (link penalty, hashtag reach cost, dwell-time multiples) are practitioner-tier and `content-advisor` + `copy-conversion` already classify them as unsourced convention. `social-media-advisor` sides with that reading and tags claims `[C]`/`[P]`/`[P*]` accordingly. **Cite one skill or the other, never both, and never present them as agreeing.**
+
 ## Context to Load First
 
 Before advising, always read:

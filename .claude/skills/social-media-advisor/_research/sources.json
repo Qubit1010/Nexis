@@ -1,0 +1,4652 @@
+{
+  "generated_at": "2026-08-21",
+  "method": "28 deep passes via the in-repo research skill: 18 evidence passes in scientific/general mode and 10 craft passes in practical mode, with a separate suffix per register so the craft half is not silently routed to the journals. Deduped by normalized URL, junk-filtered, per-domain capped, tiered confirmed / craft / practitioner",
+  "note": "inline [sN] in references/research-synthesis.md resolves on the `index` field. tier=craft means technique and worked examples only - never usable to support a factual claim, and invisible to factcheck mode. first_party=true is platform documentation, rendered [P*]: authoritative for what a platform requires or defines, never evidence that something works, and always quoted with a retrieval date | 9 indices (8,131,136,142,148,151,154,164,181) were purged 2026-08-21: the original q14 query led with the words 'social listening' and returned the Social Security Administration, dictionaries and a bar. Indices are deliberately NOT renumbered - resolution is by the `index` field, so gaps are correct and existing [sN] never repoint.",
+  "total_found": 440,
+  "source_count": 329,
+  "confirmed": 119,
+  "craft": 77,
+  "practitioner": 133,
+  "first_party": 60,
+  "sources": [
+    {
+      "index": 1,
+      "title": "Conceptualising and measuring social media engagement - PMC - NIH",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8354841",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach",
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 2,
+      "title": "Evolution of audience duplication networks among social networking sites: Exploring the influences of preferential attachment, audience size, and niche width",
+      "url": "https://journals.sagepub.com/doi/10.1177/1461444821993048",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach",
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 3,
+      "title": "A Meta-Analysis of the Effects of Brands’ Owned Social Media on Social Media Engagement and Sales",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/00222429221123250",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics",
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 4,
+      "title": "“Stop the unattainable ideal for an ordinary me!” fostering parasocial relationships with social media influencers: The role of self-discrepancy",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296321002630",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding",
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 5,
+      "title": "Finding Goldilocks Influencers: How Follower Count Drives Social Media Engagement",
+      "url": "https://journals.sagepub.com/doi/10.1177/00222429221125131",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility",
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 6,
+      "title": "Predictors of social media influencer marketing effectiveness: A comprehensive literature review and meta-analysis - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0148296324004958",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 7,
+      "title": "Measuring Customer Engagement in Social Media Marketing: A Higher-Order Model",
+      "url": "https://www.mdpi.com/0718-1876/16/7/145",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 9,
+      "title": "Influencer marketing effectiveness: A meta-analytic review",
+      "url": "https://link.springer.com/article/10.1007/s11747-024-01052-7",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 10,
+      "title": "examining sponsorship disclosure in influencer marketing ...",
+      "url": "https://www.emerald.com/apjba/article/doi/10.1108/APJBA-07-2025-0531/1357562/Influence-unveiled-examining-sponsorship",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 11,
+      "title": "Examining Algorithmic Curation on Social Media: An Empirical Audit of Reddit’s r/popular Feed",
+      "url": "https://arxiv.org/html/2502.20491v1",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 12,
+      "title": "Social media influencer marketing: foundations, trends, and ways forward",
+      "url": "https://link.springer.com/article/10.1007/s10660-023-09719-z",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 13,
+      "title": "The role of social media influencers in influencing consumers' imitation intentions",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2666954425000389",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 14,
+      "title": "Influencers with #NoFilter: How micro-celebrities use self-branding practices on Instagram",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0747563223002431",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 15,
+      "title": "sponsorship awareness negatively moderates influencer ...",
+      "url": "https://www.emerald.com/oir/article/doi/10.1108/OIR-07-2025-0512/1351738/What-This-post-is-sponsored-sponsorship-awareness",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 16,
+      "title": "View of Examining Algorithmic Curation on Social Media: An Empirical Audit of Reddit’s r/popular Feed",
+      "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/42644/50204",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 17,
+      "title": "Digital self-presentation in the process of personal branding: A qualitative ...",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3915363",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 18,
+      "title": "Crowdsourced audit of Twitter’s recommender systems",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10556069",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 19,
+      "title": "Personal Branding: Interdisciplinary Systematic Review and Research Agenda",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6258780",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 20,
+      "title": "A Comprehensive Overview of Micro-Influencer Marketing: Decoding the Current Landscape, Impacts, and Trends",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10968221",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 21,
+      "title": "Influencer marketing effectiveness: giving competence, ...",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/10548408.2024.2317748",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 22,
+      "title": "Leaders' personal branding and communication on professional social media platforms: motivations, processes, and outcomes | Journal of Brand Management | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1057/s41262-023-00332-x",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 23,
+      "title": "Trap of Social Media Algorithms: A Systematic Review of Research on Filter Bubbles, Echo Chambers, and Their Impact on Youth",
+      "url": "https://www.mdpi.com/2075-4698/15/11/301",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 24,
+      "title": "Influencer marketing unlocked: Understanding the value chains driving the creator economy",
+      "url": "https://link.springer.com/article/10.1007/s11747-024-01073-2",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 25,
+      "title": "Examining Algorithmic Curation on Social Media: An Empirical Audit of Reddit’s r/popular Feed\n\t\t\t\t\t\t\t| Proceedings of the International AAAI Conference on Web and Social Media",
+      "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/42644",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 26,
+      "title": "“Rich-Get-Richer”? Analyzing Content Creator Earnings Across Large Social Media Platforms",
+      "url": "https://arxiv.org/html/2509.26523v1",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 27,
+      "title": "What Makes Social Posts Go &ldquo;Hot&rdquo;? A Multimodal Analysis of Creator&ndash;Content&ndash;Timing Signals on a Visual Social Platform",
+      "url": "https://www.mdpi.com/0718-1876/21/1/24",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 28,
+      "title": "Advances in Social Media Research: Past, Present and Future",
+      "url": "https://link.springer.com/article/10.1007/s10796-017-9810-y",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 29,
+      "title": "Hashtags in 2025. Do They Work?",
+      "url": "https://www.ama.org/marketing-news/social-media-hashtags",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 30,
+      "title": "“Rich-get-richer”? Platform attention and earnings inequality ...",
+      "url": "https://academic.oup.com/icc/advance-article/doi/10.1093/icc/dtag044/8740661",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 31,
+      "title": "Understanding Different Types of Followers’ Engagement and the Transformation of Millennial Followers into Cosmetic Brand Evangelists",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10045032",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 32,
+      "title": "Hashtag recommendation for enhancing the popularity of social media posts",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9838373",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 33,
+      "title": "Shaping Opinions in Social Networks with Shadow Banning",
+      "url": "https://arxiv.org/abs/2310.20192",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 34,
+      "title": "Network inequality through preferential attachment, triadic ...",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13111714",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 35,
+      "title": "Are Social Media-Based Marketing Strategies the New Mechanisms for Attracting Consumers? A Quantitative Method-Based Approach",
+      "url": "https://www.mdpi.com/0718-1876/19/4/173",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 36,
+      "title": "Digital transformation: A review and research agenda",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0263237322001219",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 37,
+      "title": "More Accounts, Fewer Links:  How Algorithmic Curation Impacts Media Exposure in Twitter Timelines",
+      "url": "https://dl.acm.org/doi/10.1145/3449152",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 38,
+      "title": "Crowdsourced audit of Twitter’s recommender systems | Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-023-43980-4",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-10-05T00:00:00.000Z"
+    },
+    {
+      "index": 39,
+      "title": "Exposure to ideologically diverse news and opinion on Facebook | Science",
+      "url": "https://www.science.org/doi/10.1126/science.aaa1160",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 40,
+      "title": "Evaluating Content Exposure Bias in Social Networks",
+      "url": "https://dl.acm.org/doi/10.1145/3625007.3627724",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 41,
+      "title": "Auditing the audits: evaluating methodologies for social media recommender system audits | Applied Network Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s41109-024-00668-6",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-09-16T00:00:00.000Z"
+    },
+    {
+      "index": 42,
+      "title": "Impacts of Personalization on Social Network Exposure | Social Networks Analysis and Mining",
+      "url": "https://dl.acm.org/doi/10.1007/978-3-031-78538-2_3",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 43,
+      "title": "Neutral bots probe political bias on social media | Nature Communications",
+      "url": "https://www.nature.com/articles/s41467-021-25738-6",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-09-22T00:00:00.000Z"
+    },
+    {
+      "index": 44,
+      "title": "Auditing Political Exposure Bias: Algorithmic Amplification on Twitter/X During the 2024 U.S. Presidential Election",
+      "url": "https://dl.acm.org/doi/10.1145/3715275.3732159",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 45,
+      "title": "Engagement, user satisfaction, and the amplification of divisive content on social media",
+      "url": "https://doi.org/10.1093/pnasnexus/pgaf062",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-02-27T00:00:00.000Z"
+    },
+    {
+      "index": 46,
+      "title": "Quantifying Biases in Online Information Exposure",
+      "url": "https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.24121",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 47,
+      "title": "Curation Bubbles | American Political Science Review | Cambridge Core",
+      "url": "https://www.cambridge.org/core/journals/american-political-science-review/article/curation-bubbles/EBEBDE88633A86DFC821FE86B7708BB3",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 48,
+      "title": "Birds of a Feather Get Recommended Together: Algorithmic Homophily in YouTube’s Channel Recommendations in the United States and Germany",
+      "url": "https://journals.sagepub.com/doi/10.1177/2056305120969914",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 49,
+      "title": "Tubes and bubbles topological confinement of YouTube recommendations | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0231703",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 50,
+      "title": "Inequality and inequity in network-based ranking and recommendation algorithms | Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-022-05434-1",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-02-07T00:00:00.000Z"
+    },
+    {
+      "index": 51,
+      "title": "Link recommendations: Their impact on network structure and minorities",
+      "url": "https://dl.acm.org/doi/fullHtml/10.1145/3501247.3531583",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 52,
+      "title": "Quantifying the invisible audience in social networks",
+      "url": "https://dl.acm.org/doi/10.1145/2470654.2470658",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 53,
+      "title": "The role of luck in the success of social media influencers | Applied Network Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s41109-023-00573-4",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-07-25T00:00:00.000Z"
+    },
+    {
+      "index": 54,
+      "title": "Value Creation in the Algorithmic Age: A Systematic Review of How AI, Data Privacy, and Platform Ecosystems Are Reshaping Marketing Theory",
+      "url": "https://doi.org/10.66308/air.e2026018",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-28T00:00:00.000Z"
+    },
+    {
+      "index": 55,
+      "title": "Followers do not dictate the virality of news outlets on social media",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11235336/",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 56,
+      "title": "Persistent Structural Inequality of Online Interactions Across Platforms",
+      "url": "https://doi.org/10.48550/arxiv.2605.30996",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-29T00:00:00.000Z"
+    },
+    {
+      "index": 57,
+      "title": "Cascades | Proceedings of the 26th International Conference on World Wide Web",
+      "url": "https://dl.acm.org/doi/10.1145/3038912.3052647",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 58,
+      "title": "How does consumer engagement evolve when brands post across multiple social media? | Journal of the Academy of Marketing Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11747-021-00785-z",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-05-22T00:00:00.000Z"
+    },
+    {
+      "index": 59,
+      "title": "Joint Effects of Recommender Systems and Network Structure on the Visibility of Content and Creators",
+      "url": "https://doi.org/10.48550/arxiv.2607.00258",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-30T00:00:00.000Z"
+    },
+    {
+      "index": 60,
+      "title": "PopRank: Ranking pages’ impact and users’ engagement on Facebook | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0211038",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2019-01-28T00:00:00.000Z"
+    },
+    {
+      "index": 61,
+      "title": "Standing out in a networked communication context: Toward a network contingency model of public attention",
+      "url": "https://journals.sagepub.com/doi/10.1177/1461444820939445",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 62,
+      "title": "Making a Living in the Creator Economy: A Large-Scale Study of Linking on YouTube",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/20563051231180628",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 63,
+      "title": "\"Rich-Get-Richer\"? Platform Attention and Earnings Inequality using Patreon Earnings Data",
+      "url": "https://doi.org/10.48550/arxiv.2509.26523",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-09-30T00:00:00.000Z"
+    },
+    {
+      "index": 64,
+      "title": "Finding Goldilocks Influencers: How Follower Count Drives Social Media Engagement",
+      "url": "https://doi.org/10.1177/00222429221125131",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-08-26T00:00:00.000Z"
+    },
+    {
+      "index": 65,
+      "title": "When are reposts effective? Exploring the effects of OSM user engagement and post types on sales - ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S014829632600038X",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 66,
+      "title": "Consumer Brand Engagement in Social Media: Conceptualization, Scale Development and Validation - Linda D. Hollebeek, Mark S. Glynn, Roderick J. Brodie, 2014",
+      "url": "https://journals.sagepub.com/doi/abs/10.1016/j.intmar.2013.12.002",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 67,
+      "title": "Engagement by Design:  An Empirical Study of the “Reactions” Feature on Facebook Business Pages",
+      "url": "https://dl.acm.org/doi/10.1145/3412844",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 68,
+      "title": "When they like and when they comment: drivers of consumer engagement on social media",
+      "url": "https://doi.org/10.1108/ejm-12-2024-1024",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-20T00:00:00.000Z"
+    },
+    {
+      "index": 69,
+      "title": "Influencer Engagement on Social Media: A Conceptual Model, the Development and Validation of a Measurement Scale",
+      "url": "https://www.mdpi.com/0718-1876/18/4/88",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-10-01T00:00:00.000Z"
+    },
+    {
+      "index": 70,
+      "title": "Toward ‘Cultures of Engagement’? An exploratory comparison of engagement patterns on Facebook news posts",
+      "url": "https://journals.sagepub.com/doi/10.1177/14614448211009246",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 71,
+      "title": "From Optimizing Engagement to Measuring Value",
+      "url": "https://dl.acm.org/doi/10.1145/3442188.3445933",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 72,
+      "title": "A meta-analysis of customer engagement behaviour",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/ijcs.12609",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 73,
+      "title": "An integrated model of social media brand engagement | Computers in Human Behavior",
+      "url": "https://dl.acm.org/doi/10.1016/j.chb.2019.01.026",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 74,
+      "title": "Brand engagement on social media: will firms’ social media efforts influence search engine advertising effectiveness?: Journal of Marketing Management: Vol 32, No 5-6",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/0267257X.2016.1143863",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 75,
+      "title": "Does brand-consumer social sharing matter? A relational framework of customer engagement to brand-hosted social media",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296317305532",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 76,
+      "title": "What Makes Social Posts Go “Hot”? A Multimodal Analysis of Creator–Content–Timing Signals on a Visual Social Platform",
+      "url": "https://doi.org/10.3390/jtaer21010024",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-06T00:00:00.000Z"
+    },
+    {
+      "index": 77,
+      "title": "A longitudinal study of follow predictors on twitter",
+      "url": "https://dl.acm.org/doi/10.1145/2470654.2470771",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 78,
+      "title": "User migration in the Twitter diaspora | EPJ Data Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1140/epjds/s13688-025-00552-y",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-05-08T00:00:00.000Z"
+    },
+    {
+      "index": 79,
+      "title": "Emergence of online communities: Empirical evidence and theory | PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0205167",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2018-11-14T00:00:00.000Z"
+    },
+    {
+      "index": 80,
+      "title": "Follow Me Too: Determinants of Transitive Tie Formation on Twitter",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/2056305120939248",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 81,
+      "title": "The Effects of Group Size and Time on the Formation of Online Communities: Evidence From Reddit",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/2056305118815908",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 82,
+      "title": "The impact of network structure on breaking ties in online social networks:  unfollowing on twitter",
+      "url": "https://dl.acm.org/doi/10.1145/1978942.1979105",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 83,
+      "title": "The role of information diffusion in the evolution of social networks",
+      "url": "https://dl.acm.org/doi/10.1145/2487575.2487607",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 84,
+      "title": "Why Did They #Unfollow Me?:  Early Detection of Follower Loss on Twitter",
+      "url": "https://dl.acm.org/doi/10.1145/3148330.3154514",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 85,
+      "title": "Attention Inequality in Social Media",
+      "url": "https://doi.org/10.48550/arxiv.1601.07200",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2016-01-26T00:00:00.000Z"
+    },
+    {
+      "index": 86,
+      "title": "The Growth of Follower Networks on Social Media Platforms for Humanitarian Operations",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/poms.13245",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 87,
+      "title": "Who are growth users?:  analyzing and predicting intended Twitter user growth",
+      "url": "https://dl.acm.org/doi/10.1145/3011141.3011145",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 88,
+      "title": "Understanding Popularity, Reputation, and Social Influence in the Twitter Society",
+      "url": "https://doi.org/10.1002/poi3.151",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2017-04-25T00:00:00.000Z"
+    },
+    {
+      "index": 89,
+      "title": "The Road to Popularity: The Dilution of Growing Audience on Twitter",
+      "url": "https://doi.org/10.1609/icwsm.v10i1.14804",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2021-08-04T00:00:00.000Z"
+    },
+    {
+      "index": 90,
+      "title": "Detecting and Tracking Significant Events for Individuals on Twitter by Monitoring the Evolution of Twitter Followership Networks",
+      "url": "https://www.mdpi.com/2078-2489/11/9/450",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2020-09-16T00:00:00.000Z"
+    },
+    {
+      "index": 91,
+      "title": "Social CEOs: The effects of CEOs’ communication styles and parasocial interaction on social networking sites",
+      "url": "https://journals.sagepub.com/doi/10.1177/1461444816643922",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 92,
+      "title": "Review Impression management strategies on enterprise social media platforms: An affordance perspective",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0268401221000529",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 93,
+      "title": "How CEO Social Media Disclosure and Gender Affect Perceived CEO Attributes, Relationship Investment, and Engagement Intention",
+      "url": "https://journals.sagepub.com/doi/10.1177/1077699020943521",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 94,
+      "title": "‘I am my business’: Solo entrepreneurs’ self-presentation on social media | Journal of Management & Organization | Cambridge Core",
+      "url": "https://www.cambridge.org/core/journals/journal-of-management-and-organization/article/i-am-my-business-solo-entrepreneurs-selfpresentation-on-social-media/E1542B2525B7ADF312A6DA5415FA08F9",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-07-24T00:00:00.000Z"
+    },
+    {
+      "index": 95,
+      "title": "Reaching the Top? Profiles of Impression Management and Career Success | Journal of Business and Psychology | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s10869-024-09954-7",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-05-24T00:00:00.000Z"
+    },
+    {
+      "index": 96,
+      "title": "Get Noticed to Get Ahead: The Impact of Personal Branding on Career Success",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.02662/pdf",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 97,
+      "title": "Contribution of internet celebrities’ self-disclosure to fan-perceived interpersonal attraction and enduring involvement | Computers in Human Behavior",
+      "url": "https://dl.acm.org/doi/10.1016/j.chb.2022.107601",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 98,
+      "title": "Online identity work dynamics of Instagram micro-influencers: an extreme case approach",
+      "url": "https://doi.org/10.3389/fpsyg.2023.1306248",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2023-12-14T00:00:00.000Z"
+    },
+    {
+      "index": 99,
+      "title": "Attracting applicants through the organization's social media page: Signaling employer brand personality ☆",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0001879119300909",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 100,
+      "title": "Does the talk match the walk?: Effects of leader exemplification and ethical conduct on perceived leader authenticity, trust, and organizational advocacy | Journal of Management & Organization | Cambridge Core",
+      "url": "https://www.cambridge.org/core/journals/journal-of-management-and-organization/article/does-the-talk-match-the-walk-effects-of-leader-exemplification-and-ethical-conduct-on-perceived-leader-authenticity-trust-and-organizational-advocacy/8D570125EAD975B1DD39913E8BE0322E",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-12-02T00:00:00.000Z"
+    },
+    {
+      "index": 101,
+      "title": "A longitudinal study of B2B customer engagement in LinkedIn: The role of brand personality",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0148296322002247",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 102,
+      "title": "Frontiers | Digital footprints and recruitment: an experimental study on the impact of social media content on hiring decisions",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1693850/full",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-10-28T00:00:00.000Z"
+    },
+    {
+      "index": 103,
+      "title": "Do Organizational Personification and Personality Matter? The Effect of Interaction and Conversational Tone on Relationship Quality in Social Media",
+      "url": "https://journals.sagepub.com/doi/10.1177/2329488418796631",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 104,
+      "title": "A meta-analysis of the effectiveness of social media influencers: Mechanisms and moderation | Journal of the Academy of Marketing Science | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11747-025-01107-3",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-05-21T00:00:00.000Z"
+    },
+    {
+      "index": 105,
+      "title": "Social media influencer marketing: the role of influencer type, brand popularity, and consumers’ need for uniqueness: International Journal of Advertising: Vol 44, No 7",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/02650487.2024.2449311",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 106,
+      "title": "Influencer Endorsements: How Advertising Disclosure and Source Credibility Affect Consumer Purchase Intention on Social Media",
+      "url": "https://journals.sagepub.com/doi/10.1016/j.ausmj.2020.03.002",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 107,
+      "title": "Influencer marketing on Instagram—The optimal disclosure strategy from influencers’ and marketers’ perspectives | Electronic Markets | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s12525-024-00743-x",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-12-10T00:00:00.000Z"
+    },
+    {
+      "index": 108,
+      "title": "Consumers’ ambiguous perceptions of advertising disclosures in influencer marketing: Disentangling the effects on current and future social media engagement | Electronic Markets | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s12525-023-00679-8",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-01-23T00:00:00.000Z"
+    },
+    {
+      "index": 109,
+      "title": "Influencer advertising on social media: The multiple inference model on influencer-product congruence and sponsorship disclosure",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0148296320301156",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 110,
+      "title": "Does Inconsistency Between Influencer‐Generated and User‐Generated Content Hurt Brands? The Role of Perceived Content Credibility",
+      "url": "https://doi.org/10.1002/mar.22240",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-05-31T00:00:00.000Z"
+    },
+    {
+      "index": 111,
+      "title": "Small influencers should inform, brands can persuade: when rational content works: Journal of Marketing Management: Vol 42, No 1-2",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/0267257X.2025.2579742",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 112,
+      "title": "The effects of advertisement disclosure on heavy and light Instagram users | Electronic Markets | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s12525-022-00546-y",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-05-31T00:00:00.000Z"
+    },
+    {
+      "index": 113,
+      "title": "#Instafame: exploring the endorsement effectiveness of influencers compared to celebrities: International Journal of Advertising: Vol 41, No 4",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/02650487.2021.1987041",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 114,
+      "title": "Effect of Social Media Influencer Marketing on Consumers’ Purchase Intention and the Mediating Role of Credibility: Journal of Promotion Management: Vol 27, No 4",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/10496491.2020.1851847",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 115,
+      "title": "Fashion influencers’ credibility on Instagram: the stimulus–organism–response (SOR) perspective: Journal of Strategic Marketing: Vol 33, No 2",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/0965254X.2024.2436023",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 116,
+      "title": "Scheduling Content on Social Media: Theory, Evidence, and Application",
+      "url": "https://journals.sagepub.com/doi/10.1177/0022242918805411",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 117,
+      "title": "Estimating the causal effect of timing on the reach of social media posts",
+      "url": "https://link.springer.com/content/pdf/10.1007/s10260-022-00664-z.pdf?error=cookies_not_supported&code=90f9f29f-443c-42a1-9065-cc04d6b3c85a",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 118,
+      "title": "[1506.02089] When-To-Post on Social Networks",
+      "url": "https://ar5iv.labs.arxiv.org/html/1506.02089",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 119,
+      "title": "Estimating the causal effect of timing on the reach of social media posts",
+      "url": "https://doi.org/10.1007/s10260-022-00664-z",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2022-10-24T00:00:00.000Z"
+    },
+    {
+      "index": 120,
+      "title": "When-To-Post on Social Networks",
+      "url": "https://doi.org/10.1145/2783258.2788584",
+      "tier": "confirmed",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-08-07T00:00:00.000Z"
+    },
+    {
+      "index": 121,
+      "title": "How Social Media Algorithms Work in 2026: Full Guide - Digital Applied",
+      "url": "https://www.digitalapplied.com/blog/how-social-media-algorithms-work-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft",
+        "q13_secondary_platforms_craft",
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 122,
+      "title": "Instagram Algorithm 2026: What Changed (+ How to Adapt)",
+      "url": "https://creatorflow.so/blog/instagram-algorithm-2026/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": "2026-07-31T00:00:00.000Z"
+    },
+    {
+      "index": 123,
+      "title": "Threads vs X: Which Platform Should Your Business Use in ...",
+      "url": "https://www.sendible.com/insights/threads-vs-x",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q13_secondary_platforms_craft"
+      ],
+      "engines": [
+        "exa",
+        "serper"
+      ],
+      "published_date": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "index": 124,
+      "title": "How the Instagram Algorithm Works: Your 2026 Guide",
+      "url": "https://buffer.com/resources/instagram-algorithms/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": "2026-08-11T00:00:00.000Z"
+    },
+    {
+      "index": 125,
+      "title": "LinkedIn Algorithm 2026: How the Feed Ranks | Digital Codex",
+      "url": "https://www.clarigital.com/codex/social-media/linkedin-algorithm/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": "2026-04-06T00:00:00.000Z"
+    },
+    {
+      "index": 126,
+      "title": "Every social media platform that matters in 2026 - Vamp",
+      "url": "https://vamp.com/insights/social-media-sites",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q13_secondary_platforms_craft"
+      ],
+      "engines": [
+        "serper",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 127,
+      "title": "How the TikTok algorithm works in 2026",
+      "url": "https://blog.hootsuite.com/tiktok-algorithm/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": "2026-06-01T00:00:00.000Z"
+    },
+    {
+      "index": 128,
+      "title": "Social mentions 2026: tracking and responding for marketing strategy",
+      "url": "https://blog.crescitaly.com/social-mentions-2026-tracking-responding/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "index": 129,
+      "title": "Is Facebook Organic Reach Dead In 2026? - YouTube",
+      "url": "https://www.youtube.com/watch?v=bvgdNsL1iAc",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Aug 5, 2025"
+    },
+    {
+      "index": 130,
+      "title": "TikTok’s NEW Algorithm Updated Explained for May 2026 (Make ...",
+      "url": "https://www.youtube.com/watch?v=NVnrmd5r1F0",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 5, 2026"
+    },
+    {
+      "index": 132,
+      "title": "How to Dominate the New LinkedIn Algorithm in 19 Minutes",
+      "url": "https://www.youtube.com/watch?v=CM_HDRF4y0s",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 18, 2026"
+    },
+    {
+      "index": 133,
+      "title": "This is how the Instagram algorithm will work in 2026 ...",
+      "url": "https://www.youtube.com/watch?v=ZX3gCNy0zMc",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 8, 2026"
+    },
+    {
+      "index": 134,
+      "title": "Understanding the Meta Algorithm – How Instagram & Facebook ...",
+      "url": "https://www.youtube.com/watch?v=skdxubE6k7M",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 135,
+      "title": "TikTok’s NEW Algorithm Change Explained For July 2026 (Get ...",
+      "url": "https://www.youtube.com/watch?v=nuhpdPVYsGk",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jul 7, 2026"
+    },
+    {
+      "index": 137,
+      "title": "The Secret LinkedIn Algorithm Change in 2026 (37 Min ...",
+      "url": "https://www.youtube.com/watch?v=oz8xGRFDlsQ",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Mar 31, 2026"
+    },
+    {
+      "index": 138,
+      "title": "NEW Instagram Algorithm April 2026 | Direct From Instagram's ...",
+      "url": "https://www.youtube.com/watch?v=a34p7BHRryQ",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 9, 2026"
+    },
+    {
+      "index": 139,
+      "title": "The Only Facebook Ads Guide You'll Need For 2026 - YouTube",
+      "url": "https://www.youtube.com/watch?v=Ct2LJcOjzV0",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "May 1, 2026"
+    },
+    {
+      "index": 140,
+      "title": "How To Analyze TikTok Analytics for Growth – 2026 (Complete ...",
+      "url": "https://www.youtube.com/watch?v=buLlDQblvmw",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Nov 24, 2025"
+    },
+    {
+      "index": 141,
+      "title": "2026 Social Media Trends: Platforms and Features to Watch",
+      "url": "https://thatagency.com/blog/2026-social-media-trends",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q13_secondary_platforms_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Oct 25, 2025"
+    },
+    {
+      "index": 143,
+      "title": "LinkedIn Algorithm 2026 Explained: Why Depth Now Drives Reach",
+      "url": "https://www.youtube.com/watch?v=TNZMAOOiUsU",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Dec 11, 2025"
+    },
+    {
+      "index": 144,
+      "title": "Instagram Updates 2026 | New Algorithm ... - YouTube",
+      "url": "https://www.youtube.com/watch?v=olLyP8y5Sus",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 27, 2026"
+    },
+    {
+      "index": 145,
+      "title": "Facebook Ad Algorithm Changes for 2026: What Marketers Need ...",
+      "url": "https://www.youtube.com/watch?v=GObC9b54_mU",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Dec 18, 2025"
+    },
+    {
+      "index": 146,
+      "title": "TikTok’s NEW Algorithm Explained For 2026 (The EASY Way To ...",
+      "url": "https://www.youtube.com/watch?v=BcbQadJStlw",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 147,
+      "title": "Social media platforms are building HUGE walls around your ...",
+      "url": "https://www.youtube.com/watch?v=weRv0Qb_mps",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q13_secondary_platforms_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "2 months ago"
+    },
+    {
+      "index": 149,
+      "title": "LinkedIn Algorithm 2026: Why Your B2B Content Isn't ... - YouTube",
+      "url": "https://www.youtube.com/watch?v=W8qApvty1mI",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Mar 16, 2026"
+    },
+    {
+      "index": 150,
+      "title": "Facebook",
+      "url": "https://m.me/login/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 152,
+      "title": "LinkedIn Algorithm 2026: How It Really Works (Technical Deep Dive)",
+      "url": "https://www.teract.ai/resources/linkedin-algorithm-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 153,
+      "title": "Facebook - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Facebook",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 155,
+      "title": "LinkedIn Algorithm and Platform Updates in 2026 | Influent",
+      "url": "https://influent.co/blog/linkedin-platform-updates",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 156,
+      "title": "How the Instagram Algorithm Works [Updated 2026]",
+      "url": "https://sproutsocial.com/insights/instagram-algorithm",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 157,
+      "title": "LinkedIn Best Practices 2026: Tips, Timing, Length & Frequency",
+      "url": "https://www.salesandmarketingengineers.co.uk/the-ultimate-linkedin-posting-guide-for-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 158,
+      "title": "Instagram Updates 2026: New Features & Changes | Disrupt",
+      "url": "https://disruptmarketing.co/blog/instagram-updates",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 159,
+      "title": "Instagram Reach in 2026: How to Grow Faster With Reels, Carousels, and Caption SEO — TrueFuture Media",
+      "url": "https://truefuturemedia.com/articles/instagram-reach-2026-algorithm-reels-carousels-caption-seo",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 160,
+      "title": "Meta Organic Social Media Strategy: Insights from 2026 Updates",
+      "url": "https://rbbcommunications.com/blog/meta-organic-social-media-strategy-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 161,
+      "title": "LinkedIn Algorithm 2026: What Works Now (Documents ...",
+      "url": "https://www.dataslayer.ai/blog/linkedin-algorithm-february-2026-whats-working-now",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 162,
+      "title": "How the Instagram Algorithm Works in 2026 — And How Brands Can Use It | Catalyst Communications — CATALYST COMMUNICATIONS.",
+      "url": "https://www.catalystcommunications.com.au/blog/how-the-instagram-algorithm-works-in-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 163,
+      "title": "Facebook - Meta",
+      "url": "https://www.meta.com/en-gb/facebook-app/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 165,
+      "title": "YouTube Channel Growth in 2026: What the Data Actually Says",
+      "url": "https://www.businessdailymedia.com/articles/48714-youtube-channel-growth-in-2026-what-the-data-actually-says",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 166,
+      "title": "Instagram Algorithm & Growth Strategy Report — 2026 — Detroit Photography Co.",
+      "url": "https://detroitphotographyco.com/the-journal/instagram-algorithm-growth-strategy-report-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 167,
+      "title": "Instagram's Algorithm Shift in 2026: Why Saves and Shares Now Trump Likes for Music Artist Growth - Music Supremacy",
+      "url": "https://musicsupremacy.com/instagrams-algorithm-shift-in-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 168,
+      "title": "Instagram Best Practices - Zozimus Agency",
+      "url": "https://zozimus.com/instagram-best-practices#comment-244",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 169,
+      "title": "Facebook - Apps on Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.facebook.katana&hl=en_US",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 170,
+      "title": "How the LinkedIn Algorithm Works [2026 Guide] | MeetEdgar",
+      "url": "https://meetedgar.com/blog/how-the-linkedin-algorithm-works-2026-guide",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 171,
+      "title": "How the Facebook Algorithm Works in 2026: What Gets Reach (And What Doesn't)",
+      "url": "https://metadatareactor.com/blog/facebook-algorithm-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 172,
+      "title": "Facebook Algorithm in 2026: How Feed and Reels Drive Reach",
+      "url": "https://postoria.io/blog/facebook-algorithms",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 173,
+      "title": "How the TikTok Algorithm Works in 2026 | Follower-First Update",
+      "url": "https://syncstudio.ai/blog/tiktok-algorithm-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 174,
+      "title": "How to Grow Your YouTube Channel in 2026: The Definitive Guide",
+      "url": "https://marketmakermgmt.com/blog-list2/how-to-grow-youtube-channel-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 175,
+      "title": "History of Facebook - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/History_of_Facebook",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 176,
+      "title": "Is Pinterest Marketing Still Popular For Businesses in 2026?",
+      "url": "https://storychief.io/blog/is-pinterest-marketing-worth-it",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q13_secondary_platforms_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 177,
+      "title": "Social media - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Social_media",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 178,
+      "title": "L'algorithme de LinkedIn expliqué (guide 2026)",
+      "url": "https://socialbee.com/blog/linkedin-algorithm",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 179,
+      "title": "10 Facebook Trends Marketers Can't Ignore (2026)",
+      "url": "https://posteverywhere.ai/blog/facebook-trends-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 180,
+      "title": "TikTok Algorithm 2026: Everything You Need To Know",
+      "url": "https://www.darkroomagency.com/observatory/tiktok-algorithm-guide-2026-everything-we-know-about-how-videos-are-ranked",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 182,
+      "title": "How the 2026 Facebook Algorithm Works: 5 Proven Strategies to Dramatically Increase Your Organic Reach - ChatbotX",
+      "url": "https://chatbotx.io/blog/how-the-2026-facebook-algorithm-works-5-proven-strategies-to-dramatically-increase-your-organic-reach",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 183,
+      "title": "TikTok Algorithm 2026: How It Works for Brands (Strategy Guide)",
+      "url": "https://greenfroglabs.com/blog/tiktok-algorithm-2026-brand-strategy",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 184,
+      "title": "TikTok for Business: The Complete 2026 Guide for Brands",
+      "url": "https://heropost.io/tiktok-for-business-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q12_tiktok_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 185,
+      "title": "Tutorial: Facebook 2026 Algorithm for Organic Reach – Marketing Agent Blog",
+      "url": "https://marketingagent.blog/2026/04/09/tutorial-facebook-2026-algorithm-for-organic-reach",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 186,
+      "title": "Facebook Marketing: A Practical Guide for Businesses",
+      "url": "https://gauravtiwari.org/facebook-marketing-guide",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 187,
+      "title": "Social Media Algorithm Updates 2026: X, Reddit, TikTok & More",
+      "url": "https://keywordseverywhere.com/news/social-algorithm-updates",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q13_secondary_platforms_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 188,
+      "title": "How to Grow a YouTube Channel in 2026 (Creator Growth ...",
+      "url": "https://www.newzenler.com/blog/grow-youtube-channel-creators-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 189,
+      "title": "How Does the Facebook Algorithm Work in 2026? | Conbersa",
+      "url": "https://www.conbersa.ai/learn/facebook-algorithm-explained",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 190,
+      "title": "9 Best Free Social Listening Tools (Tested 2026)",
+      "url": "https://brandmentions.link/free-social-listening-tools",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 191,
+      "title": "How Facebook Distributes Content | Meta Business Help ...",
+      "url": "https://www.facebook.com/business/help/718033381901819",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 192,
+      "title": "Our Approach to Facebook Feed Ranking",
+      "url": "https://transparency.meta.com/features/ranking-and-content/",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-06-11T00:00:00.000Z"
+    },
+    {
+      "index": 193,
+      "title": "Rewarding Original Creators on Facebook",
+      "url": "https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-13T00:00:00.000Z"
+    },
+    {
+      "index": 194,
+      "title": "Widely Viewed Content Report: What People See on Facebook | Transparency Center",
+      "url": "https://transparency.meta.com/reports/widely-viewed-content-report/",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 195,
+      "title": "Posts - Facebook Pages API - Documentation - Meta for Developers",
+      "url": "https://developers.facebook.com/docs/pages-api/posts/",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q10_facebook_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 196,
+      "title": "Understand your content performance for YouTube’s recommendation system - YouTube Help",
+      "url": "https://support.google.com/youtube/answer/16559650?hl=en",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 197,
+      "title": "YouTube's Recommendation System - YouTube Help",
+      "url": "https://support.google.com/youtube/answer/16533387?hl=en",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 198,
+      "title": "What are 'Engaged' Views on YouTube?",
+      "url": "https://blog.youtube/inside-youtube/engaged-views-youtube-explained/",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-08-19T00:00:00.000Z"
+    },
+    {
+      "index": 199,
+      "title": "Understand your content reach and engagement",
+      "url": "https://support.google.com/youtube/answer/12220281",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 200,
+      "title": "Good to know about recommendations for YouTube's ...",
+      "url": "https://support.google.com/youtube/answer/16559651?hl=en",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 201,
+      "title": "YouTube performance FAQ & Troubleshooting - YouTube Help",
+      "url": "https://support.google.com/youtube/answer/141805",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 202,
+      "title": "Learn more about how YouTube works for you - YouTube Help",
+      "url": "https://support.google.com/youtube/answer/9962575?hl=en",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 203,
+      "title": "Our approach to explaining ranking | Transparency Centre",
+      "url": "https://transparency.meta.com/en-gb/features/explaining-ranking/",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q13_secondary_platforms_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 204,
+      "title": "Understanding Social Media Recommendation Algorithms | Knight First Amendment Institute",
+      "url": "https://knightcolumbia.org/content/understanding-social-media-recommendation-algorithms",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking",
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 205,
+      "title": "university of oklahoma",
+      "url": "https://shareok.org/bitstreams/fe366994-f8c5-4ed1-aec7-d815f72627b8/download",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 206,
+      "title": "[PDF] Examining Algorithmic Curation on Social Media",
+      "url": "https://www.semanticscholar.org/paper/Examining-Algorithmic-Curation-on-Social-Media%3A-An-Chan-Choi/3dfd620976504f8fdd59d7bacb61220ba2b9fab4",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 207,
+      "title": "Microcelebrity, Self‐Branding, and the I nternet",
+      "url": "https://www.researchgate.net/publication/373243635_Microcelebrity_Self-Branding_and_the_I_nternet",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 208,
+      "title": "Influencer marketing | Marketing | Research Starters | EBSCO Research",
+      "url": "https://www.ebsco.com/research-starters/marketing/influencer-marketing",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 209,
+      "title": "Online Personal Branding: Processes, Challenges, and Implications | Request PDF",
+      "url": "https://www.researchgate.net/publication/251645346_Online_Personal_Branding_Processes_Challenges_and_Implications",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 210,
+      "title": "[PDF] Personal Branding and Impression Management on LinkedIn",
+      "url": "https://digitalcommons.georgiasouthern.edu/cgi/viewcontent.cgi?article=1034&context=amtp-proceedings_2026",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 211,
+      "title": "(PDF) Self-branding, 'micro-celebrity' and the rise of Social Media ...",
+      "url": "https://www.researchgate.net/publication/306922796_Self-branding_'micro-celebrity'_and_the_rise_of_Social_Media_Influencers",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 212,
+      "title": "(PDF) Micro-celebrity and the Branded Self",
+      "url": "https://www.academia.edu/3775110/Micro_celebrity_and_the_Branded_Self",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 213,
+      "title": "A Proven Framework for Measuring Influencer Marketing",
+      "url": "https://advertisingweek.com/aw360/news/a-proven-framework-for-measuring-influencer-marketing/4964",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 214,
+      "title": "Self-branding, ‘micro-celebrity’ & the rise of Social Media Influencers",
+      "url": "https://opus.lib.uts.edu.au/bitstream/10453/98736/4/selfbrandingACCEPTED.pdf",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 215,
+      "title": "sponsorship awareness negatively moderates influencer ...",
+      "url": "https://ouci.dntb.gov.ua/en/works/lDday88q",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 216,
+      "title": "(PDF) The role of trustworthiness in social media influencer ...",
+      "url": "https://www.academia.edu/68111254/The_role_of_trustworthiness_in_social_media_influencer_advertising_Investigating_users_appreciation_of_advertising_transparency_and_its_effects",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 217,
+      "title": "Conceptualising and measuring social media engagement",
+      "url": "https://www.researchgate.net/publication/354951823_Conceptualising_and_measuring_social_media_engagement_A_systematic_literature_review",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 218,
+      "title": "Evaluating the Effectiveness of Influencer Marketing in Niche Markets | Journal of Marketing & Social Research",
+      "url": "https://jmsr-online.com/article/evaluating-the-effectiveness-of-influencer-marketing-in-niche-markets-247",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q6_influencer_ugc_credibility"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 219,
+      "title": "(PDF) Auditing Algorithmic Bias on Twitter",
+      "url": "https://www.researchgate.net/publication/352668978_Auditing_Algorithmic_Bias_on_Twitter",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 220,
+      "title": "credibility and self-presentation of micro-celebrities on social media",
+      "url": "https://www.semanticscholar.org/paper/%E2%80%98Instafamous%E2%80%99-%E2%80%93-credibility-and-self-presentation-Djafarova-Trofimenko/50b4975352b911b0ef4b5dbc346a33bcd6512171",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 221,
+      "title": "Personal branding - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Personal_branding",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 222,
+      "title": "Celebrity Studies: Self-branding, 'micro-celebrity' and the rise of Social Media Influencers",
+      "url": "https://www.academia.edu/28260515/Celebrity_Studies_Self_branding_micro_celebrity_and_the_rise_of_Social_Media_Influencers",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 223,
+      "title": "[PDF] Online Professional Identity Using Impression Management Among",
+      "url": "https://ijoc.org/index.php/ijoc/article/download/22850/4792/86305",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 224,
+      "title": "Algorithmic curation - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Algorithmic_curation",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 225,
+      "title": "Provenance Tracer: an LLM skill for (maybe) not getting played",
+      "url": "https://kyefox.com/provenance-tracer-an-llm-skill-for-maybe-not-getting-played",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 226,
+      "title": "[PDF] Online personal brand in job-seeking process",
+      "url": "https://gala.gre.ac.uk/id/eprint/38553/4/38553_CAI_I_do_not_want_to_be_perfect_Investigating_generation_Z_students.pdf",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q5_self_presentation_personal_branding"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 227,
+      "title": "Social Media Interest Graphs: The New Key to Audience Growth",
+      "url": "https://www.trimarkdigital.com/blog/the-shift-from-who-to-what-understanding-social-media-interest-graphs",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 228,
+      "title": "Guide to Engagement Rate: Metrics, Benchmarks, and Case Studies - Marketing Agent Blog",
+      "url": "https://marketingagent.blog/2025/11/07/guide-to-engagement-rate-metrics-benchmarks-and-case-studies",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 229,
+      "title": "Auditing Recommender Systems",
+      "url": "https://www.interface-eu.org/publications/auditing-recommender-systems",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 230,
+      "title": "evaluating methodologies for social media recommender ...",
+      "url": "https://hal.science/hal-04699600/document",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 231,
+      "title": "Best Times to Post on Social Media in 2026 [All Platforms]",
+      "url": "https://www.distribution.ai/blog/best-times-to-post-on-social-media",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 232,
+      "title": "Social Media Engagement: Content Strategy and Metrics ...",
+      "url": "https://scholarspace.manoa.hawaii.edu/bitstreams/e8d64012-fef5-4206-9519-293e8aaa0507/download",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 233,
+      "title": "When To Post Social Media Content: Tips For Success",
+      "url": "https://spotlightmediafargo.com/when-to-post-social-media-content",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 234,
+      "title": "Engagements, Reach Engagement Rate, and Impressions Engagement Rate | Emplifi Documentation Center",
+      "url": "https://docs.emplifi.io/platform/latest/home/engagements-reach-engagement-rate-and-impressions",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 235,
+      "title": "Paid Ads Don't Kill Organic Reach: Social Media Truth 2026",
+      "url": "https://sandyriev.com/en/the-truth-about-social-media-advertising-debunking-the-organic-reach-suppression-myth",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 236,
+      "title": "Engagement metrics: Engagement Rate: The Art of Engagement Rate: Crafting a Successful Metrics Strategy - FasterCapital",
+      "url": "https://fastercapital.com/content/Engagement-metrics--Engagement-Rate--The-Art-of-Engagement-Rate--Crafting-a-Successful-Metrics-Strategy.html",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 237,
+      "title": "How do recommender systems work on digital platforms? | Brookings",
+      "url": "https://www.brookings.edu/articles/how-do-recommender-systems-work-on-digital-platforms-social-media-recommendation-algorithms",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 238,
+      "title": "Global social media statistics research summary 2025 [Feb 2025 update]",
+      "url": "https://www.smartinsights.com/social-media-marketing/social-media-strategy/new-global-social-media-research",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 239,
+      "title": "What is a Shadowban? | Brandwatch Social Media Glossary",
+      "url": "https://www.brandwatch.com/social-media-glossary/shadowban",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 240,
+      "title": "What Makes a Social Media Post Go Viral in 2026?",
+      "url": "https://blackdigitalgroup.com/what-makes-a-social-media-post-go-viral",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 241,
+      "title": "Platform-supported Auditing of Social Media Algorithms for ...",
+      "url": "https://ant.isi.edu/~johnh/PAPERS/Imana22a.pdf",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 242,
+      "title": "How Digital Platforms Increase Inequality",
+      "url": "https://knowledge.insead.edu/entrepreneurship/how-digital-platforms-increase-inequality",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 243,
+      "title": "Performance Metrics: Engagement Rates: The Engagement Effect: How Engagement Rates Measure Performance - FasterCapital",
+      "url": "https://fastercapital.com/content/Performance-Metrics--Engagement-Rates---The-Engagement-Effect--How-Engagement-Rates-Measure-Performance.html",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 244,
+      "title": "Are Hashtags Still Relevant? Here’s How to Use Them | CO- by US Chamber of Commerce",
+      "url": "https://www.uschamber.com/co/grow/marketing/how-to-use-hashtags",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 245,
+      "title": "Filter bubble",
+      "url": "https://policyreview.info/concepts/filter-bubble",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 246,
+      "title": "Shadowbanning on Social Media: Meaning and Signs",
+      "url": "https://bloomhousemarketing.com/blog/digital-marketing/what-does-shadowbanning-mean-on-social-media-and-how-to-spot-it",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 247,
+      "title": "social media and the filter bubble: curated flows theory - UA",
+      "url": "https://ir.ua.edu/bitstreams/ecbbca42-168a-4905-bd8e-1e105c95c98f/download",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q1_algorithmic_curation_ranking"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 248,
+      "title": "Understanding Audience Engagement Metrics: Types, Importance, and Measurement",
+      "url": "https://1984-online.com/audience-engagement-metrics-types-importance-and-measurement",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 249,
+      "title": "Social Media Marketing: Engagement, Analytics, and ROI",
+      "url": "https://marketingcourse.org/social-media-marketing-engagement-analytics-and-roi",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 250,
+      "title": "Preferential attachment in the growth of social networks: The internet encyclopedia Wikipedia",
+      "url": "https://link.aps.org/doi/10.1103/PhysRevE.74.036116",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 251,
+      "title": "The rise of social media",
+      "url": "https://ourworldindata.org/rise-of-social-media",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 252,
+      "title": "Shedding Light on Shadowbanning",
+      "url": "https://cdt.org/insights/shedding-light-on-shadowbanning",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 253,
+      "title": "Social Media Engagement Theory - TheoryHub - Academic theories reviews for research and T&L",
+      "url": "https://open.ncl.ac.uk/academic-theories/10/social-media-engagement-theory",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 254,
+      "title": "Understanding the Network Effect: How It Increases Product Value",
+      "url": "https://www.investopedia.com/terms/n/network-effect.asp",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 255,
+      "title": "The Influence of Posting Frequency, Content Quality, and ...",
+      "url": "https://wsj.westsciences.com/index.php/wsbm/article/view/966",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 256,
+      "title": "What is Social Media Engagement?",
+      "url": "https://www.qualtrics.com/articles/customer-experience/social-engagement",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 257,
+      "title": "Maximizing Multi-platform Social Media Impacts | UC Davis Graduate School of Management",
+      "url": "https://gsm.ucdavis.edu/blog/maximizing-multi-platform-social-media-impacts",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 258,
+      "title": "Quantifying social media’s impact on business performance: A data-driven approach to consumer engagement and ROI",
+      "url": "https://wjarr.com/node/8622",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 259,
+      "title": "Best times to post on social media in 2026",
+      "url": "https://sproutsocial.com/insights/best-times-to-post-on-social-media",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 260,
+      "title": "The ABC of Campaign Metrics - Tell 4: Engagement | MMT",
+      "url": "https://www.mercurymediatechnology.com/en/blog/the-abc-of-campaign-metrics-tell-4-engagement-2",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 261,
+      "title": "Social Media Organic Reach 2021: Who Actually Sees ...",
+      "url": "https://www.ignitesocialmedia.com/social-media-strategy/social-media-organic-reach-2021-who-actually-sees-your-content",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 262,
+      "title": "Algorithmic Attention and Content Creation on Social ...",
+      "url": "https://events.bse.eu/live/files/5581-socialmedia-4pdf",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 263,
+      "title": "Role of Social Media Marketing in Driving Online Sales Growth | Journal of Marketing & Social Research",
+      "url": "https://jmsr-online.com/article/role-of-social-media-marketing-in-driving-online-sales-growth-530",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 264,
+      "title": "Chapter 5 – Network Science by Albert-László Barabási",
+      "url": "https://networksciencebook.com/chapter/5",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 265,
+      "title": "The Effect of Social Media Marketing Content on Consumer ...",
+      "url": "https://mackinstitute.wharton.upenn.edu/wp-content/uploads/2015/01/FP0170_Hosanagar-Kartik.pdf",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 266,
+      "title": "Social Media Marketing Strategies for Increasing Customer ...",
+      "url": "https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=12130&context=dissertations",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 267,
+      "title": "How Social Media Has Changed Business",
+      "url": "https://eccles.utah.edu/news/how-social-media-has-changed-business",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q4_audience_growth_dynamics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 268,
+      "title": "Decomposing Attention in Creator Platforms: The Relative Effects of Content Quality, Social Capital, and Algorithmic Exposure",
+      "url": "https://aisel.aisnet.org/bigs2025/3",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q2_exposure_allocation_reach"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2025-12-14T00:00:00.000Z"
+    },
+    {
+      "index": 269,
+      "title": "Does X deboost posts with external links? — sourced from the X algorithm code | xDoctor Learn",
+      "url": "https://xdoctor.app/learn/p2-reach/link-deboosting",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 270,
+      "title": "What 1M Tweets Taught Us About How to Tweet Successfully",
+      "url": "https://buffer.com/resources/twitter-data-1-million-tweets/",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 271,
+      "title": "LinkedIn Hashtags: What We Know About Reach/Engagement",
+      "url": "https://www.tryordinal.com/blog/linkedin-hashtags",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-26T00:00:00.000Z"
+    },
+    {
+      "index": 272,
+      "title": "Where Each of the Big Social Platform Stands on External ...",
+      "url": "https://www.socialmediatoday.com/news/heres-each-big-social-platform-stand-external-links/733946/",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2024-11-25T00:00:00.000Z"
+    },
+    {
+      "index": 273,
+      "title": "Measuring User Influence in Twitter: The Million Follower Fallacy",
+      "url": "https://snap.stanford.edu/class/cs224w-readings/cha10influence.pdf",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 274,
+      "title": "Do Posts with Links Affect Content Performance on X?",
+      "url": "https://buffer.com/resources/links-on-x/",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-24T00:00:00.000Z"
+    },
+    {
+      "index": 275,
+      "title": "Day of the week to tweet: a randomised controlled trial | BMJ Open",
+      "url": "https://bmjopen.bmj.com/content/9/4/e025380",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 276,
+      "title": "When is the best time to post on social media? Analysis of 100+ million posts suggests there is no single answer. - LSE Impact",
+      "url": "https://blogs.lse.ac.uk/impactofsocialsciences/2015/07/31/when-is-the-best-time-to-post-on-social-media/",
+      "tier": "practitioner",
+      "first_party": false,
+      "topics": [
+        "q7_social_folklore_provenance"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2015-07-31T00:00:00.000Z"
+    },
+    {
+      "index": 277,
+      "title": "Instagram algorithm tips for 2026: Everything you need to ...",
+      "url": "https://blog.hootsuite.com/instagram-algorithm/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q15_instagram_tiktok_docs",
+        "q9_instagram_platform_craft"
+      ],
+      "engines": [
+        "exa",
+        "serper",
+        "tavily"
+      ],
+      "published_date": "Jul 15, 2026"
+    },
+    {
+      "index": 278,
+      "title": "Adam Mosseri on Instagram, Algorithms, & How To Beat TikTok",
+      "url": "https://www.youtube.com/watch?v=7afTeh_PQus",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "8 months ago"
+    },
+    {
+      "index": 279,
+      "title": "Instagram Algorithm 2026: Complete Guide for Marketers",
+      "url": "https://www.dataslayer.ai/blog/instagram-algorithm-2025-complete-guide-for-marketers",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Oct 13, 2025"
+    },
+    {
+      "index": 280,
+      "title": "Adam Mosseri: There Is No Single Instagram Algorithm",
+      "url": "https://www.adweek.com/media/adam-mosseri-there-is-no-single-instagram-algorithm/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 8, 2021"
+    },
+    {
+      "index": 281,
+      "title": "Instagram algorithm 2026: the 4 ranking signals that matter",
+      "url": "https://www.clixie.ai/blog/instagram-algorithm",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 17, 2026"
+    },
+    {
+      "index": 282,
+      "title": "Engineering the next generation of LinkedIn's Feed",
+      "url": "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs",
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 283,
+      "title": "How We Rank Content on Spotlight – Snapchat Support",
+      "url": "https://help.snapchat.com/hc/en-us/articles/8961653169940-How-We-Rank-Content-on-Spotlight",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q13_secondary_platforms_craft",
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 284,
+      "title": "How LinkedIn Is Improving the Feed to Show More Relevant, Authentic Professional Content",
+      "url": "https://news.linkedin.com/2026/ImprovingTheFeed",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs",
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 285,
+      "title": "A Look Behind the AI that Powers LinkedIn’s Feed: Sifting through Billions of Conversations to Create Personalized News Feeds for Hundreds of Millions of Members",
+      "url": "https://www.linkedin.com/blog/engineering/feed/a-look-behind-the-ai-that-powers-linkedins-feed-sifting-through",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs",
+        "q8_linkedin_platform_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 286,
+      "title": "Shedding More Light on How Instagram Works",
+      "url": "https://about.instagram.com/blog/announcements/shedding-more-light-on-how-instagram-works",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": "2021-06-08T00:00:00.000Z"
+    },
+    {
+      "index": 287,
+      "title": "Tips for improving your reach | Instagram for Creators",
+      "url": "https://creators.instagram.com/blog/tips-for-improving-your-reach",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 288,
+      "title": "Understanding dwell time to improve LinkedIn feed ranking",
+      "url": "https://www.linkedin.com/blog/engineering/feed/understanding-feed-dwell-time",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 289,
+      "title": "Making Your Feed More Relevant – Part 2: Relevance models and features",
+      "url": "https://www.linkedin.com/blog/engineering/feed/making-your-feed-more-relevant-part-2-relevance-models-and-fea",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 290,
+      "title": "How TikTok recommends videos #ForYou - Newsroom | TikTok",
+      "url": "https://newsroom.tiktok.com/en-my/how-tik-tok-recommends-video-for-you",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 291,
+      "title": "How TikTok recommends videos #ForYou - Newsroom | TikTok",
+      "url": "https://newsroom.tiktok.com/how-tiktok-recommends-videos-for-you?itid=lk_inline_enhanced-template&lang=en",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 292,
+      "title": "Building The LinkedIn Knowledge Graph",
+      "url": "https://www.linkedin.com/blog/engineering/knowledge/building-the-linkedin-knowledge-graph",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 293,
+      "title": "X Media Literacy Action Plan",
+      "url": "https://help.x.com/en/rules-and-policies/media-literacy-plan",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 294,
+      "title": "Tips for Improving Your Reach | Instagram for Creators",
+      "url": "https://creators.instagram.com/blog/tips-for-improving-your-reach?locale=en_US",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 295,
+      "title": "Engineering Blog - LinkedIn",
+      "url": "https://www.linkedin.com/blog/engineering",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 296,
+      "title": "Making Hard Choices: The Quest for Ethics in Machine ...",
+      "url": "https://www.linkedin.com/blog/engineering/archive/making-hard-choices-the-quest-for-ethics-in-machine-learning",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 297,
+      "title": "Tips for improving your reach | Instagram for Creators",
+      "url": "https://creators.instagram.com/blog/tips-for-improving-your-reach?locale=en_GB",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 298,
+      "title": "Engagement Rate Metrics",
+      "url": "https://www.linkedin.com/top-content/marketing/digital-advertising-metrics/engagement-rate-metrics",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q3_engagement_signal_mechanics"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 299,
+      "title": "LinkedIn Algorithm Best Practices",
+      "url": "https://www.linkedin.com/top-content/marketing/linkedin-marketing-guide/linkedin-algorithm-best-practices",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 300,
+      "title": "Feed",
+      "url": "https://www.linkedin.com/blog/engineering/feed",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 301,
+      "title": "The top 2019 LinkedIn Engineering blogs",
+      "url": "https://www.linkedin.com/blog/engineering/archive/the-top-2019-linkedin-engineering-blogs",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 302,
+      "title": "How We Rank Content on Spotlight – Snapchat Support",
+      "url": "https://help.snapchat.com/hc/en-gb/articles/8961653169940-How-We-Rank-Content-on-Spotlight",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 303,
+      "title": "How We Rank Content on Spotlight – Snapchat Support",
+      "url": "https://help.snapchat.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBRfJ4wmCDoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJTRQNnEDzoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJGL2hjL2VuLWdiL2FydGljbGVzLzg5NjE2NTMxNjk5NDAtSG93LVdlLVJhbmstQ29udGVudC1vbi1TcG90bGlnaHQGOwhUOglyYW5raQY%3D--5ebc2e0f6d8529b85d4e7697299271d710302fd5",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 304,
+      "title": "Paid partnerships for brands | Pinterest Business help",
+      "url": "https://help.pinterest.com/business/article/approve-or-remove-paid-partnership-tags",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 305,
+      "title": "Becoming an advertiser on Pinterest | Pinterest Business help",
+      "url": "https://help.pinterest.com/en/business/guide/becoming-an-advertiser-on-pinterest",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 306,
+      "title": "Paid partnerships for creators | Pinterest Business help",
+      "url": "https://help.pinterest.com/en/node/3571",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 307,
+      "title": "Paid partnerships for creators | Pinterest Business help",
+      "url": "https://help.pinterest.com/business/article/paid-partnerships-for-creators",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 308,
+      "title": "Becoming an advertiser on Pinterest | Pinterest Business help",
+      "url": "https://help.pinterest.com/en-gb/business/guide/becoming-an-advertiser-on-pinterest",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 309,
+      "title": "Paid partnerships for Creators | Pinterest Business help",
+      "url": "https://help.pinterest.com/en-gb/business/article/paid-partnerships-for-creators",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 310,
+      "title": "How TikTok recommends videos #ForYou - Newsroom | TikTok",
+      "url": "https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 311,
+      "title": "Recommendations on Instagram: What Creators Need to Know | Instagram for Creators",
+      "url": "https://creators.instagram.com/blog/instagram-recommendations-eligibility-tips-creators",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 312,
+      "title": "How Instagram Feed works",
+      "url": "https://help.instagram.com/1986234648360433?locale=en_GB&",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 313,
+      "title": "Learn why a video is recommended For You - Newsroom | TikTok",
+      "url": "https://newsroom.tiktok.com/en-us/learn-why-a-video-is-recommended-for-you",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 314,
+      "title": "Helping creators find new audiences | Instagram for Creators | Instagram for Creators",
+      "url": "https://creators.instagram.com/recommendations-and-originality",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 315,
+      "title": "Helping creators of all sizes break through | Instagram for Creators",
+      "url": "https://creators.instagram.com/blog/helping-creators-of-all-sizes-break-through",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 316,
+      "title": "More updates to help the TikTok community create and share safely - Newsroom | TikTok",
+      "url": "https://newsroom.tiktok.com/en-us/more-updates-to-help-the-tiktok-community-create-and-share-safely",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 317,
+      "title": "How We Address Potentially Harmful Content on Feed and Stories",
+      "url": "https://about.instagram.com/blog/announcements/how-we-address-harmful-content-on-feed",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q15_instagram_tiktok_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 318,
+      "title": "Community-focused Feed optimization - LinkedIn",
+      "url": "https://www.linkedin.com/blog/engineering/feed/community-focused-feed-optimization",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 319,
+      "title": "Making Your Feed More Relevant – Part I",
+      "url": "https://www.linkedin.com/blog/engineering/archive/making-your-feed-more-relevant-part-i",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 320,
+      "title": "Spreading the Love in the LinkedIn Feed with Creator-Side Optimization",
+      "url": "https://www.linkedin.com/blog/engineering/member-customer-experience/linkedin-feed-with-creator-side-optimization",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 321,
+      "title": "FollowFeed: LinkedIn's Feed Made Faster and Smarter",
+      "url": "https://www.linkedin.com/blog/engineering/feed/followfeed-linkedin-s-feed-made-faster-and-smarter",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 322,
+      "title": "Putting members first: testing and measuring how content appears in your Feed",
+      "url": "https://www.linkedin.com/blog/engineering/feed/putting-members-first-testing-and-measuring-how-content-appears-in-your-feed",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q16_linkedin_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 323,
+      "title": "AI at Pinterest | Pinterest help",
+      "url": "https://help.pinterest.com/en/article/ai-at-pinterest",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 324,
+      "title": "Pin performance and distribution | Pinterest Business help",
+      "url": "https://help.pinterest.com/en/business/article/pin-performance-and-distribution",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 325,
+      "title": "How We Rank Content on Discover – Snapchat Support",
+      "url": "https://help.snapchat.com/hc/en-gb/articles/8961631424020-How-We-Rank-Content-on-Discover",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 326,
+      "title": "Personalization on Snapchat – Snapchat Support",
+      "url": "https://help.snapchat.com/hc/en-us/articles/17338132910484-Personalization-on-Snapchat",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 327,
+      "title": "How We Rank Lenses on Snapchat – Snapchat Support",
+      "url": "https://help.snapchat.com/hc/en-us/articles/34360182512916-How-We-Rank-Lenses-on-Snapchat",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 328,
+      "title": "Personalisation on Snapchat",
+      "url": "https://help.snapchat.com/hc/en-gb/articles/17338132910484-Personalisation-on-Snapchat",
+      "tier": "practitioner",
+      "first_party": true,
+      "topics": [
+        "q17_secondary_platform_docs"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 329,
+      "title": "How to Use Talkwalker to Track Brand Mentions & Monitor ...",
+      "url": "https://www.youtube.com/watch?v=JePjKrjg9qg",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 30, 2026"
+    },
+    {
+      "index": 330,
+      "title": "Free Brand Monitoring Tool: Copy What Top Brands Are Doing Online",
+      "url": "https://www.youtube.com/watch?v=W1p8JROqdLU",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 331,
+      "title": "FREE Brand Monitoring Tool - Track ANY Website Mentions from ...",
+      "url": "https://www.youtube.com/watch?v=EMvugziofSE",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Nov 5, 2025"
+    },
+    {
+      "index": 332,
+      "title": "Top Brand Monitoring Tools in 2026: Free & Paid Compared",
+      "url": "https://almcorp.com/blog/top-brand-monitoring-tools",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 333,
+      "title": "Brand Mentions Monitoring: Tools and Best Practices 2026",
+      "url": "https://brandmentions.link/brand-mentions-monitoring",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 334,
+      "title": "8 best brand mention tools I’m using in 2026 (free + paid)",
+      "url": "https://www.gumloop.com/blog/brand-mentions-tool",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 335,
+      "title": "The Top 10 Brand Mention Monitoring Tools of 2026 | Robotalp",
+      "url": "https://robotalp.com/blog/the-top-10-brand-mention-monitoring-tools-of-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 336,
+      "title": "The 8 Best Brand Monitoring Tools for Communications Teams (2026) | Shadow",
+      "url": "https://www.shadow.inc/resources/best-brand-monitoring-tools",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 337,
+      "title": "Brand Mention Monitoring A Modern Guide for 2026",
+      "url": "https://mentionkit.com/articles/brand-mention-monitoring",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q14_listening_community_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 338,
+      "title": "Youtube Channel Growth | Growthcurve",
+      "url": "https://growthcurve.co/agency/digital-marketing-agency/youtube-channel-growth",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q11_youtube_platform_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    }
+  ]
+}

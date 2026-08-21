@@ -48,21 +48,26 @@ one, and add a row when a new producing skill ships.
 | # | File | Written by | Read by |
 |---|---|---|---|
 | 01-06 | the onboarding block above | **client-onboarding-workflow** (Phase 2) | this skill, Phase 3 |
-| 07 | `07-strategic-foundation.md` | **strategic-foundation** (build) | brand-strategy, brand-voice, copy-conversion, content-strategy, the seo-* chain |
-| 08 | `08-audience-persona.md` | **strategic-foundation** (persona) | brand-strategy, brand-voice, copy-conversion, content-strategy, content-production, the seo-* chain |
+| 07 | `07-strategic-foundation.md` | **strategic-foundation** (build) | brand-strategy, brand-voice, copy-conversion, content-strategy, social-media-advisor, the seo-* chain |
+| 08 | `08-audience-persona.md` | **strategic-foundation** (persona) | brand-strategy, brand-voice, copy-conversion, content-strategy, content-production, social-media-advisor, the seo-* chain |
 | 09 | `09-seo-foundation.md` | **seo-foundation** | seo-onpage, seo-technical, seo-authority-ai, content-strategy |
 | 10 | `10-seo-onpage.md` | **seo-onpage** | seo-technical, seo-authority-ai |
 | 11 | `11-seo-technical.md` | **seo-technical** | seo-authority-ai |
 | 12 | `12-seo-authority-ai.md` | **seo-authority-ai** | content-strategy |
-| 13 | `13-brand-strategy.md` | **brand-strategy** | brand-voice, brand-visual, copy-conversion, blog-writer, content-strategy, content-production |
-| 14 | `14-brand-voice.md` | **brand-voice** | brand-strategy, brand-visual, copy-conversion, blog-writer, content-strategy, content-production |
+| 13 | `13-brand-strategy.md` | **brand-strategy** | brand-voice, brand-visual, copy-conversion, blog-writer, content-strategy, content-production, social-media-advisor |
+| 14 | `14-brand-voice.md` | **brand-voice** | brand-strategy, brand-visual, copy-conversion, blog-writer, content-strategy, content-production, social-media-advisor |
 | 15 | `15-brand-visual-identity.md` | **brand-visual** | brand-visual (assembly into 16) |
 | 16 | `16-brand-guidelines.md` | **brand-visual** (assembled from 13+14+15) | - |
 | 17 | `17-conversion-copy.md` | **copy-conversion** | - |
-| 18 | `18-content-strategy.md` | **content-strategy** | content-production |
+| 18 | `18-content-strategy.md` | **content-strategy** | content-production, social-media-advisor |
 | - | `content/<format>-<slug>.md` | **content-production** | - (unnumbered on purpose: many files per client, not one artifact) |
 
 **Next free number: 19.**
+
+`social-media-advisor` (2026-08-21) reads 07/08/13/14/18 but writes no numbered
+file: it is advisory, like `branding-advisor` and `content-advisor`. If a client-facing
+social strategy document is ever wanted, that is a separate `social-media-strategy`
+executor and it takes 19.
 
 Two rules that exist because the convention has already failed once:
 
