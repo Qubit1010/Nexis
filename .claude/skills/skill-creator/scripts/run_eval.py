@@ -54,6 +54,31 @@ def _claude_exe() -> str:
     for c in candidates:
         if c.exists():
             return str(c)
+
+    # 3. The Claude Desktop packaged install, which none of the paths above reach.
+    #    On this machine (2026-08-21) it is the ONLY working CLI: ~/.local/bin/claude
+    #    is a bash shim hard-coded to version 2.1.74, which no longer exists, while
+    #    the real binary is 2.1.229 under LocalCache. The shim is what wins on PATH,
+    #    so shutil.which() finds it, it launches, prints "No such file or directory"
+    #    to stderr and exits 0 - which is invisible once stderr is DEVNULL.
+    #    Version directories sort naturally, so take the highest rather than the
+    #    first, or a stale 2.1.74 beats a live 2.1.229 on string order.
+    def _vkey(path):
+        try:
+            return tuple(int(x) for x in path.parent.name.split("."))
+        except ValueError:
+            return (0,)
+
+    packaged = sorted(
+        Path.home().glob(
+            "AppData/Local/Packages/Claude_*/LocalCache/Roaming/Claude/"
+            "claude-code/*/claude.exe"
+        ),
+        key=_vkey,
+    )
+    if packaged:
+        return str(packaged[-1])
+
     return shutil.which("claude") or "claude"
 
 
@@ -131,6 +156,14 @@ def run_single_query(
         triggered = False
         start_time = time.time()
         buffer = ""
+        # A launch failure that EXITS CLEANLY is invisible to the error path below,
+        # because run_single_query returns False rather than raising. That is how a dead
+        # PATH shim (see _claude_exe) produced a full 26-query report reading 13/26 with
+        # every should-trigger query "failing" - a plausible-looking measurement of
+        # nothing. Track whether the child ever wrote a byte; no output at all means the
+        # check never ran, which is a different fact from "the skill did not trigger"
+        # and must not be scored as one.
+        got_output = False
         # Track state for stream event detection
         pending_tool_name = None
         accumulated_json = ""
@@ -180,6 +213,7 @@ def run_single_query(
 
                 if chunk is None:  # EOF
                     break
+                got_output = True
                 buffer += chunk.decode("utf-8", errors="replace")
 
                 while "\n" in buffer:
@@ -243,6 +277,12 @@ def run_single_query(
                 process.kill()
                 process.wait()
 
+        if not got_output:
+            raise RuntimeError(
+                f"claude CLI produced no output (exit={process.poll()}). "
+                f"The query never ran, so this is not a trigger result. "
+                f"Binary: {cmd[0]}"
+            )
         return triggered
     finally:
         if command_file.exists():
