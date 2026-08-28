@@ -1,0 +1,30 @@
+{
+  "skill_name": "expensify-contributor",
+  "note": "Functional test cases. The scripts are additionally verified by --selftest against issues whose outcomes are already settled (#98426 won at +2s, #98791 unreproduced with 14 proposals), which is a stronger check than a synthetic fixture because it breaks when Expensify changes the process rather than when a mock drifts.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to start doing the Expensify open source bounties. Which issue should I go after this week, and why that one over the others?",
+      "expected_output": "Runs triage over the live work window, picks one issue with the score broken down, and explains the opening (contested reproduction, hedging MelvinBot, or low-crowding area). Should state the one-job-at-a-time cap and set an honest expectation about time to first win rather than implying a quick $250.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "https://github.com/Expensify/App/issues/99208 - is this worth working on?",
+      "expected_output": "Classifies the window phase, reports rival proposals excluding MelvinBot, surfaces that MelvinBot hedged its own proposal and that the issue carries Needs Reproduction, and concludes PURSUE with the reasoning. Should not propose opening a PR.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Here's my draft proposal for an Expensify issue, can you check it before I post? [draft with a multi-line diff block and no permalinks]",
+      "expected_output": "Blocks on the diff (PROPOSAL_TEMPLATE bans it) and warns about missing SHA-pinned permalinks. Runs the duplicate screen and reports DANGER or INCONCLUSIVE, never a pass. Refuses to post without explicit confirmation and explains the AI_ETIQUETTE accountability reason.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "why do my expensify proposals keep losing? I've posted 6 and never been picked",
+      "expected_output": "Explains the measured competition (proposals firing within 1-2s of the label, 8-17 per issue), the actual selection rule from the hidden template comment, and diagnoses against the winning anatomy: traced root cause across files, pinned permalinks, conceptual framing, regression sweep. Should not just say 'write better proposals'.",
+      "files": []
+    }
+  ]
+}

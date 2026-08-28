@@ -1,0 +1,30 @@
+{
+  "skill": "blog-images",
+  "evals": [
+    {
+      "id": "illustrate-a-finished-article",
+      "prompt": "Create the images for content/blog/ai-agent-vs-automation.md.",
+      "expected_output": "Reads the actual article and extracts the single arguable claim, the H2 sections carrying a mechanism, and one real measured number for the footer. Reads references/signature-ledger.md BEFORE choosing a cover archetype and picks a kind of object not already used. Presents the image set (cover archetype + accent subject, then each supporting figure with the H2 it maps to) and STOPS at the approval gate. After approval, authors SVG to content/blog/images/<slug>/{cover,fig-1,fig-2}.svg with a viewBox, a real aria-label, a full-bleed #02040A rect, palette-only colours and at least one #A6DAFF element. Cover 1200x630, supporting 1200x800. Renders via scripts/render.py, opens the PNGs and actually looks at them, then appends a row to the ledger."
+    },
+    {
+      "id": "refuses-a-repeated-archetype",
+      "prompt": "Make a cover for the new pricing article. Use the split-panel comparison layout, it looked good on the agent-vs-skill one.",
+      "expected_output": "Declines to repeat the archetype and says why: two facing panels is already used by ai-agent-vs-skill and the ledger rule is one kind of object per article. Proposes an alternative from the ledger's 'worlds still open' list (nested containment, a map with a boundary, a balance, a timeline with a break, a grid that fills, a funnel, a switchboard, a ledger that reconciles, a container that leaks, a lens stack) that fits what this article actually argues. Does not silently restyle the existing world and call it new."
+    },
+    {
+      "id": "refuses-stock-photography",
+      "prompt": "Just grab a nice stock photo of a developer at a desk for the blog header.",
+      "expected_output": "Refuses and explains from 15-brand-visual-identity.md section 6: this brand's imagery is the work itself, diagrams over photographs, and the section records a live credibility failure where seven testimonial portraits on nexus-point.co are Unsplash stock attached to real people's names. Offers a diagram instead, or no image. Does not produce or source a photograph."
+    },
+    {
+      "id": "off-palette-is-blocked",
+      "prompt": "Use our old brand blue #208ec7 in the diagram so it matches the brand guidelines doc.",
+      "expected_output": "Explains that render.py audits and refuses off-palette hex values, and that 15 section 3 records three palettes existing with zero overlapping hex values, of which the live site palette is canonical. Maps the intent onto the real tokens (#00B7FF secondary for key illustration, #A6DAFF accent for the single subject). Never edits render.py's palette to let the colour through, and never hand-edits the PNG."
+    },
+    {
+      "id": "pushes-back-on-count",
+      "prompt": "Give me 9 images for this one article, one per section.",
+      "expected_output": "Pushes back rather than complying. States the range is 3 to 4, one cover plus two or three supporting, and that beyond four the reader scrolls past them. Notes that nine figures usually means the article should be two articles. Offers to pick the three sections carrying an actual mechanism, and proceeds at 3-4 unless overruled."
+    }
+  ]
+}

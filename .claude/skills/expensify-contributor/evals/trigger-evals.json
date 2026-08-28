@@ -1,0 +1,23 @@
+[
+  {"query": "ok so I want to start doing those expensify open source bounties, the $250 ones. where do I even start, I've never done one", "should_trigger": true},
+  {"query": "https://github.com/Expensify/App/issues/99208", "should_trigger": true},
+  {"query": "which help wanted issue on Expensify/App is actually worth my time this week? there's like 50 open and I only have capacity for one", "should_trigger": true},
+  {"query": "i keep posting proposals on expensify issues and never get picked, been like 6 of them now. what am I doing wrong", "should_trigger": true},
+  {"query": "whats melvinbot and why does it always post a proposal before anyone else gets a chance", "should_trigger": true},
+  {"query": "can you check my draft proposal for issue 99208 is different enough from the ones already posted before I put it up? worried about the duplicate bot", "should_trigger": true},
+  {"query": "find the root cause for Expensify/App#98426, the distance rate one where the field wont open", "should_trigger": true},
+  {"query": "is contributing to expensify actually worth it or am I better off just bidding more on upwork", "should_trigger": true},
+  {"query": "how does the contributor plus review process work over at expensify, who actually decides which proposal wins", "should_trigger": true},
+  {"query": "i need to write up the root cause + fix for that expense report crash bug on the expensify repo, they want it in their template format", "should_trigger": true},
+
+  {"query": "set up Expensify for my agency so the team can submit their expense receipts and I can approve them, we're about 6 people", "should_trigger": false},
+  {"query": "write me an upwork proposal for this job post: 'Looking for a React Native dev to fix bugs in our expense tracking app, $30/hr'", "should_trigger": false},
+  {"query": "can you review the diff on my current branch for bugs before I push it", "should_trigger": false},
+  {"query": "i want to get into open source contribution, what are some good beginner friendly repos that pay?", "should_trigger": false},
+  {"query": "my upwork proposals arent getting replies, JSS is 100% and im top rated. whats broken in my funnel", "should_trigger": false},
+  {"query": "trace the root cause of this hydration mismatch in my nextjs app, it only happens on the dashboard route", "should_trigger": false},
+  {"query": "whats a good bug bounty program for someone getting into web security research, ideally one that pays for XSS", "should_trigger": false},
+  {"query": "clone github.com/vercel/next.js locally and figure out how their router handles catch-all segments", "should_trigger": false},
+  {"query": "help me write a clear github issue for my own repo, the bug is that our CSV export drops the last row", "should_trigger": false},
+  {"query": "research expensify as a company, im pitching them on an AI automation retainer next week and need background", "should_trigger": false}
+]

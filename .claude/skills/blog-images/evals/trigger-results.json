@@ -1,0 +1,123 @@
+{
+  "skill_name": "blog-images",
+  "description": "Creates the images that illustrate a written article - one cover plus two or three supporting explainer diagrams per post, authored as SVG and rendered to real PNG files in the brand palette. Use whenever the user wants artwork, images, figures, illustrations, a cover or hero image, or a diagram for a blog post, an article, or a written piece, including phrasings like \"draw a diagram for the article\", \"explainer diagrams to go with this post\", \"figures for the write-up\", \"the post needs artwork\", or \"images to hand to website-creator\". When a diagram is meant to accompany written content, this skill owns it rather than a general-purpose diagramming tool.",
+  "results": [
+    {
+      "query": "Create the images for my new blog post about AI agents.",
+      "should_trigger": true,
+      "trigger_rate": 1.0,
+      "triggers": 3,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "I need a cover image for this article.",
+      "should_trigger": true,
+      "trigger_rate": 1.0,
+      "triggers": 3,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Make some explainer diagrams to go with the n8n post.",
+      "should_trigger": true,
+      "trigger_rate": 0.3333333333333333,
+      "triggers": 1,
+      "runs": 3,
+      "pass": false
+    },
+    {
+      "query": "Can you produce the figures for content/blog/ai-automation-cost.md?",
+      "should_trigger": true,
+      "trigger_rate": 1.0,
+      "triggers": 3,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "The blog articles have no artwork. Sort that out.",
+      "should_trigger": true,
+      "trigger_rate": 1.0,
+      "triggers": 3,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "I need hero images for the blog that website-creator can render.",
+      "should_trigger": true,
+      "trigger_rate": 1.0,
+      "triggers": 3,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Draw a diagram showing the difference between an agent and a skill for the article.",
+      "should_trigger": true,
+      "trigger_rate": 0.6666666666666666,
+      "triggers": 2,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Make a LinkedIn infographic of the top AI tools by use case.",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Turn this post into an Instagram carousel.",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Make a 9:16 short cover frame for Reels.",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Write me a blog post about workflow automation pricing.",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Render this infographic into a motion reel with a voiceover.",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Change our brand accent colour and update the palette.",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 3,
+      "pass": true
+    },
+    {
+      "query": "Audit the on-page SEO of my services page.",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 3,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "total": 14,
+    "passed": 13,
+    "failed": 1
+  }
+}

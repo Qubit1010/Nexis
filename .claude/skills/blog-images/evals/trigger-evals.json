@@ -1,0 +1,16 @@
+[
+  {"query": "Create the images for my new blog post about AI agents.", "should_trigger": true},
+  {"query": "I need a cover image for this article.", "should_trigger": true},
+  {"query": "Make some explainer diagrams to go with the n8n post.", "should_trigger": true},
+  {"query": "Can you produce the figures for content/blog/ai-automation-cost.md?", "should_trigger": true},
+  {"query": "The blog articles have no artwork. Sort that out.", "should_trigger": true},
+  {"query": "I need hero images for the blog that website-creator can render.", "should_trigger": true},
+  {"query": "Draw a diagram showing the difference between an agent and a skill for the article.", "should_trigger": true},
+  {"query": "Make a LinkedIn infographic of the top AI tools by use case.", "should_trigger": false},
+  {"query": "Turn this post into an Instagram carousel.", "should_trigger": false},
+  {"query": "Make a 9:16 short cover frame for Reels.", "should_trigger": false},
+  {"query": "Write me a blog post about workflow automation pricing.", "should_trigger": false},
+  {"query": "Render this infographic into a motion reel with a voiceover.", "should_trigger": false},
+  {"query": "Change our brand accent colour and update the palette.", "should_trigger": false},
+  {"query": "Audit the on-page SEO of my services page.", "should_trigger": false}
+]

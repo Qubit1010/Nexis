@@ -1,0 +1,106 @@
+{
+  "measured_on": "2026-08-23",
+  "measured_by": "Direct gh api queries against Expensify/App plus primary-source reads of contributingGuides/ and .github/",
+  "evidence_tier": "measured",
+  "note": "Every figure here is reproducible with the queries in queries.md. Re-measure before trusting anything older than a quarter; Expensify changes this process often (MelvinBot and ProposalPolice are both recent).",
+
+  "repo": {
+    "stars": 5011,
+    "forks": 3991,
+    "open_issues": 2159,
+    "primary_language": "TypeScript",
+    "size_mb": 2815,
+    "default_branch": "main",
+    "engines": {"node": "26.5.0", "bun": "1.3.14", "npm": "11.17.0"}
+  },
+
+  "funnel": {
+    "open_help_wanted": 53,
+    "created_last_7_days": 4,
+    "created_last_30_days": 15,
+    "implication": "About 4 genuinely new bounty opportunities per week. This is a small funnel, not a firehose."
+  },
+
+  "melvinbot": {
+    "presence_rate": "20 of 20 open Help Wanted issues sampled",
+    "latency_after_issue_creation_minutes": [5, 16],
+    "examples": {
+      "99191": {"issue_created": "2026-08-21T14:43:31Z", "melvin_proposal": "2026-08-21T14:48:27Z"},
+      "99156": {"issue_created": "2026-08-21T08:09:24Z", "melvin_proposal": "2026-08-21T08:17:07Z"},
+      "99042": {"issue_created": "2026-08-20T08:28:33Z", "melvin_proposal": "2026-08-20T08:44:07Z"}
+    },
+    "implication": "MelvinBot posting is the earliest reliable signal that an issue has entered the bounty pipeline. Treat it as the starting gun."
+  },
+
+  "work_window": {
+    "definition": "Time from issue creation to the Help Wanted label being applied. Proposals are only accepted after the label.",
+    "observed": {
+      "97866": {"created": "2026-08-05T11:53:33Z", "help_wanted": "2026-08-05T16:09:04Z", "hours": 4.3},
+      "99191": {"created": "2026-08-21T14:43:31Z", "help_wanted": "2026-08-23T03:54:03Z", "hours": 37.2},
+      "99156": {"created": "2026-08-21T08:09:24Z", "help_wanted": "2026-08-22T21:50:56Z", "hours": 37.7},
+      "99042": {"created": "2026-08-20T08:28:33Z", "help_wanted": "2026-08-22T11:31:12Z", "hours": 51.0},
+      "98690": {"created": "2026-08-14T20:57:24Z", "help_wanted": "2026-08-22T00:19:53Z", "hours": 171.4},
+      "98426": {"created": "2026-08-12T13:55:00Z", "help_wanted": "2026-08-20T14:40:43Z", "hours": 192.8}
+    },
+    "median_hours_approx": 44,
+    "min_observed_hours": 4.3,
+    "implication": "Median about two days of preparation time, but the floor is four hours. Never assume you have days."
+  },
+
+  "competition": {
+    "human_proposals_per_issue": {"min": 4, "max": 17, "median_approx": 11},
+    "sample": {
+      "98426": 17, "98573": 14, "96982": 14, "99042": 13, "96419": 13,
+      "99191": 12, "98791": 12, "96681": 12, "96404": 12, "97866": 11,
+      "97159": 10, "99156": 9, "96718": 9, "98025": 8, "96975": 8,
+      "96412": 8, "97838": 7, "98690": 5, "98535": 4
+    },
+    "simultaneous_firing": {
+      "98426": {"help_wanted": "2026-08-20T14:40:43Z", "proposals_at_14_40_45": ["abbasifaizan70", "ahmdshrif", "oqildev", "Abdulloh0109"], "sizes_bytes": [7275, 7492, 7471, 5942]},
+      "98791": {"help_wanted": "2026-08-18T13:37:31Z", "proposals_within_4_seconds": 6},
+      "96206": {"help_wanted": "2026-07-15T19:15:16Z", "proposals_within_1_second": 4}
+    },
+    "implication": "Multiple contributors run automation that fires a pre-written multi-kilobyte proposal within one to two seconds of the label. Nobody writes 7KB in two seconds; the analysis happens during the work window."
+  },
+
+  "outcome_evidence": {
+    "98426": {
+      "help_wanted": "2026-08-20T14:40:43Z",
+      "winner": "abbasifaizan70",
+      "winning_proposal_posted": "2026-08-20T14:40:45Z",
+      "winning_proposal_bytes": 7275,
+      "selected_by": "Ollyws (C+) on 2026-08-21 with the comment: 'I think we can just drop the redundant !!rate check here so @abbasifaizan70's proposal LGTM. woo C+ reviewed'",
+      "why_it_won": "Permalink-cited causal chain across four files (RateField.tsx -> MenuItem.tsx -> useDistanceRequestState.ts -> DistanceRequestUtils.ts), each pinned to a full commit SHA with a line range.",
+      "notable_loser": "neerajbachani posted a 19370-byte proposal six hours later and lost. Length did not beat timing plus precision."
+    },
+    "98791": {
+      "note": "Fourteen proposals landed inside sixty seconds. Three days later the assigned C+ (linhvovan29546) was still commenting 'Can anyone reproduce the crash?'. A contributor who supplied real reproduction steps became the most useful participant on the thread.",
+      "implication": "Reproduction is the scarce good on hard issues, not another fast proposal."
+    }
+  },
+
+  "proposal_police": {
+    "source_file": ".github/actions/javascript/proposalPoliceComment/proposalPoliceComment.ts",
+    "workflow_file": ".github/workflows/proposalPolice.yml",
+    "duplicate_similarity_threshold": 90,
+    "mechanism": "An OpenAI conversation per issue holds every proposal posted so far. A new proposal scoring at or above 90 percent similarity to a still-live proposal is automatically edited into a withdrawal.",
+    "also_does": ["classifies comments that do not follow the proposal template", "grades edits made to existing proposals"],
+    "exempt": ["Expensify employees (checked via org team membership)", "OSBotify", "imgbot", "melvin-bot", "codecov"],
+    "observed_effect": "On issue 98791, four of the first wave of sniped proposals were auto-withdrawn as duplicates."
+  },
+
+  "selection_rule": {
+    "source": "contributingGuides/PROPOSAL_TEMPLATE.md, inside an HTML comment addressed to Contributor+ reviewers",
+    "quote": "Choose the first proposal that has a reasonable answer to all the required questions.",
+    "supporting_quote": "Do not approve any proposals that lack a satisfying explanation to the first two prompts. It is CRITICALLY important that we understand the root cause at a minimum even if the solution doesn't directly address it.",
+    "implication": "Root cause outranks solution. The bar is 'reasonable and complete', not 'best'. Being complete beats being clever, and being early beats being thorough-but-late."
+  },
+
+  "payment": {
+    "standard_bounty_usd": 250,
+    "paid_via": "Upwork",
+    "timing": "No less than 7 days after the PR is deployed to production, to allow for regression testing",
+    "regression_penalty": "50 percent penalty to both Contributor and C+ per regression, within a 168-hour regression window after production deploy",
+    "new_contributor_limit": "One job at a time. Do not submit proposals for new jobs until your first PR has been merged."
+  }
+}
