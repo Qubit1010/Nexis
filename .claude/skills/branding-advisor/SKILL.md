@@ -1,38 +1,6 @@
 ---
 name: branding-advisor
-description: >
-  Use to EXPLAIN, DIAGNOSE or ADVISE on anything to do with branding, brand strategy, brand
-  identity or visual and verbal identity. This is the knowledge and diagnosis skill, not an
-  execution skill: it answers questions, settles disputes, triages what is actually wrong with
-  a brand, and routes the work. Triggers on: branding, brand strategy, brand identity, brand
-  image, brand equity, brand reputation, brand positioning, brand personality, brand
-  archetypes, Jungian archetypes, Aaker, Kapferer, Keller, CBBE, brand identity prism, brand
-  voice, tone of voice, brand messaging, brand story, brand storytelling, narrative
-  transportation, StoryBrand, brand promise, brand values, brand naming, sound symbolism,
-  taglines, slogans, logo, logo design, logo redesign, wordmark, monogram, visual identity,
-  corporate visual identity, brand guidelines, brand book, style guide, design system, design
-  tokens, colour system, color psychology, brand colours, typography, typeface, font
-  psychology, serif vs sans, brand consistency, distinctive brand assets, Byron Sharp,
-  Ehrenberg-Bass, Romaniuk, differentiation vs distinctiveness, double jeopardy, mental
-  availability, brand salience, brand awareness, brand recall, brand tracking, brand
-  measurement, brand valuation, share of search, rebrand, rebranding, brand refresh, personal
-  branding, founder brand, CEO visibility, thought leadership.
-  Also triggers on the questions clients actually ask: "should we rebrand", "do we need a new
-  logo", "our brand feels inconsistent", "we blend in with competitors", "is that statistic
-  real", "how do we measure if branding is working", "how much does a logo matter", "what's
-  the difference between brand identity and brand image".
-  Grounded in a cited 260-source 2026 corpus, 132 confirmed against 128 practitioner, tagging
-  every claim [C] or [P]. Its primary value is refusing invented statistics: it will not repeat
-  "colour increases brand recognition by 80%" (no traceable primary source), "consistent
-  branding increases revenue by 23%" (a vendor survey), any rebrand failure rate or logo ROI
-  figure, and it presents Jungian archetypes as a creative device rather than evidence. It
-  preserves the differentiation-versus-distinctiveness disagreement instead of resolving it.
-  For BUILDING or AUDITING a client's brand positioning, personality, promise, story or values
-  use brand-strategy. For voice, tone, messaging, naming or taglines use brand-voice. For
-  colour, typography, logo direction, visual identity or the assembled guidelines document use
-  brand-visual. For business positioning, UVP, market sizing, ICP or personas use
-  strategic-foundation. For channel, offer and demand strategy use marketing-advisor. For
-  generating actual brand imagery and logo boards use taste-skill:brandkit.
+description: "Use to EXPLAIN, DIAGNOSE or ADVISE on branding, brand strategy, brand identity, or visual and verbal identity. Knowledge and diagnosis, not execution: it answers questions, settles disputes, triages what is actually wrong with a brand, and routes the work. Triggers on: branding, brand strategy, brand identity, brand image, brand equity, brand reputation, brand positioning, brand personality, brand archetypes, Jungian archetypes, Aaker, Kapferer, Keller, CBBE, brand voice, tone of voice, brand messaging, brand story, StoryBrand, brand promise, brand values, brand naming, taglines, slogans, logo, logo redesign, wordmark, visual identity, brand guidelines, brand book, style guide, design tokens, colour system, color psychology, typography, font psychology, serif vs sans, brand consistency, distinctive brand assets, Byron Sharp, Ehrenberg-Bass, differentiation vs distinctiveness, double jeopardy, mental availability, brand salience, brand awareness, brand tracking, brand valuation, share of search, rebrand, brand refresh, personal branding, founder brand, thought leadership. Also: 'should we rebrand', 'do we need a new logo', 'our brand feels inconsistent', 'we blend in with competitors', 'is that statistic real', 'how do we measure if branding is working'. For BUILDING or AUDITING positioning, personality, promise, story or values use brand-strategy; for voice, tone, messaging or naming use brand-voice; for colour, typography, logo direction or the guidelines document use brand-visual; for UVP, market sizing, ICP or personas use strategic-foundation; for content pillars, calendar and distribution use content-strategy. Channel mix, offer and pricing, paid ads and email are not covered by any current skill; say so rather than improvising."
 argument-hint: [a branding question, a symptom, or a claim to fact-check]
 ---
 
@@ -73,10 +41,11 @@ a client" rather than "explain this to me", route there.
 | `brand-voice` | Voice spec, tone, messaging framework, vocabulary, naming, taglines |
 | `brand-visual` | Colour, typography, logo direction, visual identity spec, design tokens, the assembled guidelines document |
 | `strategic-foundation` | Business positioning, UVP, market sizing, ICP, competitor analysis, audience personas |
-| `marketing-advisor` | Channels, offers, demand generation, content strategy, NexusPoint's own marketing |
+| `content-strategy` | Content pillars, calendar, funnel and distribution for this client |
+| *(no owning skill)* | Channel mix, offer and pricing, paid ads, email and lifecycle, and cross-channel measurement. No current skill covers these. Say so plainly rather than improvising. |
 | `content-engine` / `blog-writer` | Writing actual posts and articles |
-| `taste-skill:brandkit` | Generating brand imagery, logo boards, identity decks |
-| `ui-design-system` | Turning an approved palette into dev tokens |
+| *(archived)* | `taste-skill:brandkit` generated brand imagery and logo boards. Archived 2026-08-27 to `archives/cleanup-2026-08-27/skills/`. No current skill covers this |
+| *(archived)* | `ui-design-system` turned an approved palette into dev tokens. Archived 2026-08-27 to `archives/cleanup-2026-08-27/skills/`. Write tokens inline instead |
 | `sales-playbook` | Pitching or closing the branding engagement |
 
 State the handoff when you make it. Do not silently stop.
@@ -173,8 +142,8 @@ measurement, or "client-reported". If it resolves to none of those, it does not 
 | Asked something the corpus does not cover | `notebook-live-query.md` Tier 2. Never guess |
 | Asked "how much will this be worth" | No traceable ROI figures exist for logo or rebrand work. Say so |
 | A rebrand request with no diagnosis | Run the rebrand triage before agreeing it is a rebrand at all |
-| Brand work will not fix their problem | Say so and route to `strategic-foundation`, `marketing-advisor` or `sales-playbook` |
-| Asked to generate a logo or brand board | Route to `taste-skill:brandkit`. This skill writes specs, not images |
+| Brand work will not fix their problem | Say so and route to `strategic-foundation`, `content-strategy` or `sales-playbook` |
+| Asked to generate a logo or brand board | Say `taste-skill:brandkit` was archived 2026-08-27 and no current skill generates imagery. This skill writes specs, not images |
 | Asked for a full deliverable | Route to the spoke. Do not produce it here |
 
 ---

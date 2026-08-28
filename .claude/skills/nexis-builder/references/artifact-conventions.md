@@ -7,7 +7,7 @@ projects/Athllo/                 # (or a client/external path)
 ├── .builder/                    # pipeline artifacts for THIS project
 │   ├── blueprint.md             # Phase 0 (from developer-advisor)
 │   ├── architecture.md          # Phase 1 (from senior-architect) — IMMUTABLE
-│   ├── design-system.md         # Phase 2 (from ui-ux-pro-max/taste/ui-design-system)
+│   ├── design-system.md         # Phase 2 (from ui-ux-pro-max)
 │   ├── test-plan.md             # Phase 5
 │   ├── review-report.md         # Phase 6 (from code-reviewer)
 │   ├── decisions.md             # append-only decision log

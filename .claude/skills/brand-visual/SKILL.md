@@ -1,39 +1,6 @@
 ---
 name: brand-visual
-description: >
-  Use to BUILD or AUDIT what a brand looks like, as a written specification: colour system,
-  typography, logo direction, spacing and layout, imagery direction, applications,
-  accessibility, and design tokens. Also assembles the single brand guidelines manual from the
-  strategy, voice and visual documents. This is the execution skill that produces the artifact,
-  not the advice skill.
-  Triggers on: visual identity, brand visual identity, corporate visual identity, brand
-  guidelines, brand book, brand manual, style guide, brand style guide, design system for the
-  brand, design tokens, colour system, color palette, brand colours, primary and secondary
-  colours, typography, brand typeface, font pairing, type scale, font licensing, logo
-  direction, logo concept, logo system, logo variants, clear space, logo misuse, wordmark,
-  keep or replace the logo, refresh the logo, visual direction, art direction, imagery
-  guidelines, brand applications, contrast ratio, WCAG, accessible palette, our colours fail
-  contrast, assemble the brand guidelines, build the brand manual, audit their visual identity,
-  review this brand book, their branding looks dated, looks different on every platform.
-  Works from whatever exists: a live website it samples actual hex values and loaded fonts
-  from, a PDF or DOCX brand book, a Google Doc, logo files, or a client-projects slug. Consumes
-  13-brand-strategy.md and 14-brand-voice.md so every visual decision traces to a personality
-  trait or a position.
-  Outputs client-projects/<slug>/15-brand-visual-identity.md and, on request,
-  16-brand-guidelines.md assembled from 13, 14 and 15. Measures rather than asserts: it
-  computes WCAG contrast ratios for every real foreground and background pair instead of
-  claiming a palette is accessible, samples live values instead of trusting the brand book, and
-  reuses ui-ux-pro-max's palette and typography data plus ui-design-system's token generator
-  rather than inventing from scratch.
-  Numbers cited as [sN] resolve via branding-advisor's corpus. It refuses the "colour increases
-  brand recognition by 80%" claim, which has no traceable primary source, asserts no
-  serif-versus-sans legibility rule because the evidence is genuinely contested, quotes no font
-  licensing costs it has not verified, and gives no logo-change ROI figure because none exists.
-  Scope is deliberately the visual system only. For positioning, personality, promise or story
-  use brand-strategy. For voice, messaging, naming or taglines use brand-voice. For generating
-  actual logo imagery, brand boards or identity decks use taste-skill:brandkit. For explaining
-  or diagnosing branding use branding-advisor. For building a website or app UI use
-  ui-ux-pro-max, senior-frontend or nexis-builder.
+description: "Use to BUILD or AUDIT what a brand looks like, as a written specification: colour system, typography, logo direction, spacing and layout, imagery direction, applications, accessibility, and design tokens. Also assembles the single brand guidelines manual from the strategy, voice and visual documents. Execution skill that produces the artifact, not the advice skill. Triggers on: visual identity, brand visual identity, corporate visual identity, brand guidelines, brand book, brand manual, style guide, design system for the brand, design tokens, colour system, color palette, brand colours, primary and secondary colours, typography, brand typeface, font pairing, type scale, font licensing, logo direction, logo concept, logo system, logo variants, clear space, logo misuse, wordmark, refresh the logo, visual direction, art direction, imagery guidelines, brand applications, contrast ratio, WCAG, accessible palette. Also: 'our colours fail contrast', 'assemble the brand guidelines', 'build the brand manual', 'audit their visual identity', 'review this brand book', 'their branding looks dated', 'looks different on every platform'. Works from a live website it samples actual hex values and loaded fonts from, a PDF or DOCX brand book, a Google Doc, logo files, or a client-projects slug. Consumes 13-brand-strategy.md and 14-brand-voice.md so every visual decision traces to a personality trait or a position. Outputs client-projects/<slug>/15-brand-visual-identity.md and, on request, 16-brand-guidelines.md. Computes real WCAG contrast ratios rather than claiming a palette is accessible, and reuses ui-ux-pro-max's palette and typography data plus ui-design-system's token generator. Scope is the visual system only. For positioning, personality, promise or story use brand-strategy; for voice, messaging or naming use brand-voice; actual logo imagery and brand boards have no owning skill since taste-skill was archived 2026-08-27; for explaining or diagnosing branding use branding-advisor; for building a website or app UI use ui-ux-pro-max, senior-frontend or nexis-builder."
 argument-hint: [client name, URL, brand book, or client-projects slug - optionally "audit" or "assemble"]
 ---
 
@@ -58,7 +25,7 @@ brand-strategy       ->  brand-voice      ->  brand-visual
                                     +----------------+----------------+
                                     v                                 v
                           taste-skill:brandkit              ui-design-system
-                          (the actual imagery)              (dev tokens)
+                            (both ARCHIVED                   2026-08-27)
 ```
 
 It is the visual system **and nothing else**. It writes the spec; `brandkit` draws.
@@ -88,8 +55,8 @@ It is the visual system **and nothing else**. It writes the spec; `brandkit` dra
 | `branding-advisor` | Explaining a concept, fact-checking a claim, rebrand triage |
 | `brand-strategy` | Positioning, personality, promise, story, values |
 | `brand-voice` | Voice, tone, messaging, naming, taglines |
-| `taste-skill:brandkit` | Generating logo boards, identity decks, brand imagery |
-| `ui-design-system` | Turning the approved palette into dev token files |
+| *(archived)* | `taste-skill:brandkit` generated logo boards, identity decks and brand imagery. Archived 2026-08-27 to `archives/cleanup-2026-08-27/skills/`. No current skill covers this |
+| *(archived)* | `ui-design-system` turned an approved palette into dev token files. Archived 2026-08-27 to `archives/cleanup-2026-08-27/skills/`. Write tokens inline in the spec instead |
 | `ui-ux-pro-max` | Designing an actual product UI, not the brand system |
 | `senior-frontend` / `nexis-builder` | Implementing a site or app |
 | `linkedin-infographics` / `carousel` / `shorts-creator` | Individual branded content pieces |
@@ -168,7 +135,7 @@ claim has a number.
 | Client asks whether serif or sans is more legible | Genuinely contested. No universal rule. Do not invent one |
 | Asked for font licensing cost | Verify per foundry. Never quote from memory. Say what was and was not checked |
 | Asked what a new logo is worth in revenue | No traceable ROI study exists. Direction only |
-| Asked to generate the actual logo or brand board | Route to `taste-skill:brandkit`. This skill writes the spec |
+| Asked to generate the actual logo or brand board | Say `taste-skill:brandkit` was archived 2026-08-27 and no current skill generates imagery. This skill writes the spec |
 | Token generator output fights the palette | Override and record why. It derives algorithmically from one hex and is a starting scale |
 | Assemble requested but `14` is missing | Say which document is missing and offer `brand-voice`. Do not invent the voice section |
 | `13`, `14` and `15` disagree during assembly | Stop and fix the source document. Never reconcile silently in the manual |

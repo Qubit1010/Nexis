@@ -19,7 +19,7 @@ These files contain the full picture. Read them when you need context:
 
 ## gstack
 
-`gstack` is installed but **not a default tool** — only reach for it when it's actually the right fit for the task, not as a standing preference over other tools or MCP servers. See `.claude/rules/skills-catalog.md` for the full skill list and the submodule setup teammates need after cloning.
+**Removed 2026-08-27** — no longer installed. See `references/skills-catalog.md` for what replaced it, if anything.
 
 ## Tool Integrations
 
@@ -33,8 +33,6 @@ See `.claude/rules/tool-integrations.md` for full details. Key tools:
 
 ## Skills
 
-Skills live in `.claude/skills/`. Each skill gets its own folder with a `SKILL.md` file.
-
 Skills are built organically -- when a workflow gets repeated, we turn it into a skill.
 
 **Creating new skills:** See `.claude/rules/skill-creation.md`. When Aleem asks to create a new skill without explicitly naming the skill-creator, ask whether to build it with the `skill-creator` workflow before proceeding.
@@ -45,23 +43,15 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 
 **GDrive sync prompt:** See `.claude/rules/gdrive-sync-prompt.md`. After adding or modifying files in `archives/`, `catalog/`, `client-projects/`, `context/`, `decisions/`, `logs/`, `references/`, or `.claude/rules/` — ask whether to sync to Google Drive.
 
-**Skill catalog:** See `.claude/rules/skills-catalog.md` for the full list of active in-house skills and installed third-party skills, plugins, and collections.
+**Skill catalog:** See `references/skills-catalog.md` for the full list of active in-house skills and installed third-party skills, plugins, and collections.
 
-**Skills backlog:** See `.claude/rules/skills-backlog.md` for the domain-organized backlog of skill ideas to build next.
+**Skills backlog:** See `references/skills-backlog.md` for the domain-organized backlog of skill ideas to build next.
 
 ## Decision Log
 
 All meaningful decisions go in `decisions/log.md`. Append-only -- never edit or delete past entries.
 
 Format: `[YYYY-MM-DD] DECISION: ... | REASONING: ... | CONTEXT: ...`
-
-## Memory
-
-Claude Code maintains persistent memory across conversations. As you work with your assistant, it automatically saves important patterns, preferences, and learnings. No configuration needed.
-
-If you want to remember something specific, just say "remember that I always want X" and it will save it across all future conversations.
-
-Memory + context files + decision log = your assistant gets smarter over time without re-explaining things.
 
 ## Keeping Context Current
 
@@ -88,17 +78,6 @@ NexusPoint has a dedicated **second brain** — a standalone Obsidian vault + Ka
 - **When to update the brain:** after `context/` or `decisions/log.md` change here, or when evergreen knowledge is produced (a new offer, case study, strategic call), run the `brain-sync` skill (`.claude/skills/brain-sync/`): `--check` for drift, `--push`/`--pull` to mirror `context/` + `decisions/log.md`, `--ingest` to distill new knowledge into `wiki/` and refresh `CRITICAL_FACTS.md`.
 - **What it holds:** distilled, evergreen agency knowledge — overview, offer/positioning, services, proposals, Upwork keywords, portfolio, team, strategy, and a 73-project case-study log. Live/sensitive data (CRMs, finances, `.env`, `client-projects/`) is deliberately kept OUT and never syncs.
 - **Reusable build SOP:** `references/sops/build-a-second-brain.md` — the step-by-step playbook (also in the vault at `agency-brain/skills/build-a-second-brain.md`). Use it to spin up a brain for a **client** or **team member** (each gets its own scoped vault + its own `OBSIDIAN_VAULT_PATH`). Captures the Graphify gotchas (`--backend openai`, exclude `.obsidian/plugins/`, the dead global Anthropic key).
-
-## Templates
-
-Reusable templates live in `templates/`. Currently available:
-- `session-summary.md` — Session closeout template
-
-## References
-
-SOPs, examples, and style guides live in `references/`.
-- `references/sops/` — Standard operating procedures
-- `references/examples/` — Example outputs and style guides
 
 ## Archives
 

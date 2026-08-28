@@ -1,6 +1,6 @@
 # Design System Template
 
-> Written in Phase 2 (ui-ux-pro-max + taste-skill + ui-design-system). This is what keeps the UI from looking generic. Every choice is derived from the product, and named. Read `references/design-standards.md` first.
+> Written in Phase 2 (ui-ux-pro-max). This is what keeps the UI from looking generic. Every choice is derived from the product, and named. Read `references/design-standards.md` first.
 
 ---
 
@@ -20,7 +20,6 @@ created: {{ISO_TIMESTAMP}}
 - **Aesthetic:** {{named direction}}
 - **Register / mood:** {{e.g., trustworthy and calm / bold and kinetic / premium and restrained}}
 - **Reference points:** {{2-3 touchstones, if used}}
-- **taste-skill sub-skill used:** {{e.g., minimalist-ui / high-end-visual-design / industrial-brutalist-ui / none}}
 
 ## 2. Color System
 
@@ -48,7 +47,7 @@ created: {{ISO_TIMESTAMP}}
 - **Pairing rationale:** {{why these fonts carry the register}}
 - **Type scale:** {{the ratio/steps — real hierarchy, not one size}}
 
-## 4. Tokens (ui-design-system)
+## 4. Tokens
 
 - **Spacing scale:** {{e.g., 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64}}
 - **Radius:** {{scale}}

@@ -48,12 +48,12 @@ Read `artifact-conventions.md` alongside this. `status.md` is the source of trut
 
 ---
 
-## Phase 2 — Design direction (workers: ui-ux-pro-max + taste-skill + ui-design-system)
+## Phase 2 — Design direction (worker: ui-ux-pro-max)
 
 **Goal:** a product-specific visual system so the UI does not look AI-generated. This is the anti-slop phase. Follow `design-standards.md`.
 
 - Read the blueprint + architecture for the product's personality, audience, and platform.
-- Use `ui-ux-pro-max` for the design intelligence (style, palette, type pairing, layout, a11y, component patterns). Use `taste-skill` when a specific aesthetic is wanted or the default risks looking generic (brutalist, minimalist, luxury, motion-heavy). Use `ui-design-system` to lock tokens (color scale, spacing, radius, shadow, motion) for clean dev handoff.
+- Use `ui-ux-pro-max` for the design intelligence (style, palette, type pairing, layout, a11y, component patterns) and to commit to a specific aesthetic when the default risks looking generic (brutalist, minimalist, luxury, motion-heavy). Lock tokens (color scale, spacing, radius, shadow, motion) directly into the doc for clean dev handoff — `taste-skill` and `ui-design-system`, which used to do these two jobs, were archived 2026-08-27.
 - Write `.builder/design-system.md` (see `templates/design-system.md`): chosen aesthetic + why it fits, palette with roles, type system, spacing/radius/shadow tokens, motion language, key component treatments, and 1-2 signature UI moments.
 
 **HUMAN CHECKPOINT.** Present the direction concisely and ask go / adjust. Do not proceed to Phase 3 on an unapproved direction. Skip only if `--auto`.

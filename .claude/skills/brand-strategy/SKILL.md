@@ -1,35 +1,6 @@
 ---
 name: brand-strategy
-description: >
-  Use to BUILD or AUDIT the strategic core of a brand for a client or a founder: brand
-  positioning, brand personality, brand archetype, brand promise, brand story, brand values,
-  and what the brand deliberately rules out. This is the execution skill that produces the
-  artifact, not the advice skill.
-  Triggers on: build a brand strategy, brand strategy for, define their brand, brand identity
-  for, develop the brand, brand positioning, positioning statement, brand personality, brand
-  archetype, brand promise, brand story, brand narrative, founding story, brand values, brand
-  essence, brand platform, brand pillars, brand DNA, brand core, who is this brand, what does
-  this brand stand for, audit their brand, review this brand deck, critique this brand
-  strategy, their brand is generic, we blend in with competitors, our brand has no direction,
-  personal brand strategy, founder brand, build my founder brand, define the CEO's brand,
-  thought leadership positioning.
-  Works from whatever the client provides: a Google Doc, a PDF or DOCX brand deck, pasted text,
-  a website URL, an existing client-projects slug, or just a business name, which it resolves
-  via research --mode entity. Consumes 07-strategic-foundation.md and 08-audience-persona.md
-  when they exist and takes their positioning rather than re-deriving it.
-  Outputs client-projects/<slug>/13-brand-strategy.md: a fact table with confidence levels,
-  positioning, personality, promise, story, values, an explicit "what this rules out" section,
-  assumptions to validate, and what could not be established. Audit mode instead produces a
-  seven-row Strong/Workable/Weak/Missing scorecard and rewrites the highest-leverage pieces.
-  Numbers cited as [sN] resolve via branding-advisor's corpus; it refuses invented brand
-  statistics, presents archetypes as a creative device rather than evidence, and will not claim
-  a clearly positioned brand outperforms an ambiguous one because no causal evidence supports
-  that.
-  Scope is deliberately the strategic core only. For voice, tone, messaging, naming or taglines
-  use brand-voice. For colour, typography, logo or the guidelines document use brand-visual.
-  For business positioning, UVP, market sizing, ICP or personas use strategic-foundation. For
-  explaining or diagnosing branding rather than producing an artifact use branding-advisor. For
-  content pillars, cadence and channels use marketing-advisor.
+description: "Use to BUILD or AUDIT the strategic core of a brand for a client or a founder: brand positioning, brand personality, brand archetype, brand promise, brand story, brand values, and what the brand deliberately rules out. Execution skill that produces the artifact, not the advice skill. Triggers on: build a brand strategy, brand strategy for, define their brand, brand identity for, develop the brand, brand positioning, positioning statement, brand personality, brand archetype, brand promise, brand story, brand narrative, founding story, brand values, brand essence, brand platform, brand pillars, brand DNA, 'who is this brand', 'what does this brand stand for', audit their brand, review this brand deck, critique this brand strategy, 'their brand is generic', 'we blend in with competitors', 'our brand has no direction', personal brand strategy, founder brand, 'build my founder brand', thought leadership positioning. Works from a Google Doc, a PDF or DOCX brand deck, pasted text, a website URL, a client-projects slug, or just a business name, which it resolves via research --mode entity. Consumes 07-strategic-foundation.md and 08-audience-persona.md when they exist rather than re-deriving them. Outputs client-projects/<slug>/13-brand-strategy.md with a fact table, confidence levels, an explicit 'what this rules out' section, and assumptions to validate; audit mode instead produces a Strong/Workable/Weak/Missing scorecard. Refuses invented brand statistics and presents archetypes as a creative device rather than evidence. Scope is the strategic core only. For voice, tone, messaging or taglines use brand-voice; for colour, typography, logo or the guidelines document use brand-visual; for UVP, market sizing, ICP or personas use strategic-foundation; for explaining or diagnosing branding use branding-advisor; for content pillars, cadence and channels use content-strategy."
 argument-hint: [client name, URL, doc, or client-projects slug - optionally "audit" or "founder"]
 ---
 
@@ -84,8 +55,8 @@ document and are produced by the siblings.
 | `strategic-foundation` | Market sizing, UVP, ICP, competitor analysis, audience personas |
 | `brand-voice` | Voice spec, tone, messaging, vocabulary, naming, taglines |
 | `brand-visual` | Colour, typography, logo direction, guidelines assembly |
-| `marketing-advisor` / `content-engine` | Content pillars, cadence, channels, posting |
-| `taste-skill:brandkit` | Generating brand imagery or logo boards |
+| `content-strategy` | Content pillars, cadence, funnel and distribution for this client |
+| *(archived)* | `taste-skill:brandkit` generated brand imagery and logo boards. Archived 2026-08-27 to `archives/cleanup-2026-08-27/skills/`. No current skill covers this |
 
 State the handoff when you make it. Do not silently stop.
 

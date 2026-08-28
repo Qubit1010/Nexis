@@ -1,35 +1,6 @@
 ---
 name: brand-voice
-description: >
-  Use to BUILD or AUDIT how a brand sounds and what it says: brand voice, tone of voice,
-  messaging framework, messaging house, vocabulary, writing mechanics, and where in scope brand
-  naming and taglines. This is the execution skill that produces the artifact, not the advice
-  skill.
-  Triggers on: brand voice, voice guidelines, tone of voice, tone guidelines, voice and tone,
-  define their voice, voice spec, how should they sound, messaging framework, messaging house,
-  message hierarchy, core message, messaging pillars, proof points, brand vocabulary, words we
-  use, words we never use, writing style for the brand, copy guidelines, editorial guidelines,
-  brand naming, name this product, name candidates, tagline, taglines, slogan, strapline,
-  audit their voice guide, review this tone of voice doc, their copy sounds inconsistent, every
-  page sounds different, our writers all sound different, ghostwriting voice, founder voice,
-  my writing voice, make it sound like me.
-  Works from whatever exists: the client's live copy, a Google Doc, a PDF or DOCX voice guide,
-  pasted text, a website URL, transcripts and voice notes, or a client-projects slug. Consumes
-  13-brand-strategy.md for personality and positioning and 08-audience-persona.md for customer
-  language rather than re-deriving them.
-  Outputs client-projects/<slug>/14-brand-voice.md: voice dimensions as scales with exclusions
-  named at both ends rather than adjectives, tone shifts per real context, a messaging
-  framework, use and never-use vocabulary, sentence mechanics, and before-and-after rewrites of
-  the client's own copy where every change traces to a stated rule. Audit mode instead produces
-  a six-row Strong/Workable/Weak/Missing scorecard.
-  Numbers cited as [sN] resolve via branding-advisor's corpus. It does not default to
-  "be more conversational", because informal brand communication can backfire, and it states
-  plainly that a name search is not a trademark clearance.
-  Scope is deliberately the verbal identity only. For positioning, personality, promise, story
-  or values use brand-strategy. For colour, typography, logo or the guidelines document use
-  brand-visual. For actually writing posts or articles in the finished voice use blog-writer,
-  content-engine or client-content-creator. For explaining or diagnosing branding use
-  branding-advisor. For cold email and sales copy use marketing-advisor or sales-playbook.
+description: "Use to BUILD or AUDIT how a brand sounds and what it says: brand voice, tone of voice, messaging framework, messaging house, vocabulary, writing mechanics, and where in scope brand naming and taglines. Execution skill that produces the artifact, not the advice skill. Triggers on: brand voice, voice guidelines, tone of voice, tone guidelines, voice and tone, define their voice, voice spec, 'how should they sound', messaging framework, messaging house, message hierarchy, core message, messaging pillars, proof points, brand vocabulary, 'words we use', 'words we never use', writing style for the brand, copy guidelines, editorial guidelines, brand naming, name this product, name candidates, tagline, slogan, strapline, audit their voice guide, review this tone of voice doc, 'their copy sounds inconsistent', 'every page sounds different', ghostwriting voice, founder voice, 'make it sound like me'. Works from the client's live copy, a Google Doc, a PDF or DOCX voice guide, pasted text, a website URL, transcripts and voice notes, or a client-projects slug. Consumes 13-brand-strategy.md for personality and positioning and 08-audience-persona.md for customer language rather than re-deriving them. Outputs client-projects/<slug>/14-brand-voice.md: voice dimensions as scales with exclusions named at both ends rather than adjectives, tone shifts per real context, a messaging framework, use and never-use vocabulary, sentence mechanics, and before-and-after rewrites of the client's own copy where every change traces to a stated rule. Audit mode produces a six-row Strong/Workable/Weak/Missing scorecard. Does not default to 'be more conversational', and states plainly that a name search is not trademark clearance. Scope is the verbal identity only. For positioning, personality or story use brand-strategy; for colour, typography or logo use brand-visual; for writing posts or articles in the finished voice use blog-writer, content-engine or client-content-creator; for explaining or diagnosing branding use branding-advisor; for client ads and sales copy use copy-conversion, and for Aleem's own cold email use sales-playbook."
 argument-hint: [client name, URL, doc, or client-projects slug - optionally "audit" or "founder"]
 ---
 
@@ -87,7 +58,7 @@ content.
 | `brand-visual` | Colour, typography, logo, guidelines assembly |
 | `blog-writer` / `content-engine` / `client-content-creator` | Writing actual content in the finished voice |
 | `strategic-foundation` | Audience personas, ICP, customer language research |
-| `marketing-advisor` / `sales-playbook` | Cold email, ads, sales copy, DMs |
+| `copy-conversion` / `sales-playbook` | Ads and sales copy for this client (`copy-conversion`); Aleem's own cold email and DMs (`sales-playbook`) |
 | `podcast-repurposer` | Per-client voice files for repurposing work |
 
 State the handoff when you make it. Do not silently stop.

@@ -1,7 +1,7 @@
 ---
 name: nexis-builder
 description: >
-  The implementation counterpart to developer-advisor. Takes a build blueprint (from developer-advisor), a raw project brief, or an Upwork/client post, and autonomously builds a complete, production-ready project by orchestrating specialized skills in sequence: developer-advisor (blueprint) -> senior-architect (spec) -> ui-ux-pro-max/taste-skill (design direction) -> senior-frontend + senior-backend (build) -> test design -> code-reviewer + ponytail/impeccable (review and polish). It inherits developer-advisor's doctrine: PROBLEM-FIRST, NO HOUSE STACK. The stack comes from the blueprint, never a default. It stays research-grounded during the build by escalating to developer-advisor's three-tier resolution (local refs -> NotebookLM -> Exa live) for "how do I best implement X in 2026" questions. Communicates through a .builder/ artifact bus, scales to project complexity, and is resume-safe. Runs autonomously with ONE human checkpoint at the UI/UX design direction (the anti-slop gate). Use whenever Aleem wants a project actually BUILT, not just planned. Triggers: "build this project", "build this app", "implement this blueprint", "turn this blueprint into code", "scaffold and build X", "build me a <app>", "code this up", "build the MVP", pasted brief or Upwork post + "build it", "run the builder", or after developer-advisor produces a blueprint and Aleem says "now build it". This is the EXECUTION layer; developer-advisor is the DECISION layer that precedes it.
+  The implementation counterpart to developer-advisor. Takes a build blueprint (from developer-advisor), a raw project brief, or an Upwork/client post, and autonomously builds a complete, production-ready project by orchestrating specialized skills in sequence: developer-advisor (blueprint) -> senior-architect (spec) -> ui-ux-pro-max (design direction) -> senior-frontend + senior-backend (build) -> test design -> code-reviewer + ponytail/impeccable (review and polish). It inherits developer-advisor's doctrine: PROBLEM-FIRST, NO HOUSE STACK. The stack comes from the blueprint, never a default. It stays research-grounded during the build by escalating to developer-advisor's three-tier resolution (local refs -> NotebookLM -> Exa live) for "how do I best implement X in 2026" questions. Communicates through a .builder/ artifact bus, scales to project complexity, and is resume-safe. Runs autonomously with ONE human checkpoint at the UI/UX design direction (the anti-slop gate). Use whenever Aleem wants a project actually BUILT, not just planned. Triggers: "build this project", "build this app", "implement this blueprint", "turn this blueprint into code", "scaffold and build X", "build me a <app>", "code this up", "build the MVP", pasted brief or Upwork post + "build it", "run the builder", or after developer-advisor produces a blueprint and Aleem says "now build it". This is the EXECUTION layer; developer-advisor is the DECISION layer that precedes it.
 argument-hint: [blueprint path, project brief, or "build <idea>"]
 ---
 
@@ -20,7 +20,7 @@ Phase 0 is the seam between them. Either skill can run alone: advisor for a plan
 
 Doctrine (inherited from `developer-advisor`, non-negotiable):
 - **Problem first, stack second. There is NO house stack.** The stack is read from the blueprint, which derived it from the problem. This pipeline injects no defaults. It exists precisely because the old `Nexus-Fullstack-Developer` pipeline hardcoded React+Vite+Express, which is the bias we removed. If there is no blueprint, get one from `developer-advisor`. Never fall back to a fixed stack.
-- **Premium, not AI slop.** A dedicated design-direction phase (ui-ux-pro-max + taste-skill + ui-design-system) sets a product-specific visual system before any UI is built, gated by one human checkpoint. Generic-looking output is a failure, not an acceptable default.
+- **Premium, not AI slop.** A dedicated design-direction phase (`ui-ux-pro-max`) sets a product-specific visual system before any UI is built, gated by one human checkpoint. Generic-looking output is a failure, not an acceptable default. (`taste-skill` and `ui-design-system` were archived 2026-08-27 to `archives/cleanup-2026-08-27/skills/`; the tokens they used to lock now get written directly into `design-system.md`.)
 - **Research-grounded execution.** When an implementation detail is non-trivial or version-sensitive ("current best way to wire Stripe Connect", "RSC data-fetching pattern in 2026"), escalate to `developer-advisor`'s three-tier resolution (`references/research-during-build.md`) instead of guessing from memory.
 - **Simplest thing that ships.** YAGNI. Scale the output to the complexity tier. A landing page is not a SaaS.
 
@@ -30,7 +30,7 @@ Doctrine (inherited from `developer-advisor`, non-negotiable):
 - **The phase workers (invoked by this skill, not re-implemented here):**
   - `developer-advisor` — Phase 0, the blueprint (problem-first stack decision).
   - `senior-architect` — Phase 1, the buildable architecture spec.
-  - `ui-ux-pro-max` + `taste-skill` + `ui-design-system` — Phase 2, the design direction.
+  - `ui-ux-pro-max` — Phase 2, the design direction.
   - `senior-frontend` / `senior-backend` — Phases 3-4, the build.
   - `code-reviewer` — Phase 6, contract/security/build verification + one fix-loop.
   - `ponytail` / `impeccable` — Phase 6, the quality/polish pass.
@@ -51,7 +51,7 @@ Then load the phase-specific reference when you reach that phase: `code-standard
 |------|-----------|-------|--------|---------|
 | **0 Blueprint** | `developer-advisor` | user input / existing blueprint | `.builder/blueprint.md` | Get the problem-first stack + architecture. Ingest an existing blueprint, or derive one. The seam with the advisor. |
 | **1 Architecture** | `senior-architect` | `blueprint.md` | `.builder/architecture.md`, `.builder/decisions.md` | Turn the blueprint into a buildable spec: complexity tier, full API contract, DB schema, structure, implementation order. Stack from the blueprint, no defaults. |
-| **2 Design direction** | `ui-ux-pro-max` + `taste-skill` + `ui-design-system` | `blueprint.md`, `architecture.md` | `.builder/design-system.md` | Product-specific visual system (style, palette, type, spacing, motion, components, a11y). **HUMAN CHECKPOINT.** |
+| **2 Design direction** | `ui-ux-pro-max` | `blueprint.md`, `architecture.md` | `.builder/design-system.md` | Product-specific visual system (style, palette, type, spacing, motion, components, a11y). **HUMAN CHECKPOINT.** |
 | **3 Frontend** | `senior-frontend` | `architecture.md`, `design-system.md` | frontend source | Build the UI against the contract and the design system. Premium, responsive, accessible. |
 | **4 Backend** | `senior-backend` | `architecture.md` | backend source | Build the API, schema, middleware. Security baseline enforced. |
 | **5 Test design** | `references/test-strategy.md` | `blueprint.md`, `architecture.md` | `.builder/test-plan.md` + tests | Trophy vs pyramid, critical-path tests (auth, payments, core flow), wire the runner. |
@@ -108,7 +108,7 @@ If a run is interrupted, read `.builder/status.md` to find the current phase and
 | Requirements too vague to build | Ask for the core requirement (what it must do, for whom) before scaffolding. Do not guess a whole app. |
 | Tempted to use a default stack | Stop. The stack is in the blueprint. If it is not, the blueprint is incomplete, go back to Phase 0. |
 | Implementation detail is version-sensitive or unfamiliar | Escalate via `references/research-during-build.md` (advisor refs -> NotebookLM -> Exa live). Flag anything net-new as fresh. |
-| Design direction feels generic | Re-run Phase 2 with `taste-skill` for a stronger aesthetic before the checkpoint. Generic is a fail. |
+| Design direction feels generic | Re-run Phase 2 with `ui-ux-pro-max`, naming a sharper aesthetic reference, before the checkpoint. Generic is a fail. |
 | Review still failing after one fix-loop | Mark `status: blocked`, surface the remaining issues, ask the user for guidance. |
 | Client / confidential build | Target an external or gitignored output path, not `projects/`. Confirm the path first. |
 | User asks for the client pitch / proposal | Hand off to `proposal-generator` / `ai-use-case-generator`. This skill builds, it does not sell. |
@@ -120,7 +120,7 @@ references/
 ├── pipeline.md              # RUN MANUAL: phase-by-phase orchestration, inputs/outputs, transitions, fix-loop, resume
 ├── artifact-conventions.md  # the .builder/ bus: artifacts, frontmatter, append-only, status.md, immutability
 ├── code-standards.md        # stack-agnostic code standards + security baseline (all build phases)
-├── design-standards.md      # Phase 2 anti-slop bar: ui-ux-pro-max/taste/ui-design-system usage + a11y/responsive/premium checklist + checkpoint format
+├── design-standards.md      # Phase 2 anti-slop bar: ui-ux-pro-max usage + a11y/responsive/premium checklist + checkpoint format
 ├── test-strategy.md         # Phase 5: trophy vs pyramid, critical-path coverage, runner setup per stack
 └── research-during-build.md # escalation to developer-advisor's 3-tier resolution for implementation questions
 templates/
@@ -130,7 +130,7 @@ templates/
 └── review-report.md         # Phase 6 output
 ```
 
-Sibling skills: **developer-advisor** (Phase 0 decision layer, the planner this pairs with), **senior-architect / senior-frontend / senior-backend / code-reviewer** (phase workers), **ui-ux-pro-max / taste-skill / ui-design-system** (design phase), **ponytail / impeccable** (polish), **proposal-generator / ai-use-case-generator / sales-playbook** (the client pitch, not this skill's job).
+Sibling skills: **developer-advisor** (Phase 0 decision layer, the planner this pairs with), **senior-architect / senior-frontend / senior-backend / code-reviewer** (phase workers), **ui-ux-pro-max** (design phase), **ponytail / impeccable** (polish), **proposal-generator / ai-use-case-generator / sales-playbook** (the client pitch, not this skill's job).
 
 ## Note on Google Docs
 
