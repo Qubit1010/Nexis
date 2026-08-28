@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Four pricing models for automation work: fixed price, hourly, monthly retainer and outcome based. Fixed price suits a first engagement because it forces scoping before money moves.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">Four pricing models, and what each hides</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">They suit different situations. Only one is right for a first engagement.</text>
+
+  <!-- header row -->
+  <text x="104" y="186" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">MODEL</text>
+  <text x="440" y="186" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">SUITS</text>
+  <text x="784" y="186" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">WATCH FOR</text>
+  <line x1="72" y1="200" x2="1128" y2="200" stroke="#64748B" stroke-width="1"/>
+
+  <!-- row 1, accented: the right default -->
+  <rect x="72" y="212" width="1056" height="108" rx="10" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="104" y="250" font-family="Urbanist" font-weight="700" font-size="21" fill="#A6DAFF">Fixed price</text>
+  <text x="104" y="280" font-family="Urbanist" font-weight="400" font-size="16" fill="#CBD5E1">Right for a first engagement</text>
+  <text x="440" y="256" font-family="Urbanist" font-weight="400" font-size="17" fill="#F1F5F9">Known scope, a defined</text>
+  <text x="440" y="280" font-family="Urbanist" font-weight="400" font-size="17" fill="#F1F5F9">deliverable</text>
+  <text x="784" y="256" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Change requests quietly</text>
+  <text x="784" y="280" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">priced as new work</text>
+
+  <!-- row 2 -->
+  <rect x="72" y="332" width="1056" height="108" rx="10" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="104" y="370" font-family="Urbanist" font-weight="700" font-size="21" fill="#F1F5F9">Hourly</text>
+  <text x="440" y="376" font-family="Urbanist" font-weight="400" font-size="17" fill="#F1F5F9">Genuinely exploratory work</text>
+  <text x="784" y="364" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">No ceiling, and no</text>
+  <text x="784" y="388" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">incentive to finish</text>
+
+  <!-- row 3 -->
+  <rect x="72" y="452" width="1056" height="108" rx="10" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="104" y="490" font-family="Urbanist" font-weight="700" font-size="21" fill="#F1F5F9">Monthly retainer</text>
+  <text x="104" y="520" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">After the first build</text>
+  <text x="440" y="496" font-family="Urbanist" font-weight="400" font-size="17" fill="#F1F5F9">Operating and iterating on</text>
+  <text x="440" y="520" font-family="Urbanist" font-weight="400" font-size="17" fill="#F1F5F9">something already built</text>
+  <text x="784" y="496" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Paying for availability</text>
+  <text x="784" y="520" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">you do not use</text>
+
+  <!-- row 4 -->
+  <rect x="72" y="572" width="1056" height="108" rx="10" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="104" y="610" font-family="Urbanist" font-weight="700" font-size="21" fill="#F1F5F9">Outcome based</text>
+  <text x="104" y="640" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">Sounds fairest</text>
+  <text x="440" y="616" font-family="Urbanist" font-weight="400" font-size="17" fill="#F1F5F9">Rare. Needs a measurable</text>
+  <text x="440" y="640" font-family="Urbanist" font-weight="400" font-size="17" fill="#F1F5F9">baseline that already exists</text>
+  <text x="784" y="616" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Almost nobody was taking</text>
+  <text x="784" y="640" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">the measurement before</text>
+
+  <line x1="72" y1="716" x2="1128" y2="716" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="754" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">fixed price forces the scoping conversation to happen before money moves</text>
+</svg>

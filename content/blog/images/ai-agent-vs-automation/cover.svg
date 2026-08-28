@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img"
+     aria-label="Automation is a single fixed rail with stops written in advance. An agent is a branching tree choosing its path at each node. Same start, different auditability.">
+  <rect width="1200" height="630" fill="#02040A"/>
+
+  <text x="72" y="96" font-family="Urbanist" font-weight="700" font-size="42" fill="#F1F5F9">One path you wrote. Or every path it picks.</text>
+  <text x="72" y="134" font-family="Urbanist" font-weight="400" font-size="20" fill="#94A3B8">Same start. The difference is whether you can read it or must watch it run</text>
+
+  <!-- LEFT: the fixed rail -->
+  <text x="72" y="200" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#CBD5E1" letter-spacing="2">AUTOMATION</text>
+  <line x1="120" y1="248" x2="120" y2="452" stroke="#64748B" stroke-width="2"/>
+  <circle cx="120" cy="248" r="11" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <circle cx="120" cy="316" r="11" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <circle cx="120" cy="384" r="11" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <circle cx="120" cy="452" r="11" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <text x="150" y="254" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">start</text>
+  <text x="150" y="322" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">step you wrote</text>
+  <text x="150" y="390" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">step you wrote</text>
+  <text x="150" y="458" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">end</text>
+
+  <rect x="72" y="496" width="404" height="62" rx="9" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="96" y="524" font-family="Urbanist" font-weight="700" font-size="17" fill="#F1F5F9">Audit by reading it</text>
+  <text x="96" y="546" font-family="Urbanist" font-weight="400" font-size="15" fill="#94A3B8">Every path was written by someone</text>
+
+  <!-- divider -->
+  <line x1="560" y1="196" x2="560" y2="558" stroke="#64748B" stroke-width="1" opacity="0.35"/>
+
+  <!-- RIGHT: the branching tree -->
+  <text x="640" y="200" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#A6DAFF" letter-spacing="2">AI AGENT</text>
+  <circle cx="688" cy="248" r="11" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <text x="718" y="254" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">same start</text>
+
+  <!-- branch 1 -->
+  <line x1="688" y1="259" x2="688" y2="300" stroke="#64748B" stroke-width="2"/>
+  <circle cx="688" cy="312" r="11" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <line x1="688" y1="323" x2="608" y2="372" stroke="#A6DAFF" stroke-width="1.5"/>
+  <line x1="688" y1="323" x2="768" y2="372" stroke="#A6DAFF" stroke-width="1.5"/>
+
+  <!-- branch 2 left -->
+  <circle cx="600" cy="382" r="11" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <line x1="600" y1="393" x2="560" y2="440" stroke="#A6DAFF" stroke-width="1.5" opacity="0.7"/>
+  <line x1="600" y1="393" x2="648" y2="440" stroke="#A6DAFF" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="554" cy="450" r="8" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="654" cy="450" r="8" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- branch 2 right -->
+  <circle cx="776" cy="382" r="11" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <line x1="776" y1="393" x2="736" y2="440" stroke="#A6DAFF" stroke-width="1.5" opacity="0.7"/>
+  <line x1="776" y1="393" x2="824" y2="440" stroke="#A6DAFF" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="730" cy="450" r="8" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="830" cy="450" r="8" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5" opacity="0.6"/>
+
+  <text x="880" y="318" font-family="Urbanist" font-weight="700" font-size="17" fill="#A6DAFF">it chooses here</text>
+  <text x="880" y="342" font-family="Urbanist" font-weight="400" font-size="15" fill="#94A3B8">and again at every node</text>
+
+  <rect x="640" y="496" width="404" height="62" rx="9" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5"/>
+  <text x="664" y="524" font-family="Urbanist" font-weight="700" font-size="17" fill="#A6DAFF">Audit by replaying it</text>
+  <text x="664" y="546" font-family="Urbanist" font-weight="400" font-size="15" fill="#CBD5E1">There is no definition to read</text>
+
+  <line x1="72" y1="588" x2="1128" y2="588" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="616" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">roughly 2 in 3 scoping requests turn out to be a fixed sequence</text>
+</svg>

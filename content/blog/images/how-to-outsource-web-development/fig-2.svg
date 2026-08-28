@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Four handover items to name in the contract before work starts: repository ownership, hosting and domain accounts, third party API keys, and whether documentation is delivered before final payment.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">Name the handover before the work starts</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">A handover is not a zip file. Each of these is one sentence to prevent.</text>
+
+  <!-- four items -->
+  <rect x="72" y="176" width="516" height="150" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="104" y="216" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">01 / REPOSITORY</text>
+  <text x="104" y="252" font-family="Urbanist" font-weight="700" font-size="22" fill="#F1F5F9">Who owns the code</text>
+  <text x="104" y="286" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Named in writing, not assumed from</text>
+  <text x="104" y="310" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">the fact that you paid for it.</text>
+
+  <rect x="612" y="176" width="516" height="150" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="644" y="216" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">02 / ACCOUNTS</text>
+  <text x="644" y="252" font-family="Urbanist" font-weight="700" font-size="22" fill="#F1F5F9">Whose name is on hosting</text>
+  <text x="644" y="286" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Hosting and the domain in your name,</text>
+  <text x="644" y="310" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">not the vendor's, from day one.</text>
+
+  <rect x="72" y="350" width="516" height="150" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="104" y="390" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">03 / KEYS</text>
+  <text x="104" y="426" font-family="Urbanist" font-weight="700" font-size="22" fill="#F1F5F9">What happens to API keys</text>
+  <text x="104" y="460" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Third-party credentials transfer, or the</text>
+  <text x="104" y="484" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">system stops working when they leave.</text>
+
+  <!-- item 4, accented: the one with leverage -->
+  <rect x="612" y="350" width="516" height="150" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="644" y="390" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#A6DAFF" letter-spacing="1.5">04 / TIMING</text>
+  <text x="644" y="426" font-family="Urbanist" font-weight="700" font-size="22" fill="#A6DAFF">Docs before final payment</text>
+  <text x="644" y="460" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">The only item with leverage attached.</text>
+  <text x="644" y="484" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">After payment it is a favour, not a term.</text>
+
+  <!-- the test -->
+  <rect x="72" y="546" width="1056" height="118" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="104" y="586" font-family="Urbanist" font-weight="700" font-size="21" fill="#F1F5F9">The signal to read</text>
+  <text x="104" y="620" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If a partner will not put these in writing up front, the lock-in is the business model</text>
+  <text x="104" y="646" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">rather than an accident. That is worth knowing before you sign, not after.</text>
+
+  <line x1="72" y1="706" x2="1128" y2="706" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="744" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">every one of these has bitten someone I have talked to</text>
+</svg>

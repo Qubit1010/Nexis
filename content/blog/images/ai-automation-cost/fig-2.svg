@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Three red flags in an automation quote: no scoping phase, no named failure behaviour, and AI bundled into every line without naming which step needs a model.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">Three red flags in a quote</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">All three are about specificity, and all three are visible before you sign</text>
+
+  <rect x="72" y="176" width="1056" height="132" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="112" y="222" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#64748B">01</text>
+  <text x="180" y="222" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">No scoping phase</text>
+  <text x="180" y="258" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If nobody has looked at your actual systems, the price is a template with your name on it.</text>
+  <text x="180" y="288" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">A quote with no discovery behind it is a guess wearing a number.</text>
+
+  <!-- flag 2, accented: the one that actually costs money -->
+  <rect x="72" y="332" width="1056" height="132" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="112" y="378" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#A6DAFF">02</text>
+  <text x="180" y="378" font-family="Urbanist" font-weight="700" font-size="23" fill="#A6DAFF">Nothing about what happens on failure</text>
+  <text x="180" y="414" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">A quote that prices only the happy path is not pricing the work.</text>
+  <text x="180" y="444" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Most of the engineering lives in the error paths, which is why this one moves the number most.</text>
+
+  <rect x="72" y="488" width="1056" height="132" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="112" y="534" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#64748B">03</text>
+  <text x="180" y="534" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">"AI" bundled into every line</text>
+  <text x="180" y="570" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If the quote will not name which step needs a model, that is usually padding.</text>
+  <text x="180" y="600" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">Most of a working automation is ordinary plumbing, and honest quotes say so.</text>
+
+  <line x1="72" y1="664" x2="1128" y2="664" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="702" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">The counter-test: does the audit produce something you could hand to a different vendor?</text>
+  <text x="72" y="744" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">if not, it was a pitch</text>
+</svg>

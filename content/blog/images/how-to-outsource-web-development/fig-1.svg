@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Safe to outsource versus keep in house, split by whether the work can be described completely. Discovery stays because sending an undefined problem outside does not define it.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">Outsource what you can describe</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">The line is not seniority or cost. It is whether "done" is already written down.</text>
+
+  <!-- the dividing line -->
+  <line x1="600" y1="176" x2="600" y2="620" stroke="#64748B" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+  <!-- SAFE side -->
+  <text x="112" y="212" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#CBD5E1" letter-spacing="2">SAFE TO SEND OUT</text>
+  <text x="112" y="248" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">You can write what done looks like,</text>
+  <text x="112" y="272" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">the inputs, and what happens on failure.</text>
+
+  <rect x="112" y="300" width="428" height="62" rx="9" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="140" y="338" font-family="Urbanist" font-weight="400" font-size="18" fill="#F1F5F9">A defined page build</text>
+
+  <rect x="112" y="376" width="428" height="62" rx="9" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="140" y="414" font-family="Urbanist" font-weight="400" font-size="18" fill="#F1F5F9">A migration with a known source and target</text>
+
+  <rect x="112" y="452" width="428" height="62" rx="9" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="140" y="490" font-family="Urbanist" font-weight="400" font-size="18" fill="#F1F5F9">Components against an existing system</text>
+
+  <rect x="112" y="528" width="428" height="62" rx="9" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="140" y="566" font-family="Urbanist" font-weight="400" font-size="18" fill="#F1F5F9">Integrations with documented APIs</text>
+
+  <!-- KEEP side -->
+  <text x="660" y="212" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#A6DAFF" letter-spacing="2">KEEP THIS</text>
+  <text x="660" y="248" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">The requirements will be found during</text>
+  <text x="660" y="272" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">the work rather than before it.</text>
+
+  <rect x="660" y="300" width="428" height="138" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="688" y="344" font-family="Urbanist" font-weight="700" font-size="26" fill="#A6DAFF">Discovery</text>
+  <text x="688" y="382" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Sending an undefined problem outside</text>
+  <text x="688" y="406" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">does not define it. It moves the confusion</text>
+  <text x="688" y="430" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">somewhere you cannot watch.</text>
+
+  <rect x="660" y="452" width="428" height="138" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="688" y="492" font-family="Urbanist" font-weight="700" font-size="19" fill="#F1F5F9">"Make our site better"</text>
+  <text x="688" y="526" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Not a brief. A second developer could</text>
+  <text x="688" y="550" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">not execute it without asking you</text>
+  <text x="688" y="574" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">what you meant.</text>
+
+  <line x1="72" y1="664" x2="1128" y2="664" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="700" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">The whole test: could you hand this brief to a second developer and explain nothing?</text>
+  <text x="72" y="742" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">the agencies that get consistent work out of me all pass it</text>
+</svg>

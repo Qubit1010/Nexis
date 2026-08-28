@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Three conditions must all hold before an agent is the right call: the path is unknown at the start, a wrong step is recoverable, and the work can be checked by something other than the system that did it.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">Three conditions, and I want all three</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">Any one of these missing and the loop is not earning its cost</text>
+
+  <!-- condition 1 -->
+  <rect x="72" y="176" width="1056" height="120" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="112" y="222" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#64748B">01</text>
+  <text x="176" y="222" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">The path is unknown at the start</text>
+  <text x="176" y="256" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">The next step depends on what the last one returned, not merely on whether it succeeded.</text>
+  <text x="176" y="282" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">Dependency on success or failure is a conditional branch. That is automation.</text>
+
+  <!-- condition 2 -->
+  <rect x="72" y="316" width="1056" height="120" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="112" y="362" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#64748B">02</text>
+  <text x="176" y="362" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">A wrong step is recoverable</text>
+  <text x="176" y="396" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Nothing irreversible happens without a human in the loop.</text>
+  <text x="176" y="422" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">If it is not recoverable you need a checkpoint, and a mandatory checkpoint spends most of the autonomy.</text>
+
+  <!-- condition 3, accented: the one people skip -->
+  <rect x="72" y="456" width="1056" height="120" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="112" y="502" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#A6DAFF">03</text>
+  <text x="176" y="502" font-family="Urbanist" font-weight="700" font-size="23" fill="#A6DAFF">The work can be checked independently</text>
+  <text x="176" y="536" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">There is a way to verify the output that does not rely on the same system that produced it.</text>
+  <text x="176" y="562" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">This is the one that gets skipped, and it is the one that makes the other two safe.</text>
+
+  <!-- what none of them needed -->
+  <rect x="72" y="620" width="1056" height="80" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="112" y="656" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">What none of the shipped ones needed</text>
+  <text x="112" y="686" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Autonomy without a checkpoint. Every agent that reached production kept one.</text>
+
+  <line x1="72" y1="736" x2="1128" y2="736" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="772" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">skills by default / agents by exception</text>
+</svg>

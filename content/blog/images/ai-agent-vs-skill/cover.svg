@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img"
+     aria-label="A skill fails visibly on one task. An agent's failure propagates across a chain of steps.">
+  <rect width="1200" height="630" fill="#02040A"/>
+
+  <!-- title -->
+  <text x="72" y="96" font-family="Urbanist" font-weight="700" font-size="42" fill="#F1F5F9">Blast radius, not capability</text>
+  <text x="72" y="134" font-family="Urbanist" font-weight="400" font-size="20" fill="#94A3B8">The difference that decides which one you can trust unattended</text>
+
+  <!-- LEFT: skill -->
+  <rect x="72" y="184" width="470" height="300" rx="14" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="104" y="228" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#CBD5E1" letter-spacing="2">SKILL</text>
+
+  <rect x="104" y="256" width="150" height="70" rx="10" fill="#02040A" stroke="#64748B" stroke-width="1.5"/>
+  <text x="179" y="298" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="17" fill="#F1F5F9">one task</text>
+
+  <line x1="254" y1="291" x2="316" y2="291" stroke="#64748B" stroke-width="1.5"/>
+  <circle cx="342" cy="291" r="21" fill="none" stroke="#F87171" stroke-width="2"/>
+  <path d="M334 283 L350 299 M350 283 L334 299" stroke="#F87171" stroke-width="2" stroke-linecap="round"/>
+
+  <text x="104" y="378" font-family="Urbanist" font-weight="700" font-size="19" fill="#F1F5F9">Fails visibly, once.</text>
+  <text x="104" y="410" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">You read the instructions</text>
+  <text x="104" y="436" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">and see why.</text>
+
+  <!-- RIGHT: agent -->
+  <rect x="658" y="184" width="470" height="300" rx="14" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5"/>
+  <text x="690" y="228" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#A6DAFF" letter-spacing="2">AGENT</text>
+
+  <!-- chain: step 1 clean, failure at step 2, propagation after -->
+  <rect x="690" y="262" width="58" height="58" rx="9" fill="#02040A" stroke="#64748B" stroke-width="1.5"/>
+  <text x="719" y="297" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#CBD5E1">1</text>
+  <line x1="748" y1="291" x2="774" y2="291" stroke="#64748B" stroke-width="1.5"/>
+
+  <rect x="774" y="262" width="58" height="58" rx="9" fill="#02040A" stroke="#F87171" stroke-width="2"/>
+  <text x="803" y="297" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#F87171">2</text>
+  <line x1="832" y1="291" x2="858" y2="291" stroke="#A6DAFF" stroke-width="1.5"/>
+
+  <rect x="858" y="262" width="58" height="58" rx="9" fill="#02040A" stroke="#A6DAFF" stroke-width="1.5" opacity="0.75"/>
+  <text x="887" y="297" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#A6DAFF">3</text>
+  <line x1="916" y1="291" x2="942" y2="291" stroke="#A6DAFF" stroke-width="1.5"/>
+
+  <rect x="942" y="262" width="58" height="58" rx="9" fill="#02040A" stroke="#A6DAFF" stroke-width="1.5" opacity="0.55"/>
+  <text x="971" y="297" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#A6DAFF">4</text>
+  <line x1="1000" y1="291" x2="1026" y2="291" stroke="#A6DAFF" stroke-width="1.5"/>
+
+  <rect x="1026" y="262" width="58" height="58" rx="9" fill="#02040A" stroke="#A6DAFF" stroke-width="1.5" opacity="0.35"/>
+  <text x="1055" y="297" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#A6DAFF">5</text>
+
+  <text x="690" y="378" font-family="Urbanist" font-weight="700" font-size="19" fill="#F1F5F9">Propagates, quietly.</text>
+  <text x="690" y="410" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Every later step inherits</text>
+  <text x="690" y="436" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">the error. You replay to find it.</text>
+
+  <!-- footer -->
+  <line x1="72" y1="534" x2="1128" y2="534" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="572" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">104 skills shipped / 0 agents running unattended</text>
+</svg>

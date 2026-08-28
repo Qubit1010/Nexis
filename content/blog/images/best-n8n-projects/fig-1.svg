@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="The automation threshold. Work must be frequent, stable for about a year, and painful enough that someone can name the hours. All three must hold, and if the hours cannot be named that is the finding.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">The threshold before any price</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">Three tests. All three must hold, or the automation costs more than the problem.</text>
+
+  <!-- three gates in a row -->
+  <rect x="72" y="180" width="330" height="200" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="237" y="228" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">TEST 01</text>
+  <text x="237" y="270" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="26" fill="#F1F5F9">Frequent</text>
+  <text x="237" y="310" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">It runs weekly, not twice</text>
+  <text x="237" y="334" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">a month. Frequency is what</text>
+  <text x="237" y="358" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">pays back the build.</text>
+
+  <rect x="435" y="180" width="330" height="200" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="600" y="228" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">TEST 02</text>
+  <text x="600" y="270" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="26" fill="#F1F5F9">Stable</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">The rules will still hold in</text>
+  <text x="600" y="334" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">a year. A process that changes</text>
+  <text x="600" y="358" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">monthly is a maintenance bill.</text>
+
+  <!-- test 3, accented: the one that produces the finding -->
+  <rect x="798" y="180" width="330" height="200" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="963" y="228" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#A6DAFF" letter-spacing="1.5">TEST 03</text>
+  <text x="963" y="270" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="26" fill="#A6DAFF">Nameable</text>
+  <text x="963" y="310" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Someone can say how many</text>
+  <text x="963" y="334" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">hours it eats. If nobody can,</text>
+  <text x="963" y="358" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">that is the finding.</text>
+
+  <!-- the arithmetic that kills most requests -->
+  <rect x="72" y="428" width="1056" height="150" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="104" y="470" font-family="Urbanist" font-weight="700" font-size="21" fill="#F1F5F9">The arithmetic that ends most requests</text>
+  <text x="104" y="512" font-family="ui-monospace, Consolas, monospace" font-size="19" fill="#CBD5E1">2 runs / month  x  20 minutes  =  400 minutes / year</text>
+  <text x="104" y="548" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">Automating that costs more than 400 minutes in specification time alone, before anyone writes a line.</text>
+
+  <rect x="72" y="606" width="1056" height="98" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="104" y="646" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">Turning work down is the fastest way to establish a quote is honest</text>
+  <text x="104" y="680" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">A partner who never says "this is not worth automating" has not told you what their advice is worth.</text>
+
+  <line x1="72" y1="740" x2="1128" y2="740" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="776" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">frequent / stable / painful enough to count</text>
+</svg>

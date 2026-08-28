@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="The write it down test. If you can write the procedure, you need the procedure, not an agent. If the next step genuinely depends on what the last one returned, you have a real case for a loop.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">The write-it-down test</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">One question decides it, and most proposals fail here</text>
+
+  <!-- the question -->
+  <rect x="332" y="176" width="536" height="88" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="600" y="214" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#A6DAFF" letter-spacing="1.5">THE QUESTION</text>
+  <text x="600" y="246" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">Can you write the procedure down?</text>
+
+  <!-- branches -->
+  <line x1="600" y1="264" x2="600" y2="300" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="300" y1="300" x2="900" y2="300" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="300" y1="300" x2="300" y2="338" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="900" y1="300" x2="900" y2="338" stroke="#64748B" stroke-width="1.5"/>
+
+  <text x="300" y="330" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#CBD5E1">YES</text>
+  <text x="900" y="330" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#CBD5E1">NO</text>
+
+  <!-- YES branch -->
+  <rect x="120" y="348" width="360" height="180" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="300" y="392" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="24" fill="#F1F5F9">Build a skill</text>
+  <text x="300" y="428" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">You do not need a system that</text>
+  <text x="300" y="452" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">reasons about what to do next.</text>
+  <text x="300" y="486" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">You need the written procedure,</text>
+  <text x="300" y="510" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">loaded at the right moment.</text>
+
+  <!-- NO branch -->
+  <rect x="720" y="348" width="360" height="180" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="900" y="392" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="24" fill="#F1F5F9">Consider an agent</text>
+  <text x="900" y="428" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">The path genuinely depends on</text>
+  <text x="900" y="452" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">what the last step returned,</text>
+  <text x="900" y="486" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">and you cannot enumerate</text>
+  <text x="900" y="510" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">the branches in advance.</text>
+
+  <!-- the finding -->
+  <rect x="120" y="588" width="960" height="96" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="152" y="626" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">Most proposals fail this test.</text>
+  <text x="152" y="658" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Not because writing it down is hard, but because "we want AI in it" arrived before anyone asked what the process was.</text>
+
+  <line x1="72" y1="724" x2="1128" y2="724" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="760" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">a procedure someone did not want to write is still a procedure</text>
+</svg>

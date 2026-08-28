@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Where n8n sits between simple connectors and custom code. Connectors are cheaper until logic gets complex. Custom code wins at high volume. n8n covers the middle band, which is where most business processes live.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">The middle band, which is where the work is</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">Three tools, one axis. The question is not which is best, it is where your process sits.</text>
+
+  <!-- the axis -->
+  <line x1="120" y1="470" x2="1080" y2="470" stroke="#64748B" stroke-width="2"/>
+  <text x="120" y="506" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">simple, low volume</text>
+  <text x="1080" y="506" text-anchor="end" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">complex, high volume</text>
+
+  <!-- band 1 -->
+  <rect x="120" y="216" width="300" height="216" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="150" y="256" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">CONNECTORS</text>
+  <text x="150" y="294" font-family="Urbanist" font-weight="700" font-size="22" fill="#F1F5F9">Zapier, Make</text>
+  <text x="150" y="332" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Cheaper and faster until</text>
+  <text x="150" y="356" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">the logic gets real.</text>
+  <text x="150" y="394" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">Per-task pricing punishes</text>
+  <text x="150" y="416" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">volume you cannot predict.</text>
+  <line x1="270" y1="432" x2="270" y2="462" stroke="#64748B" stroke-width="1.5"/>
+  <circle cx="270" cy="470" r="7" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+
+  <!-- band 2, accented -->
+  <rect x="450" y="216" width="300" height="216" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="480" y="256" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#A6DAFF" letter-spacing="1.5">THE MIDDLE</text>
+  <text x="480" y="294" font-family="Urbanist" font-weight="700" font-size="22" fill="#A6DAFF">n8n</text>
+  <text x="480" y="332" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Branching, real error</text>
+  <text x="480" y="356" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">handling, self-hosting.</text>
+  <text x="480" y="394" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">Most business processes</text>
+  <text x="480" y="416" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">land here, not at the edges.</text>
+  <line x1="600" y1="432" x2="600" y2="462" stroke="#A6DAFF" stroke-width="2"/>
+  <circle cx="600" cy="470" r="8" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2.5"/>
+
+  <!-- band 3 -->
+  <rect x="780" y="216" width="300" height="216" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="810" y="256" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">CUSTOM CODE</text>
+  <text x="810" y="294" font-family="Urbanist" font-weight="700" font-size="22" fill="#F1F5F9">Your own service</text>
+  <text x="810" y="332" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Wins once volume is high</text>
+  <text x="810" y="356" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">and the logic is stable.</text>
+  <text x="810" y="394" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">Costs a maintainer, which</text>
+  <text x="810" y="416" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">is a hire, not a licence.</text>
+  <line x1="930" y1="432" x2="930" y2="462" stroke="#64748B" stroke-width="1.5"/>
+  <circle cx="930" cy="470" r="7" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+
+  <rect x="120" y="560" width="960" height="106" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="152" y="600" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">The honest read on "is n8n still worth it"</text>
+  <text x="152" y="632" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">It is worth it exactly when your process is too branched for a connector and too unstable to justify</text>
+  <text x="152" y="656" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">a maintained service. That band is wide, and it is where I have shipped every one of these builds.</text>
+
+  <line x1="72" y1="708" x2="1128" y2="708" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="744" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">the tool is rarely the reason a build fails</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Three checks in order, cheapest first, to tell a broken evaluation from a failing agent: run a known good case, run a known bad case, then check the invocation layer separately from the grading layer.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">Three checks, cheapest first</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">Only when both controls behave does the middle of the distribution mean anything</text>
+
+  <!-- check 1 -->
+  <rect x="72" y="176" width="1056" height="126" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="112" y="222" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#64748B">01</text>
+  <text x="180" y="222" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">Run a case you know passes</text>
+  <text x="180" y="258" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If a known-good input fails, the harness is broken, not the agent.</text>
+  <text x="180" y="286" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">Costs one run. Rules out the most expensive mistake I made.</text>
+
+  <!-- check 2 -->
+  <rect x="72" y="326" width="1056" height="126" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="112" y="372" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#64748B">02</text>
+  <text x="180" y="372" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">Run a case you know fails</text>
+  <text x="180" y="408" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If a known-bad input passes, the grader is broken.</text>
+  <text x="180" y="436" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">The direction people forget, because a passing score feels like good news.</text>
+
+  <!-- check 3, accented: the layer nobody looks at -->
+  <rect x="72" y="476" width="1056" height="126" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="112" y="522" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#A6DAFF">03</text>
+  <text x="180" y="522" font-family="Urbanist" font-weight="700" font-size="23" fill="#A6DAFF">Check invocation separately from grading</text>
+  <text x="180" y="558" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Mine failed at neither. It failed in the process launcher, below both and invisible to both.</text>
+  <text x="180" y="586" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">A harness that reports only scores cannot surface that. Log what it executed, not just what it concluded.</text>
+
+  <!-- the rule -->
+  <rect x="72" y="640" width="1056" height="82" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="112" y="678" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">The structural fix</text>
+  <text x="112" y="706" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">A run that could not execute must record as "did not run", never folded into "failed". Those are different facts.</text>
+
+  <line x1="72" y1="748" x2="1128" y2="748" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="782" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">collapsing them is how a measurement lies without anyone acting in bad faith</text>
+</svg>

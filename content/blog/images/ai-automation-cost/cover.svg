@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img"
+     aria-label="A price ladder for AI automation. One workflow runs 2500 to 5000 dollars, a connected system 7500 to 18000, and published agency ranges reach 20000 or more. Three variables set the rung.">
+  <rect width="1200" height="630" fill="#02040A"/>
+
+  <text x="72" y="96" font-family="Urbanist" font-weight="700" font-size="42" fill="#F1F5F9">One word, three different projects</text>
+  <text x="72" y="134" font-family="Urbanist" font-weight="400" font-size="20" fill="#94A3B8">Quotes vary 10x because "an automation" describes an afternoon or a quarter</text>
+
+  <!-- axis -->
+  <line x1="150" y1="196" x2="150" y2="486" stroke="#64748B" stroke-width="1.5"/>
+  <text x="132" y="202" text-anchor="end" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8">$20K+</text>
+  <text x="132" y="486" text-anchor="end" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8">$500</text>
+
+  <!-- rung 3, top -->
+  <rect x="176" y="196" width="500" height="76" rx="9" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="204" y="228" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">Multi-agent system</text>
+  <text x="204" y="254" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">Unbounded inputs, must not fail silently</text>
+  <text x="828" y="242" text-anchor="end" font-family="ui-monospace, Consolas, monospace" font-size="17" fill="#CBD5E1">$18,000+</text>
+
+  <!-- rung 2, accented: the band most buyers are actually in -->
+  <rect x="176" y="302" width="500" height="76" rx="9" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="204" y="334" font-family="Urbanist" font-weight="700" font-size="20" fill="#A6DAFF">Connected system</text>
+  <text x="204" y="360" font-family="Urbanist" font-weight="400" font-size="16" fill="#CBD5E1">Several processes, messy inputs, real error paths</text>
+  <text x="828" y="348" text-anchor="end" font-family="ui-monospace, Consolas, monospace" font-size="17" fill="#A6DAFF">$7,500 - $18,000</text>
+
+  <!-- rung 1, bottom -->
+  <rect x="176" y="410" width="500" height="76" rx="9" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="204" y="442" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">Single workflow</text>
+  <text x="204" y="468" font-family="Urbanist" font-weight="400" font-size="16" fill="#94A3B8">Two tools, structured data, failure is cheap</text>
+  <text x="828" y="456" text-anchor="end" font-family="ui-monospace, Consolas, monospace" font-size="17" fill="#CBD5E1">$2,500 - $5,000</text>
+
+  <!-- the three variables that move the rung -->
+  <text x="856" y="204" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">WHAT MOVES THE RUNG</text>
+  <rect x="856" y="222" width="272" height="60" rx="8" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="878" y="250" font-family="Urbanist" font-weight="700" font-size="16" fill="#F1F5F9">Systems involved</text>
+  <text x="878" y="271" font-family="Urbanist" font-weight="400" font-size="15" fill="#94A3B8">How many things must talk</text>
+
+  <rect x="856" y="294" width="272" height="60" rx="8" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="878" y="322" font-family="Urbanist" font-weight="700" font-size="16" fill="#F1F5F9">Shape of the data</text>
+  <text x="878" y="343" font-family="Urbanist" font-weight="400" font-size="15" fill="#94A3B8">Structured, or genuinely messy</text>
+
+  <rect x="856" y="366" width="272" height="60" rx="8" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="878" y="394" font-family="Urbanist" font-weight="700" font-size="16" fill="#F1F5F9">Cost of failing</text>
+  <text x="878" y="415" font-family="Urbanist" font-weight="400" font-size="15" fill="#94A3B8">The hidden multiplier</text>
+
+  <line x1="72" y1="534" x2="1128" y2="534" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="572" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">audit $1,500, credited against the build</text>
+</svg>

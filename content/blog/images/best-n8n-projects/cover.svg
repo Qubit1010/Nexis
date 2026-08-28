@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img"
+     aria-label="Five shipped n8n and Make builds along a pipeline, each marked with the specific thing that broke in it: input variance, deduplication keys, batch convergence, silent zero results, and fabricated citations.">
+  <rect width="1200" height="630" fill="#02040A"/>
+
+  <text x="72" y="96" font-family="Urbanist" font-weight="700" font-size="42" fill="#F1F5F9">Five builds, five things that broke</text>
+  <text x="72" y="134" font-family="Urbanist" font-weight="400" font-size="20" fill="#94A3B8">The gap between a template and a system that survives real data</text>
+
+  <!-- the track -->
+  <line x1="140" y1="262" x2="1060" y2="262" stroke="#64748B" stroke-width="2"/>
+
+  <!-- station 1 -->
+  <circle cx="140" cy="262" r="15" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <text x="140" y="230" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="17" fill="#F1F5F9">Proposals</text>
+  <line x1="140" y1="277" x2="140" y2="316" stroke="#A6DAFF" stroke-width="1.5"/>
+  <rect x="60" y="316" width="160" height="86" rx="9" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5"/>
+  <text x="140" y="346" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="12" fill="#A6DAFF">BROKE ON</text>
+  <text x="140" y="372" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="16" fill="#F1F5F9">Input variance</text>
+  <text x="140" y="392" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="14" fill="#94A3B8">PDF, email, screenshot</text>
+
+  <!-- station 2 -->
+  <circle cx="370" cy="262" r="15" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <text x="370" y="230" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="17" fill="#F1F5F9">Lead routing</text>
+  <line x1="370" y1="277" x2="370" y2="316" stroke="#A6DAFF" stroke-width="1.5"/>
+  <rect x="290" y="316" width="160" height="86" rx="9" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5"/>
+  <text x="370" y="346" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="12" fill="#A6DAFF">BROKE ON</text>
+  <text x="370" y="372" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="16" fill="#F1F5F9">Dedupe keys</text>
+  <text x="370" y="392" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="14" fill="#94A3B8">two emails, one person</text>
+
+  <!-- station 3 -->
+  <circle cx="600" cy="262" r="15" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <text x="600" y="230" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="17" fill="#F1F5F9">Outreach</text>
+  <line x1="600" y1="277" x2="600" y2="316" stroke="#A6DAFF" stroke-width="1.5"/>
+  <rect x="520" y="316" width="160" height="86" rx="9" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5"/>
+  <text x="600" y="346" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="12" fill="#A6DAFF">BROKE ON</text>
+  <text x="600" y="372" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="16" fill="#F1F5F9">Convergence</text>
+  <text x="600" y="392" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="14" fill="#94A3B8">50 identical messages</text>
+
+  <!-- station 4 -->
+  <circle cx="830" cy="262" r="15" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <text x="830" y="230" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="17" fill="#F1F5F9">Monitoring</text>
+  <line x1="830" y1="277" x2="830" y2="316" stroke="#A6DAFF" stroke-width="1.5"/>
+  <rect x="750" y="316" width="160" height="86" rx="9" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5"/>
+  <text x="830" y="346" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="12" fill="#A6DAFF">BROKE ON</text>
+  <text x="830" y="372" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="16" fill="#F1F5F9">Silent zero</text>
+  <text x="830" y="392" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="14" fill="#94A3B8">looks like a quiet day</text>
+
+  <!-- station 5 -->
+  <circle cx="1060" cy="262" r="15" fill="#0B0F17" stroke="#64748B" stroke-width="2"/>
+  <text x="1060" y="230" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="17" fill="#F1F5F9">Retrieval</text>
+  <line x1="1060" y1="277" x2="1060" y2="316" stroke="#A6DAFF" stroke-width="1.5"/>
+  <rect x="980" y="316" width="160" height="86" rx="9" fill="#0B0F17" stroke="#A6DAFF" stroke-width="1.5"/>
+  <text x="1060" y="346" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="12" fill="#A6DAFF">BROKE ON</text>
+  <text x="1060" y="372" text-anchor="middle" font-family="Urbanist" font-weight="700" font-size="16" fill="#F1F5F9">Fabrication</text>
+  <text x="1060" y="392" text-anchor="middle" font-family="Urbanist" font-weight="400" font-size="14" fill="#94A3B8">a citation to nothing</text>
+
+  <line x1="72" y1="490" x2="1128" y2="490" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="528" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">5 delivered client builds / 11,600+ templates in the public library</text>
+  <text x="72" y="558" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Every one of these fails quietly. That is what makes them worth naming.</text>
+</svg>

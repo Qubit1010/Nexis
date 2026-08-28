@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Three questions that locate the line between automation and an agent: can you enumerate the branches, does the next step depend on content or only on success, and can a wrong step be undone.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">Three questions that locate the line</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">Answer these before anyone opens a tool. Two of three pointing to automation is the common result.</text>
+
+  <rect x="72" y="176" width="1056" height="128" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="112" y="222" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#64748B">01</text>
+  <text x="180" y="222" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">Can you list the branches?</text>
+  <text x="180" y="258" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If you can enumerate them, even twenty of them, that is a flowchart and it is automation.</text>
+  <text x="180" y="286" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">Twenty branches you can name beats a loop you cannot inspect.</text>
+
+  <rect x="72" y="328" width="1056" height="128" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="112" y="374" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#A6DAFF">02</text>
+  <text x="180" y="374" font-family="Urbanist" font-weight="700" font-size="23" fill="#A6DAFF">Content, or only success?</text>
+  <text x="180" y="410" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If the next step depends on whether the last one worked, that is a conditional. Automation.</text>
+  <text x="180" y="438" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If it depends on what the last step returned, you have a genuine case. This question decides it.</text>
+
+  <rect x="72" y="480" width="1056" height="128" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="112" y="526" font-family="ui-monospace, Consolas, monospace" font-size="26" fill="#64748B">03</text>
+  <text x="180" y="526" font-family="Urbanist" font-weight="700" font-size="23" fill="#F1F5F9">Can a wrong step be undone?</text>
+  <text x="180" y="562" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">If not, you need a checkpoint. A mandatory checkpoint spends most of what the autonomy was for.</text>
+  <text x="180" y="590" font-family="Urbanist" font-weight="400" font-size="17" fill="#94A3B8">Irreversible plus autonomous is the combination that produces expensive incidents.</text>
+
+  <rect x="72" y="644" width="1056" height="80" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="112" y="682" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">Scoring it</text>
+  <text x="112" y="712" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">Two of three pointing at automation and you should build automation, whatever the brief said it was.</text>
+
+  <line x1="72" y1="756" x2="1128" y2="756" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="786" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">the word in the request is not evidence about the shape of the work</text>
+</svg>

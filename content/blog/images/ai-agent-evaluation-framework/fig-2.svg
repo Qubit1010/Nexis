@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img"
+     aria-label="Four things a practical evaluation setup needs: tasks with known answers including controls, grading that inspects the path, an explicit did-not-run state, and version pinning so a moving score can be attributed.">
+  <rect width="1200" height="800" fill="#02040A"/>
+
+  <text x="72" y="88" font-family="Urbanist" font-weight="700" font-size="36" fill="#F1F5F9">What a working setup actually needs</text>
+  <text x="72" y="124" font-family="Urbanist" font-weight="400" font-size="19" fill="#94A3B8">Four things, and none of them requires a vendor platform to start</text>
+
+  <rect x="72" y="176" width="516" height="180" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="104" y="216" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">01 / THE TASKS</text>
+  <text x="104" y="254" font-family="Urbanist" font-weight="700" font-size="22" fill="#F1F5F9">Known answers, plus controls</text>
+  <text x="104" y="292" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">A small set where you already know</text>
+  <text x="104" y="316" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">the result, including at least one</text>
+  <text x="104" y="340" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">known-good and one known-bad.</text>
+
+  <rect x="612" y="176" width="516" height="180" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="644" y="216" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">02 / THE GRADING</text>
+  <text x="644" y="254" font-family="Urbanist" font-weight="700" font-size="22" fill="#F1F5F9">Inspect the path, not the answer</text>
+  <text x="644" y="292" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">An agent can reach a correct output</text>
+  <text x="644" y="316" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">by a route that was expensive, unsafe,</text>
+  <text x="644" y="340" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">or accidentally right.</text>
+
+  <!-- item 3, accented -->
+  <rect x="72" y="380" width="516" height="180" rx="12" fill="#0B0F17" stroke="#A6DAFF" stroke-width="2"/>
+  <text x="104" y="420" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#A6DAFF" letter-spacing="1.5">03 / THE THIRD STATE</text>
+  <text x="104" y="458" font-family="Urbanist" font-weight="700" font-size="22" fill="#A6DAFF">"Did not run" is not "failed"</text>
+  <text x="104" y="496" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">The single change that would have saved</text>
+  <text x="104" y="520" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">me months. Without it, a dead binary</text>
+  <text x="104" y="544" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">and a bad agent look identical.</text>
+
+  <rect x="612" y="380" width="516" height="180" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1.5"/>
+  <text x="644" y="420" font-family="ui-monospace, Consolas, monospace" font-size="13" fill="#94A3B8" letter-spacing="1.5">04 / THE PINNING</text>
+  <text x="644" y="458" font-family="Urbanist" font-weight="700" font-size="22" fill="#F1F5F9">Version everything</text>
+  <text x="644" y="496" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">When a score moves you need to know</text>
+  <text x="644" y="520" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">whether the agent changed or the</text>
+  <text x="644" y="544" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">environment did.</text>
+
+  <rect x="72" y="596" width="1056" height="106" rx="12" fill="#0B0F17" stroke="#64748B" stroke-width="1"/>
+  <text x="104" y="634" font-family="Urbanist" font-weight="700" font-size="20" fill="#F1F5F9">The failure without one is not dramatic, which is the problem</text>
+  <text x="104" y="666" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">You do not get a crash. You get a slow drift where things mostly work and occasionally do not,</text>
+  <text x="104" y="690" font-family="Urbanist" font-weight="400" font-size="17" fill="#CBD5E1">and nobody can say whether last month was better.</text>
+
+  <line x1="72" y1="742" x2="1128" y2="742" stroke="#64748B" stroke-width="1" opacity="0.4"/>
+  <text x="72" y="778" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="#94A3B8">a broken measurement cost me more than a broken system would have</text>
+</svg>
