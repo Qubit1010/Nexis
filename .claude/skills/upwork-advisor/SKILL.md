@@ -116,7 +116,7 @@ End by naming the next action and the skill that does it. Never draft the artifa
 | A proposal written for a job post | **`upwork-proposal-generator`** |
 | A reply written to a client message | **`upwork-reply-drafter`** |
 | The retainer pitch / review ask / scope-change wording | **`upwork-reply-drafter`** |
-| Client acquisition **off** Upwork | **`marketing-advisor`** / **`sales-playbook`** |
+| Client acquisition **off** Upwork | **`sales-playbook`** |
 | Whether to bid, what to fix, what the strategy is | **here** |
 
 **No job-scout handoff.** `projects/upwork-job-scout` is inactive (never got API access). Job triage

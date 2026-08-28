@@ -1,39 +1,6 @@
 ---
 name: copy-conversion
-description: >
-  Use to WRITE or AUDIT copy whose job is to make someone act: landing pages, homepages,
-  sales pages, emails and sequences, ad copy, product descriptions, headlines, hooks, CTAs,
-  microcopy, popups and lead magnets. This is the execution skill that produces the copy, not
-  the advice skill.
-  Triggers on: write the copy, conversion copy, landing page copy, homepage copy, sales page,
-  sales letter, write the hero section, above the fold, headline options, subheadline, hook,
-  CTA copy, button copy, call to action, microcopy, email copy, welcome sequence, nurture
-  sequence, email sequence, subject lines, ad copy, google ads copy, meta ads copy, linkedin
-  ad copy, product descriptions, popup copy, lead magnet copy, opt-in copy, rewrite this page,
-  improve this copy, our copy is weak, our copy is all features, nobody converts on this page,
-  audit their copy, review this sales page, copy audit, make this more compelling, punch this
-  up.
-  ALSO covers how to FORMAT a post for a given platform and topic: how should this look on
-  linkedin, format this for instagram, what length for a linkedin post, first line before the
-  see more cut, how do I format this post, post formatting, caption formatting, does this fit
-  the character limit, what changes between platforms, reformat this for X, meta ad character
-  limits, google ads headline length, linkedin sponsored content fields, email subject line
-  length, truncation.
-  Works from whatever exists: a client-projects slug, a website URL it crawls, a Google Doc,
-  a PDF or DOCX brief, pasted copy, or just a business name. Consumes 14-brand-voice.md for
-  voice, 13-brand-strategy.md for positioning and exclusions, 08-audience-persona.md for
-  verbatim customer language and 07-strategic-foundation.md for the UVP, rather than
-  re-deriving them - and when those are missing it says so and offers to build them first.
-  Outputs client-projects/<slug>/17-conversion-copy.md: a fact table and proof inventory,
-  then complete ready-to-ship copy per asset with the rationale traced to a voice rule, plus
-  what was cut for being unprovable. Audit mode instead produces a seven-row
-  Strong/Workable/Weak/Missing scorecard and rewrites the three highest-leverage pieces.
-  Numbers cited as [sN] resolve via copywriting-advisor's corpus. It never invents a
-  testimonial, statistic, customer name or result, and it never promises a percentage lift.
-  Scope is deliberately copy that asks for an action. For long-form articles and blogs use
-  blog-writer. For defining the voice itself use brand-voice. For explaining a concept or
-  checking whether a copywriting statistic is real use copywriting-advisor. For NexusPoint's
-  own cold outreach and DMs use sales-playbook or marketing-advisor.
+description: "Use to WRITE or AUDIT copy whose job is to make someone act: landing pages, homepages, sales pages, emails and sequences, ad copy, product descriptions, headlines, hooks, CTAs, microcopy, popups and lead magnets. Execution skill that produces the copy, not the advice skill. Triggers on: write the copy, conversion copy, landing page copy, homepage copy, sales page, sales letter, write the hero section, above the fold, headline options, subheadline, hook, CTA copy, button copy, microcopy, email copy, welcome sequence, nurture sequence, email sequence, subject lines, ad copy, google ads copy, meta ads copy, linkedin ad copy, product descriptions, popup copy, lead magnet copy, opt-in copy, rewrite this page, improve this copy, 'our copy is all features', 'nobody converts on this page', audit their copy, copy audit, 'make this more compelling'. ALSO covers how to FORMAT a post for a given platform: 'how should this look on linkedin', 'format this for instagram', 'what length for a linkedin post', the first line before the see-more cut, post formatting, caption formatting, character limits, truncation, 'what changes between platforms', meta ad character limits, google ads headline length, email subject line length. Works from a client-projects slug, a website URL it crawls, a Google Doc, a PDF or DOCX brief, pasted copy, or just a business name. Consumes 14-brand-voice.md, 13-brand-strategy.md, 08-audience-persona.md and 07-strategic-foundation.md rather than re-deriving them. Outputs client-projects/<slug>/17-conversion-copy.md; audit mode produces a Strong/Workable/Weak/Missing scorecard and rewrites the three highest-leverage pieces. Never invents a testimonial, statistic, customer name or result. For long-form articles use blog-writer; for defining the voice use brand-voice; for whether a copywriting statistic is real use copywriting-advisor; for Aleem's own cold outreach and DMs, where he is the sender rather than the client, use sales-playbook."
 argument-hint: [client name, URL, doc, or client-projects slug - optionally "audit"]
 ---
 
@@ -101,7 +68,7 @@ It writes the words. It does not define the voice, and it does not decide the of
 | `strategic-foundation` | The UVP, the offer, personas, customer research |
 | `blog-writer` | Long-form articles and blogs, including client blogs and AEO/GEO |
 | `seo-onpage` / `seo-authority-ai` | Page titles and metas as SEO artifacts; AI-search visibility |
-| `sales-playbook` / `marketing-advisor` | NexusPoint's OWN cold email, DMs and outreach |
+| `sales-playbook` | Aleem's own cold email, DMs and outreach, where he is the sender rather than the client |
 | `proposal-generator` | Client proposals and offer construction |
 | `content-engine` / `post-creator` / `carousel` | Aleem's own social content: idea sourcing, the posting schedule, the repurposing flywheel. **Formatting a post for a platform lives HERE** (`platform-formatting.md`); what to post about lives there |
 | `social-media-advisor` | How a platform *ranks and distributes* a post, account and follower growth, engagement strategy, profile optimisation, community management, social listening. **Formatting still lives HERE**: character limits, the "see more" cut, per-platform structure. That skill explains the system the formatted post lands in |

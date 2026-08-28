@@ -15,7 +15,7 @@ description: >
   "run the facebook lead nav", "turn these facebook post links into profiles", "who posted
   these facebook posts". Do NOT trigger for pushing rows into a CRM or writing outreach
   messages (that is leads-to-crm), for Instagram/LinkedIn sourcing, or for live
-  DM-reply / objection drafting (that is sales-playbook / marketing-advisor).
+  DM-reply / objection drafting (that is sales-playbook).
 ---
 
 # Facebook Lead Navigation (post → profile enrichment)

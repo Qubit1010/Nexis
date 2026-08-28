@@ -1,29 +1,6 @@
 ---
 name: seo-foundation
-description: >
-  Use to BUILD or REVIEW a client's SEO foundation - the keyword and search layer of their
-  strategy. This is the execution skill that produces the artifact, not the advice skill.
-  Triggers on: SEO foundation, SEO strategy for a client, keyword research, keyword
-  research for X, find keywords, keyword list, seed keywords, long-tail keywords, question
-  keywords, search volume, keyword difficulty, search intent, intent classification,
-  informational/commercial/transactional intent, SERP analysis, read the SERP, analyse page
-  one, who ranks for X, SERP competitors, competitor keywords, "who are we competing with
-  in search", keyword clustering, topic clusters, cluster these keywords, keyword mapping,
-  keyword map, map keywords to pages, cannibalization, keyword cannibalization, "are my
-  pages competing with each other", content plan from keywords, pillar page plan, topical
-  map, "what should we write about", "what pages should we build", "they have no SEO",
-  "review their keyword strategy", "audit their keyword research", SEO onboarding for a new
-  client. Works from a client's strategic-foundation and audience-persona files when they
-  exist, or from just a business name plus a URL. Runs real discovery: Google Autocomplete
-  harvesting, People Also Ask, related searches, live SERP reads, SERP-overlap clustering,
-  and site crawling. Outputs a 6-tab Google Sheet (Keyword Master, Clusters, Keyword Map,
-  SERP Analysis, Competitors, Cannibalization) plus a written foundation report. It reads
-  difficulty off live SERPs instead of quoting vendor keyword-difficulty scores, and says
-  "not measured" rather than inventing a search volume. Scope is deliberately Tier 1 only.
-  For SEO THEORY, diagnosis, benchmarks or the course ("why did traffic drop", "is SEO
-  dead", "teach me SEO") use seo-advisor. For the client's BUSINESS strategy, ICP or
-  persona use strategic-foundation. To WRITE an article use blog-writer. To crawl and score
-  a site's technical health use website-audit-system.
+description: "Use to BUILD or REVIEW a client's SEO foundation - the keyword and search layer of their strategy. Execution skill that produces the artifact, not the advice skill. Triggers on: SEO foundation, SEO strategy for a client, keyword research, find keywords, keyword list, seed keywords, long-tail keywords, question keywords, search volume, keyword difficulty, search intent, intent classification, informational/commercial/transactional intent, SERP analysis, read the SERP, analyse page one, 'who ranks for X', SERP competitors, competitor keywords, 'who are we competing with in search', keyword clustering, topic clusters, cluster these keywords, keyword mapping, keyword map, map keywords to pages, cannibalization, 'are my pages competing with each other', content plan from keywords, pillar page plan, topical map, 'what should we write about', 'what pages should we build', 'they have no SEO', 'review their keyword strategy', 'audit their keyword research', SEO onboarding for a new client. Works from a client's strategic-foundation and audience-persona files when they exist, or from just a business name plus a URL. Runs real discovery: Google Autocomplete harvesting, People Also Ask, related searches, live SERP reads, SERP-overlap clustering, and site crawling. Outputs a 6-tab Google Sheet (Keyword Master, Clusters, Keyword Map, SERP Analysis, Competitors, Cannibalization) plus a written foundation report. Reads difficulty off live SERPs instead of quoting vendor difficulty scores, and says 'not measured' rather than inventing a search volume. Tier 1 only. For SEO THEORY, diagnosis, benchmarks or the course use seo-advisor; for the client's BUSINESS strategy, ICP or persona use strategic-foundation; to WRITE an article use blog-writer; to crawl and score technical health use seo-technical or website-audit-system."
 argument-hint: [client name, URL, or client-projects slug - or "review" plus an existing keyword sheet]
 ---
 
@@ -42,8 +19,8 @@ The output is a working artifact, not a memo: a 6-tab Google Sheet plus a writte
 
 ## Where this sits
 
-`seo-advisor` knows things. This skill does things. Same split as `marketing-advisor` to
-`sales-playbook`, and `strategic-foundation` to this.
+`seo-advisor` knows things. This skill does things. Same advisor-to-executor split as
+`strategic-foundation` to this.
 
 ```
 strategic-foundation  ->  seo-foundation  ->  seo-onpage  ->  blog-writer / content-engine
@@ -80,7 +57,7 @@ This skill is the thing that was deferred.
 | **strategic-foundation** | The client's business strategy, ICP, market sizing, or the audience persona itself. This skill consumes that output; it does not produce it. |
 | **seo-onpage** | Whether the page a cluster maps to is actually any good - titles, metas, headings, content quality, internal links, media, E-E-A-T - and the full on-page audit. It is Tier 2 and picks up exactly where this skill stops. |
 | **blog-writer** | Writing an actual article against a cluster from the map. |
-| **content-engine** / **post-creator** | Turning the map into a running content system. |
+| **content-engine** / **post-creator** | Turning the map into a running content system: `content-engine` BUILDs the hooks and format set, `post-creator` runs the schedule. |
 | **website-audit-system** | Crawling and scoring the site's technical and performance health. |
 | **research** / **web-scraper** | Community language mining and competitor site extraction. This skill calls both directly. |
 
@@ -154,7 +131,7 @@ What we could not establish
 ```
 
 Google Doc and PDF are not built by default. Offer them if asked - the Doc via
-`content-engine/scripts/save_content.py`, the PDF via `seo-advisor/scripts/seo_pdf.py`.
+`tools/gdocs/save_content.py`, the PDF via `seo-advisor/scripts/seo_pdf.py`.
 
 ---
 

@@ -1,37 +1,6 @@
 ---
 name: content-production
-description: >
-  Use to WRITE or AUDIT an actual piece of content in a format that has no dedicated skill of
-  its own: whitepapers, ebooks, gated guides and lead magnets, standalone email newsletters,
-  customer case studies, X and LinkedIn threads, single text posts, memes, TikTok and
-  short-video scripts, long-form YouTube video scripts, webinar structure and running order,
-  and LinkedIn document carousels. This is the execution skill that produces the piece, not
-  the advice skill, and it routes rather than duplicates when a specialist skill already owns
-  the format.
-  Triggers on: write a whitepaper, whitepaper outline, ebook, lead magnet, gated guide,
-  downloadable guide, content upgrade, write the newsletter, newsletter issue, email
-  newsletter, customer case study, client success story, write a thread, X thread, Twitter
-  thread, LinkedIn thread, thread outline, write a LinkedIn post, X post, text post, meme,
-  branded meme, TikTok script, short video script, video script, YouTube script, long-form
-  video outline, video hook, retention edit, webinar outline, webinar running order, webinar
-  script, document carousel, LinkedIn carousel PDF, slide deck content, show notes, podcast
-  show notes, episode description.
-  Also triggers on: "turn this into a thread", "we need a lead magnet", "write this up as a
-  case study", "draft this week's newsletter", "script this video", "what goes in the
-  whitepaper", "make this a downloadable", "audit this piece", "why is this post flat".
-  Reads 14-brand-voice.md for voice, 13-brand-strategy.md for positioning, 08-audience-persona
-  for the audience's own language, and 18-content-strategy.md for which pillar the piece serves
-  and what it is supposed to do; when one is missing it says so, offers to run the producing
-  skill, then proceeds with the gaps labelled as assumptions. Writes every piece against the
-  format spec in content-advisor/references/format-specs/ rather than from memory, and never
-  invents a statistic, customer quote or result.
-  Outputs to client-projects/<slug>/content/<format>-<slug>.md.
-  Routes rather than competes: articles and blog posts go to blog-writer, Instagram carousels
-  to carousel, single-image infographics to linkedin-infographics, vertical short frames to
-  shorts-creator, rendered video to reel-creator or hyperframes-reel, transcript-to-shortform
-  to podcast-repurposer, NexusPoint project write-ups to case-study-generator, and landing or
-  sales page copy to copy-conversion. For what a format should look like use content-advisor;
-  for the plan the piece belongs to use content-strategy.
+description: "Use to WRITE or AUDIT an actual piece of content in a format that has no dedicated skill of its own: whitepapers, ebooks, gated guides and lead magnets, standalone email newsletters, customer case studies, X and LinkedIn threads, single text posts, memes, TikTok and short-video scripts, long-form YouTube scripts, webinar structure, and LinkedIn document carousels. Execution skill that produces the piece, and it routes rather than duplicates when a specialist skill already owns the format. Triggers on: write a whitepaper, whitepaper outline, ebook, lead magnet, gated guide, downloadable guide, content upgrade, write the newsletter, newsletter issue, email newsletter, customer case study, client success story, write a thread, X thread, Twitter thread, LinkedIn thread, write a LinkedIn post, text post, meme, TikTok script, short video script, video script, YouTube script, long-form video outline, video hook, retention edit, webinar outline, webinar running order, document carousel, LinkedIn carousel PDF, show notes, episode description. Also: 'turn this into a thread', 'we need a lead magnet', 'write this up as a case study', 'draft this week's newsletter', 'script this video', 'make this a downloadable', 'why is this post flat'. Reads 14-brand-voice.md, 13-brand-strategy.md, 08-audience-persona.md and 18-content-strategy.md rather than re-deriving them. Writes every piece against the format spec in content-advisor/references/format-specs/ rather than from memory, and never invents a statistic, customer quote or result. Outputs to client-projects/<slug>/content/<format>-<slug>.md. Routes rather than competes: articles and blog posts to blog-writer, Instagram carousels to carousel, single-image infographics to linkedin-infographics, vertical short frames to shorts-creator, rendered video to reel-creator or hyperframes-reel, transcript-to-shortform to podcast-repurposer, NexusPoint write-ups to case-study-generator, landing and sales page copy to copy-conversion. For what a format should look like use content-advisor; for the plan the piece belongs to use content-strategy."
 argument-hint: [a format and a topic, a client slug, or a piece to audit]
 ---
 
@@ -72,7 +41,7 @@ Two boundaries worth stating because they get confused:
 
 - **Guides.** An on-site pillar article is `blog-writer`. A gated downloadable is this skill:
   different structure, different opening, different job.
-- **Case studies.** `case-study-generator` writes up NexusPoint's own projects for prospects.
+- **Case studies.** `case-study-generator` writes up the agency's own projects for prospects.
   A case study about *the client's* customer is this skill.
 
 ---
@@ -111,7 +80,7 @@ Two boundaries worth stating because they get confused:
 | `copywriting-advisor` | Headlines, hooks-as-copy and CTAs as a knowledge question |
 | `brand-voice` | Defining the voice, when `14-brand-voice.md` does not exist yet |
 | `seo-onpage` | On-page thresholds. **This skill does not restate them** |
-| `content-engine` / `post-creator` | NexusPoint's own posts and the weekly schedule |
+| `content-engine` / `post-creator` | Aleem's personal brand: his posts and the weekly schedule |
 
 State the handoff when you make it. Do not silently stop.
 
@@ -183,7 +152,7 @@ Follow `references/method.md`. In short:
 | "Make it go viral" | Refuse the forecast. Cascade size is famously hard to predict; give the argument, not a promise |
 | Asked for a character limit | Take it from the format spec with its date, or verify against the platform's own docs. Never from memory |
 | A meme for a brand with no cultural licence | Say when a brand should not use one. This is in the spec |
-| Piece is for NexusPoint, not a client | Route to `content-engine` or `post-creator` |
+| Piece is for Aleem's personal brand, not a client | Route to `content-engine` or `post-creator` |
 
 ---
 

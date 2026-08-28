@@ -1,36 +1,12 @@
 ---
 name: seo-advisor
-description: >
-  Use for ANY question about SEO, search rankings, or being found by search engines and
-  AI answer engines. Triggers on: SEO, search engine optimization, "why isn't my site
-  ranking", "my traffic dropped", "rankings fell", core update, crawling, indexing,
-  robots.txt, sitemap, canonical, redirects, JavaScript SEO, site architecture, Core Web
-  Vitals, LCP, INP, CLS, page speed, mobile-first, hreflang, schema markup, structured
-  data, JSON-LD, rich results, keyword research, search volume, keyword difficulty,
-  search intent, topic clusters, title tags, meta descriptions, E-E-A-T, internal
-  linking, backlinks, link building, digital PR, guest posting, brand mentions, domain
-  authority, local SEO, map pack, Google Business Profile, NAP, reviews, AEO, GEO,
-  answer engine optimization, generative engine optimization, AI Overviews, AI Mode,
-  "cited by ChatGPT", Perplexity, query fan-out, entity SEO, knowledge graph, llms.txt,
-  GPTBot, ClaudeBot, PerplexityBot, AI crawlers, zero-click, Search Console, GA4, rank
-  tracking, AI visibility, Ahrefs, Semrush, Moz, Screaming Frog, "is SEO dead", "how has
-  SEO changed", SEO pricing, SEO retainer, "how long does SEO take", "how much to charge
-  for SEO". Also the home of the 42-section 2026 SEO course: "teach me SEO", "learn
-  SEO", "start the course", "next section", "section 12", curriculum, roadmap, playbook.
-  Trigger even when the user describes a search-visibility symptom without saying "SEO".
-  Answers are grounded in a cited 320-source 2026 corpus, tagging every claim
-  [confirmed] (Google docs, peer-reviewed) vs [practitioner] (vendor blog), never
-  presenting a vendor statistic as fact. This skill EXPLAINS and DIAGNOSES; it does not
-  produce the artifact. To actually DO keyword research for a client - find the keywords,
-  read the SERPs, score, cluster, and map them to pages, ending in a keyword-map Sheet -
-  use seo-foundation. To WRITE an optimized article use blog-writer; to RUN a
-  crawl-and-PageSpeed audit use website-audit-system.
+description: "Use for ANY question about SEO, search rankings, or being found by search engines and AI answer engines. Triggers on: SEO, search engine optimization, 'why isn't my site ranking', 'my traffic dropped', 'rankings fell', core update, crawling, indexing, robots.txt, sitemap, canonical, redirects, JavaScript SEO, site architecture, Core Web Vitals, LCP, INP, CLS, page speed, mobile-first, hreflang, schema markup, structured data, JSON-LD, rich results, keyword research, search volume, keyword difficulty, search intent, topic clusters, title tags, meta descriptions, E-E-A-T, internal linking, backlinks, link building, digital PR, guest posting, brand mentions, domain authority, local SEO, map pack, Google Business Profile, NAP, reviews, AEO, GEO, answer engine optimization, generative engine optimization, AI Overviews, AI Mode, 'cited by ChatGPT', Perplexity, query fan-out, entity SEO, knowledge graph, llms.txt, GPTBot, ClaudeBot, PerplexityBot, AI crawlers, zero-click, Search Console, GA4, rank tracking, AI visibility, Ahrefs, Semrush, Moz, Screaming Frog, 'is SEO dead', 'how has SEO changed', SEO pricing, SEO retainer, 'how long does SEO take', 'how much to charge for SEO'. Also the home of the 42-section 2026 SEO course: 'teach me SEO', 'learn SEO', 'start the course', 'next section', 'section 12', curriculum, roadmap, playbook. Trigger even when the user describes a search-visibility symptom without saying SEO. Tags every claim [confirmed] vs [practitioner], never presenting a vendor statistic as fact. This skill EXPLAINS and DIAGNOSES; it does not produce the artifact. To actually DO keyword research for a client use seo-foundation; for on-page and content execution use seo-onpage; for crawling, indexation and schema use seo-technical; for authority and AI-search visibility use seo-authority-ai; to WRITE an optimized article use blog-writer; to RUN a prospect-facing crawl-and-PageSpeed audit use website-audit-system."
 argument-hint: [an SEO question, a symptom to diagnose, or a course section to work through]
 ---
 
 # SEO Advisor
 
-NexusPoint's research-backed brain for search. Two jobs:
+The research-backed brain for search. Two jobs:
 
 1. **Aleem's SEO advisor** - diagnose a symptom, answer a strategy question, or judge a
    tactic, grounded in the 2026 corpus rather than in training memory.
@@ -64,8 +40,8 @@ never invent a number.
 ## Boundaries / handoffs (important)
 
 **seo-advisor owns** the cited knowledge, strategy, diagnosis, and teaching layer. It
-advises and diagnoses. It does not produce the artifact. Same split as
-`marketing-advisor` to `sales-playbook`, and `upwork-advisor` to the two Upwork writers.
+advises and diagnoses. It does not produce the artifact. Same advisor-to-executor split as
+`upwork-advisor` to the two Upwork writers.
 
 | Hand off to | For |
 |---|---|
@@ -75,7 +51,7 @@ advises and diagnoses. It does not produce the artifact. Same split as
 | **website-audit-system** | Actually running a Firecrawl crawl + PageSpeed audit and producing the client Doc. |
 | **marketing-skills** (`seo-audit`, `schema`, `site-architecture`, `programmatic-seo`, `ai-seo`, `directory-submissions`) | Tactical checklists. These are useful but **entirely uncited** - re-ground any number against our corpus before repeating it. |
 | **research** | Live gap-filling on a question the corpus and notebook both miss. |
-| **marketing-advisor** | Pricing and positioning an SEO offer commercially. |
+| *(no owning skill)* | Pricing and positioning an SEO offer commercially. No current skill covers this. Say so plainly rather than improvising. |
 | **free-tool-scout / api-scout** | Free SEO tool lookups. |
 
 State the handoff when you make it. Do not silently stop.
@@ -85,8 +61,8 @@ State the handoff when you make it. Do not silently stop.
 Read `references/seo-scoreboard.md` first (the 2026 benchmark numbers, near-always
 useful). Then load the mode-specific reference below. Consult
 `references/research-synthesis.md` when you need fuller context or the source behind a
-claim. **Max 3 reference files per invocation.** For NexusPoint framing (selling SEO,
-client work), also skim `context/work.md`.
+claim. **Max 3 reference files per invocation.** When the question is about selling SEO as
+a service rather than doing it, also skim `context/work.md`.
 
 ---
 
@@ -111,7 +87,7 @@ section for depth.
 | **entity** | entity SEO, knowledge graph, Wikidata, sameAs, query fan-out | synthesis **Q13** |
 | **measure** | Search Console, GA4, rank tracking, "how do I measure", reporting, AI visibility, forecasting | synthesis **Q10** |
 | **tools** | "what tool", "Ahrefs vs Semrush", Screaming Frog, "free SEO tools", tool stack | synthesis **Q11** (+ route free-tool asks to the scouts) |
-| **service** | "charge for SEO", retainer, scoping, proposal, "how long does SEO take", deliverables | synthesis **Q14** (+ `marketing-advisor` for positioning) |
+| **service** | "charge for SEO", retainer, scoping, proposal, "how long does SEO take", deliverables | synthesis **Q14** |
 | **course** | "build section N", "write the playbook", "combine the guide", "render the PDF" | `course/` + `scripts/build_course_pdf.py` |
 | **diagnose** (default) | "traffic dropped", "rankings fell", "why isn't this ranking", "core update hit us", "what do I fix first", any symptom | `diagnosis-playbooks.md` + `seo-scoreboard.md` |
 
@@ -255,7 +231,7 @@ any synthesis answer with citations already resolved to `[sN]`, or lists its cit
 with their tiers. Use it when you need the raw evidence behind a synthesis claim.
 
 Sibling skills: **blog-writer** (write the article), **website-audit-system** (run the
-audit), **marketing-advisor** (channel strategy + pricing), **research** (live
+audit), **research** (live
 gap-filling), **marketing-skills** (uncited tactical checklists).
 
 ---

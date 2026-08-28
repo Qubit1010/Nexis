@@ -36,8 +36,8 @@ the value of this skill is in the drafting pass, so do not rush it to get to a f
 Aleem's posts reach 40.7% of his followers (top quartile is 20%+), but absolute impressions are only
 median. That is a small-base problem, not a quality problem, and posting more is not on the table:
 he is capped at 2 posts a week by his own Q4 decision. Commenting borrows audiences that already
-exist, and a 10+ word substantive comment carries 5-7x the weight of a like. Full context in
-`marketing-advisor/references/linkedin-playbook.md` under "Growing the account".
+exist, and a 10+ word substantive comment carries 5-7x the weight of a like. That diagnosis was
+made 2026-07-27; the playbook holding it was deleted 2026-08-27, so the numbers above are the record.
 
 Nothing here touches his LinkedIn account. The Apify actor runs on Apify's infrastructure with no
 session or cookie, and posting the comments is manual by design.
@@ -92,7 +92,7 @@ its monthly limit as of 2026-07-31 and the run rotated past it without intervent
 Read both before writing a single comment:
 
 - `references/comment-craft.md` in this skill, the quality bar and the four moves that clear it
-- `content-engine/references/voice-principles.md`, the source of truth for anything written as Aleem
+- `agency/personal-brand-voice.md`, the source of truth for anything written as Aleem
 
 Do not skip the voice file. It carries the hard rules (no emojis, no em dashes, never name the
 agency, never reference university) that a comment can violate in public under his own name.
@@ -198,4 +198,4 @@ because everything got dropped as saturated, that is the real fix.
   under his own name is the fastest way to be remembered badly.
 - **Does not post the comments.** Manual by design. No LinkedIn credential is used anywhere.
 - **Not a strategy skill.** For "should I be commenting at all", "what is a good reach rate", or
-  benchmark questions, that is `marketing-advisor` (linkedin mode).
+  benchmark questions, that is `social-media-advisor` (LinkedIn mechanics and account growth).

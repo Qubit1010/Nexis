@@ -77,7 +77,7 @@
 - **Don't chase detector-gaming / paraphrase gimmicks.** Fully human text is sometimes flagged as AI [s56][s62]; the durable answer is originality + voice + cadence + specificity, not a "humanizer" [s54][s55]. Exact false-positive rates aren't quantified in these sources [s55][s62]. **[practitioner]** for any specific detector percentage.
 - **E-E-A-T-driven humanization:** first-hand experience and a real point of view are both a ranking signal (Q1) and the strongest human tell [s73].
 
-**This maps directly onto Aleem's existing voice framework** — see `content-engine/references/voice-principles.md` (the "Unswappable" formula, the So-What test, the specificity rules, the ASCII-only / no-em-dash mechanics). The research above is the evidence base under it; `references/human-tone-rules.md` distills both into the pre-publish checklist.
+**This maps directly onto Aleem's existing voice framework** — see `agency/personal-brand-voice.md` (the "Unswappable" formula, the So-What test, the specificity rules, the ASCII-only / no-em-dash mechanics). The research above is the evidence base under it; `references/human-tone-rules.md` distills both into the pre-publish checklist.
 
 ---
 

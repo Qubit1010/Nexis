@@ -1,36 +1,6 @@
 ---
 name: seo-onpage
-description: >
-  Use to OPTIMIZE or AUDIT the on-page and content layer of a client's pages, a whole site,
-  or an unpublished blog draft. This is the execution skill that produces the artifact and
-  the fixes, not the advice skill. Triggers on: on-page SEO, on page optimization, optimize
-  this page, optimize this post, "is this page optimized", on-page audit, content audit,
-  SEO audit of a page, title tag, title tags, meta description, meta descriptions, SERP
-  snippet, "rewrite my titles", "my CTR is low", heading structure, H1, H2, heading
-  hierarchy, "too many H1s", content structure, URL slug, slug, "should I change this URL",
-  site navigation, breadcrumbs, orphan page, orphan pages, content quality, thin content,
-  "is my content good enough", "why isn't this page ranking", helpful content, topical
-  authority, pillar page, content cluster, cluster pages, internal linking, internal links,
-  anchor text, link depth, "nothing links to this page", image SEO, alt text, image
-  optimization, image compression, WebP, hero image weight, video SEO, transcripts, E-E-A-T,
-  EEAT, author bio, "how do I show expertise", trust signals, content refresh, refresh this
-  post, update old content, content decay, "traffic is dropping on old posts", consolidate
-  pages, prune content, delete pages, content inventory, "what should I do with these 200
-  pages", answer blocks, extractable answers, FAQ schema, HowTo schema, JSON-LD on a page,
-  "optimize this for AI search", "make this page citable", content optimization terms, "what
-  am I missing versus page one", term gap, "what do the top results cover that I don't".
-  Works from a live URL, a whole site, a markdown draft, or a client-projects slug, and
-  consumes the keyword map from seo-foundation when one exists. Measures rather than
-  asserts: parses real HTML locally, runs Lighthouse's free SEO audits, computes actual
-  image savings, and extracts the term gap against the live top 10. Outputs a 6-tab Google
-  Sheet (Page Audit, Findings, Metadata, Content Inventory, Internal Links, Media) plus a
-  written report built as a one-line diagnosis and three prioritized fixes, not forty
-  findings. Says "not connected" rather than inventing Search Console data. Scope is
-  deliberately Tier 2 only - on-page and content. For SEO THEORY, benchmarks, diagnosis or
-  the course ("is SEO dead", "teach me SEO") use seo-advisor. For KEYWORD research, intent
-  classification or the keyword map use seo-foundation. To WRITE the article use
-  blog-writer. For a prospect-facing sales audit with a hook email use
-  website-audit-system. Technical, off-page and AI-search execution are out of scope.
+description: "Use to OPTIMIZE or AUDIT the on-page and content layer of a client's pages, a whole site, or an unpublished blog draft. Execution skill that produces the artifact and the fixes, not the advice skill. Triggers on: on-page SEO, optimize this page, optimize this post, 'is this page optimized', on-page audit, content audit, title tag, meta description, SERP snippet, 'rewrite my titles', 'my CTR is low', heading structure, H1, H2, heading hierarchy, 'too many H1s', content structure, URL slug, 'should I change this URL', breadcrumbs, orphan pages, content quality, thin content, 'why isn't this page ranking', helpful content, topical authority, pillar page, content cluster, internal linking, anchor text, link depth, 'nothing links to this page', image SEO, alt text, image compression, WebP, video SEO, transcripts, E-E-A-T, author bio, trust signals, content refresh, update old content, content decay, 'traffic is dropping on old posts', consolidate pages, prune content, content inventory, 'what should I do with these 200 pages', answer blocks, extractable answers, FAQ schema, HowTo schema, JSON-LD on a page, 'make this page citable', term gap, 'what am I missing versus page one'. Works from a live URL, a whole site, a markdown draft, or a client-projects slug, and consumes the keyword map from seo-foundation when one exists. Parses real HTML locally, runs Lighthouse's free SEO audits, computes actual image savings, and extracts the term gap against the live top 10. Outputs a 6-tab Google Sheet plus a report built as a one-line diagnosis and three prioritized fixes. Tier 2 only. For SEO THEORY, benchmarks or the course use seo-advisor; for KEYWORD research use seo-foundation; to WRITE the article use blog-writer; for a prospect-facing sales audit with a hook email use website-audit-system. Technical, off-page and AI-search execution are out of scope."
 argument-hint: [URL, client-projects slug, or a draft path - optionally "audit" / "optimize" / "refresh"]
 ---
 
@@ -50,8 +20,8 @@ The output is a working artifact, not a memo: a 6-tab Google Sheet plus a writte
 
 ## Where this sits
 
-`seo-advisor` knows things. This skill does things. Same split as `marketing-advisor` to
-`sales-playbook`, and `seo-advisor` to `seo-foundation`.
+`seo-advisor` knows things. This skill does things. Same advisor-to-executor split as
+`seo-advisor` to `seo-foundation`.
 
 ```
 seo-foundation      ->   seo-onpage        ->   blog-writer / content-engine
@@ -99,7 +69,7 @@ good. It is Tier 2 of the course - sections 11 to 20 - and nothing else.
 | **seo-foundation** | Keyword research, intent classification, SERP-overlap clustering, and the keyword-to-URL map. This skill consumes that map; it does not build it. If no map exists, offer to run it first. |
 | **blog-writer** | Writing the actual article. This skill validates and fixes an article's on-page layer; it does not write the prose in Aleem's voice. |
 | **website-audit-system** | A prospect-facing sales audit with a hook email, or a Firecrawl crawl plus PageSpeed scored across UX/SEO/Performance/Conversion. That is the cold-outreach motion. This is a paid client deliverable. |
-| **content-engine** / **post-creator** | Turning the cluster plan into a running content system. |
+| **content-engine** / **post-creator** | Turning the cluster plan into a running content system: `content-engine` BUILDs the hooks and format set, `post-creator` runs the schedule. |
 | **research** / **web-scraper** | Competitor content extraction beyond the top 10, and target discovery. This skill calls both directly. |
 
 State the handoff when you make it. Do not silently stop.
@@ -179,7 +149,7 @@ What we could not establish
 Handoff
 ```
 
-Google Doc on request via `content-engine/scripts/save_content.py` (multi-tab: one tab per
+Google Doc on request via `tools/gdocs/save_content.py` (multi-tab: one tab per
 area plus a summary tab). It strips smart quotes and em dashes across the whole payload and
 flattens markdown links to bare text, so keep URLs in the Sheet, not in Doc-bound prose.
 

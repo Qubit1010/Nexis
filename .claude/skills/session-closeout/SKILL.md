@@ -88,8 +88,8 @@ For each decision logged in Step 3, check whether it makes any of these stale, a
 - `context/current-priorities.md` — focus areas, "What's Live" vs "Next to build", bottleneck
 - `context/me.md`, `context/work.md`, `context/team.md`, `context/goals.md`, `context/ideas.md` — role/stack/team/quarterly-goal/backlog facts
 - `.claude/rules/*.md` — a decision that changes a standing rule or adds a new one
-- `.claude/rules/skills-catalog.md` — the Active Skills catalog and installed skills/plugins list
-- `.claude/rules/skills-backlog.md` — the domain-organized backlog of skill ideas to build next
+- `references/skills-catalog.md` — the Active Skills catalog and installed skills/plugins list
+- `references/skills-backlog.md` — the domain-organized backlog of skill ideas to build next
 - `CLAUDE.md` — tool integrations or any other section a shipped decision touches
 
 Good reasons to update:

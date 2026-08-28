@@ -1,6 +1,6 @@
 # Human-Tone Rules — the anti-AI-tell pre-publish pass
 
-Run every draft through this before the review gate. It merges the 2026 research (`research-synthesis.md` Q4) with Aleem's `content-engine/references/voice-principles.md` mechanics. Goal: reads unmistakably human, not because it games a detector, but because it has real voice, specificity, and rhythm. Detectors have real false-positive rates — fully human text gets flagged too [s56][s62] — so the durable fix is craft, not "humanizer" tools [s54][s55].
+Run every draft through this before the review gate. It merges the 2026 research (`research-synthesis.md` Q4) with Aleem's `agency/personal-brand-voice.md` mechanics. Goal: reads unmistakably human, not because it games a detector, but because it has real voice, specificity, and rhythm. Detectors have real false-positive rates — fully human text gets flagged too [s56][s62] — so the durable fix is craft, not "humanizer" tools [s54][s55].
 
 ## The 4 levers that make text read human [s52][s55][s73]
 1. **Authentic first-person voice** — real process, constraints, decisions. Aleem in first person: "I built," "I tried," "I noticed."

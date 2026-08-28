@@ -96,7 +96,7 @@ output `.md` is written, run:
 python .claude/skills/podcast-repurposer/scripts/md_to_gdoc.py <output>.md --tabs
 ```
 
-It parses the output-spec structure and pipes it to `content-engine/scripts/save_content.py`, which
+It parses the output-spec structure and pipes it to `tools/gdocs/save_content.py`, which
 builds the real Google Doc tabs via the Docs API, then prints the Doc URL. Needs `gws` authenticated
 (no pandoc required for `--tabs`). Without `--tabs` the script makes the older flat doc (one page
 break per segment).

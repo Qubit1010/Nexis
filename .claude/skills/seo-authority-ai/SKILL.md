@@ -1,37 +1,6 @@
 ---
 name: seo-authority-ai
-description: >
-  Use to BUILD or AUDIT a client's authority and AI-search visibility - whether answer engines
-  can retrieve them, resolve who they are, and actually cite them. This is the execution skill
-  that produces the artifact, not the advice skill. Triggers on: AEO, GEO, answer engine
-  optimization, generative engine optimization, AI search, AI visibility, AI search visibility,
-  "are we cited by ChatGPT", "am I showing up in ChatGPT", "why isn't AI mentioning us", "get
-  cited by AI", "make this page citable", "optimize this page for AI search", "optimize for
-  Perplexity", citation rate, citation share, share of voice in AI, AI mention rate, AI
-  Overviews, AI Mode, "am I in AI Overviews", zero-click, query fan-out, extractable answers,
-  answer blocks, BLUF, answer-first, self-contained passages, comparison table for AI, expert
-  quotes, inline citations, Princeton GEO study, topical coverage, entity SEO, entity home,
-  Wikidata, Q-number, Knowledge Panel, KGMID, knowledge graph, sameAs, disambiguation, AI
-  crawler, AI crawler control, GPTBot, ClaudeBot, CCBot, OAI-SearchBot, ChatGPT-User,
-  Claude-SearchBot, PerplexityBot, Google-Extended, "should I block GPTBot", "block AI
-  crawlers", llms.txt, "do I need llms.txt", Bing indexation for ChatGPT, backlinks, link
-  building, link gap, referring domains, domain rating, anchor text, digital PR, brand
-  mentions, unlinked mentions, mention reclamation, "who is talking about us", platform
-  presence, Crunchbase, G2, local SEO, Google Business Profile, GBP, map pack, NAP, citations,
-  reviews, review velocity, "we serve three cities", measuring AI visibility, branded
-  impressions, GA4 AI channel, AI referral traffic. Works from a URL, a client-projects slug,
-  or a page plus a brand name. Measures rather than asserts: parses real HTML for the three
-  peer-reviewed GEO modifiers, diffs robots.txt against the 2026 AI-bot matrix, resolves the
-  entity against Wikidata and the Knowledge Graph, and samples answer engines across repeated
-  runs because a single sample is not a measurement. Outputs a 6-tab Google Sheet (Authority
-  Audit, Findings, AI Visibility, Entity, Mentions and Platforms, Local) plus a written report
-  at client-projects/<slug>/12-seo-authority-ai.md. Says "not connected" rather than inventing
-  Search Console data, and "unknown" rather than inventing a backlink metric that has no free
-  source. Scope is deliberately Tier 4 only - course sections 32 to 42. For SEO THEORY,
-  benchmarks, pricing or the course ("is SEO dead", "teach me SEO", "what should I charge") use
-  seo-advisor. For KEYWORD research use seo-foundation. For on-page and content use seo-onpage.
-  For crawling, indexation, schema, redirects or Core Web Vitals use seo-technical. To WRITE
-  the article use blog-writer.
+description: "Use to BUILD or AUDIT a client's authority and AI-search visibility: whether answer engines can retrieve them, resolve who they are, and actually cite them. Execution skill that produces the artifact, not the advice skill. Triggers on: AEO, GEO, answer engine optimization, generative engine optimization, AI search, AI visibility, 'are we cited by ChatGPT', 'why isn't AI mentioning us', 'make this page citable', 'optimize for Perplexity', citation rate, citation share, AI Overviews, AI Mode, zero-click, query fan-out, extractable answers, answer blocks, answer-first, comparison table for AI, expert quotes, inline citations, topical coverage, entity SEO, entity home, Wikidata, Knowledge Panel, knowledge graph, sameAs, AI crawler control, GPTBot, ClaudeBot, CCBot, PerplexityBot, Google-Extended, 'should I block GPTBot', llms.txt, 'do I need llms.txt', backlinks, link building, link gap, referring domains, domain rating, anchor text, digital PR, brand mentions, unlinked mentions, 'who is talking about us', Crunchbase, G2, local SEO, Google Business Profile, map pack, NAP, reviews, measuring AI visibility, AI referral traffic. Works from a URL, a client-projects slug, or a page plus a brand name. Outputs a 6-tab Google Sheet plus a report at client-projects/<slug>/12-seo-authority-ai.md. Tier 4 only (course sections 32-42). For SEO THEORY, benchmarks, pricing or the course use seo-advisor; for KEYWORD research use seo-foundation; for on-page and content use seo-onpage; for crawling, indexation, schema or Core Web Vitals use seo-technical; to WRITE the article use blog-writer."
 argument-hint: [URL, client-projects slug, or a page plus a brand - optionally "audit" / "optimize" / "measure"]
 ---
 

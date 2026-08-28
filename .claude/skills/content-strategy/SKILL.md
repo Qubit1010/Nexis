@@ -1,39 +1,6 @@
 ---
 name: content-strategy
-description: >
-  Use to BUILD or AUDIT a client's content strategy: content pillars, the editorial calendar
-  and publishing cadence, the content funnel, distribution, repurposing, the evergreen and
-  trending mix, and how any of it gets measured. This is the execution skill that produces the
-  artifact, not the advice skill.
-  Triggers on: content strategy, content plan, content marketing strategy, editorial strategy,
-  content pillars, pillar content, content themes, content calendar, editorial calendar,
-  publishing schedule, publishing cadence, how often should they post, content funnel, content
-  by funnel stage, top of funnel content, content distribution, distribution plan, content
-  amplification, syndication, content repurposing, repurposing plan, repurposing map, content
-  clusters, topic clusters for content, evergreen content, evergreen versus trending, content
-  refresh, content audit, content inventory, content operations, editorial operations, content
-  governance, thought leadership programme, educational content, promotional content mix,
-  user generated content strategy, UGC programme, creator programme, content measurement,
-  content KPIs, content ROI reporting.
-  Also triggers on the questions clients actually ask: "what should we be publishing", "we post
-  but nothing happens", "how often should we post", "we have no content plan", "our blog is
-  dead", "we're posting into the void", "how do we get more out of one piece", "what do we do
-  with all these webinar recordings", "audit our content", "is our content strategy any good",
-  "how do we prove content is working".
-  Works from whatever exists: a Google Doc, a PDF or DOCX strategy deck, pasted text, a website
-  URL it crawls, live channels it audits, or a client-projects slug. Consumes
-  07-strategic-foundation.md, 08-audience-persona.md, 13-brand-strategy.md, 14-brand-voice.md
-  and the keyword map in 09-seo-foundation.md, and TAKES them rather than re-deriving them;
-  when one is missing it says so, offers to run the producing skill, then proceeds with the
-  gaps labelled as assumptions.
-  Outputs client-projects/<slug>/18-content-strategy.md: a fact table with confidence levels,
-  3-5 pillars each naming what it excludes, a pillar x format x funnel-stage map, a 12-week
-  calendar with named owners, a distribution plan, a repurposing map, the evergreen and refresh
-  policy, measurement including what cannot be measured, and the assumptions to validate.
-  For what a given format should look like, and for whether a content statistic is real, use
-  content-advisor, which owns the corpus this cites. To actually write a piece use
-  content-production, blog-writer, carousel, shorts-creator or reel-creator. For NexusPoint's
-  own content use content-engine and marketing-advisor.
+description: "Use to BUILD or AUDIT a client's content strategy: content pillars, the editorial calendar and publishing cadence, the content funnel, distribution, repurposing, the evergreen and trending mix, and how any of it gets measured. Execution skill that produces the artifact, not the advice skill. Triggers on: content strategy, content plan, content marketing strategy, editorial strategy, content pillars, pillar content, content themes, content calendar, editorial calendar, publishing schedule, publishing cadence, content funnel, content by funnel stage, top of funnel content, content distribution, amplification, syndication, content repurposing, repurposing map, content clusters, evergreen versus trending, content refresh, content audit, content inventory, content operations, editorial governance, thought leadership programme, UGC programme, creator programme, content measurement, content KPIs, content ROI reporting. Also: 'what should we be publishing', 'we post but nothing happens', 'how often should we post', 'we have no content plan', 'our blog is dead', 'how do we get more out of one piece', 'what do we do with all these webinar recordings', 'audit our content', 'how do we prove content is working'. Works from a Google Doc, a PDF or DOCX deck, pasted text, a website URL it crawls, live channels, or a client-projects slug. Consumes 07-strategic-foundation.md, 08-audience-persona.md, 13-brand-strategy.md, 14-brand-voice.md and the keyword map in 09-seo-foundation.md rather than re-deriving them. Outputs client-projects/<slug>/18-content-strategy.md. For what a format should look like, or whether a content statistic is real, use content-advisor. To write a piece use content-production, blog-writer, carousel, shorts-creator or reel-creator. For Aleem's personal-brand content use content-engine and post-creator. Works for any client slug, including nexuspoint."
 argument-hint: [a client slug, a doc or URL, or a content strategy to audit]
 ---
 
@@ -96,9 +63,9 @@ Upstream is taken, never re-derived. Downstream is routed, never duplicated.
 | `seo-foundation` / `seo-onpage` | The keyword map, cluster sizing, and page-level keep/update/merge/remove tracks |
 | `copy-conversion` | Copy whose job is to make someone act, and how a post is formatted for a platform |
 | `brand-voice` / `brand-strategy` / `strategic-foundation` | The upstream documents, when they are missing |
-| `content-engine` / `post-creator` | NexusPoint's own content, Aleem's pillars, and the weekly posting schedule. **Not this skill** |
+| `content-engine` / `post-creator` | Aleem's personal brand: his pillars, his voice, the weekly posting schedule. **Not this skill** |
 | `social-media-advisor` | Platform-native mechanics this skill deliberately stops short of: how a platform ranks content, per-platform cadence and hashtag strategy, organic account and follower growth, engagement strategy, profile optimisation, community management and social listening. This skill decides *which channel and when*; that one explains *how the channel behaves* |
-| `marketing-advisor` | NexusPoint's own channel strategy, and pricing a content retainer |
+| *(no owning skill)* | Channel mix, offer and pricing, paid ads, email and lifecycle, and cross-channel measurement. No current skill covers these. Say so plainly rather than improvising. |
 
 State the handoff when you make it. Do not silently stop.
 

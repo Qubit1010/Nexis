@@ -1,38 +1,6 @@
 ---
 name: copywriting-advisor
-description: >
-  Use to EXPLAIN, FACT-CHECK, DIAGNOSE or ADVISE on anything to do with copywriting,
-  persuasive writing, conversion copy or the psychology underneath them. This is the knowledge
-  and diagnosis skill, not an execution skill: it answers questions, settles disputes about
-  whether a marketing statistic is real, works out what is actually wrong with a page, and
-  routes the work.
-  Triggers on: copywriting, conversion copy, persuasive writing, headline, hook, CTA, call to
-  action, button copy, landing page, sales page, email copy, subject line, ad copy, product
-  description, microcopy, AIDA, PAS, BAB, 4Ps, 4Us, FAB, before after bridge, problem agitate
-  solution, features vs benefits, customer language, voice of customer, social proof,
-  testimonials, reviews, scarcity, urgency, risk reversal, guarantees, emotional triggers, fear
-  appeals, message framing, gain vs loss framing, loss aversion, specificity, readability,
-  processing fluency, plain language, copy length, long copy vs short copy, above the fold,
-  the fold, scrolling, attention span, eye tracking, F-pattern, banner blindness, A/B testing,
-  split testing, statistical significance, conversion rate optimization, CRO, AEO, GEO, answer
-  engine optimization, generative engine optimization, AI search citation, FTC endorsement
-  guides, testimonial disclosure, claim substantiation, dark patterns.
-  Also triggers on the questions people actually ask: "is that statistic real", "is the 8
-  second attention span true", "do people read below the fold", "is the $300 million button
-  real", "does button colour matter", "long copy or short copy", "why isn't this page
-  converting", "why did our A/B test win then stop working", "explain AIDA vs PAS", "does
-  social proof actually work", "will urgency backfire", "can we say this in an ad".
-  Built research-first on a 494-source cited 2026 corpus across three tiers, 256 confirmed /
-  75 craft / 163 practitioner, with every claim tagged. Its most valuable output is refusal:
-  the eight-second attention span is fabricated and the classroom claim behind it does not
-  survive review either, the fold claim is false as stated, no confirmed source supports "long
-  copy outsells short", the $300M button was never a controlled experiment, and message framing
-  makes far less practical difference than the industry sells. It corrects in both directions:
-  email subject-line personalisation IS real at roughly 20% from randomized field experiments,
-  even though the 26% everyone quotes is a vendor number.
-  Owns the corpus that copy-conversion cites. To actually WRITE or AUDIT client copy use
-  copy-conversion. For articles and blogs use blog-writer. For the voice itself use
-  brand-voice. For NexusPoint's own outreach use sales-playbook or marketing-advisor.
+description: "Use to EXPLAIN, FACT-CHECK, DIAGNOSE or ADVISE on copywriting, persuasive writing, conversion copy, or the psychology underneath them. Knowledge and diagnosis, not execution: it settles disputes about whether a marketing statistic is real, works out what is wrong with a page, and routes the work. Triggers on: copywriting, conversion copy, persuasive writing, headline, hook, CTA, call to action, button copy, landing page, sales page, email copy, subject line, ad copy, product description, microcopy, AIDA, PAS, BAB, 4Ps, 4Us, FAB, before after bridge, problem agitate solution, features vs benefits, customer language, voice of customer, social proof, testimonials, reviews, scarcity, urgency, risk reversal, guarantees, emotional triggers, fear appeals, message framing, loss aversion, readability, plain language, copy length, long copy vs short copy, above the fold, attention span, eye tracking, F-pattern, banner blindness, A/B testing, statistical significance, conversion rate optimization, CRO, AEO, GEO, FTC endorsement guides, claim substantiation, dark patterns. Also: 'is that statistic real', 'is the 8 second attention span true', 'do people read below the fold', 'is the $300 million button real', 'long copy or short copy', 'why isn't this page converting', 'explain AIDA vs PAS', 'does social proof actually work', 'will urgency backfire'. To WRITE or AUDIT client copy use copy-conversion; for articles and blogs use blog-writer; for the voice itself use brand-voice; for Aleem's own outreach, where he is the sender rather than the client, use sales-playbook."
 argument-hint: [a question, a claim to check, or a page/copy to diagnose]
 ---
 
@@ -134,7 +102,7 @@ statistic, the useful answer is that it is fabricated, plus something true to re
 | `strategic-foundation` | The offer, UVP, personas, customer research |
 | `seo-onpage` | On-page thresholds - titles, metas, answer-block lengths. **This skill does not restate them** |
 | `seo-authority-ai` | AEO/GEO auditing and measuring whether AI engines cite the client |
-| `sales-playbook` / `marketing-advisor` | NexusPoint's own outreach, DMs, cold email |
+| `sales-playbook` | Aleem's own outreach, DMs and cold email, where he is the sender rather than the client |
 | `marketing-skills/*` | Generic marketing craft this corpus does not cover (pricing, launch, referrals) |
 
 State the handoff when you make it. Do not silently stop.

@@ -1,49 +1,6 @@
 ---
 name: social-media-advisor
-description: >
-  Use to EXPLAIN, FACT-CHECK, DIAGNOSE or ADVISE on how social platforms actually work in
-  2026: how a platform ranks and distributes content, what changed on it recently, which
-  formats currently get reach, how to grow an account organically, and whether a social
-  media claim is real. This is the knowledge and diagnosis skill, not an execution skill:
-  it answers questions, settles disputes about whether a number has a source, works out
-  why an account stopped reaching people, and routes the work.
-  Triggers on: social media, social media marketing, social media strategy, platform
-  algorithm, the algorithm, feed ranking, how does the algorithm work, algorithm change,
-  algorithm update, organic reach, reach dropped, reach collapsed, impressions dropped,
-  distribution, exposure, shadowban, shadowbanned, throttled, suppressed, penalised,
-  engagement, engagement dropped, engagement rate, comments, shares, saves, sends,
-  followers, follower growth, grow my account, grow an audience, organic growth, gaining
-  followers, losing followers, posting frequency, posting cadence, how often to post,
-  best time to post, hashtags, hashtag strategy, profile optimisation, bio, personal
-  branding, founder brand, creator, influencer marketing, UGC, social proof, social
-  listening, brand mentions, community management, moderation, employee advocacy, share
-  of voice, LinkedIn, Instagram, Reels, Facebook, Facebook Groups, YouTube, YouTube
-  Shorts, TikTok, For You page, X, Twitter, Reddit, Pinterest, Threads, Snapchat,
-  Bluesky.
-  Also triggers on the questions people actually ask: "how does the LinkedIn algorithm
-  work", "why did our reach drop", "is shadowbanning real", "do hashtags still work",
-  "what's the best time to post", "how do I grow on TikTok", "should we be on Threads",
-  "what changed on Instagram", "does the algorithm punish external links", "how does
-  YouTube decide what to recommend", "our engagement died", "what platforms should this
-  client be on", "how do I build a personal brand", "is it worth being on X anymore".
-  Built research-first on a 329-source cited 2026 corpus, 119 confirmed / 77 craft / 133
-  practitioner including 60 first-party platform documents, with every claim tagged by
-  register. Its defining honesty is that NOBODY OUTSIDE THE PLATFORM KNOWS HOW THE
-  ALGORITHM WORKS: no
-  confirmed source establishes how LinkedIn ranks a post, so it separates what the
-  platform SAYS it does [P*], quoted with a retrieval date, from what a vendor measured on
-  its own customers [P], from what research establishes about algorithmic feeds as a class
-  [C], and refuses to flatten the three into one confident account. It refuses the
-  folklore too: best-time-to-post tables, hashtag reach penalties, link suppression,
-  shadowbanning as a documented behaviour, engagement pods and follower thresholds all
-  circulate without a traceable primary source. It also decays faster than any sibling
-  corpus and says so.
-  For what a POST should look like, how long it runs and how it opens use content-advisor.
-  For formatting a post to a platform's character limits use copy-conversion. For a
-  client's pillars, calendar and funnel use content-strategy. For NexusPoint's own channel
-  mix, ICP, offer and ads use marketing-advisor. For Aleem's own posting use
-  content-engine or post-creator, and for his daily commenting round use
-  linkedin-commenter.
+description: "Use to EXPLAIN, FACT-CHECK, DIAGNOSE or ADVISE on how social platforms actually work in 2026: how a platform ranks and distributes content, what changed recently, which formats get reach, and how to grow an account organically. Knowledge and diagnosis, not execution. Triggers on: social media strategy, platform algorithm, the algorithm, feed ranking, algorithm change, organic reach, reach dropped, impressions dropped, distribution, shadowban, throttled, suppressed, engagement dropped, engagement rate, comments, shares, saves, followers, follower growth, grow my account, organic growth, posting frequency, posting cadence, best time to post, hashtags, profile optimisation, bio, personal branding, founder brand, influencer marketing, UGC, social listening, brand mentions, community management, employee advocacy, share of voice, LinkedIn, Instagram, Reels, Facebook, YouTube, Shorts, TikTok, For You page, X, Twitter, Reddit, Pinterest, Threads, Snapchat, Bluesky. Also: 'how does the LinkedIn algorithm work', 'why did our reach drop', 'is shadowbanning real', 'do hashtags still work', 'how do I grow on TikTok', 'should we be on Threads', 'what changed on Instagram', 'our engagement died', 'what platforms should this client be on'. For what a POST should look like use content-advisor; for character limits and formatting use copy-conversion; for a client's pillars, calendar and funnel use content-strategy; for Aleem's own posting use content-engine or post-creator, and his commenting round use linkedin-commenter. Channel mix, offer and pricing, paid ads and email are not covered by any current skill; say so rather than improvising."
 argument-hint: [a platform question, a claim to fact-check, or an account to diagnose]
 ---
 
@@ -103,13 +60,12 @@ them, labelled. Never merge them.
   feed-ranking change keeps for a quarter. Every platform spec carries the date it was
   verified. When a claim is older than roughly two quarters, say so and check it live
   before relying on it.
-- **This skill disagrees with `marketing-advisor`, on purpose.** That skill asserts firm
-  platform numbers (link penalty, hashtag reach cost, dwell-time multiples) which
-  `content-advisor` and `copy-conversion` already classify as unsourced convention. This
-  corpus sides with the latter. **Name the disagreement when it comes up rather than
-  silently resolving it**, the way `branding-advisor` preserves the
-  differentiation-versus-distinctiveness split. Cite one skill or the other, never both,
-  and never present them as agreeing.
+- **Firm platform numbers are unsourced convention.** The link penalty, the hashtag reach
+  cost and dwell-time multiples circulate widely and none has a traceable primary source.
+  `content-advisor` and `copy-conversion` classify them the same way and this corpus sides
+  with them. **Name a number as unsourced when it comes up rather than repeating it**, the
+  way `branding-advisor` preserves the differentiation-versus-distinctiveness split. This
+  skill is the sole owner of platform mechanics, so there is no sibling to defer to.
 
 ---
 
@@ -160,7 +116,7 @@ When a `client-projects/<slug>` is named, **read upstream and take, do not re-de
 labelled `[assumption]`. Do not stall the answer.
 
 **This skill writes no numbered client file.** It is advisory. A client-facing social
-strategy document would be a separate `social-media-strategy` executor claiming slot 19.
+strategy document would be a separate `social-media-strategy` executor claiming slot 20. Slot 19 was taken by `content-engine` on 2026-08-28.
 
 ---
 
@@ -188,7 +144,7 @@ strategy document would be a separate `social-media-strategy` executor claiming 
 | `copywriting-advisor` | Headlines, hooks-as-copy, CTAs, and copywriting folklore |
 | `content-strategy` | Building or auditing a client's pillars, calendar, funnel and distribution plan |
 | `content-production` / `carousel` / `shorts-creator` / `reel-creator` | Actually making the piece |
-| `marketing-advisor` | **NexusPoint's own** channel mix, ICP, offer, pricing, email and ads. On LinkedIn and Instagram mechanics **this skill takes precedence**; that one keeps Aleem's baseline and rhythm |
+| *(no owning skill)* | Channel mix, offer and pricing, paid ads, email and lifecycle, and cross-channel measurement. No current skill covers these. Say so plainly rather than improvising. |
 | `content-engine` / `post-creator` | Aleem's own content, his pillars, the weekly schedule |
 | `linkedin-commenter` | Actually running the daily commenting round |
 | `sales-playbook` | 1:1 DM and outreach copy, and social selling conversations |
@@ -208,7 +164,7 @@ State the handoff when you make it. Do not silently stop.
 | Asked how a named platform's algorithm works | Give all three registers, labelled. Never a single confident account |
 | A platform claim older than ~2 quarters | Flag the age, check live before relying on it |
 | Asked for a best-time-to-post table | Refuse, explain the provenance problem, redirect to their own native analytics |
-| `marketing-advisor` and this skill disagree | Name the disagreement, give both readings, recommend anyway |
+| A firm platform number circulates with no source | Name it as unsourced convention, give the honest reading, recommend anyway |
 | X/Twitter ranking internals | Cross-cite `awesome-claude-skills/twitter-algorithm-optimizer`, built from the open-sourced release. Do not re-derive |
 | LinkedIn profile optimisation as a task | Route to `social-media-skills:profile-optimizer`. Strategy here, the artifact there |
 | Character limits or hashtag caps | `copy-conversion/references/platform-formatting.md`, or `marketing-skills/social/references/platform-limits.md` for Pinterest and YouTube |

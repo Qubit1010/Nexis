@@ -58,7 +58,9 @@ rendered here.
 - A row number → `python scripts/schedule.py get --row <N>`
 
 The JSON gives you everything: topic, description, reference, platform, format,
-`content_mode_key`, `pillars` (canonical keys), and `templates` (parsed LinkedIn +
+`content_mode_key`, `ingredients` and `topical_pillars` (the Pillars cell split
+across its two axes, plus `pillars_unrecognized` for anything matching neither),
+and `templates` (parsed LinkedIn +
 Instagram numbers). Field semantics and the full vocab tables are in
 `references/column-map.md` — read it if a value looks odd.
 
@@ -67,6 +69,35 @@ Guards, in order:
   to use. Don't substitute silently.
 - `post_type` contains Reel → say it's a reel-creator row and pick the next row instead.
 - `final_post` already filled → the row is done; confirm before overwriting anything.
+
+### 1b. Gate the row before spending research on it
+
+Three questions against `agency/personal-brand-content-engine.md`, run **before** step 2.
+Researching a level-2 topic only produces a well-researched level-2 post, and research is
+the expensive step.
+
+1. **Ladder check.** Is the row a tool announcement, a news relay, a neutral tutorial, or an
+   "N ways to" listicle? Those are ladder levels 1-4, which `agency/personal-brand-voice.md`
+   marks FORBIDDEN. **75 of the 197 themed rows already published failed this**, so treat it
+   as a real filter, not a formality.
+2. **First-person check.** Can this row carry a first-person claim with a real number or a
+   named moment in its first two lines? That single variable separates the strongest posts in
+   the log from the weakest. If the honest answer is no, the topic is not his to write yet.
+3. **Pillar check.** Which of the 4 topical pillars in `agency/personal-brand-pillars.md` does
+   it serve? Founder Journey and Young Builder sit at roughly zero across 199 rows, and both
+   are Conversion-intent.
+
+**A failing row gets rescued, not written and not silently skipped.** Propose the rescue and
+get Aleem's call before continuing. Most rows rescue on the same move: add what happened when
+*he* used the thing, and what he got wrong first. "Here is what OmniVoice does" fails; "I
+replaced my voiceover step with OmniVoice and the first three takes were unusable, here is
+what I had misconfigured" passes, on the same topic and the same research.
+
+If `Content Mode` or `Pillars` is blank, decide the values here. They get written back in
+step 8 along with the Doc URL, so the decision has to be made before the row is processed,
+not after. `Pillars` takes the **4 topical pillars**, not the 7 ingredients; `schedule.py`
+rejects an ingredient label on that column rather than writing it, because a cell filled
+with the wrong axis looks filled while leaving the mix unmeasurable.
 
 ### 2. Research (the research skill finds sources)
 
@@ -116,15 +147,19 @@ verbatim for the Doc's Source / Source_S sections — don't re-summarize Noteboo
 ### 4. Generate the post(s) (in-session)
 
 Read, if not already in context:
-- `.claude/skills/content-engine/references/voice-principles.md` — voice + the 7 pillar definitions
+- `agency/personal-brand-content-engine.md` — **the spec.** Hook patterns P1-P6 with the post
+  that proves each one, the format set, the copywriting rules, and the target pillar mix
+- `agency/personal-brand-voice.md` — voice, and the 7 Unswappable **ingredients** every piece must contain
+- `agency/personal-brand-pillars.md` — the 4 **topical pillars** a piece is about. These are a different axis from the ingredients above; do not substitute one for the other
 - `.claude/skills/content-engine/references/platform-formats.md` — per-platform format specs
 
 Then write the post for each active platform (`Platform = All` → LinkedIn and Instagram,
 else just the named one), honoring:
 - the row's **format** (Text Post / Carousel caption / Article / Newsletter),
 - the row's **content mode** (news / opinion / story / tutorial),
-- the row's **pillars** — enforce exactly the selected ones; if the cell was blank,
-  use the mode's defaults from `references/column-map.md`,
+- the row's **topical pillar** from step 1b, which is what the piece is about,
+- the **ingredients** to weave in: the row's own if the cell named any, otherwise the
+  content mode's defaults in `references/column-map.md`. At least two, always,
 - the **Formal Source** (from NotebookLM, step 3) as source material: extract what's
   useful, make it Aleem's own, never summarize the summary.
 
@@ -180,7 +215,7 @@ save_content.py rejects. Also **avoid `&` in the Doc title** — it breaks the g
 line on Windows (use "and" instead):
 
 ```bash
-cat <payload>.json | python .claude/skills/content-engine/scripts/save_content.py
+cat <payload>.json | python tools/gdocs/save_content.py
 ```
 
 Payload shape: `{"title": "<Topic> - <Date>", "tabs": [{"title": "<tab name>", "sections": [{"body": "...", "bullets": [...]}]}, ...]}`
@@ -204,10 +239,16 @@ print them in chat in code blocks.
 ### 8. Write back to the sheet
 
 ```
-python scripts/schedule.py write --row <N> --doc-url "<doc_url>" --status Draft
+python scripts/schedule.py write --row <N> --doc-url "<doc_url>" --status Draft \
+    [--pillars "Founder Journey"] [--content-mode "Personal Story"]
 ```
 
-Confirm the cell it wrote (`final_post_cell` in the output). Then tell Aleem what's
+Pass `--pillars` and `--content-mode` whenever step 1b had to decide them, so the row
+carries the classification the mix is measured from. Both are validated before anything
+is written, so a bad label fails the whole write instead of half-filling the row.
+
+Confirm the cells it wrote (`final_post_cell`, and `pillars_cell` / `content_mode_cell`
+when those were passed). Then tell Aleem what's
 left for him: paste the image prompts into the matching Gem (named in the template's
 `gem.md`), review the Doc, publish.
 

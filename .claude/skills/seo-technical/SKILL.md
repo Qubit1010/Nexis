@@ -1,34 +1,6 @@
 ---
 name: seo-technical
-description: >
-  Use to AUDIT or FIX the technical SEO layer of a site - whether search engines and AI
-  crawlers can fetch, render, index and trust it. This is the execution skill that produces
-  the artifact, not the advice skill. Triggers on: technical SEO, technical SEO audit, site
-  audit, crawl my site, crawlability, "can Google crawl this", robots.txt, "is my robots.txt
-  right", disallow, blocked by robots, crawl budget, AI crawler, GPTBot, ClaudeBot,
-  PerplexityBot, "should I block AI bots", llms.txt, indexation, indexing, "my pages aren't
-  indexed", "why isn't Google indexing", crawled not indexed, discovered not indexed,
-  sitemap, sitemap.xml, XML sitemap, "is my sitemap right", lastmod, IndexNow, canonical,
-  canonical tag, self-referencing canonical, duplicate content, duplicate pages, "Google
-  picked a different canonical", parameter URLs, faceted navigation, trailing slash, www vs
-  non-www, http vs https, redirect, redirects, 301, 302, redirect chain, redirect loop, 404,
-  410, soft 404, status codes, "my 404 page returns 200", site migration, URL map, site
-  architecture, crawl depth, click depth, orphan pages, "nothing links to this page",
-  breadcrumbs, pagination, JavaScript SEO, client-side rendering, CSR, SSR, "does Google see
-  my JavaScript", "am I invisible to ChatGPT", raw vs rendered, hydration, mobile-first
-  indexing, mobile parity, "my mobile page has less content", Core Web Vitals, CWV, LCP, INP,
-  CLS, PageSpeed, page speed, TTFB, "my site is slow", Lighthouse score, field data, CrUX,
-  structured data, schema, schema markup, JSON-LD, Organization schema, BreadcrumbList,
-  FAQ schema, HowTo schema, rich results, "is FAQ schema dead", hreflang, international SEO,
-  multi-language site, ccTLD vs subdirectory. Works from a URL, a client-projects slug, or a
-  saved crawl graph. Crawls once and runs nine checks off that one pass. Measures rather than
-  asserts, and says "not connected" rather than inventing Search Console data. Two modes:
-  AUDIT (a prioritized diagnosis) and BUILD (deployable robots.txt, sitemap, redirect map and
-  JSON-LD). Scope is deliberately Tier 3 only - course sections 21 to 31. For SEO THEORY,
-  benchmarks or the course use seo-advisor. For KEYWORD research use seo-foundation. For
-  on-page and content use seo-onpage. To WRITE the article use blog-writer. For a
-  prospect-facing sales audit with a hook email use website-audit-system. Off-page, links,
-  local and AI-search execution are out of scope.
+description: "Use to AUDIT or FIX the technical SEO layer of a site: whether search engines and AI crawlers can fetch, render, index and trust it. Execution skill that produces the artifact, not the advice skill. Triggers on: technical SEO, technical SEO audit, site audit, crawl my site, crawlability, 'can Google crawl this', robots.txt, disallow, blocked by robots, crawl budget, AI crawler, GPTBot, ClaudeBot, PerplexityBot, 'should I block AI bots', llms.txt, indexation, 'my pages aren't indexed', crawled not indexed, discovered not indexed, sitemap.xml, XML sitemap, lastmod, IndexNow, canonical, self-referencing canonical, duplicate content, 'Google picked a different canonical', parameter URLs, faceted navigation, trailing slash, www vs non-www, http vs https, redirect, 301, 302, redirect chain, redirect loop, 404, 410, soft 404, status codes, 'my 404 page returns 200', site migration, URL map, site architecture, crawl depth, click depth, orphan pages, breadcrumbs, pagination, JavaScript SEO, client-side rendering, CSR, SSR, 'does Google see my JavaScript', 'am I invisible to ChatGPT', raw vs rendered, hydration, mobile-first indexing, mobile parity, Core Web Vitals, CWV, LCP, INP, CLS, PageSpeed, TTFB, 'my site is slow', Lighthouse score, field data, CrUX, structured data, schema markup, JSON-LD, Organization schema, BreadcrumbList, FAQ schema, HowTo schema, rich results, 'is FAQ schema dead', hreflang, international SEO, ccTLD vs subdirectory. Works from a URL, a client-projects slug, or a saved crawl graph. Crawls once and runs nine checks off that one pass, and says 'not connected' rather than inventing Search Console data. Two modes: AUDIT (a prioritized diagnosis) and BUILD (deployable robots.txt, sitemap, redirect map and JSON-LD). Tier 3 only (course sections 21-31). For SEO THEORY, benchmarks or the course use seo-advisor; for KEYWORD research use seo-foundation; for on-page and content use seo-onpage; to WRITE the article use blog-writer; for a prospect-facing sales audit with a hook email use website-audit-system. Off-page, links, local and AI-search execution are out of scope."
 argument-hint: [URL, client-projects slug, or a crawl graph - optionally "audit" / "build" / an area]
 ---
 

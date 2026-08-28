@@ -1,316 +1,230 @@
 ---
 name: content-engine
 description: >
-  Powerful content creation engine for Aleem's personal brand (Instagram, LinkedIn, blog).
-  Pulls ideas from 3 sources (daily-news-brief SQLite, youtube-daily-brief JSON, saved topics
-  sheet), scores with opportunity scores, researches with OpenAI web search, writes finished
-  content, repurposes across platforms, and logs to Google Sheets. Use when Aleem wants
-  content ideas, wants to create/repurpose a post, needs a content calendar, or wants a
-  full content run. ALWAYS use this skill when Aleem mentions creating content, posting on
-  social media, writing a blog, asking what to post, or wanting to plan content for the week.
-  Trigger phrases: "content engine", "create content", "content ideas", "what should I post",
-  "write a post", "content calendar", "post for Instagram", "post for LinkedIn",
-  "write a blog", "ideate content", "content plan", "full content run", "make me a post",
-  "repurpose this", "what's worth posting today", "help me post".
-argument-hint: [ideate | create <platform> <topic> | repurpose | plan | full]
+  Use to BUILD a subject's content engine, or to RUN that engine and write finished content.
+  Works for any client with a marketing chain in client-projects/<slug>/, and for Aleem's own
+  personal brand. BUILD reads their 07-strategic-foundation, 08-audience-persona,
+  13-brand-strategy, 14-brand-voice, 17-conversion-copy, 18-content-strategy and
+  09-seo-foundation, then writes client-projects/<slug>/19-content-engine.md: the hook patterns
+  drawn from their audience's real language, the format set limited to the platforms their
+  strategy actually selected, copywriting rules traced to their voice dimensions, and a
+  repurposing map matched to their cadence. Derived per subject, never templated. RUN writes
+  actual posts against that engine and repurposes one piece into platform-native variants.
+  Triggers on: content engine, build their content engine, create content, write a post,
+  write a LinkedIn post, write an Instagram caption, post for [platform], repurpose this,
+  turn this into a carousel, make this a reel script, content formats for [client], what hooks
+  should they use, how should they open a post, platform formats, full content run, write
+  everything for this topic. Does NOT do ideation: it will not tell you what to post about,
+  score topics, or build a calendar from a news feed. For a client's pillars, cadence, funnel
+  and distribution plan use content-strategy. For whether a content statistic is real use
+  content-advisor; for how a platform ranks use social-media-advisor. For a long article use
+  blog-writer, for Instagram carousels use carousel, for vertical short frames use
+  shorts-creator, for a rendered video use reel-creator, and for whitepapers, newsletters,
+  threads or scripts use content-production.
+argument-hint: [build <slug> | run <platform> <topic> | repurpose]
 ---
 
-# Content Creation Engine
+# Content Engine
 
-Pulls today's AI/tech intelligence from 3 sources, scores ideas with opportunity scores,
-runs web research before writing, and produces finished content for Instagram, LinkedIn,
-and the blog. The repurposing flywheel (Blog -> LinkedIn + Instagram + story + email) is the core
-of the `full` mode — one topic becomes several platform-native pieces.
+Two jobs. **BUILD** writes a subject's content engine document. **RUN** writes content against it.
 
-## Context to Load First
-
-Always load: `context/me.md`, `references/platform-formats.md`, `references/content-pillars.md`
-
-For `create` and `full` modes, also load the 2026 research for the target platform(s) — load
-only what the request needs (platform-formats.md is the distilled checklist; the
-marketing-advisor playbooks are the deeper, cited 2026 source):
-- LinkedIn -> `.claude/skills/marketing-advisor/references/linkedin-playbook.md`
-- Instagram / Reels -> `.claude/skills/marketing-advisor/references/instagram-reels-playbook.md`
-- Blog / cross-platform -> `.claude/skills/marketing-advisor/references/content-strategy-playbook.md`
-- Always -> `.claude/skills/marketing-advisor/references/nexuspoint-positioning.md` (ICP/positioning)
-- Consult as needed -> `marketing-advisor/references/channel-benchmarks.md` (targets) + `what-not-to-do.md` (kill list)
+This skill does not decide what to write about. Ideation was removed 2026-08-28 and archived to
+`archives/content-engine-ideation-2026-08-28/`; topic selection belongs to the subject's
+`18-content-strategy.md`, or to a future ideation skill.
 
 ---
 
-## Mode Detection
+## Subject resolution — do this first, always
 
-| Mode | Triggers | Action |
-|------|----------|--------|
-| **ideate** | "content ideas", "what should I post", "show me ideas", "ideate" | 3 sources -> score -> ranked advisory output |
-| **create** | "create", "write a post for [platform]", "make me a [format]", "write a blog" | Research -> brief -> write finished piece |
-| **repurpose** | "repurpose this", "turn this into", "make a carousel from" | Adapt existing content for other platforms |
-| **plan** | "content calendar", "plan my week", "5-day plan" | 5-7 day calendar + rhythm check |
-| **full** | "full content run", "create everything", "all platforms" | Blog first -> repurpose into LinkedIn + Instagram |
+| Subject | Signal | Engine spec | Voice source | Pillars |
+|---|---|---|---|---|
+| **A client** | a `client-projects/<slug>` is named, a client name, or "for [company]" | `client-projects/<slug>/19-content-engine.md` | `client-projects/<slug>/14-brand-voice.md` | `18-content-strategy.md` |
+| **Aleem, personal brand** | no slug given, "my", "for me", "my LinkedIn" | `agency/personal-brand-content-engine.md` | `agency/personal-brand-voice.md` | `agency/personal-brand-pillars.md` |
 
-If ambiguous, default to `ideate`.
+**If a client run finds no `14-brand-voice.md`**, say so and offer to run `brand-voice` first.
+Do not invent a voice. The same applies to every upstream file below.
+
+**Aleem's engine is `agency/personal-brand-content-engine.md`**, built 2026-08-28 from 199 logged
+posts. It carries one **unresolved decision**: whether personal-brand content may name NexusPoint.
+His three strongest posts do; the standing rule says not to. Until he decides, use option (a) from
+that file's §7 and write "the agency I run" rather than the name.
+
+**Never mention NexusPoint or Aleem inside a client's deliverable.** It is their document. For
+Aleem's own personal-brand content the separate rule applies: never name the agency, never
+mention university or BSAI.
 
 ---
 
-## Workflow
+## Context to load
 
-### Step 1: Pull Brief Data (all modes)
+Always: `references/platform-formats.md` (craft checklist), plus the resolved voice source.
+
+Per platform, load the mechanics rather than assuming them:
+- `social-media-advisor/references/platform-specs/<platform>.md` — how it ranks, cadence, growth
+- `content-advisor/references/format-specs/` — what the format should be
+
+**Load only what the request needs.** A single LinkedIn post does not need the Instagram spec.
+
+---
+
+## BUILD — write the engine document
+
+Produces `client-projects/<slug>/19-content-engine.md`.
+
+### What it reads, and what each file is for
+
+| Upstream | What BUILD takes from it |
+|---|---|
+| `08-audience-persona.md` | **The hook patterns.** Their audience's verbatim language and the questions they actually ask. This is the single most important input |
+| `17-conversion-copy.md` | Hooks, headlines and CTAs already written and proven for them |
+| `14-brand-voice.md` | Copywriting rules. Every rule in the output traces to a voice dimension here |
+| `18-content-strategy.md` | Pillars, cadence, funnel, distribution. **The format set is limited to the platforms this file actually selected** |
+| `13-brand-strategy.md` | Positioning, and what the brand rules out |
+| `07-strategic-foundation.md` | The buyer, the UVP, what content has to sell |
+| `09-seo-foundation.md` | The keyword map, where written content should aim |
+
+Take these as given. Do not re-derive a persona or a voice that another skill already produced.
+
+### What the document contains
+
+Follow the shape of `agency/21-blog-engine.md`, the working precedent. Structure:
+
+1. **What we know** — a fact table with sources and confidence, and what could not be established
+2. **Hook patterns** — 5-8 patterns, each with a worked example, **each traceable to a real phrase
+   in 08 or a proven line in 17**. Not generic hook formulas
+3. **Format set** — one section per platform their strategy selected, and no others. Craft from
+   `platform-formats.md`, mechanics cited from `platform-specs/`
+4. **Copywriting rules** — voice dimensions from 14 turned into writing instructions, with a
+   before-and-after on their own copy where possible
+5. **Repurposing map** — what becomes what, matched to the cadence in 18
+6. **What this engine will not do** — the formats and moves ruled out by 13, stated explicitly
+7. **Assumptions to validate** — anything inferred rather than read
+
+### The bar
+
+**Derived, never templated.** If the output would read the same for a different client, it is
+wrong. A reader should be able to point at a hook pattern and trace it to a line in that client's
+own persona document.
+
+Missing upstream is reported by name, with the producing skill offered. A confident engine
+document built on assumed inputs is worse than no document.
+
+---
+
+## RUN — write content against the engine
+
+1. **Resolve the subject** and load its engine spec, voice source and the relevant platform spec.
+2. **Take the topic from the request or from `18-content-strategy.md`.** This skill does not
+   generate topics.
+3. **Write the finished piece.** Not an outline. Follow the engine's hook patterns and
+   copywriting rules, and the craft checklist in `platform-formats.md`.
+4. **Repurpose on request.** One insight, rebuilt per platform. Structural translation, never
+   copy-paste.
+5. **Offer to save and log** (below). Never save without being asked.
+
+### Running a row from the Weekly Posting Schedule
+
+`post-creator` owns that flow: it reads the row, researches, writes, builds the image prompts,
+saves the Doc and writes the link back. **This skill does not replace it.** What this skill adds
+is the gate `post-creator` does not have.
+
+**The gate runs BEFORE post-creator's research step**, because researching a level-2 topic just
+produces a well-researched level-2 post. Three questions against
+`agency/personal-brand-content-engine.md`:
+
+1. **Ladder check.** Is the row a tool announcement, a news relay, a neutral tutorial or an
+   "N ways to" listicle? Those are levels 1-4 and the voice file marks them FORBIDDEN. **38% of
+   the 199 logged posts failed this**, so expect to catch real rows here.
+2. **First-person check.** Can this row carry a first-person claim with a real number or a named
+   moment in the first two lines? If the honest answer is no, the topic is not his to write yet.
+3. **Pillar check.** Which of the 4 topical pillars does it serve, and does the current mix need
+   it? Founder Journey and Young Builder are at roughly zero across 199 posts.
+
+**If a row fails the gate, say so and propose the rescue rather than writing it.** Most failing
+rows are rescuable: a tool announcement becomes level 6+ the moment it carries what happened when
+*he* used it, and what he got wrong first. "Here is what OmniVoice does" fails; "I replaced my
+voiceover step with OmniVoice and the first three takes were unusable, here is what I had
+misconfigured" passes.
+
+**The gate itself lives in `post-creator` step 1b**, because "next post" and "run the post
+creator" trigger that skill directly and this one never loads. This section is the rationale;
+that file is where it executes. Keep the two in sync.
+
+**Then fill the two columns that have never been filled.** `Pillars` and `Content Mode` are empty
+on all 199 rows, which is why the mix has never been measurable. `schedule.py write` takes
+`--pillars` and `--content-mode` as of 2026-08-28, so filling them is part of the same write as
+the Doc URL. `Pillars` holds the **4 topical pillars**, not the 7 ingredients; the script rejects
+an ingredient label there rather than writing it.
+
+Hand off to `post-creator` once the row clears.
+
+### Route to the specialist where one exists
+
+| Asked for | Skill |
+|---|---|
+| A long article or blog post | `blog-writer` |
+| An Instagram carousel image set | `carousel` |
+| A single-image LinkedIn infographic | `linkedin-infographics` |
+| Vertical short frames | `shorts-creator` |
+| A rendered, voiced video | `reel-creator` or `hyperframes-reel` |
+| Whitepaper, newsletter, thread, case study, video script, webinar | `content-production` |
+| Turning a transcript into short-form | `podcast-repurposer` |
+
+RUN writes posts and captions directly. Anything above goes to its owner.
+
+---
+
+## Hand off
+
+| To | For |
+|---|---|
+| `content-strategy` | Pillars, calendar, cadence, funnel, distribution. **The plan this engine serves** |
+| `content-advisor` | Whether a content statistic is real, what a format should be |
+| `social-media-advisor` | How a platform ranks, why reach dropped, account growth |
+| `copywriting-advisor` | Whether a copywriting claim is real |
+| `copy-conversion` | Copy whose job is to make someone act, and per-platform character limits |
+| `brand-voice` | Building or auditing the voice itself |
+| `post-creator` | Aleem's scheduled posts driven from the Weekly Posting Schedule sheet |
+| `linkedin-commenter` | His daily commenting round |
+| `sales-playbook` | 1:1 DMs and outreach, where he is the sender |
+| *(no owning skill)* | Channel mix, offer and pricing, paid ads, email and lifecycle, cross-channel measurement. Say so plainly rather than improvising |
+
+---
+
+## Save and log — user-gated only
+
+Google Doc via the shared writer at `tools/gdocs/save_content.py` (moved out of this skill
+2026-08-28; it is a general utility used by five skills):
 
 ```bash
-python .claude/skills/content-engine/scripts/pull_ideas.py
+echo '<JSON>' | python tools/gdocs/save_content.py
 ```
 
-Read stdout directly. If the script fails or returns errors, note what's unavailable and
-continue with what exists. If all sources fail, ask user to run `/daily-brief` first.
-
-### Step 2: Mode Dispatch
-
----
-
-#### ideate mode
-
-Score each idea on these dimensions (Claude computes):
-
-| Dimension | Points |
-|-----------|--------|
-| Timeliness: `breaking` | 3 |
-| Timeliness: `trending` or `estimated_interest == "high"` | 2 |
-| Timeliness: `evergreen` or `medium` | 1 |
-| Competition: `low` | 3 |
-| Competition: `medium` or unknown | 2 |
-| Competition: `high` | 1 |
-| Momentum: `rising` | 2 |
-| Momentum: `steady` or no signal | 1 |
-| Momentum: `cooling` | 0 |
-| Pillar fit: strong match | 2 |
-| Pillar fit: moderate | 1 |
-| Pillar fit: off-brand | 0 |
-| Conversion potential: comparison / customer-story / teardown / "how I" | 2 |
-| Conversion potential: opinion / news / educational | 1 |
-| Conversion potential: pure viral-bait / vanity (reach only, no business outcome) | 0 |
-| Saved topics bonus | +1 |
-
-Max = 12. Labels: 11-12 = "Strong opportunity", 8-10 = "Good pick", 5-7 = "Decent", <=4 = "Skip"
-
-Conversion potential reflects the 2026 revenue-vs-vanity research: comparison/"X vs Y",
-customer-voiced stories, teardowns, and "how I" pieces drive business outcomes; generic
-thought-leadership and pure viral-bait drive vanity reach. Flag a high-reach/low-conversion
-idea as "VIRAL-BAIT — reach only, pair with a direct offer or rank lower."
-
-Display ranked list of top 5-8 ideas in this format:
-
-```
-CONTENT IDEAS — [date]
-Sources: daily-brief ([N]) + youtube-brief ([N]) + saved topics ([N])
-
-TOP PICKS
-
-#1 [Score: X/10 — Strong opportunity]
-Topic: [title]
-Platform: [Instagram | LinkedIn | Blog]
-Format: [carousel | text post | article | reel script]
-Goal: [Brand awareness | Lead gen | Engagement | Thought leadership]
-Buyer stage: [Awareness | Consideration | Decision]
-Angle: [Educational | Data-backed | Founder story | Controversial take]
-Why this platform: [1-2 sentences — audience fit + format advantage]
-Hook: "[hook]"
-Why now: [timeliness or momentum signal]
-Pillar: [Pillar 1/2/3/4 name]
-Source: [news-brief | youtube-brief | saved-topics]
-
-[repeat for #2, #3...]
-
----
-All ideas:
-[compact table: # | Topic | Score | Platform | Format | Goal | Source]
-```
-
-Flag any idea where `momentum_signal == "cooling"` with "COOLING — trending down."
-
-End with: "Say `create [platform] [number]` to write any of these, `plan` for a 5-day
-calendar, or `full` to run the repurposing flywheel."
-
----
-
-#### create mode
-
-1. Parse platform + topic from user input. Platform is required — ask if missing.
-2. For Blog or LinkedIn posts, run research to get fresh, topic-scoped sources. This does a
-   live web-research pass into a clean NotebookLM notebook, then synthesizes from selected sources:
-   ```bash
-   # Mode A — fresh web research on the topic, returns the imported sources + notebook_id
-   python .claude/skills/content-engine/scripts/research_notebooklm.py --topic "[topic]" --depth light|medium|deep
-   # Mode B — synthesize prose from the chosen sources (ids from Mode A output)
-   python .claude/skills/content-engine/scripts/research_notebooklm.py --topic "[topic]" --notebook "[notebook_id]" --sources "id1,id2,..."
-   ```
-   Depth maps to research effort: light (~8-12 sources, fast), medium (~20-25, deep), deep (~100-120, deep).
-   Sources are topic-scoped by construction (fresh web search), so there's no static corpus to filter.
-3. Internally form a content brief (don't show unless user asks):
-   - Goal: infer from pillar + platform context, or ask
-   - Angle: the differentiated perspective, drawn from the synthesized research prose
-   - Hook: refine using research insights
-   - Key points: source key_points augmented with specifics from the Mode B synthesis
-   - CTA: matched to goal
-4. Write the complete finished piece following `platform-formats.md` specs and voice rules.
-   Do not produce an outline — write the actual content.
-5. After delivering: "Want me to save this to Google Docs and log it? I can also repurpose
-   it for [other platforms] if you'd like."
-6. If yes to save: run `save_content.py` -> get doc URL -> run `log_post.py`
-
----
-
-#### repurpose mode
-
-Takes content the user pastes. Ask "Which platforms do you want this repurposed for?" if
-not stated.
-
-Repurposing rules (2026 — follow `platform-formats.md`):
-- Blog -> LinkedIn **doc carousel** (primary, 6-12 slides, standalone cover) OR text post (150-300 words, hook in first 125-150 chars, no link in body)
-- Blog -> Instagram **Reel** (15-30s cold-open script, kinetic captions, [B-ROLL]) and/or carousel (6-8 slides)
-- Blog / long LinkedIn post -> Instagram standalone caption (125-250 words, value-native close)
-- Any insight -> carousel cover + caption, or a story
-
-Rewrite fully for each platform's tone and 2026 rules. Maintain the core insight but don't
-just paste. Structural translation, not copy-paste.
-
----
-
-#### plan mode
-
-Generate a 5-7 day content calendar from scored ideas. Run ideation internally — don't
-display the scoring process, just the calendar.
-
-Rules:
-- No platform repeated more than 3 out of 7 days
-- At least 1 Blog per week
-- Prioritize saved-topics ideas (pre-qualified interest signals)
-- Where a blog appears, note the repurposing opportunity inline:
-  "Day 3 Instagram = repurposed from Day 1 Blog"
-
-Calendar format per day:
-```
-Day 1 — [Day, Date]
-Platform: Blog
-Format: Long-form article
-Topic: [topic]
-Goal: [goal]
-Buyer stage: [Awareness | Consideration | Decision]
-Angle: [angle type]
-Hook: [hook]
-Target keyword: [keyword — blog only]
-CTA: [CTA]
-Research needed: Yes
-```
-
-After calendar, add a rhythm check line:
-"Rhythm check: 3 LinkedIn, 2 Instagram, 2 Blog — good balance."
-Or flag if any platform has 0 entries this week.
-
-Offer: "Want me to save this calendar to Google Docs?"
-
----
-
-#### full mode — Repurposing Flywheel
-
-The most powerful mode. Pick the highest-scoring idea, write it as a blog, then derive the
-platform pieces from the blog. All pieces share the core insight but are native to their
-platform and follow the 2026 rules in `platform-formats.md`.
-
-1. Internal ideation: pick top-scoring idea (don't display the scoring process)
-2. Run research: `research_notebooklm.py --topic "[chosen topic]" --depth medium` (Mode A), then
-   `research_notebooklm.py --topic "[chosen topic]" --notebook "[id]" --sources "id1,id2"` (Mode B) to synthesize
-3. Write Blog (800-1500 words, SEO + AI-citable, embed research data naturally)
-4. Derive the platform pieces from the blog:
-   - LinkedIn **doc carousel** (6-12 slides, standalone cover) — the #1 LinkedIn format
-   - LinkedIn **text post** (150-300 words, hook in first 125-150 chars, no body link)
-   - Instagram **Reel script** (15-30s cold-open, kinetic captions, [B-ROLL])
-   - Instagram **carousel** (6-8 slides)
-   - **Story** (2-3 slides teasing the piece)
-   - **Email** newsletter edition (120-200 words) — optional, if a list is in play
-5. comment-to-DM CTAs feed inbound to the **sales-playbook** skill; render Reels with the **reel-creator** skill.
-
-Output structure:
-```
-## Blog — [SEO title]
-[Full article]
-
----
-
-## LinkedIn — Document Carousel (repurposed from blog)
-Slide 1 (cover): [standalone hook]
-Slide 2-N: [one insight each]
-Final slide: [value-native CTA + handle]
-Post text: [50-150 words]
-
----
-
-## LinkedIn — Text Post (repurposed from blog)
-[150-300 word post, hook first, no body link]
-
----
-
-## Instagram — Reel Script (repurposed from blog)
-Hook (0-3s): [cold open, spoken + on-screen]
-[beats 3-25s, <10 words each, with [B-ROLL]]
-Close: [value-native CTA]
-Captions: [kinetic caption note]
-
----
-
-## Instagram — Carousel (repurposed from blog)
-Slide 1: [hook — max 8 words]
-...
-Slide N: [value-native CTA]
-Caption: [100-250 chars]
-Hashtags: [3-5 niche, from research]
-```
-
-After all pieces: "Want me to save these to Google Docs and log them?"
-Save = one doc per piece. Log = one row per piece in Content Log.
-
----
-
-## Voice Rules (apply to ALL written content)
-
-@.claude/skills/content-engine/references/voice-principles.md
-
----
-
-## Google Docs Save (user-gated only)
-
-Build the JSON payload and pipe to save_content.py. Use one doc per platform piece.
-
-```json
-{
-  "title": "Content — [Platform] [Format]: [topic] — [YYYY-MM-DD]",
-  "sections": [
-    {"heading": "Platform", "level": 1, "body": "[platform] — [format]"},
-    {"heading": "Goal", "level": 2, "body": "[goal]"},
-    {"heading": "Hook", "level": 2, "body": "[hook]"},
-    {"heading": "Content", "level": 2, "body": "[full content]"}
-  ]
-}
-```
-
-```bash
-echo '<JSON>' | python .claude/skills/content-engine/scripts/save_content.py
-```
+Payload: `{"title": "...", "sections": [{"heading": "...", "level": 1, "body": "..."}]}`
 
 Then log the entry:
+
 ```bash
 echo '{"platform":"...","format":"...","goal":"...","title":"...","hook":"...","doc_url":"..."}' | python .claude/skills/content-engine/scripts/log_post.py
 ```
 
-If the save script fails, output the content inline with a note to copy manually.
+**This skill does not research.** Source discovery belongs to the `research` skill, and for a
+scheduled row it is `post-creator` step 2 that calls it. `scripts/research_notebooklm.py` stays
+on disk because `projects/content-engine-dashboard`'s `/api/research` routes still execute it,
+but it is not a path this skill offers: it bypasses the `research` skill and goes straight to
+NotebookLM with its own depth ladder, which is a second unranked research surface. If a RUN
+needs sources, hand the topic to `research` or to `post-creator`.
 
 ---
 
-## Edge Cases
+## Edge cases
 
 | Scenario | Action |
-|----------|--------|
-| `pull_ideas.py` fails entirely | Ask user to run `/daily-brief` first, then retry |
-| Only 1-2 sources available | Proceed with what exists, note what's missing |
-| `research_notebooklm.py` fails or NotebookLM auth expired (`notebooklm login`) | Proceed without research, note it, still write content |
-| User creates content off-brief | Accept it — briefs are the default source, not required |
-| Save script fails | Output content inline: "Save failed — copy this manually." |
-| Briefs are >1 day old | Note the date, ask if they want to regenerate first |
+|---|---|
+| Asked what to post about | This skill does not ideate. Point at `18-content-strategy.md`, or ask for a topic |
+| No `19-content-engine.md` for the client | Offer BUILD first. RUN without it works but is weaker, and say so |
+| Upstream file missing | Name it, offer the producing skill, do not invent its contents |
+| Client has no `18-content-strategy.md` | The format set has nothing to constrain it. Run `content-strategy` first or the engine will guess at platforms |
+| Asked for a platform benchmark | Give direction, attribute the number, never assert it. See `platform-formats.md` |
+| Save script fails | Output inline with a note to copy manually |
+| Personal-brand run, no slug | Resolve from `agency/`. Do not ask for a client folder |

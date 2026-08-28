@@ -1,31 +1,6 @@
 ---
 name: strategic-foundation
-description: >
-  Use for ANY request to build, develop, define, audit, review or fix a CLIENT's business
-  strategy foundation. Triggers on: strategic foundation, business strategy, strategy
-  document, mission statement, vision statement, core values, purpose, market research,
-  market sizing, TAM SAM SOM, addressable market, target customer, ideal customer profile,
-  ICP, customer segmentation, buyer persona, jobs to be done, competitor analysis,
-  competitive landscape, competitive positioning, industry analysis, Porter's five forces,
-  PESTEL, SWOT, industry trends, unique value proposition, UVP, USP, value prop,
-  positioning, differentiation, business plan, business model, business model canvas,
-  revenue model, pricing model, unit economics, cost structure, financial forecast,
-  financial projections, funding needs, runway, "what makes them different", "who is their
-  customer", "how big is the market", "review their strategy", "audit this business plan",
-  "they have no strategy". Works from whatever the client provides: a Google Doc, a PDF or
-  DOCX brief, pasted text, a website URL, or just a business name (it finds and researches
-  them). Two modes: build a foundation from scratch, or score an existing one against a
-  7-dimension rubric, or produce a standalone AUDIENCE PERSONA for content and search.
-  Persona triggers: buyer persona, audience persona, customer persona, audience research,
-  "who are we writing for", "what words do their customers use", persona for SEO/AEO/GEO or
-  content. The persona captures the audience's verbatim vocabulary and the questions they
-  actually ask, then hands off to seo-advisor for keyword and AEO/GEO work and to
-  blog-writer / content-engine for the writing. Grounded in a cited 275-source 2026 corpus
-  tagging every claim [confirmed] (peer-reviewed, primary data) vs [practitioner] (consultant
-  opinion), and it refuses to invent market sizes, margins, CAC/LTV benchmarks or customer
-  quotes it has no source for. For NexusPoint's OWN marketing or channel strategy use
-  marketing-advisor; to turn a finished foundation into a paid engagement use
-  proposal-generator; to prep a call use discovery-call-prep.
+description: "Use for ANY request to build, develop, define, audit, review or fix a CLIENT's business strategy foundation. Triggers on: strategic foundation, business strategy, strategy document, mission statement, vision statement, core values, purpose, market research, market sizing, TAM SAM SOM, addressable market, target customer, ideal customer profile, ICP, customer segmentation, buyer persona, jobs to be done, competitor analysis, competitive landscape, competitive positioning, industry analysis, Porter's five forces, PESTEL, SWOT, industry trends, unique value proposition, UVP, USP, value prop, positioning, differentiation, business plan, business model, business model canvas, revenue model, pricing model, unit economics, cost structure, financial forecast, financial projections, funding needs, runway, 'what makes them different', 'who is their customer', 'how big is the market', 'review their strategy', 'audit this business plan', 'they have no strategy'. Works from a Google Doc, a PDF or DOCX brief, pasted text, a website URL, or just a business name it finds and researches. Three modes: build a foundation from scratch, score an existing one against a 7-dimension rubric, or produce a standalone AUDIENCE PERSONA for content and search. Persona triggers: buyer persona, audience persona, customer persona, audience research, 'who are we writing for', 'what words do their customers use', persona for SEO/AEO/GEO or content. The persona captures the audience's verbatim vocabulary and the questions they actually ask, then hands off to seo-advisor for keyword and AEO/GEO work and to blog-writer or content-engine for the writing. Refuses to invent market sizes, margins, CAC/LTV benchmarks or customer quotes it has no source for. Works for any client slug, including nexuspoint. To turn a finished foundation into a paid engagement use proposal-generator; to prep a call use discovery-call-prep."
 argument-hint: [client name, URL, doc, or brief - or paste their existing strategy to review]
 ---
 
@@ -77,7 +52,7 @@ document. It does not run the marketing, write the pitch, or build the software.
 
 | Hand off to | For |
 |---|---|
-| **marketing-advisor** | NexusPoint's own ICP and positioning, and any channel, campaign or content strategy. That skill owns marketing execution; this one owns the client's business strategy. |
+| *(no owning skill)* | Channel mix, offer and pricing, paid ads, email and lifecycle, and cross-channel measurement. No current skill covers these. Say so plainly rather than improvising. |
 | **proposal-generator** | Turning a finished foundation into a priced engagement offer. |
 | **ai-use-case-generator** | The AI automation layer that sits on top of the business model. |
 | **discovery-call-prep** | Prepping a conversation with the prospect, not building the deliverable. |
@@ -213,7 +188,7 @@ a table the model reads rather than a script to maintain. Do not add a `resolve_
 **Useful:** `python _research/gather.py verify` checks that every `[sN]` in `references/`
 still resolves after any corpus refresh. Run it before trusting a citation.
 
-Sibling skills: **marketing-advisor** (channels and campaigns), **proposal-generator** (the
+Sibling skills: **proposal-generator** (the
 offer), **ai-use-case-generator** (the automation layer), **research** / **web-scraper**
 (gathering), **discovery-call-prep** (the conversation).
 

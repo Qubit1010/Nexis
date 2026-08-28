@@ -1,46 +1,6 @@
 ---
 name: content-advisor
-description: >
-  Use to EXPLAIN, FACT-CHECK, DIAGNOSE or ADVISE on anything to do with content marketing: what
-  a given content format should look like in 2026, how to structure it, how it opens, how long
-  it runs, how it gets distributed, and whether a content marketing statistic is real. This is
-  the knowledge and diagnosis skill, not an execution skill: it answers questions, settles
-  disputes about whether a number has a source, works out why content is underperforming, and
-  routes the work.
-  Triggers on: content marketing, content format, content types, blog post, article, guide,
-  case study, whitepaper, ebook, newsletter, video, long-form video, YouTube video, shorts,
-  reels, tiktok, short-form video, podcast, webinar, infographic, meme, thread, X post,
-  LinkedIn post, carousel, document carousel, lead magnet, gated content, content strategy,
-  content pillars, content calendar, publishing cadence, posting frequency, content funnel,
-  content distribution, content amplification, seeding, content repurposing, content clusters,
-  evergreen content, trending content, content decay, content refresh, thought leadership,
-  educational content, promotional content, user generated content, UGC, creator content,
-  content ROI, content attribution, content measurement, engagement rate, watch time,
-  retention curve, completion rate, impressions versus reach, what counts as a view, hook,
-  opening, thumbnail, show notes, captions, alt text, accessibility, AI generated content,
-  AI content disclosure, dual coding, multimedia learning, virality, information cascade.
-  Also triggers on the questions people actually ask: "what's the best structure for a
-  whitepaper", "how long should a YouTube video be", "is that content marketing statistic
-  real", "are buyers really 57% through the journey", "does one video really become thirty
-  pieces", "is the 80/20 content ratio real", "should we do a podcast or a newsletter",
-  "explain content pillars", "evergreen or trending", "why is our content not working",
-  "how do we measure content", "what's a view", "do infographics still work", "does AI content
-  perform worse".
-  Built research-first on a 560-source cited 2026 corpus, 285 confirmed / 140 craft / 135
-  practitioner across three tiers plus 9 first-party platform documents, with every claim
-  tagged. Its most valuable output is refusal: the 57% buyer-journey claim, the 62%-less-cost
-  claim, the 80/20 and 4-1-1 ratios, "video gets 1200% more shares", "85% of video is watched
-  without sound" and "one video becomes thirty pieces" all circulate as findings and none has a
-  traceable primary source. It refuses comparisons as well as numbers: cross-platform view
-  counts are not interpretable because the counting rules differ, there is no single
-  engagement-rate formula, completion rate is duration-biased by construction, and email open
-  rates have been broken since Apple MPP in 2021. It states its own limits out loud, including
-  that podcast and webinar evidence is vendor-heavy and that "thought leadership" has no
-  literature under that name.
-  Owns the corpus that content-strategy and content-production cite. To actually BUILD a
-  client's content plan use content-strategy. To WRITE a piece use content-production,
-  blog-writer, carousel, shorts-creator or reel-creator. For NexusPoint's own content use
-  content-engine or marketing-advisor. For copy that asks for the sale use copy-conversion.
+description: "Use to EXPLAIN, FACT-CHECK, DIAGNOSE or ADVISE on content marketing: what a format should look like in 2026, how it opens, how long it runs, how it gets distributed, and whether a content marketing statistic is real. Knowledge and diagnosis, not execution. Triggers on: content marketing, content format, blog post, article, guide, case study, whitepaper, ebook, newsletter, video, YouTube, shorts, reels, tiktok, short-form video, podcast, webinar, infographic, meme, thread, X post, LinkedIn post, carousel, lead magnet, gated content, content pillars, content calendar, publishing cadence, posting frequency, content funnel, distribution, repurposing, evergreen vs trending, content decay, content refresh, thought leadership, UGC, content ROI, attribution, engagement rate, watch time, retention curve, completion rate, impressions vs reach, what counts as a view, hook, thumbnail, captions, alt text, AI generated content. Also: 'how long should a YouTube video be', 'is that content marketing statistic real', 'evergreen or trending', 'why is our content not working', 'how do we measure content', 'podcast or newsletter'. To BUILD a client's content plan use content-strategy; to WRITE a piece use content-production, blog-writer, carousel, shorts-creator or reel-creator; for Aleem's personal-brand content use content-engine or post-creator; for copy that asks for the sale use copy-conversion."
 argument-hint: [a question, a statistic to check, a format to spec, or content to diagnose]
 ---
 
@@ -155,8 +115,8 @@ statistic, the useful answer is that it is fabricated, plus something true to re
 | `seo-authority-ai` | Site-level AEO/GEO auditing and AI-visibility measurement |
 | `strategic-foundation` | The offer, the UVP, personas and customer research |
 | `brand-strategy` / `brand-voice` | Positioning, personality, voice and messaging |
-| `content-engine` / `post-creator` | NexusPoint's own content, Aleem's pillars, the weekly schedule |
-| `marketing-advisor` | NexusPoint's own channel strategy, and pricing content work |
+| `content-engine` / `post-creator` | Aleem's personal brand: his pillars, his voice, the weekly schedule |
+| *(no owning skill)* | Channel mix, offer and pricing, paid ads, email and lifecycle, and cross-channel measurement. No current skill covers these. Say so plainly rather than improvising. |
 | `research` | Live gap-filling when the corpus and the notebook both miss |
 
 State the handoff when you make it. Do not silently stop.

@@ -1,151 +1,121 @@
-# Platform Format Specifications (2026)
+# Platform Format Checklist
 
-Use these specs as a checklist when writing content. Every piece must hit its platform's
-structural requirements before it goes out.
+Operational checklist for writing a finished piece. **This file is not a source of truth for
+platform mechanics.** It carries craft (structure, sequence, what a good opening does) and defers
+every claim about how a platform behaves to the two cited corpora:
 
-**Source basis:** Aligned to the 2026 research in `marketing-advisor/references/` -
-`linkedin-playbook.md`, `instagram-reels-playbook.md`, `content-strategy-playbook.md`,
-`channel-benchmarks.md`, `what-not-to-do.md`. These are the canonical word counts and
-rules; the dashboard's `generate/route.ts` PLATFORM_SPECS mirrors this file - keep them in
-sync. Numbers are targets to beat, measured against real performance.
+| For | Go to | Corpus |
+|---|---|---|
+| How a platform ranks, distributes, what changed, cadence, growth | `social-media-advisor/references/platform-specs/<platform>.md` | 329 sources, 60 first-party platform docs |
+| What a format should be, how long, how it opens, what a view is | `content-advisor/references/format-specs/` | 560 sources, 285 confirmed |
 
----
-
-## Instagram
-
-### Reel Script (highest-reach format - 55% of views from non-followers)
-- **Duration:** 15-30 seconds is the sweet spot. Completion beats length: a 15s reel at 80%
-  completion outperforms a 60s reel at 20%. Go longer only if retention holds.
-- **Cold open:** Drop straight into the climax. NO "hey guys / today I want to talk about."
-  Motion must be in the very first frame (a static-looking frame gets swiped past).
-- **Structure:**
-  - Hook (0-3s): spoken AND on-screen. Win this or lose 50% of viewers. Use "you", a number,
-    a contrarian claim, or a direct question.
-  - Payoff (3-25s): 3-5 punchy beats, one idea each. Short spoken lines (<10 words).
-  - Close (final 2-5s): one value-native CTA (see CTA rules), often comment-to-DM.
-- **Kinetic captions are mandatory** (60-85% watch on mute; captions add ~25% retention).
-- **Write as spoken dialogue**, include [B-ROLL] notes. Optimize for **saves + sends**, not likes.
-- **Cadence:** 3-5 Reels/week.
-
-### Carousel (MOFU - drives saves/trust)
-- **Slides:** 6-8 total.
-- **Slide 1 (Cover):** Hook only, max 8 words. Must stand alone as a thumbnail and stop the scroll.
-- **Slides 2-7:** One idea per slide. Single label + 1-sentence elaboration. Skimmable.
-- **Final slide:** value-native CTA (e.g. "Save this if you're building one" or a comment-to-DM trigger).
-- **Caption:** 100-250 characters. Expand the hook, end with a question or save prompt.
-- **Hashtags:** 3-5 niche tags (never 30 - that is a spam penalty).
-- **Tone:** Personal. "I noticed / I built / I tried", not generic advice.
-
-### Standalone Caption (single image/text post)
-- **Length:** 125-250 words.
-- Line 1 = standalone STOP-SCROLL hook that lands inside the first ~125 characters (the caption
-  truncates at "... more"). After it, one idea per line - short, specific, personal lines with a
-  blank line between them, never dense paragraph blocks. Then zoom out to the broader principle.
-  Final line = value-native CTA or open question (not a bare "follow me").
-- **Optimize for saves + sends** (a send is worth 3-5x a like, a save ~3x), not likes.
-- **No emojis. No em dashes.**
-- **Hashtags:** 3-5 niche.
-
-### Story (BOFU - direct, low-reach)
-- Max 2 sentences per slide. Daily, 1-3 slides/day. At least one slide/day carries an
-  interaction mechanic (poll/quiz/Q&A/this-or-that). Same-day reshare of every carousel/Reel/
-  static post is a non-negotiable daily habit. Full cadence, pillar mapping, and promo mix:
-  `story-strategy.md`.
-
-### Instagram funnel
-Reels (awareness) -> Carousels (saves/trust) -> Stories (direct). Reels rarely convert
-directly; their job is reach. Capture leads with **comment-to-DM** ("comment X and I'll send it"),
-which hands the DM conversation to the sales-playbook skill.
-
-### Posting
-- 3-5 posts/week. Best windows (local): 7-9am, 11am-1pm, 7-10pm. Post 15-30 min before a peak.
+`platform-specs/00-index.md` already names `content-engine` as an executor for LinkedIn and
+Instagram. That is the intended relationship: they hold the mechanics, this holds the craft.
 
 ---
 
-## LinkedIn
+## Rewritten 2026-08-28. Read this before trusting an older copy.
 
-### Document Carousel (PDF) - THE #1 organic format (6.6-7% engagement rate)
-Default to this for educational/framework content - it out-performs text and video.
-- **Slides:** 6-12. One insight per slide, consistent layout.
-- **Cover:** strong hook, high contrast, works as a standalone thumbnail.
-- **Final slide:** value-native CTA + handle.
-- **Accompanying post text:** 50-150 words of context before they open the doc.
+This file previously carried numbers inherited from `marketing-advisor`, which was deleted for
+being untrustworthy. `social-media-advisor/references/what-not-to-do.md:215` names three of them
+specifically as having no traceable primary source. **They have been removed, not softened:**
 
-### Text Post
-- **Length:** 150-300 words (sweet spot). Narrative/story posts may run to ~500 words
-  (1,300-3,000 chars, which perform ~38% better) only if the formatting is flawless.
-- **Line 1 (the hook):** the first 125-150 characters (the part shown before "see more")
-  decide everything. Bold claim, number, or a specific moment. Never waste it on context.
-  Contrarian hooks lift reach ~49%.
-- **Line 2 (the fold break):** one short tease line that earns the "see more" click. Most
-  posts die at this fold.
-- **Body: one idea per line.** Single-sentence lines with a blank line between every line.
-  Do NOT write 3-4 sentence paragraph blocks - dense blocks get skimmed and kill dwell time
-  (the #1 ranking signal: a 61s+ read earns ~13x the engagement of a 3s skim). White space
-  IS the format. Arc: hook -> why it matters -> 2-4 short beats -> resolution/principle.
-- **No external link in the body** (cuts reach 50-70%) and **none in the first comment either**
-  - that is penalized too, and the wait-30-60-min version is only "least bad", not safe. Use
-  "comment X and I'll send it", or link from the profile. Canonical rule:
-  `marketing-advisor/references/linkedin-playbook.md` -> Decision rules.
-- **CTA:** one specific question that invites a real reply. Never "Follow me", "repost", or
-  "share this".
-- **No emojis. No em dashes.**
-- **Hashtags:** 1-2 relevant, or none (3-5 cuts reach ~29%).
+| Removed claim | Why |
+|---|---|
+| "No link in the body (cuts reach 50-70%)" | No platform documents a link penalty. No citable source exists |
+| "3-5 hashtags cuts reach ~29%" | No reach penalty per hashtag and no optimal count exist |
+| "a 61s+ read earns ~13x the engagement of a 3s skim" | Unsourced convention |
+| "60-85% watch on mute; captions add ~25% retention" | `content-advisor` refuses the 85%-on-mute claim outright |
+| "Newsletters bypass the feed, 40-60% open rates" | Open rates have been uninterpretable since Apple MPP in 2021 |
+| "Golden Hour: first 60 min on 2-5% of your network" | Same class as best-time-to-post, which the corpus refuses |
+| "55% of views from non-followers", "sends worth 3-5x a like", "saves ~3x" | No confirmed weighting of saves or sends against likes exists anywhere in the corpus |
+| "doc carousel = #1 format (6.6-7% engagement)" | Practitioner-tier. Direction holds, the number is not assertable |
+| "1,300-3,000 chars perform ~38% better", "contrarian hooks lift reach ~49%", "8x company page reach", "AI referrals convert 3.49%", "comparison pages convert 3.2x" | Unsourced |
 
-### Article (long-form)
-- **Length:** 600-1200 words. H2 every 200-300 words. Open with a bold claim or a moment,
-  zero throat-clearing. Claim -> evidence -> framework/lesson -> CTA.
-
-### Newsletter
-- **Length:** 400-600 words. Conversational. Why this matters now -> 2-3 insights with
-  examples -> one actionable takeaway. (Newsletters bypass the feed, 40-60% open rates.)
-
-### Distribution mechanics (apply to every LinkedIn post)
-- **Golden Hour:** the first 60 min on 2-5% of your network decides reach; it needs ~5%+
-  engagement to expand. Reply to every comment in that window. A 10+ word comment from you
-  carries 5-7x the weight of a like.
-- **Engage before you post:** comment on 5-10 niche posts in the 15 min before publishing.
-- **Cadence:** 3-5 posts/week, Tue-Thu, 7-9am / 12-1pm / 2-4pm local. Personal profile only
-  (8x the reach of a company page). Don't edit in the first 10-15 min (resets evaluation).
+**The standing rule, taken from the corpus: give the direction, attribute the number, never
+assert it.** If a client asks why, say a figure is practitioner convention rather than quoting it
+as fact.
 
 ---
 
-## Blog (Website)
+## Universal craft — applies to every platform
 
-### Long-form Article
-- **Length:** 800-1500 words.
-- **SEO + AI-citability:** use `primary_keyword` in a natural title under 60 chars. Structure
-  for machines too - clear H2s, a crisp definition/summary near the top, and self-contained
-  factual sentences. AI-search referrals (ChatGPT/Perplexity) convert ~3.49% (a 22% lift over
-  organic), so being *quotable by an AI engine* is now a ranking goal.
-- **H2 headers:** every 200-350 words (roughly 4-6 sections for an 800-1500 word piece); weave `secondary_keywords` in naturally.
-- **Opening:** state the problem and the promise in ~3 sentences. Never "In today's rapidly
-  evolving AI landscape" or any variant. Start with the problem or the story.
-- **Structure:** Problem -> context -> solution/framework -> examples with real data -> takeaways.
-- **Data:** embed 2-3 statistics from research `data_points`, cited inline.
-- **People Also Ask:** answer 1-2 `people_also_ask` questions as H2s (featured-snippet + AI-cite bait).
-- **Close:** 2-sentence zoom-out to the universal pattern + one clear next step.
-- **Internal links:** to related posts/tools when genuinely relevant.
+These carry no numeric claim and were never the problem.
 
-### Tutorial ("How I" format)
-- **Length:** 600-1000 words. H1 "How I [did X]". Why it matters + quick result -> numbered,
-  specific steps (with code/examples if relevant) -> result + what to try next. Show one failure mode.
-
-### Opinion / POV
-- **Length:** 400-700 words. H1 = a contrarian statement. Name the belief you reject (fresh
-  phrasing each time, never "conventional wisdom") -> why it's wrong + your experience ->
-  what you actually believe + invite disagreement.
-
-### High-converting blog angles (prioritize)
-- **Comparison "X vs Y"** pages convert ~3.2x feature pages.
-- **Customer-voiced stories** (in the client's own words) beat polished case studies ~3:1.
-Use these angles when the topic allows - they drive business outcomes, not just reads.
+- **The opening does one job: earn the next line.** It is not a summary and not a throat-clear.
+- **One idea per unit.** Per slide, per beat, per paragraph.
+- **The cover or first line must stand alone.** It is seen without the rest and decides whether
+  the rest is seen at all.
+- **Write to the audience's own words.** For a client, those are in `08-audience-persona.md`,
+  verbatim. Do not paraphrase them into marketing language.
+- **Close with one action, not three.**
+- **Structural translation, never copy-paste**, when moving a piece between platforms. Same
+  insight, rebuilt for the destination.
+- **Specificity beats intensity.** A real number, name or date outperforms an adjective.
 
 ---
 
-## Brand constraints (all platforms)
-- Personal-brand content NEVER names the agency or references university/degree/student status
-  or classrooms (hard rule). Reframe as "in my own work / from what I've shipped / building real systems."
-- Hit the word-count floor: long-form (blog, LinkedIn article) must reach the minimum, not stop short.
-  If under, deepen an example or add a sub-section, never filler.
-- Every piece must pass the Unswappable Formula and voice rules in `voice-principles.md`.
+## Per platform
+
+For each: the craft is here, the mechanics are one file away. Both files below are worth reading
+in full before a first build for a new client.
+
+### LinkedIn → `platform-specs/linkedin.md`
+
+- **Text post.** Hook lands before the "see more" cut, so front-load it. Short paragraphs with
+  white space between them; dense blocks get skimmed. One clear action at the end.
+- **Document carousel.** Cover stands alone. One insight per slide. Final slide carries the
+  action. Accompanying post text sets up why the document is worth opening.
+- Direction the corpus supports: **carousels accumulate dwell because they require swipes**, and
+  LinkedIn has published about dwell `[P*]`. The engagement multiples in circulation are
+  practitioner-tier, so use the direction and attribute any number.
+- **Cadence: no first-party statement exists.** Aleem's committed cadence is **2x/week**, set in
+  `context/current-priorities.md` after 3x/week failed twice. For a client, take cadence from
+  their `18-content-strategy.md`, not from convention.
+- **Commenting adds reach without adding posts.** The documented rationale for
+  `linkedin-commenter`.
+
+### Instagram → `platform-specs/instagram.md`
+
+- **Reel.** Motion in the first frame. Spoken and on-screen hook together. Short beats, one idea
+  each. Captions on, because silent viewing is real even though the specific percentage is not
+  citable.
+- **Carousel.** Cover is a thumbnail first and a slide second. Max one idea per slide.
+- **Caption.** Hook in the first line before truncation. Expand, then one action.
+- Direction the corpus supports: **Reels reach non-followers, feed posts and carousels serve the
+  existing audience**, because the recommendation surfaces are separate `[P*]`. There is **no
+  confirmed weighting of saves or sends against likes** anywhere in the corpus.
+- **Cadence: no first-party frequency statement. All numbers are convention.**
+- **Stories:** see `agency/personal-brand-stories.md`, which is honest that no dedicated Stories
+  benchmark research exists and names its one real data point's source.
+
+### TikTok / YouTube / Facebook / X, Reddit, Pinterest, Threads
+
+Go straight to `platform-specs/tiktok.md`, `youtube.md`, `facebook.md`, `secondary.md`.
+
+Two things worth knowing before writing for these:
+
+- **YouTube redefined a "view" to first-frame on 24 Aug 2026.** Every YouTube view benchmark
+  predating that is measuring a different thing; the old metric is now "engaged view".
+- **`secondary.md` is explicitly light and uneven** (Reddit has no first-party sources at all,
+  Threads has one, Bluesky none). Do not present confident advice for those platforms.
+
+### Blog and long-form
+
+Structure, length and SEO belong to `blog-writer`, validated by `seo-onpage`. Do not duplicate
+their thresholds here. Two live corrections those skills already carry: meta description is
+**105-155 characters**, and the 40-60 word answer **nests inside** a 134-167 word extractable
+section rather than being the same number.
+
+### Email and newsletter → `format-specs/newsletter.md`
+
+Craft only. **Do not set an open-rate target.** Apple MPP broke open rates in 2021 and pre-2021
+and post-2021 numbers are not comparable, so an open-rate goal is not a measurable objective.
+
+---
+
+## When a client asks for a number this file does not have
+
+Say the corpus has no confirmed figure, give the direction, and name what is actually measurable
+for them. That is the honest answer and it is also the more useful one: a made-up benchmark
+cannot be hit or missed, so it cannot inform a decision.

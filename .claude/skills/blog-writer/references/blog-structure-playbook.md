@@ -1,6 +1,6 @@
 # Blog Structure Playbook — outlines, formats, length
 
-How to shape the post once intent + keyword are set. Pairs with `seo-aeo-geo-checklist.md` (the optimization pass) and `content-engine/references/voice-principles.md` (Aleem's voice). Citations resolve via `_research/sources.json`.
+How to shape the post once intent + keyword are set. Pairs with `seo-aeo-geo-checklist.md` (the optimization pass) and `agency/personal-brand-voice.md` (Aleem's voice). Citations resolve via `_research/sources.json`.
 
 ## Length: follow depth, not a magic number
 There is **no empirically-supported "ideal word count"** in the 2026 sources [s78][s79]. Length follows intent and topic depth. Working defaults (practitioner):

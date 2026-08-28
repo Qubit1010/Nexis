@@ -87,7 +87,7 @@ teaser, not a sourced post, and most topics are already fully specified by the s
 or by what Aleem says. Only reach for research if the topic needs a fact you do not already
 know and Aleem has not given it, and ask before running
 `.claude/skills/post-creator/scripts/research.py` for it. Copy follows
-`.claude/skills/content-engine/references/voice-principles.md` tone rules: no em dashes, no
+`agency/personal-brand-voice.md` tone rules: no em dashes, no
 emojis, no "As an AI".
 
 ## Step 3. Checkpoint

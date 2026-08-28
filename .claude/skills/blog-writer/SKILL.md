@@ -20,7 +20,7 @@ place `blog-structure-playbook.md` and `human-tone-rules.md` say "voice-principl
 
 | Subject | Voice source of truth | Hard rules |
 |---|---|---|
-| **Aleem, personal brand** (default) | `content-engine/references/voice-principles.md` | Never name the agency; never mention university/BSAI/student; level 7+ only (POV/case study/framework, never a neutral explainer) |
+| **Aleem, personal brand** (default) | `agency/personal-brand-voice.md` | Never name the agency; never mention university/BSAI/student; level 7+ only (POV/case study/framework, never a neutral explainer) |
 | **A client brand** (a `client-projects/<slug>` is named, or the post is for someone else's site) | `client-projects/<slug>/14-brand-voice.md` (dimensions, tone shifts, use/never-use vocabulary) + `13-brand-strategy.md` (positioning, what the brand rules out) | Apply the client's never-use list; **the Aleem-specific rules above do not apply** and must not be carried over. Never mention NexusPoint or Aleem in the article |
 
 Both, always: no em dashes or smart quotes in the body.
@@ -35,14 +35,14 @@ client post. Never attribute Aleem's projects to a client, or a client's results
 
 ## Boundary (avoid overlap)
 - **blog-writer (this):** ONE deep, SEO/AEO/GEO-optimized, human-toned long-form article, from a topic or from scratch, with a full metadata package. The single-article specialist.
-- **content-engine:** the multi-platform content *system* - idea sourcing, scoring, the Blog -> LinkedIn + Instagram repurposing flywheel, logging. Use it for "what should I post", "full content run", "repurpose this". (blog-writer reuses its `voice-principles.md` and `save_content.py`.)
+- **content-engine:** builds a subject's content engine (hooks, formats, copywriting rules) and writes posts against it, plus the Blog -> LinkedIn + Instagram repurposing flywheel and logging. It no longer ideates. Use it for "full content run", "repurpose this". (blog-writer reuses its `voice-principles.md` and `save_content.py`.)
 - **seo-onpage:** the on-page and content EXECUTION skill (Tier 2). It owns the canonical on-page thresholds and measures them - titles, metas, headings, structure, internal links, media, E-E-A-T, schema - against a draft or a live URL, and audits whole sites. blog-writer writes the article and calls it in Step 5b to validate; it does not carry its own copies of those numbers.
 - **seo-authority-ai:** the in-house AEO/GEO audit and AI-visibility MEASUREMENT skill (Tier 4). It owns robots.txt vs the AI-bot matrix, llms.txt, entity resolution, and sampling whether answer engines actually cite the brand. Hand off site-level AEO work to it; blog-writer distills only the article-relevant parts. (`marketing-skills/ai-seo` is the installed third-party equivalent - use the in-house one first.)
 - **copy-conversion:** conversion copy rather than articles - landing pages, sales pages, emails, ads, CTAs, product descriptions. If the ask is a page that sells rather than an article that ranks, route there.
 - **copywriting-advisor:** the knowledge and factcheck hub for copywriting claims. If the ask is "is that statistic real" or "explain why this copy underperforms", route there.
 
 ## Context to load first
-1. The **resolved voice source** (see Voice resolution above) - always. Aleem's is `content-engine/references/voice-principles.md`; a client's is `client-projects/<slug>/14-brand-voice.md`.
+1. The **resolved voice source** (see Voice resolution above) - always. Aleem's is `agency/personal-brand-voice.md`; a client's is `client-projects/<slug>/14-brand-voice.md`.
 2. `references/seo-aeo-geo-checklist.md` - the optimization scoreboard (always). It owns the AEO/GEO and query-fan-out half; the on-page thresholds it cites are owned by `seo-onpage/references/checks.md` and cross-referenced, not duplicated.
 Then load the workflow-specific reference(s) below. Pull citations/depth from `references/research-synthesis.md` when you need the evidence behind a claim.
 
@@ -128,7 +128,8 @@ Both always. Never a Doc without the markdown.
 | Client/company blog (not Aleem's brand) | **client mode** - resolve the client voice source, then proceed normally. Aleem-specific rules do not carry over |
 | Client mode, no `14-brand-voice.md` exists | Say so and offer `brand-voice` first. If declined, derive a working voice from their live copy and label it an assumption |
 | Client mode, no first-hand experience to draw on | Use the client's own projects and results, never Aleem's. If they have none, use the No-Experience Fallback rather than borrowing someone else's |
-| Wants ideas / repurposing / multi-platform | hand off to content-engine |
+| Wants repurposing / multi-platform | hand off to content-engine |
+| Wants ideas / what to post about | no skill ideates since 2026-08-28. Point at `18-content-strategy.md` |
 | Wants a full site AEO audit or AI-visibility measurement | hand off to seo-authority-ai |
 | Wants a landing page, sales page, email or ad | hand off to copy-conversion - this skill writes articles |
 | Asked whether a copywriting statistic is real | hand off to copywriting-advisor (factcheck mode) |
@@ -147,7 +148,7 @@ references/
 └── notebook-live-query.md      # LIVE FALLBACK: fresh research deep pass -> append to synthesis
 _research/                       # audit trail: sources.json (83) + q1..q5.json + reports.md + gather_blog.sh + build_sources_index.py
 scripts/
-└── publish.py                  # blog .md -> Google Doc (reuses content-engine/save_content.py)
+└── publish.py                  # blog .md -> Google Doc (reuses tools/gdocs/save_content.py)
 evals/evals.json
 ```
-Reuses: the resolved voice source - `content-engine/references/voice-principles.md` (Aleem) or `client-projects/<slug>/14-brand-voice.md` (client) - and `content-engine/scripts/save_content.py` (Docs). Siblings: **content-engine** (content system), **seo-authority-ai** (AEO/GEO audit + AI-visibility measurement), **seo-onpage** (on-page thresholds), **copy-conversion** (conversion copy), **copywriting-advisor** (copy factcheck + diagnosis), **research** (topic sources), **brand-voice** (defines the client voice this consumes).
+Reuses: the resolved voice source - `agency/personal-brand-voice.md` (Aleem) or `client-projects/<slug>/14-brand-voice.md` (client) - and `tools/gdocs/save_content.py` (Docs). Siblings: **content-engine** (content system), **seo-authority-ai** (AEO/GEO audit + AI-visibility measurement), **seo-onpage** (on-page thresholds), **copy-conversion** (conversion copy), **copywriting-advisor** (copy factcheck + diagnosis), **research** (topic sources), **brand-voice** (defines the client voice this consumes).

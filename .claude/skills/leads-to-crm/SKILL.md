@@ -1,29 +1,6 @@
 ---
 name: leads-to-crm
-description: >
-  NexusPoint's outreach lead router. Pushes manually-scraped leads from the
-  per-channel "Instant ... Leads" Google Sheets into the matching "NexusPoint ...
-  Outreach CRM", generating a personalized Touch 1 message (OpenAI gpt-5.4-mini, with a
-  Claude Haiku fallback) for each
-  new lead. Handles Instagram, LinkedIn, and Facebook (Facebook profile URLs are
-  sourced upstream by the facebook-lead-nav skill). It only pushes rows that are
-  genuinely new (identity-based dedup on the @handle / LinkedIn slug / Facebook
-  profile slug or id) and never re-pushes or duplicates rows already in
-  the CRM, fixing the two long-standing bugs in the old lead-gen pipeline (new rows
-  silently dropped, sent rows duplicated). Use this skill whenever Aleem wants to
-  move scraped leads into a CRM or run the outreach sync. Trigger on: "push leads to
-  CRM", "sync my instagram leads", "sync linkedin leads", "run the instagram push",
-  "run the linkedin push", "push the new leads", "update the outreach CRM", "send
-  the instant leads to the CRM", "run leads to crm", "dedup the CRM", "fill the blank
-  DMs", "any new leads to push", "add facebook leads to the CRM". Also trigger when
-  Aleem mentions the Instant Instagram/LinkedIn Leads sheet, the Instagram/LinkedIn
-  Outreach CRM, or generating Touch 1 / connection messages for scraped leads.
-  Do NOT trigger for requests to scrape, find, source, or enrich leads (Apify, Apollo,
-  hashtag scraping, email finding) - sourcing is done manually outside this skill, which
-  only moves rows already sitting in the source sheet. Also not for live DM-reply drafting,
-  follow-up strategy, or benchmark questions (those are sales-playbook / marketing-advisor).
-  This replaces the archived instagram-outreach, linkedin-outreach, cold-outreach
-  skills and the projects/lead-gen push pipeline.
+description: "NexusPoint's outreach lead router. Pushes manually-scraped leads from the per-channel 'Instant ... Leads' Google Sheets into the matching 'NexusPoint ... Outreach CRM', generating a personalized Touch 1 message (OpenAI gpt-5.4-mini, with a Claude Haiku fallback) for each new lead. Handles Instagram, LinkedIn, Facebook and Google Maps (Facebook profile URLs are sourced upstream by facebook-lead-nav). Only pushes rows that are genuinely new, using identity-based dedup on the @handle, LinkedIn slug, or Facebook profile slug or id, and never re-pushes or duplicates rows already in the CRM. Use whenever Aleem wants to move scraped leads into a CRM or run the outreach sync. Trigger on: 'push leads to CRM', 'sync my instagram leads', 'sync linkedin leads', 'run the instagram push', 'run the linkedin push', 'push the new leads', 'update the outreach CRM', 'send the instant leads to the CRM', 'run leads to crm', 'dedup the CRM', 'fill the blank DMs', 'any new leads to push', 'add facebook leads to the CRM', 'push founder and company to the CRM', 'send the main sheet leads to instagram/linkedin/facebook'. Also trigger when Aleem mentions the Instant Instagram/LinkedIn Leads sheet, the Instagram/LinkedIn Outreach CRM, or generating Touch 1 / connection messages for scraped leads. Do NOT trigger for requests to scrape, find, source, or enrich leads (Apify, Apollo, hashtag scraping, email finding) - sourcing happens outside this skill, which only moves rows already sitting in the source sheet; use lead-generator or web-scraper for that. Also not for live DM-reply drafting, follow-up strategy, or benchmark questions, which are sales-playbook and social-media-advisor."
 ---
 
 # Leads to CRM

@@ -118,6 +118,7 @@ university/
 
 # Client project files (confidential)
 client-projects/
+agency/
 
 # Model configs (local, not shared)
 .claude/glm/

@@ -50,7 +50,7 @@ failure mode and it is the clearest tell of automation.
 **Honesty gate.** Only claim experience Aleem actually has. If the post is on something outside his
 work, ask a real question instead of inventing a war story. Fabricated specifics are worse than
 generic praise, because they are a lie to a stranger in public and under his own name. This is
-`content-engine/references/voice-principles.md`'s No-Experience Fallback applied to comments: bridge
+`agency/personal-brand-voice.md`'s No-Experience Fallback applied to comments: bridge
 to adjacent real experience, or ask, or skip the post entirely.
 
 **Skipping is allowed and often correct.** If a post gives you nothing true and specific to say, say
@@ -60,7 +60,7 @@ so in the output rather than manufacturing something. Twelve good comments beat 
 
 ## Mechanics
 
-These come from `content-engine/references/voice-principles.md`, which is the source of truth for
+These come from `agency/personal-brand-voice.md`, which is the source of truth for
 anything written as Aleem. Load it before drafting.
 
 - **No emojis.** LinkedIn voice, per the voice file.

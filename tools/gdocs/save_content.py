@@ -26,8 +26,11 @@ import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-SKILL_DIR = SCRIPT_DIR.parent
-FOLDER_CACHE = SKILL_DIR / ".folder_id"
+# Cache lives beside this script. It used to be derived as SCRIPT_DIR.parent, which broke
+# silently when the script moved out of content-engine/scripts/ on 2026-08-28: the cache
+# resolved to a directory with no .folder_id, so every run re-looked-up the Drive folder.
+# Keep this anchored to the script itself, not to its position in a tree.
+FOLDER_CACHE = SCRIPT_DIR / ".folder_id"
 DRIVE_FOLDER_NAME = "Nexis Content"
 
 # Google Docs defaults list items to zero space below, so a list of long bullets renders as

@@ -10,8 +10,9 @@ description: >
   "write [copy/email/ad]", "improve my [funnel/landing page/conversion rate]",
   "should I run ads", "what marketing should I do", "help me launch [X]",
   "marketing ideas for [X]".
-  Do NOT use for NexusPoint-specific outreach or content (use marketing-advisor,
-  content-engine, sales-playbook, or leads-to-crm instead).
+  Do NOT use for a named client's strategy (use the client chain: `strategic-foundation`,
+  `content-strategy`, `copy-conversion`), nor for Aleem's own outreach and content (use
+  `content-engine`, `sales-playbook`, or `leads-to-crm`).
 ---
 
 # Marketing Skills Router
