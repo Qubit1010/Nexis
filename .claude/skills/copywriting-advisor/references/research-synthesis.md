@@ -654,6 +654,19 @@ character-limit references [s419][s420].
 documentation, and record the date you checked. `[K]` and `[P]` cheat sheets go stale
 silently, and truncation point on the reader's device matters more than the field maximum.
 
+### Line breaks, paragraph length and Instagram caption structure — q30, added 2026-08-31
+
+`copy-conversion/references/platform-formatting.md` cited this corpus's LinkedIn structure
+claim and Instagram section with no source at all - not a q27-style retrieval trap, that
+question was simply never asked. q30 asked it directly, anchored on named ghostwriters and
+caption writers rather than "best practices" phrasing. **Outcome: real, but it is convergent
+craft consensus, not a `[C]`-tier finding.** Named practitioners (Vadym Petryshyn, Pierre
+Herubel, Justin Welsh, Katarina Petrović) independently converge on short paragraphs and
+frequent line breaks for LinkedIn, and on treating an Instagram caption and its image as one
+unit `[K]` [s502][s501][s497][s505][s504]. **No source in this notebook or the wider corpus is
+a controlled study of it** - asked explicitly, and the honest answer came back "no traceable
+primary source." Cite it as consensus, not as a proven readability effect.
+
 ### New folklore the craft passes surfaced
 
 The craft tier immediately produced fresh unsourced claims, which is a good argument for

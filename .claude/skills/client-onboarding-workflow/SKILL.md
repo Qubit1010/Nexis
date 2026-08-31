@@ -1,30 +1,6 @@
 ---
 name: client-onboarding-workflow
-description: >
-  Two phases for running a NexusPoint client. PHASE 1 (Onboarding Kit): spin up a complete
-  onboarding kit when a deal is signed: a Drive folder structure, an onboarding Google Doc,
-  a project checklist Google Sheet tailored to the project type, and a Gmail draft of the
-  welcome email (saved as draft, not sent). Reads a prior proposal or discovery doc to
-  pre-fill the kit, or takes inline intake when no doc exists. PHASE 2 (Project Workspace):
-  a standalone step that processes the client's source docs into a confidential local
-  project command center under `client-projects/<client-slug>/` (overview, what they want,
-  Aleem's role and rules, a live task board, the client's bottlenecks, and improvement ideas).
-
-  Use this skill whenever Aleem says or implies "we just closed [client]", "onboard
-  [client]", "set up onboarding for [client]", "kick off the [project]", "we signed
-  [client]", "client onboarding", "create the project kit", "spin up the folder for
-  [client]", or pastes a proposal Doc URL with words like "onboard them", "set them up",
-  "let's get them going". Also trigger when Aleem references a closed deal moving into
-  delivery, even if he doesn't use the word "onboarding". Lean toward triggering when in
-  doubt: this is the post-close workflow and Aleem won't always name it.
-
-  For PHASE 2 specifically, also trigger on "build the project workspace for [client]",
-  "set up the project board for [client]", "process the [client] docs into a workspace",
-  "make a project command center for [client]", or "turn these client docs into a workspace".
-
-  Don't trigger for: prospect research before a deal closes (use discovery-call-prep),
-  proposal writing (use proposal-generator), or onboarding existing clients into a
-  separate engagement (ask first).
+description: "The post-close workflow for a NexusPoint client, in two phases. PHASE 1 spins up the onboarding kit on signing day: a Drive folder structure, an onboarding Doc, a project checklist Sheet tailored to the project type, and a Gmail draft of the welcome email (saved as a draft, never sent). PHASE 2 builds the confidential local project workspace at client-projects/<slug>/. Say 'we just closed X', 'onboard X', 'kick off the project', 'set up the folder for X', or paste a proposal Doc and ask to get them going."
 argument-hint: "[proposal doc URL or client name + project type]"
 ---
 

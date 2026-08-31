@@ -139,13 +139,19 @@ SOURCE_CAP = 560
 PER_DOMAIN_CAP = 5
 # youtube.com is one domain holding many distinct teardowns, so the standard cap would
 # reduce the whole video tier to five videos.
-CRAFT_DOMAIN_CAP = 16
+# Widened 2026-08-31 from 16: youtube.com was already at the old cap when q29/q30 (named
+# LinkedIn/carousel creator teardowns, YouTube-heavy) were added, which would have silently
+# capped out exactly the sources those passes exist to bring in.
+CRAFT_DOMAIN_CAP = 24
 # Reserved allocation so the craft tier cannot be squeezed out by whichever vendor pages
 # happened to rank. 140 rather than copywriting's 90 because this corpus covers 19 formats
 # across 8 platforms, and because copywriting's craft tier was never honestly measured -
 # 63 of its 75 came in by provenance while the craft passes were misrouted to scientific,
 # so that number describes a bug, not a floor.
-CRAFT_RESERVE = 140
+# Widened 2026-08-31 from 140: the tier was already full when q29/q30 were added, and
+# extract() never evicts an already-locked source regardless of rank, so new sources need
+# headroom to land rather than being ranked against an already-saturated top-140.
+CRAFT_RESERVE = 180
 # First-party platform documentation gets its own cap and its own allocation. At
 # PER_DOMAIN_CAP = 5 the corpus would hold five support.tiktok.com pages total across 19
 # formats, and without a reserved allocation the practitioner slice would eat them.
@@ -247,6 +253,58 @@ JUNK_DOMAINS = {
     # service listings rather than evidence.
     "upwork.com", "fiverr.com", "indeed.com", "glassdoor.com", "ziprecruiter.com",
 }
+
+# Named-creator primary sources living on an otherwise-junked domain. Added 2026-08-31,
+# Aleem's explicit call: q29/q30 exist specifically to find named creators explaining
+# their OWN technique, and several of the best instances are the creator's own
+# linkedin.com or substack.com post - the same domains JUNK_DOMAINS discards as
+# undifferentiated "social/UGC" feed noise. Deliberately an exact-URL allowlist, not a
+# domain or name-pattern rule: broadening this to "any post by someone in a name list"
+# would readmit exactly the high-volume, low-signal content JUNK_DOMAINS exists to keep
+# out. Each entry below is the creator's OWN post about their OWN technique (a
+# third-party post merely analyzing a creator, e.g. someone else's teardown hosted as a
+# LinkedIn post, does not qualify and is not on this list - that is still "social/UGC").
+# Still has to clear the topic-relevance guard below like everything else.
+# Raw, not normalized - norm_url() isn't defined until further down this file, and
+# is_junk() normalizes both sides at call time instead (see there).
+CREATOR_PRIMARY_SOURCE_URLS = (
+    "https://justinwelsh.substack.com/p/how-to-write-compelling-long-form",
+    "https://www.linkedin.com/posts/justinwelsh_my-strategy-when-i-started-was-pretty-basic-activity-7415011488983203840-7Rmy",
+    "https://www.linkedin.com/posts/rachelkarten_i-asked-800-social-media-professionals-what-activity-7480303141582905344-smTt",
+    "https://www.linkedin.com/posts/petar-delev-342509177_instagram-carousels-are-outperforming-reels-activity-7475907490027651073-FsfQ",
+)
+
+# Craft sources hand-verified as genuinely on-target, guaranteed a slot in CRAFT_RESERVE
+# ahead of the score-based ranking. Added 2026-08-31 after discovering WHY q29/q30 (the
+# named-creator passes commissioned specifically to fix content-advisor's thin,
+# SaaS-blog-only LinkedIn/carousel craft tier) got ranked to the bottom and cut even
+# after CRAFT_RESERVE was widened for them: every one of their results came back from
+# Exa with best_score=0.0 (confirmed live - Exa's API genuinely does not populate a
+# score for type="auto" search, this is not a bug in this repo's adapter code), while
+# competing candidates from OTHER, older craft passes came back from Tavily with real
+# scores (0.5-0.6). fuse.py's tie-break sorts on that score, so an Exa-only result is
+# structurally indistinguishable from a low-quality one under the current ranking,
+# regardless of what it actually contains. That is a real gap in the shared research
+# pipeline's cross-engine score normalization, worth fixing there for every skill that
+# depends on it - out of scope for this file to fix globally, so it is worked around
+# locally instead: sources reviewed and confirmed to be a named creator's own technique
+# or a real third-party teardown of one (as opposed to another generic scheduling-tool
+# listicle from the same pass, which still competes normally and can still lose) are
+# pinned here rather than left to a tie-break the ranking signals cannot actually make.
+PINNED_CRAFT_URLS = (
+    "https://autoposting.ai/blog/justin-welsh",
+    "https://www.viralbrain.ai/blog/dan-koes-minimalist-playbook-for-high-agency-posts",
+    "https://voicemoat.com/blog/hook-patterns-naval-paul-graham-sahil-bloom",
+    "https://justinwelsh.substack.com/p/how-to-write-compelling-long-form",
+    "https://www.100mclub.com/p/justin-welsh-grew-to-10m-making-every-post-look-different",
+    "https://www.mylance.co/blog/what-actually-works-on-linkedin-895-post-study",
+    "https://blog.terabox.com/insights/dan-koe-ai-content-playbook-llm-prompts",
+    "https://moderncreator.app/2026-07-25-ash-harris-claude-carousels-cheat-code-viral-instagram-carousels-course",
+    "https://moderncreator.app/2026-05-28-duncan-rogoff-ai-automation-how-i-use-claude-code-to-make-insane-instagram-carousels",
+    "https://adlibrary.com/posts/carousel-ad-examples-2026",
+    "https://www.linkedin.com/posts/rachelkarten_i-asked-800-social-media-professionals-what-activity-7480303141582905344-smTt",
+    "https://www.linkedin.com/posts/petar-delev-342509177_instagram-carousels-are-outperforming-reels-activity-7475907490027651073-FsfQ",
+)
 
 # First-party platform documentation. The primary source for what a format IS on the
 # platform that defines it: aspect ratios, length limits, what counts as a view, where
@@ -612,6 +670,26 @@ QUERIES = {
         "platform help centre or business documentation page for each and note when it "
         "was last revised."
     ),
+    "q29_linkedin_x_threads_creator_structure_craft": (
+        "How specific named, full-time LinkedIn and X creators and ghostwriters such as "
+        "Justin Welsh, Sahil Bloom, Amanda Natividad, Dan Koe, Katelyn Bourgoin and Jay "
+        "Clouse structure a text post as a piece of writing in 2026, drawn from the "
+        "creator's own newsletter, YouTube channel, course or a named third-party "
+        "teardown of their technique rather than a social media scheduling tool's "
+        "generic listicle: how they decide the single idea a post carries, what the "
+        "opening line does beyond surviving the truncation point, how they pace and "
+        "close a multi-post thread, and annotated teardowns naming a specific post that "
+        "worked and a specific one that failed."
+    ),
+    "q30_carousel_creator_structure_craft": (
+        "How specific named LinkedIn and Instagram creators and designers sequence a "
+        "carousel as a piece of storytelling in 2026, drawn from the creator's own "
+        "breakdown, YouTube video or course rather than a scheduling tool's generic "
+        "carousel guide: how they choose the number of frames, what the cover frame "
+        "promises versus what the closing frame resolves, how one idea is paced per "
+        "frame across a real published carousel, and annotated teardowns naming a "
+        "specific carousel that worked and a specific one that failed."
+    ),
 }
 
 
@@ -670,6 +748,8 @@ CRAFT_PASSES = {
     "q23_short_form_video_craft", "q24_podcast_production_craft",
     "q25_webinar_live_craft", "q26_visual_formats_craft",
     "q27_social_text_craft", "q28_platform_specs_craft",
+    "q29_linkedin_x_threads_creator_structure_craft",
+    "q30_carousel_creator_structure_craft",
 }
 assert CRAFT_PASSES <= set(QUERIES), sorted(CRAFT_PASSES - set(QUERIES))
 
@@ -726,10 +806,15 @@ def tier_of(u, topics=None):
 
 def is_junk(url, title):
     d = domain_of(url)
+    # A named creator's own post about their own technique skips the UGC gate too - see
+    # CREATOR_PRIMARY_SOURCE_URLS above. Checked before the domain gate, same shape as
+    # the platform-doc carve-out below. Still has to clear the topic guard afterward.
+    if norm_url(url) in {norm_url(u) for u in CREATOR_PRIMARY_SOURCE_URLS}:
+        pass
     # First-party platform documentation skips the UGC gate ONLY. It still has to clear
     # the topic guard below, or help.instagram.com/1234 "How to report an account" would
     # ride straight in on the carve-out.
-    if not is_platform_doc(url):
+    elif not is_platform_doc(url):
         if d in JUNK_DOMAINS or any(d.endswith("." + j) for j in JUNK_DOMAINS):
             return "social/UGC"
     if any(d.endswith(m) for m in MIRROR_SUFFIXES):
@@ -744,11 +829,13 @@ def is_junk(url, title):
     # discarded as off-topic. 3 still catches the bug the guard was written for, which
     # was "seo" matching inside "houseofrepresentatives".
     #
-    # For platform docs the HOST is excluded from the haystack. Every one of them contains
-    # a platform name that is itself a topic token - help.instagram.com always matches
-    # "instagram" - so leaving the host in disables the guard for exactly the sources the
-    # carve-out just let past, and "How to report an account" would count as on-topic.
-    subject = f"{title} {urlsplit(url).path}" if is_platform_doc(url) else f"{title} {url}"
+    # For platform docs AND creator-primary-source exemptions, the HOST is excluded from
+    # the haystack. Every linkedin.com/substack.com URL contains a topic token in its own
+    # domain name - leaving the host in would let anything on the exemption list pass the
+    # guard for free, the same failure the platform-doc comment below already names.
+    host_excluded = is_platform_doc(url) or norm_url(url) in {
+        norm_url(u) for u in CREATOR_PRIMARY_SOURCE_URLS}
+    subject = f"{title} {urlsplit(url).path}" if host_excluded else f"{title} {url}"
     hay = " " + re.sub(r"[^a-z0-9]+", " ", subject.lower()).strip() + " "
     for tok in TOPIC_TOKENS:
         if len(tok) <= 3:
@@ -910,7 +997,13 @@ def extract():
     rest = [e for e in capped if tier_of(e["url"], e["topics"]) == "practitioner"]
     platform_e = [e for e in rest if is_platform_doc(e["url"])]
     practitioner_e = [e for e in rest if not is_platform_doc(e["url"])]
-    craft_keep = craft_e[:CRAFT_RESERVE]
+    # Pinned sources take slots first, ahead of the score-based sort - see
+    # PINNED_CRAFT_URLS for why. They still count against CRAFT_RESERVE, and a source
+    # only lands here if it also survived tiering, junk and domain-cap above it.
+    _pinned_norm = {norm_url(u) for u in PINNED_CRAFT_URLS}
+    craft_pinned = [e for e in craft_e if norm_url(e["url"]) in _pinned_norm]
+    craft_unpinned = [e for e in craft_e if norm_url(e["url"]) not in _pinned_norm]
+    craft_keep = craft_pinned + craft_unpinned[:max(0, CRAFT_RESERVE - len(craft_pinned))]
     platform_keep = platform_e[:PLATFORM_DOC_RESERVE]
     room = max(0, SOURCE_CAP - len(confirmed_e) - len(craft_keep) - len(platform_keep))
     if len(practitioner_e) > room:
@@ -1114,6 +1207,19 @@ def _selftest():
     assert is_junk("https://www.linkedin.com/pulse/content-strategy-x", "Content strategy") == "social/UGC"
     assert is_junk("https://www.instagram.com/p/Cabc123/", "Reels post") == "social/UGC"
     assert is_junk("https://www.tiktok.com/@user/video/123", "Content tips") == "social/UGC"
+
+    # --- junk gate: named creator primary sources (2026-08-31, Aleem's explicit call) ---
+    # exempted: on the allowlist, no www to prove norm_url matching works
+    assert is_junk("https://justinwelsh.substack.com/p/how-to-write-compelling-long-form",
+                   "How to write compelling long-form") is None
+    # exempted even with a www the allowlist entry doesn't have (norm_url strips it both sides)
+    assert is_junk(
+        "https://www.linkedin.com/posts/justinwelsh_my-strategy-when-i-started-was-pretty-basic-activity-7415011488983203840-7Rmy",
+        "My strategy when I started was pretty basic") is None
+    # a DIFFERENT linkedin.com post by the same creator, not on the allowlist, is still junk -
+    # the exemption is per-URL, never per-person
+    assert is_junk("https://www.linkedin.com/posts/justinwelsh_some-other-post-1234567890",
+                   "Some other post") == "social/UGC"
     # the carve-out bypasses the UGC gate ONLY, never the topic guard
     assert is_junk("https://help.instagram.com/1234", "How to report an account") == "off-topic"
 

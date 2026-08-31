@@ -8,14 +8,18 @@ Scale NexusPoint into an independent agency with repeatable client acquisition -
 
 ## Context
 
-These files contain the full picture. Read them when you need context:
+Always loaded, because they are small and are ground truth for almost any task:
 
 - @context/me.md — Who Aleem is, his skills, and strategic position
 - @context/work.md — NexusPoint services, revenue, tools, and stack
 - @context/team.md — Team members, roles, and when to loop them in
-- @context/current-priorities.md — What Aleem is focused on right now
-- @context/goals.md — Quarterly goals and milestones
-- @context/ideas.md — Build backlog: skills and tools to work on next
+
+Read these when the task actually calls for them. They are deliberately not auto-loaded:
+
+- `context/current-priorities.md` — What Aleem is focused on right now
+- `context/goals.md` — Quarterly goals and milestones, and the pull rule for new builds
+- `context/ideas.md` — Build backlog: skills and tools to work on next
+- `references/skills-catalog.md` — Every skill, plugin and collection already installed
 
 ## gstack
 

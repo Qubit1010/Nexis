@@ -63,15 +63,23 @@ when there is no alt text.
 **What it is for.** A sequence, where each frame earns the swipe. The only visual format with a
 narrative dimension.
 
-**Structure.** Cover carries the claim. One idea per frame. **No frame that exists only to set
-up the next one** - that is the most common carousel failure and the reason people drop at frame
-2. A recap frame for the saver. One CTA. `[K]` [s302][s380][s384]
+**Structure.** Cover carries a single, specific promise (a named outcome or metric, never a
+generic title like "Tips for LinkedIn") - it competes against every other post in the feed, so
+treat it like a billboard: one message, zero ambiguity about what the viewer gets. `[K]`
+[s302][s384]. One idea per frame, transitioned with a "breadcrumb" line that teases the next
+frame rather than a bare "next" (Jay Clouse, Jens Joseph Mannanal's problem-solution-result
+arc). `[K]` [s384][s301]. **No frame that exists only to set up the next one** - that is the most
+common carousel failure and the reason people drop at frame 2. A recap frame for the saver, then
+one CTA - "save this" outperforms a bare follow ask because saves carry more distribution weight
+than likes. `[K]` [s302][s380][s384]
 
 **The hook.** The cover, legible at feed size. It is competing at thumbnail scale, not at full
 size.
 
-**Length and pacing.** Enough frames for the idea, no more. If it needs more than a handful, the
-idea probably wants a different format.
+**Length and pacing.** 6 to 10 frames is the reported sweet spot across sources - fewer feels
+incomplete, more than roughly 12 risks a steep completion-rate drop. `[K]` [s383][s385]. Enough
+frames for the idea, no more; if it needs more than that, the idea probably wants a different
+format.
 
 **2026 optimization.** Two distinct sub-formats that are not interchangeable:
 

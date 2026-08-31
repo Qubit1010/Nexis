@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-15",
+  "generated_at": "2026-08-31",
   "method": "28 deep passes via the in-repo research skill: 18 evidence passes in scientific/general mode and 10 craft passes in practical mode, with a separate suffix per register so the craft half is not silently routed to the journals. Deduped by normalized URL, junk-filtered, per-domain capped, tiered confirmed / craft / practitioner",
   "note": "inline [sN] in references/research-synthesis.md resolves on the `index` field. tier=craft means technique and worked examples only - never usable to support a factual claim, and invisible to factcheck mode. first_party=true is platform documentation, rendered [P*]: authoritative for what a platform requires or defines, never evidence that something works, and always quoted with a retrieval date",
-  "total_found": 798,
-  "source_count": 560,
+  "total_found": 824,
+  "source_count": 612,
   "confirmed": 285,
-  "craft": 140,
+  "craft": 192,
   "practitioner": 135,
   "first_party": 9,
   "sources": [
@@ -7884,6 +7884,735 @@
         "tavily"
       ],
       "published_date": null
+    },
+    {
+      "index": 561,
+      "title": "Instagram Carousel Strategy 2026: How to Increase Reach, Engagement, and Followers — TrueFuture Media",
+      "url": "https://www.truefuturemedia.com/articles/instagram-carousel-strategy-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "exa",
+        "tavily"
+      ],
+      "published_date": "2026-01-30T00:00:00.000Z"
+    },
+    {
+      "index": 562,
+      "title": "How To Create Carousels For Social Media Using Claude Design 2026",
+      "url": "https://www.youtube.com/watch?v=7jWPSTT7lpE",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q26_visual_formats_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Apr 28, 2026"
+    },
+    {
+      "index": 563,
+      "title": "How to Format Text in Linkedin [2026 GUIDE] - YouTube",
+      "url": "https://www.youtube.com/watch?v=0zmLbcH6NXM",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q27_social_text_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Dec 25, 2025"
+    },
+    {
+      "index": 564,
+      "title": "Social Media Metrics You Should Know",
+      "url": "https://www.youtube.com/watch?v=0RAvd-ng8Ew",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q18_metric_definitions"
+      ],
+      "engines": [
+        "jina"
+      ],
+      "published_date": "3 years ago"
+    },
+    {
+      "index": 565,
+      "title": "Create Long-form Videos: Tips & Tools | YouTube for Creators",
+      "url": "https://www.youtube.com/creators/create/longform/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q19_written_gated_assets_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 566,
+      "title": "Consultants: How to Write a Client-Attracting B2B Case Study",
+      "url": "https://www.youtube.com/watch?v=_w8mkfiK1MI",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q20_case_study_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Dec 31, 2020"
+    },
+    {
+      "index": 567,
+      "title": "6 Steps to Writing a Newsletter People Will Read",
+      "url": "https://www.youtube.com/watch?v=lFNrwIFHbCE",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 568,
+      "title": "Using Zoom for Webinars Advanced Tips and Tricks (2026 Guide)",
+      "url": "https://www.youtube.com/watch?v=VLqvlBIJtG4",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q25_webinar_live_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Feb 2, 2025"
+    },
+    {
+      "index": 569,
+      "title": "The Only Carousel Workflow You Need in 2026 - YouTube",
+      "url": "https://www.youtube.com/watch?v=of1oFgVsLhc",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q26_visual_formats_craft"
+      ],
+      "engines": [
+        "serper"
+      ],
+      "published_date": "Jun 26, 2026"
+    },
+    {
+      "index": 570,
+      "title": "11 Powerful LinkedIn Carousel Examples to Inspire Your Strategy in 2026 | Postiv AI Blog",
+      "url": "https://postiv.ai/blog/linkedin-carousel-examples-2",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 571,
+      "title": "marketingskills/VERSIONS.md at main",
+      "url": "https://github.com/coreyhaines31/marketingskills/blob/main/VERSIONS.md",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 572,
+      "title": "Instagram Carousel Ideas for Writers: Creative Post Strategies for 2026",
+      "url": "https://www.automateed.com/instagram-carousel-ideas-for-writers",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 573,
+      "title": "LinkedIn Carousel Best Practices to Win More Swipes in 2026",
+      "url": "https://www.techwyse.com/blog/infographics/linkedin-carousel-best-practices-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 574,
+      "title": "Create Engaging Instagram Carousel Posts [2026] | Storytelling Marketing | StoryCraft With Cyndi",
+      "url": "https://www.cyndizaweski.com/articles/how-to-design-an-instagram-carousel-post-that-will-increase-your-engagement",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 575,
+      "title": "The Ultimate Guide to Designing a Perfect Instagram Carousel in 2026",
+      "url": "https://www.socialhabitmarketing.com/article-posts/the-ultimate-guide-to-designing-a-perfect-instagram-carousel",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 576,
+      "title": "How to write a case study customers will let you ship — Raccoon Page Blog",
+      "url": "https://raccoon.page/blog/how-to-write-a-case-study/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q20_case_study_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-11T00:00:00.000Z"
+    },
+    {
+      "index": 577,
+      "title": "How to Write a Case Study (2026 Guide) - Scale Growth Digital",
+      "url": "https://scalegrowth.digital/resources/content/how-to-write-a-case-study/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q20_case_study_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-22T00:00:00.000Z"
+    },
+    {
+      "index": 578,
+      "title": "Case study template: how to write one that sells | Zoomforth",
+      "url": "https://www.zoomforth.com/blog/case-study-template/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q20_case_study_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "index": 579,
+      "title": "How to Write a Newsletter People Actually Read | systeme.io",
+      "url": "https://systeme.io/learn/how-to-write-a-newsletter",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-09T00:00:00.000Z"
+    },
+    {
+      "index": 580,
+      "title": "Newsletter content strategy: 13 data-backed formats & trends driving results",
+      "url": "https://blog.hubspot.com/marketing/newsletter-content-strategy",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-14T00:00:00.000Z"
+    },
+    {
+      "index": 581,
+      "title": "Newsletter email swipe file: 20 real examples and a Substack-era playbook",
+      "url": "https://www.mailneo.co/swipe-file/newsletter",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-14T00:00:00.000Z"
+    },
+    {
+      "index": 582,
+      "title": "How to create an email newsletter [+ expert tips & checklist]",
+      "url": "https://blog.hubspot.com/marketing/how-to-create-email-newsletters-ht",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-30T00:00:00.000Z"
+    },
+    {
+      "index": 583,
+      "title": "The newsletter 700K female entrepreneurs love | Email Breakdown with Emily Oberman — Flic Email",
+      "url": "https://www.flicemail.com/blog/create-and-cultivate-email-breakdown",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-01-15T00:00:00.000Z"
+    },
+    {
+      "index": 584,
+      "title": "Best Newsletter Design in 2026 (Real Specs + Tools) | Dupple Blog",
+      "url": "https://dupple.com/blog/best-newsletter-design",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-31T00:00:00.000Z"
+    },
+    {
+      "index": 585,
+      "title": "How to Write Better Newsletter Sections and Formats | TLG",
+      "url": "https://threwthelookingglass.com/how-to-write-better-newsletter-sections-and-formats/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-12T00:00:00.000Z"
+    },
+    {
+      "index": 586,
+      "title": "How To Start a Newsletter From Scratch",
+      "url": "https://www.emailtooltester.com/en/blog/how-to-start-a-newsletter/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "index": 587,
+      "title": "Elements of a Newsletter: The Complete Guide to What Makes One Work",
+      "url": "https://tabular.email/blog/elements-of-a-newsletter",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-25T00:00:00.000Z"
+    },
+    {
+      "index": 588,
+      "title": "SplitMetrics Showcase | Behavioral Email Architecture Email Teardown: Before/After Score and Structural Rebuild — Strategic Flow",
+      "url": "https://strategicflow.tech/splitmetrics-showcase.html",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q21_newsletter_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-06T00:00:00.000Z"
+    },
+    {
+      "index": 589,
+      "title": "How to Plan a YouTube Video: From Idea to Script, Step by Step | Storyflow",
+      "url": "https://storyflow.so/guides/how-to-plan-a-youtube-video",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "index": 590,
+      "title": "How to Read Your YouTube Retention Graph and Fix Your Script (2026) | SUMERA Blog",
+      "url": "https://sumera.io/blog/youtube-retention-graph-fix-script",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-21T00:00:00.000Z"
+    },
+    {
+      "index": 591,
+      "title": "Advanced retention editing: cutting strategies to keep viewers hooked past 8 minutes – AIR Media-Tech",
+      "url": "https://air.io/en/youtube-hacks/advanced-retention-editing-cutting-patterns-that-keep-viewers-past-minute-8",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-08T00:00:00.000Z"
+    },
+    {
+      "index": 592,
+      "title": "Strengthen Video Structure With Data-Backed YouTube Analytics Insights",
+      "url": "https://www.tastyedits.com/master-youtube-analytics-use-data-backed-insights-to-improve-your-video-structure/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-22T00:00:00.000Z"
+    },
+    {
+      "index": 593,
+      "title": "YouTube Hooks: The First 30 Seconds | Monitor YT",
+      "url": "https://monitoryt.com/blog/youtube-video-hooks",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-21T00:00:00.000Z"
+    },
+    {
+      "index": 594,
+      "title": "Mario Joos Interview: Retention Editing Secrets From MrBeast's Team",
+      "url": "https://vidpros.com/retention-editing-what-you-can-learn-from-mario-joos/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-25T00:00:00.000Z"
+    },
+    {
+      "index": 595,
+      "title": "How to Write a YouTube Script in 2026 (6-Part Template) | SwiftCopy",
+      "url": "https://swiftcopy.io/blog/how-to-write-a-youtube-script",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-12T00:00:00.000Z"
+    },
+    {
+      "index": 596,
+      "title": "How to Structure a 30-Minute YouTube Video for Retention",
+      "url": "https://blog.kliptory.com/how-to-structure-a-30-minute-youtube-video-for-retention/",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "index": 597,
+      "title": "Editing for Retention: Pacing, Pattern Interrupts, B-roll",
+      "url": "https://monitoryt.com/blog/editing-for-retention",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-21T14:16:23.000Z"
+    },
+    {
+      "index": 598,
+      "title": "YouTube Audience Retention, Explained | Monitor YT",
+      "url": "https://monitoryt.com/blog/youtube-audience-retention",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q22_longform_video_youtube_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-21T00:00:00.000Z"
+    },
+    {
+      "index": 599,
+      "title": "How to edit vertical video for Reels, TikTok, and Shorts (2026) · Kompozy",
+      "url": "https://kompozy.io/how-to/edit-vertical-video",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q23_short_form_video_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-22T00:00:00.000Z"
+    },
+    {
+      "index": 600,
+      "title": "TikTok, Reels & Shorts: The 2026 Cross-Platform Playbook — Mark Studios",
+      "url": "https://www.markstudios.com/blog/tiktok-reels-shorts-cross-platform-strategy-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q23_short_form_video_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-25T00:00:00.000Z"
+    },
+    {
+      "index": 601,
+      "title": "Justin Welsh's LinkedIn Strategy: What Actually Works (and What Won't Work for You) — Autoposting.ai",
+      "url": "https://autoposting.ai/blog/justin-welsh",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q29_linkedin_x_threads_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-18T00:00:00.000Z"
+    },
+    {
+      "index": 602,
+      "title": "Dan Koe's Minimalist Playbook for High-Agency… | ViralBrain",
+      "url": "https://www.viralbrain.ai/blog/dan-koes-minimalist-playbook-for-high-agency-posts",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q29_linkedin_x_threads_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-02-15T00:00:00.000Z"
+    },
+    {
+      "index": 603,
+      "title": "Hook patterns: how Naval, Paul Graham, Sahil Bloom open",
+      "url": "https://voicemoat.com/blog/hook-patterns-naval-paul-graham-sahil-bloom",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q29_linkedin_x_threads_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-13T00:00:00.000Z"
+    },
+    {
+      "index": 604,
+      "title": "How to write compelling long-form with Justin Welsh.",
+      "url": "https://justinwelsh.substack.com/p/how-to-write-compelling-long-form",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q29_linkedin_x_threads_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-01T00:00:00.000Z"
+    },
+    {
+      "index": 605,
+      "title": "What Actually Works on LinkedIn: A 2026 Study of 895 Posts | Mylance",
+      "url": "https://www.mylance.co/blog/what-actually-works-on-linkedin-895-post-study",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q29_linkedin_x_threads_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-10T00:00:00.000Z"
+    },
+    {
+      "index": 606,
+      "title": "Dan Koe’s AI Content Playbook: Using LLMs To Go Viral",
+      "url": "https://blog.terabox.com/insights/dan-koe-ai-content-playbook-llm-prompts",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q29_linkedin_x_threads_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-08-04T00:00:00.000Z"
+    },
+    {
+      "index": 607,
+      "title": "Justin Welsh grew to $10M+ making every post look different",
+      "url": "https://www.100mclub.com/p/justin-welsh-grew-to-10m-making-every-post-look-different",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q29_linkedin_x_threads_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-09T00:00:00.000Z"
+    },
+    {
+      "index": 608,
+      "title": "Claude + Carousels = Cheat Code (Viral Instagram Carousels Course) — Ash Harris · Modern Creator",
+      "url": "https://moderncreator.app/2026-07-25-ash-harris-claude-carousels-cheat-code-viral-instagram-carousels-course",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-25T00:00:00.000Z"
+    },
+    {
+      "index": 609,
+      "title": "Carousel Ad Examples 2026: 10 Brand Teardowns (With Why Each Works)",
+      "url": "https://adlibrary.com/posts/carousel-ad-examples-2026",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-16T00:00:00.000Z"
+    },
+    {
+      "index": 610,
+      "title": "How I Use Claude Code to Make INSANE Instagram Carousels — Duncan Rogoff | AI Automation · Modern Creator",
+      "url": "https://moderncreator.app/2026-05-28-duncan-rogoff-ai-automation-how-i-use-claude-code-to-make-insane-instagram-carousels",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-05-28T00:00:00.000Z"
+    },
+    {
+      "index": 611,
+      "title": "I asked 800 social media professionals what type of posts are working best right now. The answer? Carousels. | Rachel Karten",
+      "url": "https://www.linkedin.com/posts/rachelkarten_i-asked-800-social-media-professionals-what-activity-7480303141582905344-smTt",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-07-07T00:00:00.000Z"
+    },
+    {
+      "index": 612,
+      "title": "I went from 0 to 150K followers on Instagram in 6 months, and recently I've been noticing a pattern... | Petar Delev",
+      "url": "https://www.linkedin.com/posts/petar-delev-342509177_instagram-carousels-are-outperforming-reels-activity-7475907490027651073-FsfQ",
+      "tier": "craft",
+      "first_party": false,
+      "topics": [
+        "q30_carousel_creator_structure_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-06-25T00:00:00.000Z"
     }
   ]
 }

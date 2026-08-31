@@ -62,8 +62,12 @@ in full before a first build for a new client.
 
 ### LinkedIn → `platform-specs/linkedin.md`
 
-- **Text post.** Hook lands before the "see more" cut, so front-load it. Short paragraphs with
-  white space between them; dense blocks get skimmed. One clear action at the end.
+- **Text post.** Hook lands before the "see more" cut, so front-load it. Short paragraphs (1-3
+  sentences) with white space between them; dense blocks get skimmed rather than read. This is
+  craft consensus among named LinkedIn ghostwriters, not a proven finding - see
+  `copy-conversion/references/platform-formatting.md`'s LinkedIn Structure row for the citations
+  and the honesty flag (no controlled study of it exists in either corpus). One clear action at
+  the end.
 - **Document carousel.** Cover stands alone. One insight per slide. Final slide carries the
   action. Accompanying post text sets up why the document is worth opening.
 - Direction the corpus supports: **carousels accumulate dwell because they require swipes**, and

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-15",
+  "generated_at": "2026-08-31",
   "method": "28 deep passes via the in-repo research skill (Exa+Tavily+Serper+Jina fused, content-extracted), deduped by normalized URL, junk-filtered, per-domain capped, tiered confirmed / craft / practitioner",
   "note": "inline [sN] in references/research-synthesis.md resolves to sources[N-1]. tier=craft means technique and worked examples only - never usable to support a factual claim, and invisible to factcheck mode",
-  "total_found": 530,
-  "source_count": 494,
+  "total_found": 562,
+  "source_count": 507,
   "confirmed": 256,
-  "craft": 75,
+  "craft": 88,
   "practitioner": 163,
   "sources": [
     {
@@ -6462,6 +6462,175 @@
         "tavily"
       ],
       "published_date": null
+    },
+    {
+      "index": 495,
+      "title": "Systemizing Your Content Structure with Justin Welsh",
+      "url": "https://www.youtube.com/watch?v=SkR3XB6Bvq8",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 496,
+      "title": "My strategy when I started was pretty basic. Write stuff online. See what worked. Do more of that. Do less of what didn't. That was basically it. I didn't have a complicated funnel. There was no… | Justin Welsh | 1,151 comments",
+      "url": "https://www.linkedin.com/posts/justinwelsh_my-strategy-when-i-started-was-pretty-basic-activity-7415011488983203840-7Rmy",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 497,
+      "title": "The Anatomy Of The Perfect Text-Based Social Post - Newsletter Engines",
+      "url": "https://mikeromaine.com/the-anatomy-of-the-perfect-text-based-social-post",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 498,
+      "title": "Copywriting Breakdown: Art of Focus by Dan Koe",
+      "url": "https://www.youtube.com/watch?v=QzdMi7X5Exs",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 499,
+      "title": "Marketing Powerups Newsletter",
+      "url": "https://www.marketingpowerups.com/newsletter",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 500,
+      "title": "Justin Welsh Shares a 4 Step Strategy for Monetizing Your LinkedIn Content",
+      "url": "https://www.entrepreneur.com/growing-a-business/justin-welsh-shares-a-4-step-strategy-for-monetizing-your/437017",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "tavily"
+      ],
+      "published_date": null
+    },
+    {
+      "index": 501,
+      "title": "Stop Posting Fluff: LinkedIn Ghostwriting That Builds Trust, Leads, and Pipeline - Home",
+      "url": "https://nomnomnomfordogs.com/stop-posting-fluff-linkedin-ghostwriting-that-builds-trust-leads-and-pipeline/",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-26T00:00:00.000Z"
+    },
+    {
+      "index": 502,
+      "title": "How to Format LinkedIn Posts That Actually Get Read in 2026 | Postory",
+      "url": "https://postory.io/blog/how-to-format-linkedin-posts",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-04-15T00:00:00.000Z"
+    },
+    {
+      "index": 503,
+      "title": "How They Build a Personal Brand That Will SURVIVE AI Era w/ Katelyn Bourgoin - Authority in the Wild | Lyssna här  | Poddtoppen.se",
+      "url": "https://poddtoppen.se/podcast/1663203570/authority-in-the-wild/how-they-build-a-personal-brand-that-will-survive-ai-era-w-katelyn-bourgoin",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-08-11T00:00:00.000Z"
+    },
+    {
+      "index": 504,
+      "title": "How to Write Instagram Captions That Convert (2026 Guide for Founders) — Monolit Blog",
+      "url": "https://monolit.sh/blog/how-to-write-instagram-captions-that-convert",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-31T00:00:00.000Z"
+    },
+    {
+      "index": 505,
+      "title": "How to Write Instagram Captions (and Why the First 125 Characters Are the Only Ones That Matter) | The Toolbox",
+      "url": "https://getthetoolbox.com/blog/how-to-write-instagram-captions",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-08-13T00:00:00.000Z"
+    },
+    {
+      "index": 506,
+      "title": "How Long Should an Instagram Caption Be in 2026? (Data-Backed Answer for Founders) — Monolit Blog",
+      "url": "https://monolit.sh/blog/how-long-should-instagram-caption-be-2026-data-backed-answer-founders",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-03-31T00:00:00.000Z"
+    },
+    {
+      "index": 507,
+      "title": "Instagram Caption Length Study 2026",
+      "url": "https://www.upgrow.com/blog/instagram-caption-length-study-2026",
+      "tier": "craft",
+      "topics": [
+        "q30_linkedin_instagram_line_formatting_craft"
+      ],
+      "engines": [
+        "exa"
+      ],
+      "published_date": "2026-08-05T00:00:00.000Z"
     }
   ]
 }

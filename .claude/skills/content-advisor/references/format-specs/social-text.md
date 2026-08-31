@@ -42,12 +42,20 @@ reverse once matched `[C]` [s14][s16]. Relevant every time a client says a compe
 **What it is for.** Reaching a professional audience without an intermediary. The highest-trust
 text surface most B2B clients have.
 
-**Structure.** First line carries the whole point. Body in one idea. Close with one action or a
-genuine question. `[K]` [s310][s337][s354]
+**Structure.** First line carries the whole point. Body in one idea, chosen because it
+demonstrates something the writer can prove: a repeatable framework built from real work
+(Pierre Herubel, Lincoln Murphy), a metric from their own operation (Austin Rief, Brigitta
+Ruha), or a specific lesson from a named mistake (Justin Welsh). `[K]` [s378][s358][s328].
+Readers scan a post's shape - the first line, then the bullet points - before deciding whether
+to invest in reading the rest, rather than reading it linearly top to bottom. `[K]` [s378]. Close
+with one action or a genuine question. `[K]` [s354]
 
 **The hook.** The pre-truncation line. It is the only thing most people see, and the truncation
 point varies by device and placement - which is why it is verified, not remembered. See
-`copy-conversion/references/platform-formatting.md`.
+`copy-conversion/references/platform-formatting.md`. Beyond surviving truncation, named creators
+build the opening line as a pattern interrupt: a curiosity gap or a vulnerable admission (Dickie
+Bush, Nicolas Cole), or a contrarian "what everyone gets wrong" claim (Sam Browne) - never a
+scene-setting lead-in. `[K]` [s356][s354]
 
 **Length and pacing.** Set by the idea. "Shorter is better" is an assumption that has been
 tested against directly, not a finding.
@@ -92,7 +100,11 @@ Verify conventions live rather than taking them from any file.
 **What it is for.** An argument too long for one post and too short for an article, in a feed.
 
 **Structure.** Post 1 carries the whole claim **standalone**. Post 2 gives the stake. Middle
-posts carry one idea each. Final post resolves, then one action. `[K]` [s328][s345][s356]
+posts carry one idea each, paced to a single narrative or collaborative sequence - repurposing
+long-form media into one standalone lesson per post (Jay Clouse), or a high-volume run of short,
+scannable posts on one theme (Warby Parker). `[K]` [s301][s305]. Final post resolves and closes
+on an open-ended question, or a "soft handoff" to a collaborator's audience - both aimed at
+generating comment activity in the first hour rather than summarizing. `[K]` [s301][s356]
 
 **The rule that decides whether a thread works:** **no post exists only to set up the next
 one.** A thread built as a teaser dies at post 1, because post 1 is the only one most people

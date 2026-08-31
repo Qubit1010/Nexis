@@ -1,26 +1,6 @@
 ---
 name: content-engine
-description: >
-  Use to BUILD a subject's content engine, or to RUN that engine and write finished content.
-  Works for any client with a marketing chain in client-projects/<slug>/, and for Aleem's own
-  personal brand. BUILD reads their 07-strategic-foundation, 08-audience-persona,
-  13-brand-strategy, 14-brand-voice, 17-conversion-copy, 18-content-strategy and
-  09-seo-foundation, then writes client-projects/<slug>/19-content-engine.md: the hook patterns
-  drawn from their audience's real language, the format set limited to the platforms their
-  strategy actually selected, copywriting rules traced to their voice dimensions, and a
-  repurposing map matched to their cadence. Derived per subject, never templated. RUN writes
-  actual posts against that engine and repurposes one piece into platform-native variants.
-  Triggers on: content engine, build their content engine, create content, write a post,
-  write a LinkedIn post, write an Instagram caption, post for [platform], repurpose this,
-  turn this into a carousel, make this a reel script, content formats for [client], what hooks
-  should they use, how should they open a post, platform formats, full content run, write
-  everything for this topic. Does NOT do ideation: it will not tell you what to post about,
-  score topics, or build a calendar from a news feed. For a client's pillars, cadence, funnel
-  and distribution plan use content-strategy. For whether a content statistic is real use
-  content-advisor; for how a platform ranks use social-media-advisor. For a long article use
-  blog-writer, for Instagram carousels use carousel, for vertical short frames use
-  shorts-creator, for a rendered video use reel-creator, and for whitepapers, newsletters,
-  threads or scripts use content-production.
+description: "Use to BUILD a subject's content engine, or to RUN it and write finished content. Works for any client with a marketing chain in client-projects/<slug>/ and for Aleem's own personal brand. BUILD reads their strategy, persona, brand, voice, copy, content-strategy and SEO files and derives hook patterns, format set, copy rules and a repurposing map from them rather than templating. RUN writes actual posts and repurposes one piece into platform-native variants. Does NOT ideate: for pillars, cadence and calendar use content-strategy; for whether a statistic is real, content-advisor; for how a platform ranks, social-media-advisor; for a long article, blog-writer."
 argument-hint: [build <slug> | run <platform> <topic> | repurpose]
 ---
 

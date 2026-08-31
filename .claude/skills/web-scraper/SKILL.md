@@ -1,23 +1,6 @@
 ---
 name: web-scraper
-description: >
-  The one powerful web-scraping + structured-extraction skill. Runs five engines behind one router on
-  a cheapest-to-most-capable ladder — direct HTTP (free), Crawl4AI (free, self-hosted, Playwright/JS),
-  Firecrawl (managed API), Apify (actors), ScrapingAnt (proxy/unblocker, last resort) — auto-escalating
-  when a page is blocked and rotating numbered API keys (Apify x4, Firecrawl x2) when one hits its limit.
-  Four extraction modes turn any page into well-formatted data: raw markdown, links, deterministic CSS
-  schema, or schema-driven LLM extraction (OpenAI structured output) for messy pages. Outputs json / csv
-  / jsonl / md with dedup. Purpose-built for three workloads, all live-tested: (1) directory -> clean
-  lead rows feeding lead-generator/leads-to-crm, (2) ML/LLM training-data gathering from papers/forums/
-  repos into provenance-tagged JSONL, (3) real-estate/investment listing data. Grounded in a research-
-  first corpus of 141 cited 2026 sources (references/research-synthesis.md) on scraping architecture,
-  anti-bot, extraction, lead-gen, ML-data, real-estate, legal/ethics, and tool selection, with a live-
-  query fallback. Use whenever Aleem says "scrape X", "scrape this site/directory", "extract data from
-  X", "get me leads from this directory", "turn this listing site into a spreadsheet", "gather training
-  data / build a corpus", "scrape real estate listings", "get structured data from a page", "is it
-  possible to scrape X", "crawl this site", "scrape with apify/firecrawl/crawl4ai", or describes a
-  scraping scenario and asks whether it's doable and how. Hands off target *discovery* to the research
-  skill, Google-Maps social resolution to lead-generator, and lead CRM push to leads-to-crm.
+description: "The bulk web-scraping and structured-extraction skill. Five engines behind one router on a cheapest-to-most-capable ladder (direct HTTP, Crawl4AI, Firecrawl, Apify, ScrapingAnt), auto-escalating when a page is blocked and rotating numbered API keys when one hits its limit. Four extraction modes: raw markdown, links, deterministic CSS schema, or schema-driven LLM extraction for messy pages. Outputs json, csv or jsonl. Say 'scrape this site', 'extract these fields from these pages', 'crawl this listing'. For answering a question from the web rather than extracting rows, use research."
 argument-hint: [url / directory / scraping scenario]
 ---
 

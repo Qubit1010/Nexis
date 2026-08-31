@@ -1,24 +1,6 @@
 ---
 name: upwork-advisor
-description: >
-  Research-backed Upwork strategy advisor. The strategy layer above Aleem's Upwork execution skills:
-  it diagnoses and advises, it does not write the artifact. Covers profile optimization (title,
-  overview, 15 skill tags, portfolio, what moves search vs what converts a click), the 2026 search
-  and AI-matching algorithm, job search and client vetting (a 60-second triage rubric with hard gates
-  and a 7.5/10 bid threshold), connects and Boost economics, proposal strategy at the portfolio level
-  (reply-rate and win-rate benchmarks, why volume backfires), rates and niching, badge thresholds
-  (Rising Talent, Top Rated, Top Rated Plus, Expert-Vetted), client retention and portfolio mix, and
-  the overall 2026 platform play. Grounded in a 96-source cited 2026 corpus
-  (references/research-synthesis.md), with a live-search fallback rather than guessing.
-  Use this skill when Aleem asks: "review/optimize my Upwork profile", "why aren't my proposals
-  getting replies", "why am I not getting jobs", "which jobs should I bid on", "is this job worth the
-  connects", "should I boost this", "how do connects work", "what's a good win rate", "how do I rank
-  higher / get more invites", "how do I get Top Rated Plus", "how do I raise my rates on Upwork",
-  "should I niche down", "how do I keep clients / get retainers", "what's my Upwork strategy",
-  "is Upwork still worth it", "is Upwork dead".
-  NOT for producing the artifact: to WRITE a proposal for a job post use upwork-proposal-generator,
-  and to WRITE a reply to a client message use upwork-reply-drafter. This skill decides what to do;
-  those two produce the text.
+description: "Research-backed Upwork strategy advisor, the layer above the execution skills: it diagnoses and advises, it does not write the artifact. Covers profile optimization, the 2026 search and AI-matching algorithm, a 60-second job triage rubric, connects and Boost economics, portfolio-level proposal diagnosis, rates and niching, badge thresholds and client mix. Say 'is this job worth bidding', 'why am I not getting replies', 'should I raise my rate', 'how do I get Top Rated Plus'. To write a proposal use upwork-proposal-generator; to reply to a client message, upwork-reply-drafter."
 argument-hint: "[Upwork strategy question, profile to audit, or job post to triage]"
 ---
 

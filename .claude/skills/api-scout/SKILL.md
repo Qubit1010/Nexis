@@ -1,22 +1,6 @@
 ---
 name: api-scout
-description: >
-  Finds free and public developer APIs by topic or use case, sourced from a local catalog of
-  ~1,600 APIs across 51 categories (Animals, Authentication, Blockchain, Business, Cryptocurrency,
-  Currency Exchange, Development, Finance, Games, Geocoding, Government, Health, Machine Learning,
-  Music, News, Open Data, Programming, Science & Math, Security, Shopping, Social, Sports, Test
-  Data, Text Analysis, Transportation, Weather, and more), mirrored from
-  github.com/public-apis/public-apis. Each entry includes auth type, HTTPS support, CORS support,
-  and a description. Pre-built catalog for instant answers; live Exa AI search as a fallback for
-  anything not in the catalog.
-
-  Always trigger this skill when the user wants a free/public API for any task — even if they
-  don't say "api-scout" by name. Trigger on: "search free apis for X", "find an api for X",
-  "free api for X", "any apis for Y", "is there a public api for X", "look up an api for X",
-  "public apis for X", "api scout", "what api should I use for X", "need an api that does X",
-  or when scoping a project/integration and a free API would help (weather, currency, geocoding,
-  auth, ML, etc.). This is the designated lookup source whenever searching for free APIs by topic
-  — check the catalog here before searching the open web.
+description: "Finds free and public developer APIs by topic or use case. Local catalog of ~1,586 APIs across 51 categories mirrored from public-apis, each with auth type, HTTPS and CORS support, plus live Exa search as fallback. Say 'find an api for X', 'free api for X', 'is there a public api for X', 'what api should I use for X', or when scoping an integration where a free API would help. This is the designated lookup, check it before searching the open web. For a SaaS free tier use free-for-dev-scout; for self-hosted software, selfhosted-scout."
 argument-hint: "[category | api query | 'refresh']"
 ---
 

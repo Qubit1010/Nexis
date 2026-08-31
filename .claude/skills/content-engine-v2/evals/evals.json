@@ -1,0 +1,41 @@
+{
+  "skill_name": "content-engine-v2",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build my content engine v2 from scratch — I want to see how it's different from the one you already built me",
+      "expected_output": "Resolves Aleem's personal brand. Does NOT read agency/personal-brand-voice.md or agency/personal-brand-pillars.md. Builds agency/personal-brand-product-marketing.md from context/me.md, context/current-priorities.md, agency-brain wiki pages, and Content Log post history — raw material, not the already-synthesized chain. Presents the draft for correction. Then writes agency/personal-brand-content-engine-v2.md with the 8-section shape (What we know, Hook patterns, Format set, Copywriting rules, Repurposing map, What this engine will not do, Assumptions to validate, The editing gate).",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Build the v2 engine for rw-winship using the new methodology",
+      "expected_output": "Resolves client-projects/rw-winship. Does NOT read any of that client's 07/08/13/14/17/18/09 files even though several exist. Builds client-projects/rw-winship/product-marketing.md from 01-overview.md and 02-what-they-want.md only (plus the agency-brain client brief if populated). Reports plainly if raw intake material is thin rather than falling back to the numbered chain. Then writes client-projects/rw-winship/content-engine-v2.md.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write a LinkedIn post for my personal brand about the OmniVoice mistake I made this week, using content engine v2",
+      "expected_output": "If agency/personal-brand-content-engine-v2.md doesn't exist yet, offers to BUILD it first rather than writing on a weaker basis silently. If it exists, writes a complete first-draft LinkedIn post, then visibly runs it through all Seven Sweeps and Expert Panel Scoring, and delivers the finished post WITH the gate's record attached — sweep sign-off plus final persona scores, all 7+, panel average 8+.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Write a LinkedIn post about our new pricing page",
+      "expected_output": "Does NOT trigger content-engine-v2 — no 'v2', 'engine 2', 'alternative', 'Seven Sweeps', or similar cue is present. This bare request belongs to content-engine (v1) or should be handled generically; content-engine-v2 must not silently claim it.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "What should I post about this week for the agency? Use content engine v2 if that helps.",
+      "expected_output": "Refuses to ideate, same standing rule as v1 — this skill does not decide topics. Points at wherever the subject's topic/pillar source lives or asks for a topic directly. Does not generate a ranked idea list or a calendar.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Take that LinkedIn post and turn it into an Instagram caption using the v2 engine",
+      "expected_output": "Structural translation, not copy-paste — the Instagram caption is a new argument built for that platform's mechanics, not the LinkedIn post with line breaks changed. The repurposed variant re-enters the Seven Sweeps + Expert Panel Scoring gate rather than inheriting the original post's already-passed gate record.",
+      "files": []
+    }
+  ]
+}

@@ -85,20 +85,23 @@ mark them as such.
 
 ---
 
-## A known conflict in the repo, stated rather than hidden
+## A known conflict in the repo — resolved 2026-08-31, history kept for context
 
-Two existing files give different answers about LinkedIn body links, hashtag counts and whether
-shorter is better:
+Two existing files once gave different answers about LinkedIn body links, hashtag counts and
+whether shorter is better:
 
-- `content-engine/references/platform-formats.md` gives hard numbers, traced to
-  `marketing-advisor`'s 234-source NotebookLM synthesis, which is practitioner-heavy.
-- `copy-conversion/references/platform-formatting.md` calls the same claims unverified against
+- `content-engine/references/platform-formats.md` gave hard numbers, traced to the deleted
+  `marketing-advisor`'s 234-source NotebookLM synthesis, which was practitioner-heavy.
+- `copy-conversion/references/platform-formatting.md` called the same claims unverified against
   a tiered corpus.
 
-**These specs side with `copy-conversion`'s epistemics**, because this family shares its tier
-discipline. Treat `content-engine`'s numbers as **practitioner-tier convention** — usable, but
-labelled, and not to be quoted to a client as measured fact. Cite one file or the other, never
-both, and never present them as agreeing.
+`marketing-advisor` was deleted 2026-08-27 for an integrity failure, and `platform-formats.md`
+was rewritten 2026-08-28 to drop the numeric claims it can no longer trace. One qualitative
+claim survived that rewrite uncited ("short paragraphs with white space... dense blocks get
+skimmed"); as of 2026-08-31 it cross-cites `copy-conversion/platform-formatting.md`'s now-sourced
+LinkedIn structure row instead of standing alone. **These specs still side with
+`copy-conversion`'s epistemics** as the standing rule for this family: cite one file or the
+other, never both, and never present a craft-tier convention as measured fact.
 
 Separately: **how a post is formatted for a platform is `copy-conversion`'s territory**
 (`platform-formatting.md`, its `format` mode). These specs cover what the *format* is as a

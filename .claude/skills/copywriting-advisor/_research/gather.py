@@ -169,6 +169,18 @@ JUNK_DOMAINS = {
     "upwork.com", "fiverr.com", "indeed.com", "glassdoor.com", "ziprecruiter.com",
 }
 
+# Named-creator primary sources living on an otherwise-junked domain. Added 2026-08-31,
+# Aleem's explicit call, mirroring content-advisor's identical exemption (added same
+# day, same reasoning): q30 exists specifically to find named creators explaining their
+# OWN formatting technique, and the clearest instance the pass found is the creator's
+# own linkedin.com post. Exact-URL allowlist, not a domain or name-pattern rule - see
+# content-advisor/_research/gather.py's CREATOR_PRIMARY_SOURCE_URLS for the full
+# rationale against broadening this. Raw, not normalized - norm_url() is defined below,
+# so is_junk() normalizes both sides at call time instead.
+CREATOR_PRIMARY_SOURCE_URLS = (
+    "https://www.linkedin.com/posts/justinwelsh_my-strategy-when-i-started-was-pretty-basic-activity-7415011488983203840-7Rmy",
+)
+
 MIRROR_SUFFIXES = (".google.cn", ".google.co.jp", ".google.de", ".google.fr")
 
 # A source has to be plausibly about persuasive writing, the psychology under it, or
@@ -215,6 +227,18 @@ SUFFIX = (" Give specific numbers, named frameworks, effect sizes and concrete s
           "opinion. Where a widely repeated statistic has no traceable primary source, "
           "say so explicitly. Where the sources disagree, preserve the disagreement "
           "rather than picking a side.")
+
+# CRAFT_SUFFIX contains no _SCI_HINT token (no "study", "paper", "journal", "trial",
+# "peer-reviewed"), unlike SUFFIX above. That is not cosmetic: SUFFIX's "Distinguish
+# peer-reviewed evidence..." phrase is exactly what routed every craft pass in this file
+# under `scientific` mode historically (q27's own comment documents the resulting
+# failure). Added 2026-08-31 alongside q30, the first craft pass to explicitly request
+# `--mode practical` rather than rely on auto-detection - see run_pass().
+CRAFT_SUFFIX = (
+    " Show concrete worked examples, named creators and practitioners, current platform "
+    "specifications with dates, and step-by-step technique. Prefer teardowns, annotated "
+    "breakdowns and practitioner walkthroughs over summaries. Where a widely repeated "
+    "claim has no traceable origin, say so.")
 
 # One deep pass per subject the hub has to be able to answer on. q16 is what the
 # factcheck mode leans on hardest, so it targets provenance and replication directly
@@ -493,6 +517,22 @@ QUERIES = {
         "copy, and practitioner commentary on which older copywriting rules stopped "
         "working."
     ),
+    # copy-conversion/references/platform-formatting.md cites this corpus for LinkedIn
+    # line-break/whitespace structure and Instagram caption structure, but neither claim
+    # had a source - added 2026-08-31 specifically to close that gap, anchored on named
+    # creators per q27's own retrieval-trap lesson rather than "best practices" phrasing.
+    "q30_linkedin_instagram_line_formatting_craft": (
+        "How specific named LinkedIn ghostwriters and Instagram caption writers, such as "
+        "Justin Welsh, Katelyn Bourgoin, Amanda Natividad and Dan Koe, explain their own "
+        "line-break, paragraph-length and white-space technique in a text post in 2026, "
+        "drawn from their own newsletter, YouTube video or a named third-party teardown "
+        "of their formatting rather than a generic social-media best-practices listicle, "
+        "and how they treat the caption and the image as one unit on Instagram "
+        "specifically. Where a widely repeated claim that short paragraphs and frequent "
+        "line breaks improve readability has no traceable primary source or named "
+        "creator explanation behind it, say so explicitly rather than restating it as "
+        "settled."
+    ),
 }
 
 
@@ -551,6 +591,7 @@ CRAFT_PASSES = {
     "q25_cta_microcopy_craft", "q26_product_description_craft",
     "q27_platform_format_conventions_craft",
     "q28_copywriting_2026_technique_shifts",
+    "q30_linkedin_instagram_line_formatting_craft",
 }
 
 
@@ -585,14 +626,19 @@ def tier_of(u, topics=None):
 
 def is_junk(url, title):
     d = domain_of(url)
-    if d in JUNK_DOMAINS or any(d.endswith("." + j) for j in JUNK_DOMAINS):
+    exempt = norm_url(url) in {norm_url(u) for u in CREATOR_PRIMARY_SOURCE_URLS}
+    if not exempt and (d in JUNK_DOMAINS or any(d.endswith("." + j) for j in JUNK_DOMAINS)):
         return "social/UGC"
     if any(d.endswith(m) for m in MIRROR_SUFFIXES):
         return "localized mirror"
     # Normalize separators to spaces so short tokens match as whole words. Plain
     # substring matching lets "hou-SEO-frepresentatives" through; \b would not help
     # either, since underscores count as word characters.
-    hay = " " + re.sub(r"[^a-z0-9]+", " ", f"{title} {url}".lower()).strip() + " "
+    # For an exempted URL the HOST is excluded from the haystack (matches
+    # content-advisor's platform-doc treatment): linkedin.com is itself a topic token,
+    # so leaving it in would let anything added to the exemption list pass for free.
+    subject = f"{title} {urlsplit(url).path}" if exempt else f"{title} {url}"
+    hay = " " + re.sub(r"[^a-z0-9]+", " ", subject.lower()).strip() + " "
     for tok in TOPIC_TOKENS:
         if len(tok) <= 4:
             if f" {tok} " in hay:
@@ -611,11 +657,19 @@ def run_pass(key, query):
         return
     log(f"START {key}")
 
+    # Craft passes get the clean suffix AND an explicit --mode, rather than trusting
+    # auto-detection on a query + suffix that (for every pass before q30) contained the
+    # word "peer-reviewed". Evidence passes are untouched: SUFFIX's science-register
+    # language is what correctly routes them, so it stays implicit for them.
+    craft = key in CRAFT_PASSES
+    suffix = CRAFT_SUFFIX if craft else SUFFIX
+    mode_args = ["--mode", "practical"] if craft else []
+
     def _attempt(extra):
         try:
             r = subprocess.run(
-                [sys.executable, str(RESEARCH_PY), "--query", query + SUFFIX,
-                 "--depth", "deep", "--json", *extra],
+                [sys.executable, str(RESEARCH_PY), "--query", query + suffix,
+                 "--depth", "deep", "--json", *mode_args, *extra],
                 capture_output=True, text=True, encoding="utf-8", errors="replace",
                 timeout=1800,
             )
@@ -868,6 +922,18 @@ def _selftest():
     assert is_junk("https://linkedin.com/pulse/copywriting", "Copywriting") == "social/UGC"
     assert is_junk("https://medium.com/@x/copywriting", "Copywriting") == "social/UGC"
     assert is_junk("https://reddit.com/r/copywriting", "Copywriting") == "social/UGC"
+
+    # named-creator primary source exemption (2026-08-31) - exact-URL, not per-domain/person.
+    # The domain gate is skipped, but the topic guard still independently applies: this
+    # corpus's TOPIC_TOKENS is scoped to copywriting vocabulary (headline, CTA, subject
+    # line...), narrower than content-advisor's, and this exact title contains none of
+    # it - so it still resolves "off-topic" here even though the exemption fires. That is
+    # correct, not a bug: the exemption removes the domain block, not the relevance bar.
+    assert is_junk(
+        "https://www.linkedin.com/posts/justinwelsh_my-strategy-when-i-started-was-pretty-basic-activity-7415011488983203840-7Rmy",
+        "My strategy when I started was pretty basic") == "off-topic"
+    assert is_junk("https://www.linkedin.com/posts/justinwelsh_some-other-post-1234567890",
+                   "Some other post") == "social/UGC"
     # short tokens must match as whole words, not substrings
     assert is_junk("https://example.com/octopus-anatomy", "Octopus anatomy") == "off-topic"
     assert is_junk("https://example.com/cta-placement", "CTA placement") is None

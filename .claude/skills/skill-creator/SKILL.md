@@ -10,6 +10,7 @@ A skill for creating new skills and iteratively improving them.
 At a high level, the process of creating a skill goes like this:
 
 - Decide what you want the skill to do and roughly how it should do it
+- Run the critic pass on that design before writing anything (`references/design-review.md`)
 - Write a draft of the skill
 - Create a few test prompts and run claude-with-access-to-the-skill on them
 - Help the user evaluate the results both qualitatively and quantitatively
@@ -18,6 +19,7 @@ At a high level, the process of creating a skill goes like this:
 - Rewrite the skill based on feedback from the user's evaluation of the results (and also if there are any glaring flaws that become apparent from the quantitative benchmarks)
 - Repeat until you're satisfied
 - Expand the test set and try again at larger scale
+- Run the adversarial audit on the finished skill, in a fresh context (`references/design-review.md`)
 
 Your job when using this skill is to figure out where the user is in this process and then jump in and help them progress through these stages. So for instance, maybe they're like "I want to make a skill for X". You can help narrow down what they mean, write a draft, write the test cases, figure out how they want to evaluate, run all the prompts, and repeat.
 
@@ -53,6 +55,10 @@ Start by understanding the user's intent. The current conversation might already
 3. What's the expected output format?
 4. Should we set up test cases to verify the skill works? Skills with objectively verifiable outputs (file transforms, data extraction, code generation, fixed workflow steps) benefit from test cases. Skills with subjective outputs (writing style, art) often don't need them. Suggest the appropriate default based on the skill type, but let the user decide.
 
+**Treat the user's proposal as a hypothesis, not a specification.** Whatever structure, taxonomy, tool choice or step sequence they arrive with is their best guess before anyone looked at the problem. Adopting it wholesale anchors the whole build to it. Research the problem independently, and when you think a different decomposition is better, say so explicitly and say why rather than quietly building what was asked for.
+
+**Then ask whether the skill should exist at all.** Does it unblock work already committed to a named client or a named deliverable currently in flight? That is the pull rule in `context/goals.md`. If the answer is no, say that plainly before writing anything and let the user decide. This is a real gate: "we could build this and it would be good" is not the same as "something is blocked without it," and this repo's own history is a long list of well-argued builds that passed the first test and failed the second.
+
 ### Interview and Research
 
 Proactively ask questions about edge cases, input/output formats, example files, success criteria, and dependencies. Wait to write test prompts until you've got this part ironed out.
@@ -64,7 +70,13 @@ Check available MCPs - if useful for research (searching docs, finding similar s
 Based on the user interview, fill in these components:
 
 - **name**: Skill identifier
-- **description**: When to trigger, what it does. This is the primary triggering mechanism - include both what the skill does AND specific contexts for when to use it. All "when to use" info goes here, not in the body. Note: currently Claude has a tendency to "undertrigger" skills -- to not use them when they'd be useful. To combat this, please make the skill descriptions a little bit "pushy". So for instance, instead of "How to build a simple fast dashboard to display internal Anthropic data.", you might write "How to build a simple fast dashboard to display internal Anthropic data. Make sure to use this skill whenever the user mentions dashboards, data visualization, internal metrics, or wants to display any kind of company data, even if they don't explicitly ask for a 'dashboard.'"
+- **description**: What the skill does, and when to reach for it. This is the primary triggering mechanism, and **it is loaded into context on every single turn whether or not the skill is used**, so every character is a permanent tax on every request. Budget 350-450 characters.
+
+  **Keep in the description:** what it does; the boundary against sibling skills (this genuinely earns its place here, because overlapping skills stealing each other's triggers is a real and documented failure mode in this repo); and 3-6 *distinct* trigger contexts.
+
+  **Push down into the body:** input-format enumerations, output paths and file structure, step counts, build history, and long synonym lists. A 40-item list of near-synonyms for the same concept ("brand voice, voice guidelines, tone of voice, tone guidelines, voice and tone...") does not improve triggering on a current model; it just costs tokens forever. Name the concept once and trust the model to recognise its synonyms.
+
+  Older skills in this repo were written under a since-retired instruction to make descriptions "pushy" to combat undertriggering, which produced a mean of 1,083 characters and a worst case over 2,100. If you are editing one of those, compress it to the budget above rather than matching its style.
 - **compatibility**: Required tools, dependencies (optional, rarely needed)
 - **the rest of the skill :)**
 
@@ -466,6 +478,7 @@ The agents/ directory contains instructions for specialized subagents. Read them
 
 The references/ directory has additional documentation:
 - `references/schemas.md` — JSON structures for evals.json, grading.json, etc.
+- `references/design-review.md` — The critic pass (attack the design before building) and the adversarial audit (attack the finished skill in a fresh context)
 
 ---
 

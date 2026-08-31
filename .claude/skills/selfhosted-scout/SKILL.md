@@ -1,24 +1,6 @@
 ---
 name: selfhosted-scout
-description: >
-  Finds free, open-source, self-hosted software by topic or use case — the software you run on
-  your own server as an alternative to a SaaS product — sourced from a local catalog of ~1,240
-  projects across 83 categories (Analytics, CRM, CMS, E-commerce, File Transfer, Media Streaming,
-  Monitoring, Password Managers, Project Management, Note-taking, Video Conferencing, and more),
-  mirrored from github.com/awesome-selfhosted/awesome-selfhosted. Each entry includes license,
-  platform/language, and description. This is specifically about software you self-host (not a
-  hosted free tier — for as-a-Service free tiers use the free-for-dev-scout skill instead).
-  Pre-built catalog for instant answers; live Exa AI search as a fallback for anything not in
-  the catalog.
-
-  Always trigger this skill when the user wants an open-source or self-hosted alternative to a
-  SaaS product, or software to run on their own server — even if they don't say "selfhosted-
-  scout" by name. Trigger on: "self-hosted alternative to X", "open source alternative to X",
-  "what can I self-host for X", "free open source CRM/CMS/analytics/etc", "self host my own X",
-  "run my own X instead of paying for it", "open source X I can host myself", or when scoping
-  infrastructure and a self-hosted option would help. This is the designated lookup source
-  whenever searching for self-hosted software by topic — check the catalog here before searching
-  the open web.
+description: "Finds free, open-source, self-hosted software by topic: what you run on your own server instead of paying for a SaaS. Local catalog of ~1,240 projects across 83 categories mirrored from awesome-selfhosted, each with license, platform and description, with live Exa search as fallback. Say 'self-hosted alternative to X', 'open source alternative to X', 'what can I self-host for X', 'run my own X'. This is the designated lookup, check it before searching the open web. For a hosted free tier rather than something you host, use free-for-dev-scout."
 argument-hint: "[category | software query | 'refresh']"
 ---
 

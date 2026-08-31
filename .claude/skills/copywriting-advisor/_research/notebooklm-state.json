@@ -8,6 +8,8 @@
     "title": "Copywriting 2026 - AI Search, Law & Folklore (NexusPoint)"
   },
   "known_unfetchable": [
+    "https://www.linkedin.com/posts/justinwelsh_my-strategy-when-i-started-was-pretty-basic-activity-7415011488983203840-7Rmy",
+    "https://poddtoppen.se/podcast/1663203570/authority-in-the-wild/how-they-build-a-personal-brand-that-will-survive-ai-era-w-katelyn-bourgoin",
     "https://cazyweb.com/research/statistical-power-sample-size-ab-testing",
     "https://doi.org/10.1016/j.dss.2024.114340",
     "https://doi.org/10.1016/j.jbusres.2025.115645",
@@ -67,5 +69,9 @@
   "persuasion_part3": {
     "id": "ea384bc3-d95d-44e4-bd72-a5a5c820870e",
     "title": "Copywriting 2026 - Persuasion Evidence III (NexusPoint)"
+  },
+  "aisearch_law_part2": {
+    "id": "df776dca-094d-4959-aa53-00bd687fd7d5",
+    "title": "Copywriting 2026 - AI Search, Law & Folklore II (NexusPoint)"
   }
 }

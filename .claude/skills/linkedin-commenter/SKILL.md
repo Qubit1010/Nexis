@@ -1,28 +1,8 @@
 ---
 name: linkedin-commenter
-description: >
-  Finds today's best LinkedIn posts to comment on from Aleem's own target-profile list, then drafts a
-  brief, genuine, ready-to-paste comment under each one. This is the daily LinkedIn growth habit,
-  built because commenting is the only lever that adds reach without adding posts (his account is
-  reach-efficient but small, and posting is capped at 2x/week). Runs an Apify actor against
-  docs/linkedin-profiles-posts.txt, drops posts whose comment sections are already saturated, ranks
-  what is left, writes docs/linkedin-comments/YYYY-MM-DD.md, and fills in a drafted comment per post.
-  On request it also logs the finished batch to the Log tab of a running Google Sheet
-  (LINKEDIN_COMMENT_SHEET_ID) so the comment history survives across days. Use this skill whenever
-  Aleem wants to comment on LinkedIn, find posts worth commenting on, or work his engagement habit.
-  Trigger on "run the commenter", "linkedin comments", "what should I comment on today", "find posts
-  to comment on", "daily linkedin engagement", "comment targets", "draft comments", "who posted
-  today", "my commenting round", "engage on linkedin", "grow my linkedin", "linkedin growth run", or
-  any mention of commenting on other people's LinkedIn posts. Also trigger when he asks to add or
-  change profiles on the target list, when troubleshooting a run that came back thin or empty ("it
-  only gave me 2 posts", "is the apify actor broken", "why did it skip everything", anything about
-  saturated posts or the seen-ledger), and when he asks to save or log a commenting run to a sheet
-  ("save it in google sheet", "log this to the sheet", "save today's comments"). This does NOT write
-  his own LinkedIn posts (that is post-creator / content-engine) and does NOT send DMs or connection
-  requests (that is sales-playbook / leads-to-crm).
-argument-hint: [optional: "72h" after a gap, or a profile URL to add]
+description: 'Finds today''s best LinkedIn posts to comment on from Aleem''s target-profile list and drafts a brief, genuine, ready-to-paste comment under each. This is the daily growth habit: commenting adds reach without adding posts, which matters because his account is reach-efficient but small and posting is capped at 2x/week. Ranks by attention velocity against comment-section crowding, writes docs/linkedin-comments/YYYY-MM-DD.md. Commenting stays manual, no LinkedIn session is ever touched. Does not write his own posts (post-creator, content-engine) and never sends DMs.'
+argument-hint: '[optional: "72h" after a gap, or a profile URL to add]'
 ---
-
 # LinkedIn Commenter
 
 Turns a list of profiles into a dated file of posts worth commenting on, each with a drafted comment

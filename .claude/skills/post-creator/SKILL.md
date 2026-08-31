@@ -1,22 +1,6 @@
 ---
 name: post-creator
-description: >-
-  End-to-end post creation from the Weekly Posting Schedule sheet. Takes a schedule row
-  (topic + description + content mode + pillars + design templates), finds 8-12 sources
-  via the research skill's multi-engine deep search, loads them into a NotebookLM notebook
-  and queries it for a detailed Formal source summary and a Simplified one, writes the finished
-  LinkedIn/Instagram post in
-  Aleem's voice using the content-engine rules, drafts a companion Instagram Shorts/Reels
-  teaser sequence via the shorts-creator template, saves everything to a Google Doc, fills
-  the row's LinkedIn infographic + Instagram carousel + Shorts templates into paste-ready
-  Gemini image prompts, and writes the Doc link back into the row's Final Video/Post cell. Use
-  this skill whenever Aleem says "run the post creator", "create the post for
-  [topic/row]", "process my schedule", "next post", "make the post + image prompts for
-  [row]", "generate this week's content", "turn the schedule row into a post", "automate
-  my posting schedule", or names a topic that lives in the Weekly Posting Schedule. Also
-  use it when he asks to research + write + log a scheduled post in one go — even if he
-  doesn't say "post creator". One row at a time, with a review checkpoint before anything
-  is saved.
+description: "End-to-end post creation from the Weekly Posting Schedule sheet. Takes a schedule row, finds 8-12 sources via the research skill, loads them into NotebookLM and queries it for a formal and a simplified summary, writes the finished LinkedIn or Instagram post in Aleem's voice using the content-engine rules, drafts a companion Shorts teaser, saves everything to a Google Doc, fills the row's design templates into paste-ready image prompts, and writes the Doc link back to the row. One row at a time, with a review checkpoint before anything saves. Say 'run the post creator', 'create the post for X', 'next post', 'process my schedule'."
 ---
 
 # Post Creator
@@ -152,6 +136,23 @@ Read, if not already in context:
 - `agency/personal-brand-voice.md` — voice, and the 7 Unswappable **ingredients** every piece must contain
 - `agency/personal-brand-pillars.md` — the 4 **topical pillars** a piece is about. These are a different axis from the ingredients above; do not substitute one for the other
 - `.claude/skills/content-engine/references/platform-formats.md` — per-platform format specs
+- `.claude/skills/copy-conversion/references/platform-formatting.md` — **the literal formatting
+  mechanics** (line breaks, paragraph length, caption/image unity) for the platform(s) in play.
+  `platform-formats.md` above states the direction; this file carries the citations behind it.
+  Added 2026-08-31 after a generated post came back as dense, undifferentiated paragraphs
+  because this file was never in the reading list — `personal-brand-voice.md`'s "short
+  paragraphs, 1 idea per line" was never operationalized into a concrete rule. It now is: **1-3
+  sentences per paragraph, a blank line after the hook, one idea per paragraph** — this is craft
+  consensus among named practitioners, not a proven finding, and the row's Doc should read that
+  way (short paragraphs throughout), not as 3-5 sentence blocks with a blank line only between
+  them
+- `.claude/skills/content-advisor/references/format-specs/social-text.md` — LinkedIn/X/Threads
+  **structure** (what the post is about, thread pacing and closing) — a different axis from the
+  literal formatting above
+- `.claude/skills/content-advisor/references/format-specs/visual.md` — when the row includes a
+  carousel or infographic, its structure section (cover promise, frame count, closing frame)
+- `.claude/skills/social-media-advisor/references/platform-specs/<platform>.md` — how the
+  platform ranks and distributes, for awareness of what's algorithm-driven vs. a craft choice
 
 Then write the post for each active platform (`Platform = All` → LinkedIn and Instagram,
 else just the named one), honoring:

@@ -1,26 +1,6 @@
 ---
 name: podcast-repurposer
-description: >
-  Turns a long podcast transcript into a full short-form content package: the segments that clear
-  a transparent quality rank (count scales with episode length and quality, not a fixed number),
-  each with 5 text hooks, 3 A/B captions, and 3-5 long-form LinkedIn/Facebook posts. Built as a
-  4-template comparison harness so you can generate the package four different ways (one per
-  content methodology) and pick the best method before locking it into production. Client-agnostic
-  with a per-client "main voice file" that holds tone, segment criteria, and word limits.
-
-  Use this skill whenever Aleem (or a client like Min / Belle & Perry) wants to:
-  - "Turn this podcast into reels / short-form content", "repurpose this episode", "podcast to clips"
-  - "Make segments + hooks + captions + posts from this transcript"
-  - "Run the 4 templates", "compare the podcast repurposing approaches", "which method is best"
-  - Repurpose any long-form audio/video transcript into platform content at higher volume
-  - Onboard a new podcast client into the repurposing system (build their main voice file)
-
-  Also handles: "export to PDF", "convert output to PDF", "save as PDF" — runs scripts/md_to_pdf.py
-  on any output file(s) and writes a .pdf next to each .md.
-
-  Always trigger when a podcast/long-form transcript needs to become multiple short-form pieces,
-  even if the user doesn't say "skill". This is the text layer (segments, hooks, captions, posts);
-  actual clip cutting stays in the editor (Riverside/Canva).
+description: "Turns a long podcast transcript into a full short-form package: the segments that clear a transparent quality rank (the count scales with episode length and quality, not a fixed number), each with 5 text hooks, 3 A/B captions, and 3-5 long-form LinkedIn or Facebook posts. Built as a 4-template comparison harness so the package can be generated four ways and the best method picked before locking production. Client-agnostic, with a per-client voice file holding tone, segment criteria and word limits. Say 'repurpose this episode', 'turn this transcript into posts'."
 argument-hint: "<transcript path> --client <slug> [--template 1|2|3|4|5|all]"
 ---
 

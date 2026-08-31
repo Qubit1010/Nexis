@@ -426,6 +426,21 @@ numeric that appeared only in the craft layer is in `what-not-to-do.md`, not her
 Q28 specifically retrieved the platform documentation now tiered `[P*]`, which is the only
 reason this corpus can answer a specifications question at all.
 
+**Q29-Q30, added 2026-08-31.** Q27 and Q26's own craft sources (10 each) turned out to be
+generic scheduling-tool blog listicles with zero named practitioners - the exact anti-pattern
+this tier exists to avoid, discovered when a generated LinkedIn post came back as dense
+paragraphs with no real technique behind the claim. The retrieval trap was the same one
+copywriting's q27 already documented: querying "best practices"/"conventions" phrasing surfaces
+SaaS marketing blogs, not the creators who actually do the work. Q29 (LinkedIn/X/Threads) and
+Q30 (carousels) queried named creators directly instead (Justin Welsh, Dan Koe, Sahil Bloom,
+Jay Clouse and others), which is what now backs `social-text.md` and `visual.md`'s structure
+claims. A second issue surfaced during this refresh, not query phrasing: Exa returns no
+relevance score for this search mode, so `fuse.py`'s score-based tie-break silently sank every
+Exa-only result (all of q29/q30's best finds) below Tavily-sourced results scoring 0.5+
+regardless of actual quality - a gap in the shared `research` skill's cross-engine scoring, not
+specific to this corpus. Twelve sources hand-verified as genuinely on-target are pinned in
+`gather.py`'s `PINNED_CRAFT_URLS` rather than left to that tie-break.
+
 ---
 
 ## Live Query Additions

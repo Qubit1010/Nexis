@@ -1,23 +1,6 @@
 ---
 name: free-for-dev-scout
-description: >
-  Finds free developer-tier cloud, SaaS, and PaaS services by topic or use case, sourced from a
-  local catalog of ~1,250 services across 57 categories (Major Cloud Providers, CI/CD, Managed
-  Data Services, Hosting, Email, Log Management, Monitoring, Authentication, CDN, Static Site
-  Hosting, Generative AI, Analytics, and more), mirrored from github.com/ripienaar/free-for-dev.
-  This is specifically about as-a-Service offerings with a genuine free tier (not free trials,
-  not self-hosted software — for self-hosted alternatives use the selfhosted-scout skill instead).
-  Pre-built catalog for instant answers; live Exa AI search as a fallback for anything not in
-  the catalog.
-
-  Always trigger this skill when the user wants a free tier of a cloud/dev/SaaS service for
-  building or running something — even if they don't say "free-for-dev" by name. Trigger on:
-  "free tier for X", "free hosting for X", "any free CI/CD services", "free database hosting",
-  "free tier cloud provider", "what's free for devs", "free email sending service", "free CDN",
-  "free monitoring/logging service", "free authentication service", "does X have a free tier",
-  or when scoping a project and a free-tier service would help (hosting, CI, database, auth,
-  email, monitoring, storage, etc.). This is the designated lookup source whenever searching for
-  free developer/SaaS tiers by topic — check the catalog here before searching the open web.
+description: "Finds SaaS and developer services with genuinely usable free tiers, by topic. Local catalog of ~1,248 services mirrored from free-for-dev, each with what the free tier actually includes, plus live Exa search as fallback. Say 'free tier for X', 'what can I use for free for X', 'free hosting/database/monitoring', 'cheapest way to run X'. This is the designated lookup, check it before searching the open web. For software you host yourself use selfhosted-scout; for a public API, api-scout; for general business tools, free-tool-scout."
 argument-hint: "[category | service query | 'refresh']"
 ---
 

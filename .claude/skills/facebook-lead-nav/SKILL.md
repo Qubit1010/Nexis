@@ -1,21 +1,6 @@
 ---
 name: facebook-lead-nav
-description: >
-  Enriches the "Instant Facebook Leads" Google Sheet by turning Facebook group POST
-  links into the post author's canonical PROFILE URL. Column A holds group post URLs
-  (facebook.com/groups/{id}/posts/{id}/); for each not-yet-enriched row this drives a
-  logged-in Chrome via playwright-cli to open the post, find the author, drill to their
-  profile (the "View profile" step), and write Lead Name + Profile URL + Date Added back
-  to the row. This is the SOURCING step that feeds the leads-to-crm skill (Facebook
-  channel). Use this skill whenever Aleem wants to get/collect/scrape Facebook profile
-  URLs from group posts, enrich or fill in the Instant Facebook Leads sheet, resolve who
-  posted in a group, or run the Facebook lead navigation. Trigger on: "enrich the facebook
-  leads", "get the profile urls from the facebook posts", "fill profile urls in Instant
-  Facebook Leads", "resolve facebook post authors", "scrape facebook group post profiles",
-  "run the facebook lead nav", "turn these facebook post links into profiles", "who posted
-  these facebook posts". Do NOT trigger for pushing rows into a CRM or writing outreach
-  messages (that is leads-to-crm), for Instagram/LinkedIn sourcing, or for live
-  DM-reply / objection drafting (that is sales-playbook).
+description: "Enriches the Instant Facebook Leads Google Sheet by turning Facebook group POST links into the post author's canonical PROFILE URL. For each un-enriched row it drives a logged-in Chrome via playwright-cli to open the post, find the author, drill to their profile, and write the name, profile URL and date back to the row. This is the sourcing step that feeds the leads-to-crm Facebook channel. Say 'enrich the facebook leads', 'get profiles from these group posts'. Not for pushing rows into a CRM, which is leads-to-crm."
 ---
 
 # Facebook Lead Navigation (post → profile enrichment)

@@ -33,7 +33,7 @@ SOURCES = RESEARCH_DIR / "sources.json"
 STATE = RESEARCH_DIR / "notebooklm-state.json"
 LOG = RESEARCH_DIR / "notebooklm-push.log"
 
-EXE = Path(os.environ.get("APPDATA", "")) / "Python" / "Python314" / "Scripts" / "notebooklm.exe"
+EXE = Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "Python" / "Python312" / "Scripts" / "notebooklm.exe"
 
 # Which pass a source has to appear in to land in each notebook. A source carries several
 # topics, so first match wins and the buckets stay disjoint.

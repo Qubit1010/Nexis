@@ -69,7 +69,7 @@ Almost everything else is platform-specific convention, and convention is `[K]` 
 | Aspect | Guidance |
 |---|---|
 | First line | The whole game. It is what shows before "see more" - put the claim or tension there, never a preamble or a greeting |
-| Structure | Short paragraphs, generous line breaks. Dense blocks are skipped rather than read |
+| Structure | Short paragraphs (1-3 sentences, never more), one idea per paragraph, a blank line after the hook. Named LinkedIn ghostwriters converge on this independently (Vadym Petryshyn, Katarina Petrović); Pierre Herubel's framing is that people scan a post's shape before deciding to read it, not that they read it linearly. Justin Welsh: a wall of text drives an immediate scroll-past, and splitting one into short lines with white space measurably changed his own engagement `[K]` [s502][s501][s497]. **No `[C]`-tier source in either corpus tests this against a control** - treat it as convergent craft consensus, not a proven finding, and say so if a client asks for the study |
 | Length | Long is fine when the substance justifies it; length should follow what the reader needs to decide `[C]` [s24][s1] |
 | Links | Convention holds that in-post links suppress reach. **Unverified** - no source in this corpus tests it. Treat as a hypothesis, not a rule |
 | Ads | Sponsored content splits into intro text, headline, description; B2B guidance is benefits-led with explicit credibility signals `[K]` [s395] |
@@ -78,8 +78,8 @@ Almost everything else is platform-specific convention, and convention is `[K]` 
 
 | Aspect | Guidance |
 |---|---|
-| First line | Truncates early. The hook must survive one short line |
-| Structure | Caption carries the argument; the image carries the stop. They are one unit, never written separately |
+| First line | Truncates early (roughly 125 characters before the fold) - write the hook first, assume nothing after it is seen without a tap `[K]` [s505] |
+| Structure | Caption carries the argument; the image carries the stop, and a caption written without looking at the image reads as generic - name what's actually in the frame `[K]` [s505]. The split is by job, not a fixed length: an image-led post (a Reel, a strong visual) wants a caption under 100 characters so it doesn't slow the scroll; a trust-building or founder post wants 300-2,200 characters to address objections before the ask `[K]` [s504][s507]. They are one unit either way, never written separately |
 | Hashtags | Convention rather than evidence. No source here measures them |
 | Format split | Feed carousel, reel caption and story text are different jobs. Do not reuse one text across all three |
 
