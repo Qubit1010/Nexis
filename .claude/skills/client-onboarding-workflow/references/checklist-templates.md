@@ -158,7 +158,6 @@ Drawn from `context/team.md`. Override with the actual person if known.
 | CMS — Shopify | Areeba Noor |
 | Custom SaaS / MERN | Muzammil |
 | Business / data analysis | Kaleem |
-| 3D / Python automation | Ashhad |
 
 `Aleem` is always the default owner for Discovery rows (kickoff calls, scope confirmation,
 client communication) regardless of project type.
