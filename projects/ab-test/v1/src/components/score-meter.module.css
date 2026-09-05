@@ -1,0 +1,98 @@
+/* Three encodings of one value: a coloured position rule, the number, and a bar length.
+   Colour is never the only carrier, which is what makes it safe for a colour-blind reader. */
+
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.heat {
+  width: 3px;
+  align-self: stretch;
+  min-height: 38px;
+  border-radius: var(--r-pill);
+  background: var(--slate);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  min-width: 86px;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.bandLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.track {
+  width: 100%;
+  height: 4px;
+  background: var(--rule);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--r-pill);
+  background: var(--slate);
+  transform-origin: left center;
+  animation: draw var(--t-slow) both;
+}
+
+@keyframes draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.hot .heat,
+.hot .fill {
+  background: var(--ember);
+}
+.hot .bandLabel {
+  color: var(--ember-ink);
+}
+
+.warm .heat,
+.warm .fill {
+  background: var(--copper);
+}
+.warm .bandLabel {
+  color: var(--copper-ink);
+}
+
+.cold .heat,
+.cold .fill {
+  background: var(--slate);
+}
+.cold .bandLabel {
+  color: var(--slate);
+}
+
+.compact .value {
+  font-size: 22px;
+}
+.compact .body {
+  min-width: 64px;
+}

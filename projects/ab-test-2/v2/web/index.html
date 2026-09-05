@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reply Drafter</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>&#9998;</text></svg>">
+</head>
+<body>
+  <div class="shell">
+    <nav class="rail">
+      <div class="brand">
+        Reply Drafter
+        <small id="provider-badge">loading</small>
+      </div>
+      <div class="nav">
+        <a href="#/inbox" data-nav="inbox">Inbox</a>
+        <a href="#/prompt" data-nav="prompt">Prompt</a>
+        <a href="#/scoreboard" data-nav="scoreboard">Scoreboard</a>
+        <a href="#/bench" data-nav="bench">Bench</a>
+      </div>
+      <div class="rail-foot" id="rail-foot"></div>
+    </nav>
+    <main class="main" id="view"></main>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

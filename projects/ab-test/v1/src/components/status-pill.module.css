@@ -1,0 +1,37 @@
+/* The only rounded thing in the product, so status reads as a distinct kind of object. */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: var(--s-1) var(--s-3);
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* New is filled and loudest, because it is the one that needs an action. */
+.new {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.contacted {
+  border-color: var(--state-contacted);
+  color: var(--state-contacted);
+}
+
+.qualified {
+  border-color: var(--state-qualified);
+  color: var(--state-qualified);
+  background: rgba(44, 110, 73, 0.08);
+}
+
+.dead {
+  border-color: var(--rule-strong);
+  color: var(--state-dead);
+}

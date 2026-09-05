@@ -1,0 +1,24 @@
+.page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: var(--s-6) var(--s-5);
+}
+
+.panel {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+}
+
+.title {
+  font-size: 32px;
+}
+
+.error {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--danger);
+}

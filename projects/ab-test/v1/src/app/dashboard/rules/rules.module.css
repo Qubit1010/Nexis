@@ -1,0 +1,187 @@
+.header {
+  padding: var(--s-7) 0 var(--s-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.bands {
+  display: flex;
+  gap: var(--s-5);
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: var(--s-5) 0;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: var(--s-5);
+}
+
+.bandField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  width: 140px;
+}
+
+.bandLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hotLabel {
+  color: var(--ember-ink);
+}
+
+.warmLabel {
+  color: var(--copper-ink);
+}
+
+.bandNote {
+  flex: 1 1 240px;
+  font-size: 13px;
+  color: var(--ink-3);
+  padding-bottom: var(--s-2);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* One ruled line per rule, matching the ledger rhythm of the triage table. */
+.rule {
+  display: grid;
+  grid-template-columns: 28px minmax(160px, 1.4fr) 110px 120px minmax(120px, 1fr) 84px auto;
+  gap: var(--s-3);
+  align-items: center;
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (max-width: 1100px) {
+  .rule {
+    grid-template-columns: 28px 1fr 1fr;
+    row-gap: var(--s-2);
+  }
+}
+
+.ruleDisabled {
+  opacity: 0.5;
+}
+
+.position {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.cell {
+  min-width: 0;
+}
+
+.small {
+  min-height: 40px;
+  font-size: 14px;
+  padding: var(--s-1) var(--s-2);
+}
+
+.points {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-weight: 700;
+  text-align: right;
+}
+
+.ruleActions {
+  display: flex;
+  gap: var(--s-1);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.iconBtn {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--ink-3);
+  transition: color var(--t-fast), background var(--t-fast);
+}
+
+.iconBtn:hover:not(:disabled) {
+  color: var(--ink);
+  background: var(--sunken);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ember-ink);
+  cursor: pointer;
+}
+
+.columnHead {
+  display: grid;
+  grid-template-columns: 28px minmax(160px, 1.4fr) 110px 120px minmax(120px, 1fr) 84px auto;
+  gap: var(--s-3);
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--rule-strong);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+@media (max-width: 1100px) {
+  .columnHead {
+    display: none;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  padding: var(--s-5) 0 var(--s-8);
+}
+
+.status {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ok {
+  color: var(--success);
+}
+
+.bad {
+  color: var(--danger);
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: var(--s-3) 0 0;
+  max-width: 68ch;
+}

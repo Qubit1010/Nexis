@@ -1,0 +1,38 @@
+{
+  "name": "replylab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local workbench for drafting replies to inbound client enquiries and measuring whether the drafting prompt is improving.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -n api,ui -c yellow,cyan \"npm:dev:api\" \"npm:dev:ui\"",
+    "dev:api": "node --disable-warning=ExperimentalWarning --watch server/index.ts",
+    "dev:ui": "vite",
+    "start": "node --disable-warning=ExperimentalWarning server/index.ts",
+    "build": "vite build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "seed:demo": "node --disable-warning=ExperimentalWarning scripts/seed-demo.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.0",
+    "express": "^5.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.7.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9",
+    "vitest": "^3.2.4"
+  }
+}

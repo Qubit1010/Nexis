@@ -1,3 +1,6 @@
+# Draft content, not ready to publish
+content/
+
 # Secrets & local config
 .env
 .env.*

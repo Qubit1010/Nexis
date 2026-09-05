@@ -1,0 +1,197 @@
+/* The numbered intake column. Signature moment 2 in .builder/design-system.md. */
+
+.page {
+  min-height: 100dvh;
+  padding: var(--s-8) var(--s-5) var(--s-9);
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: var(--s-6) var(--s-4) var(--s-8);
+  }
+}
+
+.column {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.masthead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  margin-bottom: var(--s-6);
+}
+
+.title {
+  font-size: 44px;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  max-width: 15ch;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+.standfirst {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 52ch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each question is a band separated by a hairline, numbered in ember mono. */
+.question {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: var(--s-4);
+  padding: var(--s-6) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (max-width: 640px) {
+  .question {
+    grid-template-columns: 1fr;
+    gap: var(--s-3);
+    padding: var(--s-5) 0;
+  }
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ember-ink);
+  padding-top: 4px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  min-width: 0;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-4);
+}
+
+@media (max-width: 640px) {
+  .pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Service picker: real checkboxes, styled rows, 44px targets. */
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-2);
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .choices {
+    grid-template-columns: 1fr;
+  }
+}
+
+.legend {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 0 0 var(--s-3);
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 44px;
+  padding: var(--s-2) var(--s-3);
+  background: var(--surface);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--r-sm);
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+
+.choice:hover {
+  border-color: var(--ink-3);
+}
+
+.choice:has(input:checked) {
+  border-color: var(--ink);
+  background: var(--ember-wash);
+}
+
+.choice:has(input:focus-visible) {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.choice input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ember-ink);
+  cursor: pointer;
+}
+
+/* Honeypot. Off-screen rather than display:none, which some bots skip. */
+.trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  padding-top: var(--s-6);
+  flex-wrap: wrap;
+}
+
+/* Hairline box with a mono marker, matching the field-level error language.
+   Deliberately not a coloured side-tab: the whole system separates with rules, not slabs. */
+.summary {
+  display: flex;
+  gap: var(--s-2);
+  align-items: baseline;
+  padding: var(--s-3) var(--s-4);
+  margin-top: var(--s-5);
+  background: var(--danger-wash);
+  border: 1px solid var(--danger);
+  border-radius: var(--r-sm);
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.summary::before {
+  content: '/';
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.footer {
+  padding-top: var(--s-6);
+  font-size: 14px;
+}
