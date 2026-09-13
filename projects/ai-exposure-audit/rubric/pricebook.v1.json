@@ -1,0 +1,133 @@
+{
+  "version": "1.0.0",
+  "published": "2026-09-05",
+  "global_caveat": "Every price anchor in this audit comes from a single agency blog post publishing its own asking prices. It is not a market survey, a transaction dataset, or an independent benchmark. Present it as 'what one agency publicly asks', never as 'the market rate'. A client who pushes on this is right to.",
+  "anchors": [
+    {
+      "id": "agent_setup",
+      "label": "AI agent setup",
+      "amount": 20000,
+      "unit": "one-time",
+      "display": "$20,000 one-time",
+      "evidence_tier": "documented",
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "id": "agent_license",
+      "label": "AI agent license",
+      "amount": 2000,
+      "unit": "per month",
+      "display": "$2,000/mo",
+      "evidence_tier": "documented",
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "id": "audit_gateway",
+      "label": "AI audit gateway",
+      "amount": 5000,
+      "unit": "fixed",
+      "display": "$5,000 fixed",
+      "evidence_tier": "documented",
+      "sources": [
+        "s2"
+      ],
+      "note": "This is the price of the product you are holding."
+    },
+    {
+      "id": "outcome_workflow",
+      "label": "Outcome-based workflow",
+      "amount": 5000,
+      "unit": "per workflow saving 10+ hrs/wk",
+      "display": "$5,000 per workflow saving 10+ hrs/wk",
+      "evidence_tier": "documented",
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "id": "risk_premium",
+      "label": "Risk premium on outcome work",
+      "amount_low": 15,
+      "amount_high": 20,
+      "unit": "percent",
+      "display": "15-20% premium",
+      "evidence_tier": "documented",
+      "sources": [
+        "s2",
+        "s1"
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "accountable_delivery",
+      "name": "Accountable delivery",
+      "what_changes": "You stop selling the artifact and start selling ownership of the execution, with an SLA and a consequence attached.",
+      "attacks_dimensions": [
+        "artifact_billing",
+        "judgment_thinness"
+      ],
+      "anchor_ref": "risk_premium",
+      "evidence_tier": "practitioner",
+      "evidence_note": "Rests on the argument that AI plans confidently and executes badly, so accountability is the scarce good. Reasoning, not measurement.",
+      "sources": [
+        "s6",
+        "s12"
+      ]
+    },
+    {
+      "id": "outcome_ownership",
+      "name": "Outcome ownership",
+      "what_changes": "Priced on a realized result with a defined metric, baseline, window and attribution rule. You carry downside.",
+      "attacks_dimensions": [
+        "artifact_billing",
+        "price_anchor_erosion"
+      ],
+      "anchor_ref": "outcome_workflow",
+      "evidence_tier": "documented",
+      "evidence_note": "Outcome pricing is documented as the direction of travel, and WPP ties 20-25% of fees to performance. Whether it works for a small agency is not established anywhere in the corpus.",
+      "sources": [
+        "s2",
+        "s1",
+        "s12"
+      ]
+    },
+    {
+      "id": "strategy_positioning",
+      "name": "Strategy and positioning",
+      "what_changes": "Sell the judgment layer: what to build, for whom, and what not to do. The part AI plans badly and cannot be held to.",
+      "attacks_dimensions": [
+        "judgment_thinness",
+        "output_determinism",
+        "client_self_service"
+      ],
+      "anchor_ref": null,
+      "evidence_tier": "documented",
+      "evidence_note": "That strategy retains value is well supported. NO PRICE ANCHOR EXISTS in the corpus for strategy work. Any number quoted here would be invented.",
+      "sources": [
+        "s7",
+        "s8",
+        "s13"
+      ]
+    },
+    {
+      "id": "productized_ai",
+      "name": "Productized AI line",
+      "what_changes": "Not a repricing of existing work. A new line sold at published AI-services prices.",
+      "attacks_dimensions": [
+        "price_anchor_erosion",
+        "output_determinism"
+      ],
+      "anchor_ref": "agent_setup",
+      "evidence_tier": "documented",
+      "evidence_note": "Prices are documented as asking prices from one source. Demand at those prices is not established.",
+      "sources": [
+        "s2"
+      ]
+    }
+  ]
+}

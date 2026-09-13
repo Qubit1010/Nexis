@@ -40,9 +40,20 @@ it is actually the best opportunity on the board. Only reading it tells you whic
 ## What the signals mean
 
 **Reproduction is contested, 3.0 points.** The strongest opening available, weighted highest for
-that reason. Fires on the `Needs Reproduction` label or on anyone saying they cannot reproduce it.
-Automated proposal-firing cannot reproduce a bug; it can only pattern-match issue text. When the
-blocker is evidence rather than analysis, the incumbents' speed advantage is worth nothing.
+that reason. Fires on the `Needs Reproduction` label or on a **human** on the thread saying they
+cannot reproduce it. Automated proposal-firing cannot reproduce a bug; it can only pattern-match
+issue text. When the blocker is evidence rather than analysis, the incumbents' speed advantage is
+worth nothing.
+
+Bots are excluded on purpose. MelvinBot ends most proposals with a caveat that it could not
+reproduce the bug in its sandbox, which has no device, no file chooser and no bank connection. That
+is a fact about Melvin's harness, not about the bug. Across the twenty issues in the window on
+2026-09-09 this signal fired four times and all four were that caveat, so it was scoring "the
+strongest opening available" on the issues where a human had said nothing at all. Melvin's inability
+still counts, once, on the Melvin signal below.
+
+Phrases that mean the fix is **working** are also excluded. "I can no longer reproduce it after
+applying the fix" is a C+ confirming a patch, not a thread that is stuck.
 
 **Melvin's root cause, 2.0 points.** Scores high when MelvinBot posted nothing, or posted something
 short with no pinned line. Scores near zero when it cited real lines. Melvin is reviewed first, so a

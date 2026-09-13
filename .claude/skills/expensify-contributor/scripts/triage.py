@@ -51,9 +51,14 @@ LOW_CROWDING_PATTERNS = re.compile(
 # Signals that nobody has managed to reproduce the bug yet. This is the single best opportunity in
 # the whole process: on issue 98791, fourteen proposals had landed and the reviewer was still asking
 # for a reproduction three days later.
+#
+# Deliberately NOT in this pattern: "no longer reproduc". It reads like trouble and means the
+# opposite. On 98791 the C+ wrote "I can no longer reproduce it after applying the fix" - that is a
+# fix being confirmed, an issue on its way to closing, and matching it fired the single strongest
+# positive signal in the rubric on exactly the issues that were already solved.
 REPRO_TROUBLE = re.compile(
     r"can (?:anyone|you|someone) reproduce|unable to reproduce|cannot reproduce|can't reproduce|"
-    r"couldn't reproduce|could not reproduce|not able to reproduce|no longer reproduc|"
+    r"couldn't reproduce|could not reproduce|not able to reproduce|"
     r"needs? reproduction|how (?:did|do) you reproduce",
     re.IGNORECASE,
 )
@@ -78,15 +83,42 @@ MELVIN_HEDGING = re.compile(
     re.IGNORECASE)
 
 
+def _is_bot(login):
+    return login == "MelvinBot" or login.endswith("[bot]")
+
+
+def _strip_quotes(body):
+    """Drop blockquoted lines. A rival quoting the bot's caveat is still the bot's caveat."""
+    return "\n".join(ln for ln in body.splitlines() if not ln.lstrip().startswith(">"))
+
+
 def _c_plus_asking_for_repro(comments):
-    """Did anyone on the thread say they could not reproduce it? Returns the quote if so."""
+    """Did a *human* on the thread say they are blocked on reproducing it? Returns the quote if so.
+
+    Bots are excluded, and that exclusion is the point rather than a detail. MelvinBot closes most
+    of its proposals with a caveat that it could not reproduce the bug in its sandbox, because its
+    harness has no device, no real file chooser and no bank connection. Measured across the twenty
+    issues in the work window on 2026-09-09, this signal fired four times and all four were that
+    caveat. Not one was a human being stuck.
+
+    Counting it was wrong twice over. It is not evidence that reproduction is hard for a person with
+    a browser, which is the only reason this is the strongest opening in the process. And
+    MELVIN_HEDGING already scores that same sentence on the Melvin signal, so a single bot caveat
+    collected 3.0 for contested reproduction plus 2.0 for hedging: half the available points, from
+    one sentence, counted twice. That is what pushed three unremarkable frontend bugs to the top of
+    the board at 8.5 and above.
+
+    Melvin's own inability is still scored. It is scored once, on the signal built for it.
+    """
     for c in comments:
-        body = c.get("body") or ""
+        login = (c.get("user") or {}).get("login") or "?"
+        if _is_bot(login):
+            continue
+        body = _strip_quotes(c.get("body") or "")
         m = REPRO_TROUBLE.search(body)
         if m:
-            author = c.get("user", {}).get("login", "?")
             start = max(0, m.start() - 60)
-            return "%s: ...%s..." % (author, body[start:m.end() + 80].replace("\n", " ").strip())
+            return "%s: ...%s..." % (login, body[start:m.end() + 80].replace("\n", " ").strip())
     return None
 
 
@@ -247,9 +279,67 @@ def fmt(r):
     return "\n".join(out)
 
 
+# Real comment text taken off the live board on 2026-09-09. Every one of these was scored wrongly
+# by the first version of the reproduction signal, so they are pinned here as fixtures: they run
+# offline, they cannot drift when the issues change, and they encode *why* each case is what it is.
+REPRO_FIXTURES = [
+    # (name, comment dict, should_fire)
+    ("melvin sandbox caveat (#100609)", {
+        "user": {"login": "MelvinBot"},
+        "body": "I could not reproduce this in a test environment - the repro needs two brand-new "
+                "accounts plus a live Plaid bank connection, which isn't available here.",
+    }, False),
+    ("melvin platform note (#100463)", {
+        "user": {"login": "MelvinBot"},
+        "body": "Note this is a regression check only - desktop web can't reproduce the bug, since "
+                "`backHistory` was already a no-op outside mobile Chrome.",
+    }, False),
+    ("generic github bot", {
+        "user": {"login": "github-actions[bot]"},
+        "body": "The CI harness was unable to reproduce the failure.",
+    }, False),
+    # The archetype, from #98791: a human reviewer stuck on reproduction days after fourteen
+    # proposals landed. This is the whole reason the signal exists and it must keep firing.
+    ("C+ asking for a repro (#98791)", {
+        "user": {"login": "linhvovan29546"},
+        "body": "Can anyone reproduce the crash?",
+    }, True),
+    ("human blocked in their own words", {
+        "user": {"login": "someContributor"},
+        "body": "I spent an afternoon on this and I cannot reproduce it on either platform.",
+    }, True),
+    # A rival quoting the bot's caveat is still the bot's caveat.
+    ("human quoting the bot", {
+        "user": {"login": "someContributor"},
+        "body": "> I could not reproduce this in a test environment" + chr(10) * 2 + "Agreed, here is my proposal.",
+    }, False),
+    # Polarity: "no longer reproduces" is a fix being CONFIRMED, the opposite of contested.
+    ("C+ confirming the fix works (#98791)", {
+        "user": {"login": "linhvovan29546"},
+        "body": "LGTM! I can reproduce the crash by following his proposal, and I can no longer "
+                "reproduce it after applying the fix.",
+    }, False),
+]
+
+
+def _fixture_failures():
+    """Offline checks on the reproduction signal, which carries the most weight in the rubric."""
+    out = []
+    for name, comment, should_fire in REPRO_FIXTURES:
+        fired = _c_plus_asking_for_repro([comment]) is not None
+        if fired != should_fire:
+            out.append("repro fixture %r: expected %s, got %s" % (
+                name, "a hit" if should_fire else "no hit", "a hit" if fired else "no hit"))
+    return out
+
+
 def selftest():
     """Verify the rubric discriminates on issues whose outcomes are already known."""
     failures = []
+
+    # Offline fixtures first: they are fast, deterministic, and they cover the exact
+    # misclassifications found on the live board.
+    failures.extend(_fixture_failures())
 
     # 98791: fourteen proposals, and the reviewer was still asking for a reproduction days later.
     # The reproduction signal must fire here, because this is exactly the opening the skill targets.

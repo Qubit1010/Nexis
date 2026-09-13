@@ -28,6 +28,20 @@ git diff --stat HEAD
 
 This tells you what files were created or modified — use it as a concrete anchor for the summary. Don't rely on memory alone; the diff doesn't lie.
 
+Git cannot see the gitignored knowledge folders, and unclosed work has hidden there more than once. Scan them for anything newer than the last commit:
+
+```bash
+find context decisions references .claude/rules agency -type f -newermt "$(git log -1 --format=%ci)"
+```
+
+Then check the Codex pointer mirror, the one tracked artifact that falls out of date without anyone noticing:
+
+```bash
+python scripts/sync_agents_mirror.py --check
+```
+
+If it reports outdated or stale files, run it without `--check` before committing. Orphans (mirror folders with no canonical skill) are reported but never deleted, so decide those by hand.
+
 Also scan the conversation for:
 - Files created or significantly changed
 - Tools built, scripts written, features added

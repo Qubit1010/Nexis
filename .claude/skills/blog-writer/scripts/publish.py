@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
-SAVE_CONTENT = REPO_ROOT / ".claude" / "skills" / "content-engine" / "scripts" / "save_content.py"
+SAVE_CONTENT = REPO_ROOT / "tools" / "gdocs" / "save_content.py"
 
 
 def parse_markdown(md: str):

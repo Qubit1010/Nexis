@@ -1,0 +1,4 @@
+interface:
+  display_name: "Upwork Proposal Studio"
+  short_description: "Tailored cover letters and Google Doc proposals"
+  default_prompt: "Use $upwork-proposal-studio to write a cover letter, detailed proposal, or both for this Upwork job."

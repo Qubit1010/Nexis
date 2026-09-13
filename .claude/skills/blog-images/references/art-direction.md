@@ -1,7 +1,12 @@
 # Art direction contract
 
-Every value here comes from `client-projects/nexuspoint/15-brand-visual-identity.md`. This file is
-the operational restatement, not a second opinion. If the two disagree, `15` wins.
+Every value here comes from `agency/personal-brand-visual-identity.md`, extracted from the live
+aleemuh.com CSS. This file is the operational restatement, not a second opinion. If the two
+disagree, the identity file wins.
+
+**These images illustrate the personal brand, not the agency.** NexusPoint's palette lives in
+`agency/15-brand-visual-identity.md` and shares no hex values with this one. Agency-attributed
+lanes (`shorts-creator`, `carousel` Template-2, `hyperframes-reel`) use that. This one does not.
 
 ## The governing sentence
 
@@ -15,33 +20,36 @@ That is the whole brief. Everything below implements it.
 
 | Role | Hex | Use |
 |---|---|---|
-| Ground | `#02040A` | The canvas. Always. |
-| Deep surface | `#06090F` | A third depth, only where two are not enough |
-| Raised surface | `#0B0F17` | Panels, cards, containers |
-| Secondary | `#00B7FF` | The brand hue. Key illustration only, never small text |
-| **Accent** | `#A6DAFF` | **The single subject under discussion** |
-| Accent light | `#BAE6FD` | Hover/active derivatives only |
-| Text high | `#F1F5F9` | Headlines, primary labels |
-| Text mid | `#CBD5E1` | Body labels, captions |
-| Text muted | `#94A3B8` | Metadata, sub-labels. 8.00:1 on ground |
-| Border / non-text UI | `#64748B` | Strokes, dividers. 4.31:1. **Never text.** |
-| Success | `#4ADE80` | 11.4:1 |
-| Warning | `#FBBF24` | 12.6:1 |
-| Error | `#F87171` | 7.6:1. Failure markers |
+| Ground | `#000000` | The canvas. Always. Pure black, the site goes fully dark on OLED |
+| Surface | `#101010` | Panels, cards, containers |
+| Line | `#1D1E1F` | Hairlines and very subtle dividers |
+| **Accent** | `#02A1E1` | **The single subject under discussion.** 7.19:1, safe for text |
+| Accent hover | `#0289BF` | Deeper blue, secondary illustration weight. 5.33:1 |
+| Text high | `#FFFFFF` | Headlines, primary labels |
+| Text secondary | `#CCCCCC` | Body labels, captions. 13.08:1 |
+| Text muted | `#8A8A8A` | Metadata, sub-labels. 6.08:1 |
+| Border / non-text UI | `#5A5A5A` | Strokes, dividers. 3.04:1. **Never text.** |
+| Success | `#4ADE80` | |
+| Warning | `#FBBF24` | |
+| Error | `#F87171` | Failure markers |
 
-**`#475569` is retired.** It measures 2.71:1 and fails the body, large-text and non-text UI floors
-at once. `render.py` refuses any SVG containing it, and refuses any off-palette hex.
+`#CCCCCC`, `#8A8A8A` and `#5A5A5A` are **derived**, not taken from the site: aleemuh.com builds
+its greys from white at low opacity, which CSS can do and an SVG palette gate cannot. The
+derivation and the contrast maths are in the identity file.
+
+**`#475569` stays banned.** It measures 2.71:1 and fails the body, large-text and non-text UI
+floors at once. `render.py` refuses any SVG containing it, and refuses any off-palette hex.
 
 ## The accent rule, stated precisely
 
 **One accent *subject* per image, not one accent *shape*.**
 
 A subject can carry several marks that belong to it: a panel border, the nodes inside it, and the
-lines joining them are one subject if they are one idea. Two unrelated things both in `#A6DAFF` is
+lines joining them are one subject if they are one idea. Two unrelated things both in `#02A1E1` is
 the failure. If a reader cannot say in one phrase what the accent is pointing at, the hierarchy has
 failed.
 
-Everything not under discussion is `#64748B` stroke on `#0B0F17` fill. Contrast carries the meaning.
+Everything not under discussion is `#5A5A5A` stroke on `#101010` fill. Contrast carries the meaning.
 
 ## Type
 
@@ -59,12 +67,12 @@ Directly from `15` §6 plus the failure modes that make AI-made diagrams recogni
 - No isometric or faux-3D. Flat, orthographic, honest.
 - No stock photography, no glowing brains, no robot hands, no circuit-board textures.
 - No decorative iconography that carries no information.
-- No text below 14px, and no text in `#64748B`.
+- No text below 14px, and no text in `#5A5A5A`.
 - No more than one accent subject.
 
 ## Composition
 
-Canvas 1200 wide. Margin 72 left and right. Title block top, diagram middle, a thin `#64748B`
+Canvas 1200 wide. Margin 72 left and right. Title block top, diagram middle, a thin `#5A5A5A`
 divider at 0.4 opacity above a mono footer line carrying one real number.
 
 The footer number is not decoration. It is the article's own measured fact, and it is what makes

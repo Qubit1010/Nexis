@@ -1,0 +1,244 @@
+{
+  "id": "fixture-northgate",
+  "business": {
+    "name": "Northgate Studio",
+    "headcount": 8,
+    "avg_project_value": 400,
+    "positioning": "Fictional agency used as a test fixture. Not a real business."
+  },
+  "weights": {
+    "output_determinism": 0.2,
+    "client_self_service": 0.2,
+    "judgment_thinness": 0.2,
+    "artifact_billing": 0.2,
+    "price_anchor_erosion": 0.2
+  },
+  "rubric_version": "1.0.0",
+  "pricebook_version": "1.0.0",
+  "created_at": "2026-09-05T18:20:12.377Z",
+  "updated_at": "2026-09-05T18:21:09.657Z",
+  "lines": [
+    {
+      "id": "1fa5a51f-52a7-4c5c-af5c-812518f86250",
+      "name": "Marketing site builds",
+      "revenue_share_pct": 55,
+      "deliverable_description": "Full-stack marketing sites and frontends built in React, Next.js, Node.js, Framer, WordPress and Webflow. Mostly fixed-scope builds from a client brief or a supplied design. Client owns the strategy; we own the build.",
+      "pricing_model": "fixed",
+      "typical_price": 4500,
+      "scores": {
+        "output_determinism": {
+          "value": 4,
+          "reasoning": "Matches anchor 4: full-stack marketing sites/frontends from a client brief or supplied design are largely templatable into a usable draft, but still need expert implementation and QA across stacks.",
+          "provenance": "llm"
+        },
+        "client_self_service": {
+          "value": 4,
+          "reasoning": "Matches anchor 4: clients can ship acceptable sites with Webflow/Framer/WordPress and AI-assisted builders; you’re kept for speed/implementation quality more than unique capability when strategy/design is supplied.",
+          "provenance": "llm"
+        },
+        "judgment_thinness": {
+          "value": 5,
+          "reasoning": "Matches anchor 5: you state the client owns strategy and often supplies the design/brief, so the value is primarily execution against specs.",
+          "provenance": "llm"
+        },
+        "artifact_billing": {
+          "value": 5,
+          "reasoning": "Matches anchor 5: fixed-scope builds are paid on delivery of the site/frontend artifact with no stated outcome metric you’re accountable to.",
+          "provenance": "llm"
+        },
+        "price_anchor_erosion": {
+          "value": 4,
+          "reasoning": "Matches anchor 4 based on what is stated: low typical price and marketplace-sourced demand implies strong commoditization and AI-referenced negotiation pressure for web builds; no explicit evidence of collapse to justify a 5.",
+          "provenance": "llm"
+        }
+      },
+      "replacement": null,
+      "sort_order": 0
+    },
+    {
+      "id": "407d0601-ae82-4cee-b92d-5cb788896612",
+      "name": "CMS builds and migrations",
+      "revenue_share_pct": 20,
+      "deliverable_description": "WordPress, Webflow and Shopify builds. Theme setup, template customisation, plugin configuration and content migration against a supplied design or an existing site.",
+      "pricing_model": "fixed",
+      "typical_price": 3200,
+      "scores": {
+        "output_determinism": {
+          "value": 5,
+          "reasoning": "Matches anchor 5: theme setup, template customization, plugin config, and content migration against a supplied design/existing site are highly repeatable and templated deliverables.",
+          "provenance": "llm"
+        },
+        "client_self_service": {
+          "value": 5,
+          "reasoning": "Matches anchor 5: mainstream tools (WordPress/Webflow/Shopify installers, templates, plugins, AI helpers) let a client team member set up and customize an acceptable site quickly.",
+          "provenance": "llm"
+        },
+        "judgment_thinness": {
+          "value": 5,
+          "reasoning": "Matches anchor 5: the work is execution of configuration/migration against provided design or existing site; minimal strategy/taste is being sold.",
+          "provenance": "llm"
+        },
+        "artifact_billing": {
+          "value": 5,
+          "reasoning": "Matches anchor 5: fixed-price CMS builds are purchased as an artifact (configured site + migrated content) with no defined outcome accountability stated.",
+          "provenance": "llm"
+        },
+        "price_anchor_erosion": {
+          "value": 4,
+          "reasoning": "Matches anchor 4 based on what is stated: this is the most commoditized line (template + plugins) and typically faces AI/template price pressure; no explicit data that your own rates are collapsing to justify 5.",
+          "provenance": "llm"
+        }
+      },
+      "replacement": null,
+      "sort_order": 1
+    },
+    {
+      "id": "851a8657-4b2c-400b-88b8-34aea045017f",
+      "name": "Workflow automation",
+      "revenue_share_pct": 9,
+      "deliverable_description": "Custom AI systems, chatbots and workflow automation. n8n, Make and bespoke Python. Requires understanding the client's operation before anything can be built, and the work is judged on whether the process actually runs.",
+      "pricing_model": "fixed",
+      "typical_price": 6000,
+      "scores": {
+        "output_determinism": {
+          "value": 2,
+          "reasoning": "Matches anchor 2: each automation depends on discovery of the client’s operations and the substance is rebuilt per process, even if the general shape (bot/workflow) is recognizable.",
+          "provenance": "llm"
+        },
+        "client_self_service": {
+          "value": 3,
+          "reasoning": "Matches anchor 3: a capable generalist can build basic Make/n8n/Zapier-style workflows with mainstream tools and AI help, but typically won’t reach robust, production-grade reliability/integration depth.",
+          "provenance": "llm"
+        },
+        "judgment_thinness": {
+          "value": 3,
+          "reasoning": "Matches anchor 3: you need a defensible process design (what to automate, failure modes, permissions) and then substantial build/test work to make it run.",
+          "provenance": "llm"
+        },
+        "artifact_billing": {
+          "value": 2,
+          "reasoning": "Matches anchor 2: you state the work is judged on whether the process actually runs, implying real accountability beyond mere delivery, though the pricing is still fixed rather than full outcome-based risk.",
+          "provenance": "llm"
+        },
+        "price_anchor_erosion": {
+          "value": 2,
+          "reasoning": "Matches anchor 2: nothing in the description indicates clients are demanding AI discounts on this specific line; the higher typical price and integration/deployment complexity generally supports rates unless proven otherwise.",
+          "provenance": "llm"
+        }
+      },
+      "replacement": null,
+      "sort_order": 2
+    },
+    {
+      "id": "e99d6161-a07d-417a-b228-e1d691723efa",
+      "name": "Custom application builds",
+      "revenue_share_pct": 8,
+      "deliverable_description": "Full-stack MERN applications with AI integration. Multi-month builds with evolving requirements, auth, data modelling and third-party integrations.",
+      "pricing_model": "fixed",
+      "typical_price": 18000,
+      "scores": {
+        "output_determinism": {
+          "value": 1,
+          "reasoning": "Matches anchor 1: multi-month MERN apps with evolving requirements, auth, data modeling, and third-party integrations produce structurally different deliverables each time.",
+          "provenance": "llm"
+        },
+        "client_self_service": {
+          "value": 2,
+          "reasoning": "Matches anchor 2: clients can attempt no-code/AI-assisted app building, but typically cannot ship a robust custom SaaS with auth, integrations, and maintainability without specialist engineering.",
+          "provenance": "llm"
+        },
+        "judgment_thinness": {
+          "value": 2,
+          "reasoning": "Matches anchor 2: evolving requirements and architecture choices make the engagement judgment-led (scoping, tradeoffs, sequencing), with execution following those decisions.",
+          "provenance": "llm"
+        },
+        "artifact_billing": {
+          "value": 4,
+          "reasoning": "Matches anchor 4: fixed multi-month builds are still paid on delivery/milestones; success may be discussed but there’s no stated commercial consequence tied to business outcomes.",
+          "provenance": "llm"
+        },
+        "price_anchor_erosion": {
+          "value": 2,
+          "reasoning": "Matches anchor 2: the description provides no evidence of rate decline for this line specifically; custom app work is less directly commoditized than template web builds.",
+          "provenance": "llm"
+        }
+      },
+      "replacement": null,
+      "sort_order": 3
+    },
+    {
+      "id": "541b0e98-2bc1-48ca-8aff-14d14599cf5c",
+      "name": "Analytics and reporting",
+      "revenue_share_pct": 4,
+      "deliverable_description": "Turning raw client data into actionable insight. Dashboards and written analysis. The deliverable is a recommendation the client acts on, not a file.",
+      "pricing_model": "fixed",
+      "typical_price": 2800,
+      "scores": {
+        "output_determinism": {
+          "value": 3,
+          "reasoning": "Matches anchor 3: dashboards/written analysis can follow a templated skeleton, but the substance depends on the specific data, context, and interpretation.",
+          "provenance": "llm"
+        },
+        "client_self_service": {
+          "value": 4,
+          "reasoning": "Matches anchor 4: mainstream BI tools and AI (Excel/Sheets, Looker Studio, Power BI, ChatGPT) enable client teams to create acceptable dashboards and summaries; they keep you for speed/clarity.",
+          "provenance": "llm"
+        },
+        "judgment_thinness": {
+          "value": 2,
+          "reasoning": "Matches anchor 2: the stated deliverable is a recommendation the client acts on, which is primarily judgment/interpretation rather than production.",
+          "provenance": "llm"
+        },
+        "artifact_billing": {
+          "value": 3,
+          "reasoning": "Matches anchor 3: outcomes are implicitly relevant (actionable insight), but with fixed pricing and no stated metric window, the invoice likely doesn’t change if the client doesn’t get results.",
+          "provenance": "llm"
+        },
+        "price_anchor_erosion": {
+          "value": 3,
+          "reasoning": "Matches anchor 3 based on what is stated: AI has made “analysis and insights” easier to request cheaply, making it harder to win at old rates; no explicit evidence of clients citing AI discounts on this line to justify 4–5.",
+          "provenance": "llm"
+        }
+      },
+      "replacement": null,
+      "sort_order": 4
+    },
+    {
+      "id": "c2708bfd-4066-4d0c-a825-9e4fe1d2aaf8",
+      "name": "Retained marketing",
+      "revenue_share_pct": 4,
+      "deliverable_description": "Growth strategy, SEO and social media management. Ongoing content production and posting, plus keyword and on-page work.",
+      "pricing_model": "retainer",
+      "typical_price": 2000,
+      "scores": {
+        "output_determinism": {
+          "value": 4,
+          "reasoning": "Matches anchor 4: ongoing SEO/social/content has a repeatable structure (content calendar, posts, on-page checklists) and AI can generate usable drafts that need expert editing and oversight.",
+          "provenance": "llm"
+        },
+        "client_self_service": {
+          "value": 5,
+          "reasoning": "Matches anchor 5: a single in-house marketer can produce acceptable social posts, drafts, and basic SEO tasks using tools they already pay for (CMS, schedulers, AI writing tools).",
+          "provenance": "llm"
+        },
+        "judgment_thinness": {
+          "value": 3,
+          "reasoning": "Matches anchor 3: growth strategy requires some judgment, but much of the stated scope is ongoing production/posting plus routine keyword and on-page work.",
+          "provenance": "llm"
+        },
+        "artifact_billing": {
+          "value": 4,
+          "reasoning": "Matches anchor 4: on a retainer you’re paid for ongoing delivery/activities; performance may be watched informally, but no defined outcome accountability is stated.",
+          "provenance": "llm"
+        },
+        "price_anchor_erosion": {
+          "value": 4,
+          "reasoning": "Matches anchor 4 based on what is stated: content production is heavily AI-exposed and commonly faces AI-referenced negotiation; the low retainer price ($300) is consistent with a market where rates are pressured.",
+          "provenance": "llm"
+        }
+      },
+      "replacement": null,
+      "sort_order": 5
+    }
+  ]
+}

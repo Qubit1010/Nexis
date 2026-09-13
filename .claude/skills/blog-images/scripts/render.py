@@ -24,19 +24,21 @@ REPO = Path(__file__).resolve().parents[4]
 FONT_DIR = REPO / "projects" / "reel-engine" / "public" / "fonts"
 FACES = {"Urbanist-Regular.woff2": 400, "Urbanist-Bold.woff2": 700}
 
-# The palette contract from 15-brand-visual-identity.md sections 3 and 6.
-# #475569 is deliberately absent: it is retired and fails AA at 2.71:1.
+# The palette contract from agency/personal-brand-visual-identity.md.
+# These images illustrate aleemuh.com, which is the personal brand, not NexusPoint.
+# The agency palette in agency/15-brand-visual-identity.md is a different system and
+# shares no hex values with this one; do not mix them.
+# #475569 stays banned: retired, 2.71:1, fails AA.
 PALETTE = {
-    "#02040A": "ground",
-    "#06090F": "deep surface",
-    "#0B0F17": "raised surface",
-    "#00B7FF": "secondary",
-    "#A6DAFF": "accent",
-    "#BAE6FD": "accent light",
-    "#F1F5F9": "text high",
-    "#CBD5E1": "text mid",
-    "#94A3B8": "text muted",
-    "#64748B": "border / non-text UI",
+    "#000000": "ground",
+    "#101010": "surface",
+    "#1D1E1F": "line",
+    "#02A1E1": "accent",
+    "#0289BF": "accent hover",
+    "#FFFFFF": "text high",
+    "#CCCCCC": "text secondary",
+    "#8A8A8A": "text muted",
+    "#5A5A5A": "border / non-text UI",
     "#4ADE80": "success",
     "#FBBF24": "warning",
     "#F87171": "error",
@@ -80,7 +82,7 @@ def audit(svg: str) -> list[str]:
     stray = hexes - {k.upper() for k in PALETTE}
     if stray:
         problems.append(f"off-palette colours: {sorted(stray)}")
-    accent = len(re.findall(r"#A6DAFF", svg, re.I))
+    accent = len(re.findall(r"#02A1E1", svg, re.I))
     if accent == 0:
         problems.append("no accent element: the single subject under discussion is unmarked")
     return problems
@@ -94,7 +96,7 @@ def render(svg_path: Path, out: Path, scale: int = 2) -> Path:
     html = (
         "<!doctype html><meta charset='utf-8'><style>"
         f"{font_css()}"
-        "html,body{margin:0;padding:0;background:#02040A;}"
+        "html,body{margin:0;padding:0;background:#000000;}"
         f"svg{{display:block;width:{w}px;height:{h}px;}}"
         "</style>" + svg
     )
@@ -122,23 +124,23 @@ def selftest() -> int:
         return 1
 
     svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
-  <rect width="600" height="300" fill="#02040A"/>
-  <rect x="40" y="40" width="240" height="120" rx="10" fill="#0B0F17" stroke="#64748B"/>
+  <rect width="600" height="300" fill="#000000"/>
+  <rect x="40" y="40" width="240" height="120" rx="10" fill="#101010" stroke="#5A5A5A"/>
   <text x="60" y="88" font-family="Urbanist" font-weight="700" font-size="26"
-        fill="#F1F5F9">Legible at 26px</text>
+        fill="#FFFFFF">Legible at 26px</text>
   <text x="60" y="124" font-family="Urbanist" font-weight="400" font-size="16"
-        fill="#94A3B8">Muted label, 8.00:1 on ground</text>
-  <rect x="320" y="40" width="240" height="120" rx="10" fill="#0B0F17" stroke="#A6DAFF"/>
+        fill="#8A8A8A">Muted label, 6.08:1 on ground</text>
+  <rect x="320" y="40" width="240" height="120" rx="10" fill="#101010" stroke="#02A1E1"/>
   <text x="340" y="88" font-family="Urbanist" font-weight="700" font-size="26"
-        fill="#A6DAFF">The subject</text>
+        fill="#02A1E1">The subject</text>
   <text x="40" y="230" font-family="ui-monospace, Consolas, monospace" font-size="15"
-        fill="#CBD5E1">mono: 0123456789 / machine output</text>
+        fill="#CCCCCC">mono: 0123456789 / machine output</text>
 </svg>"""
     t = Path(tempfile.mkdtemp())
     (t / "s.svg").write_text(svg, encoding="utf-8")
 
     print("2. palette audit catches a retired colour")
-    bad = audit(svg.replace("#64748B", RETIRED))
+    bad = audit(svg.replace("#5A5A5A", RETIRED))
     if any(RETIRED in p for p in bad):
         print("   PASS: retired colour rejected")
     else:
@@ -167,10 +169,10 @@ def selftest() -> int:
 
     print("5. the rendered ground is the brand ground, not white")
     px = im.convert("RGB").getpixel((5, 5))
-    if px != (0x02, 0x04, 0x0A):
-        print(f"   FAIL: corner pixel {px}, expected (2, 4, 10)")
+    if px != (0x00, 0x00, 0x00):
+        print(f"   FAIL: corner pixel {px}, expected (0, 0, 0)")
         return 1
-    print("   PASS: ground is #02040A")
+    print("   PASS: ground is #000000")
 
     print("6. text actually rendered (ink present where the headline sits)")
     crop = im.convert("RGB").crop((110, 130, 560, 190))

@@ -5,6 +5,9 @@
 - css   : deterministic CSS-schema -> rows. Fast, stable, free. Best when the DOM is regular.
 - llm   : schema-driven LLM extraction -> clean rows. For messy/varied pages where CSS breaks.
           This is the "well-formatted data" answer. OpenAI structured output, mirrors research/synthesize.py.
+          OpenAI primary, Claude Code CLI fallback -- both the repo's OpenAI and Anthropic API keys ran
+          out of credit (2026-09-08), so the CLI (billed on Aleem's Claude subscription, not the dead
+          API key) is the path that actually runs right now. See _claude_code_json.
 
 CSS schema (compatible with crawl4ai's JsonCssExtractionStrategy shape):
     {"container": ".card", "fields": [
@@ -17,7 +20,10 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
@@ -32,6 +38,9 @@ LLM_FALLBACK = "gpt-5.4-nano"  # was gpt-4.1-mini, which no longer exists on the
 # accepting it degrades to a normal call instead of failing the run.
 LLM_REASONING = {"effort": "minimal"}
 MAX_INPUT_CHARS = 48_000       # keep the LLM call inside token budget
+
+CLAUDE_CODE_MODEL = "haiku"    # cheapest tier; extraction is mechanical field-picking, not analysis
+CLAUDE_CODE_TIMEOUT = 60
 
 
 # ---- CSS extraction ---------------------------------------------------------
@@ -91,14 +100,51 @@ def _responses_json(client, model: str, system: str, user: str) -> str:
         raise
 
 
+def _claude_code_json(system: str, user: str, model: str = CLAUDE_CODE_MODEL) -> str:
+    """Shell out to the Claude Code CLI for one-shot extraction. Used when the OpenAI key has no
+    credit and the repo's own ANTHROPIC_API_KEY is also dead (both confirmed out 2026-09-08) --
+    this runs against Aleem's Claude Code subscription instead of either dead API key.
+
+    --disallowedTools "*" --disable-slash-commands is what makes this cheap: without them the CLI
+    loads the full agentic system prompt + tool schemas + this project's CLAUDE.md/skills catalog
+    on every call (measured ~44K cache-creation tokens, ~$0.09/call); with them it's a bare
+    completion (measured ~$0.003-0.004/call, 0 cache-creation). --effort low keeps it a fast
+    single-shot answer, not a reasoning pass -- this is mechanical field-picking, not analysis.
+
+    cwd=tempdir is load-bearing, not cosmetic: run from inside this repo, the CLI still detects
+    the Nexis project and fires its SessionStart hook (the 'superpowers' skill-check reminder).
+    A rigid 'return ONLY valid JSON' instruction usually survives that noise, but a sibling call
+    for open-ended prose (leads-to-crm's messages.py) came back as meta-commentary about checking
+    the skill catalog instead of the requested text (measured live 2026-09-09) -- same risk here
+    on a less-rigid schema. Running from a directory with no project markers means the hook never
+    fires at all.
+    """
+    if not shutil.which("claude"):
+        raise RuntimeError("claude CLI not found on PATH")
+    cmd = ["claude", "-p", user, "--model", model, "--output-format", "json",
+           "--system-prompt", system, "--disallowedTools", "*", "--disable-slash-commands",
+           "--effort", "low"]
+    p = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace",
+                       timeout=CLAUDE_CODE_TIMEOUT, cwd=tempfile.gettempdir())
+    if p.returncode != 0:
+        raise RuntimeError(f"claude CLI exited {p.returncode}: {(p.stderr or '')[:300]}")
+    data = json.loads(p.stdout)
+    if data.get("is_error"):
+        raise RuntimeError(f"claude CLI error: {str(data.get('result',''))[:300]}")
+    return data.get("result", "")
+
+
 def extract_llm(content: str, schema: dict, *, instructions: str = "") -> list[dict]:
     """Schema-driven extraction from page text/markdown. Returns validated rows (list of dicts).
+
+    OpenAI primary, Claude Code CLI fallback on ANY failure (quota, network, bad key) -- so a dead
+    OpenAI key degrades to a slower/pricier-per-call-but-working path instead of silently returning
+    nothing (the previous behavior: webscrape_page's broad except Exception swallowed the OpenAI
+    error and returned {}, which looked identical to "this page names no founder").
 
     Validation at the trust boundary: the model can return anything, so we coerce to a list of
     dicts and keep only the requested field names — never trust the shape blindly.
     """
-    from openai import OpenAI
-
     fields = schema.get("fields") or []
     if not fields:
         raise ValueError("llm schema needs a non-empty 'fields' list")
@@ -117,8 +163,13 @@ def extract_llm(content: str, schema: dict, *, instructions: str = "") -> list[d
         f"Return {shape} with those exact keys.\n\n"
         f"--- CONTENT ---\n{(content or '')[:MAX_INPUT_CHARS]}"
     )
-    client = OpenAI(api_key=get_key("OPENAI_API_KEY"))
-    raw = _strip_fence(_responses_json(client, LLM_MODEL, system, user))
+    try:
+        from openai import OpenAI
+        client = OpenAI(api_key=get_key("OPENAI_API_KEY"))
+        raw = _strip_fence(_responses_json(client, LLM_MODEL, system, user))
+    except Exception as e:  # noqa: BLE001 - OpenAI down (dead key, quota, network) -> Claude Code CLI
+        print(f"[extract] OpenAI extraction failed ({e}); falling back to Claude Code CLI", file=sys.stderr)
+        raw = _strip_fence(_claude_code_json(system, user))
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:

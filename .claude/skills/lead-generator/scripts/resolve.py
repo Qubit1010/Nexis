@@ -277,9 +277,18 @@ def webscrape_page(url: str, timeout: int = 60) -> dict:
     try:
         p = subprocess.run(cmd, capture_output=True, text=True,
                            encoding="utf-8", errors="replace", timeout=timeout)
-        data = json.loads(p.stdout) if p.returncode == 0 and p.stdout.strip() else []
+        if p.returncode != 0:
+            # Surfaced -- an empty {} here reads identically to "page names no founder" unless this
+            # is logged. A dead OpenAI key silently degraded this whole stage for hours on 2026-09-08
+            # before anyone noticed; scrape.py already prints "[scrape] FAILED ..." to its own stderr,
+            # this line makes the same failure visible in run_batch's per-row worker log too.
+            print(f"[resolve] webscrape_page failed for {url}: {(p.stderr or '').strip()[-300:]}",
+                 file=sys.stderr)
+            return {}
+        data = json.loads(p.stdout) if p.stdout.strip() else []
         return data[0] if isinstance(data, list) and data else (data if isinstance(data, dict) else {})
-    except Exception:  # noqa: BLE001 - fallback must never crash the resolve
+    except Exception as e:  # noqa: BLE001 - fallback must never crash the resolve
+        print(f"[resolve] webscrape_page errored for {url}: {e}", file=sys.stderr)
         return {}
 
 

@@ -18,7 +18,7 @@ Reusable design templates live in `references/<Template>/`. Each has a `design-s
 - **Instagram-Template-1** (`references/Instagram-Template-1/`) — blue-gradient statue cover +
   terracotta editorial body slides. Source images in `docs/Instagram-Template-1/`.
 - **Instagram-Template-2** (`references/Instagram-Template-2/`) — cinematic dark film-grain cover
-  + CTA (deep navy/blue photo, agency brand blue #4FA3F7 to #1C5FA8) with clean cream dot-grid body slides. Mixed bold-sans + italic-serif
+  + CTA (deep navy/blue photo, agency brand blue #A6DAFF to #00B7FF) with clean cream dot-grid body slides. Mixed bold-sans + italic-serif
   headlines, hand-drawn arrow annotations, screenshot visuals. Comment-to-DM CTA mechanic.
   Source images in `docs/Instagram-Template-2/`.
 - **Instagram-Template-6** (`references/Instagram-Template-6/`) — resource/tool showcase format.
@@ -183,3 +183,7 @@ After the per-slide prompts, offer:
 - No emojis. No em dashes - use commas or periods instead.
 - CTA is value-native (save / comment-to-DM), never a bare "follow me".
 - If brand-kit.md exists in the project, read it and use its exact hex codes and typography.
+- If the user rejects the templates, or wants a one-off look that none of them cover, hand off to
+  `image-prompt-generator`. What this skill sells is the repeatable template and the multi-slide
+  set. A single freeform image is that skill's job, and trying to serve it here produces a
+  carousel nobody asked for.

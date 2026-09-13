@@ -13,6 +13,7 @@ Usage:
 """
 
 import argparse
+import random
 import re
 import sys
 from pathlib import Path
@@ -183,7 +184,45 @@ def existing_keys(sheet_id, main_tab):
     return keys, names
 
 
-def merge(sheet_id, main_tab, requested_tabs, per_tab_limit=None):
+def take_uniques(tab_recs, seen, seen_names, per_tab_limit=None, total_limit=None):
+    """Walk the per-tab candidate lists in their given order, dropping duplicates, until each
+    tab's quota (and/or the overall total) is met. Tabs are drained round-robin so a total quota
+    spreads across every tab instead of being eaten by whichever one is read first.
+    Returns (uniques, dropped). Mutates `seen`/`seen_names` as it claims identities.
+    """
+    cursors = {tab: 0 for tab in tab_recs}
+    kept_per_tab = {tab: 0 for tab in tab_recs}
+    dropped, uniques = [], []
+    while tab_recs and (total_limit is None or len(uniques) < total_limit):
+        progressed = False
+        for tab, recs in tab_recs.items():
+            if total_limit is not None and len(uniques) >= total_limit:
+                break
+            if per_tab_limit is not None and kept_per_tab[tab] >= per_tab_limit:
+                continue
+            # advance this tab's cursor until it yields one unique (logging dupes on the way)
+            while cursors[tab] < len(recs):
+                rec = recs[cursors[tab]]
+                cursors[tab] += 1
+                progressed = True
+                key, name = dedup_key(rec), _norm_name(rec["company"])
+                matched = "website/phone/city" if key in seen else ("company name" if name in seen_names else "")
+                if matched:
+                    dropped.append((tab, rec, matched))
+                    continue
+                seen.add(key)
+                seen_names.add(name)
+                rec["_source"] = tab
+                uniques.append(rec)
+                kept_per_tab[tab] += 1
+                break
+        if not progressed:
+            break  # every tab exhausted
+    return uniques, dropped
+
+
+def merge(sheet_id, main_tab, requested_tabs, per_tab_limit=None, total_limit=None,
+          random_seed=None, dry_run=False):
     """Append new uniques from each source tab to Main, best-scoring first.
 
     Duplicates are caught on the tiered identity key OR the normalized company name. The name
@@ -191,12 +230,17 @@ def merge(sheet_id, main_tab, requested_tabs, per_tab_limit=None):
     city (Clutch stamps every row 'World Wide'), so their key collapses to name+city and matches
     nothing on Main. Measured on this batch, key-only caught 110 duplicates and missed 266 that
     are the same agency listed under a different directory's city string.
+
+    `random_seed` swaps the best-first ordering for a reproducible shuffle -- use it when the
+    point is category spread across tabs rather than the strongest leads. `total_limit` caps the
+    whole run (round-robin across tabs) rather than each tab.
     """
     header = ensure_main_header(sheet_id, main_tab)
     seen, seen_names = existing_keys(sheet_id, main_tab)
     tabs = source_tab_titles(sheet_id, main_tab, requested_tabs)
+    rng = random.Random(random_seed) if random_seed is not None else None
 
-    per_tab, dropped, uniques = {}, [], []
+    per_tab, tab_recs = {}, {}
     for tab in tabs:
         rows = sheets.read_values(sheet_id, tab)
         if not rows:
@@ -204,34 +248,27 @@ def merge(sheet_id, main_tab, requested_tabs, per_tab_limit=None):
             continue
         col_map = build_col_map(rows[0])
         recs = [r for r in (normalize_row(row, col_map) for row in rows[1:]) if r]
-        # Best-first, so a per-tab quota keeps the strongest leads, not the top of the scrape.
-        # Ranking is only meaningful WITHIN a directory -- DesignRush exports no review counts at
-        # all, so its rows would lose every cross-directory comparison on volume alone.
-        recs.sort(key=lambda r: score.score_one(r["rating"], r["reviews"]), reverse=True)
-        kept = 0
-        for rec in recs:
-            if per_tab_limit is not None and kept >= per_tab_limit:
-                break
-            key, name = dedup_key(rec), _norm_name(rec["company"])
-            matched = "website/phone/city" if key in seen else ("company name" if name in seen_names else "")
-            if matched:
-                dropped.append((tab, rec, matched))
-                continue
-            seen.add(key)
-            seen_names.add(name)
-            rec["_source"] = tab
-            uniques.append(rec)
-            kept += 1
+        if rng is not None:
+            rng.shuffle(recs)
+        else:
+            # Best-first, so a per-tab quota keeps the strongest leads, not the top of the scrape.
+            # Ranking is only meaningful WITHIN a directory -- DesignRush exports no review counts at
+            # all, so its rows would lose every cross-directory comparison on volume alone.
+            recs.sort(key=lambda r: score.score_one(r["rating"], r["reviews"]), reverse=True)
+        tab_recs[tab] = recs
         per_tab[tab] = len(recs)
 
-    if uniques:
+    uniques, dropped = take_uniques(tab_recs, seen, seen_names, per_tab_limit, total_limit)
+
+    if uniques and not dry_run:
         out_rows = [[str(rec.get(COL_TO_KEY.get(h, ""), "") or "") for h in header] for rec in uniques]
         # batch_size=5 for the same measured reason sort_main_by_score uses it: Note runs to ~3.9K
         # chars/row and a bigger batch blows past Windows' ~32K CreateProcess limit.
         if not sheets.append_rows(sheet_id, main_tab, out_rows, batch_size=5):
             raise RuntimeError(f"Append failed for {sheet_id} [{main_tab}].")
     return {"tabs": per_tab, "dropped": len(dropped), "dropped_rows": dropped,
-            "appended": len(uniques), "appended_by_tab": _count_by(uniques)}
+            "appended": len(uniques), "appended_by_tab": _count_by(uniques),
+            "appended_rows": uniques, "dry_run": dry_run}
 
 
 def log_duplicates(sheet_id, dup_tab, dropped):
@@ -433,6 +470,23 @@ def demo():
     other = {"company": "League Design Agency", "website": "", "phone": "", "location": "Warsaw, Poland"}
     assert dedup_key(clutch) != dedup_key(other), "city differs, so the key tier misses it"
     assert _norm_name(clutch["company"]) == _norm_name(other["company"]), "name tier catches it"
+    # take_uniques: a total quota is drawn round-robin, so every tab contributes rather than
+    # the first-read tab eating the whole budget -- and duplicates never consume a slot.
+    tab_recs = {
+        "T1": [{"company": f"A{i}", "website": f"https://a{i}.com"} for i in range(5)],
+        "T2": [{"company": f"B{i}", "website": f"https://b{i}.com"} for i in range(5)],
+    }
+    picked, dropped_rr = take_uniques(tab_recs, set(), set(), total_limit=4)
+    assert [r["company"] for r in picked] == ["A0", "B0", "A1", "B1"], picked
+    assert dropped_rr == [], dropped_rr
+    # an already-seen identity is logged and skipped, and the next candidate fills that slot
+    picked2, dropped2 = take_uniques(
+        {"T1": [{"company": "A0", "website": "https://a0.com"}, {"company": "A9", "website": "https://a9.com"}]},
+        {"site:a0.com"}, set(), total_limit=1)
+    assert [r["company"] for r in picked2] == ["A9"], picked2
+    assert len(dropped2) == 1 and dropped2[0][2] == "website/phone/city", dropped2
+    # a total quota larger than the pool just returns the whole pool (no infinite loop)
+    assert len(take_uniques({"T1": [{"company": "Solo", "website": "https://solo.com"}]}, set(), set(), total_limit=99)[0]) == 1
     # per-tab quota keeps the BEST rows, not the first ones scraped
     recs = [{"company": f"C{i}", "rating": r, "reviews": v}
             for i, (r, v) in enumerate([("4.0", "5"), ("5.0", "120"), ("4.9", "80")])]
@@ -448,6 +502,11 @@ def main():
     p.add_argument("--source-tabs", default="", help="Comma list; default = all tabs except Main.")
     p.add_argument("--per-tab-limit", type=int, default=None,
                    help="Keep at most N new uniques per source tab, best-scoring first (e.g. 50 x 4 tabs = 200).")
+    p.add_argument("--total-limit", type=int, default=None,
+                   help="Keep at most N new uniques across ALL source tabs, pulled round-robin so every tab contributes.")
+    p.add_argument("--random-seed", type=int, default=None,
+                   help="Shuffle each tab's rows with this seed instead of ranking best-first. Use when the point is spread across categories, not lead quality. Reproducible.")
+    p.add_argument("--dry-run", action="store_true", help="Resolve + report the selection without writing anything.")
     p.add_argument("--dup-tab", default="", help="Tab name: log every dropped duplicate there with what it matched on.")
     p.add_argument("--sort", action="store_true", help="After merging, sort all of Main by the rating+review score (best first).")
     p.add_argument("--dedupe-existing", action="store_true",
@@ -470,10 +529,18 @@ def main():
         print(f"Backfilled {r['filled']} company names on [{args.backfill_names}] ({r['unrecoverable']} unrecoverable, no Link to derive from).")
 
     requested = [t for t in args.source_tabs.split(",")] if args.source_tabs else None
-    result = merge(args.sheet_id, args.main_tab, requested, per_tab_limit=args.per_tab_limit)
+    result = merge(args.sheet_id, args.main_tab, requested, per_tab_limit=args.per_tab_limit,
+                   total_limit=args.total_limit, random_seed=args.random_seed, dry_run=args.dry_run)
+    label = "would append" if args.dry_run else "appended"
     print(f"Read per tab: {result['tabs']}")
     print(f"Duplicates dropped: {result['dropped']}")
-    print(f"Uniques appended: {result['appended']}  {result['appended_by_tab']}")
+    print(f"Uniques {label}: {result['appended']}  {result['appended_by_tab']}")
+    if args.dry_run:
+        for rec in result["appended_rows"]:
+            print(f"  - [{rec['_source']}] {rec['company']} | {rec.get('location','')} | {rec.get('rating','')} / {rec.get('reviews','')}")
+        for tab, rec, matched in result["dropped_rows"]:
+            print(f"  DUP [{tab}] {rec['company']} | matched on {matched}")
+        return
 
     if args.dup_tab:
         n = log_duplicates(args.sheet_id, args.dup_tab, result["dropped_rows"])

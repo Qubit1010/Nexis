@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Client revenue data. Nexis is a PUBLIC repo. Never commit this.
+data/
+*.db
+*.db-wal
+*.db-shm
+
+.env
+.env.*

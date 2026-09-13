@@ -5,6 +5,7 @@ token.json
 
 # Temporary processing files
 .tmp/
+dev-run-*.log
 
 # Python
 __pycache__/

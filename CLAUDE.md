@@ -41,6 +41,8 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 
 **Creating new skills:** See `.claude/rules/skill-creation.md`. When Aleem asks to create a new skill without explicitly naming the skill-creator, ask whether to build it with the `skill-creator` workflow before proceeding.
 
+**Codex-specific preference:** Codex creates and improves skills directly, without loading any `skill-creator` workflow or its helper scripts unless Aleem explicitly requests it. Codex must not ask which skill-creator workflow to use. Direct creation still requires appropriate validation and realistic behavior checks. This exception is also recorded in `AGENTS.md`; Claude Code's preference above is unchanged.
+
 **Never break rules:** See `.claude/rules/never-break-rules.md`. Every rule in `.claude/rules/` is always active — never skip or shortcut any rule unless Aleem explicitly says to in that message.
 
 **Closeout & push prompt:** See `.claude/rules/closeout-and-push-prompt.md`. After creating a skill, installing a plugin, creating a project, or making significant structural changes — always ask whether to run `/session-closeout` and whether to push to GitHub.

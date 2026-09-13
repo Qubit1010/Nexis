@@ -110,7 +110,16 @@ Always write the markdown file (post + metadata block) to `content/blog/<slug>.m
 ```bash
 python .claude/skills/blog-writer/scripts/publish.py content/blog/<slug>.md
 ```
-`publish.py` parses the markdown and reuses content-engine's `save_content.py` (creates a Doc in "Nexis Content", normalizes smart quotes, returns the URL). Pipe/run via Bash on Windows (PowerShell adds a BOM that gws rejects). If it fails, output the post inline and note it.
+`publish.py` parses the markdown and reuses `tools/gdocs/save_content.py` (creates a Doc in "Nexis Content", normalizes smart quotes, returns the URL). Pipe/run via Bash on Windows (PowerShell adds a BOM that gws rejects). If it fails, output the post inline and note it.
+
+**Personal-brand posts only - also log to the aleemuh.com Blog Engine sheet.** This is the sheet the live site actually builds from; a post that only exists as a Nexis markdown file plus a Doc is not live-able. Sheet ID `1irhRYKXlDz94VqCi43y1jPBjNLa3UFGI7Uk2pOCKH7s`, three tabs:
+- **Articles** - the full payload: status, publish date, week, pillar (`Teardown` / `Buying decision` / `Refusals` - this site's own taxonomy, distinct from `agency/personal-brand-pillars.md`), slug, title tag, meta description, H1, answer block, category, primary/secondary keyword, body markdown (everything from the H1 through the FAQ, not the metadata block), FAQ as `[{"q","a"}]`, JSON-LD as `[Article, FAQPage]` (note: `@type: "Article"`, not `BlogPosting`, and the author object carries `"url": "https://aleemuh.com/about"`), internal links, outbound citations, expert quote / attribution, POV source, word count, hero alt, image paths, and Live URL (leave blank until actually published).
+- **Calendar** - the short planning row: week, publish date, pillar, slug, primary keyword, the one question it answers, funnel stage, status.
+- **Validation** - the on-page check results: slug, primary keyword, word count, outbound citation count, FAQ count, title/meta char counts, a voice-contract pass line, and known draft-mode-only failures (`eeat.author_named` and `section.length` are checker artifacts on every row so far, not real defects - see existing rows before treating either as a blocker).
+
+Images: this sheet's image columns hold **source** paths, not live URLs (Astro content-hashes filenames at build time). Cover/Supporting Images columns get the eventual `src/assets/blog/<slug>/*.png` destination in the **separate aleemuh.com site repo** (not writable from here - copying the PNGs there is a handoff, not something this skill can finish alone); SVG Source (Nexis) gets the real `content/blog/images/<slug>/*.svg` path; Image Alt Text should be read back out of each SVG's `aria-label` rather than retyped, so it cannot drift from what actually renders.
+
+**Keyword Map tab is out of scope here.** It needs live SERP data (Winnability, UGC on page 1, median result age) that this skill has no way to measure - hand that to `seo-foundation` rather than estimating it.
 
 ---
 

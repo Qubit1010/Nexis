@@ -1,5 +1,8 @@
 # Instagram-Short-Template-1 — Design Structure
 
+> **Palette migration, 2026-09-08.** This template previously ran its own palette (`#141414`, `#4FA3F7`, `#1C5FA8`, `#9A9A9A`), which `agency/15-brand-visual-identity.md` §7 named as the repo's third palette and instructed to retire. It now uses the canonical agency tokens. One consequence worth knowing: the canonical palette has no dark blue, so the stripe gradient runs pale `#A6DAFF` to saturated `#00B7FF` rather than light to dark. It reads lighter than the original and that is expected, not a rendering fault.
+
+
 Canonical spec extracted from the one reference cover Aleem shared (a "Free Guide" promo for
 "The Claude Practical Playbook"), stored in `docs/Instagram-Short-Template-1/`. That
 reference is a finished COVER frame; the CONTENT and CTA frame specs below extrapolate the
@@ -29,14 +32,14 @@ Aleem sees the first generated set. This file is the source of truth for `gem.md
 
 | Token | Hex | Use |
 |---|---|---|
-| Background | `#141414` | near-black base, every frame |
+| Background | `#02040A` | near-black base, every frame |
 | Headline white | `#FFFFFF` | headline, CTA pill text |
-| Subtitle gray | `#9A9A9A` | subtitle line, wordmark footer |
+| Subtitle gray | `#94A3B8` | subtitle line, wordmark footer |
 | Eyebrow white | `#FFFFFF` | tracked-out eyebrow label |
-| Stripe light | `#4FA3F7` | diagonal gradient stripe, lighter end |
-| Stripe dark | `#1C5FA8` | diagonal gradient stripe, darker end |
-| CTA pill fill | `#141414` | CTA pill background (matches base, sits on the stripe) |
-| CTA pill border | `#4FA3F7` | CTA pill outline |
+| Stripe light | `#A6DAFF` | diagonal gradient stripe, lighter end |
+| Stripe dark | `#00B7FF` | diagonal gradient stripe, darker end |
+| CTA pill fill | `#02040A` | CTA pill background (matches base, sits on the stripe) |
+| CTA pill border | `#A6DAFF` | CTA pill outline |
 
 ## Type stack
 
@@ -52,14 +55,14 @@ Aleem sees the first generated set. This file is the source of truth for `gem.md
 ## Frame anatomy
 
 ### Cover (frame 1)
-- **Background:** solid near-black (`#141414`).
+- **Background:** solid near-black (`#02040A`).
 - **Top-left:** NexusPoint "N" logomark (white) with circuit-node accent dots/lines.
 - **Below logo:** small tracked-out all-caps eyebrow label, white (e.g. "NEW DROP").
 - **Center-left, below eyebrow:** large bold white headline, 2-4 lines, left-aligned (the
   hook - what the short is about).
 - **Below headline:** one gray subtitle line, smaller, left-aligned (the one-sentence
   elaboration).
-- **Lower-middle:** diagonal blue gradient stripe (light `#4FA3F7` to dark `#1C5FA8`) sweeping
+- **Lower-middle:** diagonal blue gradient stripe (light `#A6DAFF` to dark `#00B7FF`) sweeping
   from bottom-left to upper-right, crossing behind/beside the text block.
 - **Bottom center:** "NexusPoint" wordmark, small, gray.
 - No CTA pill on the cover - it is hook-only, the pill belongs on the CTA frame.
@@ -77,7 +80,7 @@ Aleem sees the first generated set. This file is the source of truth for `gem.md
 ### CTA (last frame)
 - **Background:** same near-black base and diagonal stripe, stripe brought forward/enlarged
   slightly so the pill can sit on it.
-- **Center:** rounded-rectangle pill, near-black fill, blue outline (`#4FA3F7`), bold white
+- **Center:** rounded-rectangle pill, near-black fill, blue outline (`#A6DAFF`), bold white
   text - the URL or the short action phrase (e.g. "Comment GUIDE").
 - **Below pill (optional):** one short line, gray, stating the payoff (what they get).
 - **Bottom center:** "NexusPoint" wordmark, same as every frame.

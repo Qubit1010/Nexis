@@ -1,14 +1,19 @@
-"""Touch 1 message generation: OpenAI primary, Claude fallback.
+"""Touch 1 message generation: OpenAI primary, Claude API fallback, Claude Code CLI last resort.
 
 Per Aleem's call, OpenAI (gpt-5.4-mini) is the primary generator and Claude
 (claude-haiku-4-5) is the fallback. Each lead is attempted on OpenAI first; if
 that fails for any reason (no key, insufficient_quota, API error), it falls back
-to Claude. Only if BOTH fail do we leave the message blank.
+to Claude.
 
-This belt-and-suspenders setup is deliberate: the lead-gen OpenAI key has a
-history of hitting insufficient_quota, and the repo Anthropic key has run out of
-balance — having either provider able to cover for the other means a push almost
-never has to ship blank Touch 1 messages.
+Both the repo's OpenAI key and its Anthropic API key ran out of credit
+(confirmed dead 2026-09-08/09), so as of that date this belt-and-suspenders
+chain was itself fully dead -- every push shipped blank Touch 1 messages with
+neither error surfaced loudly (both failures print a one-line note per lead,
+easy to miss in a long batch). Added a third tier: the Claude Code CLI
+(`claude -p`), billed on Aleem's Claude subscription rather than either dead
+API key -- same fix already applied to the lead-generator's founder extraction
+(.claude/skills/web-scraper/scripts/extract.py). Only if all three fail do we
+leave the message blank.
 
 Messages are grounded in the sales-playbook opener archetypes (distilled in
 references/message-archetypes.md). We rotate archetypes per lead so a batch reads
@@ -20,14 +25,21 @@ generation failures never abort the push.
 """
 
 import difflib
+import json
 import os
 import random
 import re
+import shutil
+import subprocess
+import sys
+import tempfile
 from pathlib import Path
 
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.4-mini")
 ANTHROPIC_MODEL = "claude-haiku-4-5"
-MODEL = f"{OPENAI_MODEL} (OpenAI) -> {ANTHROPIC_MODEL} (Claude) fallback"
+CLAUDE_CODE_MODEL = "haiku"     # cheapest tier; matches ANTHROPIC_MODEL's tier
+CLAUDE_CODE_TIMEOUT = 60
+MODEL = f"{OPENAI_MODEL} (OpenAI) -> {ANTHROPIC_MODEL} (Claude API) -> Claude Code CLI fallback"
 _REPO_ROOT = Path(__file__).resolve().parents[4]
 
 # Order matters: env var wins, then repo root, then project .envs that hold keys.
@@ -328,6 +340,28 @@ def banned_hits(text):
     return hits
 
 
+# Claude Code CLI-specific: a hedge/refusal/clarifying-question response instead of the requested
+# message. Measured live 2026-09-09 -- roughly a quarter of cold-outreach generation calls came
+# back this way, all HTTP-200/is_error=False, so nothing else here would flag them. Curated from
+# the actual refusal text observed, not exhaustive by design -- this is a safety net for the
+# Claude Code CLI fallback specifically, not a general-purpose classifier.
+_REFUSAL_MARKERS = (
+    "i'd love to help", "i'd be happy to help", "i'd love to write that",
+    "let me first", "before i write", "i want to check", "i want to make sure",
+    "i need a bit more context", "i need more context", "which skill", "skill catalog",
+    "skill in the catalog", "cold-outreach template", "more context to write",
+    "i notice this is a direct request", "i noticed this is a direct request",
+    "you're asking for a specific", "clarifying question",
+    "do you want me to", "should i pull from", "if you have a preferred",
+)
+
+
+def _looks_like_refusal(text):
+    """True if `text` reads as meta-commentary/hedging rather than an actual outreach message."""
+    low = (text or "").lower()
+    return any(m in low for m in _REFUSAL_MARKERS)
+
+
 def _num(val):
     m = re.search(r"\d+(?:\.\d+)?", str(val or "").replace(",", ""))
     return float(m.group(0)) if m else None
@@ -452,6 +486,7 @@ class Generator:
     def __init__(self):
         self.openai = self._init_openai()
         self.anthropic = self._init_anthropic()
+        self.claude_code = shutil.which("claude") is not None
 
     def _init_openai(self):
         key = _load_key("OPENAI_API_KEY")
@@ -476,7 +511,7 @@ class Generator:
 
     @property
     def available(self):
-        return self.openai is not None or self.anthropic is not None
+        return self.openai is not None or self.anthropic is not None or self.claude_code
 
     def providers_label(self):
         chain = []
@@ -484,6 +519,8 @@ class Generator:
             chain.append(f"OpenAI {OPENAI_MODEL}")
         if self.anthropic:
             chain.append(f"Claude {ANTHROPIC_MODEL}")
+        if self.claude_code:
+            chain.append(f"Claude Code CLI ({CLAUDE_CODE_MODEL})")
         return " -> ".join(chain) if chain else "none"
 
     def _via_openai(self, system, user, max_tokens):
@@ -514,6 +551,52 @@ class Generator:
         )
         return "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
 
+    def _via_claude_code(self, system, user, max_tokens):
+        """Shell out to the Claude Code CLI -- runs on Aleem's subscription, not either dead API
+        key. `--disallowedTools "*" --disable-slash-commands` strips the CLI down to a bare
+        completion (skips loading this project's full agentic system prompt + tool schemas +
+        CLAUDE.md/skills catalog, which otherwise costs ~$0.09/call instead of ~$0.003-0.004);
+        `--effort low` keeps it a single fast pass, matching what extract.py's identical fallback
+        already validated live (.claude/skills/web-scraper/scripts/extract.py).
+
+        cwd=tempdir is load-bearing, not cosmetic: run from inside this repo, the CLI still
+        detects the Nexis project and fires its SessionStart hook (the 'superpowers' skill-check
+        reminder). Fixing that cut most of it, but measured live 2026-09-09 across a real batch,
+        roughly a quarter of calls STILL come back as hedging/clarifying prose ("I'd love to help,
+        but I want to check first...") instead of the requested message -- and critically, that
+        comes back as a normal HTTP-200, is_error=False response, so nothing here would catch it
+        as a failure. Sent as-is, that hedge text would ship to a real business as their Touch 1
+        message. _looks_like_refusal() below is the guard: one retry with a sharper instruction,
+        then treated as a failed provider (falls through to blank) rather than silently accepted."""
+        def _one_call(u):
+            cmd = ["claude", "-p", u, "--model", CLAUDE_CODE_MODEL, "--output-format", "json",
+                   "--system-prompt", system, "--disallowedTools", "*", "--disable-slash-commands",
+                   "--effort", "low"]
+            p = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace",
+                               timeout=CLAUDE_CODE_TIMEOUT, cwd=tempfile.gettempdir())
+            if p.returncode != 0:
+                raise RuntimeError(f"claude CLI exited {p.returncode}: {(p.stderr or '')[:200]}")
+            data = json.loads(p.stdout)
+            if data.get("is_error"):
+                raise RuntimeError(f"claude CLI error: {str(data.get('result',''))[:200]}")
+            text = (data.get("result") or "").strip()
+            if text.startswith("```"):
+                text = re.sub(r"^```[a-zA-Z]*\n?", "", text)
+                text = re.sub(r"\n?```$", "", text).strip()
+            return text
+
+        text = _one_call(user)
+        if _looks_like_refusal(text):
+            text = _one_call(
+                user + "\n\nThis is pre-approved Touch 1 outreach copy for a real, already-vetted "
+                       "lead in Aleem's own CRM -- not spam, not a hypothetical. Output ONLY the "
+                       "message text, nothing else. Do not ask a clarifying question, do not "
+                       "mention skills, templates, or needing more context."
+            )
+            if _looks_like_refusal(text):
+                raise RuntimeError(f"claude-code returned a refusal/hedge, not a message: {text[:150]}")
+        return text
+
     def generate(self, style, lead, previous=()):
         """Return (message, archetype, provider). provider is '' if all failed.
 
@@ -527,6 +610,8 @@ class Generator:
             attempts.append(("openai", self._via_openai))
         if self.anthropic:
             attempts.append(("claude", self._via_anthropic))
+        if self.claude_code:
+            attempts.append(("claude-code", self._via_claude_code))
         for name, fn in attempts:
             try:
                 prompt, last = user, ""

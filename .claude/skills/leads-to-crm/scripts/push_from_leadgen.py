@@ -26,6 +26,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from datetime import date
@@ -45,6 +46,7 @@ DEFAULT_SHEET_ID = "1QikXgf6WbPfpCdMlxs43nYeZRjqpr0kqdmtqAiiu8mI"
 DEFAULT_TAB = "Main"
 DEFAULT_ROWS = "2-246"  # widened 2026-07-25: rows 166-246 resolved this session
 CONTACT_TYPE_COL = "Contact Type"
+CHECKPOINT_DIR = Path(__file__).resolve().parents[4] / "docs" / "crm-push-checkpoints"
 PUSH_STATUS_HEADERS = {
     "instagram": "Instagram CRM Push",
     "linkedin": "LinkedIn CRM Push",
@@ -55,6 +57,71 @@ PUSH_STATUS_HEADERS = {
 def parse_row_range(spec):
     a, b = spec.split("-")
     return int(a), int(b)
+
+
+def _checkpoint_path(channel_key):
+    return CHECKPOINT_DIR / f"{channel_key}.json"
+
+
+def save_checkpoint(channel_key, *, sheet_id, tab, header, push_status_header,
+                    crm_sheet_id, crm_tab, crm_header, rows_out, row_result):
+    """Persist everything needed to finish a push -- the generated CRM rows plus the Main-sheet
+    status stamps -- to disk BEFORE attempting the write. Message generation is the expensive,
+    slow part (each message can cost several Claude Code CLI calls); the append is comparatively
+    cheap and fast, but proved fragile under sustained load (a gws/node subprocess failure with an
+    empty stderr, likely resource exhaustion after hours of parallel subprocess calls, measured
+    live 2026-09-09 -- all three channels finished generating every message, then lost all of it
+    when the final append failed and the process exited with nothing written). Without this,
+    every append failure means regenerating from scratch. CHECKPOINT_DIR is NOT gitignored by
+    default; delete_checkpoint() removes the file on a successful write, so a clean repo state
+    means every push completed."""
+    CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
+    data = {
+        "channel_key": channel_key, "sheet_id": sheet_id, "tab": tab, "header": header,
+        "push_status_header": push_status_header, "crm_sheet_id": crm_sheet_id, "crm_tab": crm_tab,
+        "crm_header": crm_header, "rows_out": rows_out,
+        "row_result": {str(k): sorted(v) for k, v in row_result.items()},
+    }
+    path = _checkpoint_path(channel_key)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    return path
+
+
+def load_checkpoint(channel_key):
+    path = _checkpoint_path(channel_key)
+    if not path.exists():
+        return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    data["row_result"] = {int(k): set(v) for k, v in data["row_result"].items()}
+    return data
+
+
+def delete_checkpoint(channel_key):
+    path = _checkpoint_path(channel_key)
+    if path.exists():
+        path.unlink()
+
+
+def finish_from_checkpoint(channel_key):
+    """Resume a push whose message generation finished but whose CRM append/status-stamp did
+    not -- retries just those two (fast) steps from the saved checkpoint, no regeneration."""
+    data = load_checkpoint(channel_key)
+    if not data:
+        print(f"No checkpoint for {channel_key} at {_checkpoint_path(channel_key)}.")
+        return False
+    print(f"Resuming {channel_key} from checkpoint: {len(data['rows_out'])} CRM row(s), "
+         f"{len(data['row_result'])} Main-sheet row(s) to stamp.")
+    if data["rows_out"]:
+        print(f"Appending {len(data['rows_out'])} rows to {data['crm_tab']}...")
+        if not sheets.append_rows(data["crm_sheet_id"], data["crm_tab"], data["rows_out"]):
+            print("Append still failing -- checkpoint kept, try again later.")
+            return False
+        print("  appended.")
+    _stamp_push_status(data["sheet_id"], data["tab"], data["header"], data["push_status_header"],
+                       data["row_result"])
+    delete_checkpoint(channel_key)
+    print(f"Checkpoint for {channel_key} cleared -- push complete.")
+    return True
 
 
 def _facts_of(biz):
@@ -289,9 +356,8 @@ def run_channel(channel_key, sheet_id, tab, start_row, end_row, *, dry_run=False
                     print(f"      msg ({len(m)}): {m[:110]}")
         return
 
-    if not kept:
-        print("\nNothing new to push.")
-    else:
+    rows_out = []
+    if kept:
         crm_header = sheets.ensure_columns(channel.crm_sheet_id, channel.crm_tab, crm_header,
                                            [CONTACT_TYPE_COL])
         records = []
@@ -300,18 +366,40 @@ def run_channel(channel_key, sheet_id, tab, start_row, end_row, *, dry_run=False
             rec[CONTACT_TYPE_COL] = contact_type
             records.append(rec)
         rows_out = [[rec.get(h, "") for h in crm_header] for rec in records]
+
+    # Checkpoint BEFORE the write: message generation is the expensive part, the append is the
+    # fragile part (see save_checkpoint's docstring) -- so the costly work survives a write failure.
+    save_checkpoint(channel_key, sheet_id=sheet_id, tab=tab, header=header,
+                    push_status_header=push_status_header, crm_sheet_id=channel.crm_sheet_id,
+                    crm_tab=channel.crm_tab, crm_header=crm_header, rows_out=rows_out,
+                    row_result={k: sorted(v) for k, v in row_result.items()})
+
+    if not kept:
+        print("\nNothing new to push.")
+    else:
         print(f"\nAppending {len(rows_out)} rows to {channel.label} CRM...")
         if not sheets.append_rows(channel.crm_sheet_id, channel.crm_tab, rows_out):
-            print("Append failed -- aborting before writeback so nothing is double-counted.")
+            print(f"Append failed -- checkpoint saved at {_checkpoint_path(channel_key)}. "
+                 f"Re-run with --resume-from-checkpoint to retry the write without regenerating "
+                 f"messages.")
             return
         print("  appended.")
 
-    # Stamp push-status back onto the Main sheet rows this run touched (pushed, reconciled, or
-    # needs_review all count as "resolved" -- only rows with no link at all for this channel stay
-    # blank, so they're cheaply re-examined rather than permanently skipped).
+    _stamp_push_status(sheet_id, tab, header, push_status_header,
+                       {k: set(v) for k, v in row_result.items()})
+    delete_checkpoint(channel_key)
+
+
+def _stamp_push_status(sheet_id, tab, header, push_status_header, row_result):
+    """Stamp push-status back onto the Main sheet rows a run touched (pushed, reconciled, or
+    needs_review all count as "resolved" -- only rows with no link at all for this channel stay
+    blank, so they're cheaply re-examined rather than permanently skipped). Re-reads Main fresh
+    rather than trusting a possibly-stale copy, since this can run long after the row_result that
+    drives it was computed (a checkpoint resume)."""
     header = sheets.ensure_columns(sheet_id, tab, header, [push_status_header])
     push_idx = sheets.header_index(header, [push_status_header])
     push_letter = sheets.col_letter(push_idx)
+    data_rows = sheets.read_values(sheet_id, tab)[1:]
     col_values = []
     for row_num, row in enumerate(data_rows, start=2):
         if row_num not in row_result:
@@ -333,10 +421,21 @@ def main():
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--no-messages", action="store_true")
     p.add_argument("--limit", type=int, default=0, help="Cap CRM rows pushed for this channel")
+    p.add_argument("--resume-from-checkpoint", action="store_true",
+                   help="skip straight to appending + status-stamping from a saved checkpoint "
+                        "(see save_checkpoint) -- no re-reading Main, no message regeneration. "
+                        "Use after an 'Append failed' message.")
     args = p.parse_args()
 
-    start_row, end_row = parse_row_range(args.rows)
     channels_to_run = ["instagram", "linkedin", "facebook"] if args.channel == "all" else [args.channel]
+
+    if args.resume_from_checkpoint:
+        for key in channels_to_run:
+            finish_from_checkpoint(key)
+            print()
+        return
+
+    start_row, end_row = parse_row_range(args.rows)
     for key in channels_to_run:
         run_channel(key, args.sheet_id, args.tab, start_row, end_row,
                     dry_run=args.dry_run, no_messages=args.no_messages,

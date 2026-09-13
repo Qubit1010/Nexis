@@ -22,9 +22,9 @@ Every file must:
 
 1. Carry a `viewBox`. `render.py` reads the output size from it and refuses without one.
 2. Carry a meaningful `aria-label` on the root `<svg>`. That label becomes the alt text, so write it as a sentence a screen reader user would want, never "diagram".
-3. Paint a full-bleed `<rect>` in `#02040A` first. The renderer sets the page background too, but the SVG must stand alone when opened directly.
+3. Paint a full-bleed `<rect>` in `#000000` first. The renderer sets the page background too, but the SVG must stand alone when opened directly.
 4. Use only palette hex values. `render.py` audits and refuses otherwise.
-5. Contain at least one `#A6DAFF` element. An image with no accent has not decided what it is about.
+5. Contain at least one `#02A1E1` element. An image with no accent has not decided what it is about.
 
 ## Sizes
 
@@ -46,7 +46,7 @@ python scripts/render.py --selftest                     # 6 checks, no arguments
 
 `--selftest` is not decorative. It proves the fonts inline, the palette audit catches a retired
 colour *and* passes a clean file, the PNG comes out at the right size, the ground is genuinely
-`#02040A` rather than white, and **glyph ink is actually present** where the headline sits. That
+`#000000` rather than white, and **glyph ink is actually present** where the headline sits. That
 last one is the check that distinguishes "the font loaded" from "the render silently produced a
 blank panel", which look identical in a file size.
 

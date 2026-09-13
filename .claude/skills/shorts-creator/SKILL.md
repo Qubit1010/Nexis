@@ -142,3 +142,6 @@ When Aleem supplies a NEW reference short (image in `docs/Instagram-Short-Templa
   applies to internal communication, not just published content.
 - Keep the template palette and motif consistent across every frame in a sequence so it reads
   as one short, not disconnected images.
+- If Aleem rejects the template, or wants a single one-off image rather than a frame sequence,
+  hand off to `image-prompt-generator`. What this skill sells is the branded 9:16 sequence. A
+  standalone freeform image is that skill's job, and it carries no agency branding by default.

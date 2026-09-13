@@ -1,6 +1,7 @@
 ---
 name: blog-images
 description: Creates the images that illustrate a written article - one cover plus two or three supporting explainer diagrams per post, authored as SVG and rendered to real PNG files in the brand palette. Use whenever the user wants artwork, images, figures, illustrations, a cover or hero image, or a diagram for a blog post, an article, or a written piece, including phrasings like "draw a diagram for the article", "explainer diagrams to go with this post", "figures for the write-up", "the post needs artwork", or "images to hand to website-creator". When a diagram is meant to accompany written content, this skill owns it rather than a general-purpose diagramming tool.
+
 ---
 
 # Blog Images
@@ -130,6 +131,7 @@ noticing in review.
 | Render hangs | Fonts are inlined so it is not a network stall. Check the SVG parses standalone in a browser first |
 | Asked for a LinkedIn infographic | Route to `linkedin-infographics`. Different format, different mechanism |
 | Asked for a carousel or a short | Route to `carousel` or `shorts-creator` |
+| Asked for a *prompt* to generate the image, or for something colourful or off-palette | Route to `image-prompt-generator`. This skill authors SVG in a fixed dark palette and never emits a prompt, so a request naming ChatGPT, Gemini or Midjourney is not this skill's job even when the image is for a blog post |
 
 ## Trigger accuracy, measured
 
@@ -158,3 +160,4 @@ is a worse failure than this one. If it matters in practice, say "blog" or "arti
 | `blog-writer` | Writing the article these images illustrate |
 | `brand-visual` | Changing the palette or type system itself. This skill consumes `15`, it does not amend it |
 | `website-creator` | Rendering the images into the live site |
+| `image-prompt-generator` | A paste-ready image-model prompt for a blog hero or social image, instead of an authored SVG diagram |

@@ -27,7 +27,7 @@ image at a time.
 ### Visual reference (Knowledge image)
 The image attached to this Gem is the reference COVER frame - it defines the exact look you
 must reproduce for the cover, and the base look (background, logo, stripe, wordmark) that
-every other frame in the sequence carries too: near-black background (`#141414`). NexusPoint
+every other frame in the sequence carries too: near-black background (`#02040A`). NexusPoint
 "N" logomark, white, with small circuit-node accent dots/lines, top-left. Small tracked-out
 all-caps eyebrow label below the logo. Large bold white multi-line headline, left-aligned.
 Gray subtitle line below the headline. A diagonal blue gradient stripe sweeping from
@@ -44,12 +44,12 @@ placement, stripe angle and colors, wordmark placement. Do not invent a new layo
 ### Palette (exact)
 | Element | Value |
 |---|---|
-| Background | `#141414` |
+| Background | `#02040A` |
 | Headline / pill text | `#FFFFFF` |
-| Subtitle / wordmark | `#9A9A9A` |
-| Stripe light end | `#4FA3F7` |
-| Stripe dark end | `#1C5FA8` |
-| CTA pill border | `#4FA3F7` |
+| Subtitle / wordmark | `#94A3B8` |
+| Stripe light end | `#A6DAFF` |
+| Stripe dark end | `#00B7FF` |
+| CTA pill border | `#A6DAFF` |
 
 ### Typography
 - Eyebrow label: small bold all-caps, wide letter-spacing, white

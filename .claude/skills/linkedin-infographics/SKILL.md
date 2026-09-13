@@ -160,3 +160,6 @@ When the user supplies a NEW reference infographic (image in `docs/LinkedIn-Temp
 - Always place the NexusPoint logo (`brand-assets/logos/nexuspoint-logo.png`) small at the top-right,
   above the card grid. Add it as a Knowledge file when building the Gem.
 - No handle or footer at the bottom of the infographic.
+- If the user rejects the templates, or wants a one-off look that none of them cover, hand off to
+  `image-prompt-generator`. What this skill sells is the dense bento grid in a repeatable
+  template. A single freeform image composed for one topic is that skill's job.

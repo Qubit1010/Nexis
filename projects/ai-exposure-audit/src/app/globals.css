@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-900: #08090b;
+  --color-ink-850: #0c0e11;
+  --color-ink-800: #111419;
+  --color-ink-700: #171b21;
+  --color-ink-600: #21262e;
+  --color-ink-500: #2d333d;
+  --color-ink-400: #444c58;
+
+  --color-bone-100: #f2efe9;
+  --color-bone-300: #cbc6bd;
+  --color-bone-500: #8e897f;
+  --color-bone-600: #6b675f;
+
+  --color-ember-300: #ffb066;
+  --color-ember-500: #f97316;
+  --color-ember-600: #c2560b;
+
+  --color-signal-low: #4ea88a;
+  --color-signal-moderate: #d6b14a;
+  --color-signal-high: #e8823c;
+  --color-signal-severe: #d84f3f;
+
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--color-ink-900);
+  color: var(--color-bone-100);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Numbers must line up in a ledger. */
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Quiet monospace tag used for every evidence tier and provenance marker. */
+.tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--color-ink-500);
+  color: var(--color-bone-500);
+  white-space: nowrap;
+}
+
+.tag-documented {
+  border-color: #2f5d4d;
+  color: #74c2a5;
+}
+.tag-practitioner {
+  border-color: #5e5330;
+  color: #d6b14a;
+}
+.tag-judgment {
+  border-color: #5c3a33;
+  color: #e08b7a;
+}
+
+.field {
+  background: var(--color-ink-850);
+  border: 1px solid var(--color-ink-600);
+  border-radius: 4px;
+  padding: 7px 10px;
+  color: var(--color-bone-100);
+  font-size: 13px;
+  width: 100%;
+  transition: border-color 0.12s ease;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--color-ember-600);
+}
+.field::placeholder {
+  color: var(--color-bone-600);
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--color-ink-500);
+  color: var(--color-bone-300);
+  background: var(--color-ink-800);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+.btn:hover:not(:disabled) {
+  border-color: var(--color-ink-400);
+  color: var(--color-bone-100);
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--color-ember-600);
+  border-color: var(--color-ember-500);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-ember-500);
+  border-color: var(--color-ember-300);
+  color: #fff;
+}
+
+.rule {
+  border-color: var(--color-ink-700);
+}
+
+/* Range input, restyled to read as an instrument control rather than a form widget. */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: var(--color-ink-600);
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--color-ember-500);
+  cursor: pointer;
+  border: 2px solid var(--color-ink-900);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--color-ember-500);
+  cursor: pointer;
+  border: 2px solid var(--color-ink-900);
+}
+
+@media print {
+  @page {
+    margin: 16mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-block {
+    break-inside: avoid;
+  }
+  .tag {
+    border-color: #999 !important;
+    color: #444 !important;
+  }
+  a {
+    color: #111 !important;
+    text-decoration: underline;
+  }
+}

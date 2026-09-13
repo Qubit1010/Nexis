@@ -1,5 +1,8 @@
 # Instagram-Template-2 — Design Structure
 
+> **Palette migration, 2026-09-08.** This template previously ran its own palette (`#141414`, `#4FA3F7`, `#1C5FA8`, `#9A9A9A`), which `agency/15-brand-visual-identity.md` §7 named as the repo's third palette and instructed to retire. It now uses the canonical agency tokens. One consequence worth knowing: the canonical palette has no dark blue, so the stripe gradient runs pale `#A6DAFF` to saturated `#00B7FF` rather than light to dark. It reads lighter than the original and that is expected, not a rendering fault.
+
+
 Canonical spec extracted from the reference carousels in `docs/Instagram-Template-2/`
 (cover `583230`, body `584231` / `585230` / `586227` / `587230` / `588226`, CTA `589283`).
 Source-template identity ("@itsdesignare") is stripped and replaced with `@{{HANDLE}}`.
@@ -11,7 +14,7 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 - **Slide order:** Cover (1) -> Body (2..N-1) -> CTA (N).
 - **Generation protocol:** one slide per image, generated one at a time. Never tiled, never a deck. See `gem.md` OUTPUT FORMAT.
 - **Two visual registers:**
-  - **Cinematic Dark** (cover + CTA): full-bleed photo, deep navy/blue color grade (brand blue wash, `#4FA3F7` to `#1C5FA8`, over near-black `#0A1420` shadows), heavy film grain.
+  - **Cinematic Dark** (cover + CTA): full-bleed photo, deep navy/blue color grade (brand blue wash, `#A6DAFF` to `#00B7FF`, over near-black `#0A1420` shadows), heavy film grain.
   - **Editorial Light** (body): warm cream background with fine dot grid, clean typographic layout.
 - **Tone:** editorial, cinematic, high-contrast. Dark bookends, clean interior. Stops the scroll.
 - **Identity:** `@{{HANDLE}}` centered near the very top of cover and CTA slides only. Body slides carry no branding strip or header.
@@ -28,7 +31,7 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 | Pill fill | `#FFFFFF` | cover bottom pill |
 | Pill text | `#0D0D0D` | cover pill label |
 | Cinematic shadows | `#0A1420` | cover/CTA photo color grade base (near-black navy) |
-| Cinematic blue wash | `#4FA3F7` -> `#1C5FA8` | cover/CTA photo color grade tint (agency brand blue) |
+| Cinematic blue wash | `#A6DAFF` -> `#00B7FF` | cover/CTA photo color grade tint (agency brand blue) |
 
 ## Type stack
 
@@ -46,7 +49,7 @@ This file is the source of truth for `gem.md` and `input-prompt.md`.
 ## Slide anatomy
 
 ### Cover (slide 1)
-- **Background:** full-bleed cinematic photo, deep navy/blue dominant color grade (agency brand blue wash `#4FA3F7` to `#1C5FA8` over near-black `#0A1420` shadows), heavy film grain overlay. Subject should fit the post topic (person, crowd, environment, symbolic object).
+- **Background:** full-bleed cinematic photo, deep navy/blue dominant color grade (agency brand blue wash `#A6DAFF` to `#00B7FF` over near-black `#0A1420` shadows), heavy film grain overlay. Subject should fit the post topic (person, crowd, environment, symbolic object).
 - **Handle:** `@{{HANDLE}}` — small, white, centered ~60-80px from the top edge.
 - **Pre-line (optional):** small italic intro phrase centered above the main headline ("How To", "The", "Why", etc.).
 - **Giant headline:** 2-3 lines of extra-condensed heavy sans, white, each line filling ~85% of the slide width. The hook. Tight leading.

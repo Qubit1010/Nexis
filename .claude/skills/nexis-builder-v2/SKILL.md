@@ -1,7 +1,7 @@
 ---
 name: nexis-builder-v2
 description: "Builds a complete, running project end to end from a plan or a raw idea: discovery and planning if needed, then code, tests, review and fixes, in one pass by one agent. This is the deliberate lean A/B counterpart to nexis-builder (v1): no .builder artifact bus, no phase manual, and no delegation to senior-frontend, senior-backend, senior-architect, ui-ux-pro-max, code-reviewer or ponytail, so the two can be compared honestly on the same brief. Say 'nexis-builder-v2', 'build this with v2', 'v2 build', 'compare v1 and v2'. For the standard orchestrated pipeline use nexis-builder."
-argument-hint: [PLAN.md path, pasted plan, or "build <idea>"] [--auto]
+argument-hint: '[PLAN.md path, pasted plan, or "build <idea>"] [--auto]'
 ---
 
 # Nexis Builder v2

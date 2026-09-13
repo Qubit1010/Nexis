@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "note": "Every source that any rubric anchor, evidence tier or price anchor traces to. Derived from the deep research passes in Nexis research/ dated 2026-08-30 and the shortlist at references/mvp-shortlist-business-2026-08-30.md. A claim with no entry here is not allowed to carry a tier above 'judgment'.",
+  "sources": {
+    "s1": {
+      "title": "AI-Era Agency Pricing Models: A 2026 Decision Guide",
+      "publisher": "Digital Applied",
+      "url": "https://www.digitalapplied.com/blog/ai-agency-pricing-models-2026-decision-guide",
+      "kind": "agency blog",
+      "caveat": "Vendor-adjacent blog, not an independent market survey."
+    },
+    "s2": {
+      "title": "AI Agency Services Pricing: Strategies for 2026",
+      "publisher": "Digital Applied",
+      "url": "https://www.digitalapplied.com/blog/ai-agency-services-pricing-strategies-2026",
+      "kind": "agency blog",
+      "caveat": "SINGLE SOURCE for the entire price book. Asking prices published by one agency, not a surveyed market rate."
+    },
+    "s3": {
+      "title": "The Agency Reset 2026: AI, Procurement, and the Collapse of the Labour Model",
+      "publisher": "Piscari",
+      "url": "https://piscari.com/marketing-agency-reset-2026/",
+      "kind": "industry analysis",
+      "caveat": "Full report is gated; only the summary was readable."
+    },
+    "s4": {
+      "title": "Why Agencies Are Losing to AI Solopreneurs in 2026",
+      "publisher": "Lishchuk",
+      "url": "https://lishchuk.com/blog/why-agencies-losing-to-ai-solopreneurs-2026.html",
+      "kind": "industry analysis"
+    },
+    "s5": {
+      "title": "Predictions 2026: Marketing Agencies Resign Their Agency",
+      "publisher": "Forrester",
+      "url": "https://www.forrester.com/blogs/predictions-2026-marketing-agencies-resign-their-agency/",
+      "kind": "analyst firm"
+    },
+    "s6": {
+      "title": "The great prompter has a plan for everything and an answer for nothing",
+      "publisher": "ComplexDiscovery",
+      "url": "https://complexdiscovery.com/the-great-prompter-has-a-plan-for-everything-and-an-answer-for-nothing/",
+      "kind": "practitioner opinion",
+      "caveat": "Argument, not measurement. The 'accountable delivery is defensible' claim rests entirely on this."
+    },
+    "s7": {
+      "title": "Will AI Replace Graphic Designers? The Fear vs. The Facts",
+      "publisher": "Clutch.co",
+      "url": "https://clutch.co/resources/will-ai-replace-graphic-designers",
+      "kind": "industry analysis"
+    },
+    "s8": {
+      "title": "Why Demand for Designers Is on the Rise",
+      "publisher": "Figma Blog",
+      "url": "https://www.figma.com/blog/why-demand-for-designers-is-on-the-rise/",
+      "kind": "vendor research",
+      "caveat": "Figma sells to designers. Directional claim, no reproduced figures in the excerpt."
+    },
+    "s9": {
+      "title": "5 Services AI Will Replace in 2026 (How to Pivot Now)",
+      "publisher": "Brandi Mowles",
+      "url": "https://brandimowles.com/2026/01/20/services-ai-will-replace-2026-how-to-pivot/",
+      "kind": "practitioner opinion",
+      "caveat": "Names service lines as replaced but the readable excerpt did not enumerate them."
+    },
+    "s10": {
+      "title": "Will AI replace designers in 2026? The data says no.",
+      "publisher": "Humbl Design",
+      "url": "https://humbldesign.io/blog-posts/will-ai-replace-designers-2026",
+      "kind": "practitioner opinion",
+      "caveat": "Cites adoption, job growth and salary trends but the underlying figures were not reproduced."
+    },
+    "s11": {
+      "title": "Impact of AI on Graphic Design and UI/UX",
+      "publisher": "r/UXDesign",
+      "url": "https://www.reddit.com/r/UXDesign/comments/1k4763j/impact_of_ai_on_graphic_design_uiux_which_one_is/",
+      "kind": "anecdote",
+      "caveat": "One practitioner's experience. The '60-70% of workload' figure is not a measurement."
+    },
+    "s12": {
+      "title": "AI and the great digital agency unbundling",
+      "publisher": "Dries Buytaert",
+      "url": "https://dri.es/ai-and-the-great-digital-agency-unbundling",
+      "kind": "practitioner opinion"
+    },
+    "s13": {
+      "title": "4As Look Ahead 2026: Agency as Strategic Partner",
+      "publisher": "4A's",
+      "url": "https://www.aaaa.org/look-ahead/partner-agency",
+      "kind": "trade body"
+    },
+    "s14": {
+      "title": "The 12 Best AI Tools for Graphic Designers in 2026",
+      "publisher": "Storyflow",
+      "url": "https://storyflow.so/blog/best-ai-tools-for-graphic-designers-2026",
+      "kind": "listicle",
+      "caveat": "Used only to establish that Firefly and Canva Magic Studio are mainstream, nothing stronger."
+    }
+  }
+}

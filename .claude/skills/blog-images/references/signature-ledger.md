@@ -31,17 +31,21 @@ Cover the labels. If two covers still read as the same drawing, one of them is w
 | `best-n8n-projects` | a five-station pipeline, each station carrying the specific thing that broke | **a conveyor line with stations** (a process track) | the break marker at each station |
 | `ai-agent-vs-automation` | a fixed rail beside a branching tree, same start, different auditability | **a rail versus a branching tree** (two path topologies) | the branch points on the tree |
 | `codex-vs-claude-code` | a balance scale sitting level between the two tools' SWE-bench scores, because a tied instrument has stopped being a reason to pick either one | **a balance / lever** (a weighing instrument) | the level beam itself, the reading that means nothing |
+| `12-question-marketing-brief` | one finished brief patched through four sequential passes and fanned out to three content channels, replacing mood-based posting with a routed system | **a switchboard** (jacks and cables) | the patch-cable path from brief to channels |
+| `claude-code-for-small-business` | three concentric layers, business, review layer, task, with the middle review layer drawn as a dashed, incomplete ring because a small team has to build it by hand | **nested containment** (concentric rings) | the dashed gap in the middle ring |
+| `ai-operating-system-for-founders` | a hundred-cell grid of skills, 88 filled, with a marked line at 51 showing the growth since the last count | **a grid that fills** (a filling field) | the cells filled since the 51 mark |
 
 ## Worlds already used, do not reach for these again
 
 two facing panels · a side-on stack · a calibrated ladder · a gauge with a dead zone ·
-a station pipeline · a rail versus a tree · a balance / lever
+a station pipeline · a rail versus a tree · a balance / lever · a switchboard · a nested
+containment · a grid that fills
 
 ## Worlds still open
 
-a nested containment (rings/boxes inside boxes) · a map with a boundary ·
-a timeline with a break · a grid that fills · a funnel · a switchboard · a ledger/table that
-reconciles · a container that leaks · a lens or filter stack
+a map with a boundary · a timeline with a break · a funnel (cover-available; used only as a
+supporting figure so far) · a ledger/table that reconciles · a container that leaks
+(cover-available; used only as a supporting figure so far) · a lens or filter stack
 
 Note: `codex-vs-claude-code` also used a funnel (3 tests converging) and a leaking container
 (cost mismatch) as **supporting figures**, not covers. Both stay open for a future cover -

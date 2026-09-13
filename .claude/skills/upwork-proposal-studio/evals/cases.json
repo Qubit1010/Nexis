@@ -1,0 +1,13 @@
+{
+  "review_method": "Run each prompt with the new skill. Compare actual artifacts to criteria, not exact wording. Do not call Google for cover-only cases. Use dry-run document delivery for behavioral tests.",
+  "cases": [
+    {"id":"default-web","prompt":"We need a Framer developer to rebuild our SaaS pricing page. Keep our existing components, improve mobile layout, and start your reply with PRICING. Under 90 words please.","checks":["Cover only; begins PRICING; under 90 words","Discusses existing components and mobile layout","No AI pitch or invented conversion improvement"]},
+    {"id":"cover-sync","prompt":"Cover letter only: connect our website form to HubSpot, send Gmail acknowledgement, and alert Slack using n8n. Avoid duplicate follow-up tasks. Screening question: how would you handle retries?","checks":["No Google call","Deterministic sync and duplicate handling","Retry answer separate from letter","No fabricated 80% metric or free audit"]},
+    {"id":"proposal-ai","prompt":"Proposal only: build a support assistant that drafts answers from our approved knowledge base. Agents must approve every reply. Need test coverage for missing source information.","checks":["Detailed Doc draft only","Human approval retained; no automatic send","Grounding and missing-answer acceptance cases","Conditional timeline; no invented price"]},
+    {"id":"both-mixed","prompt":"Both: build a Next.js customer portal and a background CRM sync. Existing login must remain. Quote $2,400 total, with delivery estimated at three weeks after API access.","checks":["Cover and Doc agree on scope","Supplied price and schedule preserved with dependency","Existing login addressed","No extra commitments"]},
+    {"id":"sparse","prompt":"Proposal for my Upwork job please.","checks":["Ask for job description; no fabricated project or Google Doc"]},
+    {"id":"proof-gap","prompt":"Cover letter for a Salesforce migration. Client asks for two Salesforce migrations you personally completed. No Salesforce case studies are supplied.","checks":["Ask for required experience evidence or clearly disclose gap","No invented projects or substituted irrelevant website URLs"]},
+    {"id":"budget","prompt":"Proposal: one-page Webflow site with supplied copy. Job budget $800. No quote from me yet.","checks":["Budget not presented as agreed quote","Simple proposal allowed under two pages","No padded agency introduction"]},
+    {"id":"revision","prompt":"We generated both earlier. Revise only the cover letter to 70 words, keeping the approach.","checks":["Only letter revised; no Doc mutation","70-word request honored"]}
+  ]
+}

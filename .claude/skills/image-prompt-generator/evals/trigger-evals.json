@@ -1,0 +1,82 @@
+[
+  {
+    "query": "i need an image prompt to paste into gemini for a poster about my 12-question marketing brief post, something colourful and not like the dark blog cover",
+    "should_trigger": true
+  },
+  {
+    "query": "write me a prompt for chatgpt image gen so i can make a hero image for the codex vs claude code article",
+    "should_trigger": true
+  },
+  {
+    "query": "can you give me a midjourney prompt for a thumbnail about ai automation for small businesses, 16:9",
+    "should_trigger": true
+  },
+  {
+    "query": "the post at content/blog/ai-agent-vs-automation.md needs a social image before i can publish it. write the prompt, use my brand colours",
+    "should_trigger": true
+  },
+  {
+    "query": "image prompt pls. topic is why most agencies fail at retainers, going on linkedin tomorrow",
+    "should_trigger": true
+  },
+  {
+    "query": "im doing a client ad for a solar install company and want to generate the visual myself. whats a good prompt for it",
+    "should_trigger": true
+  },
+  {
+    "query": "need a visual for my presentation slide explaining RAG systems, give me something i can paste into nano banana",
+    "should_trigger": true
+  },
+  {
+    "query": "prompt for an illustration showing chaos turning into a routed system, square format for instagram",
+    "should_trigger": true
+  },
+  {
+    "query": "i want a poster image for the new blog post but i dont know which tool to use, just give me something that works anywhere",
+    "should_trigger": true
+  },
+  {
+    "query": "generate me a prompt for a minimalist book-cover style graphic about deep work, no text in it",
+    "should_trigger": true
+  },
+  {
+    "query": "make me a carousel about the 5 ai tools i use daily, instagram, use template 6",
+    "should_trigger": false
+  },
+  {
+    "query": "turn this post into a linkedin infographic with the bento grid layout like last time",
+    "should_trigger": false
+  },
+  {
+    "query": "instagram short for the new claude code post, cover plus 2 content frames plus cta",
+    "should_trigger": false
+  },
+  {
+    "query": "draw an explainer diagram for the n8n article, needs to match the other blog covers exactly",
+    "should_trigger": false
+  },
+  {
+    "query": "our accent colour fails contrast on the raised surface, can you fix agency/15-brand-visual-identity.md",
+    "should_trigger": false
+  },
+  {
+    "query": "render the ai-os reel, the voiceover is already generated and prepare.mjs finished",
+    "should_trigger": false
+  },
+  {
+    "query": "write the linkedin post copy for the 12-question brief article, 200 words, my voice",
+    "should_trigger": false
+  },
+  {
+    "query": "chart my upwork earnings by month for the last year, i've got the csv in datasets/",
+    "should_trigger": false
+  },
+  {
+    "query": "what image size should i be using for linkedin feed posts these days, 1200x627 or square",
+    "should_trigger": false
+  },
+  {
+    "query": "a client needs a full logo and brand identity built out, where do i even start with that",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "published": "2026-09-05",
+  "title": "AI Substitution Exposure Rubric",
+  "orientation": "Every dimension is oriented so that 5 means MAXIMUM exposure. There are no inverted dimensions. If a dimension name ever reads in the opposite direction to its scale, the name is wrong, not the scale.",
+  "weights_disclaimer": "The composite weights are judgment, not a measured finding. No source in the corpus establishes the relative contribution of any dimension to substitution risk. They default to equal and are adjustable, and the report says so.",
+  "default_weights": {
+    "output_determinism": 0.2,
+    "client_self_service": 0.2,
+    "judgment_thinness": 0.2,
+    "artifact_billing": 0.2,
+    "price_anchor_erosion": 0.2
+  },
+  "dimensions": [
+    {
+      "id": "output_determinism",
+      "name": "Output determinism",
+      "question": "How templatable is the thing you actually hand over?",
+      "high_means": "The deliverable is a predictable artifact a model can produce a competent version of on the first try.",
+      "evidence_tier": "documented",
+      "evidence_note": "Routine, low-complexity, repetitive output is repeatedly identified as the most eroded category. Directional across sources, with no per-service-line figure anywhere in the corpus.",
+      "sources": ["s7", "s9", "s3"],
+      "anchors": {
+        "1": "Every engagement produces something structurally different. No two deliverables share a template.",
+        "2": "Recognisable shape, but the substance is rebuilt each time and depends on discovery.",
+        "3": "Templated skeleton, custom substance. A model gets the frame right and the content wrong.",
+        "4": "Largely templatable. A model produces a usable draft that needs an expert edit.",
+        "5": "Fully templatable. A model produces a shippable version on the first try. Logos, landing pages, blog posts, ad variations."
+      }
+    },
+    {
+      "id": "client_self_service",
+      "name": "Client self-service",
+      "question": "Can the buyer already do this themselves with a tool they have?",
+      "high_means": "A mainstream tool puts an acceptable version of this deliverable inside the client's own team.",
+      "evidence_tier": "documented",
+      "evidence_note": "Firefly, Canva Magic Studio and equivalents are established as mainstream in 2026 design stacks, and client in-housing is named as a force alongside AI commoditization. That these specific tools displace this specific service line is inference, not a documented finding.",
+      "sources": ["s14", "s13", "s7"],
+      "anchors": {
+        "1": "Requires capability the client has no route to acquiring. Specialist skill, licence, or scale.",
+        "2": "Client could technically attempt it and would produce something they would not ship.",
+        "3": "A capable client generalist gets to roughly half your quality with a mainstream tool.",
+        "4": "Client's existing team can produce an acceptable version. They keep you for speed and taste, not capability.",
+        "5": "One person on the client's team does this in an afternoon with a tool they already pay for."
+      }
+    },
+    {
+      "id": "judgment_thinness",
+      "name": "Judgment thinness",
+      "question": "How little taste, strategy or stakeholder orchestration is in the value?",
+      "high_means": "The work is execution. Almost none of what the client pays for is judgment.",
+      "evidence_tier": "documented",
+      "evidence_note": "Strategy, taste and feedback-rich work is consistently described as retaining value while execution is hollowed out. Directional and repeated across independent sources; no source quantifies the boundary.",
+      "sources": ["s7", "s8", "s10", "s13"],
+      "anchors": {
+        "1": "Almost entirely judgment. Framing the problem, aligning stakeholders, deciding what not to do.",
+        "2": "Judgment-led. Execution follows from a decision that is the actual deliverable.",
+        "3": "Even split. A defensible call up front, then substantial production behind it.",
+        "4": "Mostly production. The judgment is a small number of early decisions inside a known playbook.",
+        "5": "Pure execution against a brief someone else wrote. The judgment happened before you were hired."
+      }
+    },
+    {
+      "id": "artifact_billing",
+      "name": "Artifact billing",
+      "question": "Are you paid for a deliverable, or for a business result you are on the hook for?",
+      "high_means": "The client buys an artifact. Nobody measures whether it worked, and you carry no consequence if it did not.",
+      "evidence_tier": "practitioner",
+      "evidence_note": "The claim that accountable delivery is the defensible position rests on a single practitioner argument, supported directionally by the outcome-pricing commentary. It is reasoning, not measurement. Treat this dimension as the weakest-evidenced of the five.",
+      "sources": ["s6", "s12", "s1"],
+      "anchors": {
+        "1": "Paid on a realized business outcome with a defined metric, baseline and window. You lose money if it fails.",
+        "2": "Formal accountability for a result, with commercial consequence short of full risk transfer.",
+        "3": "Result is discussed and reported on, but the invoice does not move if it misses.",
+        "4": "Paid on delivery. Success is measured, informally, and nothing follows from it.",
+        "5": "Paid on delivery of an artifact. No outcome is defined, tracked or owned by anyone."
+      }
+    },
+    {
+      "id": "price_anchor_erosion",
+      "name": "Price anchor erosion",
+      "question": "Is the going rate for this line visibly falling?",
+      "high_means": "Clients are asking for the AI discount on this line and competitors are quoting materially less.",
+      "evidence_tier": "documented",
+      "evidence_note": "AI compresses delivery 3-4x, which under time-and-materials hands the entire productivity gain to the client. 60% of US marketing leaders are spending less on agencies, and Big Six share fell from 44.6% to 29.6%. These are market-level figures. No source breaks price erosion down by service line.",
+      "sources": ["s1", "s5", "s4", "s3"],
+      "anchors": {
+        "1": "Rate has held or risen. No client has raised AI in a pricing conversation on this line.",
+        "2": "Rate holding, with occasional pressure you have been able to defend.",
+        "3": "Winning at the old rate is getting harder. You have started discounting to close.",
+        "4": "Rate is visibly down. Clients reference AI when negotiating this line specifically.",
+        "5": "Rate is collapsing. You are quoting materially less than two years ago and still losing on price."
+      }
+    }
+  ]
+}
