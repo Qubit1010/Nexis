@@ -1,6 +1,6 @@
 ---
 name: upwork-advisor
-description: "Research-backed Upwork strategy advisor, the layer above the execution skills: it diagnoses and advises, it does not write the artifact. Covers profile optimization, the 2026 search and AI-matching algorithm, a 60-second job triage rubric, connects and Boost economics, portfolio-level proposal diagnosis, rates and niching, badge thresholds and client mix. Say 'is this job worth bidding', 'why am I not getting replies', 'should I raise my rate', 'how do I get Top Rated Plus'. To write a proposal use upwork-proposal-generator; to reply to a client message, upwork-reply-drafter."
+description: "Research-backed Upwork strategy advisor, the layer above the execution skills: it diagnoses and advises, it does not write the artifact. Covers profile optimization, the 2026 search and AI-matching algorithm, a 60-second job triage rubric, connects and Boost economics, portfolio-level proposal diagnosis, rates and niching, badge thresholds and client mix. Say 'is this job worth bidding', 'why am I not getting replies', 'should I raise my rate', 'how do I get Top Rated Plus'. To write a proposal use upwork-proposal-studio; to reply to a client message, upwork-reply-drafter."
 argument-hint: "[Upwork strategy question, profile to audit, or job post to triage]"
 ---
 

@@ -10,7 +10,7 @@
     {
       "id": 2,
       "prompt": "Found a job: 'Need AI automation expert to build a lead qualification agent. Budget $2,500. Looking for someone who can start immediately.' Client has 42% hire rate, $8k spent, payment verified, 11 proposals already, posted 3 hours ago. Worth bidding? Should I boost?",
-      "expected_output": "Job-search mode. Should run the triage rubric: hard gates pass (payment verified, under 20 proposals, posted within hours). Then score the five criteria, roughly: hire rate 42% = 1 (mid band, below the 60% good threshold), spend $8k = 2, post quality = 2 (specific problem and budget), competition 11 proposals + 3 hours = 1, fit to AI automation specialty = 2. Total around 8/10, above the 7.5 bid threshold. Boost recommendation should be yes given 8+ score, $2,500 exceeds the $1,000 boost floor, and relevant proof exists. Should flag 'start immediately' as a mild urgency/anxiety signal. Should end by offering to hand off to upwork-proposal-generator, not by writing the proposal.",
+      "expected_output": "Job-search mode. Should run the triage rubric: hard gates pass (payment verified, under 20 proposals, posted within hours). Then score the five criteria, roughly: hire rate 42% = 1 (mid band, below the 60% good threshold), spend $8k = 2, post quality = 2 (specific problem and budget), competition 11 proposals + 3 hours = 1, fit to AI automation specialty = 2. Total around 8/10, above the 7.5 bid threshold. Boost recommendation should be yes given 8+ score, $2,500 exceeds the $1,000 boost floor, and relevant proof exists. Should flag 'start immediately' as a mild urgency/anxiety signal. Should end by offering to hand off to upwork-proposal-studio, not by writing the proposal.",
       "files": []
     },
     {
@@ -40,7 +40,7 @@
     {
       "id": 7,
       "prompt": "Write me a proposal for this job: 'Looking for a developer to build a Shopify to HubSpot integration that syncs orders and triggers follow-up emails. Budget $1,200.'",
-      "expected_output": "HANDOFF TEST. Must NOT write the proposal. Should recognize this as a request for the artifact and route to upwork-proposal-generator. May optionally offer a one-line strategic note (e.g. the job is above the $1,000 boost floor, or which results-bank entry maps to a multi-tool ops flow), but the proposal copy itself must come from the generator skill. Failure looks like drafting proposal paragraphs here.",
+      "expected_output": "HANDOFF TEST. Must NOT write the proposal. Should recognize this as a request for the artifact and route to upwork-proposal-studio. May optionally offer a one-line strategic note (e.g. the job is above the $1,000 boost floor, or which results-bank entry maps to a multi-tool ops flow), but the proposal copy itself must come from upwork-proposal-studio. Failure looks like drafting proposal paragraphs here.",
       "files": []
     },
     {

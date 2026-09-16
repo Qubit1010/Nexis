@@ -34,12 +34,14 @@ Cover the labels. If two covers still read as the same drawing, one of them is w
 | `12-question-marketing-brief` | one finished brief patched through four sequential passes and fanned out to three content channels, replacing mood-based posting with a routed system | **a switchboard** (jacks and cables) | the patch-cable path from brief to channels |
 | `claude-code-for-small-business` | three concentric layers, business, review layer, task, with the middle review layer drawn as a dashed, incomplete ring because a small team has to build it by hand | **nested containment** (concentric rings) | the dashed gap in the middle ring |
 | `ai-operating-system-for-founders` | a hundred-cell grid of skills, 88 filled, with a marked line at 51 showing the growth since the last count | **a grid that fills** (a filling field) | the cells filled since the 51 mark |
+| `marketing-system-build-case-study` | a ledger that reconciles strategic decisions against their downstream use, making every missing handoff visible | **a reconciliation ledger** (an operating record) | the linked inherited entries |
+| `smart-marketing-goals-claude-code` | a twelve-week target with a pace gap found in week three by recurring Monday checkpoints, instead of discovered at the quarter-end review | **a timeline with an early break** (a review cadence) | the weekly review loop |
 
 ## Worlds already used, do not reach for these again
 
 two facing panels · a side-on stack · a calibrated ladder · a gauge with a dead zone ·
 a station pipeline · a rail versus a tree · a balance / lever · a switchboard · a nested
-containment · a grid that fills
+containment · a grid that fills · a timeline with an early break
 
 ## Worlds still open
 

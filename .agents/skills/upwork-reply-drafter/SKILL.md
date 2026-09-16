@@ -1,6 +1,6 @@
 ---
 name: upwork-reply-drafter
-description: "Drafts research-backed replies to Upwork CLIENT messages, not proposals to job posts, across the whole relationship: pre-hire negotiation, active-project updates and scope changes, closeout and the review ask, and reactivating past clients. Grounded in a cited 2026 corpus on Upwork client communication plus the sales-playbook framework brain. Say 'reply to this Upwork client', 'client wants a discount', 'client is asking for more than we agreed', 'how do I ask for the review', 'turn this into a retainer', or paste a client thread. To write a proposal to a new job post use upwork-proposal-generator; for account strategy, upwork-advisor."
+description: "Drafts research-backed replies to Upwork CLIENT messages, not proposals to job posts, across the whole relationship: pre-hire negotiation, active-project updates and scope changes, closeout and the review ask, and reactivating past clients. Grounded in a cited 2026 corpus on Upwork client communication plus the sales-playbook framework brain. Say 'reply to this Upwork client', 'client wants a discount', 'client is asking for more than we agreed', 'how do I ask for the review', 'turn this into a retainer', or paste a client thread. To write a proposal to a new job post use upwork-proposal-studio; for account strategy, upwork-advisor."
 ---
 
 # Pointer to `.claude/skills/upwork-reply-drafter/`

@@ -23,6 +23,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -88,25 +89,41 @@ def error_exit(message):
 GWS_CMD, GWS_USE_SHELL = find_gws()
 
 
-def run_gws(args, json_body=None):
+# Google's API occasionally times out or 500s on the call immediately after a Drive/Docs
+# write (create, batchUpdate) lands, before it's fully readable/replicated. Retrying the same
+# call after a short backoff clears it; failing outright leaves an empty orphan doc behind
+# (hit twice in a row on 2026-09-14 building the crawl4ai post).
+RETRYABLE_MARKERS = ("operation timed out", "http request failed", "internalerror",
+                     "connection reset", "temporarily unavailable")
+
+
+def run_gws(args, json_body=None, retries=3):
     cmd = GWS_CMD + args
     if json_body is not None:
         cmd += ["--json", json.dumps(json_body)]
 
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=120,
-                            shell=GWS_USE_SHELL,
-                            encoding="utf-8", errors="replace")
-    if result.returncode != 0:
-        stderr = result.stderr.strip() if result.stderr else "Unknown error"
-        raise RuntimeError(f"gws command failed: {' '.join(str(a) for a in args[:3])}... | {stderr}")
+    last_stderr = "Unknown error"
+    for attempt in range(retries):
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120,
+                                shell=GWS_USE_SHELL,
+                                encoding="utf-8", errors="replace")
+        if result.returncode == 0:
+            stdout = result.stdout.strip()
+            if not stdout:
+                return {}
+            try:
+                return json.loads(stdout)
+            except json.JSONDecodeError:
+                return {"raw": stdout}
 
-    stdout = result.stdout.strip()
-    if not stdout:
-        return {}
-    try:
-        return json.loads(stdout)
-    except json.JSONDecodeError:
-        return {"raw": stdout}
+        last_stderr = result.stderr.strip() if result.stderr else "Unknown error"
+        is_retryable = any(marker in last_stderr.lower() for marker in RETRYABLE_MARKERS)
+        if is_retryable and attempt < retries - 1:
+            time.sleep(2 * (attempt + 1))
+            continue
+        break
+
+    raise RuntimeError(f"gws command failed: {' '.join(str(a) for a in args[:3])}... | {last_stderr}")
 
 
 def find_or_create_folder():

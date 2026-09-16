@@ -1,6 +1,6 @@
 ---
 name: upwork-advisor
-description: "Research-backed Upwork strategy advisor, the layer above the execution skills: it diagnoses and advises, it does not write the artifact. Covers profile optimization, the 2026 search and AI-matching algorithm, a 60-second job triage rubric, connects and Boost economics, portfolio-level proposal diagnosis, rates and niching, badge thresholds and client mix. Say 'is this job worth bidding', 'why am I not getting replies', 'should I raise my rate', 'how do I get Top Rated Plus'. To write a proposal use upwork-proposal-generator; to reply to a client message, upwork-reply-drafter."
+description: "Research-backed Upwork strategy advisor, the layer above the execution skills: it diagnoses and advises, it does not write the artifact. Covers profile optimization, the 2026 search and AI-matching algorithm, a 60-second job triage rubric, connects and Boost economics, portfolio-level proposal diagnosis, rates and niching, badge thresholds and client mix. Say 'is this job worth bidding', 'why am I not getting replies', 'should I raise my rate', 'how do I get Top Rated Plus'. To write a proposal use upwork-proposal-studio; to reply to a client message, upwork-reply-drafter."
 argument-hint: "[Upwork strategy question, profile to audit, or job post to triage]"
 ---
 
@@ -95,7 +95,7 @@ End by naming the next action and the skill that does it. Never draft the artifa
 
 | Aleem wants | Route to |
 |---|---|
-| A proposal written for a job post | **`upwork-proposal-generator`** |
+| A proposal written for a job post | **`upwork-proposal-studio`** |
 | A reply written to a client message | **`upwork-reply-drafter`** |
 | The retainer pitch / review ask / scope-change wording | **`upwork-reply-drafter`** |
 | Client acquisition **off** Upwork | **`sales-playbook`** |
@@ -104,7 +104,7 @@ End by naming the next action and the skill that does it. Never draft the artifa
 **No job-scout handoff.** `projects/upwork-job-scout` is inactive (never got API access). Job triage
 is done here with the manual rubric in `job-search-playbook.md`. Never route Aleem there.
 
-If Aleem pastes a **raw job post with no question**, that's `upwork-proposal-generator`'s trigger —
+If Aleem pastes a **raw job post with no question**, that's `upwork-proposal-studio`'s trigger —
 let it take it. Only take a pasted job post when he asks a *strategy* question about it ("is this
 worth bidding on", "should I boost this").
 
@@ -131,7 +131,7 @@ worth bidding on", "should I boost this").
 | Scenario | Action |
 |----------|--------|
 | Vague ask | Ask ONE: getting found, getting replies, or the bigger play? |
-| Raw job post pasted, no question | Let `upwork-proposal-generator` take it |
+| Raw job post pasted, no question | Let `upwork-proposal-studio` take it |
 | Job post + "should I bid/boost?" | job-search mode, run the triage rubric |
 | Asks for a JSS-dependent answer | Stats are unconfirmed — ask for the real number first (`upwork-context.md`) |
 | Asks about badge distance | Needs **12-month** earnings, not lifetime. Ask; don't infer from "$20K+ lifetime" |

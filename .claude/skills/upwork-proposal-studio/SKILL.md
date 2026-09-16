@@ -1,13 +1,15 @@
 ---
 name: upwork-proposal-studio
-description: Write tailored Upwork cover letters, concise detailed Google Doc proposals, or both from job descriptions and attachments. Use for Upwork applications, especially when the user names Upwork Proposal Studio. Not for replying to ongoing client conversations.
+description: Write tailored Upwork cover letters, concise detailed Google Doc proposals, or both from job descriptions and attachments. The default skill for any pasted Upwork job post or request to write/generate/draft a proposal. Not for replying to ongoing client conversations.
 ---
 
 # Upwork Proposal Studio
 
 Write as Aleem Ul Hassan. Help the client assess fit and the proposed work quickly. Optimize for relevance, credible reasoning, and easy evaluation, not keyword stuffing or supposed AI-detector tricks. Never promise a response or hire rate.
 
-This is a separate skill. Do not load the old upwork-proposal-generator's writing rules. Both skills remain installed; explicitly naming `upwork-proposal-studio` is the reliable way to select this one.
+This is the sole proposal-writing skill. The old `upwork-proposal-generator` was archived to
+`archives/skills/upwork-proposal-generator/` on 2026-09-14 — do not load its writing rules or
+treat it as installed.
 
 ## Choose the output
 

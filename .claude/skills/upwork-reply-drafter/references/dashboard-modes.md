@@ -26,6 +26,6 @@ Job type does not swap files — the same brain loads regardless of selection. I
 
 - **AI Services** — "agentic automation, the premium wedge." Leans on the AI results (email triage, lead-gen pipeline).
 - **Marketing Automation** — workflows/CRM/lead-ops framing. Leans on the e-commerce/CRM automation results.
-- **Web Dev** — React/Next/Webflow build framing. The only job type where portfolio links (tradinghunters.com etc.) are allowed to surface, inheriting the rule from `upwork-proposal-generator` that web links undercut AI positioning elsewhere.
+- **Web Dev** — React/Next/Webflow build framing. The only job type where portfolio links (tradinghunters.com etc.) are allowed to surface, inheriting the rule from `upwork-proposal-studio` that web links undercut AI positioning elsewhere.
 
 **Summary:** Situation changes the actual conversational strategy and which parts of the brain load. Job type tunes the flavor of proof and positioning within whatever situation is selected.

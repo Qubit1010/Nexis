@@ -3,7 +3,7 @@
 Evidence in `research-synthesis.md` Q5. Numbers in `upwork-scoreboard.md`.
 
 > **This file never writes a proposal.** It diagnoses why a proposal *system* is failing and fixes
-> the strategy. The actual copy is `upwork-proposal-generator`'s job — hand off once the strategy is
+> the strategy. The actual copy is `upwork-proposal-studio`'s job — hand off once the strategy is
 > settled.
 
 ---
@@ -54,7 +54,7 @@ Verified payment, hiring history, under 20 proposals [Q5][Q3]. See the triage ru
 ## The AI-detection reality
 
 AI-generated proposals **underperform and are actively filtered** by both the platform and clients
-[Q5]. This is the evidence base behind `upwork-proposal-generator`'s "Sound Human, Not AI" section —
+[Q5]. This is the evidence base behind `upwork-proposal-studio`'s human, non-templated writing rules —
 that section is not stylistic preference, it's a response to documented filtering.
 
 Strategic consequence: proposal volume via automation is a losing play in 2026. Fewer, genuinely
@@ -82,7 +82,7 @@ constraint is your time and reply-rate quality, not connect cost.
 
 Once the strategy is settled, say so plainly and route:
 
-> "Structure's the issue, not volume. Want `upwork-proposal-generator` to write this one against
+> "Structure's the issue, not volume. Want `upwork-proposal-studio` to write this one against
 > the fixed angle?"
 
 Never draft the proposal here, even partially. Two sources of proposal copy will drift.

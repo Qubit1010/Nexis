@@ -109,5 +109,5 @@ When Aleem pastes a job post and asks whether to bid:
 2. **The scoring table** — the five criteria with the score and the one-line reason for each.
 3. **Gate check** — call out explicitly if a hard gate failed (that ends it).
 4. **If bidding:** the one angle that wins it, and the specific proof point to lead with. Then hand
-   off: "want `upwork-proposal-generator` to write it?"
+   off: "want `upwork-proposal-studio` to write it?"
 5. **If skipping:** what would have to be different for it to be worth a connect.

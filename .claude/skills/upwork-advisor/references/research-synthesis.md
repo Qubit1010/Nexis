@@ -100,7 +100,7 @@
 
 ## Q5: Proposal strategy at portfolio level (benchmarks, not copy)
 
-> Copy craft is `upwork-proposal-generator`'s job. This section is the *numbers* that tell you whether your proposal system is working.
+> Copy craft is `upwork-proposal-studio`'s job. This section is the *numbers* that tell you whether your proposal system is working.
 
 **Benchmark table:**
 
@@ -121,7 +121,7 @@
 
 **Targeting rules:** never bid on posts older than **24-48 hours** or with **20+ proposals** [1][2][5]. Verified payment + hiring history only [3][5].
 
-**AI-generated proposals underperform and are filtered** by both the platform and clients [8][5]. This is the evidence base for `upwork-proposal-generator`'s "Sound Human, Not AI" section.
+**AI-generated proposals underperform and are filtered** by both the platform and clients [8][5]. This is the evidence base for `upwork-proposal-studio`'s human, non-templated writing rules.
 
 **Sources:** [1] gigradar.io/blog/upwork-outreach · [2] gigradar.io/blog/upwork-proposal-response-rate · [3] aiproposer.com/guides/upwork-proposals/upwork-proposal-win-rate · [4] convertix.io/blog/checklist-for-tracking-upwork-bid-success-rates · [5] unil.ink/blog/how-to-get-clients-on-upwork-2026 · [6] bidpilotpro.com/blogs/how-to-write-upwork-proposal · [7] medium.com/@inboxinline/i-analyzed-500-upwork-proposals-with-a-95-win-rate · [8] gigradar.io/blog/ai-proposals-upwork
 

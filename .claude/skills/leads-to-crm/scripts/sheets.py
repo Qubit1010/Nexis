@@ -239,26 +239,27 @@ def update_rows(sheet_id, tab, start_row, values_2d, ncols, batch_size=25):
 
 
 def append_rows(sheet_id, tab, rows, batch_size=10):
-    """Append rows (list of lists) in small batches to stay under CLI limits."""
+    """Append rows (list of lists) after the sheet's true last row, via an explicit range --
+    deliberately NOT the Sheets API's values.append "auto-detect the table" behavior.
+
+    That auto-detect scans from a given anchor and inserts after the first CONTIGUOUS block of
+    non-empty rows, which breaks two different ways, both measured live against the LinkedIn
+    Outreach CRM (2026-09-09/13):
+      1. Anchored on a single blank column (the original bug: LinkedIn's column A is blank on
+         every row, header included) -- the API finds a zero-height "table" and inserts at the
+         very TOP, burying the header under new leads.
+      2. Anchored on the full row width (the first fix attempt, which stopped (1) but not this) --
+         if the sheet has ANY genuinely blank/near-blank row partway through (verified: this CRM
+         has such rows around 1358-1359, likely leftover from an old edit), the API treats that as
+         the table's end and inserts new leads into the MIDDLE of existing data, not the bottom.
+    Both failure modes are silent -- append_rows still returns success. The fix: read the tab's
+    real current length ourselves and write to that exact row range via update_rows, so placement
+    never depends on the API guessing where "the table" ends."""
     if not rows:
         return True
-    for i in range(0, len(rows), batch_size):
-        batch = rows[i:i + batch_size]
-        try:
-            run_gws(
-                ["sheets", "spreadsheets", "values", "append",
-                 "--params", json.dumps({
-                     "spreadsheetId": sheet_id,
-                     "range": f"{tab}!A1",
-                     "valueInputOption": "RAW",
-                     "insertDataOption": "INSERT_ROWS",
-                 })],
-                json_body={"values": batch},
-            )
-        except RuntimeError as e:
-            print(f"  ERROR appending batch {i // batch_size + 1}: {e}", flush=True)
-            return False
-    return True
+    current_rows = read_values(sheet_id, tab)
+    start_row = len(current_rows) + 1
+    return update_rows(sheet_id, tab, start_row, rows, len(rows[0]), batch_size=batch_size)
 
 
 def delete_rows(sheet_id, gid, row_indices_1based, batch_size=25):

@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import time
 import uuid
 
 FOLDER = "NexusPoint Proposals"
@@ -144,7 +145,9 @@ def requests_for(text, spans, inline=None, old_end=2):
         if style == "TABLE":
             continue
         elif style == "BULLET":
-            requests.append({"createParagraphBullets": {"range": rng, "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"}})
+            requests.extend([
+                {"createParagraphBullets": {"range": rng, "bulletPreset": "BULLET_DISC_CIRCLE_SQUARE"}},
+                {"updateParagraphStyle": {"range": rng, "paragraphStyle": {"spaceBelow": {"magnitude": 8, "unit": "PT"}}, "fields": "spaceBelow"}}])
         elif style != "NORMAL_TEXT":
             requests.extend([
                 {"updateParagraphStyle": {"range": rng, "paragraphStyle": {"namedStyleType": style, "keepWithNext": True,
@@ -182,7 +185,13 @@ class Workspace:
             raise ValueError("Request exceeds the safe Windows argument limit; shorten the proposal")
         if output:
             cmd += ["--output", str(output)]
-        result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", timeout=60, shell=False, cwd=self.work)
+        for attempt in range(3):
+            result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", timeout=60, shell=False, cwd=self.work)
+            transient = "operation timed out" in result.stdout.lower() or "operation timed out" in result.stderr.lower()
+            if result.returncode == 0 or not transient or attempt == 2:
+                break
+            print(f"Transient network error on {service}.{resource}.{method}, retrying...", file=sys.stderr)
+            time.sleep(3 * (attempt + 1))
         if result.returncode:
             raise RuntimeError(result.stderr.strip() or result.stdout.strip() or "gws failed")
         if output:
@@ -235,21 +244,36 @@ def table_cells(element):
     return [[cell for cell in row["tableCells"]] for row in element["table"]["tableRows"]]
 
 
+def batch_requests(api, doc_id, requests, write_control=None, limit=8000, max_count=40):
+    # A single large batchUpdate (many requests or ~10KB+ of JSON) reliably fails
+    # at the HTTP layer in this environment even though Google's own limits are
+    # far higher; splitting into smaller chunks (by count and by size) avoids it.
+    params = {"documentId": doc_id}
+    chunk = []
+
+    def flush(control):
+        body = {"requests": chunk}
+        if control:
+            body["writeControl"] = control
+        api.call("docs", "documents", "batchUpdate", params, body)
+
+    for request in requests:
+        if chunk and (len(chunk) >= max_count or len(json.dumps(chunk + [request])) > limit):
+            flush(write_control)
+            write_control = None
+            chunk = []
+        chunk.append(request)
+    if chunk:
+        flush(write_control)
+
+
 def write_tables(api, doc_id, data, spans):
     tables = [s["table"] for s in data["sections"] if s.get("table")]
     locations = [start for start, end, style in spans if style == "TABLE"]
     params = {"documentId": doc_id}
 
     def batch(requests):
-        # Keep native Windows command-line arguments below the CLI limit.
-        chunk = []
-        for request in requests:
-            if chunk and len(json.dumps(chunk + [request])) > 18000:
-                api.call("docs", "documents", "batchUpdate", params, {"requests": chunk})
-                chunk = []
-            chunk.append(request)
-        if chunk:
-            api.call("docs", "documents", "batchUpdate", params, {"requests": chunk})
+        batch_requests(api, doc_id, requests, limit=18000)
 
     # Reverse insertion preserves the earlier placeholder positions.
     for index, table in reversed(list(zip(locations, tables))):
@@ -347,7 +371,7 @@ def deliver(data, path, api=None):
         text, spans, inline = compose(data)
         end = max((e.get("endIndex", 2) for e in body_content(doc)), default=2)
         api.call("drive", "files", "update", {"fileId": doc_id}, {"name": data["title"]})
-        api.call("docs", "documents", "batchUpdate", {"documentId": doc_id}, {"requests": requests_for(text, spans, inline, end), "writeControl": {"requiredRevisionId": doc["revisionId"]}})
+        batch_requests(api, doc_id, requests_for(text, spans, inline, end), write_control={"requiredRevisionId": doc["revisionId"]})
         verify(api.call("docs", "documents", "get", {"documentId": doc_id}), text, spans)
         if any(s.get("table") for s in data["sections"]):
             write_tables(api, doc_id, data, spans)

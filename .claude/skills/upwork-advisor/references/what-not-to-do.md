@@ -48,7 +48,7 @@ repeating something that "everyone knows" about Upwork. Every entry cites the se
 
 ## Things this skill must never do
 
-- **Write a proposal or a client reply.** Route to `upwork-proposal-generator` / `upwork-reply-drafter`.
+- **Write a proposal or a client reply.** Route to `upwork-proposal-studio` / `upwork-reply-drafter`.
 - **Route to `projects/upwork-job-scout`.** It's inactive (no API access). Use the manual rubric.
 - **Invent a benchmark.** If it's not in `upwork-scoreboard.md` or the synthesis, say so — the
   "Known gaps" list at the bottom of the synthesis is the honest answer to several common questions.
