@@ -27,12 +27,13 @@ Check this before doing anything else. Writing a blog post here instead of routi
 | Rendered, voiced 9:16 video | **`reel-creator`** or **`hyperframes-reel`** |
 | A podcast transcript into short-form pieces | **`podcast-repurposer`** |
 | A NexusPoint project or tool write-up | **`case-study-generator`** |
+| An issue of Aleem's LinkedIn newsletter, Notes from the Workbench | **`linkedin-newsletter`** |
 | Landing pages, sales pages, ads, email sequences that ask for the sale | **`copy-conversion`** |
 | The plan the piece belongs to | **`content-strategy`** |
 
 **Written here, because nothing else owns them:**
 
-whitepapers - ebooks - gated guides and lead magnets - standalone email newsletters - a
+whitepapers - ebooks - gated guides and lead magnets - standalone email newsletters (Aleem's LinkedIn newsletter is `linkedin-newsletter`) - a
 client's *customer* case studies - X and LinkedIn threads - single text posts - memes -
 TikTok and short-video scripts - long-form YouTube video scripts - webinar structure and
 running order - LinkedIn document carousels - podcast show notes

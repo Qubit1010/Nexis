@@ -36,16 +36,17 @@ Cover the labels. If two covers still read as the same drawing, one of them is w
 | `ai-operating-system-for-founders` | a hundred-cell grid of skills, 88 filled, with a marked line at 51 showing the growth since the last count | **a grid that fills** (a filling field) | the cells filled since the 51 mark |
 | `marketing-system-build-case-study` | a ledger that reconciles strategic decisions against their downstream use, making every missing handoff visible | **a reconciliation ledger** (an operating record) | the linked inherited entries |
 | `smart-marketing-goals-claude-code` | a twelve-week target with a pace gap found in week three by recurring Monday checkpoints, instead of discovered at the quarter-end review | **a timeline with an early break** (a review cadence) | the weekly review loop |
+| `gpt-6-astra-creator-agent-workflows` | a creator workflow contained inside an operating boundary, with research, drafting, and QA held inside before a human gate controls public action | **a map with a boundary** (a governed territory) | the operating boundary around the agent workflow |
 
 ## Worlds already used, do not reach for these again
 
 two facing panels · a side-on stack · a calibrated ladder · a gauge with a dead zone ·
 a station pipeline · a rail versus a tree · a balance / lever · a switchboard · a nested
-containment · a grid that fills · a timeline with an early break
+containment · a grid that fills · a timeline with an early break · a map with a boundary
 
 ## Worlds still open
 
-a map with a boundary · a timeline with a break · a funnel (cover-available; used only as a
+a timeline with a break · a funnel (cover-available; used only as a
 supporting figure so far) · a ledger/table that reconciles · a container that leaks
 (cover-available; used only as a supporting figure so far) · a lens or filter stack
 

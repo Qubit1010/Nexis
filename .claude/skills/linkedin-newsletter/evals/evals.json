@@ -1,0 +1,23 @@
+{
+  "skill_name": "linkedin-newsletter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "turn my latest blog post into this week's linkedin newsletter issue, its the gemini RSI one (slug gemini-rsi-recursive-self-improvement-leaks)",
+      "expected_output": "A condensed LinkedIn newsletter issue (not a copy of the blog) with a first-person hook, 400-600 word body, takeaways, a backlink to https://aleemuh.com/blog/gemini-rsi-recursive-self-improvement-leaks, exactly one CTA, and publishing notes with a publish date 3-7 days after 2026-09-23. Passes check_issue.py.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "here are two of my linkedin posts from june (li-setup.txt and li-marketing.txt), make a linkedin newsletter issue out of them",
+      "expected_output": "One issue built around the thread connecting both posts (Claude Code setup and marketing automation), not the two posts stitched together; uses only facts present in the posts; no backlink unless a matching blog post exists; one CTA; passes check_issue.py.",
+      "files": ["linkedin-newsletter-workspace/inputs/li-setup.txt", "linkedin-newsletter-workspace/inputs/li-marketing.txt"]
+    },
+    {
+      "id": 3,
+      "prompt": "write a linkedin newsletter issue about why small businesses automate the wrong process first",
+      "expected_output": "Runs the content-engine gate (ladder, first-person, pillar) before writing; does not invent statistics or client results; marks any missing first-person fact as a placeholder or asks for it; one CTA; no agency name.",
+      "files": []
+    }
+  ]
+}

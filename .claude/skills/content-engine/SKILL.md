@@ -147,7 +147,8 @@ Hand off to `post-creator` once the row clears.
 | A single-image LinkedIn infographic | `linkedin-infographics` |
 | Vertical short frames | `shorts-creator` |
 | A rendered, voiced video | `reel-creator` or `hyperframes-reel` |
-| Whitepaper, newsletter, thread, case study, video script, webinar | `content-production` |
+| An issue of Aleem's LinkedIn newsletter | `linkedin-newsletter` |
+| Whitepaper, email newsletter, thread, case study, video script, webinar | `content-production` |
 | Turning a transcript into short-form | `podcast-repurposer` |
 
 RUN writes posts and captions directly. Anything above goes to its owner.

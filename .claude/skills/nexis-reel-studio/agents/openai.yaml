@@ -1,6 +1,6 @@
 interface:
   display_name: "Nexis Reel Studio"
-  short_description: "Post-to-reel motion, cloned voice and studio avatar"
+  short_description: "Concept-specific reel motion and cloned narration"
   default_prompt: "Use $nexis-reel-studio to turn this post into a finished narrated reel."
 policy:
   allow_implicit_invocation: true
