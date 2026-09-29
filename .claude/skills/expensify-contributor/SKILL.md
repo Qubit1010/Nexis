@@ -1,10 +1,10 @@
 ---
 name: expensify-contributor
-description: "Required reading before answering anything about the Expensify/App open-source bounty programme, where contributors post proposals on GitHub issues and are hired and paid about $250 through Upwork. Holds the measured mechanics of that competition (the pre-Help-Wanted work window, MelvinBot, ProposalPolice, Contributor+ selection) plus scripts that find and score issues, generate SHA-pinned permalinks, and screen a draft against the 90 percent duplicate auto-withdrawal. Use it rather than general knowledge for picking an issue, diagnosing why proposals lose, or checking a draft before posting. Triggers on a bare Expensify/App issue URL. Not for Expensify the expense product, and not for debugging any other codebase."
+description: "Required reading before answering anything about the Expensify/App open-source bounty programme, where contributors post proposals on GitHub issues and are hired and paid about $175 to $250 through Upwork (new issues list at $175 as of 2026-09). Holds the measured mechanics of that competition (the pre-Help-Wanted work window, MelvinBot, ProposalPolice, Contributor+ selection) plus scripts that find and score issues, generate SHA-pinned permalinks, and screen a draft against the 90 percent duplicate auto-withdrawal. Use it rather than general knowledge for picking an issue, diagnosing why proposals lose, or checking a draft before posting. Triggers on a bare Expensify/App issue URL. Not for Expensify the expense product, and not for debugging any other codebase."
 ---
 # Winning Expensify bounties
 
-Expensify pays about $250 through Upwork for fixing a bug in `Expensify/App`. You do not apply by
+Expensify pays about $175 (new issues, 2026-09) to $250 through Upwork for fixing a bug in `Expensify/App`. You do not apply by
 writing code. You post a **proposal** on the GitHub issue explaining the root cause and the fix, a
 Contributor+ reviewer picks one, and only then are you hired and allowed to open a pull request.
 
@@ -58,13 +58,34 @@ Expensify changes this process often, so re-measure rather than trusting a stale
 
 ### Phase 1: find what is in the window
 
+The standing routine is the watchlist, refreshed twice a day (morning and evening PKT):
+
+```bash
+python scripts/watchlist.py --refresh          # last 24h of External issues + everything tracked
+python scripts/watchlist.py --show             # re-read the last report, no GitHub calls
+python scripts/watchlist.py --note 102503 "..." / --pin N / --drop N "reason"
+```
+
+Each refresh leads with **what changed since the last check** (new issues, `Help Wanted` landing,
+new proposals, reviewer comments, approvals, closes), then sorts every issue into Open now, Watch,
+Long shots and Dropped, each with the named reasons behind it. The report is also written to
+`data/watchlist.md`. The tiers are rules over what the thread says, so read the issue before
+committing. On 2026-09-29 the first live run needed three rule fixes found by exactly that check.
+
+Why this and not the `Help Wanted` board: on 2026-09-29 all 25 open Help Wanted issues were already
+approved, stalled on backend work, closing as not reproducible, or carrying 8 to 23 proposals. The
+winnable window is the day or two before the label.
+
+For a deeper single-issue look, the older tools still apply:
+
 ```bash
 python scripts/watch.py --scan      # issues in the work window, with time estimates
 python scripts/triage.py --scan     # the same set, scored and ranked
 ```
 
-Twice a week is enough for the two-day median. During an active pursuit, daily, because the shortest
-window measured was four hours.
+The rule on timing is still in force (confirmed in CONTRIBUTING.md on 2026-09-29): proposals before
+`Help Wanted` are ignored, and only MelvinBot may post early. Humans who post right after `External`
+are breaking it, which is why the watchlist counts them as "early", not as rivals.
 
 ### Phase 2: pick one
 
@@ -197,7 +218,7 @@ Eight to seventeen proposals per issue, several from professional contributors w
 posting. About four new issues a week. A realistic first win is **four to eight weeks** of consistent
 effort, and many weeks will correctly end with no pursuit at all because nothing cleared the bar.
 
-Payment is about $250 less Upwork fees, arriving no sooner than seven days after the fix reaches
+Payment is about $175 to $250 less Upwork fees, arriving no sooner than seven days after the fix reaches
 production, with a 50 percent penalty for any regression inside the following week.
 
 As income this is marginal. The compounding return is a merged pull request in a five-thousand-star

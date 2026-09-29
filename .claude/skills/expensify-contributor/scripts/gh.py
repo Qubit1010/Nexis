@@ -10,6 +10,7 @@ happened is that the token expired, and you will find out at the worst possible 
 import json
 import shutil
 import subprocess
+import time
 
 REPO = "Expensify/App"
 
@@ -29,6 +30,24 @@ def _require_gh() -> str:
     return path
 
 
+# Network blips, not answers. Seen live on 2026-09-29: "TLS handshake timeout" on roughly one call in
+# fifteen, which used to abort a whole scan partway through. Retrying these is safe because every call
+# here is a read; auth and rate-limit failures are deliberately not retried.
+TRANSIENT = ("tls handshake timeout", "timeout", "connection reset", "eof", "http 502", "http 503", "http 504")
+RETRIES = 3
+
+
+def _run(cmd):
+    proc = None
+    for attempt in range(RETRIES):
+        proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
+        stderr = (proc.stderr or "").lower()
+        if proc.returncode == 0 or not any(t in stderr for t in TRANSIENT):
+            return proc
+        time.sleep(2 * (attempt + 1))
+    return proc
+
+
 def api(path: str, jq: str | None = None, paginate: bool = False):
     """Call `gh api <path>`, optionally with a --jq filter. Raises GhError on failure."""
     cmd = [_require_gh(), "api", path]
@@ -36,7 +55,7 @@ def api(path: str, jq: str | None = None, paginate: bool = False):
         cmd.append("--paginate")
     if jq:
         cmd += ["--jq", jq]
-    proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    proc = _run(cmd)
     if proc.returncode != 0:
         stderr = (proc.stderr or "").strip()
         if "rate limit" in stderr.lower():
