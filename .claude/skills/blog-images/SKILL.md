@@ -129,8 +129,8 @@ noticing in review.
 | Asked for more than 4 images | Push back. Beyond four the reader is scrolling past them. More figures usually means the article should be two articles |
 | A label will not fit | Shorten the label, not the font size. Nothing below 14px in a 1200-wide image |
 | Render hangs | Fonts are inlined so it is not a network stall. Check the SVG parses standalone in a browser first |
-| Asked for a LinkedIn infographic | Route to `linkedin-infographics`. Different format, different mechanism |
-| Asked for a carousel or a short | Route to `carousel` or `shorts-creator` |
+| Asked for a LinkedIn infographic | Route to `linkedin-infographic-studio` (or `linkedin-infographics` for a named template). Different format, different mechanism |
+| Asked for a carousel or a short | Route to `instagram-carousel-studio` (or `carousel` for a named template) or `shorts-creator` |
 | Asked for a *prompt* to generate the image, or for something colourful or off-palette | Route to `image-prompt-generator`. This skill authors SVG in a fixed dark palette and never emits a prompt, so a request naming ChatGPT, Gemini or Midjourney is not this skill's job even when the image is for a blog post |
 
 ## Trigger accuracy, measured
@@ -155,8 +155,8 @@ is a worse failure than this one. If it matters in practice, say "blog" or "arti
 
 | Hand off to | For |
 |---|---|
-| `linkedin-infographics` | A single dense LinkedIn infographic from a Gemini prompt |
-| `carousel` / `shorts-creator` | Instagram carousels and 9:16 short frames |
+| `linkedin-infographic-studio` | A single dense LinkedIn infographic, designed fresh per post, as a paste-ready prompt |
+| `instagram-carousel-studio` / `shorts-creator` | Instagram carousels (`carousel` for a named template) and 9:16 short frames |
 | `blog-writer` | Writing the article these images illustrate |
 | `brand-visual` | Changing the palette or type system itself. This skill consumes `15`, it does not amend it |
 | `website-creator` | Rendering the images into the live site |

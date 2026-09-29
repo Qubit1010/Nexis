@@ -17,9 +17,9 @@ pillars to me", that is the hub. If it is "build their pillars", it is this.
 07-strategic-foundation ─┐
 08-audience-persona ─────┤
 13-brand-strategy ───────┼──> 18-content-strategy.md ──> content-production
-14-brand-voice ──────────┤        (this skill)           blog-writer / carousel
+14-brand-voice ──────────┤        (this skill)           blog-writer / instagram-carousel-studio
 09-seo-foundation ───────┘                               shorts-creator / reel-creator
-                                                         linkedin-infographics
+                                                         linkedin-infographic-studio
 ```
 
 Upstream is taken, never re-derived. Downstream is routed, never duplicated.
@@ -57,7 +57,7 @@ Upstream is taken, never re-derived. Downstream is routed, never duplicated.
 | `content-advisor` | What a format should look like, whether a statistic is real, why content is underperforming, and any "explain this" question. It owns the corpus this skill cites |
 | `content-production` | Writing the formats no other skill owns: whitepapers, ebooks, gated guides, newsletters, threads, X posts, memes, webinar structure, long-form video scripts, LinkedIn document carousels |
 | `blog-writer` | Writing an actual article, including its AEO/GEO structure. It owns article-level search on its own corpus. Cross-cite, never restate |
-| `carousel` / `linkedin-infographics` / `shorts-creator` | Image prompts for Instagram carousels, LinkedIn infographics and vertical short frames |
+| `instagram-carousel-studio` / `linkedin-infographic-studio` / `shorts-creator` | Image prompts for Instagram carousels, LinkedIn infographics and vertical short frames (`carousel` / `linkedin-infographics` for a named template) |
 | `reel-creator` / `hyperframes-reel` | A rendered, voiced 9:16 video |
 | `podcast-repurposer` | Turning a transcript into short-form pieces |
 | `seo-foundation` / `seo-onpage` | The keyword map, cluster sizing, and page-level keep/update/merge/remove tracks |

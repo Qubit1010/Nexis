@@ -194,7 +194,11 @@ no-agency-mention rule, and it still applies here.
 
 Show Aleem: both NotebookLM summaries, the post(s), the drafted Shorts copy (eyebrow /
 headline / subtitle / content line(s) / CTA), and what will happen next (Doc title, the
-target row/cell, which image templates will be filled). Wait for his OK. This gate
+target row/cell, which image templates will be filled). When the LinkedIn infographic runs
+through `linkedin-infographic-studio`, also show its concept line, colour mode (brand by
+default), the two runner-up concepts and the exact text by zone, so he can switch concept or
+colour here in one line. Do the same for the Instagram carousel when it runs through
+`instagram-carousel-studio`, with its slide-by-slide text; the two use different visual worlds. Wait for his OK. This gate
 replaces the carousel/infographic/shorts-creator skills' internal approval gates — don't
 re-ask later.
 
@@ -227,11 +231,15 @@ you save once.
 
 ### 7. Fill the image prompts
 
-Follow `references/image-prompt-fill.md`. In short: read the row's template
-`input-prompt.md` from `.claude/skills/linkedin-infographics/references/LinkedIn-Template-<N>/`,
-`.claude/skills/carousel/references/Instagram-Template-<N>/`, and
-`.claude/skills/shorts-creator/references/Instagram-Short-Template-1/input-prompt.md`,
-map the **Simplified Source** (from NotebookLM, step 3) and the approved Shorts copy
+Follow `references/image-prompt-fill.md`. In short: for the LinkedIn infographic, a row
+whose `templates.linkedin` is `"creative"` or null runs `linkedin-infographic-studio` in its
+headless mode (the default now); only a row naming a template number reads that template's
+`input-prompt.md` from `.claude/skills/linkedin-infographics/references/LinkedIn-Template-<N>/`.
+The Instagram carousel works the same way: `"creative"` or null runs
+`instagram-carousel-studio` headless, a number reads
+`.claude/skills/carousel/references/Instagram-Template-<N>/`. The Shorts set reads
+`.claude/skills/shorts-creator/references/Instagram-Short-Template-1/input-prompt.md`.
+For template fills, map the **Simplified Source** (from NotebookLM, step 3) and the approved Shorts copy
 (step 4) into the placeholders, and emit the paste-ready prompts — LinkedIn = exactly one
 prompt; Instagram = CONTEXT → COVER → BODY× → CTA blocks; Shorts = CONTEXT → COVER →
 CONTENT× (1-2) → CTA blocks, 1080x1920 (9:16). Include them all in the Doc payload AND

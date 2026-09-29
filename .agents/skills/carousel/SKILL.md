@@ -1,11 +1,10 @@
 ---
 name: carousel
 description: >
-  Generate a branded Instagram carousel from a post description + source. Builds a slide-by-slide
-  design brief, waits for approval, then outputs per-slide Gemini image-generation prompts at
-  1080x1350 (4:5). Use this skill whenever the user says "carousel", "build a carousel",
-  "turn this into a carousel", "instagram carousel", or wants multi-slide Instagram content from
-  a post, source, or framework. Always includes an approval gate between brief and prompt output.
+  Fills one of six fixed Instagram carousel templates (statue editorial, film-grain cover,
+  tool showcase, grid-paper tutorial, repo showcase, kraft zine) into per-slide Gemini prompts
+  after an approval gate. Use only when a template is named or a past carousel look is wanted
+  again ("template 8", "same as last time"). For a fresh design per post, instagram-carousel-studio.
 ---
 
 # Pointer to `.claude/skills/carousel/`

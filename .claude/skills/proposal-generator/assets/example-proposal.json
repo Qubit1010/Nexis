@@ -1,0 +1,126 @@
+{
+  "client": {
+    "company": "Harbor Lane Studio",
+    "contact_name": "Maya Okafor",
+    "contact_role": "Founder and Creative Director",
+    "contact_email": "maya@harborlane.example"
+  },
+  "issued": "2026-09-25",
+  "valid_until": "2026-10-09",
+  "currency": "USD",
+  "hero": {
+    "headline": "Say yes to the automation work your clients keep asking for,",
+    "headline_accent": "without hiring for it.",
+    "subhead": "A white-label build partnership that lets Harbor Lane sell AI automation under its own name, with NexusPoint doing the engineering behind the scenes."
+  },
+  "diagnosis": {
+    "label": "The diagnosis",
+    "heading": "The demand is real. The delivery capacity is not.",
+    "lead": "Three of your retainer clients asked about AI automation this quarter, and each time the answer was a referral elsewhere.",
+    "lead_emphasis": "That is revenue and relationship walking out of the door.",
+    "body": [
+      "On our call you described the risk plainly: you cannot put your name on engineering work you cannot check, and a bad handover would cost you the client, not just the project.",
+      "So this proposal is built around delivery you can see. Every build runs in your tools, under your brand, with a weekly written update you can forward to the client unchanged."
+    ]
+  },
+  "pillars": [
+    { "label": "Invisible", "title": "Your brand, your channels", "body": "We work inside your Slack and project board. The end client only ever hears from Harbor Lane." },
+    { "label": "Checkable", "title": "Evidence every week", "body": "A Friday update with what shipped, what is next and a short screen recording of the working system." },
+    { "label": "Owned", "title": "Clean handover", "body": "Documentation and video SOPs for every build, and IP assigned to you on delivery." }
+  ],
+  "targets": {
+    "items": [
+      { "value": "10 days", "label": "from signed scope to a working first workflow" },
+      { "value": "2 builds", "label": "live for your existing clients by the end of the pilot" }
+    ],
+    "note": "These are targets, not guarantees. They assume access to each client's tools within two working days of kickoff."
+  },
+  "program": {
+    "label": "The 60-day pilot",
+    "heading": "Start small. Prove it. Then scale.",
+    "intro": "The pilot is sized so you can judge the partnership on real client work before committing to a standing arrangement.",
+    "phases": [
+      { "label": "Scope", "title": "Pick the first two builds", "body": "We review the three client requests with you, choose the two with the clearest payoff and write a one-page scope for each.", "highlight": false },
+      { "label": "Build", "title": "Ship under your name", "body": "Both automations built, tested against real data and handed over inside your tools, with your team in the loop.", "highlight": true },
+      { "label": "Review", "title": "Decide with evidence", "body": "A joint review of time saved, client feedback and margin, then a recommendation on whether to continue.", "highlight": false }
+    ]
+  },
+  "timeline": {
+    "heading": "Two builds in sixty days.",
+    "rows": [
+      { "when": "Week 1", "what": "Kickoff, access to your tools, scope both builds with you and sign off the specs.", "deliverable": "Two scope docs" },
+      { "when": "Weeks 2-5", "what": "Build, test and hand over the first automation, then the second, with a Friday update each week.", "deliverable": "Two live systems" },
+      { "when": "Weeks 6-8", "what": "Support both builds in production, fix anything that surfaces, run the pilot review.", "deliverable": "Pilot review" }
+    ]
+  },
+  "scope": {
+    "included": [
+      "Two automation builds scoped with you",
+      "Weekly written update and screen recording",
+      "Documentation and video SOPs for each build",
+      "30 days of fixes after each handover"
+    ],
+    "not_included": [
+      "Third-party software and AI model usage, billed at cost",
+      "Work for clients outside the agreed two builds",
+      "Direct contact with your end clients"
+    ],
+    "from_you": [
+      "A point of contact who can answer questions within a day",
+      "Access to each client's relevant tools",
+      "Sign-off on each scope before build starts"
+    ]
+  },
+  "investment": {
+    "heading": "One partner behind your delivery.",
+    "intro": "Prices are wholesale, so you keep the margin when you resell. Software and model usage stay separate and visible.",
+    "recommendation": "We recommend the Pilot. It proves the partnership on two real client builds before you commit to capacity every month, and it credits in full toward the retainer if you continue within 30 days."
+  },
+  "options": [
+    {
+      "id": "single",
+      "name": "Single Build",
+      "summary": "One scoped automation for one client, delivered under your brand.",
+      "includes": ["One automation, scoped and built", "Documentation and video SOP", "30 days of fixes"],
+      "price": 1500,
+      "billing": "one_time",
+      "deposit_pct": 50,
+      "recommended": false,
+      "pay_url": ""
+    },
+    {
+      "id": "pilot",
+      "name": "Pilot",
+      "summary": "Two builds over sixty days, with weekly updates and a joint review.",
+      "includes": ["Two automations, scoped and built", "Weekly update and screen recording", "Documentation and video SOPs", "Pilot review and recommendation"],
+      "term": "60-day pilot",
+      "price": 4500,
+      "billing": "one_time",
+      "deposit_pct": 50,
+      "recommended": true,
+      "pay_url": ""
+    },
+    {
+      "id": "overflow",
+      "name": "Overflow Retainer",
+      "summary": "Standing build capacity for your clients, month to month.",
+      "includes": ["Up to three builds in progress", "Priority turnaround", "Monthly capacity review"],
+      "term": "3-month initial term, then monthly",
+      "price": 2100,
+      "billing": "monthly",
+      "recommended": false,
+      "pay_url": ""
+    }
+  ],
+  "terms": [
+    "Payment through Payoneer by card, US bank transfer (ACH) or wire. Invoices are in USD.",
+    "Mutual non-solicitation: we never contact your clients, and you do not hire our team directly, for 12 months.",
+    "IP for each build transfers to Harbor Lane on delivery.",
+    "Either side can end the retainer with 30 days notice after the initial term."
+  ],
+  "prepared_by": {
+    "name": "Aleem Ul Hassan",
+    "role": "Founder",
+    "email": "hello@nexus-point.co"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "skill_name": "linkedin-infographic-studio",
+  "evals": [
+    {
+      "id": 1,
+      "name": "jev-vs-llm-brand",
+      "prompt": "make a linkedin infographic for my post on Jev vs LLMs as judges. source is research/2026-09-22-jev-judgement-models-fast-decision-models-vs-llms.md. use my branding",
+      "expected_output": "Reads the research file, identifies a comparison shape (decision model vs LLM, System 1 vs System 2), asks colour (brand recommended since he asked) plus three distinct concepts, shows a blueprint with exact text using only numbers from the source (70 ms, ~1 s user report, 'hundreds of times cheaper' as directional), then one universal prompt in the personal palette (#000000, #02A1E1 on one accent subject), lint passing, no NexusPoint, no em dashes.",
+      "files": ["research/2026-09-22-jev-judgement-models-fast-decision-models-vs-llms.md"]
+    },
+    {
+      "id": 2,
+      "name": "onboarding-process-colourful",
+      "prompt": "linkedin infographic for this post, make it colourful:\n\nEvery automation client I onboard goes through the same six steps, and step 4 is where most agencies lose them.\n1. Ops teardown call: 30 minutes, we map where the hours actually go.\n2. Workflow map: every handoff drawn out, no tools picked yet.\n3. One bottleneck: we pick the single process costing the most hours.\n4. 10-day pilot: built and run on real work, not a demo.\n5. Measure hours saved: before and after on the same process.\n6. Expand to retainer: only once the pilot's number is real.\nThe pilot is where trust is earned or lost. Most agencies skip straight from the call to a 3-month build.",
+      "expected_output": "Sequence shape with step 4 (the pilot) as the accent subject. Colour question still asked with 'Unique and colourful' recommended. Three concepts in different visual worlds, none a card grid. Blueprint with exact text; invented palette with contrast checked. One prompt, positive framing, ratio in words, no invented numbers beyond 30 minutes, 10-day, six steps, 3-month.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "smb-signs-brand-conflict",
+      "prompt": "make me a linkedin infographic for this. colourful but it should still feel like my brand\n\n7 signs your small business is ready for AI automation:\n1. Someone on your team copies data between two tools every day.\n2. You answer the same 10 customer questions every week.\n3. Leads sit in an inbox for more than a day.\n4. Invoices and follow-ups depend on one person remembering.\n5. You have a process that's written down, even badly.\n6. You already pay for tools with an API you've never touched.\n7. You can name the task you'd hand off first.\nIf you ticked 4 or more, you're not early. You're late.",
+      "expected_output": "Catalogue or checklist shape. Names the conflict between brand-strict and colourful and recommends brand-anchored. Concepts avoid a bento grid of cards and the kill-list cliches. Adds no statistics that are not in the post (no 'saves 20 hours'). Prompt keeps #000000 and #02A1E1 with two supporting hues, lint passing in anchored mode.",
+      "files": []
+    }
+  ]
+}

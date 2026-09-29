@@ -59,7 +59,7 @@ It is the visual system **and nothing else**. It writes the spec; `brandkit` dra
 | *(archived)* | `ui-design-system` turned an approved palette into dev token files. Archived 2026-08-27 to `archives/cleanup-2026-08-27/skills/`. Write tokens inline in the spec instead |
 | `ui-ux-pro-max` | Designing an actual product UI, not the brand system |
 | `senior-frontend` / `nexis-builder` | Implementing a site or app |
-| `linkedin-infographics` / `carousel` / `shorts-creator` | Individual branded content pieces |
+| `linkedin-infographic-studio` / `linkedin-infographics` / `instagram-carousel-studio` / `carousel` / `shorts-creator` | Individual branded content pieces |
 
 State the handoff when you make it. Do not silently stop.
 

@@ -1,6 +1,6 @@
 ---
 name: image-prompt-generator
-description: Writes one universal image-generation prompt from any topic, composed fresh for the subject instead of filled into a template, and phrased to work in ChatGPT, Gemini, Midjourney or anywhere else without rewriting. Asks colour, style and format first. Say "image prompt for X", "poster prompt for X". For fixed-layout social sets use carousel, linkedin-infographics or shorts-creator; for authored SVG diagrams, blog-images.
+description: Writes one universal image-generation prompt from any topic, composed fresh for the subject instead of filled into a template, and phrased to work in ChatGPT, Gemini, Midjourney or anywhere else without rewriting. Asks colour, style and format first. Say "image prompt for X", "poster prompt for X". LinkedIn infographics go to linkedin-infographic-studio, Instagram carousels to instagram-carousel-studio, 9:16 frames to shorts-creator, SVG diagrams to blog-images.
 ---
 
 # Image Prompt Generator
@@ -179,7 +179,7 @@ If a check fails, fix the prompt. Do not emit it with a note apologising for the
 ## Rules
 
 - **One prompt, one image.** Not a carousel, not a deck, not a variant set. If the topic genuinely
-  needs a sequence, say so and hand off to `carousel` or `shorts-creator`.
+  needs a sequence, say so and hand off to `instagram-carousel-studio` or `shorts-creator`.
 - **No agency branding in personal-brand work.** Never put "NexusPoint", a logo, or Aleem's
   university into a prompt for his own LinkedIn, Instagram or blog imagery. Client work uses the
   client's brand, and `shorts-creator` is a deliberate agency-attributed exception. This one is not.
@@ -192,8 +192,9 @@ If a check fails, fix the prompt. Do not emit it with a note apologising for the
 
 | Hand off to | For |
 |---|---|
-| `linkedin-infographics` | A dense bento-grid infographic in an established template |
-| `carousel` | A multi-slide Instagram set |
+| `linkedin-infographic-studio` | A text-dense LinkedIn infographic, designed fresh per post |
+| `linkedin-infographics` | A dense infographic in one of its seven named templates |
+| `instagram-carousel-studio` | A multi-slide Instagram set, designed fresh per post (`carousel` for a named template) |
 | `shorts-creator` | 9:16 Reels/Shorts frames, agency-branded |
 | `blog-images` | Authored SVG diagrams rendered to real PNGs, where exact labels are the payload |
 | `brand-visual` | Changing the palette or type system. This skill consumes both identity files, it does not amend them |

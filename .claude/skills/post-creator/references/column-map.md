@@ -89,6 +89,13 @@ on disk (globbed at import, not a hardcoded list — templates get onboarded oft
 - **LinkedIn** -> `.claude/skills/linkedin-infographics/references/LinkedIn-Template-<N>/`
 - **Instagram** -> `.claude/skills/carousel/references/Instagram-Template-<N>/`
 
+A LinkedIn part reading **"Creative"** (e.g. `LinkedIn Infographic — Creative`) parses to
+`templates.linkedin = "creative"` and routes to `linkedin-infographic-studio`, as does a LinkedIn
+row with no LinkedIn template named. The Instagram part works the same way:
+`Instagram Carousel — Creative`, or no Instagram template named, routes to
+`instagram-carousel-studio`. Each platform's match stops at a comma or newline, so one
+platform's number can never be read as the other's.
+
 Numbering is sparse. If a row names a number with no folder, `schedule.py` returns it in
 `templates.errors` — stop and ask Aleem which template to use instead. Never substitute silently.
 

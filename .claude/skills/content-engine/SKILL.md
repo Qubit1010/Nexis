@@ -143,8 +143,8 @@ Hand off to `post-creator` once the row clears.
 | Asked for | Skill |
 |---|---|
 | A long article or blog post | `blog-writer` |
-| An Instagram carousel image set | `carousel` |
-| A single-image LinkedIn infographic | `linkedin-infographics` |
+| An Instagram carousel image set | `instagram-carousel-studio` (a named template: `carousel`) |
+| A single-image LinkedIn infographic | `linkedin-infographic-studio` (a named template: `linkedin-infographics`) |
 | Vertical short frames | `shorts-creator` |
 | A rendered, voiced video | `reel-creator` or `hyperframes-reel` |
 | An issue of Aleem's LinkedIn newsletter | `linkedin-newsletter` |

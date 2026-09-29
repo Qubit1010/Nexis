@@ -101,6 +101,19 @@ export async function POST(request: Request) {
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
     console.error("[YT Bookmark] Error:", message);
-    return NextResponse.json({ error: message }, { status: 500 });
+    const stderr =
+      error && typeof error === "object" && "stderr" in error
+        ? String(error.stderr)
+        : "";
+    if (/invalid_grant|authentication failed|auth error/i.test(`${message}\n${stderr}`)) {
+      return NextResponse.json(
+        { error: "Google Sheets sign-in expired. Reauthenticate gws on this machine, then retry." },
+        { status: 503 }
+      );
+    }
+    return NextResponse.json(
+      { error: "Google Sheets could not save this item. Check sheet access and try again." },
+      { status: 500 }
+    );
   }
 }

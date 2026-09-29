@@ -1,6 +1,6 @@
 ---
 name: upwork-proposal-studio
-description: Write tailored Upwork cover letters, concise detailed Google Doc proposals, or both from job descriptions and attachments. The default skill for any pasted Upwork job post or request to write/generate/draft a proposal. Not for replying to ongoing client conversations.
+description: Write tailored Upwork cover letters, concise detailed Google Doc proposals, or both from job descriptions and attachments. The default skill for any pasted Upwork job post or request to draft an Upwork proposal. Not for replying to ongoing client conversations; a signable proposal for a direct (non-Upwork) client goes to proposal-generator.
 ---
 
 # Pointer to `.claude/skills/upwork-proposal-studio/`

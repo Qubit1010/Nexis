@@ -1,12 +1,11 @@
 ---
 name: linkedin-infographics
 description: >
-  Generate a single-image LinkedIn bento-grid infographic from a post description + source. Maps the
-  content into a template's card grid, waits for approval, then outputs ONE Gemini image-generation
-  prompt that renders the whole infographic at 1080x1350 (4:5). Use this skill whenever the user says
-  "linkedin infographic", "make an infographic", "turn this into an infographic", "bento infographic",
-  or "infographic from this post". Also onboards new templates from a reference image. Always includes
-  an approval gate between the content map and the prompt output.
+  Fills one of seven fixed LinkedIn infographic templates (bento grid, tiered bands, numbered
+  catalogue, funnel, phased roadmap, card grid, two-column) into one Gemini prompt after an approval
+  gate, or onboards a new template from a reference image. Use only when a template is named or a
+  past layout is wanted again ("template 9", "bento like last time"). For a fresh design per post,
+  linkedin-infographic-studio.
 ---
 
 # LinkedIn Infographics
@@ -161,5 +160,6 @@ When the user supplies a NEW reference infographic (image in `docs/LinkedIn-Temp
   above the card grid. Add it as a Knowledge file when building the Gem.
 - No handle or footer at the bottom of the infographic.
 - If the user rejects the templates, or wants a one-off look that none of them cover, hand off to
-  `image-prompt-generator`. What this skill sells is the dense bento grid in a repeatable
-  template. A single freeform image composed for one topic is that skill's job.
+  `linkedin-infographic-studio`, which designs a fresh infographic per post and is now the default
+  for LinkedIn infographics. What this skill sells is a repeatable, known layout. A single image
+  with little text (a poster, a hero) is `image-prompt-generator`'s job.

@@ -1,0 +1,30 @@
+{
+  "skill_name": "instagram-carousel-studio",
+  "evals": [
+    {
+      "id": 1,
+      "name": "astra-cross-format-colourful",
+      "prompt": "turn my GPT-6 Astra blog into an instagram carousel, make it colourful. blog is content/blog/gpt-6-astra-creator-agent-workflows.md",
+      "expected_output": "Reads the blog and BOTH ledgers; the LinkedIn ledger already holds a work order and a board game for this post, so neither world (or a restyle of them) is offered. Colour question asked with colourful recommended; three concepts in worlds that unfold across slides. Brief with genome and slide-by-slide text, at most 7 slides, cover as a specific claim, one CTA. Output: generation protocol plus one prompt per slide, each opening with an identical style block; lint set passes in colourful mode; only 72.6%/65.7% as numbers, labelled OpenAI-reported.",
+      "files": [
+        "content/blog/gpt-6-astra-creator-agent-workflows.md"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "codex-vs-claude-brand",
+      "prompt": "make an instagram carousel from research/2026-09-01-codex-vs-claude-code-real-task-comparison-2026.md, use my branding",
+      "expected_output": "Comparison shape across slides; brand palette (#000000, #02A1E1 on one accent per slide) read from the identity file; every number on a slide traces to the research file and benchmark figures are labelled as not apples-to-apples where the source says so; style block identical on every slide; lint set passes in brand mode; handle @aleem_uh on cover and CTA only; no NexusPoint. At most 7 slides.",
+      "files": [
+        "research/2026-09-01-codex-vs-claude-code-real-task-comparison-2026.md"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "smb-signs-brand-conflict",
+      "prompt": "instagram carousel for this, colourful but it should still feel like my brand\n\n7 signs your small business is ready for AI automation:\n1. Someone on your team copies data between two tools every day.\n2. You answer the same 10 customer questions every week.\n3. Leads sit in an inbox for more than a day.\n4. Invoices and follow-ups depend on one person remembering.\n5. You have a process that's written down, even badly.\n6. You already pay for tools with an API you've never touched.\n7. You can name the task you'd hand off first.\nIf you ticked 4 or more, you're not early. You're late.",
+      "expected_output": "Names the brand vs colourful conflict and recommends brand-anchored. Catalogue shape unfolding one sign per slide or grouped; cover a specific promise; recap or scoring slide for savers; one CTA. Adds no statistics. Style block identical across slides; lint set passes in anchored mode; no card-deck-recoloured-per-slide world. At most 7 slides.",
+      "files": []
+    }
+  ]
+}

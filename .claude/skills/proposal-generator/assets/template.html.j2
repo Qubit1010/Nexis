@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Proposal for {{ p.client.company }} | {{ agency.name }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ground: #02040A;
+  --slate: #0B0F17;
+  --deep: #06090F;
+  --brand: #00B7FF;
+  --accent: #A6DAFF;
+  --accent-light: #BAE6FD;
+  --hi: #F1F5F9;
+  --mid: #CBD5E1;
+  --muted: #94A3B8;
+  --rule-dark: rgba(148, 163, 184, .22);
+  --paper: #F5F7FA;
+  --card: #FFFFFF;
+  --ink: #0B0F17;
+  --ink-mid: #334155;
+  --ink-muted: #475569;
+  --rule: #DDE3EA;
+  --brand-deep: #0369A1;
+  --tint: #EAF6FD;
+  --ok: #15803D;
+  --err: #B91C1C;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: "Urbanist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap: 1040px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.6 var(--sans); }
+img { max-width: 100%; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+.label { font: 500 12px/1.4 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+
+/* ---------- Top bar + hero (dark) ---------- */
+.dark { background: var(--ground); color: var(--hi); }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding-top: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--rule-dark); }
+.wordmark { font: 700 15px/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; }
+.wordmark span { color: var(--brand); }
+.topbar .label { color: var(--muted); }
+.hero { position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: -30% -10% auto auto; width: 70%; height: 140%;
+  background: radial-gradient(closest-side, rgba(0, 183, 255, .16), transparent 70%); pointer-events: none; }
+.hero .inner { position: relative; padding-top: 88px; padding-bottom: 72px; }
+.hero .eyebrow { color: var(--accent); margin-bottom: 26px; }
+.hero h1 { font-size: clamp(40px, 6.4vw, 68px); line-height: 1.02; max-width: 15ch; }
+.hero h1 em { font-style: italic; font-weight: 600; color: var(--accent); }
+.hero .sub { margin-top: 28px; max-width: 54ch; font-size: 19px; line-height: 1.55; color: var(--mid); }
+.hero .meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule-dark); max-width: 720px; }
+.hero .meta .label { color: var(--muted); margin-bottom: 6px; font-size: 11px; }
+.hero .meta div div { font-weight: 600; font-size: 15px; }
+.hero svg.motif { position: absolute; right: -40px; top: 40px; width: 420px; height: 420px; opacity: .9; pointer-events: none; }
+
+/* ---------- Light sections ---------- */
+section.band { padding: 96px 0 0; }
+.gap { height: 96px; }
+.split { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: start; }
+.sec-label { color: var(--ink-muted); margin-bottom: 14px; }
+.sec-h { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.12; }
+.lead { font-size: 22px; line-height: 1.45; font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
+.lead strong { color: var(--brand-deep); font-weight: 700; }
+.body-copy p { color: var(--ink-mid); margin-top: 16px; }
+
+.pillars { margin-top: 56px; display: grid; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: 0; background: var(--tint); border-radius: 14px; padding: 28px 12px; }
+.pillar { padding: 4px 22px; border-left: 2px solid var(--brand); }
+.pillar .label { color: var(--brand-deep); font-size: 11px; margin-bottom: 10px; }
+.pillar h3 { font-size: 20px; line-height: 1.25; margin-bottom: 10px; }
+.pillar p { font-size: 15px; color: var(--ink-mid); }
+
+.targets { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.target { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 22px; }
+.target .v { font-size: 34px; font-weight: 700; letter-spacing: -.03em; color: var(--ink); }
+.target .l { font-size: 15px; color: var(--ink-mid); margin-top: 4px; }
+.fine { font-size: 14px; color: var(--ink-muted); margin-top: 16px; max-width: 70ch; }
+
+.head-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; margin-bottom: 36px; }
+.head-row p { color: var(--ink-mid); font-size: 16px; }
+.phases { display: grid; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: 16px; }
+.phase { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 26px 24px 30px; }
+.phase .label { color: var(--ink-muted); font-size: 11px; margin-bottom: 22px; }
+.phase h3 { font-size: 22px; line-height: 1.2; margin-bottom: 12px; }
+.phase p { font-size: 15px; color: var(--ink-mid); }
+.phase.hl { background: var(--brand); border-color: var(--brand); color: var(--ground); }
+.phase.hl .label, .phase.hl p { color: var(--ground); }
+
+.timeline { border-top: 1px solid var(--rule); }
+.trow { display: grid; grid-template-columns: 160px 1fr 200px; gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.trow .when { font-weight: 700; }
+.trow .what { color: var(--ink-mid); font-size: 15px; }
+.trow .deliv { text-align: right; font-weight: 600; font-size: 15px; }
+
+.scope { display: grid; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: 16px; }
+.scope .col { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 24px; }
+.scope h3 { font-size: 18px; margin-bottom: 14px; }
+.scope ul { margin: 0; padding: 0; list-style: none; }
+.scope li { position: relative; padding-left: 24px; margin-top: 10px; font-size: 15px; color: var(--ink-mid); }
+.scope li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
+.scope .in li::before { content: "+"; color: var(--brand-deep); }
+.scope .out li::before { content: "\2013"; color: var(--ink-muted); }
+.scope .you li::before { content: "\2192"; color: var(--ink); }
+
+.proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.proof .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 24px; }
+.proof h3 { font-size: 18px; margin-bottom: 8px; }
+.proof p { font-size: 15px; color: var(--ink-mid); }
+.proof a { display: inline-block; margin-top: 12px; font-weight: 600; color: var(--brand-deep); }
+
+/* ---------- Investment (dark) ---------- */
+.invest { padding: 88px 0 80px; }
+.invest .label.sec-label { color: var(--muted); }
+.invest .sec-h { color: var(--hi); }
+.invest .intro { color: var(--mid); margin-top: 16px; max-width: 48ch; }
+.invest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; align-items: start; }
+.opts { border-top: 1px solid var(--rule-dark); }
+.opt { display: block; position: relative; cursor: pointer; padding: 18px 20px; border-bottom: 1px solid var(--rule-dark); border-radius: 0; transition: background .15s; }
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt .row { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
+.opt .name { font-weight: 700; font-size: 17px; }
+.opt .badge { font: 600 10px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--brand); margin-left: 10px; vertical-align: 2px; }
+.opt .price { font-weight: 700; font-size: 18px; white-space: nowrap; }
+.opt .sum { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 46ch; }
+.opt:hover { background: rgba(241, 245, 249, .04); }
+.opt.on { background: var(--hi); color: var(--ink); border-radius: 12px; border-bottom-color: transparent; box-shadow: 0 0 0 2px var(--accent); }
+.opt.on .sum { color: var(--ink-muted); }
+.opt.on .price { color: var(--brand-deep); }
+.opt.on .badge { color: var(--brand-deep); }
+.opt input:focus-visible + .row { outline: 2px solid var(--brand); outline-offset: 6px; }
+.detail { background: var(--slate); border: 1px solid var(--rule-dark); border-radius: 14px; padding: 28px; }
+.detail .label { color: var(--muted); font-size: 11px; }
+.detail h3 { font-size: 24px; margin: 8px 0 4px; }
+.detail .term { color: var(--muted); font-size: 14px; }
+.detail ul { margin: 18px 0 0; padding: 0; list-style: none; }
+.detail li { position: relative; padding-left: 22px; margin-top: 10px; color: var(--mid); font-size: 15px; }
+.detail li::before { content: "+"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+.due { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--rule-dark); }
+.due .amt { font-size: 26px; font-weight: 700; letter-spacing: -.02em; margin: 2px 0 4px; }
+.due .note { color: var(--muted); font-size: 13px; }
+.rec { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--rule-dark); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
+.rec p { color: var(--mid); max-width: 62ch; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; cursor: pointer; text-decoration: none;
+  font: 700 14px/1 var(--sans); letter-spacing: .04em; padding: 16px 22px; border-radius: 10px; background: var(--accent); color: var(--ground); transition: background .15s, transform .15s; }
+.btn:hover { background: var(--accent-light); }
+.btn:active { transform: translateY(1px); }
+.btn[disabled] { background: #CBD5E1; color: #64748B; cursor: not-allowed; }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--rule); }
+.btn.ghost:hover { background: var(--paper); }
+
+/* ---------- Terms + sign (light) ---------- */
+.terms { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; }
+.terms ul { margin: 0; padding: 0; list-style: none; counter-reset: t; }
+.terms li { counter-increment: t; position: relative; padding: 14px 0 14px 44px; border-bottom: 1px solid var(--rule); color: var(--ink-mid); font-size: 15px; }
+.terms li::before { content: counter(t, decimal-leading-zero); position: absolute; left: 0; top: 15px; font: 500 12px/1.4 var(--mono); color: var(--ink-muted); }
+.guarantee { margin-top: 28px; background: var(--tint); border-radius: 14px; padding: 22px 24px; }
+.guarantee h3 { font-size: 18px; margin-bottom: 6px; }
+.guarantee p { color: var(--ink-mid); font-size: 15px; }
+
+.sign-wrap { padding: 72px 0 96px; }
+.sign { max-width: 680px; margin: 0 auto; background: var(--card); border: 1px solid var(--rule); border-radius: 18px; padding: 36px; box-shadow: 0 30px 60px -40px rgba(2, 4, 10, .35); }
+.sign-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.sign-head h2 { font-size: 30px; margin-top: 6px; }
+.chip { font: 600 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 8px 10px; border-radius: 999px; background: var(--paper); color: var(--ink-muted); white-space: nowrap; }
+.chip.ok { background: #DCFCE7; color: var(--ok); }
+.sel { margin-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px; background: var(--paper); border-radius: 12px; padding: 16px 18px; }
+.sel .n { font-weight: 700; }
+.sel .p { color: var(--ink-muted); font-size: 14px; }
+.sel a { font-size: 14px; font-weight: 600; color: var(--brand-deep); }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 13px; font-weight: 600; color: var(--ink-mid); }
+.field input { font: 400 16px/1.4 var(--sans); padding: 12px 14px; border: 1px solid #94A3B8; border-radius: 10px; background: #fff; color: var(--ink); }
+.field input:focus { outline: 2px solid var(--brand); outline-offset: 0; border-color: var(--brand); }
+.pad-box { margin-top: 22px; }
+.pad-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.pad-top label { font-size: 13px; font-weight: 600; color: var(--ink-mid); }
+.pad { position: relative; height: 170px; border: 1px solid #94A3B8; border-radius: 12px; background: #fff; touch-action: none; overflow: hidden; }
+.pad canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: crosshair; }
+.pad .base { position: absolute; left: 24px; right: 24px; bottom: 42px; border-bottom: 1px dashed #CBD5E1; pointer-events: none; }
+.pad .hint { position: absolute; left: 24px; bottom: 16px; color: #94A3B8; font-size: 13px; pointer-events: none; }
+.pad-actions { display: flex; justify-content: space-between; margin-top: 8px; font-size: 13px; }
+.linkbtn { background: none; border: 0; padding: 0; font: 600 13px var(--sans); color: var(--brand-deep); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.consent { display: flex; gap: 12px; align-items: flex-start; margin-top: 22px; font-size: 14px; color: var(--ink-mid); cursor: pointer; }
+.consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--brand-deep); flex: none; }
+.submit-row { margin-top: 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.msg { font-size: 14px; }
+.msg.err { color: var(--err); }
+.signed { display: none; }
+.is-signed .signed { display: block; }
+.is-signed .unsigned { display: none; }
+.signed-sig { margin-top: 20px; border: 1px solid var(--rule); border-radius: 12px; padding: 12px; text-align: center; background: #fff; }
+.signed-sig img { max-height: 120px; }
+.signed-meta { margin-top: 10px; font-size: 14px; color: var(--ink-muted); }
+.pay { margin-top: 26px; background: var(--ground); color: var(--hi); border-radius: 14px; padding: 26px; }
+.pay .label { color: var(--muted); font-size: 11px; }
+.pay .amt { font-size: 30px; font-weight: 700; margin: 6px 0 4px; letter-spacing: -.02em; }
+.pay p { color: var(--mid); font-size: 15px; }
+.pay .btn { margin-top: 18px; }
+.pay .small { color: var(--muted); font-size: 13px; margin-top: 12px; }
+.after { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+.expired .form-live { display: none; }
+.expired-note { display: none; margin-top: 20px; background: #FEF3C7; color: #78350F; border-radius: 12px; padding: 16px 18px; font-size: 15px; }
+.expired .expired-note { display: block; }
+
+footer.dark { padding: 28px 0; }
+footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer .label { color: var(--muted); font-size: 11px; }
+
+@media (max-width: 820px) {
+  .split, .head-row, .invest-grid, .terms, .rec { grid-template-columns: 1fr; gap: 28px; }
+  .pillars, .phases, .scope { grid-template-columns: 1fr; }
+  .pillars { gap: 22px; padding: 24px 12px; }
+  .trow { grid-template-columns: 1fr; gap: 6px; }
+  .trow .deliv { text-align: left; }
+  .hero .inner { padding-top: 64px; padding-bottom: 52px; }
+  .hero svg.motif { width: 300px; height: 300px; right: -150px; top: -30px; opacity: .3; }
+  .hero .meta { grid-template-columns: 1fr 1fr; }
+  section.band { padding-top: 64px; }
+  .gap { height: 64px; }
+  .invest { padding: 64px 0; }
+  .sign-wrap { padding: 48px 0 64px; }
+  .tb-date { display: none; }
+  .sign-head { flex-direction: column-reverse; gap: 12px; }
+  .sign-head h2 { font-size: 26px; }
+  .fields { grid-template-columns: 1fr; }
+  .sign { padding: 24px 20px; }
+  .rec .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .opt { transition: none; } }
+@media print {
+  body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .hero svg.motif, .pad-box, .consent, .submit-row, .after, .sel a, .rec .btn, .pay .btn, .pad-actions { display: none !important; }
+  section.band { padding-top: 40px; }
+  .invest { padding: 40px 0; }
+  .gap { height: 40px; }
+  .sign { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<header class="dark">
+  <div class="wrap topbar">
+    <div class="wordmark">Nexus<span>Point</span></div>
+    <div class="label">Proposal<span class="tb-date"> &middot; {{ p.issued | longdate }}</span></div>
+  </div>
+</header>
+
+<section class="dark hero">
+  <svg class="motif" viewBox="0 0 420 420" aria-hidden="true">
+    <g fill="none" stroke="#00B7FF" stroke-width="1.2">
+      <circle cx="250" cy="170" r="150" stroke-opacity=".22"/>
+      <circle cx="250" cy="170" r="96" stroke-opacity=".35"/>
+      <path d="M250 170 L118 96 M250 170 L372 118 M250 170 L318 300 M250 170 L150 270" stroke-opacity=".45"/>
+    </g>
+    <g fill="#00B7FF">
+      <circle cx="118" cy="96" r="5" fill-opacity=".7"/>
+      <circle cx="372" cy="118" r="4" fill-opacity=".6"/>
+      <circle cx="318" cy="300" r="6" fill-opacity=".8"/>
+      <circle cx="150" cy="270" r="4" fill-opacity=".6"/>
+    </g>
+    <circle cx="250" cy="170" r="11" fill="#A6DAFF"/>
+    <circle cx="250" cy="170" r="24" fill="none" stroke="#A6DAFF" stroke-opacity=".5"/>
+  </svg>
+  <div class="wrap inner">
+    <div class="label eyebrow">Prepared for {{ p.client.company }}</div>
+    <h1>{{ p.hero.headline }}{% if p.hero.headline_accent %} <em>{{ p.hero.headline_accent }}</em>{% endif %}</h1>
+    <p class="sub">{{ p.hero.subhead }}</p>
+    <div class="meta">
+      <div><div class="label">Prepared for</div><div>{{ p.client.contact_name }}{% if p.client.contact_role %}, {{ p.client.contact_role }}{% endif %}</div></div>
+      <div><div class="label">Prepared by</div><div>{{ p.prepared_by.name }}, {{ agency.name }}</div></div>
+      <div><div class="label">Valid until</div><div>{{ p.valid_until | longdate }}</div></div>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="band">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="label sec-label">{{ p.diagnosis.label or "The diagnosis" }}</div>
+        <h2 class="sec-h">{{ p.diagnosis.heading }}</h2>
+      </div>
+      <div>
+        <p class="lead">{{ p.diagnosis.lead }}{% if p.diagnosis.lead_emphasis %} <strong>{{ p.diagnosis.lead_emphasis }}</strong>{% endif %}</p>
+        <div class="body-copy">{% for para in p.diagnosis.body %}<p>{{ para }}</p>{% endfor %}</div>
+      </div>
+    </div>
+    {% if p.pillars %}
+    <div class="pillars" style="--n: {{ p.pillars | length }}">
+      {% for pl in p.pillars %}
+      <div class="pillar">
+        <div class="label">{{ "%02d" | format(loop.index) }} &middot; {{ pl.label }}</div>
+        <h3>{{ pl.title }}</h3>
+        <p>{{ pl.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if p.targets and p.targets['items'] %}
+    <div class="targets">
+      {% for t in p.targets['items'] %}
+      <div class="target"><div class="v">{{ t.value }}</div><div class="l">{{ t.label }}</div></div>
+      {% endfor %}
+    </div>
+    {% if p.targets.note %}<p class="fine">{{ p.targets.note }}</p>{% endif %}
+    {% endif %}
+  </div>
+</section>
+
+{% if p.program %}
+<section class="band">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <div class="label sec-label">{{ p.program.label or "The program" }}</div>
+        <h2 class="sec-h">{{ p.program.heading }}</h2>
+      </div>
+      {% if p.program.intro %}<p>{{ p.program.intro }}</p>{% endif %}
+    </div>
+    <div class="phases" style="--n: {{ p.program.phases | length }}">
+      {% for ph in p.program.phases %}
+      <div class="phase{% if ph.highlight %} hl{% endif %}">
+        <div class="label">{{ "%02d" | format(loop.index) }} / {{ ph.label }}</div>
+        <h3>{{ ph.title }}</h3>
+        <p>{{ ph.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if p.timeline and p.timeline.rows %}
+<section class="band">
+  <div class="wrap">
+    <div class="label sec-label">{{ p.timeline.label or "How the work unfolds" }}</div>
+    <h2 class="sec-h" style="margin-bottom:32px">{{ p.timeline.heading }}</h2>
+    <div class="timeline">
+      {% for r in p.timeline.rows %}
+      <div class="trow"><div class="when">{{ r.when }}</div><div class="what">{{ r.what }}</div><div class="deliv">{{ r.deliverable }}</div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if p.scope %}
+{% set scope_cols = (1 if p.scope.included else 0) + (1 if p.scope.not_included else 0) + (1 if p.scope.from_you else 0) %}
+<section class="band">
+  <div class="wrap">
+    <div class="label sec-label">{{ p.scope.label or "Scope" }}</div>
+    <h2 class="sec-h" style="margin-bottom:32px">{{ p.scope.heading or "What is in, what is out." }}</h2>
+    <div class="scope" style="--n: {{ scope_cols }}">
+      {% if p.scope.included %}<div class="col in"><h3>Included</h3><ul>{% for i in p.scope.included %}<li>{{ i }}</li>{% endfor %}</ul></div>{% endif %}
+      {% if p.scope.not_included %}<div class="col out"><h3>Not included</h3><ul>{% for i in p.scope.not_included %}<li>{{ i }}</li>{% endfor %}</ul></div>{% endif %}
+      {% if p.scope.from_you %}<div class="col you"><h3>What we need from you</h3><ul>{% for i in p.scope.from_you %}<li>{{ i }}</li>{% endfor %}</ul></div>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if p.proof %}
+<section class="band">
+  <div class="wrap">
+    <div class="label sec-label">Relevant work</div>
+    <h2 class="sec-h" style="margin-bottom:32px">{{ p.proof_heading or "Where we have done this before." }}</h2>
+    <div class="proof">
+      {% for c in p.proof %}
+      <div class="card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p>{% if c.link %}<a href="{{ c.link }}" target="_blank" rel="noopener noreferrer">View the work</a>{% endif %}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<div class="gap"></div>
+<section class="dark invest" id="investment">
+  <div class="wrap">
+    <div class="label sec-label">Investment</div>
+    <h2 class="sec-h">{{ p.investment.heading }}</h2>
+    {% if p.investment.intro %}<p class="intro">{{ p.investment.intro }}</p>{% endif %}
+    <div class="invest-grid">
+      <div class="opts" role="radiogroup" aria-label="Choose an option">
+        {% for o in options %}
+        <label class="opt{% if o.id == default_option %} on{% endif %}" data-opt="{{ o.id }}">
+          <input type="radio" name="option" value="{{ o.id }}"{% if o.id == default_option %} checked{% endif %}>
+          <div class="row">
+            <div class="name">{{ o.name }}{% if o.recommended and options | length > 1 %}<span class="badge">Recommended</span>{% endif %}</div>
+            <div class="price">{{ o.price_label }}</div>
+          </div>
+          {% if o.summary %}<div class="sum">{{ o.summary }}</div>{% endif %}
+        </label>
+        {% endfor %}
+      </div>
+      <div class="detail" aria-live="polite">
+        {% for o in options %}
+        <div class="detail-item" data-detail="{{ o.id }}"{% if o.id != default_option %} hidden{% endif %}>
+          <div class="label">What is included</div>
+          <h3>{{ o.name }}</h3>
+          {% if o.term %}<div class="term">{{ o.term }}</div>{% endif %}
+          {% if o.includes %}<ul>{% for i in o.includes %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+          <div class="due"><div class="note">Due to start</div><div class="amt">{{ o.due_label }}</div><div class="note">{{ o.due_note }}</div></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="rec">
+      <p>{{ p.investment.recommendation }}</p>
+      <a class="btn" href="#sign" id="cta"><span>Continue with <span data-bind="opt-name">{{ default_option_name }}</span></span><span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+{% if p.terms or p.guarantee %}
+<section class="band">
+  <div class="wrap terms">
+    <div>
+      <div class="label sec-label">Terms</div>
+      <h2 class="sec-h">{{ p.terms_heading or "The working agreement." }}</h2>
+    </div>
+    <div>
+      {% if p.terms %}<ul>{% for t in p.terms %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+      {% if p.guarantee %}<div class="guarantee"><h3>{{ p.guarantee.title }}</h3><p>{{ p.guarantee.body }}</p></div>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="sign-wrap" id="sign">
+  <div class="wrap">
+    <div class="sign" id="signCard">
+      <div class="sign-head">
+        <div>
+          <div class="label" style="color:var(--ink-muted)">Acceptance</div>
+          <h2><span class="unsigned">Sign to start</span><span class="signed">Signed. Thank you.</span></h2>
+        </div>
+        <span class="chip" id="chip">Awaiting signature</span>
+      </div>
+
+      <div class="unsigned">
+        <div class="expired-note">This proposal expired on {{ p.valid_until | longdate }}. Reply to {{ p.prepared_by.name.split(' ')[0] }} at <a href="mailto:{{ p.prepared_by.email }}">{{ p.prepared_by.email }}</a> and we will reissue it.</div>
+        <div class="form-live">
+          <div class="sel">
+            <div><div class="n" data-bind="opt-name">{{ default_option_name }}</div><div class="p"><span data-bind="opt-price"></span> &middot; <span data-bind="opt-due"></span> due to start</div></div>
+            <a href="#investment">Change</a>
+          </div>
+          <form id="signForm" novalidate>
+            <div class="fields">
+              <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required maxlength="120" value="{{ p.client.contact_name }}"></div>
+              <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200" value="{{ p.client.contact_email or '' }}"></div>
+              <div class="field full"><label for="f-title">Title and company</label><input id="f-title" name="title" autocomplete="organization-title" maxlength="160" value="{% if p.client.contact_role %}{{ p.client.contact_role }}, {% endif %}{{ p.client.company }}"></div>
+            </div>
+            <div class="pad-box">
+              <div class="pad-top"><label id="pad-label">Signature</label><span class="label" style="color:#94A3B8;font-size:10px">Draw with a mouse or finger</span></div>
+              <div class="pad"><canvas id="pad" role="img" aria-labelledby="pad-label"></canvas><div class="base"></div><div class="hint" id="padHint">Sign here</div></div>
+              <div class="pad-actions"><button type="button" class="linkbtn" id="typeSig">Type my name instead</button><button type="button" class="linkbtn" id="clearSig">Clear signature</button></div>
+            </div>
+            <label class="consent"><input type="checkbox" id="f-consent" required><span id="consentText"></span></label>
+            <div class="submit-row">
+              <button class="btn" type="submit" id="submitBtn" disabled>Sign and accept</button>
+              <span class="msg" id="msg" role="status" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="signed">
+        <div class="signed-sig"><img id="signedImg" alt="Signature on file"></div>
+        <div class="signed-meta" id="signedMeta"></div>
+        <div class="pay">
+          <div class="label">Due to start</div>
+          <div class="amt" id="payAmt"></div>
+          <p id="payText"></p>
+          <a class="btn" id="payBtn" target="_blank" rel="noopener noreferrer" hidden>Continue to secure payment &rarr;</a>
+          <p class="small" id="paySmall"></p>
+        </div>
+        <div class="after"><button type="button" class="btn ghost" onclick="window.print()">Save a copy (PDF)</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="dark">
+  <div class="wrap row">
+    <div class="label">{{ agency.name }} &middot; {{ agency.site }} &middot; {{ p.prepared_by.email }}</div>
+    <div class="label">Confidential proposal for {{ p.client.company }}</div>
+  </div>
+</footer>
+
+<script type="application/json" id="proposal-data">{{ public_data | tojson }}</script>
+<script>
+(function () {
+  var D = JSON.parse(document.getElementById('proposal-data').textContent);
+  var internal = /[?&]internal(=|&|$)/.test(location.search);
+  var byId = {}; D.options.forEach(function (o) { byId[o.id] = o; });
+  var current = D.default_option;
+  var card = document.getElementById('signCard');
+  var chip = document.getElementById('chip');
+  var msg = document.getElementById('msg');
+  var btn = document.getElementById('submitBtn');
+  var form = document.getElementById('signForm');
+  var nameI = document.getElementById('f-name'), emailI = document.getElementById('f-email'), titleI = document.getElementById('f-title');
+  var consent = document.getElementById('f-consent');
+
+  function bind(key, val) { document.querySelectorAll('[data-bind="' + key + '"]').forEach(function (el) { el.textContent = val; }); }
+  function consentLine() {
+    var o = byId[current];
+    var who = nameI.value.trim() || 'I';
+    document.getElementById('consentText').textContent = who + ' confirm' + (who === 'I' ? '' : 's') + ' authority to accept this proposal on behalf of ' + D.company + ' and agree to ' + o.name + ' at ' + o.price_label + ' on the terms above.';
+  }
+  function select(id) {
+    if (!byId[id]) return;
+    current = id;
+    document.querySelectorAll('.opt').forEach(function (el) { el.classList.toggle('on', el.getAttribute('data-opt') === id); });
+    document.querySelectorAll('[data-detail]').forEach(function (el) { el.hidden = el.getAttribute('data-detail') !== id; });
+    var r = document.querySelector('.opt input[value="' + id + '"]'); if (r) r.checked = true;
+    var o = byId[id];
+    bind('opt-name', o.name); bind('opt-price', o.price_label); bind('opt-due', o.due_label);
+    consentLine(); validate();
+  }
+  document.querySelectorAll('.opt input').forEach(function (r) { r.addEventListener('change', function () { select(r.value); }); });
+
+  /* ---- signature pad ---- */
+  var cv = document.getElementById('pad'), ctx = cv.getContext('2d'), hint = document.getElementById('padHint');
+  var inked = false, drawing = false, last = null, typedMode = false;
+  function sizePad() {
+    var r = cv.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+    if (!r.width) return;
+    var snap = inked ? cv.toDataURL() : null;
+    cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = '#0B0F17'; ctx.lineWidth = 2.2;
+    if (snap) { var im = new Image(); im.onload = function () { ctx.drawImage(im, 0, 0, r.width, r.height); }; im.src = snap; }
+  }
+  function pt(e) { var r = cv.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+  cv.addEventListener('pointerdown', function (e) {
+    if (typedMode) { clearPad(); typedMode = false; }
+    drawing = true; last = pt(e); cv.setPointerCapture(e.pointerId);
+    ctx.beginPath(); ctx.arc(last.x, last.y, 1.1, 0, Math.PI * 2); ctx.fillStyle = '#0B0F17'; ctx.fill();
+    mark();
+  });
+  cv.addEventListener('pointermove', function (e) {
+    if (!drawing) return;
+    var p = pt(e); ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke(); last = p;
+  });
+  ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { cv.addEventListener(t, function () { drawing = false; }); });
+  function mark() { inked = true; hint.style.display = 'none'; validate(); }
+  function clearPad() { var r = cv.getBoundingClientRect(); ctx.clearRect(0, 0, r.width, r.height); inked = false; hint.style.display = ''; validate(); }
+  document.getElementById('clearSig').addEventListener('click', function () { typedMode = false; clearPad(); });
+  document.getElementById('typeSig').addEventListener('click', function () {
+    var n = nameI.value.trim(); if (!n) { nameI.focus(); msg.className = 'msg err'; msg.textContent = 'Add your full name first.'; return; }
+    clearPad(); typedMode = true;
+    var r = cv.getBoundingClientRect(), size = Math.min(44, Math.max(24, r.width / Math.max(8, n.length) * 1.4));
+    ctx.fillStyle = '#0B0F17'; ctx.font = 'italic 600 ' + size + 'px Urbanist, cursive'; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(n, 28, r.height - 50); mark();
+  });
+  function exportSig() {
+    var r = cv.getBoundingClientRect(), out = document.createElement('canvas');
+    out.width = Math.round(r.width); out.height = Math.round(r.height);
+    out.getContext('2d').drawImage(cv, 0, 0, out.width, out.height);
+    return out.toDataURL('image/png');
+  }
+
+  function emailOk(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+  function validate() {
+    var ok = nameI.value.trim().length > 1 && emailOk(emailI.value.trim()) && inked && consent.checked;
+    btn.disabled = !ok;
+    return ok;
+  }
+  [nameI, emailI, titleI].forEach(function (i) { i.addEventListener('input', function () { consentLine(); validate(); }); });
+  consent.addEventListener('change', validate);
+
+  function api(body) {
+    return fetch(D.api, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json().catch(function () { return { ok: false, error: 'server' }; }); });
+  }
+
+  function showSigned(s) {
+    var o = byId[s.option_id] || byId[current];
+    card.classList.add('is-signed');
+    chip.textContent = 'Signed'; chip.className = 'chip ok';
+    if (s.signature) document.getElementById('signedImg').src = s.signature; else document.querySelector('.signed-sig').style.display = 'none';
+    var when = new Date(s.signed_at);
+    document.getElementById('signedMeta').textContent = s.name + ' accepted ' + o.name + ' (' + o.price_label + ') on ' + when.toLocaleString(undefined, { dateStyle: 'long', timeStyle: 'short' }) + '. Reference ' + D.id + ' / ' + D.hash.slice(0, 12) + '.';
+    document.getElementById('payAmt').textContent = o.due_label;
+    var payBtn = document.getElementById('payBtn');
+    if (o.pay_url) {
+      document.getElementById('payText').textContent = o.due_note + '. Pay by ' + D.pay_methods + ' through Payoneer’s secure checkout.';
+      payBtn.href = o.pay_url; payBtn.hidden = false;
+      document.getElementById('paySmall').textContent = 'Work is scheduled as soon as the payment clears. You will get a receipt from Payoneer.';
+    } else {
+      document.getElementById('payText').textContent = o.due_note + '. Your secure payment link from Payoneer arrives at ' + (s.email || 'your email') + ' within one business day. You can pay by ' + D.pay_methods + '.';
+      document.getElementById('paySmall').textContent = 'Nothing else to do right now. We will confirm the kickoff date by email.';
+    }
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!validate()) return;
+    btn.disabled = true; msg.className = 'msg'; msg.textContent = 'Saving your signature…';
+    var payload = { type: 'sign', id: D.id, hash: D.hash, option_id: current, name: nameI.value.trim(), email: emailI.value.trim(), title: titleI.value.trim(), signature: exportSig() };
+    api(payload).then(function (res) {
+      if (res.ok || res.error === 'already_signed') { msg.textContent = ''; showSigned(res.signed); return; }
+      var why = { expired: 'This proposal has expired, so it cannot be signed. Reply by email and we will reissue it.',
+                  version_mismatch: 'This proposal was updated after you opened it. Reload the page to see the latest version, then sign.',
+                  invalid: 'Some details look incomplete. Check your name, email and signature.' }[res.error];
+      msg.className = 'msg err'; msg.textContent = (why || 'We could not save your signature, so nothing was recorded. Please try again, or email ' + D.contact_email + '.');
+      validate();
+    }).catch(function () {
+      msg.className = 'msg err'; msg.textContent = 'Connection problem. Nothing was recorded. Please try again, or email ' + D.contact_email + '.'; validate();
+    });
+  });
+
+  /* ---- load state ---- */
+  function expired() { return Date.now() > Date.parse(D.valid_until + 'T12:00:00Z') + 86400000; }
+  if (expired()) { card.classList.add('expired'); chip.textContent = 'Expired'; }
+  window.addEventListener('resize', sizePad);
+  sizePad(); select(current);
+  api({ type: 'view', id: D.id, hash: D.hash, internal: internal }).then(function (res) {
+    if (res && res.signed) showSigned(res.signed);
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>

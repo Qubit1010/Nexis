@@ -87,14 +87,14 @@ format.
 |---|---|---|
 | Ratio | 4:5 feed images | Document/PDF |
 | Read as | Swipe sequence | Paged document |
-| Owner | `carousel` | `content-production` |
+| Owner | `instagram-carousel-studio` | `content-production` |
 
 **Distribution.** Native per platform. Do not repost one file to both.
 
 **Fails when** frames are text-dense, when the cover is a title rather than a claim, or when the
 last frame is the only one with substance.
 
-**Who executes it.** `carousel` for Instagram. `content-production` for LinkedIn document
+**Who executes it.** `instagram-carousel-studio` for Instagram (`carousel` for a named template). `content-production` for LinkedIn document
 carousels - **the format every spec in this repo calls the strongest organic one, and the one no
 image skill builds.**
 

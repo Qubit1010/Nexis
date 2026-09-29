@@ -1,0 +1,229 @@
+"""Approve, build, deploy and verify the proposals site.
+
+Usage:
+  python deploy.py --approve <id>     mark a rendered proposal approved, then deploy everything approved
+  python deploy.py --withdraw <id>    take a proposal offline, then deploy
+  python deploy.py                    redeploy whatever is approved (e.g. after adding a pay_url)
+  python deploy.py --dry-run          run every guard and build, skip the Vercel deploy and live checks
+
+Guards, all fatal:
+  - proposal.json, meta.json and index.html must agree on the content hash (else re-render)
+  - a proposal that has been signed can never be redeployed with different content
+  - the signature guard must actually run: if Supabase cannot be queried, nothing deploys
+  - after deploy, each live page must serve the exact approved hash, and /api/event health must pass
+"""
+import argparse
+import datetime as dt
+import json
+import re
+import shutil
+import subprocess
+import sys
+import urllib.request
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import render  # noqa: E402
+
+ROOT, SKILL, CLIENTS = render.ROOT, render.SKILL, render.CLIENTS
+BUILD = ROOT / "projects" / "proposals-site"
+CONFIG_PATH = SKILL / "assets" / "site-config.json"
+
+
+def load_env():
+    env = {}
+    for line in (ROOT / ".env").read_text(encoding="utf-8-sig").splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            env[k.strip()] = v.strip().strip('"').strip("'")
+    return env
+
+
+def die(msg):
+    print(f"ABORT: {msg}")
+    sys.exit(1)
+
+
+def all_proposals():
+    for meta_path in sorted(CLIENTS.glob("*/proposals/*/meta.json")):
+        home = meta_path.parent
+        yield home, json.loads(meta_path.read_text(encoding="utf-8"))
+
+
+def check_consistent(home, meta):
+    """Recompute the hash from proposal.json; it must match meta and the rendered page."""
+    p = json.loads((home / "proposal.json").read_text(encoding="utf-8-sig"))
+    h = render.content_hash(p)
+    html = (home / "index.html").read_text(encoding="utf-8") if (home / "index.html").exists() else ""
+    if meta.get("hash") != h or f'"hash": "{h}"' not in html:
+        die(f"{meta['id']}: proposal.json changed since it was rendered. Run render.py on it and re-approve.")
+    errors, _ = render.validate(p)
+    errors = [e for e in errors if "already in the past" not in e]  # expired pages still render, signing is closed
+    if errors:
+        die(f"{meta['id']}: {errors}")
+    return p, h
+
+
+def signed_hashes(env, ids):
+    """{proposal_id: signed version_hash}. Raises if the check cannot run."""
+    if not ids:
+        return {}
+    url = env.get("SUPABASE_URL")
+    key = env.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not url or not key:
+        die("SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY missing from .env, cannot run the signed-proposal guard")
+    q = ",".join(ids)
+    req = urllib.request.Request(
+        f"{url}/rest/v1/proposal_events?event_type=eq.sign&proposal_id=in.({q})&select=proposal_id,version_hash",
+        headers={"apikey": key, "Authorization": f"Bearer {key}"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            rows = json.loads(r.read())
+    except Exception as e:  # noqa: BLE001
+        die(f"signed-proposal guard could not query Supabase ({e}). Not deploying blind.")
+    return {r["proposal_id"]: r["version_hash"] for r in rows}
+
+
+def build(entries, dry_run):
+    BUILD.mkdir(parents=True, exist_ok=True)
+    gi = BUILD / ".gitignore"
+    if not gi.exists():
+        gi.write_text("# Generated deploy dir. Holds client proposal content: never commit it.\n*\n!.gitignore\n!README.md\n",
+                      encoding="utf-8")
+    readme = BUILD / "README.md"
+    if not readme.exists():
+        readme.write_text("# proposals-site (generated)\n\nBuilt by `.claude/skills/proposal-generator/scripts/deploy.py`.\n"
+                          "Everything here except this file and .gitignore is regenerated on each deploy and gitignored,\n"
+                          "because it contains client proposal content. `.vercel/` holds the project link, keep it.\n",
+                          encoding="utf-8")
+    for sub in ("p", "api"):
+        shutil.rmtree(BUILD / sub, ignore_errors=True)
+    site = SKILL / "assets" / "site"
+    for item in site.rglob("*"):
+        if item.is_file():
+            dest = BUILD / item.relative_to(site)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(item, dest)
+    manifest = {}
+    for home, meta, p, h in entries:
+        dest = BUILD / "p" / meta["id"]
+        dest.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(home / "index.html", dest / "index.html")
+        manifest[meta["id"]] = render.manifest_entry(p, render.derive_options(p), h)
+    (BUILD / "api" / "_manifest.js").write_text(
+        "// Generated by deploy.py. The signing function trusts only this.\nmodule.exports = "
+        + json.dumps(manifest, indent=2, ensure_ascii=False) + ";\n", encoding="utf-8")
+    print(f"built {len(entries)} proposal(s) into {BUILD}{' (dry run)' if dry_run else ''}")
+
+
+def vercel(args, cfg):
+    exe = shutil.which("vercel")
+    if not exe:
+        die("vercel CLI not found on PATH")
+    cmd = [exe, *args] + (["--scope", cfg["vercel_scope"]] if cfg.get("vercel_scope") else [])
+    r = subprocess.run(cmd, cwd=BUILD, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=600)
+    out = (r.stdout or "") + (r.stderr or "")
+    if r.returncode != 0:
+        die(f"vercel {' '.join(args)} failed:\n{out[-2000:]}")
+    return out
+
+
+def fetch(url, data=None):
+    req = urllib.request.Request(url, data=json.dumps(data).encode() if data is not None else None,
+                                 headers={"Content-Type": "application/json", "User-Agent": "proposal-deploy-verify"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.status, r.read().decode("utf-8", "replace")
+
+
+def verify(entries, cfg):
+    base = cfg.get("base_url")
+    if not base:
+        die("site-config.json has no base_url. Set it to the project's production URL, then run deploy.py again.")
+    failures = []
+    for _, meta, _, h in entries:
+        url = f"{base}/p/{meta['id']}"
+        try:
+            status, body = fetch(url)
+            if status != 200:
+                failures.append(f"{url}: HTTP {status}")
+            elif f'"hash": "{h}"' not in body:
+                failures.append(f"{url}: live page does not carry the approved hash {h[:12]}")
+            elif 'name="robots" content="noindex' not in body:
+                failures.append(f"{url}: noindex meta missing")
+        except Exception as e:  # noqa: BLE001
+            failures.append(f"{url}: {e}")
+    try:
+        _, body = fetch(f"{base}/api/event", {"type": "health"})
+        health = json.loads(body)
+        if not health.get("ok"):
+            failures.append(f"health check failed: {health}")
+        if health.get("proposals") != len(entries):
+            failures.append(f"function sees {health.get('proposals')} proposals, expected {len(entries)}")
+        if health.get("email") != "configured":
+            print("note: email alerts are not configured (RESEND_API_KEY / NOTIFY_EMAIL on Vercel)")
+    except Exception as e:  # noqa: BLE001
+        failures.append(f"health check unreachable: {e}")
+    if failures:
+        die("deployed, but live verification failed:\n  " + "\n  ".join(failures))
+    return base
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--approve")
+    ap.add_argument("--withdraw")
+    ap.add_argument("--dry-run", action="store_true")
+    a = ap.parse_args()
+    cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+
+    metas = {m["id"]: (home, m) for home, m in all_proposals()}
+    for target, status in ((a.approve, "approved"), (a.withdraw, "withdrawn")):
+        if not target:
+            continue
+        if target not in metas:
+            die(f"no rendered proposal with id {target}")
+        home, meta = metas[target]
+        if status == "approved":
+            check_consistent(home, meta)
+        meta["status"] = status
+        meta[f"{status}_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+        (home / "meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
+        print(f"{target}: {status}")
+
+    entries = []
+    for home, meta in all_proposals():
+        if meta.get("status") == "approved":
+            p, h = check_consistent(home, meta)
+            entries.append((home, meta, p, h))
+
+    signed = signed_hashes(load_env(), [m["id"] for _, m, _, _ in entries])
+    for _, meta, _, h in entries:
+        if meta["id"] in signed and signed[meta["id"]] != h:
+            die(f"{meta['id']} was signed on version {signed[meta['id']][:12]} and its content has since changed. "
+                "A signed proposal is a record: issue the change as a new proposal instead.")
+
+    build(entries, a.dry_run)
+    if a.dry_run:
+        return
+    if not (BUILD / ".vercel" / "project.json").exists():
+        print(vercel(["link", "--yes", "--project", cfg["vercel_project"]], cfg)[-400:])
+    out = vercel(["deploy", "--prod", "--yes"], cfg)
+    print(out[-600:])
+    if not cfg.get("base_url"):  # first deploy: record the stable production alias Vercel reports
+        m = re.search(r"Aliased:\s*(https://\S+?)\s", out + " ")
+        if m:
+            cfg["base_url"] = m.group(1).rstrip("/")
+            CONFIG_PATH.write_text(json.dumps(cfg, indent=2) + "\n", encoding="utf-8")
+            print(f"base_url set to {cfg['base_url']}")
+    base = verify(entries, cfg)
+
+    now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    for home, meta, _, _ in entries:
+        meta["deployed_at"], meta["url"] = now, f"{base}/p/{meta['id']}"
+        (home / "meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
+        print(f"LIVE  {meta['id']}\n  client link:   {base}/p/{meta['id']}\n  your preview:  {base}/p/{meta['id']}?internal=1")
+
+
+if __name__ == "__main__":
+    main()

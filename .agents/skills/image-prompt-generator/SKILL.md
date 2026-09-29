@@ -1,6 +1,6 @@
 ---
 name: image-prompt-generator
-description: Writes one universal image-generation prompt from any topic, composed fresh for the subject instead of filled into a template, and phrased to work in ChatGPT, Gemini, Midjourney or anywhere else without rewriting. Asks colour, style and format first. Say "image prompt for X", "poster prompt for X". For fixed-layout social sets use carousel, linkedin-infographics or shorts-creator; for authored SVG diagrams, blog-images.
+description: Writes one universal image-generation prompt from any topic, composed fresh for the subject instead of filled into a template, and phrased to work in ChatGPT, Gemini, Midjourney or anywhere else without rewriting. Asks colour, style and format first. Say "image prompt for X", "poster prompt for X". LinkedIn infographics go to linkedin-infographic-studio, Instagram carousels to instagram-carousel-studio, 9:16 frames to shorts-creator, SVG diagrams to blog-images.
 ---
 
 # Pointer to `.claude/skills/image-prompt-generator/`

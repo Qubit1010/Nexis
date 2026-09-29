@@ -1,0 +1,56 @@
+Northwind Creative / NexusPoint - discovery call
+Recorded 2026-09-24, 34 min. Auto-transcript, lightly cleaned.
+
+Aleem: Thanks for making the time, Priya. You mentioned in your email you'd had a few clients asking about AI stuff?
+
+Priya Shah: Yeah so, context, we're Northwind Creative, we're twelve people, mostly brand and paid social for DTC and a few B2B SaaS clients. And this year, like, every second QBR somebody asks "can you do the AI thing", chatbots, automating their lead follow up, that kind of thing. And we just, we don't have anyone who can build it.
+
+Aleem: What have you been doing when they ask?
+
+Priya: Honestly? Saying we'll look into it and then nothing happens. Or we referred one to another agency and, um, they've now taken over their paid social too. So that one stung.
+
+Aleem: So the referral cost you the account.
+
+Priya: Pretty much. That's the thing I'm trying not to repeat.
+
+Aleem: Have you tried bringing someone in to build it?
+
+Priya: We tried a freelancer in spring, found him on, uh, one of the marketplaces. He built half of a chatbot for one of our clients, Loop Coffee, and then just went quiet for three weeks. We had to tell the client it was delayed and, you know, it's our name on it. Tom was furious. Tom's my business partner, he runs the accounts side.
+
+Aleem: So if you did this again, what would have to be true?
+
+Priya: I'd need to see progress without chasing. Like, every week I know where it is. And the client can never know it's not us. We work in ClickUp and Slack, everything goes through there. And I need to be able to, like, explain it to the client myself, so some kind of handover doc.
+
+Aleem: Makes sense. Roughly how many of these requests are sitting there right now?
+
+Priya: Right now, three I'd say are real. Loop Coffee still wants the chatbot finished, that's product questions and order tracking off Shopify. Then Fernhill, a B2B SaaS client, wants their demo requests routed and followed up automatically, they're using HubSpot. And a third one, Kestrel Outdoors, mentioned review requests after purchase, but that one's more of a maybe.
+
+Aleem: And timing?
+
+Priya: Our Q4 renewals are mid November, November 15 is the first big one, that's Loop. I'd love to walk into that renewal with the chatbot live. That's kind of the whole point, to show them we can do this stuff.
+
+Aleem: Got it. On budget, how are you thinking about it?
+
+Priya: Um, so we were thinking maybe around a grand a month? But ideally it's like an ongoing thing where we can just throw requests at you, like three or four a month, and you handle them with priority. Tom will want to see numbers before we commit to anything monthly though. He'd probably rather start with one project and see.
+
+Aleem: So you'd want a way to test it before a monthly commitment.
+
+Priya: Yeah, Tom definitely. Me, I'd sign today if I trusted it, ha. But we decide together.
+
+Aleem: Anything that would be a dealbreaker?
+
+Priya: If you ever contacted our clients directly. That's a hard no. And we need to own whatever gets built, the client pays us for it.
+
+Aleem: Fair. What would you charge the client for something like the Loop chatbot, roughly?
+
+Priya: We haven't figured that out. Maybe we'd mark it up, like, fifty percent? Not sure yet.
+
+Aleem: Okay. I'll put something together. When do you need it?
+
+Priya: Early next week would be great, Tom's away Thursday and Friday.
+
+Aleem: Perfect. I'll send it over. Best email for you both?
+
+Priya: Me, priya@northwindcreative.co, I'll forward it to Tom.
+
+[end]

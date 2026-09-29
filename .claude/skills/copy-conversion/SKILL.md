@@ -70,7 +70,7 @@ It writes the words. It does not define the voice, and it does not decide the of
 | `seo-onpage` / `seo-authority-ai` | Page titles and metas as SEO artifacts; AI-search visibility |
 | `sales-playbook` | Aleem's own cold email, DMs and outreach, where he is the sender rather than the client |
 | `proposal-generator` | Client proposals and offer construction |
-| `content-engine` / `post-creator` / `carousel` | Aleem's own social content: idea sourcing, the posting schedule, the repurposing flywheel. **Formatting a post for a platform lives HERE** (`platform-formatting.md`); what to post about lives there |
+| `content-engine` / `post-creator` / `instagram-carousel-studio` | Aleem's own social content: idea sourcing, the posting schedule, the repurposing flywheel. **Formatting a post for a platform lives HERE** (`platform-formatting.md`); what to post about lives there |
 | `social-media-advisor` | How a platform *ranks and distributes* a post, account and follower growth, engagement strategy, profile optimisation, community management, social listening. **Formatting still lives HERE**: character limits, the "see more" cut, per-platform structure. That skill explains the system the formatted post lands in |
 | `client-content-creator` | A broad multi-piece content package rather than conversion assets |
 

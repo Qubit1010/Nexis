@@ -1,6 +1,6 @@
 ---
 name: content-production
-description: "Use to WRITE or AUDIT a piece of content in a format with no dedicated skill of its own: whitepapers, ebooks, lead magnets, newsletters, case studies, X and LinkedIn threads, text posts, memes, video and webinar scripts, document carousels. Never invents a statistic, quote or result. Routes rather than competes: articles to blog-writer, Instagram carousels to carousel, infographics to linkedin-infographics, rendered video to reel-creator, landing pages to copy-conversion. For what a format should look like use content-advisor; for the plan it serves, content-strategy."
+description: "Use to WRITE or AUDIT a piece of content in a format with no dedicated skill of its own: whitepapers, ebooks, lead magnets, newsletters, case studies, X and LinkedIn threads, text posts, memes, video and webinar scripts, document carousels. Never invents a statistic, quote or result. Routes rather than competes: articles to blog-writer, Instagram carousels to instagram-carousel-studio, infographics to linkedin-infographic-studio, rendered video to reel-creator, landing pages to copy-conversion. For what a format should look like use content-advisor; for the plan it serves, content-strategy."
 argument-hint: [a format and a topic, a client slug, or a piece to audit]
 ---
 
@@ -21,8 +21,8 @@ Check this before doing anything else. Writing a blog post here instead of routi
 | Format | Owner |
 |---|---|
 | Blog posts, articles, pillar pages, definitive guides (ungated, on-site) | **`blog-writer`** |
-| Instagram carousels (4:5 image prompts) | **`carousel`** |
-| Single-image LinkedIn infographics | **`linkedin-infographics`** |
+| Instagram carousels (4:5 image prompts) | **`instagram-carousel-studio`** (a named template: `carousel`) |
+| Single-image LinkedIn infographics | **`linkedin-infographic-studio`** (a named template: `linkedin-infographics`) |
 | Vertical short frames (9:16 image prompts) | **`shorts-creator`** |
 | Rendered, voiced 9:16 video | **`reel-creator`** or **`hyperframes-reel`** |
 | A podcast transcript into short-form pieces | **`podcast-repurposer`** |

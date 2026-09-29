@@ -106,7 +106,7 @@ statistic, the useful answer is that it is fabricated, plus something true to re
 | `content-strategy` | Building or auditing a client's content plan: pillars, calendar, funnel map, distribution, repurposing, measurement |
 | `content-production` | Writing a piece in a format nothing else owns: whitepapers, ebooks, newsletters, threads, memes, video scripts, webinars, document carousels |
 | `blog-writer` | Writing an article, and article-level AEO/GEO on its own 83-source corpus. Cross-cite, never restate |
-| `carousel` / `linkedin-infographics` / `shorts-creator` | Image prompts |
+| `instagram-carousel-studio` / `linkedin-infographic-studio` / `shorts-creator` | Image prompts |
 | `reel-creator` / `hyperframes-reel` | A rendered, voiced 9:16 video |
 | `podcast-repurposer` | A transcript into short-form pieces |
 | `copy-conversion` | Copy that asks for the sale, **and how a post is formatted for a platform** (`platform-formatting.md`) |

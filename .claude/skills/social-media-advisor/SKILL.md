@@ -143,7 +143,7 @@ strategy document would be a separate `social-media-strategy` executor claiming 
 | `copy-conversion` | **Formatting a post to a platform**: character limits, the "see more" cut, per-platform structure |
 | `copywriting-advisor` | Headlines, hooks-as-copy, CTAs, and copywriting folklore |
 | `content-strategy` | Building or auditing a client's pillars, calendar, funnel and distribution plan |
-| `content-production` / `carousel` / `shorts-creator` / `reel-creator` | Actually making the piece |
+| `content-production` / `instagram-carousel-studio` / `shorts-creator` / `reel-creator` | Actually making the piece |
 | *(no owning skill)* | Channel mix, offer and pricing, paid ads, email and lifecycle, and cross-channel measurement. No current skill covers these. Say so plainly rather than improvising. |
 | `content-engine` / `post-creator` | Aleem's own content, his pillars, the weekly schedule |
 | `linkedin-commenter` | Actually running the daily commenting round |

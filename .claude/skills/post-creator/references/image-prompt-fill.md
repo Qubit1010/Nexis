@@ -20,6 +20,14 @@ checkpoint — so fill their templates directly instead of re-running their inte
 
 ## LinkedIn infographic (one prompt, one image)
 
+**Default: `linkedin-infographic-studio`, headless.** When `templates.linkedin` is `"creative"`
+(the cell says "LinkedIn Infographic — Creative") or null on a LinkedIn row, follow that skill's
+"Inside post-creator (headless)" section: it designs a fresh concept from the Simplified Source,
+defaults to Aleem's brand palette, surfaces the concept and colour at the step-5 checkpoint, and
+emits one lint-checked prompt after approval. It also appends to its own concept ledger.
+
+**Only when the row names a template number**, fill that template instead:
+
 1. Read `.claude/skills/linkedin-infographics/references/LinkedIn-Template-<N>/input-prompt.md`
    — it contains a "SINGLE PROMPT" code block with `<placeholders>`.
 2. Skim the same folder's `design-structure.md` only if the placeholder meanings are unclear;
@@ -31,6 +39,15 @@ checkpoint — so fill their templates directly instead of re-running their inte
    and "One image only." — those keep Gemini from drifting into carousels.
 
 ## Instagram carousel (prompt set, one image per slide)
+
+**Default: `instagram-carousel-studio`, headless.** When `templates.instagram` is `"creative"`
+(the cell says "Instagram Carousel — Creative") or null on an Instagram row, follow that skill's
+"Inside post-creator (headless)" section: a fresh series concept from the Simplified Source, in a
+different visual world from this post's LinkedIn infographic, brand palette by default, surfaced
+at the step-5 checkpoint, then one lint-checked prompt per slide sharing one style block. It
+appends to its own concept ledger.
+
+**Only when the row names a template number**, fill that template instead:
 
 1. Read `.claude/skills/carousel/references/Instagram-Template-<N>/input-prompt.md`
    — it defines CONTEXT (no image) → COVER → BODY (repeat) → CTA blocks.

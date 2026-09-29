@@ -1,8 +1,7 @@
 ---
 name: proposal-generator
-description: "Generate client proposals using the Hormozi $100M Offers framework and create formatted Google Docs. Use when someone asks to create a proposal, draft a proposal, generate a client proposal, write a project proposal, build an offer, scope a deal, write a SOW, or anything related to proposal/offer creation for client work. Also triggers on: 'proposal for [client]', 'draft an offer', 'put together a proposal', 'scope this as a proposal'."
-argument-hint: [scope brief or client name]
-disable-model-invocation: true
+description: "Turns a call transcript, meeting notes or a scope brief into a signable web proposal for a direct (non-Upwork) client: a branded page with priced options, e-signature and a Payoneer pay step, deployed to a private link, then reports who opened or signed it. Say 'proposal for X', 'turn this call into a proposal', 'has X signed'. Upwork job posts go to upwork-proposal-studio; after payment, client-onboarding-workflow."
+argument-hint: [transcript, scope brief, or client name]
 ---
 
 # Pointer to `.claude/skills/proposal-generator/`

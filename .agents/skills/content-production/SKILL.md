@@ -1,6 +1,6 @@
 ---
 name: content-production
-description: "Use to WRITE or AUDIT a piece of content in a format with no dedicated skill of its own: whitepapers, ebooks, lead magnets, newsletters, case studies, X and LinkedIn threads, text posts, memes, video and webinar scripts, document carousels. Never invents a statistic, quote or result. Routes rather than competes: articles to blog-writer, Instagram carousels to carousel, infographics to linkedin-infographics, rendered video to reel-creator, landing pages to copy-conversion. For what a format should look like use content-advisor; for the plan it serves, content-strategy."
+description: "Use to WRITE or AUDIT a piece of content in a format with no dedicated skill of its own: whitepapers, ebooks, lead magnets, newsletters, case studies, X and LinkedIn threads, text posts, memes, video and webinar scripts, document carousels. Never invents a statistic, quote or result. Routes rather than competes: articles to blog-writer, Instagram carousels to instagram-carousel-studio, infographics to linkedin-infographic-studio, rendered video to reel-creator, landing pages to copy-conversion. For what a format should look like use content-advisor; for the plan it serves, content-strategy."
 argument-hint: [a format and a topic, a client slug, or a piece to audit]
 ---
 

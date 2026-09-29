@@ -89,6 +89,6 @@ No first-party frequency statement. All numbers are convention.
 
 ## 8. Who executes
 
-`carousel` (4:5 feed carousels), `shorts-creator` (9:16 frames), `reel-creator` /
+`instagram-carousel-studio` (4:5 feed carousels; `carousel` for a named template), `shorts-creator` (9:16 frames), `reel-creator` /
 `hyperframes-reel` (rendered video), `post-creator` (Aleem's own), `content-production`
 (client captions), `copy-conversion` (caption formatting and limits).

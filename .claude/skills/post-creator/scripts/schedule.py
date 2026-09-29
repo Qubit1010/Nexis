@@ -145,8 +145,15 @@ def _parse_templates(cell):
     out = {"linkedin": None, "instagram": None, "errors": []}
     if not cell:
         return out
-    li = re.search(r"linkedin[^0-9]*template\s*[-—–]?\s*(\d+)", cell, re.I)
-    ig = re.search(r"instagram[^0-9]*template\s*[-—–]?\s*(\d+)", cell, re.I)
+    # Stop at a comma or newline so one platform's number never leaks into the other's.
+    li = re.search(r"linkedin[^0-9,\n]*template\s*[-—–]?\s*(\d+)", cell, re.I)
+    ig = re.search(r"instagram[^0-9,\n]*template\s*[-—–]?\s*(\d+)", cell, re.I)
+    # "LinkedIn Infographic — Creative" routes to linkedin-infographic-studio, no template.
+    if not li and re.search(r"linkedin[^,\n]*creative", cell, re.I):
+        out["linkedin"] = "creative"
+    # "Instagram Carousel — Creative" routes to instagram-carousel-studio, no template.
+    if not ig and re.search(r"instagram[^,\n]*creative", cell, re.I):
+        out["instagram"] = "creative"
     if li:
         n = int(li.group(1))
         if n in LINKEDIN_TEMPLATES:
@@ -413,6 +420,10 @@ def selftest():
     assert t["linkedin"] is None and t["errors"], t
     t = _parse_templates("Instagram-Template-1")
     assert t["instagram"] == 1 and t["linkedin"] is None, t
+    t = _parse_templates("LinkedIn Infographic — Creative,\nInstagram-Template-6")
+    assert t["linkedin"] == "creative" and t["instagram"] == 6 and not t["errors"], t
+    t = _parse_templates("LinkedIn Infographic — Template 9,\nInstagram Carousel — Creative")
+    assert t["linkedin"] == 9 and t["instagram"] == "creative" and not t["errors"], t
     ing, top, unknown = _parse_pillars("Practical Stakes, Content Specific")
     assert ing == ["practical_stakes", "content_specific"], ing
     assert not top and not unknown, (top, unknown)
