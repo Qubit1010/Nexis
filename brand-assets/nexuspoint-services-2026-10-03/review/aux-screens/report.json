@@ -1,0 +1,1857 @@
+{
+  "target": "http://127.0.0.1:4323/",
+  "passed": 77,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "375x667 0.02: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.02: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 505,
+        "width": 315,
+        "height": 142,
+        "bottom": 647,
+        "right": 345
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.02: collection labels clear the navigation",
+      "evidence": {
+        "plates": [
+          {
+            "plate": {
+              "x": 11.518120765686035,
+              "y": 317.855224609375,
+              "width": 194.8096160888672,
+              "height": 164.18951416015625,
+              "bottom": 482.04473876953125,
+              "right": 206.32773685455322
+            },
+            "label": {
+              "x": 40.865997314453125,
+              "y": 444.46258544921875,
+              "width": 34.812042236328125,
+              "height": 15.47381591796875,
+              "bottom": 459.9364013671875,
+              "right": 75.67803955078125
+            }
+          },
+          {
+            "plate": {
+              "x": 68.34783935546875,
+              "y": 307.1093444824219,
+              "width": 186.00405883789062,
+              "height": 148.45278930664062,
+              "bottom": 455.5621337890625,
+              "right": 254.35189819335938
+            },
+            "label": {
+              "x": 87.54154968261719,
+              "y": 422.0331726074219,
+              "width": 47.58430480957031,
+              "height": 12.787322998046875,
+              "bottom": 434.82049560546875,
+              "right": 135.1258544921875
+            }
+          },
+          {
+            "plate": {
+              "x": 120.64810943603516,
+              "y": 307.1093444824219,
+              "width": 186.00405883789062,
+              "height": 148.45278930664062,
+              "bottom": 455.5621337890625,
+              "right": 306.6521682739258
+            },
+            "label": {
+              "x": 135.41513061523438,
+              "y": 417.01422119140625,
+              "width": 48.85441589355469,
+              "height": 12.797393798828125,
+              "bottom": 429.8116149902344,
+              "right": 184.26954650878906
+            }
+          },
+          {
+            "plate": {
+              "x": 168.67225646972656,
+              "y": 317.855224609375,
+              "width": 194.8096160888672,
+              "height": 164.18951416015625,
+              "bottom": 482.04473876953125,
+              "right": 363.48187255859375
+            },
+            "label": {
+              "x": 184.6516876220703,
+              "y": 427.31561279296875,
+              "width": 105.81468200683594,
+              "height": 26.03021240234375,
+              "bottom": 453.3458251953125,
+              "right": 290.46636962890625
+            }
+          }
+        ],
+        "rail": {
+          "x": 30,
+          "y": 505,
+          "width": 315,
+          "height": 142,
+          "bottom": 647,
+          "right": 345
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.02: collection cards clear the navigation",
+      "evidence": {
+        "plates": [
+          {
+            "plate": {
+              "x": 11.518120765686035,
+              "y": 317.855224609375,
+              "width": 194.8096160888672,
+              "height": 164.18951416015625,
+              "bottom": 482.04473876953125,
+              "right": 206.32773685455322
+            },
+            "label": {
+              "x": 40.865997314453125,
+              "y": 444.46258544921875,
+              "width": 34.812042236328125,
+              "height": 15.47381591796875,
+              "bottom": 459.9364013671875,
+              "right": 75.67803955078125
+            }
+          },
+          {
+            "plate": {
+              "x": 68.34783935546875,
+              "y": 307.1093444824219,
+              "width": 186.00405883789062,
+              "height": 148.45278930664062,
+              "bottom": 455.5621337890625,
+              "right": 254.35189819335938
+            },
+            "label": {
+              "x": 87.54154968261719,
+              "y": 422.0331726074219,
+              "width": 47.58430480957031,
+              "height": 12.787322998046875,
+              "bottom": 434.82049560546875,
+              "right": 135.1258544921875
+            }
+          },
+          {
+            "plate": {
+              "x": 120.64810943603516,
+              "y": 307.1093444824219,
+              "width": 186.00405883789062,
+              "height": 148.45278930664062,
+              "bottom": 455.5621337890625,
+              "right": 306.6521682739258
+            },
+            "label": {
+              "x": 135.41513061523438,
+              "y": 417.01422119140625,
+              "width": 48.85441589355469,
+              "height": 12.797393798828125,
+              "bottom": 429.8116149902344,
+              "right": 184.26954650878906
+            }
+          },
+          {
+            "plate": {
+              "x": 168.67225646972656,
+              "y": 317.855224609375,
+              "width": 194.8096160888672,
+              "height": 164.18951416015625,
+              "bottom": 482.04473876953125,
+              "right": 363.48187255859375
+            },
+            "label": {
+              "x": 184.6516876220703,
+              "y": 427.31561279296875,
+              "width": 105.81468200683594,
+              "height": 26.03021240234375,
+              "bottom": 453.3458251953125,
+              "right": 290.46636962890625
+            }
+          }
+        ],
+        "rail": {
+          "x": 30,
+          "y": 505,
+          "width": 315,
+          "height": 142,
+          "bottom": 647,
+          "right": 345
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.1: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.1: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 505,
+        "width": 315,
+        "height": 142,
+        "bottom": 647,
+        "right": 345
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.1: collection labels clear the navigation",
+      "evidence": {
+        "plates": [
+          {
+            "plate": {
+              "x": -28.52359390258789,
+              "y": 312.2360534667969,
+              "width": 204.99046325683594,
+              "height": 174.84597778320312,
+              "bottom": 487.08203125,
+              "right": 176.46686935424805
+            },
+            "label": {
+              "x": 8.563196182250977,
+              "y": 446.8105773925781,
+              "width": 35.42375946044922,
+              "height": 17.56292724609375,
+              "bottom": 464.3735046386719,
+              "right": 43.986955642700195
+            }
+          },
+          {
+            "plate": {
+              "x": 55.044944763183594,
+              "y": 304.9967346191406,
+              "width": 189.32382202148438,
+              "height": 152.49246215820312,
+              "bottom": 457.48919677734375,
+              "right": 244.36876678466797
+            },
+            "label": {
+              "x": 76.7869873046875,
+              "y": 422.64398193359375,
+              "width": 47.764869689941406,
+              "height": 13.8388671875,
+              "bottom": 436.48284912109375,
+              "right": 124.5518569946289
+            }
+          },
+          {
+            "plate": {
+              "x": 130.63124084472656,
+              "y": 304.9967346191406,
+              "width": 189.3238067626953,
+              "height": 152.49246215820312,
+              "bottom": 457.48919677734375,
+              "right": 319.9550476074219
+            },
+            "label": {
+              "x": 145.90301513671875,
+              "y": 415.218017578125,
+              "width": 49.180694580078125,
+              "height": 13.90460205078125,
+              "bottom": 429.12261962890625,
+              "right": 195.08370971679688
+            }
+          },
+          {
+            "plate": {
+              "x": 198.5331268310547,
+              "y": 312.2360534667969,
+              "width": 204.99046325683594,
+              "height": 174.84597778320312,
+              "bottom": 487.08203125,
+              "right": 403.5235900878906
+            },
+            "label": {
+              "x": 216.03981018066406,
+              "y": 421.7426452636719,
+              "width": 106.88435363769531,
+              "height": 33.106048583984375,
+              "bottom": 454.84869384765625,
+              "right": 322.9241638183594
+            }
+          }
+        ],
+        "rail": {
+          "x": 30,
+          "y": 505,
+          "width": 315,
+          "height": 142,
+          "bottom": 647,
+          "right": 345
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.1: collection cards clear the navigation",
+      "evidence": {
+        "plates": [
+          {
+            "plate": {
+              "x": -28.52359390258789,
+              "y": 312.2360534667969,
+              "width": 204.99046325683594,
+              "height": 174.84597778320312,
+              "bottom": 487.08203125,
+              "right": 176.46686935424805
+            },
+            "label": {
+              "x": 8.563196182250977,
+              "y": 446.8105773925781,
+              "width": 35.42375946044922,
+              "height": 17.56292724609375,
+              "bottom": 464.3735046386719,
+              "right": 43.986955642700195
+            }
+          },
+          {
+            "plate": {
+              "x": 55.044944763183594,
+              "y": 304.9967346191406,
+              "width": 189.32382202148438,
+              "height": 152.49246215820312,
+              "bottom": 457.48919677734375,
+              "right": 244.36876678466797
+            },
+            "label": {
+              "x": 76.7869873046875,
+              "y": 422.64398193359375,
+              "width": 47.764869689941406,
+              "height": 13.8388671875,
+              "bottom": 436.48284912109375,
+              "right": 124.5518569946289
+            }
+          },
+          {
+            "plate": {
+              "x": 130.63124084472656,
+              "y": 304.9967346191406,
+              "width": 189.3238067626953,
+              "height": 152.49246215820312,
+              "bottom": 457.48919677734375,
+              "right": 319.9550476074219
+            },
+            "label": {
+              "x": 145.90301513671875,
+              "y": 415.218017578125,
+              "width": 49.180694580078125,
+              "height": 13.90460205078125,
+              "bottom": 429.12261962890625,
+              "right": 195.08370971679688
+            }
+          },
+          {
+            "plate": {
+              "x": 198.5331268310547,
+              "y": 312.2360534667969,
+              "width": 204.99046325683594,
+              "height": 174.84597778320312,
+              "bottom": 487.08203125,
+              "right": 403.5235900878906
+            },
+            "label": {
+              "x": 216.03981018066406,
+              "y": 421.7426452636719,
+              "width": 106.88435363769531,
+              "height": 33.106048583984375,
+              "bottom": 454.84869384765625,
+              "right": 322.9241638183594
+            }
+          }
+        ],
+        "rail": {
+          "x": 30,
+          "y": 505,
+          "width": 315,
+          "height": 142,
+          "bottom": 647,
+          "right": 345
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.26: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.26: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 505,
+        "width": 315,
+        "height": 142,
+        "bottom": 647,
+        "right": 345
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.26: service content clears the navigation",
+      "evidence": {
+        "content": {
+          "x": 30,
+          "y": 110,
+          "width": 315,
+          "height": 343.78125,
+          "bottom": 453.78125,
+          "right": 345
+        },
+        "rail": {
+          "x": 30,
+          "y": 505,
+          "width": 315,
+          "height": 142,
+          "bottom": 647,
+          "right": 345
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.26: primary action remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 399.78125,
+        "width": 179.75,
+        "height": 54,
+        "bottom": 453.78125,
+        "right": 209.75
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.465: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.465: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 505,
+        "width": 315,
+        "height": 142,
+        "bottom": 647,
+        "right": 345
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.465: service content clears the navigation",
+      "evidence": {
+        "content": {
+          "x": 30,
+          "y": 110,
+          "width": 315,
+          "height": 362.375,
+          "bottom": 472.375,
+          "right": 345
+        },
+        "rail": {
+          "x": 30,
+          "y": 505,
+          "width": 315,
+          "height": 142,
+          "bottom": 647,
+          "right": 345
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.465: primary action remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 418.375,
+        "width": 187.796875,
+        "height": 54,
+        "bottom": 472.375,
+        "right": 217.796875
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.67: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.67: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 505,
+        "width": 315,
+        "height": 142,
+        "bottom": 647,
+        "right": 345
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.67: service content clears the navigation",
+      "evidence": {
+        "content": {
+          "x": 30,
+          "y": 110,
+          "width": 315,
+          "height": 362.375,
+          "bottom": 472.375,
+          "right": 345
+        },
+        "rail": {
+          "x": 30,
+          "y": 505,
+          "width": 315,
+          "height": 142,
+          "bottom": 647,
+          "right": 345
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.67: primary action remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 418.375,
+        "width": 202.234375,
+        "height": 54,
+        "bottom": 472.375,
+        "right": 232.234375
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.875: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.875: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 505,
+        "width": 315,
+        "height": 142,
+        "bottom": 647,
+        "right": 345
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.875: service content clears the navigation",
+      "evidence": {
+        "content": {
+          "x": 30,
+          "y": 110,
+          "width": 315,
+          "height": 343.78125,
+          "bottom": 453.78125,
+          "right": 345
+        },
+        "rail": {
+          "x": 30,
+          "y": 505,
+          "width": 315,
+          "height": 142,
+          "bottom": 647,
+          "right": 345
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667 0.875: primary action remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 399.78125,
+        "width": 190.359375,
+        "height": 54,
+        "bottom": 453.78125,
+        "right": 220.359375
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.02: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.02: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 558,
+        "width": 330,
+        "height": 142,
+        "bottom": 700,
+        "right": 360
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.02: collection labels clear the navigation",
+      "evidence": {
+        "plates": [
+          {
+            "plate": {
+              "x": 9.218095779418945,
+              "y": 317.87066650390625,
+              "width": 207.85775756835938,
+              "height": 208.13519287109375,
+              "bottom": 526.005859375,
+              "right": 217.07585334777832
+            },
+            "label": {
+              "x": 44.697383880615234,
+              "y": 488.314453125,
+              "width": 34.832820892333984,
+              "height": 15.55377197265625,
+              "bottom": 503.86822509765625,
+              "right": 79.53020477294922
+            }
+          },
+          {
+            "plate": {
+              "x": 70.1822509765625,
+              "y": 307.0880126953125,
+              "width": 195.19302368164062,
+              "height": 192.1669921875,
+              "bottom": 499.2550048828125,
+              "right": 265.3752746582031
+            },
+            "label": {
+              "x": 91.41123962402344,
+              "y": 465.6734619140625,
+              "width": 47.59828186035156,
+              "height": 12.82672119140625,
+              "bottom": 478.50018310546875,
+              "right": 139.009521484375
+            }
+          },
+          {
+            "plate": {
+              "x": 124.62472534179688,
+              "y": 307.0880126953125,
+              "width": 195.19302368164062,
+              "height": 192.1669921875,
+              "bottom": 499.2550048828125,
+              "right": 319.8177490234375
+            },
+            "label": {
+              "x": 139.3860626220703,
+              "y": 460.2215576171875,
+              "width": 48.835601806640625,
+              "height": 12.8326416015625,
+              "bottom": 473.05419921875,
+              "right": 188.22166442871094
+            }
+          },
+          {
+            "plate": {
+              "x": 172.9241485595703,
+              "y": 317.87066650390625,
+              "width": 207.8577423095703,
+              "height": 208.13519287109375,
+              "bottom": 526.005859375,
+              "right": 380.7818908691406
+            },
+            "label": {
+              "x": 188.88143920898438,
+              "y": 469.8421630859375,
+              "width": 105.6663818359375,
+              "height": 26.24456787109375,
+              "bottom": 496.08673095703125,
+              "right": 294.5478210449219
+            }
+          }
+        ],
+        "rail": {
+          "x": 30,
+          "y": 558,
+          "width": 330,
+          "height": 142,
+          "bottom": 700,
+          "right": 360
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.02: collection cards clear the navigation",
+      "evidence": {
+        "plates": [
+          {
+            "plate": {
+              "x": 9.218095779418945,
+              "y": 317.87066650390625,
+              "width": 207.85775756835938,
+              "height": 208.13519287109375,
+              "bottom": 526.005859375,
+              "right": 217.07585334777832
+            },
+            "label": {
+              "x": 44.697383880615234,
+              "y": 488.314453125,
+              "width": 34.832820892333984,
+              "height": 15.55377197265625,
+              "bottom": 503.86822509765625,
+              "right": 79.53020477294922
+            }
+          },
+          {
+            "plate": {
+              "x": 70.1822509765625,
+              "y": 307.0880126953125,
+              "width": 195.19302368164062,
+              "height": 192.1669921875,
+              "bottom": 499.2550048828125,
+              "right": 265.3752746582031
+            },
+            "label": {
+              "x": 91.41123962402344,
+              "y": 465.6734619140625,
+              "width": 47.59828186035156,
+              "height": 12.82672119140625,
+              "bottom": 478.50018310546875,
+              "right": 139.009521484375
+            }
+          },
+          {
+            "plate": {
+              "x": 124.62472534179688,
+              "y": 307.0880126953125,
+              "width": 195.19302368164062,
+              "height": 192.1669921875,
+              "bottom": 499.2550048828125,
+              "right": 319.8177490234375
+            },
+            "label": {
+              "x": 139.3860626220703,
+              "y": 460.2215576171875,
+              "width": 48.835601806640625,
+              "height": 12.8326416015625,
+              "bottom": 473.05419921875,
+              "right": 188.22166442871094
+            }
+          },
+          {
+            "plate": {
+              "x": 172.9241485595703,
+              "y": 317.87066650390625,
+              "width": 207.8577423095703,
+              "height": 208.13519287109375,
+              "bottom": 526.005859375,
+              "right": 380.7818908691406
+            },
+            "label": {
+              "x": 188.88143920898438,
+              "y": 469.8421630859375,
+              "width": 105.6663818359375,
+              "height": 26.24456787109375,
+              "bottom": 496.08673095703125,
+              "right": 294.5478210449219
+            }
+          }
+        ],
+        "rail": {
+          "x": 30,
+          "y": 558,
+          "width": 330,
+          "height": 142,
+          "bottom": 700,
+          "right": 360
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.1: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.1: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 558,
+        "width": 330,
+        "height": 142,
+        "bottom": 700,
+        "right": 360
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.1: collection labels clear the navigation",
+      "evidence": {
+        "plates": [
+          {
+            "plate": {
+              "x": -33.76627731323242,
+              "y": 312.144775390625,
+              "width": 221.1400909423828,
+              "height": 218.7913818359375,
+              "bottom": 530.9361572265625,
+              "right": 187.3738136291504
+            },
+            "label": {
+              "x": 12.549651145935059,
+              "y": 490.6000671386719,
+              "width": 35.432376861572266,
+              "height": 17.613525390625,
+              "bottom": 508.2135925292969,
+              "right": 47.982028007507324
+            }
+          },
+          {
+            "plate": {
+              "x": 55.90706253051758,
+              "y": 304.8802795410156,
+              "width": 199.53466796875,
+              "height": 196.32913208007812,
+              "bottom": 501.20941162109375,
+              "right": 255.44173049926758
+            },
+            "label": {
+              "x": 80.70464324951172,
+              "y": 466.3287048339844,
+              "width": 47.77368927001953,
+              "height": 13.865814208984375,
+              "bottom": 480.19451904296875,
+              "right": 128.47833251953125
+            }
+          },
+          {
+            "plate": {
+              "x": 134.5582733154297,
+              "y": 304.8802795410156,
+              "width": 199.53465270996094,
+              "height": 196.32913208007812,
+              "bottom": 501.20941162109375,
+              "right": 334.0929260253906
+            },
+            "label": {
+              "x": 149.82571411132812,
+              "y": 458.3330078125,
+              "width": 49.16673278808594,
+              "height": 13.92828369140625,
+              "bottom": 472.26129150390625,
+              "right": 198.99244689941406
+            }
+          },
+          {
+            "plate": {
+              "x": 202.62619018554688,
+              "y": 312.144775390625,
+              "width": 221.14007568359375,
+              "height": 218.7913818359375,
+              "bottom": 530.9361572265625,
+              "right": 423.7662658691406
+            },
+            "label": {
+              "x": 220.11334228515625,
+              "y": 463.8242492675781,
+              "width": 106.76416015625,
+              "height": 33.237640380859375,
+              "bottom": 497.0618896484375,
+              "right": 326.87750244140625
+            }
+          }
+        ],
+        "rail": {
+          "x": 30,
+          "y": 558,
+          "width": 330,
+          "height": 142,
+          "bottom": 700,
+          "right": 360
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.1: collection cards clear the navigation",
+      "evidence": {
+        "plates": [
+          {
+            "plate": {
+              "x": -33.76627731323242,
+              "y": 312.144775390625,
+              "width": 221.1400909423828,
+              "height": 218.7913818359375,
+              "bottom": 530.9361572265625,
+              "right": 187.3738136291504
+            },
+            "label": {
+              "x": 12.549651145935059,
+              "y": 490.6000671386719,
+              "width": 35.432376861572266,
+              "height": 17.613525390625,
+              "bottom": 508.2135925292969,
+              "right": 47.982028007507324
+            }
+          },
+          {
+            "plate": {
+              "x": 55.90706253051758,
+              "y": 304.8802795410156,
+              "width": 199.53466796875,
+              "height": 196.32913208007812,
+              "bottom": 501.20941162109375,
+              "right": 255.44173049926758
+            },
+            "label": {
+              "x": 80.70464324951172,
+              "y": 466.3287048339844,
+              "width": 47.77368927001953,
+              "height": 13.865814208984375,
+              "bottom": 480.19451904296875,
+              "right": 128.47833251953125
+            }
+          },
+          {
+            "plate": {
+              "x": 134.5582733154297,
+              "y": 304.8802795410156,
+              "width": 199.53465270996094,
+              "height": 196.32913208007812,
+              "bottom": 501.20941162109375,
+              "right": 334.0929260253906
+            },
+            "label": {
+              "x": 149.82571411132812,
+              "y": 458.3330078125,
+              "width": 49.16673278808594,
+              "height": 13.92828369140625,
+              "bottom": 472.26129150390625,
+              "right": 198.99244689941406
+            }
+          },
+          {
+            "plate": {
+              "x": 202.62619018554688,
+              "y": 312.144775390625,
+              "width": 221.14007568359375,
+              "height": 218.7913818359375,
+              "bottom": 530.9361572265625,
+              "right": 423.7662658691406
+            },
+            "label": {
+              "x": 220.11334228515625,
+              "y": 463.8242492675781,
+              "width": 106.76416015625,
+              "height": 33.237640380859375,
+              "bottom": 497.0618896484375,
+              "right": 326.87750244140625
+            }
+          }
+        ],
+        "rail": {
+          "x": 30,
+          "y": 558,
+          "width": 330,
+          "height": 142,
+          "bottom": 700,
+          "right": 360
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.26: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.26: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 558,
+        "width": 330,
+        "height": 142,
+        "bottom": 700,
+        "right": 360
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.26: service content clears the navigation",
+      "evidence": {
+        "content": {
+          "x": 30,
+          "y": 110,
+          "width": 330,
+          "height": 343.78125,
+          "bottom": 453.78125,
+          "right": 360
+        },
+        "rail": {
+          "x": 30,
+          "y": 558,
+          "width": 330,
+          "height": 142,
+          "bottom": 700,
+          "right": 360
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.26: primary action remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 399.78125,
+        "width": 179.75,
+        "height": 54,
+        "bottom": 453.78125,
+        "right": 209.75
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.465: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.465: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 558,
+        "width": 330,
+        "height": 142,
+        "bottom": 700,
+        "right": 360
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.465: service content clears the navigation",
+      "evidence": {
+        "content": {
+          "x": 30,
+          "y": 110,
+          "width": 330,
+          "height": 362.375,
+          "bottom": 472.375,
+          "right": 360
+        },
+        "rail": {
+          "x": 30,
+          "y": 558,
+          "width": 330,
+          "height": 142,
+          "bottom": 700,
+          "right": 360
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.465: primary action remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 418.375,
+        "width": 187.796875,
+        "height": 54,
+        "bottom": 472.375,
+        "right": 217.796875
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.67: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.67: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 558,
+        "width": 330,
+        "height": 142,
+        "bottom": 700,
+        "right": 360
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.67: service content clears the navigation",
+      "evidence": {
+        "content": {
+          "x": 30,
+          "y": 110,
+          "width": 330,
+          "height": 362.375,
+          "bottom": 472.375,
+          "right": 360
+        },
+        "rail": {
+          "x": 30,
+          "y": 558,
+          "width": 330,
+          "height": 142,
+          "bottom": 700,
+          "right": 360
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.67: primary action remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 418.375,
+        "width": 202.234375,
+        "height": 54,
+        "bottom": 472.375,
+        "right": 232.234375
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.875: no horizontal overflow",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.875: navigation remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 558,
+        "width": 330,
+        "height": 142,
+        "bottom": 700,
+        "right": 360
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.875: service content clears the navigation",
+      "evidence": {
+        "content": {
+          "x": 30,
+          "y": 110,
+          "width": 330,
+          "height": 343.78125,
+          "bottom": 453.78125,
+          "right": 360
+        },
+        "rail": {
+          "x": 30,
+          "y": 558,
+          "width": 330,
+          "height": 142,
+          "bottom": 700,
+          "right": 360
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390x720 0.875: primary action remains inside viewport",
+      "evidence": {
+        "x": 30,
+        "y": 399.78125,
+        "width": 190.359375,
+        "height": 54,
+        "bottom": 453.78125,
+        "right": 220.359375
+      }
+    },
+    {
+      "ok": true,
+      "name": "390 service-ai-assistants: initial fragment reaches the intended service",
+      "evidence": {
+        "scroll": 11866,
+        "stats": {
+          "progress": 0.669958,
+          "mode": "live",
+          "enhanced": true,
+          "activeIndex": 2,
+          "playing": true,
+          "paused": false,
+          "visible": true,
+          "navOpen": false,
+          "dialogOpen": false,
+          "framesPending": false,
+          "panels": [
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": true,
+              "hidden": false,
+              "loaded": true,
+              "playing": true,
+              "failed": false
+            },
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390 service-ai-assistants: initial fragment holds after hero layout settles",
+      "evidence": {
+        "before": {
+          "scroll": 11866,
+          "stats": {
+            "progress": 0.669958,
+            "mode": "live",
+            "enhanced": true,
+            "activeIndex": 2,
+            "playing": true,
+            "paused": false,
+            "visible": true,
+            "navOpen": false,
+            "dialogOpen": false,
+            "framesPending": false,
+            "panels": [
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": true,
+                "hidden": false,
+                "loaded": true,
+                "playing": true,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              }
+            ]
+          }
+        },
+        "after": {
+          "scroll": 11866,
+          "stats": {
+            "progress": 0.669958,
+            "mode": "live",
+            "enhanced": true,
+            "activeIndex": 2,
+            "playing": true,
+            "paused": false,
+            "visible": true,
+            "navOpen": false,
+            "dialogOpen": false,
+            "framesPending": false,
+            "panels": [
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": true,
+                "hidden": false,
+                "loaded": true,
+                "playing": true,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390 service-ai-assistants: current chapter reflects the fragment",
+      "evidence": "#service-ai-assistants"
+    },
+    {
+      "ok": true,
+      "name": "390 service-ai-assistants: keyboard chapter activation focuses its heading"
+    },
+    {
+      "ok": true,
+      "name": "390 service-ai-assistants: Tab from the heading reaches the service action"
+    },
+    {
+      "ok": true,
+      "name": "390 service-ai-assistants: compare scopes reaches preserved pricing"
+    },
+    {
+      "ok": true,
+      "name": "390 service-ai-assistants: pricing navigation suspends service films"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-ai-assistants: initial fragment reaches the intended service",
+      "evidence": {
+        "scroll": 13609,
+        "stats": {
+          "progress": 0.670085,
+          "mode": "live",
+          "enhanced": true,
+          "activeIndex": 2,
+          "playing": true,
+          "paused": false,
+          "visible": true,
+          "navOpen": false,
+          "dialogOpen": false,
+          "framesPending": false,
+          "panels": [
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": true,
+              "hidden": false,
+              "loaded": true,
+              "playing": true,
+              "failed": false
+            },
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440 service-ai-assistants: initial fragment holds after hero layout settles",
+      "evidence": {
+        "before": {
+          "scroll": 13609,
+          "stats": {
+            "progress": 0.670085,
+            "mode": "live",
+            "enhanced": true,
+            "activeIndex": 2,
+            "playing": true,
+            "paused": false,
+            "visible": true,
+            "navOpen": false,
+            "dialogOpen": false,
+            "framesPending": false,
+            "panels": [
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": true,
+                "hidden": false,
+                "loaded": true,
+                "playing": true,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              }
+            ]
+          }
+        },
+        "after": {
+          "scroll": 13609,
+          "stats": {
+            "progress": 0.670085,
+            "mode": "live",
+            "enhanced": true,
+            "activeIndex": 2,
+            "playing": true,
+            "paused": false,
+            "visible": true,
+            "navOpen": false,
+            "dialogOpen": false,
+            "framesPending": false,
+            "panels": [
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": true,
+                "hidden": false,
+                "loaded": true,
+                "playing": true,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440 service-ai-assistants: current chapter reflects the fragment",
+      "evidence": "#service-ai-assistants"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-ai-assistants: keyboard chapter activation focuses its heading"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-ai-assistants: Tab from the heading reaches the service action"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-ai-assistants: compare scopes reaches preserved pricing"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-ai-assistants: pricing navigation suspends service films"
+    },
+    {
+      "ok": true,
+      "name": "390 service-apps-portals: initial fragment reaches the intended service",
+      "evidence": {
+        "scroll": 12697,
+        "stats": {
+          "progress": 0.875093,
+          "mode": "live",
+          "enhanced": true,
+          "activeIndex": 3,
+          "playing": true,
+          "paused": false,
+          "visible": true,
+          "navOpen": false,
+          "dialogOpen": false,
+          "framesPending": false,
+          "panels": [
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": true,
+              "hidden": false,
+              "loaded": true,
+              "playing": true,
+              "failed": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390 service-apps-portals: initial fragment holds after hero layout settles",
+      "evidence": {
+        "before": {
+          "scroll": 12697,
+          "stats": {
+            "progress": 0.875093,
+            "mode": "live",
+            "enhanced": true,
+            "activeIndex": 3,
+            "playing": true,
+            "paused": false,
+            "visible": true,
+            "navOpen": false,
+            "dialogOpen": false,
+            "framesPending": false,
+            "panels": [
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": true,
+                "hidden": false,
+                "loaded": true,
+                "playing": true,
+                "failed": false
+              }
+            ]
+          }
+        },
+        "after": {
+          "scroll": 12697,
+          "stats": {
+            "progress": 0.875093,
+            "mode": "live",
+            "enhanced": true,
+            "activeIndex": 3,
+            "playing": true,
+            "paused": false,
+            "visible": true,
+            "navOpen": false,
+            "dialogOpen": false,
+            "framesPending": false,
+            "panels": [
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": true,
+                "hidden": false,
+                "loaded": true,
+                "playing": true,
+                "failed": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390 service-apps-portals: current chapter reflects the fragment",
+      "evidence": "#service-apps-portals"
+    },
+    {
+      "ok": true,
+      "name": "390 service-apps-portals: keyboard chapter activation focuses its heading"
+    },
+    {
+      "ok": true,
+      "name": "390 service-apps-portals: Tab from the heading reaches the service action"
+    },
+    {
+      "ok": true,
+      "name": "390 service-apps-portals: compare scopes reaches preserved pricing"
+    },
+    {
+      "ok": true,
+      "name": "390 service-apps-portals: pricing navigation suspends service films"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-apps-portals: initial fragment reaches the intended service",
+      "evidence": {
+        "scroll": 14568,
+        "stats": {
+          "progress": 0.875,
+          "mode": "live",
+          "enhanced": true,
+          "activeIndex": 3,
+          "playing": true,
+          "paused": false,
+          "visible": true,
+          "navOpen": false,
+          "dialogOpen": false,
+          "framesPending": false,
+          "panels": [
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": false,
+              "hidden": true,
+              "loaded": false,
+              "playing": false,
+              "failed": false
+            },
+            {
+              "active": true,
+              "hidden": false,
+              "loaded": true,
+              "playing": true,
+              "failed": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440 service-apps-portals: initial fragment holds after hero layout settles",
+      "evidence": {
+        "before": {
+          "scroll": 14568,
+          "stats": {
+            "progress": 0.875,
+            "mode": "live",
+            "enhanced": true,
+            "activeIndex": 3,
+            "playing": true,
+            "paused": false,
+            "visible": true,
+            "navOpen": false,
+            "dialogOpen": false,
+            "framesPending": false,
+            "panels": [
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": true,
+                "hidden": false,
+                "loaded": true,
+                "playing": true,
+                "failed": false
+              }
+            ]
+          }
+        },
+        "after": {
+          "scroll": 14568,
+          "stats": {
+            "progress": 0.875,
+            "mode": "live",
+            "enhanced": true,
+            "activeIndex": 3,
+            "playing": true,
+            "paused": false,
+            "visible": true,
+            "navOpen": false,
+            "dialogOpen": false,
+            "framesPending": false,
+            "panels": [
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": false,
+                "hidden": true,
+                "loaded": false,
+                "playing": false,
+                "failed": false
+              },
+              {
+                "active": true,
+                "hidden": false,
+                "loaded": true,
+                "playing": true,
+                "failed": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440 service-apps-portals: current chapter reflects the fragment",
+      "evidence": "#service-apps-portals"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-apps-portals: keyboard chapter activation focuses its heading"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-apps-portals: Tab from the heading reaches the service action"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-apps-portals: compare scopes reaches preserved pricing"
+    },
+    {
+      "ok": true,
+      "name": "1440 service-apps-portals: pricing navigation suspends service films"
+    },
+    {
+      "ok": true,
+      "name": "no page or console errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

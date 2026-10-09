@@ -264,3 +264,7 @@ agent/skills/website-to-video/
 /.astro/
 /.codex-staging/
 /.claude/launch.json
+
+# Packaged brand-kit archives duplicate committed folders (Drive is their backup)
+brand-assets/**/*.zip
+brand-assets/**/*.rar
