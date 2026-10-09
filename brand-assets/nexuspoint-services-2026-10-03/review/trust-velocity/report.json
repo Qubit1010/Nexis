@@ -1,0 +1,378 @@
+{
+  "target": "http://127.0.0.1:4323/",
+  "passed": 23,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "390: strip is visible and running before wheel tests",
+      "evidence": {
+        "progress": 1,
+        "phase": 667.8973323516948,
+        "travel": 736.1026676483025,
+        "velocity": 29.593492043998555,
+        "scrollVelocity": 5.088768815729323,
+        "direction": "right",
+        "lastScrollDelta": 245,
+        "stripLean": -0.010362586668866755,
+        "cardLean": -0.018840798390547305,
+        "groupWidth": 1404,
+        "visible": true,
+        "playing": true,
+        "paused": false,
+        "hovered": false,
+        "focused": false,
+        "mode": "live",
+        "enhanced": true,
+        "framesPending": true,
+        "navOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: scrolling down moves the company strip right",
+      "evidence": {
+        "from": 736.1026676483025,
+        "to": 843.5581412273835
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: downward scrolling accelerates the strip",
+      "evidence": {
+        "velocity": 198.2593185008952,
+        "scrollVelocity": 213.28888691447148
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: downward scroll creates visible strip and card lean",
+      "evidence": {
+        "progress": 1,
+        "phase": 629.7320231404369,
+        "travel": 774.2679768595592,
+        "velocity": 198.2593185008952,
+        "scrollVelocity": 213.28888691447148,
+        "direction": "right",
+        "lastScrollDelta": 5,
+        "stripLean": -0.17377160738381833,
+        "cardLean": -0.31594835304049357,
+        "groupWidth": 1404,
+        "visible": true,
+        "playing": true,
+        "paused": false,
+        "hovered": false,
+        "focused": false,
+        "mode": "live",
+        "enhanced": true,
+        "framesPending": true,
+        "navOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: scrolling up moves the company strip left",
+      "evidence": {
+        "from": 866.463796963201,
+        "to": 765.7894584490633
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: upward scrolling accelerates the strip",
+      "evidence": {
+        "velocity": -197.0516408699023,
+        "scrollVelocity": -193.04856384261484
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: strip and cards reverse their lean",
+      "evidence": {
+        "down": {
+          "progress": 1,
+          "phase": 629.7320231404369,
+          "travel": 774.2679768595592,
+          "velocity": 198.2593185008952,
+          "scrollVelocity": 213.28888691447148,
+          "direction": "right",
+          "lastScrollDelta": 5,
+          "stripLean": -0.17377160738381833,
+          "cardLean": -0.31594835304049357,
+          "groupWidth": 1404,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        },
+        "up": {
+          "progress": 1,
+          "phase": 571.7977166877977,
+          "travel": 832.2022833121976,
+          "velocity": -197.0516408699023,
+          "scrollVelocity": -193.04856384261484,
+          "direction": "left",
+          "lastScrollDelta": -4,
+          "stripLean": 0.17475358784968253,
+          "cardLean": 0.3177337960906228,
+          "groupWidth": 1404,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: momentum settles after input stops",
+      "evidence": {
+        "peak": -197.0516408699023,
+        "settled": -24.490404011806653
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: bidirectional wrapping leaves no empty strip",
+      "evidence": [
+        {
+          "x": -210.61911010742188,
+          "right": 5.40350341796875,
+          "width": 216.02261352539062
+        },
+        {
+          "x": 23.38092041015625,
+          "right": 239.40350341796875,
+          "width": 216.0225830078125
+        },
+        {
+          "x": 257.38092041015625,
+          "right": 473.403564453125,
+          "width": 216.02264404296875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "390: tilt causes no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: pause freezes the strip after velocity input",
+      "evidence": {
+        "from": 724.5839941429125,
+        "to": 724.5839941429125
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: strip is visible and running before wheel tests",
+      "evidence": {
+        "progress": 0,
+        "phase": 1178.8244216360063,
+        "travel": 544.3005783639926,
+        "velocity": 33.61492707757827,
+        "scrollVelocity": 7.785890346154327,
+        "direction": "right",
+        "lastScrollDelta": 0,
+        "stripLean": -0.015821354315965746,
+        "cardLean": -0.02876410357073165,
+        "groupWidth": 1723.125,
+        "visible": true,
+        "playing": true,
+        "paused": false,
+        "hovered": false,
+        "focused": false,
+        "mode": "live",
+        "enhanced": true,
+        "framesPending": true,
+        "navOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: scrolling down moves the company strip right",
+      "evidence": {
+        "from": 544.3005783639926,
+        "to": 651.7238235807265
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: downward scrolling accelerates the strip",
+      "evidence": {
+        "velocity": 193.40811087244637,
+        "scrollVelocity": 185.03998453348314
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: downward scroll creates visible strip and card lean",
+      "evidence": {
+        "progress": 0,
+        "phase": 1138.0024714263445,
+        "travel": 585.1225285736538,
+        "velocity": 193.40811087244637,
+        "scrollVelocity": 185.03998453348314,
+        "direction": "right",
+        "lastScrollDelta": 5,
+        "stripLean": -0.17044839339557602,
+        "cardLean": -0.30990601060134904,
+        "groupWidth": 1723.125,
+        "visible": true,
+        "playing": true,
+        "paused": false,
+        "hovered": false,
+        "focused": false,
+        "mode": "live",
+        "enhanced": true,
+        "framesPending": true,
+        "navOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: scrolling up moves the company strip left",
+      "evidence": {
+        "from": 678.9760024936992,
+        "to": 574.672811834519
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: upward scrolling accelerates the strip",
+      "evidence": {
+        "velocity": -181.87075788810782,
+        "scrollVelocity": -155.58727222513014
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: strip and cards reverse their lean",
+      "evidence": {
+        "down": {
+          "progress": 0,
+          "phase": 1138.0024714263445,
+          "travel": 585.1225285736538,
+          "velocity": 193.40811087244637,
+          "scrollVelocity": 185.03998453348314,
+          "direction": "right",
+          "lastScrollDelta": 5,
+          "stripLean": -0.17044839339557602,
+          "cardLean": -0.30990601060134904,
+          "groupWidth": 1723.125,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        },
+        "up": {
+          "progress": 0,
+          "phase": 1082.2267525584402,
+          "travel": 640.8982474415556,
+          "velocity": -181.87075788810782,
+          "scrollVelocity": -155.58727222513014,
+          "direction": "left",
+          "lastScrollDelta": -5,
+          "stripLean": 0.1631900068635226,
+          "cardLean": 0.29670910338899187,
+          "groupWidth": 1723.125,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: momentum settles after input stops",
+      "evidence": {
+        "peak": -181.87075788810782,
+        "settled": -23.457432665840305
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: bidirectional wrapping leaves no empty strip",
+      "evidence": [
+        {
+          "x": -40.30810546875,
+          "right": 218.89306640625,
+          "width": 259.201171875
+        },
+        {
+          "x": 246.87939453125,
+          "right": 506.08056640625,
+          "width": 259.201171875
+        },
+        {
+          "x": 534.06689453125,
+          "right": 793.26806640625,
+          "width": 259.201171875
+        },
+        {
+          "x": 821.25439453125,
+          "right": 1080.45556640625,
+          "width": 259.201171875
+        },
+        {
+          "x": 1108.44189453125,
+          "right": 1367.64306640625,
+          "width": 259.201171875
+        },
+        {
+          "x": 1395.62939453125,
+          "right": 1654.83056640625,
+          "width": 259.201171875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1440: tilt causes no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: pause freezes the strip after velocity input",
+      "evidence": {
+        "from": 533.4933456015744,
+        "to": 533.4933456015744
+      }
+    },
+    {
+      "ok": true,
+      "name": "no page or console errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

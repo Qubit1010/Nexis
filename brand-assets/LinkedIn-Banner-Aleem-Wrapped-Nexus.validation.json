@@ -1,0 +1,22 @@
+{
+  "creativeTool": "Built-in imagegen",
+  "master": "LinkedIn-Banner-Aleem-Wrapped-Nexus-Master.png",
+  "masterPixels": [
+    2048,
+    768
+  ],
+  "export": "LinkedIn-Banner-Aleem-Wrapped-Nexus.png",
+  "pixels": [
+    1584,
+    396
+  ],
+  "exportProcess": "Centre crop and resize only; no logo, typography or background retouching",
+  "crop": {
+    "left": 0,
+    "top": 128,
+    "width": 2048,
+    "height": 512
+  },
+  "platformSource": "https://www.linkedin.com/help/linkedin/answer/a568217",
+  "bytes": 678326
+}

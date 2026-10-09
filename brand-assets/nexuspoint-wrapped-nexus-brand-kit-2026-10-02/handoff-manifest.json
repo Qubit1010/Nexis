@@ -1,0 +1,631 @@
+{
+  "brand": "NexusPoint",
+  "identity": "Wrapped Nexus",
+  "date": "2026-10-02",
+  "hashAlgorithm": "SHA-256",
+  "files": [
+    {
+      "path": "brand-guide.html",
+      "bytes": 2203903,
+      "sha256": "3f290db44e912cfe1be6f80df2ae3386e95d300d595b132c663c216f5769525b"
+    },
+    {
+      "path": "brand-guide.md",
+      "bytes": 21283,
+      "sha256": "7b586c37de31db02ee23c2f14fe6078d95973cf285e1d34400e9a6851d1b31e9"
+    },
+    {
+      "path": "brand-guide.pdf",
+      "bytes": 1381625,
+      "sha256": "8dc24f104acd53a082d5e8dfc6f4604651cea5c25cf9ed56806386a5b1c7cdab"
+    },
+    {
+      "path": "brand-tokens.css",
+      "bytes": 2908,
+      "sha256": "c970f5417d1129bfe7b37394d9950f2cdd68c5526680425ba7ae3781b0bdb2b5"
+    },
+    {
+      "path": "brand-tokens.json",
+      "bytes": 3731,
+      "sha256": "c900e24b81c5954ce8a89172a944a05ed7141c83014e0fa5df8f9e25fc57fd18"
+    },
+    {
+      "path": "contrast-report.json",
+      "bytes": 4300,
+      "sha256": "8642230c179ea61886f99f6a32fc5db7e3fb0da970aee83802b8a5f2f3dbc072"
+    },
+    {
+      "path": "fonts/Gambetta-ITF-FFL-2.0.txt",
+      "bytes": 12734,
+      "sha256": "145e7fe2429a3336ba215c070ef722000e01348a3e1baaa127e871bb5012f554"
+    },
+    {
+      "path": "fonts/inter-300.woff2",
+      "bytes": 23916,
+      "sha256": "be0276550393a72b94d673505567dceba801511d5e1ca5a87793190dc5d5a6ca"
+    },
+    {
+      "path": "fonts/inter-400.woff2",
+      "bytes": 23664,
+      "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+    },
+    {
+      "path": "fonts/inter-500.woff2",
+      "bytes": 24272,
+      "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+    },
+    {
+      "path": "fonts/Inter-Bold.otf",
+      "bytes": 631880,
+      "sha256": "9fc6261e817d0b1b2bf1953d8799bb1c837d11aeebbf83ae352e7b4d6de6425d"
+    },
+    {
+      "path": "fonts/Inter-Medium.otf",
+      "bytes": 627988,
+      "sha256": "6c222ed2c3660524dd0c14fb745e00fee65c5361ab28f60fba6730bf4e648763"
+    },
+    {
+      "path": "fonts/Inter-OFL.txt",
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "path": "fonts/Inter-Regular.otf",
+      "bytes": 609600,
+      "sha256": "d4f2b9e148059a15f014cb0f0b8fea8cd11bfa447dd483bedf1b0adc0e2ba799"
+    },
+    {
+      "path": "fonts/Inter-SemiBold.otf",
+      "bytes": 629912,
+      "sha256": "0a4d30778fa2dc239368d90fd854b88b27e7ede737450da72686a90eca66f02c"
+    },
+    {
+      "path": "fonts/Inter-v4.1-OFL.txt",
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "path": "fonts/InterVariable-Italic.ttf",
+      "bytes": 910252,
+      "sha256": "d6f1f6a172d9e588438db9f986fd5cfad7b30f644374080a8a9d4d91e344586f"
+    },
+    {
+      "path": "fonts/InterVariable-Italic.woff2",
+      "bytes": 387976,
+      "sha256": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a"
+    },
+    {
+      "path": "fonts/InterVariable.ttf",
+      "bytes": 879708,
+      "sha256": "4989b125924991b90d05b2d16e0e388c48f7d5bb8b30539bbf9c755278d0ccaf"
+    },
+    {
+      "path": "fonts/InterVariable.woff2",
+      "bytes": 352240,
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    {
+      "path": "fonts/README.md",
+      "bytes": 5422,
+      "sha256": "a73b2282cf5987b26bda4811529f0ed21066f5b8bb4389879cb7c415f58254b7"
+    },
+    {
+      "path": "logos/favicons/favicon.ico",
+      "bytes": 14463,
+      "sha256": "8d63e2467d653d60749b2f6a6778abbbcfac5df81ff81a4c3055e98d2e00b15d"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-128.png",
+      "bytes": 3997,
+      "sha256": "a75133259b6ae5599fbc10002621ba5f01c0cd6fb1db6701fb6ae08075ce84ea"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-16.png",
+      "bytes": 548,
+      "sha256": "847820109f45744813a99dde198c07238f414a870e73073351134d4fd28d6892"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-180.png",
+      "bytes": 5884,
+      "sha256": "e8669b87745ee5a950e49e834d0504620f058c3df7cb7d5ed2575798ece0c5d0"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-192.png",
+      "bytes": 6405,
+      "sha256": "5521b72e0127530539051c9cab6429419e0de8307fe42d0f42f370d31eec6ae3"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-256.png",
+      "bytes": 9183,
+      "sha256": "52161ebe5cb27eace473903eb3e510ef39737cb4e8940d14b9855119f03d2172"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-32.png",
+      "bytes": 1071,
+      "sha256": "30c638912529d8e12e81ce2c2769bc8288e17d0d6d0043e0ad26e07b7c6c355e"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-48.png",
+      "bytes": 1568,
+      "sha256": "fbcd25213b1dd96a15b4396e448f9a5b0530727e1e557d9407249fb6f18266eb"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-512.png",
+      "bytes": 22402,
+      "sha256": "c8d0241b0061aa17aad3776d51c2a24dfafbdc53ef285f5d83f1d089473e68a6"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-64.png",
+      "bytes": 2007,
+      "sha256": "c8b53a849ae9abbe0a49143c303f5afa7dc86bf3e9202db96cea7e8869fe9974"
+    },
+    {
+      "path": "logos/geometry-and-method.json",
+      "bytes": 635,
+      "sha256": "f7547ddf8862c30b51a254dd1dce640a2047c5549119123c5d1ada23e66c05cb"
+    },
+    {
+      "path": "logos/nexuspoint-favicon.svg",
+      "bytes": 3614,
+      "sha256": "9dd2104f5093c2252a3734c2f2c11345ec169cbcc2df9f4c91975d410bca74d7"
+    },
+    {
+      "path": "logos/nexuspoint-outline-master.svg",
+      "bytes": 14252,
+      "sha256": "4c5618da18808330d5fc4d78d494cc5f8b2d7a2dfa9246f6e8c54ca800065b29"
+    },
+    {
+      "path": "logos/nexuspoint-primary-black.svg",
+      "bytes": 14300,
+      "sha256": "7df42a5bf8fd8a379d007d8f5532357f9bb2d9ad682bd5c04cd5fac203c6416b"
+    },
+    {
+      "path": "logos/nexuspoint-primary-dark.svg",
+      "bytes": 14300,
+      "sha256": "1f8965be2a487032056b40fe8045c7dcc78968ede4e2bde18d83d0389001873f"
+    },
+    {
+      "path": "logos/nexuspoint-primary-light.svg",
+      "bytes": 14300,
+      "sha256": "afaaad47fc0e20cef8c377b3a909a51e0eb589a705ef0e85cfa57a1b44cd3bdb"
+    },
+    {
+      "path": "logos/nexuspoint-primary-mono-black.svg",
+      "bytes": 14252,
+      "sha256": "117e6439b5928b6a811f4264e04c928ec7626bc884a7d16f4fd24b6d7d7ca20a"
+    },
+    {
+      "path": "logos/nexuspoint-primary-mono-navy.svg",
+      "bytes": 14252,
+      "sha256": "456fc16bcb85640e9a22cf718d8abeccff79c59f13029eabe34bf4bfe721e2f6"
+    },
+    {
+      "path": "logos/nexuspoint-primary-mono-white.svg",
+      "bytes": 14252,
+      "sha256": "e2d01040d7760f3d5df1a22b8fb65fae00465a8d933b0ae3599d0f617bd9a286"
+    },
+    {
+      "path": "logos/nexuspoint-primary-transparent-navy.svg",
+      "bytes": 14252,
+      "sha256": "1d69a2dd8d91901668d9467f29110eb151cad150a4d2caf1ced6117179b8209e"
+    },
+    {
+      "path": "logos/nexuspoint-primary-transparent-white.svg",
+      "bytes": 14252,
+      "sha256": "4c5618da18808330d5fc4d78d494cc5f8b2d7a2dfa9246f6e8c54ca800065b29"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-black.svg",
+      "bytes": 14297,
+      "sha256": "cb80e63ee15fb47e4b5d8be765d90cfa5d9c9383443aacf3dee616de93d43094"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-dark.svg",
+      "bytes": 14297,
+      "sha256": "c2d174c334af6358092e4ce2afd7abe70dc73077a0150d4b454b290403c27ac4"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-light.svg",
+      "bytes": 14297,
+      "sha256": "7182fd4134e5a15964a3e5b9589d10e819f1ce4d07efb7b3e316595da945b97a"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-mono-black.svg",
+      "bytes": 14250,
+      "sha256": "8860ca6d29a77a7a86a44104103d00efec28976fb184e7ec28c6d0dd3f7bad75"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-mono-navy.svg",
+      "bytes": 14250,
+      "sha256": "f7a85b002b1836e34474bfa41facc65256eb44f4f05a624bca219e19c2bda522"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-mono-white.svg",
+      "bytes": 14250,
+      "sha256": "026c1d03d74e8ac8160e9bead7f9720e40204b94b8300370a0f1fbe4ec0a6a84"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-transparent-navy.svg",
+      "bytes": 14250,
+      "sha256": "67ba97232b0f24f0545f75dede75b65aae3fc84805c155a99eaff41256bed2ef"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-transparent-white.svg",
+      "bytes": 14250,
+      "sha256": "99763eb0dd5d18b4afec6b0187250aed2de06ee97417ef395119e58801076a73"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-black.svg",
+      "bytes": 3578,
+      "sha256": "47c2382cf428d4e2d60d9b8972341c0eab64c553e9b4f8d3561d6fcc6e91a436"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-dark.svg",
+      "bytes": 3578,
+      "sha256": "646654e8c68fd5efc77ecb34eef34dc71bb8a241e5a431132d88536a5583eac8"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-light.svg",
+      "bytes": 3578,
+      "sha256": "196c5b6a2589ee2ca42e524cb5e5604e8b7aa8cb32d6ee25596d5ce818c70067"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-mono-black.svg",
+      "bytes": 3531,
+      "sha256": "d2b6b4d8dca69d0f0a0d551812ea82fb6798838a7843b93e03a78208d0d37ae4"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-mono-navy.svg",
+      "bytes": 3531,
+      "sha256": "04af9b120204f23c28ad2e3e4673834e2b523d0089e09af76906aa344e9d201d"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-mono-white.svg",
+      "bytes": 3531,
+      "sha256": "6597064c79e8c3cf59cabd26b83ffcb30b344eaa5dbaf37c2c11b85073421ba5"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-transparent-navy.svg",
+      "bytes": 3531,
+      "sha256": "127525eb803a1a01b0e65c0033d5bffc8cf398d1d2a0a528210f9c09d4ec1b1b"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-transparent-white.svg",
+      "bytes": 3531,
+      "sha256": "5f5dfec35872950f6b16a65e39b4067c9a2ecac672efba0c092b6aa3ccfa2378"
+    },
+    {
+      "path": "logos/nexuspoint-wordmark-navy.svg",
+      "bytes": 11010,
+      "sha256": "b1e312a22d59485613070945fa341958620b70e4f5d463c30e0dcc45243c47f3"
+    },
+    {
+      "path": "logos/nexuspoint-wordmark-white.svg",
+      "bytes": 11010,
+      "sha256": "f24cd9dc7a8bb649125efbf151681dfd8a8912a3918ea0eefdc456c309636ea4"
+    },
+    {
+      "path": "logos/png/favicon-size-review.png",
+      "bytes": 10869,
+      "sha256": "f9e2e164715c5c1ddd98c588d1864d8727f0607eef38f124550b495df0f0b8dd"
+    },
+    {
+      "path": "logos/png/nexuspoint-favicon.png",
+      "bytes": 292577,
+      "sha256": "2e9822cb963a9e6f838e434ac97e592a16ffaa2b579761ebd2a50481103b94d3"
+    },
+    {
+      "path": "logos/png/nexuspoint-outline-master.png",
+      "bytes": 57661,
+      "sha256": "f84450f0cff20dc83d54099d09c95ff38e15efc1d4108abe52137cdeee275c6b"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-black.png",
+      "bytes": 91333,
+      "sha256": "6fe1a73fe27582dc8b721542f389b7e5f03b56b9111ddfb88716a582da820ac5"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-dark.png",
+      "bytes": 91349,
+      "sha256": "243f27e4857ee566c92e5f886921c0fb1e3c7fbe6b5793c52f22c5e0c8694459"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-light.png",
+      "bytes": 79097,
+      "sha256": "1db2b8949de35e88b31b0680005b4693f1eba8af9e8b587e97a3a5fa2c5217f1"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-mono-black.png",
+      "bytes": 59131,
+      "sha256": "90d17c718d9a29f25fc3b029b1a9538bb9e5a10a4ebff2051028f367c8e96fff"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-mono-navy.png",
+      "bytes": 70162,
+      "sha256": "23bb0b8504e53c205dd8ea169b01cab08618cf17c2ca8110c3c0099e01ddd5d2"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-mono-white.png",
+      "bytes": 56084,
+      "sha256": "e159d8229312ca21690139e588ff8953b5edeaed690a627e0c9001554c6a79ae"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-transparent-navy.png",
+      "bytes": 71156,
+      "sha256": "c0d33d4633d3f57e7c76db0d72858bd669f1dba006558a3f78cebf096ce5e5ce"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-transparent-white.png",
+      "bytes": 57661,
+      "sha256": "f84450f0cff20dc83d54099d09c95ff38e15efc1d4108abe52137cdeee275c6b"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-black.png",
+      "bytes": 86108,
+      "sha256": "70b89056fd7d7598edaf8e19ba2e3354882d5e757c52ba612b2d1927ce4021b0"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-dark.png",
+      "bytes": 86441,
+      "sha256": "17bb4e7401246fe2862c9591d74d5d06ec9f24d39e1a25cf7c98643501412db3"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-light.png",
+      "bytes": 72213,
+      "sha256": "955735a2d9721ed3b9fa724cc455a955d3665cab6d414cda5058f12990334a79"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-mono-black.png",
+      "bytes": 54088,
+      "sha256": "6813482a35be6a940d07d1b280cf2ac38b067db650bb968a23ae0fa968674492"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-mono-navy.png",
+      "bytes": 63667,
+      "sha256": "d2263653157d4e9ee648ff4edb3f5358c0f46923b4010e3ef68a93aa5b8161f7"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-mono-white.png",
+      "bytes": 50748,
+      "sha256": "60a18d28c6df10c3f38e552939efedeab33dcb57f2af020161cea861f3b7059a"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-transparent-navy.png",
+      "bytes": 64390,
+      "sha256": "e94c046eac076bbeaa8067f3c52a5526ecbdd93cca02ef617f4c3a4abb8a039c"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-transparent-white.png",
+      "bytes": 51906,
+      "sha256": "5d2584a94eee8ae35a03d3df54fb23a2bd0eccbf19ac420bb3624a721a589a2a"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-black.png",
+      "bytes": 70113,
+      "sha256": "a95bf94e225ebc4010f8682dc1b66a11173a03bfde9d6565631ea23522912a68"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-dark.png",
+      "bytes": 69901,
+      "sha256": "873115329ab27adee7bc28737c1e1a5e69775530dbaa14aa21c8828a913bad1d"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-light.png",
+      "bytes": 79487,
+      "sha256": "70620c0615e521761fdb2661aa0b09e60c1aad9ff5008b93846fec87e006a8db"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-mono-black.png",
+      "bytes": 61551,
+      "sha256": "1fb95245b160bb9bd2b140e53c44c171d65aabc6b8602f7c58c460907885ec53"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-mono-navy.png",
+      "bytes": 71020,
+      "sha256": "74b3a59032e4b84eac52f4c3553c2d4819ca3d3b184ca3b99124715000146a19"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-mono-white.png",
+      "bytes": 47175,
+      "sha256": "af004b525873f728ec35b280d7ca78af050867a7d4882f9406ceb7a22e742b36"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-native-scale-qa.png",
+      "bytes": 9069,
+      "sha256": "3a565afcfb945dfa807bdf221539c942b75c0f0f68131ab3701d8157c6c33dc8"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-transparent-navy.png",
+      "bytes": 72489,
+      "sha256": "f735e1d1f9ca88ad737cac080ad0a194623ce55bcf7ab51b5c0b5a5fa374e616"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-transparent-white.png",
+      "bytes": 50738,
+      "sha256": "917cd962a40ad6e4bd3ee6bf72ca5b7f026c94ac6b04ebc692cd7a78d81edd89"
+    },
+    {
+      "path": "logos/png/nexuspoint-wordmark-native-scale-qa.png",
+      "bytes": 15204,
+      "sha256": "e63d32990e185e7d775461086f07af1d8a88af3bf549417515c83de8b5133858"
+    },
+    {
+      "path": "logos/png/nexuspoint-wordmark-navy.png",
+      "bytes": 66389,
+      "sha256": "249a33ecbed9711b15749ede2e011306c18b1ee652137d55722658ce58a906e0"
+    },
+    {
+      "path": "logos/png/nexuspoint-wordmark-white.png",
+      "bytes": 52440,
+      "sha256": "7cee37ebab948646e1c5e2584c427aca0c680126281291554b502869132667f8"
+    },
+    {
+      "path": "logos/README.md",
+      "bytes": 3701,
+      "sha256": "1cba384af308e56b23e05d05e11478b79c7d2287cb1ecb8b039db95ec35dc074"
+    },
+    {
+      "path": "logos/reference/approved-wrapped-nexus-original.png",
+      "bytes": 903935,
+      "sha256": "239041b0e4cabcedd8bb4e8ba9203ca59ec2cd0708352bc568d68bc9b0eed84f"
+    },
+    {
+      "path": "logos/validation-report.json",
+      "bytes": 1466,
+      "sha256": "37483362b259942fa6a85af53d262c78d9b1dd4ce35b66472ac4770f6bd21fe7"
+    },
+    {
+      "path": "previews/wrapped-nexus-blue-edit.png",
+      "bytes": 1054472,
+      "sha256": "02d9d55b1511b28f6924ba433f91e0e396e8390cae3efcf1e4bd5684c33e36d8"
+    },
+    {
+      "path": "qa/handoff-validation.json",
+      "bytes": 1851,
+      "sha256": "7f902a28664555e585690787d36d743d1ade75da57d7b7f921e1cd13617af232"
+    },
+    {
+      "path": "qa/pdf-validation.json",
+      "bytes": 2269,
+      "sha256": "b1c7499ff61a03cf9e82161b072aac0547dee97daf4b369e547eec88b5fb49e4"
+    },
+    {
+      "path": "qa/templates/validation-report.json",
+      "bytes": 1618,
+      "sha256": "bf58f0675312e5a3ec74c360899dcdf578dbdcc972fa1b664a638c3e187186ea"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5409,
+      "sha256": "20a3ad333e031808f9998ae216f9d15dd59d6191b86de27e40472869ba1db1d6"
+    },
+    {
+      "path": "scripts/build-brand-guide.cjs",
+      "bytes": 40102,
+      "sha256": "f838f47ec6ab7da3c4109b99b49ecce72c11eff5905099d716b0b473d8359d82"
+    },
+    {
+      "path": "scripts/build-handoff-assets.py",
+      "bytes": 12649,
+      "sha256": "e8562b19e92d738441a45ca7e3fa11dc83ffbda5125fff6c4a6a1dc4664aa9c0"
+    },
+    {
+      "path": "scripts/build-logo-assets.cjs",
+      "bytes": 3127,
+      "sha256": "0b291ef7a227ed9be6e705d87fee1e91c763d93114d1d0fefd3e7e81466227f5"
+    },
+    {
+      "path": "scripts/build-logo-assets.py",
+      "bytes": 11568,
+      "sha256": "8bfa5dfb4ef72f868885aef037c26825461eb529544f7e45812e465e7ca8a1df"
+    },
+    {
+      "path": "scripts/package-brand-kit.py",
+      "bytes": 6775,
+      "sha256": "e48a4193e39cc5188239372910e8bc6973a4ea22431db1383ddef3f0c8003158"
+    },
+    {
+      "path": "scripts/validate-handoff.cjs",
+      "bytes": 3377,
+      "sha256": "6b08544cf931a84833562720eaaad00a60c38815f9514edc66912c98394a8666"
+    },
+    {
+      "path": "sources/about.D7EEYB4O.css",
+      "bytes": 58229,
+      "sha256": "0c3eb20ca866af63d3d530484fa12207a959c7ed0f02afd48345ca60cdb06299"
+    },
+    {
+      "path": "sources/blue-dot-edit.json",
+      "bytes": 489,
+      "sha256": "de1210bd4ae64920feb121dc080f63cb9e903d2bab07f7699a0408a2272b667b"
+    },
+    {
+      "path": "sources/build_extracted_style.py",
+      "bytes": 12928,
+      "sha256": "7c6a30556d547c5be1d7d3f7bda45f3799db1db314b65a434d5d4e26c37d33e1"
+    },
+    {
+      "path": "sources/extracted-style.json",
+      "bytes": 29432,
+      "sha256": "6a3ba9b3626de94c8aef880d7b66e94fa2c5f607a3d616a2eab39b51ba80eac5"
+    },
+    {
+      "path": "sources/fontshare-licenses.html",
+      "bytes": 1744,
+      "sha256": "2296ba8f284280e034d2f8952d308a0961e5f41074893ff123b3bd912f040573"
+    },
+    {
+      "path": "sources/index.DcaP5fwH.css",
+      "bytes": 20721,
+      "sha256": "d93238c0976b15220013b3cfbe8545784ee52e7603355c5b9a1798cc65d26ee2"
+    },
+    {
+      "path": "sources/inter-official.css",
+      "bytes": 11497,
+      "sha256": "46d01c7807f64a24c1b2853b756ef15f3a2facdf4a9f066eaf5d39c0c9935441"
+    },
+    {
+      "path": "sources/mokoto-official.html",
+      "bytes": 1112722,
+      "sha256": "01bab1ed20c5e149ef0d65b4fc9c95f2a3b1006c73dce59882f6566353afc88a"
+    },
+    {
+      "path": "sources/portfolio-live.html",
+      "bytes": 67500,
+      "sha256": "7226806811c360fb296aa71d8f251f61a4de3251425ef14e94f75a6f5bce9482"
+    },
+    {
+      "path": "sources/README.md",
+      "bytes": 2627,
+      "sha256": "d18d1b41c9b38394fd4f7b03dd6c6652d16d40929d042e6f10480e4fe4f81c77"
+    },
+    {
+      "path": "sources/typodermic-license.html",
+      "bytes": 81727,
+      "sha256": "081b1bf382346edddffb025692366037943f30fda69aa754a225306bebaa6863"
+    },
+    {
+      "path": "templates/components.html",
+      "bytes": 3133,
+      "sha256": "85bfcc8f37bacd52e2165cc1b2040a59d9a6e449f513998aa68beb7de625d167"
+    },
+    {
+      "path": "templates/email-signature.html",
+      "bytes": 1991,
+      "sha256": "5b1e616e376c178f174d6f501ca4c49fa750aaa90c329f323827b458e03b6647"
+    },
+    {
+      "path": "templates/proposal-cover.pdf",
+      "bytes": 142077,
+      "sha256": "95675e63ef4cf168cee077eb266777c3df33965e3a96e2b432739bee64c0c5e7"
+    },
+    {
+      "path": "templates/proposal-cover.svg",
+      "bytes": 485577,
+      "sha256": "d81122b2ab857dc2797ad23f8b5ca421369ac9228cf670d76fac64612946a39a"
+    },
+    {
+      "path": "templates/README.md",
+      "bytes": 1044,
+      "sha256": "4a2151725a1e4e90f2bda355288a129d91483e438dc355d6b1b38b1132e656de"
+    },
+    {
+      "path": "templates/social-cover.png",
+      "bytes": 35527,
+      "sha256": "98696286523deb95578d7c2c432dab25b6f9e706756296ba6dbf537f00f68f06"
+    },
+    {
+      "path": "templates/social-cover.svg",
+      "bytes": 485015,
+      "sha256": "32e7b7ed0268aad4b31902b072b89b42d5ccd816b316ef89996adeb329f6d4f2"
+    }
+  ],
+  "excluded": [
+    "fonts/portfolio-local-use/**",
+    "sources/private-font-reference/**",
+    "sources/Inter-4.1-official.zip",
+    "qa image renders",
+    "__pycache__"
+  ],
+  "note": "Manifest does not hash itself or package-validation.json."
+}

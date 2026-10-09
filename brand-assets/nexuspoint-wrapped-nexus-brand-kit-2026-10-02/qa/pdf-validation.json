@@ -1,0 +1,126 @@
+{
+  "pageCount": 12,
+  "fontCheck": true,
+  "fontLoaded": [
+    {
+      "family": "Inter",
+      "status": "loaded",
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "status": "loaded",
+      "style": "italic"
+    },
+    {
+      "family": "Inter",
+      "status": "loaded",
+      "style": "normal"
+    }
+  ],
+  "images": [
+    {
+      "alt": "16px favicon",
+      "loaded": true
+    },
+    {
+      "alt": "32px favicon",
+      "loaded": true
+    },
+    {
+      "alt": "64px favicon",
+      "loaded": true
+    },
+    {
+      "alt": "NexusPoint",
+      "loaded": true
+    }
+  ],
+  "missingApplicationAssets": 0,
+  "pageOverflow": [
+    {
+      "page": 1,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 2,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 3,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 4,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 5,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 6,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 7,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 8,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 9,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 10,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 11,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    },
+    {
+      "page": 12,
+      "scrollHeight": 794,
+      "clientHeight": 794,
+      "offPage": []
+    }
+  ],
+  "allSVGs": 11,
+  "hiddenMissingImages": 0,
+  "errors": [],
+  "status": "rendered; visual review required",
+  "htmlSelfContained": true,
+  "embeddedFontFamilies": [
+    "Inter"
+  ],
+  "pageSize": "A4 landscape 297×210mm",
+  "sourceDate": "2026-10-02",
+  "markdownSHA256": "7b586c37de31db02ee23c2f14fe6078d95973cf285e1d34400e9a6851d1b31e9",
+  "pdfBytes": 1381625
+}

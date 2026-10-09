@@ -1,0 +1,652 @@
+{
+  "status": "complete",
+  "passed": 72,
+  "failed": 1,
+  "target": "http://127.0.0.1:4323/",
+  "rows": [
+    {
+      "ok": true,
+      "name": "375: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "375: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "375: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "375: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "375: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "375: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "375: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.032895,
+        "after": 0.564145
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.032895,
+        "reverse": 0.032895
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: strip moves continuously when visible",
+      "evidence": {
+        "before": {
+          "progress": 1,
+          "phase": 1332.2910971543997,
+          "travel": 71.7089028456009,
+          "velocity": 87.87324901661177,
+          "scrollVelocity": 44.187511233657425,
+          "direction": "right",
+          "lastScrollDelta": 582,
+          "stripLean": -0.08843197065403618,
+          "cardLean": -0.1606791799487375,
+          "groupWidth": 1404,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        },
+        "after": {
+          "progress": 1,
+          "phase": 1298.1495802821055,
+          "travel": 105.85041971789488,
+          "velocity": 28.36169120225177,
+          "scrollVelocity": 4.263349423980793,
+          "direction": "right",
+          "lastScrollDelta": 582,
+          "stripLean": -0.008682256208161643,
+          "cardLean": -0.01578520417162212,
+          "groupWidth": 1404,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "375: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 140.98492431640625,
+        "y": 198.51995849609375,
+        "width": 216.0301513671875,
+        "height": 216.04522705078125
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "375: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "375: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "375: conversation action reaches contact",
+      "evidence": 93.15625
+    },
+    {
+      "ok": false,
+      "name": "375: offscreen strip stops rendering",
+      "evidence": {
+        "progress": 1,
+        "phase": 1396.2178925252206,
+        "travel": 1148.3593045070893,
+        "velocity": 22.000000010030593,
+        "scrollVelocity": 6.721977274670406e-9,
+        "direction": "right",
+        "lastScrollDelta": 1,
+        "stripLean": -1.370787091740536e-11,
+        "cardLean": -2.4923401668009625e-11,
+        "groupWidth": 1404,
+        "visible": true,
+        "playing": true,
+        "paused": false,
+        "hovered": false,
+        "focused": false,
+        "mode": "live",
+        "enhanced": true,
+        "framesPending": true,
+        "navOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "768: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "768: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "768: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "768: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "768: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "768: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.029586,
+        "after": 0.563609
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.029586,
+        "reverse": 0.029586
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: strip moves continuously when visible",
+      "evidence": {
+        "before": {
+          "progress": 1,
+          "phase": 1552.2576176244374,
+          "travel": 55.74238237556573,
+          "velocity": 102.13461663339187,
+          "scrollVelocity": 54.32007211183505,
+          "direction": "right",
+          "lastScrollDelta": 494,
+          "stripLean": -0.10703977188647688,
+          "cardLean": -0.19445945395512862,
+          "groupWidth": 1608,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        },
+        "after": {
+          "progress": 1,
+          "phase": 1514.333340668346,
+          "travel": 93.66665933165916,
+          "velocity": 29.759203586515284,
+          "scrollVelocity": 5.239280257016787,
+          "direction": "right",
+          "lastScrollDelta": 494,
+          "stripLean": -0.0105815373826476,
+          "cardLean": -0.019238092172188616,
+          "groupWidth": 1608,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "768: a wrapped card is available for inspection",
+      "evidence": {
+        "x": 220.4620361328125,
+        "y": 319.7642822265625,
+        "left": 100.4432373046875,
+        "right": 340.4808349609375,
+        "top": 199.73495483398438,
+        "bottom": 439.7936096191406,
+        "duplicate": true
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: hovering pauses the strip for inspection"
+    },
+    {
+      "ok": true,
+      "name": "768: trusted-by cue follows inspection"
+    },
+    {
+      "ok": true,
+      "name": "768: visible duplicate links work without moving focus into the hidden copy"
+    },
+    {
+      "ok": true,
+      "name": "768: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 499.6048278808594,
+        "y": 198.7093505859375,
+        "width": 240.79037475585938,
+        "height": 241.22457885742188
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "768: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "768: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "768: conversation action reaches contact",
+      "evidence": 93.5625
+    },
+    {
+      "ok": true,
+      "name": "768: offscreen strip stops rendering",
+      "evidence": {
+        "progress": 1,
+        "phase": 887.0470436869791,
+        "travel": 565.5770993466892,
+        "velocity": -431.33886688530276,
+        "scrollVelocity": -886.8830580236024,
+        "direction": "left",
+        "lastScrollDelta": 1,
+        "stripLean": 0.3695843706819897,
+        "cardLean": 0.6719993848733028,
+        "groupWidth": 1608,
+        "visible": false,
+        "playing": false,
+        "paused": false,
+        "hovered": false,
+        "focused": false,
+        "mode": "live",
+        "enhanced": true,
+        "framesPending": false,
+        "navOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "375: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "375: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "375: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "375: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "375: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "375: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.032895,
+        "after": 0.564145
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.032895,
+        "reverse": 0.032895
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: strip moves continuously when visible",
+      "evidence": {
+        "before": {
+          "progress": 1,
+          "phase": 1309.2115580497912,
+          "travel": 94.78844195021198,
+          "velocity": 86.16142072218014,
+          "scrollVelocity": 43.03400361697826,
+          "direction": "right",
+          "lastScrollDelta": 582,
+          "stripLean": -0.08620426253704158,
+          "cardLean": -0.15663416139995223,
+          "groupWidth": 1404,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        },
+        "after": {
+          "progress": 1,
+          "phase": 1275.9985667895007,
+          "travel": 128.00143321050234,
+          "velocity": 28.540831331307274,
+          "scrollVelocity": 4.383278834101194,
+          "direction": "right",
+          "lastScrollDelta": 582,
+          "stripLean": -0.008926996230355836,
+          "cardLean": -0.016230138629255764,
+          "groupWidth": 1404,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "375: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 140.98492431640625,
+        "y": 198.51995849609375,
+        "width": 216.0301513671875,
+        "height": 216.04522705078125
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "375: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "375: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "375: conversation action reaches contact",
+      "evidence": 93.15625
+    },
+    {
+      "ok": true,
+      "name": "375: offscreen strip stops rendering",
+      "evidence": {
+        "progress": 1,
+        "phase": 1021.8122184747754,
+        "travel": 141.3630690702858,
+        "velocity": 149.37780999289757,
+        "scrollVelocity": 1620.317961915461,
+        "direction": "right",
+        "lastScrollDelta": 1,
+        "stripLean": -0.07495575298045926,
+        "cardLean": -0.12615691110897853,
+        "groupWidth": 1404,
+        "visible": false,
+        "playing": false,
+        "paused": false,
+        "hovered": false,
+        "focused": false,
+        "mode": "live",
+        "enhanced": true,
+        "framesPending": false,
+        "navOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "768: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "768: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "768: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "768: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "768: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "768: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.029586,
+        "after": 0.563609
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.029586,
+        "reverse": 0.029586
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: strip moves continuously when visible",
+      "evidence": {
+        "before": {
+          "progress": 1,
+          "phase": 1548.4405817710995,
+          "travel": 59.55941822890084,
+          "velocity": 85.46213992204584,
+          "scrollVelocity": 43.03400361697846,
+          "direction": "right",
+          "lastScrollDelta": 494,
+          "stripLean": -0.0852276884687195,
+          "cardLean": -0.15486760329811552,
+          "groupWidth": 1608,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        },
+        "after": {
+          "progress": 1,
+          "phase": 1515.7946480349428,
+          "travel": 92.20535196505647,
+          "velocity": 28.670064418382598,
+          "scrollVelocity": 4.5007707032325595,
+          "direction": "right",
+          "lastScrollDelta": 494,
+          "stripLean": -0.009096546815337411,
+          "cardLean": -0.016538440343772717,
+          "groupWidth": 1608,
+          "visible": true,
+          "playing": true,
+          "paused": false,
+          "hovered": false,
+          "focused": false,
+          "mode": "live",
+          "enhanced": true,
+          "framesPending": true,
+          "navOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "768: a wrapped card is available for inspection",
+      "evidence": {
+        "x": 219.0225830078125,
+        "y": 319.76151275634766,
+        "left": 99.0079345703125,
+        "right": 339.0372314453125,
+        "top": 199.7384796142578,
+        "bottom": 439.7845458984375,
+        "duplicate": true
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: hovering pauses the strip for inspection"
+    },
+    {
+      "ok": true,
+      "name": "768: trusted-by cue follows inspection"
+    },
+    {
+      "ok": true,
+      "name": "768: visible duplicate links work without moving focus into the hidden copy"
+    },
+    {
+      "ok": true,
+      "name": "768: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 499.57977294921875,
+        "y": 198.64089965820312,
+        "width": 240.8404541015625,
+        "height": 241.30377197265625
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "768: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "768: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "768: conversation action reaches contact",
+      "evidence": 93.5625
+    },
+    {
+      "ok": true,
+      "name": "768: offscreen strip stops rendering",
+      "evidence": {
+        "progress": 1,
+        "phase": 893.2996528961094,
+        "travel": 564.1881673933713,
+        "velocity": -386.9424554367975,
+        "scrollVelocity": -898.8847679852423,
+        "direction": "left",
+        "lastScrollDelta": 1,
+        "stripLean": 0.336063157708461,
+        "cardLean": 0.6110409382389941,
+        "groupWidth": 1608,
+        "visible": false,
+        "playing": false,
+        "paused": false,
+        "hovered": false,
+        "focused": false,
+        "mode": "live",
+        "enhanced": true,
+        "framesPending": false,
+        "navOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "no page or console errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,126 @@
+{
+  "target": "http://127.0.0.1:4323/",
+  "injectedFailure": "GSAP module requests intentionally aborted",
+  "passed": 20,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "390: failed animation import removes sticky distance"
+    },
+    {
+      "ok": true,
+      "name": "390: failed animation import keeps all service information accessible"
+    },
+    {
+      "ok": true,
+      "name": "390: inactive film control is hidden"
+    },
+    {
+      "ok": true,
+      "name": "390: initial AI fragment still reaches its static chapter",
+      "evidence": 88.265625
+    },
+    {
+      "ok": true,
+      "name": "390: static service-websites chapter link works"
+    },
+    {
+      "ok": true,
+      "name": "390: static service-automations chapter link works"
+    },
+    {
+      "ok": true,
+      "name": "390: static service-apps-portals chapter link works"
+    },
+    {
+      "ok": true,
+      "name": "390: static contact action reaches a heading clear of the header",
+      "evidence": {
+        "section": 0.109375,
+        "heading": 123.42594909667969,
+        "header": 77
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: import failure causes no horizontal overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: failed animation import removes sticky distance"
+    },
+    {
+      "ok": true,
+      "name": "1440: failed animation import keeps all service information accessible"
+    },
+    {
+      "ok": true,
+      "name": "1440: inactive film control is hidden"
+    },
+    {
+      "ok": true,
+      "name": "1440: initial AI fragment still reaches its static chapter",
+      "evidence": 88.4375
+    },
+    {
+      "ok": true,
+      "name": "1440: static service-websites chapter link works"
+    },
+    {
+      "ok": true,
+      "name": "1440: static service-automations chapter link works"
+    },
+    {
+      "ok": true,
+      "name": "1440: static service-apps-portals chapter link works"
+    },
+    {
+      "ok": true,
+      "name": "1440: static contact action reaches a heading clear of the header",
+      "evidence": {
+        "section": -0.453125,
+        "heading": 186.9375,
+        "header": 93.0625
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: import failure causes no horizontal overflow"
+    },
+    {
+      "ok": true,
+      "name": "test actually blocked the animation modules",
+      "evidence": [
+        "http://127.0.0.1:4323/_astro/gsap.DLHyXJrb.js",
+        "http://127.0.0.1:4323/_astro/ScrollTrigger.CIzi40EK.js",
+        "http://127.0.0.1:4323/_astro/gsap.DLHyXJrb.js",
+        "http://127.0.0.1:4323/_astro/ScrollTrigger.CIzi40EK.js"
+      ]
+    },
+    {
+      "ok": true,
+      "name": "no uncaught page errors despite forced module failure",
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "expectedResourceConsoleErrors": [
+    {
+      "width": 390,
+      "error": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "width": 390,
+      "error": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "width": 1440,
+      "error": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "width": 1440,
+      "error": "Failed to load resource: net::ERR_FAILED"
+    }
+  ]
+}

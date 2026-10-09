@@ -1,0 +1,97 @@
+{
+  "accent": "#02A1E1",
+  "nativeLogoSVGs": 28,
+  "logoPNGExports": 31,
+  "brand-guide.pdf": {
+    "pages": 12,
+    "pageSizesPoints": [
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ],
+      [
+        841.92,
+        594.96
+      ]
+    ],
+    "textCharacters": [
+      335,
+      758,
+      613,
+      654,
+      768,
+      904,
+      1326,
+      906,
+      899,
+      986,
+      1445,
+      1700
+    ]
+  },
+  "templates/proposal-cover.pdf": {
+    "pages": 1,
+    "pageSizesPoints": [
+      [
+        594.96,
+        841.92
+      ]
+    ],
+    "textCharacters": [
+      157
+    ]
+  },
+  "actualPDFPagesRendered": 12,
+  "browserLayout": "12 pages, no clipping or missing artwork; bundled Inter loaded",
+  "templateRenders": 5,
+  "fontHandoff": "Inter only; OFL notices present",
+  "status": "passed automated validation; all 12 actual PDF pages visually reviewed on 2026-10-02",
+  "visualReview": "Actual PDF contact sheet plus full cover, palette, typography, applications, spacing and contrast pages inspected. No clipping, missing artwork or unreadable primary information found.",
+  "sharedZIPExclusions": [
+    "fonts/portfolio-local-use/**",
+    "sources/private-font-reference/**",
+    "sources/Inter-4.1-official.zip",
+    "qa image renders",
+    "__pycache__"
+  ]
+}

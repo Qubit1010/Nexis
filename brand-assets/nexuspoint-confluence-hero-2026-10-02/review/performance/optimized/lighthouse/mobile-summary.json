@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:4323/",
+  "form": "mobile",
+  "runs": 3,
+  "summary": {
+    "performance": 69,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100,
+    "lcpMs": 1961,
+    "cls": 0,
+    "tbtMs": 3504
+  },
+  "rows": [
+    {
+      "performance": 67,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1981,
+      "cls": 0,
+      "tbtMs": 4372
+    },
+    {
+      "performance": 69,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1815,
+      "cls": 0,
+      "tbtMs": 3504
+    },
+    {
+      "performance": 70,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 1961,
+      "cls": 0,
+      "tbtMs": 2841
+    }
+  ]
+}

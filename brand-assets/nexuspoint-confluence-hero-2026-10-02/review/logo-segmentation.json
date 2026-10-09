@@ -1,0 +1,74 @@
+{
+  "source": "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Website-Creator\\Projects\\nexuspoint-site\\src\\assets\\brand\\symbol.svg",
+  "source_sha256": "52f5b606fad04377aa28186b028d8264eea0744524642bc627ee1017d3e8bbd9",
+  "module": "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\.codex-staging\\confluence\\logo-segments.ts",
+  "method": "Adaptive cubic flattening and per-shape irregular Voronoi clipping; original unsplit contours exported separately for seam-free final geometry.",
+  "coordinate_system": "Centered original SVG viewBox, positive Y upwards, CCW contours, original viewBox height 5.5 scene units.",
+  "white_segments": 16,
+  "blue_segments": 3,
+  "total_segments": 19,
+  "unsplit_white_contours": 4,
+  "unsplit_blue_contours": 1,
+  "segment_vertex_count": 3205,
+  "unsplit_vertex_count": 3148,
+  "curve_tolerance_native_svg": 0.02,
+  "curve_tolerance_scene": 0.00011802575105633802,
+  "blue_circle_vertices": 1536,
+  "blue_circle_radial_error_scene": 1.4935484460282945e-06,
+  "all_segment_polygons_valid": true,
+  "all_unsplit_polygons_valid": true,
+  "all_segment_centroids_inside": true,
+  "all_contours_ccw": true,
+  "segmented_data_unchanged": true,
+  "segmented_data_sha256": "ad2f6852b325244ee19ef52d2e6f9566745614727195a0dcabe7e5864c7f9df5",
+  "union_bounds_scene": [
+    -2.63720568,
+    -2.75093988,
+    2.63132185,
+    2.75143217
+  ],
+  "per_source_validation": [
+    {
+      "id": "right",
+      "segment_count": 4,
+      "source_vertices": 347,
+      "source_area_scene": 5.558584997530874,
+      "symmetric_difference_area_scene": 9.227205696157913e-10,
+      "overlap_area_scene": 8.881784197001252e-16
+    },
+    {
+      "id": "upper-fold",
+      "segment_count": 4,
+      "source_vertices": 460,
+      "source_area_scene": 3.642279950979033,
+      "symmetric_difference_area_scene": 4.243159555715726e-10,
+      "overlap_area_scene": 0
+    },
+    {
+      "id": "left",
+      "segment_count": 4,
+      "source_vertices": 373,
+      "source_area_scene": 4.817161825227406,
+      "symmetric_difference_area_scene": 2.9969546328322666e-09,
+      "overlap_area_scene": 0
+    },
+    {
+      "id": "lower-fold",
+      "segment_count": 4,
+      "source_vertices": 432,
+      "source_area_scene": 3.7064280390223954,
+      "symmetric_difference_area_scene": 2.815766985623646e-10,
+      "overlap_area_scene": 3.1086244689504383e-15
+    },
+    {
+      "id": "blue-point",
+      "segment_count": 3,
+      "source_vertices": 1536,
+      "source_area_scene": 1.601817213301318,
+      "symmetric_difference_area_scene": 1.6683400022010693e-11,
+      "overlap_area_scene": 0
+    }
+  ],
+  "max_symmetric_difference_area_scene": 2.9969546328322666e-09,
+  "module_bytes": 160635
+}

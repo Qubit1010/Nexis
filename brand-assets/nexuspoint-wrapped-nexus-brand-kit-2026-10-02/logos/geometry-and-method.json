@@ -1,0 +1,24 @@
+{
+  "source": "reference/approved-wrapped-nexus-original.png",
+  "source_size": [
+    1672,
+    941
+  ],
+  "icon_bounds": [
+    238,
+    310,
+    292,
+    284
+  ],
+  "dot_center_in_source": [
+    383.5,
+    452.0
+  ],
+  "dot_radius": 39.25,
+  "symbol_contours": 4,
+  "wordmark_contours_including_counters": 14,
+  "fit_error_pixels": 0.65,
+  "blue": "#02A1E1",
+  "navy": "#02040A",
+  "method": "Antialiased raster contour reconstruction with adaptive cubic Bezier fitting. The centre circle is replaced by a fitted native circle. The original wordmark is traced into outlines, not attributed to a named font."
+}

@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-02",
+  "source": "logos/reference/approved-wrapped-nexus-original.png",
+  "operation": "Image-generator edit: change only central circle to portfolio blue #02A1E1 and preserve selected logo geometry, wordmark and backdrop.",
+  "preview": "previews/wrapped-nexus-blue-edit.png",
+  "productionMaster": "logos/nexuspoint-outline-master.svg",
+  "productionColorGuarantee": "Native SVG central circle fill is #02A1E1; raster image-generator preview is visual reference."
+}

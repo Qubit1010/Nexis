@@ -1,0 +1,50 @@
+[
+  {
+    "width": 390,
+    "state": "selected work",
+    "violations": [],
+    "passCount": 19
+  },
+  {
+    "width": 390,
+    "state": "project dialog",
+    "violations": [],
+    "passCount": 21
+  },
+  {
+    "width": 390,
+    "state": "reel",
+    "violations": [],
+    "passCount": 19
+  },
+  {
+    "width": 1440,
+    "state": "selected work",
+    "violations": [],
+    "passCount": 19
+  },
+  {
+    "width": 1440,
+    "state": "project dialog",
+    "violations": [],
+    "passCount": 21
+  },
+  {
+    "width": 1440,
+    "state": "reel",
+    "violations": [],
+    "passCount": 19
+  },
+  {
+    "width": 390,
+    "state": "reduced reel",
+    "violations": [],
+    "passCount": 18
+  },
+  {
+    "width": 390,
+    "state": "save-data reel",
+    "violations": [],
+    "passCount": 18
+  }
+]

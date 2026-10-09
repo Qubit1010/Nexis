@@ -1,0 +1,588 @@
+{
+  "status": "complete",
+  "passed": 120,
+  "failed": 0,
+  "target": "http://127.0.0.1:4323/",
+  "rows": [
+    {
+      "ok": true,
+      "name": "375: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "375: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "375: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "375: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "375: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "375: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "375: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.032895,
+        "after": 0.564145
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.032895,
+        "reverse": 0.032895
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: strip moves continuously when visible",
+      "evidence": {
+        "before": 64.31765831628763,
+        "after": 80.31376799740337
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "375: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 141,
+        "y": 187.546875,
+        "width": 216,
+        "height": 216
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "375: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "375: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "375: conversation action reaches contact",
+      "evidence": 90.9375
+    },
+    {
+      "ok": true,
+      "name": "375: offscreen strip stops rendering"
+    },
+    {
+      "ok": true,
+      "name": "390: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "390: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "390: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "390: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "390: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "390: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.032841,
+        "after": 0.56486
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.032841,
+        "reverse": 0.032841
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: strip moves continuously when visible",
+      "evidence": {
+        "before": 61.36666010217368,
+        "after": 77.37748959149121
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 156,
+        "y": 188.296875,
+        "width": 216,
+        "height": 216
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "390: trust accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "390: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "390: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "390: conversation action reaches contact",
+      "evidence": 92.328125
+    },
+    {
+      "ok": true,
+      "name": "390: offscreen strip stops rendering"
+    },
+    {
+      "ok": true,
+      "name": "768: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "768: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "768: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "768: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "768: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "768: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "768: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.029586,
+        "after": 0.563609
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.029586,
+        "reverse": 0.029586
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: strip moves continuously when visible",
+      "evidence": {
+        "before": 83.61591110494601,
+        "after": 99.5539260828582
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "768: hovering pauses the strip for inspection"
+    },
+    {
+      "ok": true,
+      "name": "768: trusted-by cue follows inspection"
+    },
+    {
+      "ok": true,
+      "name": "768: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 500,
+        "y": 187.75,
+        "width": 240,
+        "height": 240
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "768: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "768: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "768: conversation action reaches contact",
+      "evidence": 91.3125
+    },
+    {
+      "ok": true,
+      "name": "768: offscreen strip stops rendering"
+    },
+    {
+      "ok": true,
+      "name": "1440: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "1440: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "1440: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "1440: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "1440: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "1440: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.026667,
+        "after": 0.562667
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.026667,
+        "reverse": 0.026667
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: strip moves continuously when visible",
+      "evidence": {
+        "before": 24.182400000006965,
+        "after": 39.947600000011334
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "1440: hovering pauses the strip for inspection"
+    },
+    {
+      "ok": true,
+      "name": "1440: trusted-by cue follows inspection"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 1152.8125,
+        "y": 187.9375,
+        "width": 259.1875,
+        "height": 259.1875
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "1440: trust accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "1440: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "1440: conversation action reaches contact",
+      "evidence": 92.953125
+    },
+    {
+      "ok": true,
+      "name": "1440: offscreen strip stops rendering"
+    },
+    {
+      "ok": true,
+      "name": "1920: trust follows selected work"
+    },
+    {
+      "ok": true,
+      "name": "1920: scrolled header is fully transparent"
+    },
+    {
+      "ok": true,
+      "name": "1920: bottom line retained"
+    },
+    {
+      "ok": true,
+      "name": "1920: no horizontal page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1920: six source-backed companies"
+    },
+    {
+      "ok": true,
+      "name": "1920: duplicate strip excluded from focus and accessibility tree"
+    },
+    {
+      "ok": true,
+      "name": "1920: native scrolling reveals successive words",
+      "evidence": {
+        "before": 0.023529,
+        "after": 0.561176
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: reverse scrolling restores reveal",
+      "evidence": {
+        "before": 0.023529,
+        "reverse": 0.023529
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: strip moves continuously when visible",
+      "evidence": {
+        "before": 24.182400000007874,
+        "after": 39.76500000001306
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: pause holds the company strip"
+    },
+    {
+      "ok": true,
+      "name": "1920: hovering pauses the strip for inspection"
+    },
+    {
+      "ok": true,
+      "name": "1920: trusted-by cue follows inspection"
+    },
+    {
+      "ok": true,
+      "name": "1920: keyboard focus pauses and exposes an offscreen company",
+      "evidence": {
+        "x": 1552,
+        "y": 187.9375,
+        "width": 340,
+        "height": 340
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: company has visible keyboard focus"
+    },
+    {
+      "ok": true,
+      "name": "1920: menu suspends company motion"
+    },
+    {
+      "ok": true,
+      "name": "1920: menu closes with Escape"
+    },
+    {
+      "ok": true,
+      "name": "1920: conversation action reaches contact",
+      "evidence": 92.5
+    },
+    {
+      "ok": true,
+      "name": "1920: offscreen strip stops rendering"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: static company grid"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: no inactive motion control"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: all companies remain readable"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: no overflow"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: complete statement stays readable"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: static company grid"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: no inactive motion control"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: all companies remain readable"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: no overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: complete statement stays readable"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: static company grid"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: no inactive motion control"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: all companies remain readable"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: no overflow"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: complete statement stays readable"
+    },
+    {
+      "ok": true,
+      "name": "reduced: accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: static company grid"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: no inactive motion control"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: all companies remain readable"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: no overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: complete statement stays readable"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: static company grid"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: no inactive motion control"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: all companies remain readable"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: no overflow"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: complete statement stays readable"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: static company grid"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: no inactive motion control"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: all companies remain readable"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: no overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: complete statement stays readable"
+    },
+    {
+      "ok": true,
+      "name": "no page or console errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

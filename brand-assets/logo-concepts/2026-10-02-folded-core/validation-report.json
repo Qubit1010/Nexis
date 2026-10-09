@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-02",
+  "method": "Built-in imagegen concept symbols, existing native SVG wordmark, Conthrax headings",
+  "recommended": "02-open-core",
+  "sourceBounds": [
+    {
+      "width": 1254,
+      "height": 1254,
+      "x": 244,
+      "y": 268,
+      "w": 766,
+      "h": 717
+    },
+    {
+      "width": 1254,
+      "height": 1254,
+      "x": 291,
+      "y": 287,
+      "w": 673,
+      "h": 676
+    },
+    {
+      "width": 1310,
+      "height": 1200,
+      "x": 263,
+      "y": 222,
+      "w": 787,
+      "h": 732
+    },
+    {
+      "width": 1422,
+      "height": 1106,
+      "x": 372,
+      "y": 240,
+      "w": 675,
+      "h": 606
+    }
+  ],
+  "symbolDisplayHeight": 210,
+  "exports": [
+    {
+      "filename": "01-precision-fold-lockup.png",
+      "width": 830,
+      "height": 290
+    },
+    {
+      "filename": "02-open-core-lockup.png",
+      "width": 830,
+      "height": 290
+    },
+    {
+      "filename": "03-sculpted-ribbon-lockup.png",
+      "width": 830,
+      "height": 290
+    },
+    {
+      "filename": "04-offset-fold-lockup.png",
+      "width": 830,
+      "height": 290
+    }
+  ],
+  "errors": []
+}

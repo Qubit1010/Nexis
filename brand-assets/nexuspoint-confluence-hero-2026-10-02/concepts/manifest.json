@@ -1,0 +1,65 @@
+{
+  "model": "xai/grok-imagine-image-2.0",
+  "budget_usd": 15.0,
+  "estimated_total_usd": 0.24,
+  "successful_estimated_total_usd": 0.24,
+  "concepts": [
+    {
+      "name": "01-convergence",
+      "input": {
+        "prompt": "An original monumental contemporary sculpture for a premium creative technology studio. Three distinct material languages converge into one open aperture around one small precise cyan-blue point, color #02A1E1: a broad continuous satin-white folded surface with beautiful thickness and smooth sculptural curvature; precision-machined silver frames and tightly spaced lamellae with subtle brushed-metal detail; fine parallel white and silver filaments threading through the structure with clear intentional paths. Extremely restrained black architectural gallery, deep black background, refined studio softbox lighting, realistic specular highlights, gentle contact shadow, physically plausible materials, exceptional art direction. Asymmetric cinematic composition, sculpture occupies the upper and right two-thirds with cropped edges and intentional scale, left third and lower left remain quiet black negative space for website typography. No text, no logo, no letters, no watermark, no interface, no people, no robots, no circuit board, no purple, no rainbow, no broad neon glow, no floating dashboard, no stock technology motifs. 16:9 architectural artwork photograph, precise craft, elegant tension between organic surface and engineered structure. Camera: low three-quarter angle, 50mm perspective. A huge sweeping white folded sheet arcs diagonally from the cropped top-right toward the center, surrounding silver frame ribs and a delicate filament bundle. The blue point is a tiny solid disc at the shared focal point, slightly right of center. A sophisticated gallery installation with a strong silhouette and dramatic controlled light.",
+        "quality": "medium",
+        "resolution": "2k",
+        "aspect_ratio": "16:9"
+      },
+      "estimate": {
+        "usd": 0.08,
+        "credits": "1.280"
+      },
+      "status": "completed",
+      "idempotency_key": "4e1ab044-dbbc-4f8e-8abe-30217c4fa687",
+      "request_id": "058855fb-d8a7-4957-9f1f-028d9c7d3f1b",
+      "files": [
+        "01-convergence.png"
+      ]
+    },
+    {
+      "name": "02-lamellar-aperture",
+      "input": {
+        "prompt": "An original monumental contemporary sculpture for a premium creative technology studio. Three distinct material languages converge into one open aperture around one small precise cyan-blue point, color #02A1E1: a broad continuous satin-white folded surface with beautiful thickness and smooth sculptural curvature; precision-machined silver frames and tightly spaced lamellae with subtle brushed-metal detail; fine parallel white and silver filaments threading through the structure with clear intentional paths. Extremely restrained black architectural gallery, deep black background, refined studio softbox lighting, realistic specular highlights, gentle contact shadow, physically plausible materials, exceptional art direction. Asymmetric cinematic composition, sculpture occupies the upper and right two-thirds with cropped edges and intentional scale, left third and lower left remain quiet black negative space for website typography. No text, no logo, no letters, no watermark, no interface, no people, no robots, no circuit board, no purple, no rainbow, no broad neon glow, no floating dashboard, no stock technology motifs. 16:9 architectural artwork photograph, precise craft, elegant tension between organic surface and engineered structure. Camera: more frontal with a subtle elevated three-quarter perspective, 65mm lens. The structure creates a tall elliptical opening on the right. A satin-white continuous fold flows around a staggered series of machined square frames with softened corners; fine filaments curve along its inner contour. A tiny blue disc anchors the opening. One dominant sculptural gesture, restrained surface reflections, large clear negative space on the left.",
+        "quality": "medium",
+        "resolution": "2k",
+        "aspect_ratio": "16:9"
+      },
+      "estimate": {
+        "usd": 0.08,
+        "credits": "1.280"
+      },
+      "status": "completed",
+      "idempotency_key": "9a1f5137-c00e-42c2-913e-43cb78433553",
+      "request_id": "8a58ff99-4967-47d1-93bb-f8c83095bedb",
+      "files": [
+        "02-lamellar-aperture.png"
+      ]
+    },
+    {
+      "name": "03-folded-chamber",
+      "input": {
+        "prompt": "An original monumental contemporary sculpture for a premium creative technology studio. Three distinct material languages converge into one open aperture around one small precise cyan-blue point, color #02A1E1: a broad continuous satin-white folded surface with beautiful thickness and smooth sculptural curvature; precision-machined silver frames and tightly spaced lamellae with subtle brushed-metal detail; fine parallel white and silver filaments threading through the structure with clear intentional paths. Extremely restrained black architectural gallery, deep black background, refined studio softbox lighting, realistic specular highlights, gentle contact shadow, physically plausible materials, exceptional art direction. Asymmetric cinematic composition, sculpture occupies the upper and right two-thirds with cropped edges and intentional scale, left third and lower left remain quiet black negative space for website typography. No text, no logo, no letters, no watermark, no interface, no people, no robots, no circuit board, no purple, no rainbow, no broad neon glow, no floating dashboard, no stock technology motifs. 16:9 architectural artwork photograph, precise craft, elegant tension between organic surface and engineered structure. Camera: close side-oblique architectural perspective, 45mm lens. A white ribbon with broad elegant planar folds extends from outside the right edge and bends into an open oval chamber. Twelve silver precision frames emerge behind it with carefully spaced parallel filaments running through their center. Tiny cyan-blue center point. Strong spatial depth, immense scale, finely lit edges and physically convincing material joins; calm black space on the left.",
+        "quality": "medium",
+        "resolution": "2k",
+        "aspect_ratio": "16:9"
+      },
+      "estimate": {
+        "usd": 0.08,
+        "credits": "1.280"
+      },
+      "status": "completed",
+      "idempotency_key": "2a5c1fae-470b-460c-88ff-3de85e7082d4",
+      "request_id": "97529eba-ee84-41ad-915b-ce26df522f56",
+      "files": [
+        "03-folded-chamber.png"
+      ]
+    }
+  ]
+}

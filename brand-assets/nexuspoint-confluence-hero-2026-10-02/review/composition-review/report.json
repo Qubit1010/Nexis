@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:4321/confluence-study",
+  "capturedAt": "2026-10-02T12:48:27.472Z",
+  "options": {
+    "widths": [
+      390,
+      1440
+    ],
+    "frames": 4,
+    "full": false,
+    "video": false,
+    "reducedMotion": false,
+    "headed": false,
+    "noJs": false,
+    "noWebgl": false
+  },
+  "files": [
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\390.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\frames\\390-00.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\frames\\390-01.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\frames\\390-02.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\frames\\390-03.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\1440.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\frames\\1440-00.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\frames\\1440-01.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\frames\\1440-02.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\composition-review\\frames\\1440-03.png"
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "warnings": [],
+  "fontsLoaded": {
+    "390": {
+      "Conthrax": true,
+      "Inter": true
+    },
+    "1440": {
+      "Conthrax": true,
+      "Inter": true
+    }
+  }
+}

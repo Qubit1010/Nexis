@@ -1,0 +1,175 @@
+{
+  "standard": "WCAG 2.2 relative luminance",
+  "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+  "pairs": [
+    {
+      "name": "White on ink",
+      "foreground": "#FFFFFF",
+      "background": "#000000",
+      "ratio": 21.0,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Blue on ink",
+      "foreground": "#02A1E1",
+      "background": "#000000",
+      "ratio": 7.187777416356331,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Ink on blue",
+      "foreground": "#000000",
+      "background": "#02A1E1",
+      "ratio": 7.187777416356331,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "White on blue",
+      "foreground": "#FFFFFF",
+      "background": "#02A1E1",
+      "ratio": 2.921626364251752,
+      "bodyAA": false,
+      "largeAA": false,
+      "nonTextAA": false
+    },
+    {
+      "name": "Hover blue on ink",
+      "foreground": "#0289BF",
+      "background": "#000000",
+      "ratio": 5.333162905952441,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Secondary on ink",
+      "foreground": "#CCCCCC",
+      "background": "#000000",
+      "ratio": 13.076546777106755,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Muted on ink",
+      "foreground": "#8A8A8A",
+      "background": "#000000",
+      "ratio": 6.0830418866165346,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "UI boundary on ink",
+      "foreground": "#646464",
+      "background": "#000000",
+      "ratio": 3.548753608712949,
+      "bodyAA": false,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Blue on surface",
+      "foreground": "#02A1E1",
+      "background": "#101010",
+      "ratio": 6.5128487271642355,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Muted on surface",
+      "foreground": "#8A8A8A",
+      "background": "#101010",
+      "ratio": 5.511847308791675,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Deep blue on white",
+      "foreground": "#0079AA",
+      "background": "#FFFFFF",
+      "ratio": 4.866287417081014,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Ink on white",
+      "foreground": "#000000",
+      "background": "#FFFFFF",
+      "ratio": 21.0,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Ink on hover blue",
+      "foreground": "#000000",
+      "background": "#0289BF",
+      "ratio": 5.333162905952441,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "White on deep blue",
+      "foreground": "#FFFFFF",
+      "background": "#0079AA",
+      "ratio": 4.866287417081014,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Decorative line on ink",
+      "foreground": "#1D1E1F",
+      "background": "#000000",
+      "ratio": 1.2577372510363354,
+      "bodyAA": false,
+      "largeAA": false,
+      "nonTextAA": false
+    },
+    {
+      "name": "White on navy",
+      "foreground": "#FFFFFF",
+      "background": "#02040A",
+      "ratio": 20.501191195818368,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "Blue on navy",
+      "foreground": "#02A1E1",
+      "background": "#02040A",
+      "ratio": 7.017047575509833,
+      "bodyAA": true,
+      "largeAA": true,
+      "nonTextAA": true
+    },
+    {
+      "name": "UI boundary on surface",
+      "foreground": "#646464",
+      "background": "#101010",
+      "ratio": 3.215527427286686,
+      "bodyAA": false,
+      "largeAA": true,
+      "nonTextAA": true
+    }
+  ],
+  "date": "2026-10-02",
+  "method": "WCAG 2.2 sRGB relative luminance; unrounded ratios determine pass/fail",
+  "thresholds": {
+    "bodyAA": 4.5,
+    "largeAA": 3,
+    "nonTextAA": 3
+  }
+}

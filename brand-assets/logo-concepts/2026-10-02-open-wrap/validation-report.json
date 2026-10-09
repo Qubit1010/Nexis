@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-02",
+  "method": "Built-in imagegen concept symbols, native existing SVG wordmark, actual Conthrax headings",
+  "exports": [
+    {
+      "filename": "01-open-wrap-lockup.png",
+      "width": 830,
+      "height": 290
+    },
+    {
+      "filename": "02-soft-fold-lockup.png",
+      "width": 830,
+      "height": 290
+    },
+    {
+      "filename": "03-split-flow-lockup.png",
+      "width": 830,
+      "height": 290
+    },
+    {
+      "filename": "04-tapered-nexus-lockup.png",
+      "width": 830,
+      "height": 290
+    }
+  ],
+  "errors": []
+}

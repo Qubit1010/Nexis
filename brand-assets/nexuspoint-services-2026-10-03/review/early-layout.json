@@ -1,0 +1,346 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "p": 0.02,
+    "path": "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-services-2026-10-03\\review\\services-1440x900-0.02.png",
+    "layout": {
+      "stats": {
+        "progress": 0.02,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": -1,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "bottom": 900
+      },
+      "content": null,
+      "rail": {
+        "x": 72,
+        "y": 736,
+        "width": 1296,
+        "height": 126,
+        "bottom": 862
+      },
+      "overflow": 0
+    },
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "p": 0.175,
+    "path": "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-services-2026-10-03\\review\\services-1440x900-0.175.png",
+    "layout": {
+      "stats": {
+        "progress": 0.175,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": -1,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "bottom": 900
+      },
+      "content": null,
+      "rail": {
+        "x": 72,
+        "y": 736,
+        "width": 1296,
+        "height": 126,
+        "bottom": 862
+      },
+      "overflow": 0
+    },
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "p": 0.26,
+    "path": "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-services-2026-10-03\\review\\services-1440x900-0.26.png",
+    "layout": {
+      "stats": {
+        "progress": 0.26,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 0,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "bottom": 900
+      },
+      "content": {
+        "top": 148.796875,
+        "bottom": 660.328125
+      },
+      "rail": {
+        "x": 72,
+        "y": 736,
+        "width": 1296,
+        "height": 126,
+        "bottom": 862
+      },
+      "overflow": 0
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "p": 0.26,
+    "path": "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-services-2026-10-03\\review\\services-390x844-0.26.png",
+    "layout": {
+      "stats": {
+        "progress": 0.26,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 0,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "bottom": 844
+      },
+      "content": {
+        "top": 120,
+        "bottom": 544.21875
+      },
+      "rail": {
+        "x": 30,
+        "y": 664,
+        "width": 330,
+        "height": 156,
+        "bottom": 820
+      },
+      "overflow": 0
+    },
+    "errors": []
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "p": 0.26,
+    "path": "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-services-2026-10-03\\review\\services-375x667-0.26.png",
+    "layout": {
+      "stats": {
+        "progress": 0.26,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 0,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": false,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 667,
+        "bottom": 667
+      },
+      "content": {
+        "top": 110,
+        "bottom": 453.78125
+      },
+      "rail": {
+        "x": 30,
+        "y": 505,
+        "width": 315,
+        "height": 142,
+        "bottom": 647
+      },
+      "overflow": 0
+    },
+    "errors": []
+  }
+]

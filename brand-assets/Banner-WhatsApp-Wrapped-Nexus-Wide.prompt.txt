@@ -1,0 +1,18 @@
+Asset type: NexusPoint WhatsApp brand banner, new design.
+Reference image 1 is the OLD BANNER, provided only for existing contact information and agency identity context. Reference image 2 is the APPROVED LOGO artwork: Wrapped Nexus, with opposing curled white ribbons forming an N around a #02A1E1 blue centre point and the outlined NexusPoint wordmark.
+Primary request: create a new, polished agency banner using the approved Wrapped Nexus logo and its concept of multiple paths converging on a single central point.
+
+Visual language: black #000000 and near-black #101010 ground, crisp white typography, portfolio blue #02A1E1 for a single focal point and carefully chosen accents. A barely visible architectural grid, restrained matte folded ribbon paths with a paradoxical over-under relationship, some thin paths subtly converging toward the logo's blue centre. Every decorative path should visually suggest movement to that same destination. Sophisticated and minimal. The surrounding dark abstract ribbons are background artwork and do not alter or obscure the approved flat logo. Keep the blue flat and saturated, with only a faint environmental halo outside the logo. Clear visual hierarchy and generous empty space.
+
+Logo fidelity: use reference image 2 faithfully, retaining the exact white ribbon geometry, black open gaps, true circular blue centre, and the same NexusPoint outlined wordmark. One complete logo only. Preserve its aspect ratio and ample clear space. Do not use the old circuit-branch N. Do not invent a logo font or change its wording.
+
+All copy, VERBATIM:
+"AI SYSTEMS & AUTOMATION"
+"Systems you own."
+"Web platforms. Connected workflows. AI automation."
+"nexus-point.co"
+"aleem@nexus-point.co"
+
+Typography: clean Inter-style sans-serif for supporting copy, strong confident headline, readable at phone viewing size. The approved logo's outlined lettering remains as supplied. No fake results, statistics, client logos, extra taglines, phone numbers, QR codes, social icons, watermarks, screenshots, devices, WhatsApp logo or interface chrome. This is the actual flat banner artwork, not a framed mockup.
+Composition: ultra-wide landscape cover, aspect ratio 3:1, high resolution around 2400×800. This is a separate, purpose-composed wide banner, not a crop of a square. Keep all critical logo and copy comfortably in the central 76% width and central 70% height, away from all edges. Large horizontal approved logo on the left in the upper-middle. "Systems you own." below, and the smaller service line on one line. Small uppercase service eyebrow and compact website/email footer. The right field has quiet, dark folded paths converging visually toward the same blue logo centre on the left, with subtle blue highlights. Maintain breathing room between all elements; avoid busy circuit imagery, large blue gradients or tiny footer text.
+Reference image 3 is the newly approved SQUARE BANNER STYLE: retain this same restrained black folded ribbon atmosphere, blue thin edge highlights, fine grid, typography hierarchy and exact contact copy. Compose the wide design afresh in 3:1. Do not simply crop or stretch the square. Make the background paths visually guide the viewer toward the logo's blue connection point, while preserving a quiet reading area and clear space. Use the logo and its central circle as the focal destination instead of creating a separate bright focal point elsewhere.

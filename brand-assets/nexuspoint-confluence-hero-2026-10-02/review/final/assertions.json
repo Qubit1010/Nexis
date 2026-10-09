@@ -1,0 +1,4104 @@
+{
+  "target": "http://127.0.0.1:4321/",
+  "at": "2026-10-02T13:09:01.425Z",
+  "rows": [
+    {
+      "ok": true,
+      "detail": "live@375: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 375,
+        "viewportHeight": 812,
+        "scrollWidth": 375,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 1624,
+          "right": 375,
+          "bottom": 1624
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 812,
+          "right": 375,
+          "bottom": 812
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 275.34375,
+          "height": 81.34375,
+          "right": 299.34375,
+          "bottom": 206.34375
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "live",
+        "canvasCount": 1,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 696,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 746
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 698.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 743.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "live@375: headline within viewport",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "width": 275.34375,
+        "height": 81.34375,
+        "right": 299.34375,
+        "bottom": 206.34375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 696,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 746
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 698.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 743.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 696,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 746
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 698.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 743.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 5,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.18,
+          "framesRendered": 6,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.62,
+          "framesRendered": 7,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.82,
+          "framesRendered": 8,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 1",
+      "evidence": {
+        "progress": 1,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 1,
+          "framesRendered": 9,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: faded opening removed from focus navigation at 1"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.82,
+          "framesRendered": 10,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.62,
+          "framesRendered": 11,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.18,
+          "framesRendered": 12,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: renderer rests after settling",
+      "evidence": {
+        "before": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 1688,
+          "right": 390,
+          "bottom": 1688
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "live",
+        "canvasCount": 1,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "live@390: headline within viewport",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "width": 280.390625,
+        "height": 82.8125,
+        "right": 304.390625,
+        "bottom": 207.8125
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 5,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.18,
+          "framesRendered": 6,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.62,
+          "framesRendered": 7,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.82,
+          "framesRendered": 8,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 1",
+      "evidence": {
+        "progress": 1,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 1,
+          "framesRendered": 9,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: faded opening removed from focus navigation at 1"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.82,
+          "framesRendered": 10,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.62,
+          "framesRendered": 11,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.18,
+          "framesRendered": 12,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: renderer rests after settling",
+      "evidence": {
+        "before": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "mobile@390: keyboard opens menu"
+    },
+    {
+      "ok": true,
+      "detail": "mobile@390: Tab reaches first menu link"
+    },
+    {
+      "ok": true,
+      "detail": "mobile@390: Escape closes menu"
+    },
+    {
+      "ok": true,
+      "detail": "mobile@390: Escape restores focus"
+    },
+    {
+      "ok": true,
+      "detail": "menu closes when viewport enters desktop"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 768,
+        "viewportHeight": 1024,
+        "scrollWidth": 768,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 2048,
+          "right": 768,
+          "bottom": 2048
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 1024,
+          "right": 768,
+          "bottom": 1024
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 489.5,
+          "height": 144.625,
+          "right": 513.5,
+          "bottom": 269.625
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "live",
+        "canvasCount": 1,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 902,
+            "width": 210.5,
+            "height": 50,
+            "right": 234.5,
+            "bottom": 952
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 258.5,
+            "y": 903.296875,
+            "width": 118.765625,
+            "height": 47.390625,
+            "right": 377.265625,
+            "bottom": 950.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "live@768: headline within viewport",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "width": 489.5,
+        "height": 144.625,
+        "right": 513.5,
+        "bottom": 269.625
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 902,
+          "width": 210.5,
+          "height": 50,
+          "right": 234.5,
+          "bottom": 952
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 258.5,
+          "y": 903.296875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "right": 377.265625,
+          "bottom": 950.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 902,
+          "width": 210.5,
+          "height": 50,
+          "right": 234.5,
+          "bottom": 952
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 258.5,
+          "y": 903.296875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "right": 377.265625,
+          "bottom": 950.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 5,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.18,
+          "framesRendered": 6,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.62,
+          "framesRendered": 7,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.82,
+          "framesRendered": 8,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 1",
+      "evidence": {
+        "progress": 1,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 1,
+          "framesRendered": 9,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: faded opening removed from focus navigation at 1"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.82,
+          "framesRendered": 10,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.62,
+          "framesRendered": 11,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0.18,
+          "framesRendered": 12,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: renderer rests after settling",
+      "evidence": {
+        "before": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 40610,
+          "calls": 7,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1800,
+          "right": 1440,
+          "bottom": 1800
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "live",
+        "canvasCount": 1,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: headline within viewport",
+      "evidence": {
+        "x": 64.078125,
+        "y": 520.28125,
+        "width": 1078.65625,
+        "height": 217.71875,
+        "right": 1142.734375,
+        "bottom": 738
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0,
+          "framesRendered": 5,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.18,
+          "framesRendered": 6,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.62,
+          "framesRendered": 7,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.82,
+          "framesRendered": 8,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 1",
+      "evidence": {
+        "progress": 1,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 1,
+          "framesRendered": 9,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: faded opening removed from focus navigation at 1"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.82,
+          "framesRendered": 10,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.62,
+          "framesRendered": 11,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.18,
+          "framesRendered": 12,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: renderer rests after settling",
+      "evidence": {
+        "before": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": false,
+      "detail": "live@1440: reversing reproduces identical composition",
+      "evidence": {
+        "hash1": "ef28c5fe493c86bdd81f42afa8ced9553e6ba51c2a4517e91afc9ffbde765eec",
+        "hash2": "342e8ad3d01602befcbaed2ac1fd53c5561081477641f04ce49a594d74ae754e"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: headline within viewport",
+      "evidence": {
+        "x": 64.078125,
+        "y": 520.28125,
+        "width": 1078.65625,
+        "height": 217.71875,
+        "right": 1142.734375,
+        "bottom": 738
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 1920,
+        "viewportHeight": 1080,
+        "scrollWidth": 1920,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 2160,
+          "right": 1920,
+          "bottom": 2160
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080,
+          "right": 1920,
+          "bottom": 1080
+        },
+        "title": {
+          "x": 85.4375,
+          "y": 609.140625,
+          "width": 1369.75,
+          "height": 276.46875,
+          "right": 1455.1875,
+          "bottom": 885.609375
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "live",
+        "canvasCount": 1,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 85.4375,
+            "y": 962,
+            "width": 220.5,
+            "height": 54,
+            "right": 305.9375,
+            "bottom": 1016
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 337.9375,
+            "y": 965.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 470.703125,
+            "bottom": 1012.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: headline within viewport",
+      "evidence": {
+        "x": 85.4375,
+        "y": 609.140625,
+        "width": 1369.75,
+        "height": 276.46875,
+        "right": 1455.1875,
+        "bottom": 885.609375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 85.4375,
+          "y": 962,
+          "width": 220.5,
+          "height": 54,
+          "right": 305.9375,
+          "bottom": 1016
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 337.9375,
+          "y": 965.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 470.703125,
+          "bottom": 1012.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 85.4375,
+          "y": 962,
+          "width": 220.5,
+          "height": 54,
+          "right": 305.9375,
+          "bottom": 1016
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 337.9375,
+          "y": 965.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 470.703125,
+          "bottom": 1012.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0,
+          "framesRendered": 5,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.18,
+          "framesRendered": 6,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.62,
+          "framesRendered": 7,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.82,
+          "framesRendered": 8,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 1",
+      "evidence": {
+        "progress": 1,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 1,
+          "framesRendered": 9,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: faded opening removed from focus navigation at 1"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 0.82",
+      "evidence": {
+        "progress": 0.82,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.82,
+          "framesRendered": 10,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: faded opening removed from focus navigation at 0.82"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 0.62",
+      "evidence": {
+        "progress": 0.62,
+        "inert": true,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.62,
+          "framesRendered": 11,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: faded opening removed from focus navigation at 0.62"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 0.18",
+      "evidence": {
+        "progress": 0.18,
+        "inert": false,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0.18,
+          "framesRendered": 12,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: reversible progress 0",
+      "evidence": {
+        "progress": 0,
+        "inert": false,
+        "stats": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: opening restored on reverse scroll"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: renderer rests after settling",
+      "evidence": {
+        "before": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 67714,
+          "calls": 10,
+          "progress": 0,
+          "framesRendered": 13,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@390: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "static",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@390: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "static@390: headline within viewport",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "width": 280.390625,
+        "height": 82.8125,
+        "right": 304.390625,
+        "bottom": 207.8125
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@390: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "static@390: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "static@390: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "static@390: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "static",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@390: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "static",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@390: no 3D runtime fetched",
+      "evidence": [
+        "http://127.0.0.1:4321/media/confluence/poster-mobile.webp"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "static",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: headline within viewport",
+      "evidence": {
+        "x": 64.078125,
+        "y": 520.28125,
+        "width": 1078.65625,
+        "height": 217.71875,
+        "right": 1142.734375,
+        "bottom": 738
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "static",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "static",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: no 3D runtime fetched",
+      "evidence": [
+        "http://127.0.0.1:4321/media/confluence/poster-desktop-compact.webp"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: headline within viewport",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "width": 280.390625,
+        "height": 82.8125,
+        "right": 304.390625,
+        "bottom": 207.8125
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: no 3D runtime fetched",
+      "evidence": [
+        "http://127.0.0.1:4321/media/confluence/poster-mobile.webp",
+        "http://127.0.0.1:4321/src/scripts/confluence.ts?t=1790946281366",
+        "http://127.0.0.1:4321/media/confluence/poster-desktop.webp"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: headline within viewport",
+      "evidence": {
+        "x": 64.078125,
+        "y": 520.28125,
+        "width": 1078.65625,
+        "height": 217.71875,
+        "right": 1142.734375,
+        "bottom": 738
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "reduced-motion",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: no 3D runtime fetched",
+      "evidence": [
+        "http://127.0.0.1:4321/media/confluence/poster-desktop-compact.webp",
+        "http://127.0.0.1:4321/src/scripts/confluence.ts?t=1790946281366",
+        "http://127.0.0.1:4321/media/confluence/poster-desktop.webp"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "no-webgl",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: headline within viewport",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "width": 280.390625,
+        "height": 82.8125,
+        "right": 304.390625,
+        "bottom": 207.8125
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "no-webgl",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "no-webgl",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: no 3D runtime fetched",
+      "evidence": [
+        "http://127.0.0.1:4321/media/confluence/poster-mobile.webp",
+        "http://127.0.0.1:4321/src/scripts/confluence.ts?t=1790946281366",
+        "http://127.0.0.1:4321/media/confluence/poster-desktop.webp"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "no-webgl",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: headline within viewport",
+      "evidence": {
+        "x": 64.078125,
+        "y": 520.28125,
+        "width": 1078.65625,
+        "height": 217.71875,
+        "right": 1142.734375,
+        "bottom": 738
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "no-webgl",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "no-webgl",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: no 3D runtime fetched",
+      "evidence": [
+        "http://127.0.0.1:4321/media/confluence/poster-desktop-compact.webp",
+        "http://127.0.0.1:4321/src/scripts/confluence.ts?t=1790946281366",
+        "http://127.0.0.1:4321/media/confluence/poster-desktop.webp"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "save-data",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: headline within viewport",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "width": 280.390625,
+        "height": 82.8125,
+        "right": 304.390625,
+        "bottom": 207.8125
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 24,
+          "y": 728,
+          "width": 179.28125,
+          "height": 50,
+          "right": 203.28125,
+          "bottom": 778
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 227.28125,
+          "y": 730.90625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "right": 330.515625,
+          "bottom": 775.09375
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "save-data",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "right": 390,
+          "bottom": 844
+        },
+        "title": {
+          "x": 24,
+          "y": 125,
+          "width": 280.390625,
+          "height": 82.8125,
+          "right": 304.390625,
+          "bottom": 207.8125
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "save-data",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 24,
+            "y": 728,
+            "width": 179.28125,
+            "height": 50,
+            "right": 203.28125,
+            "bottom": 778
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 227.28125,
+            "y": 730.90625,
+            "width": 103.234375,
+            "height": 44.1875,
+            "right": 330.515625,
+            "bottom": 775.09375
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: no 3D runtime fetched",
+      "evidence": [
+        "http://127.0.0.1:4321/media/confluence/poster-mobile.webp",
+        "http://127.0.0.1:4321/src/scripts/confluence.ts?t=1790946281366",
+        "http://127.0.0.1:4321/media/confluence/poster-desktop.webp"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: no horizontal document overflow",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "save-data",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: one readable hero H1",
+      "evidence": "Built at the intersection."
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: headline within viewport",
+      "evidence": {
+        "x": 64.078125,
+        "y": 520.28125,
+        "width": 1078.65625,
+        "height": 217.71875,
+        "right": 1142.734375,
+        "bottom": 738
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: both opening actions within first viewport",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: agreed CTA destinations",
+      "evidence": [
+        {
+          "label": "Start a conversation",
+          "href": "#contact",
+          "x": 64.078125,
+          "y": 782,
+          "width": 220.5,
+          "height": 54,
+          "right": 284.578125,
+          "bottom": 836
+        },
+        {
+          "label": "See the results↗",
+          "href": "#reviews",
+          "x": 316.578125,
+          "y": 785.296875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "right": 449.34375,
+          "bottom": 832.6875
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: static poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: static fallback remains usable",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "save-data",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: fallback has no extra pinned scroll",
+      "evidence": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "right": 1440,
+          "bottom": 900
+        },
+        "title": {
+          "x": 64.078125,
+          "y": 520.28125,
+          "width": 1078.65625,
+          "height": 217.71875,
+          "right": 1142.734375,
+          "bottom": 738
+        },
+        "headingCount": 1,
+        "heading": "Built at the intersection.",
+        "mode": "save-data",
+        "canvasCount": 0,
+        "posterLoaded": true,
+        "inert": false,
+        "ctas": [
+          {
+            "label": "Start a conversation",
+            "href": "#contact",
+            "x": 64.078125,
+            "y": 782,
+            "width": 220.5,
+            "height": 54,
+            "right": 284.578125,
+            "bottom": 836
+          },
+          {
+            "label": "See the results↗",
+            "href": "#reviews",
+            "x": 316.578125,
+            "y": 785.296875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "right": 449.34375,
+            "bottom": 832.6875
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: no 3D runtime fetched",
+      "evidence": [
+        "http://127.0.0.1:4321/media/confluence/poster-desktop-compact.webp",
+        "http://127.0.0.1:4321/src/scripts/confluence.ts?t=1790946281366",
+        "http://127.0.0.1:4321/media/confluence/poster-desktop.webp"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "WebGL context loss restores readable static fallback",
+      "evidence": {
+        "mode": "context-lost",
+        "canvas": 0,
+        "live": false,
+        "inert": false
+      }
+    },
+    {
+      "ok": true,
+      "detail": "direct #reviews navigation retains anchor after hero enhancement",
+      "evidence": {
+        "top": 0.203125,
+        "progress": 1
+      }
+    },
+    {
+      "ok": true,
+      "detail": "simulated BFCache lifecycle retains live scene at #reviews",
+      "evidence": {
+        "mode": "live",
+        "canvas": 1,
+        "controller": true
+      }
+    },
+    {
+      "ok": true,
+      "detail": "keyboard activation reaches reviews CTA target"
+    },
+    {
+      "ok": true,
+      "detail": "direct #contact navigation retains anchor after hero enhancement",
+      "evidence": {
+        "top": -0.359375,
+        "progress": 1
+      }
+    },
+    {
+      "ok": true,
+      "detail": "simulated BFCache lifecycle retains live scene at #contact",
+      "evidence": {
+        "mode": "live",
+        "canvas": 1,
+        "controller": true
+      }
+    },
+    {
+      "ok": true,
+      "detail": "keyboard activation reaches contact CTA target"
+    },
+    {
+      "ok": true,
+      "detail": "no browser console/page/HTTP errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

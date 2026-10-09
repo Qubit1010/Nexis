@@ -1,0 +1,73 @@
+{
+  "url": "http://127.0.0.1:4321/",
+  "capturedAt": "2026-10-02T13:06:40.338Z",
+  "options": {
+    "widths": [
+      375,
+      390,
+      768,
+      1440,
+      1920
+    ],
+    "frames": 4,
+    "full": false,
+    "video": false,
+    "reducedMotion": false,
+    "headed": false,
+    "noJs": false,
+    "noWebgl": false
+  },
+  "files": [
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\375.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\375-00.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\375-01.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\375-02.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\375-03.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\390.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\390-00.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\390-01.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\390-02.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\390-03.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\768.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\768-00.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\768-01.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\768-02.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\768-03.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\1440.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\1440-00.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\1440-01.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\1440-02.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\1440-03.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\1920.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\1920-00.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\1920-01.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\1920-02.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\normal\\frames\\1920-03.png"
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "warnings": [],
+  "fontsLoaded": {
+    "375": {
+      "Conthrax": true,
+      "Inter": true
+    },
+    "390": {
+      "Conthrax": true,
+      "Inter": true
+    },
+    "768": {
+      "Conthrax": true,
+      "Inter": true
+    },
+    "1440": {
+      "Conthrax": true,
+      "Inter": true
+    },
+    "1920": {
+      "Conthrax": true,
+      "Inter": true
+    }
+  }
+}

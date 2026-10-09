@@ -1,0 +1,18 @@
+[
+  {
+    "width": 390,
+    "violations": [],
+    "passes": 33,
+    "overflow": false,
+    "logoVisibility": "visible",
+    "logoZ": "4"
+  },
+  {
+    "width": 1440,
+    "violations": [],
+    "passes": 33,
+    "overflow": false,
+    "logoVisibility": "visible",
+    "logoZ": "1"
+  }
+]

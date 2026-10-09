@@ -1,0 +1,2069 @@
+{
+  "status": "complete",
+  "target": "http://127.0.0.1:4323/",
+  "checkedAt": "2026-10-02T17:21:25.208Z",
+  "passed": 232,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "375: four concept projects rendered"
+    },
+    {
+      "ok": true,
+      "name": "375: project links retain real fragment destinations and modal names",
+      "evidence": [
+        {
+          "href": "#project-orbit",
+          "label": "Explore Orbit OS concept study",
+          "controls": "project-orbit-dialog"
+        },
+        {
+          "href": "#project-aera",
+          "label": "Explore Aera Living concept study",
+          "controls": "project-aera-dialog"
+        },
+        {
+          "href": "#project-pulsegrid",
+          "label": "Explore PulseGrid concept study",
+          "controls": "project-pulsegrid-dialog"
+        },
+        {
+          "href": "#project-forma",
+          "label": "Explore Forma Objects concept study",
+          "controls": "project-forma-dialog"
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "375: covers load with truthful aspect ratios and descriptive alt",
+      "evidence": [
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Orbit OS concept artwork in cobalt and navy, combining its identity with an operations interface."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "Aera Living concept artwork with architectural imagery, warm ivory and forest-green branding."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "PulseGrid concept artwork in silver and blue, showing a structured workflow system."
+        },
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Forma Objects concept artwork with sculptural product imagery, ivory and orange branding."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "375: selected work has no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "document": 375,
+        "work": 375,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: keyboard focus has an outline and inspection without a fake pointer",
+      "evidence": {
+        "visible": true,
+        "outline": "solid",
+        "active": true,
+        "cursor": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: native dialog is named, described, focused and scroll locked",
+      "evidence": {
+        "native": true,
+        "labelled": true,
+        "described": true,
+        "focus": true,
+        "scrollLock": "hidden"
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: forward modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "375: reverse modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "375: modal has no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "document": 375,
+        "work": 375,
+        "dialogs": [
+          {
+            "client": 349,
+            "scroll": 349
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: Escape returns focus to project opener"
+    },
+    {
+      "ok": true,
+      "name": "375: Escape releases background scroll"
+    },
+    {
+      "ok": true,
+      "name": "375: project CTA closes the dialog and reaches existing contact",
+      "evidence": 87.640625
+    },
+    {
+      "ok": true,
+      "name": "375: reel seek reaches 0",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "375: reel progress 0 has no overflow",
+      "evidence": {
+        "width": 375,
+        "document": 375,
+        "work": 375,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reel seek reaches 0.22",
+      "evidence": 0.22
+    },
+    {
+      "ok": true,
+      "name": "375: reel progress 0.22 has no overflow",
+      "evidence": {
+        "width": 375,
+        "document": 375,
+        "work": 375,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reel seek reaches 0.55",
+      "evidence": 0.55
+    },
+    {
+      "ok": true,
+      "name": "375: reel progress 0.55 has no overflow",
+      "evidence": {
+        "width": 375,
+        "document": 375,
+        "work": 375,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reel seek reaches 0.82",
+      "evidence": 0.82
+    },
+    {
+      "ok": true,
+      "name": "375: reel progress 0.82 has no overflow",
+      "evidence": {
+        "width": 375,
+        "document": 375,
+        "work": 375,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reel seek reaches 1",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "name": "375: reel progress 1 has no overflow",
+      "evidence": {
+        "width": 375,
+        "document": 375,
+        "work": 375,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reel reversal returns exact CSS scene at 1"
+    },
+    {
+      "ok": true,
+      "name": "375: reel reversal returns exact CSS scene at 0.82"
+    },
+    {
+      "ok": true,
+      "name": "375: reel reversal returns exact CSS scene at 0.55"
+    },
+    {
+      "ok": true,
+      "name": "375: reel reversal returns exact CSS scene at 0.22"
+    },
+    {
+      "ok": true,
+      "name": "375: reel reversal returns exact CSS scene at 0"
+    },
+    {
+      "ok": true,
+      "name": "375: visible muted film plays",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: playing film has a visible 44px pause control",
+      "evidence": {
+        "hidden": false,
+        "height": 44,
+        "label": "Pause filmⅡ",
+        "opacity": 1
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: explicit pause stops film and presents the resume action",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": true,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: resume restarts visible film"
+    },
+    {
+      "ok": true,
+      "name": "375: dialog event suspends film",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": true,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": true
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: dialog close resumes eligible film"
+    },
+    {
+      "ok": true,
+      "name": "375: menu event suspends film"
+    },
+    {
+      "ok": true,
+      "name": "375: offscreen film suspends"
+    },
+    {
+      "ok": true,
+      "name": "375: rapid native scroll synchronizes reel at 0.95",
+      "evidence": 0.94959
+    },
+    {
+      "ok": true,
+      "name": "375: rapid native scroll synchronizes reel at 0.03",
+      "evidence": 0.029308
+    },
+    {
+      "ok": true,
+      "name": "375: rapid native scroll synchronizes reel at 0.72",
+      "evidence": 0.719812
+    },
+    {
+      "ok": true,
+      "name": "390: four concept projects rendered"
+    },
+    {
+      "ok": true,
+      "name": "390: project links retain real fragment destinations and modal names",
+      "evidence": [
+        {
+          "href": "#project-orbit",
+          "label": "Explore Orbit OS concept study",
+          "controls": "project-orbit-dialog"
+        },
+        {
+          "href": "#project-aera",
+          "label": "Explore Aera Living concept study",
+          "controls": "project-aera-dialog"
+        },
+        {
+          "href": "#project-pulsegrid",
+          "label": "Explore PulseGrid concept study",
+          "controls": "project-pulsegrid-dialog"
+        },
+        {
+          "href": "#project-forma",
+          "label": "Explore Forma Objects concept study",
+          "controls": "project-forma-dialog"
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "390: covers load with truthful aspect ratios and descriptive alt",
+      "evidence": [
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Orbit OS concept artwork in cobalt and navy, combining its identity with an operations interface."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "Aera Living concept artwork with architectural imagery, warm ivory and forest-green branding."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "PulseGrid concept artwork in silver and blue, showing a structured workflow system."
+        },
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Forma Objects concept artwork with sculptural product imagery, ivory and orange branding."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "390: selected work has no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: selected work accessibility",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus has an outline and inspection without a fake pointer",
+      "evidence": {
+        "visible": true,
+        "outline": "solid",
+        "active": true,
+        "cursor": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: native dialog is named, described, focused and scroll locked",
+      "evidence": {
+        "native": true,
+        "labelled": true,
+        "described": true,
+        "focus": true,
+        "scrollLock": "hidden"
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: forward modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "390: reverse modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "390: modal has no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": [
+          {
+            "client": 364,
+            "scroll": 364
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: project dialog accessibility",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "390: Escape returns focus to project opener"
+    },
+    {
+      "ok": true,
+      "name": "390: Escape releases background scroll"
+    },
+    {
+      "ok": true,
+      "name": "390: project CTA closes the dialog and reaches existing contact",
+      "evidence": 88.421875
+    },
+    {
+      "ok": true,
+      "name": "390: reel seek reaches 0",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "390: reel progress 0 has no overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reel seek reaches 0.22",
+      "evidence": 0.22
+    },
+    {
+      "ok": true,
+      "name": "390: reel progress 0.22 has no overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reel seek reaches 0.55",
+      "evidence": 0.55
+    },
+    {
+      "ok": true,
+      "name": "390: reel progress 0.55 has no overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reel seek reaches 0.82",
+      "evidence": 0.82
+    },
+    {
+      "ok": true,
+      "name": "390: reel progress 0.82 has no overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reel seek reaches 1",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "name": "390: reel progress 1 has no overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reel reversal returns exact CSS scene at 1"
+    },
+    {
+      "ok": true,
+      "name": "390: reel reversal returns exact CSS scene at 0.82"
+    },
+    {
+      "ok": true,
+      "name": "390: reel reversal returns exact CSS scene at 0.55"
+    },
+    {
+      "ok": true,
+      "name": "390: reel reversal returns exact CSS scene at 0.22"
+    },
+    {
+      "ok": true,
+      "name": "390: reel reversal returns exact CSS scene at 0"
+    },
+    {
+      "ok": true,
+      "name": "390: visible muted film plays",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: playing film has a visible 44px pause control",
+      "evidence": {
+        "hidden": false,
+        "height": 44,
+        "label": "Pause filmⅡ",
+        "opacity": 1
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: explicit pause stops film and presents the resume action",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": true,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: resume restarts visible film"
+    },
+    {
+      "ok": true,
+      "name": "390: reel accessibility",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "390: dialog event suspends film",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": true,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": true
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: dialog close resumes eligible film"
+    },
+    {
+      "ok": true,
+      "name": "390: menu event suspends film"
+    },
+    {
+      "ok": true,
+      "name": "390: offscreen film suspends"
+    },
+    {
+      "ok": true,
+      "name": "390: rapid native scroll synchronizes reel at 0.95",
+      "evidence": 0.94921
+    },
+    {
+      "ok": true,
+      "name": "390: rapid native scroll synchronizes reel at 0.03",
+      "evidence": 0.029345
+    },
+    {
+      "ok": true,
+      "name": "390: rapid native scroll synchronizes reel at 0.72",
+      "evidence": 0.72009
+    },
+    {
+      "ok": true,
+      "name": "768: four concept projects rendered"
+    },
+    {
+      "ok": true,
+      "name": "768: project links retain real fragment destinations and modal names",
+      "evidence": [
+        {
+          "href": "#project-orbit",
+          "label": "Explore Orbit OS concept study",
+          "controls": "project-orbit-dialog"
+        },
+        {
+          "href": "#project-aera",
+          "label": "Explore Aera Living concept study",
+          "controls": "project-aera-dialog"
+        },
+        {
+          "href": "#project-pulsegrid",
+          "label": "Explore PulseGrid concept study",
+          "controls": "project-pulsegrid-dialog"
+        },
+        {
+          "href": "#project-forma",
+          "label": "Explore Forma Objects concept study",
+          "controls": "project-forma-dialog"
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "768: covers load with truthful aspect ratios and descriptive alt",
+      "evidence": [
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Orbit OS concept artwork in cobalt and navy, combining its identity with an operations interface."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "Aera Living concept artwork with architectural imagery, warm ivory and forest-green branding."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "PulseGrid concept artwork in silver and blue, showing a structured workflow system."
+        },
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Forma Objects concept artwork with sculptural product imagery, ivory and orange branding."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "768: selected work has no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "document": 768,
+        "work": 768,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: mouse inspection isolates one project and presents a view cursor",
+      "evidence": {
+        "isolating": true,
+        "active": 1,
+        "filter": "blur(3px) brightness(0.45)",
+        "cursor": true,
+        "cursorBox": {
+          "left": 266.1600036621094,
+          "top": 640.4600219726562,
+          "right": 344.1443786621094,
+          "bottom": 680.4600219726562
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: view cursor stays inside viewport",
+      "evidence": {
+        "left": 266.1600036621094,
+        "top": 640.4600219726562,
+        "right": 344.1443786621094,
+        "bottom": 680.4600219726562
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: mouse exit restores all projects"
+    },
+    {
+      "ok": true,
+      "name": "768: keyboard focus has an outline and inspection without a fake pointer",
+      "evidence": {
+        "visible": true,
+        "outline": "solid",
+        "active": true,
+        "cursor": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: native dialog is named, described, focused and scroll locked",
+      "evidence": {
+        "native": true,
+        "labelled": true,
+        "described": true,
+        "focus": true,
+        "scrollLock": "hidden"
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: forward modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "768: reverse modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "768: modal has no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "document": 768,
+        "work": 768,
+        "dialogs": [
+          {
+            "client": 718,
+            "scroll": 718
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: Escape returns focus to project opener"
+    },
+    {
+      "ok": true,
+      "name": "768: Escape releases background scroll"
+    },
+    {
+      "ok": true,
+      "name": "768: project CTA closes the dialog and reaches existing contact",
+      "evidence": 88.15625
+    },
+    {
+      "ok": true,
+      "name": "768: reel seek reaches 0",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "768: reel progress 0 has no overflow",
+      "evidence": {
+        "width": 768,
+        "document": 768,
+        "work": 768,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reel seek reaches 0.22",
+      "evidence": 0.22
+    },
+    {
+      "ok": true,
+      "name": "768: reel progress 0.22 has no overflow",
+      "evidence": {
+        "width": 768,
+        "document": 768,
+        "work": 768,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reel seek reaches 0.55",
+      "evidence": 0.55
+    },
+    {
+      "ok": true,
+      "name": "768: reel progress 0.55 has no overflow",
+      "evidence": {
+        "width": 768,
+        "document": 768,
+        "work": 768,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reel seek reaches 0.82",
+      "evidence": 0.82
+    },
+    {
+      "ok": true,
+      "name": "768: reel progress 0.82 has no overflow",
+      "evidence": {
+        "width": 768,
+        "document": 768,
+        "work": 768,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reel seek reaches 1",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "name": "768: reel progress 1 has no overflow",
+      "evidence": {
+        "width": 768,
+        "document": 768,
+        "work": 768,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reel reversal returns exact CSS scene at 1"
+    },
+    {
+      "ok": true,
+      "name": "768: reel reversal returns exact CSS scene at 0.82"
+    },
+    {
+      "ok": true,
+      "name": "768: reel reversal returns exact CSS scene at 0.55"
+    },
+    {
+      "ok": true,
+      "name": "768: reel reversal returns exact CSS scene at 0.22"
+    },
+    {
+      "ok": true,
+      "name": "768: reel reversal returns exact CSS scene at 0"
+    },
+    {
+      "ok": true,
+      "name": "768: visible muted film plays",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: playing film has a visible 44px pause control",
+      "evidence": {
+        "hidden": false,
+        "height": 44,
+        "label": "Pause filmⅡ",
+        "opacity": 1
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: explicit pause stops film and presents the resume action",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": true,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: resume restarts visible film"
+    },
+    {
+      "ok": true,
+      "name": "768: dialog event suspends film",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": true,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": true
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: dialog close resumes eligible film"
+    },
+    {
+      "ok": true,
+      "name": "768: menu event suspends film"
+    },
+    {
+      "ok": true,
+      "name": "768: offscreen film suspends"
+    },
+    {
+      "ok": true,
+      "name": "768: rapid native scroll synchronizes reel at 0.95",
+      "evidence": 0.949791
+    },
+    {
+      "ok": true,
+      "name": "768: rapid native scroll synchronizes reel at 0.03",
+      "evidence": 0.029986
+    },
+    {
+      "ok": true,
+      "name": "768: rapid native scroll synchronizes reel at 0.72",
+      "evidence": 0.719665
+    },
+    {
+      "ok": true,
+      "name": "1440: four concept projects rendered"
+    },
+    {
+      "ok": true,
+      "name": "1440: project links retain real fragment destinations and modal names",
+      "evidence": [
+        {
+          "href": "#project-orbit",
+          "label": "Explore Orbit OS concept study",
+          "controls": "project-orbit-dialog"
+        },
+        {
+          "href": "#project-aera",
+          "label": "Explore Aera Living concept study",
+          "controls": "project-aera-dialog"
+        },
+        {
+          "href": "#project-pulsegrid",
+          "label": "Explore PulseGrid concept study",
+          "controls": "project-pulsegrid-dialog"
+        },
+        {
+          "href": "#project-forma",
+          "label": "Explore Forma Objects concept study",
+          "controls": "project-forma-dialog"
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1440: covers load with truthful aspect ratios and descriptive alt",
+      "evidence": [
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Orbit OS concept artwork in cobalt and navy, combining its identity with an operations interface."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "Aera Living concept artwork with architectural imagery, warm ivory and forest-green branding."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "PulseGrid concept artwork in silver and blue, showing a structured workflow system."
+        },
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Forma Objects concept artwork with sculptural product imagery, ivory and orange branding."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1440: selected work has no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: selected work accessibility",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440: mouse inspection isolates one project and presents a view cursor",
+      "evidence": {
+        "isolating": true,
+        "active": 1,
+        "filter": "blur(3px) brightness(0.45)",
+        "cursor": true,
+        "cursorBox": {
+          "left": 456.5899963378906,
+          "top": 555.72998046875,
+          "right": 534.5743408203125,
+          "bottom": 595.72998046875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: view cursor stays inside viewport",
+      "evidence": {
+        "left": 456.5899963378906,
+        "top": 555.72998046875,
+        "right": 534.5743408203125,
+        "bottom": 595.72998046875
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: mouse exit restores all projects"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus has an outline and inspection without a fake pointer",
+      "evidence": {
+        "visible": true,
+        "outline": "solid",
+        "active": true,
+        "cursor": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: native dialog is named, described, focused and scroll locked",
+      "evidence": {
+        "native": true,
+        "labelled": true,
+        "described": true,
+        "focus": true,
+        "scrollLock": "hidden"
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: forward modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "1440: reverse modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "1440: modal has no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": [
+          {
+            "client": 1198,
+            "scroll": 1198
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: project dialog accessibility",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440: Escape returns focus to project opener"
+    },
+    {
+      "ok": true,
+      "name": "1440: Escape releases background scroll"
+    },
+    {
+      "ok": true,
+      "name": "1440: project CTA closes the dialog and reaches existing contact",
+      "evidence": 88.296875
+    },
+    {
+      "ok": true,
+      "name": "1440: reel seek reaches 0",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "1440: reel progress 0 has no overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reel seek reaches 0.22",
+      "evidence": 0.22
+    },
+    {
+      "ok": true,
+      "name": "1440: reel progress 0.22 has no overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reel seek reaches 0.55",
+      "evidence": 0.55
+    },
+    {
+      "ok": true,
+      "name": "1440: reel progress 0.55 has no overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reel seek reaches 0.82",
+      "evidence": 0.82
+    },
+    {
+      "ok": true,
+      "name": "1440: reel progress 0.82 has no overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reel seek reaches 1",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "name": "1440: reel progress 1 has no overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reel reversal returns exact CSS scene at 1"
+    },
+    {
+      "ok": true,
+      "name": "1440: reel reversal returns exact CSS scene at 0.82"
+    },
+    {
+      "ok": true,
+      "name": "1440: reel reversal returns exact CSS scene at 0.55"
+    },
+    {
+      "ok": true,
+      "name": "1440: reel reversal returns exact CSS scene at 0.22"
+    },
+    {
+      "ok": true,
+      "name": "1440: reel reversal returns exact CSS scene at 0"
+    },
+    {
+      "ok": true,
+      "name": "1440: visible muted film plays",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: playing film has a visible 44px pause control",
+      "evidence": {
+        "hidden": false,
+        "height": 44,
+        "label": "Pause filmⅡ",
+        "opacity": 1
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: explicit pause stops film and presents the resume action",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": true,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: resume restarts visible film"
+    },
+    {
+      "ok": true,
+      "name": "1440: reel accessibility",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440: dialog event suspends film",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": true,
+        "playing": false,
+        "readyState": 2,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": true
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: dialog close resumes eligible film"
+    },
+    {
+      "ok": true,
+      "name": "1440: menu event suspends film"
+    },
+    {
+      "ok": true,
+      "name": "1440: offscreen film suspends"
+    },
+    {
+      "ok": true,
+      "name": "1440: rapid native scroll synchronizes reel at 0.95",
+      "evidence": 0.95
+    },
+    {
+      "ok": true,
+      "name": "1440: rapid native scroll synchronizes reel at 0.03",
+      "evidence": 0.030159
+    },
+    {
+      "ok": true,
+      "name": "1440: rapid native scroll synchronizes reel at 0.72",
+      "evidence": 0.719841
+    },
+    {
+      "ok": true,
+      "name": "1440: desktop-to-mobile resize retains bounded reel",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reverse resize retains bounded work",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: four concept projects rendered"
+    },
+    {
+      "ok": true,
+      "name": "1920: project links retain real fragment destinations and modal names",
+      "evidence": [
+        {
+          "href": "#project-orbit",
+          "label": "Explore Orbit OS concept study",
+          "controls": "project-orbit-dialog"
+        },
+        {
+          "href": "#project-aera",
+          "label": "Explore Aera Living concept study",
+          "controls": "project-aera-dialog"
+        },
+        {
+          "href": "#project-pulsegrid",
+          "label": "Explore PulseGrid concept study",
+          "controls": "project-pulsegrid-dialog"
+        },
+        {
+          "href": "#project-forma",
+          "label": "Explore Forma Objects concept study",
+          "controls": "project-forma-dialog"
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1920: covers load with truthful aspect ratios and descriptive alt",
+      "evidence": [
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Orbit OS concept artwork in cobalt and navy, combining its identity with an operations interface."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "Aera Living concept artwork with architectural imagery, warm ivory and forest-green branding."
+        },
+        {
+          "natural": [
+            1280,
+            1600
+          ],
+          "declared": [
+            1280,
+            1600
+          ],
+          "alt": "PulseGrid concept artwork in silver and blue, showing a structured workflow system."
+        },
+        {
+          "natural": [
+            1600,
+            1200
+          ],
+          "declared": [
+            1600,
+            1200
+          ],
+          "alt": "Forma Objects concept artwork with sculptural product imagery, ivory and orange branding."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1920: selected work has no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "document": 1920,
+        "work": 1920,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: mouse inspection isolates one project and presents a view cursor",
+      "evidence": {
+        "isolating": true,
+        "active": 1,
+        "filter": "blur(3px) brightness(0.45)",
+        "cursor": true,
+        "cursorBox": {
+          "left": 602.5999755859375,
+          "top": 633.22998046875,
+          "right": 680.5843505859375,
+          "bottom": 673.22998046875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: view cursor stays inside viewport",
+      "evidence": {
+        "left": 602.5999755859375,
+        "top": 633.22998046875,
+        "right": 680.5843505859375,
+        "bottom": 673.22998046875
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: mouse exit restores all projects"
+    },
+    {
+      "ok": true,
+      "name": "1920: keyboard focus has an outline and inspection without a fake pointer",
+      "evidence": {
+        "visible": true,
+        "outline": "solid",
+        "active": true,
+        "cursor": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: native dialog is named, described, focused and scroll locked",
+      "evidence": {
+        "native": true,
+        "labelled": true,
+        "described": true,
+        "focus": true,
+        "scrollLock": "hidden"
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: forward modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "1920: reverse modal focus stays inside"
+    },
+    {
+      "ok": true,
+      "name": "1920: modal has no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "document": 1920,
+        "work": 1920,
+        "dialogs": [
+          {
+            "client": 1198,
+            "scroll": 1198
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: Escape returns focus to project opener"
+    },
+    {
+      "ok": true,
+      "name": "1920: Escape releases background scroll"
+    },
+    {
+      "ok": true,
+      "name": "1920: project CTA closes the dialog and reaches existing contact",
+      "evidence": 88.234375
+    },
+    {
+      "ok": true,
+      "name": "1920: reel seek reaches 0",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "name": "1920: reel progress 0 has no overflow",
+      "evidence": {
+        "width": 1920,
+        "document": 1920,
+        "work": 1920,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: reel seek reaches 0.22",
+      "evidence": 0.22
+    },
+    {
+      "ok": true,
+      "name": "1920: reel progress 0.22 has no overflow",
+      "evidence": {
+        "width": 1920,
+        "document": 1920,
+        "work": 1920,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: reel seek reaches 0.55",
+      "evidence": 0.55
+    },
+    {
+      "ok": true,
+      "name": "1920: reel progress 0.55 has no overflow",
+      "evidence": {
+        "width": 1920,
+        "document": 1920,
+        "work": 1920,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: reel seek reaches 0.82",
+      "evidence": 0.82
+    },
+    {
+      "ok": true,
+      "name": "1920: reel progress 0.82 has no overflow",
+      "evidence": {
+        "width": 1920,
+        "document": 1920,
+        "work": 1920,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: reel seek reaches 1",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "name": "1920: reel progress 1 has no overflow",
+      "evidence": {
+        "width": 1920,
+        "document": 1920,
+        "work": 1920,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: reel reversal returns exact CSS scene at 1"
+    },
+    {
+      "ok": true,
+      "name": "1920: reel reversal returns exact CSS scene at 0.82"
+    },
+    {
+      "ok": true,
+      "name": "1920: reel reversal returns exact CSS scene at 0.55"
+    },
+    {
+      "ok": true,
+      "name": "1920: reel reversal returns exact CSS scene at 0.22"
+    },
+    {
+      "ok": true,
+      "name": "1920: reel reversal returns exact CSS scene at 0"
+    },
+    {
+      "ok": true,
+      "name": "1920: visible muted film plays",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: playing film has a visible 44px pause control",
+      "evidence": {
+        "hidden": false,
+        "height": 44,
+        "label": "Pause filmⅡ",
+        "opacity": 1
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: explicit pause stops film and presents the resume action",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": true,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: resume restarts visible film"
+    },
+    {
+      "ok": true,
+      "name": "1920: dialog event suspends film",
+      "evidence": {
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": true,
+        "playing": false,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": true
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: dialog close resumes eligible film"
+    },
+    {
+      "ok": true,
+      "name": "1920: menu event suspends film"
+    },
+    {
+      "ok": true,
+      "name": "1920: offscreen film suspends"
+    },
+    {
+      "ok": true,
+      "name": "1920: rapid native scroll synchronizes reel at 0.95",
+      "evidence": 0.949735
+    },
+    {
+      "ok": true,
+      "name": "1920: rapid native scroll synchronizes reel at 0.03",
+      "evidence": 0.029762
+    },
+    {
+      "ok": true,
+      "name": "1920: rapid native scroll synchronizes reel at 0.72",
+      "evidence": 0.720238
+    },
+    {
+      "ok": true,
+      "name": "390: no-js readable static poster removes reel scroll distance and video requests",
+      "evidence": {
+        "mode": "static",
+        "live": false,
+        "height": 474.5,
+        "viewport": 474.5,
+        "videoSrc": null,
+        "poster": 1920,
+        "frameTransform": "none",
+        "linkInert": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no-JS project fragment exposes full server-rendered study"
+    },
+    {
+      "ok": true,
+      "name": "390: no-JS study retains contact destination"
+    },
+    {
+      "ok": true,
+      "name": "390: no-JS close returns to selected work"
+    },
+    {
+      "ok": true,
+      "name": "390: no-js layout has no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-js readable static poster removes reel scroll distance and video requests",
+      "evidence": {
+        "mode": "static",
+        "live": false,
+        "height": 974.09375,
+        "viewport": 974.09375,
+        "videoSrc": null,
+        "poster": 1920,
+        "frameTransform": "none",
+        "linkInert": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-JS project fragment exposes full server-rendered study"
+    },
+    {
+      "ok": true,
+      "name": "1440: no-JS study retains contact destination"
+    },
+    {
+      "ok": true,
+      "name": "1440: no-JS close returns to selected work"
+    },
+    {
+      "ok": true,
+      "name": "1440: no-js layout has no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reduced readable static poster removes reel scroll distance and video requests",
+      "evidence": {
+        "mode": "reduced-motion",
+        "live": false,
+        "height": 540.5,
+        "viewport": 540.5,
+        "videoSrc": null,
+        "poster": 1920,
+        "frameTransform": "none",
+        "linkInert": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reduced study still opens accessibly"
+    },
+    {
+      "ok": true,
+      "name": "390: reduced layout has no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reduced reel accessibility",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440: reduced readable static poster removes reel scroll distance and video requests",
+      "evidence": {
+        "mode": "reduced-motion",
+        "live": false,
+        "height": 1040.09375,
+        "viewport": 1040.09375,
+        "videoSrc": null,
+        "poster": 1920,
+        "frameTransform": "none",
+        "linkInert": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reduced study still opens accessibly"
+    },
+    {
+      "ok": true,
+      "name": "1440: reduced layout has no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: save-data readable static poster removes reel scroll distance and video requests",
+      "evidence": {
+        "mode": "save-data",
+        "live": false,
+        "height": 540.5,
+        "viewport": 540.5,
+        "videoSrc": null,
+        "poster": 1920,
+        "frameTransform": "none",
+        "linkInert": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: save-data study still opens accessibly"
+    },
+    {
+      "ok": true,
+      "name": "390: save-data layout has no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "document": 390,
+        "work": 390,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: save-data reel accessibility",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440: save-data readable static poster removes reel scroll distance and video requests",
+      "evidence": {
+        "mode": "save-data",
+        "live": false,
+        "height": 1040.09375,
+        "viewport": 1040.09375,
+        "videoSrc": null,
+        "poster": 1920,
+        "frameTransform": "none",
+        "linkInert": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: save-data study still opens accessibly"
+    },
+    {
+      "ok": true,
+      "name": "1440: save-data layout has no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "document": 1440,
+        "work": 1440,
+        "dialogs": []
+      }
+    },
+    {
+      "ok": true,
+      "name": "No page, console or media loading errors",
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "observations": [
+    "Headless Chromium with SwiftShader verifies deterministic behavior and accessibility. It does not establish real-device frame rate, Core Web Vitals, video decoder efficiency or tactile interaction quality.",
+    "Reversal compares exact progress, transforms and inline scene properties, not video pixels. The film is time-driven and cannot be expected to produce identical frames during natural reversed scrolling.",
+    "No-JavaScript contexts verify the server-rendered fallback and fragment navigation. Axe is run only in scripting-enabled contexts because its injected runtime does not execute when JavaScript is disabled."
+  ]
+}

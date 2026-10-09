@@ -1,0 +1,3178 @@
+{
+  "status": "complete",
+  "target": "http://127.0.0.1:4323/",
+  "passed": 312,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "375: one services section"
+    },
+    {
+      "ok": true,
+      "name": "375: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "375: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "375: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "375: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "375: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "375: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "375: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "375: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "375: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "375: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "375: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "375: services follows the trust section"
+    },
+    {
+      "ok": true,
+      "name": "375: live sequence reserves sufficient native scroll distance"
+    },
+    {
+      "ok": true,
+      "name": "375: scene stage is sticky"
+    },
+    {
+      "ok": true,
+      "name": "375: native forward scroll advances the sequence",
+      "evidence": {
+        "before": 0.11997,
+        "forward": 0.673405
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: reverse scroll restores the same composition",
+      "evidence": {
+        "before": 0.11997,
+        "reverse": 0.11997
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: rapid scroll reversals settle at the final position",
+      "evidence": {
+        "progress": 0.519872,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: no horizontal overflow at 0.02"
+    },
+    {
+      "ok": true,
+      "name": "375: no horizontal overflow at 0.26"
+    },
+    {
+      "ok": true,
+      "name": "375: no horizontal overflow at 0.465"
+    },
+    {
+      "ok": true,
+      "name": "375: no horizontal overflow at 0.67"
+    },
+    {
+      "ok": true,
+      "name": "375: no horizontal overflow at 0.875"
+    },
+    {
+      "ok": true,
+      "name": "375: scrolling reveals the collection and all four service chapters",
+      "evidence": [
+        -1,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ok": true,
+      "name": "375: four service chapter navigation links"
+    },
+    {
+      "ok": true,
+      "name": "375: chapter link 1 reaches its service",
+      "evidence": {
+        "progress": 0.260746,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 0,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: chapter link 2 reaches its service",
+      "evidence": {
+        "progress": 0.464616,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: chapter link 3 reaches its service",
+      "evidence": {
+        "progress": 0.669604,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 2,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: chapter link 4 reaches its service",
+      "evidence": {
+        "progress": 0.874663,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: motion can be paused",
+      "evidence": {
+        "progress": 0.874819,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": false,
+        "paused": true,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: pause suspends all service videos"
+    },
+    {
+      "ok": true,
+      "name": "375: motion resumes explicitly"
+    },
+    {
+      "ok": true,
+      "name": "375: keyboard navigation has a visible focus indicator"
+    },
+    {
+      "ok": true,
+      "name": "375: menu suspends service video playback",
+      "evidence": {
+        "progress": 0.874846,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": true,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "375: Escape closes the menu"
+    },
+    {
+      "ok": true,
+      "name": "375: service CTA reaches contact"
+    },
+    {
+      "ok": true,
+      "name": "375: offscreen videos suspend"
+    },
+    {
+      "ok": true,
+      "name": "390: one services section"
+    },
+    {
+      "ok": true,
+      "name": "390: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "390: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "390: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "390: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "390: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "390: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "390: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "390: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "390: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "390: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "390: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "390: services follows the trust section"
+    },
+    {
+      "ok": true,
+      "name": "390: live sequence reserves sufficient native scroll distance"
+    },
+    {
+      "ok": true,
+      "name": "390: scene stage is sticky"
+    },
+    {
+      "ok": true,
+      "name": "390: native forward scroll advances the sequence",
+      "evidence": {
+        "before": 0.11997,
+        "forward": 0.680079
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: reverse scroll restores the same composition",
+      "evidence": {
+        "before": 0.11997,
+        "reverse": 0.11997
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: rapid scroll reversals settle at the final position",
+      "evidence": {
+        "progress": 0.520118,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no horizontal overflow at 0.02"
+    },
+    {
+      "ok": true,
+      "name": "390: no horizontal overflow at 0.26"
+    },
+    {
+      "ok": true,
+      "name": "390: no horizontal overflow at 0.465"
+    },
+    {
+      "ok": true,
+      "name": "390: no horizontal overflow at 0.67"
+    },
+    {
+      "ok": true,
+      "name": "390: no horizontal overflow at 0.875"
+    },
+    {
+      "ok": true,
+      "name": "390: scrolling reveals the collection and all four service chapters",
+      "evidence": [
+        -1,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ok": true,
+      "name": "390: four service chapter navigation links"
+    },
+    {
+      "ok": true,
+      "name": "390: chapter link 1 reaches its service",
+      "evidence": {
+        "progress": 0.260866,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 0,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: chapter link 2 reaches its service",
+      "evidence": {
+        "progress": 0.464764,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: chapter link 3 reaches its service",
+      "evidence": {
+        "progress": 0.669824,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 2,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: chapter link 4 reaches its service",
+      "evidence": {
+        "progress": 0.874742,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: motion can be paused",
+      "evidence": {
+        "progress": 0.875035,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": false,
+        "paused": true,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: pause suspends all service videos"
+    },
+    {
+      "ok": true,
+      "name": "390: motion resumes explicitly"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard navigation has a visible focus indicator"
+    },
+    {
+      "ok": true,
+      "name": "390: services accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "390: menu suspends service video playback",
+      "evidence": {
+        "progress": 0.669958,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 2,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": true,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: Escape closes the menu"
+    },
+    {
+      "ok": true,
+      "name": "390: service CTA reaches contact"
+    },
+    {
+      "ok": true,
+      "name": "390: offscreen videos suspend"
+    },
+    {
+      "ok": true,
+      "name": "768: one services section"
+    },
+    {
+      "ok": true,
+      "name": "768: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "768: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "768: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "768: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "768: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "768: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "768: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "768: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "768: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "768: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "768: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "768: services follows the trust section"
+    },
+    {
+      "ok": true,
+      "name": "768: live sequence reserves sufficient native scroll distance"
+    },
+    {
+      "ok": true,
+      "name": "768: scene stage is sticky"
+    },
+    {
+      "ok": true,
+      "name": "768: native forward scroll advances the sequence",
+      "evidence": {
+        "before": 0.12,
+        "forward": 0.68
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: reverse scroll restores the same composition",
+      "evidence": {
+        "before": 0.12,
+        "reverse": 0.12
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: rapid scroll reversals settle at the final position",
+      "evidence": {
+        "progress": 0.52,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: no horizontal overflow at 0.02"
+    },
+    {
+      "ok": true,
+      "name": "768: no horizontal overflow at 0.26"
+    },
+    {
+      "ok": true,
+      "name": "768: no horizontal overflow at 0.465"
+    },
+    {
+      "ok": true,
+      "name": "768: no horizontal overflow at 0.67"
+    },
+    {
+      "ok": true,
+      "name": "768: no horizontal overflow at 0.875"
+    },
+    {
+      "ok": true,
+      "name": "768: scrolling reveals the collection and all four service chapters",
+      "evidence": [
+        -1,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ok": true,
+      "name": "768: four service chapter navigation links"
+    },
+    {
+      "ok": true,
+      "name": "768: chapter link 1 reaches its service",
+      "evidence": {
+        "progress": 0.26068,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 0,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: chapter link 2 reaches its service",
+      "evidence": {
+        "progress": 0.464686,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: chapter link 3 reaches its service",
+      "evidence": {
+        "progress": 0.669718,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 2,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: chapter link 4 reaches its service",
+      "evidence": {
+        "progress": 0.874741,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: motion can be paused",
+      "evidence": {
+        "progress": 0.874906,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": false,
+        "paused": true,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: pause suspends all service videos"
+    },
+    {
+      "ok": true,
+      "name": "768: motion resumes explicitly"
+    },
+    {
+      "ok": true,
+      "name": "768: keyboard navigation has a visible focus indicator"
+    },
+    {
+      "ok": true,
+      "name": "768: menu suspends service video playback",
+      "evidence": {
+        "progress": 0.87493,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": true,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "768: Escape closes the menu"
+    },
+    {
+      "ok": true,
+      "name": "768: service CTA reaches contact"
+    },
+    {
+      "ok": true,
+      "name": "768: offscreen videos suspend"
+    },
+    {
+      "ok": true,
+      "name": "1440: one services section"
+    },
+    {
+      "ok": true,
+      "name": "1440: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "1440: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "1440: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "1440: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "1440: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "1440: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "1440: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1440: services follows the trust section"
+    },
+    {
+      "ok": true,
+      "name": "1440: live sequence reserves sufficient native scroll distance"
+    },
+    {
+      "ok": true,
+      "name": "1440: scene stage is sticky"
+    },
+    {
+      "ok": true,
+      "name": "1440: native forward scroll advances the sequence",
+      "evidence": {
+        "before": 0.120085,
+        "forward": 0.680128
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: reverse scroll restores the same composition",
+      "evidence": {
+        "before": 0.120085,
+        "reverse": 0.120085
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: rapid scroll reversals settle at the final position",
+      "evidence": {
+        "progress": 0.520085,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no horizontal overflow at 0.02"
+    },
+    {
+      "ok": true,
+      "name": "1440: no horizontal overflow at 0.26"
+    },
+    {
+      "ok": true,
+      "name": "1440: no horizontal overflow at 0.465"
+    },
+    {
+      "ok": true,
+      "name": "1440: no horizontal overflow at 0.67"
+    },
+    {
+      "ok": true,
+      "name": "1440: no horizontal overflow at 0.875"
+    },
+    {
+      "ok": true,
+      "name": "1440: scrolling reveals the collection and all four service chapters",
+      "evidence": [
+        -1,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1440: four service chapter navigation links"
+    },
+    {
+      "ok": true,
+      "name": "1440: chapter link 1 reaches its service",
+      "evidence": {
+        "progress": 0.261314,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 0,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": true,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: chapter link 2 reaches its service",
+      "evidence": {
+        "progress": 0.46488,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: chapter link 3 reaches its service",
+      "evidence": {
+        "progress": 0.66976,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 2,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: chapter link 4 reaches its service",
+      "evidence": {
+        "progress": 0.874894,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: motion can be paused",
+      "evidence": {
+        "progress": 0.874991,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": false,
+        "paused": true,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: pause suspends all service videos"
+    },
+    {
+      "ok": true,
+      "name": "1440: motion resumes explicitly"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard navigation has a visible focus indicator"
+    },
+    {
+      "ok": true,
+      "name": "1440: services accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440: menu suspends service video playback",
+      "evidence": {
+        "progress": 0.670042,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 2,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": true,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: Escape closes the menu"
+    },
+    {
+      "ok": true,
+      "name": "1440: service CTA reaches contact"
+    },
+    {
+      "ok": true,
+      "name": "1440: offscreen videos suspend"
+    },
+    {
+      "ok": true,
+      "name": "1440 to 390: resize causes no overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440 to 390: deterministic captures remain usable after resize"
+    },
+    {
+      "ok": true,
+      "name": "live preference change: reduced motion switches to static layout",
+      "evidence": {
+        "progress": 0.67,
+        "mode": "static",
+        "enhanced": false,
+        "activeIndex": -1,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: one services section"
+    },
+    {
+      "ok": true,
+      "name": "1920: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "1920: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "1920: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "1920: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "1920: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "1920: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "1920: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "1920: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "1920: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "1920: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "1920: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1920: services follows the trust section"
+    },
+    {
+      "ok": true,
+      "name": "1920: live sequence reserves sufficient native scroll distance"
+    },
+    {
+      "ok": true,
+      "name": "1920: scene stage is sticky"
+    },
+    {
+      "ok": true,
+      "name": "1920: native forward scroll advances the sequence",
+      "evidence": {
+        "before": 0.120085,
+        "forward": 0.679915
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: reverse scroll restores the same composition",
+      "evidence": {
+        "before": 0.120085,
+        "reverse": 0.120085
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: rapid scroll reversals settle at the final position",
+      "evidence": {
+        "progress": 0.520085,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: no horizontal overflow at 0.02"
+    },
+    {
+      "ok": true,
+      "name": "1920: no horizontal overflow at 0.26"
+    },
+    {
+      "ok": true,
+      "name": "1920: no horizontal overflow at 0.465"
+    },
+    {
+      "ok": true,
+      "name": "1920: no horizontal overflow at 0.67"
+    },
+    {
+      "ok": true,
+      "name": "1920: no horizontal overflow at 0.875"
+    },
+    {
+      "ok": true,
+      "name": "1920: scrolling reveals the collection and all four service chapters",
+      "evidence": [
+        -1,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1920: four service chapter navigation links"
+    },
+    {
+      "ok": true,
+      "name": "1920: chapter link 1 reaches its service",
+      "evidence": {
+        "progress": 0.26057,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 0,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": true,
+        "panels": [
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: chapter link 2 reaches its service",
+      "evidence": {
+        "progress": 0.464875,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 1,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: chapter link 3 reaches its service",
+      "evidence": {
+        "progress": 0.669778,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 2,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: chapter link 4 reaches its service",
+      "evidence": {
+        "progress": 0.874732,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": true,
+        "paused": false,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": true,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: motion can be paused",
+      "evidence": {
+        "progress": 0.87497,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": false,
+        "paused": true,
+        "visible": true,
+        "navOpen": false,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: pause suspends all service videos"
+    },
+    {
+      "ok": true,
+      "name": "1920: motion resumes explicitly"
+    },
+    {
+      "ok": true,
+      "name": "1920: keyboard navigation has a visible focus indicator"
+    },
+    {
+      "ok": true,
+      "name": "1920: menu suspends service video playback",
+      "evidence": {
+        "progress": 0.875,
+        "mode": "live",
+        "enhanced": true,
+        "activeIndex": 3,
+        "playing": false,
+        "paused": false,
+        "visible": true,
+        "navOpen": true,
+        "dialogOpen": false,
+        "framesPending": false,
+        "panels": [
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": false,
+            "hidden": true,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          },
+          {
+            "active": true,
+            "hidden": false,
+            "loaded": true,
+            "playing": false,
+            "failed": false
+          }
+        ]
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920: Escape closes the menu"
+    },
+    {
+      "ok": true,
+      "name": "1920: service CTA reaches contact"
+    },
+    {
+      "ok": true,
+      "name": "1920: offscreen videos suspend"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: one services section"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: no sticky scroll reservation"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: unused motion control is hidden"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: no horizontal overflow"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: service 1 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: service 2 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: service 3 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: service 4 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: no autoplaying service videos"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: one services section"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: no sticky scroll reservation"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: unused motion control is hidden"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: no horizontal overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: service 1 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: service 2 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: service 3 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: service 4 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: no autoplaying service videos"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: one services section"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": false,
+          "width": 0,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": false,
+          "width": 0,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: no sticky scroll reservation"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: unused motion control is hidden"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: no horizontal overflow"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: service 1 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: service 2 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: service 3 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: service 4 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: no autoplaying service videos"
+    },
+    {
+      "ok": true,
+      "name": "reduced: services accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: one services section"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": false,
+          "width": 0,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": false,
+          "width": 0,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: no sticky scroll reservation"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: unused motion control is hidden"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: no horizontal overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: service 1 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: service 2 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: service 3 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: service 4 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: no autoplaying service videos"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: one services section"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": false,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": false,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: no sticky scroll reservation"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: unused motion control is hidden"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: no horizontal overflow"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: service 1 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: service 2 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: service 3 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: service 4 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: no autoplaying service videos"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: one services section"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: services destination is unique"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: pricing destination is preserved"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: four service chapters remain in HTML"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: Websites service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: Automations service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: AI service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: Apps service is present"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: every service has a heading"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: every service offers a contact action"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: published package prices are retained"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: all services have local scene images",
+      "evidence": [
+        {
+          "src": "http://127.0.0.1:4323/media/services/websites.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "An illuminated blue interface suspended in a dark architectural studio."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/automations.webp",
+          "complete": true,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Precision silver modules joined by luminous blue connections."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/ai-assistants.webp",
+          "complete": false,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Translucent knowledge layers arranged around a glowing blue core."
+        },
+        {
+          "src": "http://127.0.0.1:4323/media/services/apps-portals.webp",
+          "complete": false,
+          "width": 1600,
+          "loading": "lazy",
+          "alt": "Layered product interfaces and modular panels in a blue-lit studio."
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: no sticky scroll reservation"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: unused motion control is hidden"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: no horizontal overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: service 1 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: service 2 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: service 3 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: service 4 remains readable and interactive"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: no autoplaying service videos"
+    },
+    {
+      "ok": true,
+      "name": "no page or console errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

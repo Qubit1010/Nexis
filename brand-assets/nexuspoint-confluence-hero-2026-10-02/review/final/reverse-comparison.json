@@ -1,0 +1,14 @@
+{
+  "excludes": "Fixed header and development toolbar excluded from pixel comparison",
+  "before": "b4cd6aba392dc6e5f8399a3fe61caa72fe991e287cc6a74348924aed9c7ce54f",
+  "after": "b4cd6aba392dc6e5f8399a3fe61caa72fe991e287cc6a74348924aed9c7ce54f",
+  "stats": {
+    "triangles": 67714,
+    "calls": 10,
+    "progress": 0.62,
+    "framesRendered": 5,
+    "resting": true,
+    "mode": "live"
+  },
+  "ok": true
+}

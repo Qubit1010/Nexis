@@ -1,0 +1,25 @@
+{
+  "url": "http://127.0.0.1:4323/",
+  "form": "mobile",
+  "runs": 1,
+  "summary": {
+    "performance": 54,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100,
+    "lcpMs": 3520,
+    "cls": 0,
+    "tbtMs": 4250
+  },
+  "rows": [
+    {
+      "performance": 54,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 3520,
+      "cls": 0,
+      "tbtMs": 4250
+    }
+  ]
+}

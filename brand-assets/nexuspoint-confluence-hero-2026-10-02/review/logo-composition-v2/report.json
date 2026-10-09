@@ -1,0 +1,40 @@
+{
+  "url": "http://localhost:4321/",
+  "capturedAt": "2026-10-02T13:50:51.069Z",
+  "options": {
+    "widths": [
+      390,
+      1440
+    ],
+    "frames": 4,
+    "full": false,
+    "video": false,
+    "reducedMotion": false,
+    "headed": false,
+    "noJs": false,
+    "noWebgl": false
+  },
+  "files": [
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\logo-composition-v2\\390.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\logo-composition-v2\\frames\\390-00.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\logo-composition-v2\\frames\\390-01.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\logo-composition-v2\\frames\\390-02.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\logo-composition-v2\\frames\\390-03.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\logo-composition-v2\\1440.png"
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "warnings": [],
+  "fontsLoaded": {
+    "390": {
+      "Conthrax": true,
+      "Inter": true
+    },
+    "1440": {
+      "Conthrax": true,
+      "Inter": true
+    }
+  },
+  "captureError": "Error: page.screenshot: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\qubit\\AppData\\Local\\ms-playwright\\chromium-1243\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --use-angle=swiftshader --enable-unsafe-swiftshader --user-data-dir=C:\\Users\\qubit\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-PtcmLA --remote-debugging-pipe --no-startup-window\n<launched> pid=6744\n[pid=6744][err] [6744:14508:1002/185053.002:ERROR:chrome\\installer\\util\\google_update_settings_win.cc:270] Failed opening key Software\\Chrome for Testing to set usagestats; result: 5\n[pid=6744][err] [6744:36704:1002/185057.216:ERROR:services\\device\\public\\cpp\\geolocation\\system_geolocation_source_win.cc:124] Failed to create IAppCapability: Access is denied. (0x80070005)\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n"
+}

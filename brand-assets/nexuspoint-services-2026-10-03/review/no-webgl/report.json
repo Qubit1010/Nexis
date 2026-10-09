@@ -1,0 +1,61 @@
+{
+  "target": "http://127.0.0.1:4323/",
+  "passed": 13,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "390: unavailable WebGL removes the hero's extra scroll reservation"
+    },
+    {
+      "ok": true,
+      "name": "390: static hero heading stays readable"
+    },
+    {
+      "ok": true,
+      "name": "390: static logo poster remains available"
+    },
+    {
+      "ok": true,
+      "name": "390: services still reveal the AI chapter without WebGL"
+    },
+    {
+      "ok": true,
+      "name": "390: service contact action remains available"
+    },
+    {
+      "ok": true,
+      "name": "390: no overflow without WebGL"
+    },
+    {
+      "ok": true,
+      "name": "1440: unavailable WebGL removes the hero's extra scroll reservation"
+    },
+    {
+      "ok": true,
+      "name": "1440: static hero heading stays readable"
+    },
+    {
+      "ok": true,
+      "name": "1440: static logo poster remains available"
+    },
+    {
+      "ok": true,
+      "name": "1440: services still reveal the AI chapter without WebGL"
+    },
+    {
+      "ok": true,
+      "name": "1440: service contact action remains available"
+    },
+    {
+      "ok": true,
+      "name": "1440: no overflow without WebGL"
+    },
+    {
+      "ok": true,
+      "name": "no page or console errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

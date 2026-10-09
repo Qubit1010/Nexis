@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-02",
+  "method": "Actual local portfolio webfonts rendered in Chrome, native SVG logo, imagegen background",
+  "recommended": "Conthrax",
+  "dimensions": [
+    1584,
+    396
+  ],
+  "variants": [
+    {
+      "family": "Conthrax",
+      "declaredFamily": "Conthrax",
+      "fontSize": "62px",
+      "fontStyle": "normal",
+      "nameScrollWidth": 942,
+      "availableWidth": 942,
+      "width": 1584,
+      "height": 396,
+      "fontReady": true,
+      "loadedFonts": [
+        "Conthrax",
+        "Ethnocentric",
+        "Nasalization",
+        "Mokoto",
+        "Gambetta",
+        "Inter"
+      ],
+      "missingImages": 0,
+      "exportWidth": 1584,
+      "exportHeight": 396
+    },
+    {
+      "family": "Ethnocentric",
+      "declaredFamily": "Ethnocentric",
+      "fontSize": "62px",
+      "fontStyle": "normal",
+      "nameScrollWidth": 942,
+      "availableWidth": 942,
+      "width": 1584,
+      "height": 396,
+      "fontReady": true,
+      "loadedFonts": [
+        "Conthrax",
+        "Ethnocentric",
+        "Nasalization",
+        "Mokoto",
+        "Gambetta",
+        "Inter"
+      ],
+      "missingImages": 0,
+      "exportWidth": 1584,
+      "exportHeight": 396
+    },
+    {
+      "family": "Nasalization",
+      "declaredFamily": "Nasalization",
+      "fontSize": "62px",
+      "fontStyle": "normal",
+      "nameScrollWidth": 942,
+      "availableWidth": 942,
+      "width": 1584,
+      "height": 396,
+      "fontReady": true,
+      "loadedFonts": [
+        "Conthrax",
+        "Ethnocentric",
+        "Nasalization",
+        "Mokoto",
+        "Gambetta",
+        "Inter"
+      ],
+      "missingImages": 0,
+      "exportWidth": 1584,
+      "exportHeight": 396
+    },
+    {
+      "family": "Mokoto",
+      "declaredFamily": "Mokoto",
+      "fontSize": "62px",
+      "fontStyle": "normal",
+      "nameScrollWidth": 942,
+      "availableWidth": 942,
+      "width": 1584,
+      "height": 396,
+      "fontReady": true,
+      "loadedFonts": [
+        "Conthrax",
+        "Ethnocentric",
+        "Nasalization",
+        "Mokoto",
+        "Gambetta",
+        "Inter"
+      ],
+      "missingImages": 0,
+      "exportWidth": 1584,
+      "exportHeight": 396
+    },
+    {
+      "family": "Gambetta",
+      "declaredFamily": "Gambetta",
+      "fontSize": "62px",
+      "fontStyle": "italic",
+      "nameScrollWidth": 942,
+      "availableWidth": 942,
+      "width": 1584,
+      "height": 396,
+      "fontReady": true,
+      "loadedFonts": [
+        "Conthrax",
+        "Ethnocentric",
+        "Nasalization",
+        "Mokoto",
+        "Gambetta",
+        "Inter"
+      ],
+      "missingImages": 0,
+      "exportWidth": 1584,
+      "exportHeight": 396
+    }
+  ],
+  "errors": []
+}

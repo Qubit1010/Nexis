@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-03",
+  "preview": "http://127.0.0.1:4323/",
+  "browserAssertions": 568.0,
+  "failures": 0,
+  "suites": [
+    {
+      "suite": "report.json",
+      "passed": 312,
+      "failed": 0,
+      "errors": 0,
+      "target": "http://127.0.0.1:4323/"
+    },
+    {
+      "suite": "trust/report.json",
+      "passed": 123,
+      "failed": 0,
+      "errors": 0,
+      "target": "http://127.0.0.1:4323/"
+    },
+    {
+      "suite": "trust-velocity/report.json",
+      "passed": 23,
+      "failed": 0,
+      "errors": 0,
+      "target": "http://127.0.0.1:4323/"
+    },
+    {
+      "suite": "aux/report.json",
+      "passed": 77,
+      "failed": 0,
+      "errors": 0,
+      "target": "http://127.0.0.1:4323/"
+    },
+    {
+      "suite": "module-fallback/report.json",
+      "passed": 20,
+      "failed": 0,
+      "errors": 0,
+      "target": "http://127.0.0.1:4323/"
+    },
+    {
+      "suite": "no-webgl/report.json",
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "target": "http://127.0.0.1:4323/"
+    }
+  ],
+  "astro": {
+    "errors": 0,
+    "warnings": 0,
+    "existingHints": 1
+  },
+  "buildAssertions": 56,
+  "brandAssertions": 29,
+  "copyLint": "clean",
+  "lighthouse": {
+    "physicalDeviceMotionVerified": false,
+    "runsPerProfile": 1,
+    "mobile": {
+      "performance": 98,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2337,
+      "cls": 0,
+      "tbtMs": 69
+    },
+    "desktop": {
+      "performance": 100,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 551,
+      "cls": 0,
+      "tbtMs": 58
+    }
+  },
+  "mediaEstimates": {
+    "approvedCap": 15,
+    "recordedTotal": 7.38,
+    "billingReconciled": false,
+    "serviceFilms": 7.14
+  },
+  "sourceHashes": [
+    {
+      "file": "src/components/home/Services.astro",
+      "sha256": "B2B8EC79FF4E294B04C391F3D107890EE9F78B1CE08B375B9EB68B0C1CB2E531"
+    },
+    {
+      "file": "src/components/home/TrustedBy.astro",
+      "sha256": "A17D78E695933070F9494675A6CBA46C2111FD181C686C3989DFC4638814255A"
+    },
+    {
+      "file": "src/components/home/Pricing.astro",
+      "sha256": "D9D9EA9B9AAA6AB4B1D533B6A4D3B9273A54C264CFE88F761FCB291E365C3B2D"
+    },
+    {
+      "file": "src/scripts/services.ts",
+      "sha256": "AE5CC348631E72611F006E33D520D5BD1B724D40BC4B5B598714819558967D9E"
+    },
+    {
+      "file": "src/scripts/trust.ts",
+      "sha256": "B92A919D00A6254FF23EDF115F4F3EC9D982F4FD19021A398C823D817E3C4E3D"
+    },
+    {
+      "file": "src/scripts/home.ts",
+      "sha256": "A95D362D250E2B80B67FC66D7BD3D42210A5D0D81140E0AF226524FB1657D4D7"
+    },
+    {
+      "file": "src/data/services.ts",
+      "sha256": "24F9FEBBB4858A44A97340F965A99DE5F9CBC6A66DA06AF5CCE7A4EB70C8BBA4"
+    },
+    {
+      "file": "src/pages/index.astro",
+      "sha256": "59D179A419ACD20F3E3D8B13EB8E0BF92EE2E81DCDF8A61B5B0C6B7B8D24AEAA"
+    }
+  ]
+}

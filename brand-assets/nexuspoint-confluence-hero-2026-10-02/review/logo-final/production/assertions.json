@@ -1,0 +1,7363 @@
+{
+  "target": "http://127.0.0.1:4323/",
+  "at": "2026-10-02T14:17:40.434Z",
+  "rows": [
+    {
+      "ok": true,
+      "detail": "live@375: one server-rendered opening H1"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: opening headline fits",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "right": 299.34375,
+        "bottom": 206.34375,
+        "width": 275.34375,
+        "height": 81.34375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: extended scroll distance",
+      "evidence": {
+        "heroHeight": 3572.796875,
+        "height": 812
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375: fallback image loaded"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 20,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 20,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 21,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 21,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 351,
+            "bottom": 289.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 273.578125,
+            "width": 327,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 351,
+          "bottom": 289.171875,
+          "width": 327,
+          "height": 100.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 22,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 22,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 351,
+            "bottom": 255.578125,
+            "width": 327,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 351,
+          "bottom": 255.578125,
+          "width": 327,
+          "height": 67.1875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 23,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 23,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 273.578125,
+            "width": 327,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 351,
+            "bottom": 289.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 351,
+          "bottom": 289.171875,
+          "width": 327,
+          "height": 100.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=1: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=1: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 695.796875,
+          "right": 203.28125,
+          "bottom": 745.796875,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.703125,
+          "right": 330.515625,
+          "bottom": 742.890625,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=1: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=1: accurate normalized progress",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=1: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 24,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=1: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 24,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 25,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 25,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 273.578125,
+            "width": 327,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 351,
+            "bottom": 289.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 351,
+          "bottom": 289.171875,
+          "width": 327,
+          "height": 100.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 26,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 26,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 351,
+            "bottom": 255.578125,
+            "width": 327,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 351,
+          "bottom": 255.578125,
+          "width": 327,
+          "height": 67.1875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 27,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 27,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 351,
+            "bottom": 289.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 273.578125,
+            "width": 327,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 351,
+          "bottom": 289.171875,
+          "width": 327,
+          "height": 100.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 28,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 28,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@375: GPU renderer rests",
+      "evidence": {
+        "before": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 28,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 28,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: one server-rendered opening H1"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: opening headline fits",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "right": 304.390625,
+        "bottom": 207.8125,
+        "width": 280.390625,
+        "height": 82.8125
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: extended scroll distance",
+      "evidence": {
+        "heroHeight": 3713.59375,
+        "height": 844
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390: fallback image loaded"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 6,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 6,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 7,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 7,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 366,
+            "bottom": 289.171875,
+            "width": 342,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 273.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 273.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 366,
+          "bottom": 289.171875,
+          "width": 342,
+          "height": 100.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 8,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 8,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 307.171875,
+            "width": 342,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 366,
+            "bottom": 255.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 273.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 366,
+          "bottom": 255.578125,
+          "width": 342,
+          "height": 67.1875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 9,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 9,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 307.171875,
+            "width": 342,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 273.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 366,
+            "bottom": 255.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 366,
+          "bottom": 255.578125,
+          "width": 342,
+          "height": 67.1875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=1: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=1: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 727.59375,
+          "right": 203.28125,
+          "bottom": 777.59375,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.5,
+          "right": 330.515625,
+          "bottom": 774.6875,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=1: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=1: accurate normalized progress",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=1: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 10,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=1: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 10,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 11,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 11,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 307.171875,
+            "width": 342,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 273.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 366,
+            "bottom": 255.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 366,
+          "bottom": 255.578125,
+          "width": 342,
+          "height": 67.1875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 12,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 12,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 307.171875,
+            "width": 342,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 366,
+            "bottom": 255.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 273.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 366,
+          "bottom": 255.578125,
+          "width": 342,
+          "height": 67.1875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 13,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 13,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 366,
+            "bottom": 289.171875,
+            "width": 342,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 273.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 366,
+            "bottom": 273.578125,
+            "width": 342,
+            "height": 67.1875
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 366,
+          "bottom": 289.171875,
+          "width": 342,
+          "height": 100.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 14,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 14,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@390 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@390: GPU renderer rests",
+      "evidence": {
+        "before": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 14,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 14,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "keyboard opens mobile menu during narrative"
+    },
+    {
+      "ok": true,
+      "detail": "Tab reaches mobile navigation link"
+    },
+    {
+      "ok": true,
+      "detail": "Escape closes mobile menu"
+    },
+    {
+      "ok": true,
+      "detail": "Escape returns focus to menu control"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 18,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 18,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 676.578125,
+            "bottom": 449.75,
+            "width": 612.5,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 576.4375,
+            "bottom": 449.75,
+            "width": 512.359375,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 319,
+            "right": 643.25,
+            "bottom": 431.75,
+            "width": 579.171875,
+            "height": 112.75
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 64.078125,
+          "y": 319,
+          "right": 643.25,
+          "bottom": 431.75,
+          "width": 579.171875,
+          "height": 112.75
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 696,
+          "right": 203.28125,
+          "bottom": 746,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 698.90625,
+          "right": 330.515625,
+          "bottom": 743.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 20,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 20,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 351,
+            "bottom": 289.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 273.578125,
+            "width": 327,
+            "height": 67.1875
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 351,
+            "bottom": 307.171875,
+            "width": 327,
+            "height": 100.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@375 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 351,
+          "bottom": 289.171875,
+          "width": 327,
+          "height": 100.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: one server-rendered opening H1"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: opening headline fits",
+      "evidence": {
+        "x": 24,
+        "y": 125,
+        "right": 513.5,
+        "bottom": 269.625,
+        "width": 489.5,
+        "height": 144.625
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: extended scroll distance",
+      "evidence": {
+        "heroHeight": 4505.59375,
+        "height": 1024
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768: fallback image loaded"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 902,
+          "right": 234.5,
+          "bottom": 952,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 903.296875,
+          "right": 377.265625,
+          "bottom": 950.6875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 7,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 7,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 902,
+          "right": 234.5,
+          "bottom": 952,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 903.296875,
+          "right": 377.265625,
+          "bottom": 950.6875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 8,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 8,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 744,
+            "bottom": 294.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 744,
+          "bottom": 294.765625,
+          "width": 720,
+          "height": 106.375
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 902,
+          "right": 234.5,
+          "bottom": 952,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 903.296875,
+          "right": 377.265625,
+          "bottom": 950.6875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 9,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 9,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 744,
+            "bottom": 294.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 744,
+          "bottom": 294.765625,
+          "width": 720,
+          "height": 106.375
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 902,
+          "right": 234.5,
+          "bottom": 952,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 903.296875,
+          "right": 377.265625,
+          "bottom": 950.6875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 10,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 10,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 744,
+            "bottom": 294.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 744,
+          "bottom": 294.765625,
+          "width": 720,
+          "height": 106.375
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=1: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=1: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 901.59375,
+          "right": 234.5,
+          "bottom": 951.59375,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 902.890625,
+          "right": 377.265625,
+          "bottom": 950.28125,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=1: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=1: accurate normalized progress",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=1: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 11,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=1: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 11,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 902,
+          "right": 234.5,
+          "bottom": 952,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 903.296875,
+          "right": 377.265625,
+          "bottom": 950.6875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 12,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 12,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 744,
+            "bottom": 294.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 744,
+          "bottom": 294.765625,
+          "width": 720,
+          "height": 106.375
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 902,
+          "right": 234.5,
+          "bottom": 952,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 903.296875,
+          "right": 377.265625,
+          "bottom": 950.6875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 13,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 13,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 744,
+            "bottom": 294.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 744,
+          "bottom": 294.765625,
+          "width": 720,
+          "height": 106.375
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 902,
+          "right": 234.5,
+          "bottom": 952,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 903.296875,
+          "right": 377.265625,
+          "bottom": 950.6875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 14,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 14,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 24,
+            "y": 188.390625,
+            "right": 744,
+            "bottom": 294.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 24,
+            "y": 206.390625,
+            "right": 744,
+            "bottom": 312.765625,
+            "width": 720,
+            "height": 106.375
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 24,
+          "y": 188.390625,
+          "right": 744,
+          "bottom": 294.765625,
+          "width": 720,
+          "height": 106.375
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 902,
+          "right": 234.5,
+          "bottom": 952,
+          "width": 210.5,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 258.5,
+          "y": 903.296875,
+          "right": 377.265625,
+          "bottom": 950.6875,
+          "width": 118.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 15,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 15,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@768 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@768: GPU renderer rests",
+      "evidence": {
+        "before": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 15,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 15,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: one server-rendered opening H1"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: opening headline fits",
+      "evidence": {
+        "x": 64.078125,
+        "y": 533.0625,
+        "right": 1034.890625,
+        "bottom": 729,
+        "width": 970.8125,
+        "height": 195.9375
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: extended scroll distance",
+      "evidence": {
+        "heroHeight": 4500,
+        "height": 900
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: fallback image loaded"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 7,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 7,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 8,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 8,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 319,
+            "right": 676.578125,
+            "bottom": 431.75,
+            "width": 612.5,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 576.4375,
+            "bottom": 449.75,
+            "width": 512.359375,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 643.25,
+            "bottom": 449.75,
+            "width": 579.171875,
+            "height": 112.75
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 64.078125,
+          "y": 319,
+          "right": 676.578125,
+          "bottom": 431.75,
+          "width": 612.5,
+          "height": 112.75
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 9,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 9,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 676.578125,
+            "bottom": 449.75,
+            "width": 612.5,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 319,
+            "right": 576.4375,
+            "bottom": 431.75,
+            "width": 512.359375,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 643.25,
+            "bottom": 449.75,
+            "width": 579.171875,
+            "height": 112.75
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 64.078125,
+          "y": 319,
+          "right": 576.4375,
+          "bottom": 431.75,
+          "width": 512.359375,
+          "height": 112.75
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 10,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 10,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 676.578125,
+            "bottom": 449.75,
+            "width": 612.5,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 576.4375,
+            "bottom": 449.75,
+            "width": 512.359375,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 319,
+            "right": 643.25,
+            "bottom": 431.75,
+            "width": 579.171875,
+            "height": 112.75
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 64.078125,
+          "y": 319,
+          "right": 643.25,
+          "bottom": 431.75,
+          "width": 579.171875,
+          "height": 112.75
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=1: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=1: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=1: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=1: accurate normalized progress",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=1: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 11,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=1: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 11,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 12,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 12,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 676.578125,
+            "bottom": 449.75,
+            "width": 612.5,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 576.4375,
+            "bottom": 449.75,
+            "width": 512.359375,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 319,
+            "right": 643.25,
+            "bottom": 431.75,
+            "width": 579.171875,
+            "height": 112.75
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 64.078125,
+          "y": 319,
+          "right": 643.25,
+          "bottom": 431.75,
+          "width": 579.171875,
+          "height": 112.75
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 13,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 13,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 676.578125,
+            "bottom": 449.75,
+            "width": 612.5,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 319,
+            "right": 576.4375,
+            "bottom": 431.75,
+            "width": 512.359375,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 643.25,
+            "bottom": 449.75,
+            "width": 579.171875,
+            "height": 112.75
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 64.078125,
+          "y": 319,
+          "right": 576.4375,
+          "bottom": 431.75,
+          "width": 512.359375,
+          "height": 112.75
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 14,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 14,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 319,
+            "right": 676.578125,
+            "bottom": 431.75,
+            "width": 612.5,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 576.4375,
+            "bottom": 449.75,
+            "width": 512.359375,
+            "height": 112.75
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 64.078125,
+            "y": 337,
+            "right": 643.25,
+            "bottom": 449.75,
+            "width": 579.171875,
+            "height": 112.75
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 64.078125,
+          "y": 319,
+          "right": 676.578125,
+          "bottom": 431.75,
+          "width": 612.5,
+          "height": 112.75
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 15,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 15,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1440 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@1440: GPU renderer rests",
+      "evidence": {
+        "before": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 15,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 15,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reverse scroll reproduces exact logo scene without development chrome",
+      "evidence": {
+        "before": "c52e876892ae764698a53663ab9c8da43159a51eb5d40cc7289bd2dc8d6f3d49",
+        "after": "c52e876892ae764698a53663ab9c8da43159a51eb5d40cc7289bd2dc8d6f3d49"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "rapid native scrolling converges to correct final assembly"
+    },
+    {
+      "ok": true,
+      "detail": "dynamic reduced motion resets narrative and disposes scene",
+      "evidence": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": -3096,
+          "right": 1440,
+          "bottom": -2196,
+          "width": 1440,
+          "height": 900
+        },
+        "view": {
+          "x": 0,
+          "y": -3096,
+          "right": 1440,
+          "bottom": -2196,
+          "width": 1440,
+          "height": 900
+        },
+        "mode": "reduced-motion",
+        "progress": 0.86,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 64.078125,
+          "y": -2562.9375,
+          "right": 1034.890625,
+          "bottom": -2367,
+          "width": 970.8125,
+          "height": 195.9375
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": -2759,
+              "right": 676.578125,
+              "bottom": -2646.25,
+              "width": 612.5,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": -2759,
+              "right": 576.4375,
+              "bottom": -2646.25,
+              "width": 512.359375,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": -2759,
+              "right": 643.25,
+              "bottom": -2646.25,
+              "width": 579.171875,
+              "height": 112.75
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 64.078125,
+            "y": -2314,
+            "right": 284.578125,
+            "bottom": -2260,
+            "width": 220.5,
+            "height": 54,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 316.578125,
+            "y": -2310.703125,
+            "right": 449.34375,
+            "bottom": -2263.3125,
+            "width": 132.765625,
+            "height": 47.390625,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: one server-rendered opening H1"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: opening headline fits",
+      "evidence": {
+        "x": 85.4375,
+        "y": 617.78125,
+        "right": 1358.875,
+        "bottom": 874.8125,
+        "width": 1273.4375,
+        "height": 257.03125
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: extended scroll distance",
+      "evidence": {
+        "heroHeight": 5400,
+        "height": 1080
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: fallback image loaded"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 8,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 8,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 9,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 9,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 371.1875,
+            "right": 877.46875,
+            "bottom": 516.96875,
+            "width": 792.03125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 747.96875,
+            "bottom": 534.96875,
+            "width": 662.53125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 834.375,
+            "bottom": 534.96875,
+            "width": 748.9375,
+            "height": 145.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 85.4375,
+          "y": 371.1875,
+          "right": 877.46875,
+          "bottom": 516.96875,
+          "width": 792.03125,
+          "height": 145.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 10,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 10,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 877.46875,
+            "bottom": 534.96875,
+            "width": 792.03125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 371.1875,
+            "right": 747.96875,
+            "bottom": 516.96875,
+            "width": 662.53125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 834.375,
+            "bottom": 534.96875,
+            "width": 748.9375,
+            "height": 145.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 85.4375,
+          "y": 371.1875,
+          "right": 747.96875,
+          "bottom": 516.96875,
+          "width": 662.53125,
+          "height": 145.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 11,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 11,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 877.46875,
+            "bottom": 534.96875,
+            "width": 792.03125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 747.96875,
+            "bottom": 534.96875,
+            "width": 662.53125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 371.1875,
+            "right": 834.375,
+            "bottom": 516.96875,
+            "width": 748.9375,
+            "height": 145.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 85.4375,
+          "y": 371.1875,
+          "right": 834.375,
+          "bottom": 516.96875,
+          "width": 748.9375,
+          "height": 145.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=1: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=1: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=1: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=1: accurate normalized progress",
+      "evidence": 1
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=1: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 12,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=1: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 1,
+        "framesRendered": 12,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: accurate normalized progress",
+      "evidence": 0.86
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 13,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10196,
+        "calls": 12,
+        "segments": 19,
+        "assembled": true,
+        "progress": 0.86,
+        "framesRendered": 13,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 877.46875,
+            "bottom": 534.96875,
+            "width": 792.03125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 747.96875,
+            "bottom": 534.96875,
+            "width": 662.53125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 371.1875,
+            "right": 834.375,
+            "bottom": 516.96875,
+            "width": 748.9375,
+            "height": 145.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.86: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Different expertise.\nOne coherent system.",
+        "headingRect": {
+          "x": 85.4375,
+          "y": 371.1875,
+          "right": 834.375,
+          "bottom": 516.96875,
+          "width": 748.9375,
+          "height": 145.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: accurate normalized progress",
+      "evidence": 0.58
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 14,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.58,
+        "framesRendered": 14,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 877.46875,
+            "bottom": 534.96875,
+            "width": 792.03125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 371.1875,
+            "right": 747.96875,
+            "bottom": 516.96875,
+            "width": 662.53125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 834.375,
+            "bottom": 534.96875,
+            "width": 748.9375,
+            "height": 145.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.58: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "The connections\nchange everything.",
+        "headingRect": {
+          "x": 85.4375,
+          "y": 371.1875,
+          "right": 747.96875,
+          "bottom": 516.96875,
+          "width": 662.53125,
+          "height": 145.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: accurate normalized progress",
+      "evidence": 0.33
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 15,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0.33,
+        "framesRendered": 15,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: opening recedes accessibly"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: one accessible narrative phase",
+      "evidence": [
+        {
+          "opacity": 1,
+          "hidden": "false",
+          "heading": "Independent expertise.\nA shared direction.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 371.1875,
+            "right": 877.46875,
+            "bottom": 516.96875,
+            "width": 792.03125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "The connections\nchange everything.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 747.96875,
+            "bottom": 534.96875,
+            "width": 662.53125,
+            "height": 145.78125
+          }
+        },
+        {
+          "opacity": 0,
+          "hidden": "true",
+          "heading": "Different expertise.\nOne coherent system.",
+          "headingRect": {
+            "x": 85.4375,
+            "y": 389.1875,
+            "right": 834.375,
+            "bottom": 534.96875,
+            "width": 748.9375,
+            "height": 145.78125
+          }
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0.33: phase headline fits clear of CTAs",
+      "evidence": {
+        "opacity": 1,
+        "hidden": "false",
+        "heading": "Independent expertise.\nA shared direction.",
+        "headingRect": {
+          "x": 85.4375,
+          "y": 371.1875,
+          "right": 877.46875,
+          "bottom": 516.96875,
+          "width": 792.03125,
+          "height": 145.78125
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: no horizontal overflow",
+      "evidence": {
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 85.4375,
+          "y": 962,
+          "right": 305.9375,
+          "bottom": 1016,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 337.9375,
+          "y": 965.296875,
+          "right": 470.703125,
+          "bottom": 1012.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: accurate normalized progress",
+      "evidence": 0
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: 19 actual-logo pieces",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 16,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: correct assembled-logo state",
+      "evidence": {
+        "triangles": 10302,
+        "calls": 40,
+        "segments": 19,
+        "assembled": false,
+        "progress": 0,
+        "framesRendered": 16,
+        "resting": true,
+        "mode": "live"
+      }
+    },
+    {
+      "ok": true,
+      "detail": "live@1920 p=0: readable opening without narrative overlap"
+    },
+    {
+      "ok": true,
+      "detail": "live@1920: GPU renderer rests",
+      "evidence": {
+        "before": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 16,
+          "resting": true,
+          "mode": "live"
+        },
+        "after": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "progress": 0,
+          "framesRendered": 16,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@390: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@390: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "static@390: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "static@390: readable normal-height fallback",
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "mode": "static",
+        "progress": 0,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 24,
+          "y": 125,
+          "right": 304.390625,
+          "bottom": 207.8125,
+          "width": 280.390625,
+          "height": 82.8125
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 307.171875,
+              "width": 342,
+              "height": 100.78125
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 273.578125,
+              "width": 342,
+              "height": 67.1875
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 273.578125,
+              "width": 342,
+              "height": 67.1875
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 24,
+            "y": 728,
+            "right": 203.28125,
+            "bottom": 778,
+            "width": 179.28125,
+            "height": 50,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 227.28125,
+            "y": 730.90625,
+            "right": 330.515625,
+            "bottom": 775.09375,
+            "width": 103.234375,
+            "height": 44.1875,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@390: fallback poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "static@390: logo runtime not fetched"
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: readable normal-height fallback",
+      "evidence": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "right": 1440,
+          "bottom": 900,
+          "width": 1440,
+          "height": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "right": 1440,
+          "bottom": 900,
+          "width": 1440,
+          "height": 900
+        },
+        "mode": "static",
+        "progress": 0,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 64.078125,
+          "y": 533.0625,
+          "right": 1034.890625,
+          "bottom": 729,
+          "width": 970.8125,
+          "height": 195.9375
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 676.578125,
+              "bottom": 449.75,
+              "width": 612.5,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 576.4375,
+              "bottom": 449.75,
+              "width": 512.359375,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 643.25,
+              "bottom": 449.75,
+              "width": 579.171875,
+              "height": 112.75
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 64.078125,
+            "y": 782,
+            "right": 284.578125,
+            "bottom": 836,
+            "width": 220.5,
+            "height": 54,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 316.578125,
+            "y": 785.296875,
+            "right": 449.34375,
+            "bottom": 832.6875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: fallback poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "static@1440: logo runtime not fetched"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: readable normal-height fallback",
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "mode": "reduced-motion",
+        "progress": 0,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 24,
+          "y": 125,
+          "right": 304.390625,
+          "bottom": 207.8125,
+          "width": 280.390625,
+          "height": 82.8125
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 307.171875,
+              "width": 342,
+              "height": 100.78125
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 273.578125,
+              "width": 342,
+              "height": 67.1875
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 273.578125,
+              "width": 342,
+              "height": 67.1875
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 24,
+            "y": 728,
+            "right": 203.28125,
+            "bottom": 778,
+            "width": 179.28125,
+            "height": 50,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 227.28125,
+            "y": 730.90625,
+            "right": 330.515625,
+            "bottom": 775.09375,
+            "width": 103.234375,
+            "height": 44.1875,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: fallback poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@390: logo runtime not fetched"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: readable normal-height fallback",
+      "evidence": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "right": 1440,
+          "bottom": 900,
+          "width": 1440,
+          "height": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "right": 1440,
+          "bottom": 900,
+          "width": 1440,
+          "height": 900
+        },
+        "mode": "reduced-motion",
+        "progress": 0,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 64.078125,
+          "y": 533.0625,
+          "right": 1034.890625,
+          "bottom": 729,
+          "width": 970.8125,
+          "height": 195.9375
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 676.578125,
+              "bottom": 449.75,
+              "width": 612.5,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 576.4375,
+              "bottom": 449.75,
+              "width": 512.359375,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 643.25,
+              "bottom": 449.75,
+              "width": 579.171875,
+              "height": 112.75
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 64.078125,
+            "y": 782,
+            "right": 284.578125,
+            "bottom": 836,
+            "width": 220.5,
+            "height": 54,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 316.578125,
+            "y": 785.296875,
+            "right": 449.34375,
+            "bottom": 832.6875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: fallback poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "reduced-motion@1440: logo runtime not fetched"
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: readable normal-height fallback",
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "mode": "no-webgl",
+        "progress": 0,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 24,
+          "y": 125,
+          "right": 304.390625,
+          "bottom": 207.8125,
+          "width": 280.390625,
+          "height": 82.8125
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 307.171875,
+              "width": 342,
+              "height": 100.78125
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 273.578125,
+              "width": 342,
+              "height": 67.1875
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 273.578125,
+              "width": 342,
+              "height": 67.1875
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 24,
+            "y": 728,
+            "right": 203.28125,
+            "bottom": 778,
+            "width": 179.28125,
+            "height": 50,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 227.28125,
+            "y": 730.90625,
+            "right": 330.515625,
+            "bottom": 775.09375,
+            "width": 103.234375,
+            "height": 44.1875,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: fallback poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@390: logo runtime not fetched"
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: readable normal-height fallback",
+      "evidence": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "right": 1440,
+          "bottom": 900,
+          "width": 1440,
+          "height": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "right": 1440,
+          "bottom": 900,
+          "width": 1440,
+          "height": 900
+        },
+        "mode": "no-webgl",
+        "progress": 0,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 64.078125,
+          "y": 533.0625,
+          "right": 1034.890625,
+          "bottom": 729,
+          "width": 970.8125,
+          "height": 195.9375
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 676.578125,
+              "bottom": 449.75,
+              "width": 612.5,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 576.4375,
+              "bottom": 449.75,
+              "width": 512.359375,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 643.25,
+              "bottom": 449.75,
+              "width": 579.171875,
+              "height": 112.75
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 64.078125,
+            "y": 782,
+            "right": 284.578125,
+            "bottom": 836,
+            "width": 220.5,
+            "height": 54,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 316.578125,
+            "y": 785.296875,
+            "right": 449.34375,
+            "bottom": 832.6875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: fallback poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "no-webgl@1440: logo runtime not fetched"
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: no horizontal overflow",
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 24,
+          "y": 728,
+          "right": 203.28125,
+          "bottom": 778,
+          "width": 179.28125,
+          "height": 50,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 227.28125,
+          "y": 730.90625,
+          "right": 330.515625,
+          "bottom": 775.09375,
+          "width": 103.234375,
+          "height": 44.1875,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: readable normal-height fallback",
+      "evidence": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "right": 390,
+          "bottom": 844,
+          "width": 390,
+          "height": 844
+        },
+        "mode": "save-data",
+        "progress": 0,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 24,
+          "y": 125,
+          "right": 304.390625,
+          "bottom": 207.8125,
+          "width": 280.390625,
+          "height": 82.8125
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 307.171875,
+              "width": 342,
+              "height": 100.78125
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 273.578125,
+              "width": 342,
+              "height": 67.1875
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 24,
+              "y": 206.390625,
+              "right": 366,
+              "bottom": 273.578125,
+              "width": 342,
+              "height": 67.1875
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 24,
+            "y": 728,
+            "right": 203.28125,
+            "bottom": 778,
+            "width": 179.28125,
+            "height": 50,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 227.28125,
+            "y": 730.90625,
+            "right": 330.515625,
+            "bottom": 775.09375,
+            "width": 103.234375,
+            "height": 44.1875,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: fallback poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "save-data@390: logo runtime not fetched"
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: no horizontal overflow",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: both persistent CTAs visible and focusable",
+      "evidence": [
+        {
+          "x": 64.078125,
+          "y": 782,
+          "right": 284.578125,
+          "bottom": 836,
+          "width": 220.5,
+          "height": 54,
+          "href": "#contact",
+          "inert": false,
+          "opacity": 1
+        },
+        {
+          "x": 316.578125,
+          "y": 785.296875,
+          "right": 449.34375,
+          "bottom": 832.6875,
+          "width": 132.765625,
+          "height": 47.390625,
+          "href": "#reviews",
+          "inert": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: agreed CTA targets"
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: readable normal-height fallback",
+      "evidence": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "right": 1440,
+          "bottom": 900,
+          "width": 1440,
+          "height": 900
+        },
+        "view": {
+          "x": 0,
+          "y": 0,
+          "right": 1440,
+          "bottom": 900,
+          "width": 1440,
+          "height": 900
+        },
+        "mode": "save-data",
+        "progress": 0,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 64.078125,
+          "y": 533.0625,
+          "right": 1034.890625,
+          "bottom": 729,
+          "width": 970.8125,
+          "height": 195.9375
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 676.578125,
+              "bottom": 449.75,
+              "width": 612.5,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 576.4375,
+              "bottom": 449.75,
+              "width": 512.359375,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": 337,
+              "right": 643.25,
+              "bottom": 449.75,
+              "width": 579.171875,
+              "height": 112.75
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 64.078125,
+            "y": 782,
+            "right": 284.578125,
+            "bottom": 836,
+            "width": 220.5,
+            "height": 54,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 316.578125,
+            "y": 785.296875,
+            "right": 449.34375,
+            "bottom": 832.6875,
+            "width": 132.765625,
+            "height": 47.390625,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: fallback poster loads"
+    },
+    {
+      "ok": true,
+      "detail": "save-data@1440: logo runtime not fetched"
+    },
+    {
+      "ok": true,
+      "detail": "context loss restores complete static fallback",
+      "evidence": {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "hero": {
+          "x": 0,
+          "y": -2088,
+          "right": 1440,
+          "bottom": -1188,
+          "width": 1440,
+          "height": 900
+        },
+        "view": {
+          "x": 0,
+          "y": -2088,
+          "right": 1440,
+          "bottom": -1188,
+          "width": 1440,
+          "height": 900
+        },
+        "mode": "context-lost",
+        "progress": 0.58,
+        "h1Count": 1,
+        "h1": "Built at the intersection.",
+        "h1Rect": {
+          "x": 64.078125,
+          "y": -1554.9375,
+          "right": 1034.890625,
+          "bottom": -1359,
+          "width": 970.8125,
+          "height": 195.9375
+        },
+        "openingOpacity": 1,
+        "openingInert": false,
+        "stages": [
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Independent expertise.\nA shared direction.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": -1751,
+              "right": 676.578125,
+              "bottom": -1638.25,
+              "width": 612.5,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "The connections\nchange everything.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": -1751,
+              "right": 576.4375,
+              "bottom": -1638.25,
+              "width": 512.359375,
+              "height": 112.75
+            }
+          },
+          {
+            "opacity": 0,
+            "hidden": "true",
+            "heading": "Different expertise.\nOne coherent system.",
+            "headingRect": {
+              "x": 64.078125,
+              "y": -1751,
+              "right": 643.25,
+              "bottom": -1638.25,
+              "width": 579.171875,
+              "height": 112.75
+            }
+          }
+        ],
+        "ctas": [
+          {
+            "x": 64.078125,
+            "y": -1306,
+            "right": 284.578125,
+            "bottom": -1252,
+            "width": 220.5,
+            "height": 54,
+            "href": "#contact",
+            "inert": false,
+            "opacity": 1
+          },
+          {
+            "x": 316.578125,
+            "y": -1302.703125,
+            "right": 449.34375,
+            "bottom": -1255.3125,
+            "width": 132.765625,
+            "height": 47.390625,
+            "href": "#reviews",
+            "inert": false,
+            "opacity": 1
+          }
+        ],
+        "poster": true,
+        "canvasCount": 0
+      }
+    },
+    {
+      "ok": true,
+      "detail": "direct #reviews retains anchor after longer hero enhancement",
+      "evidence": 0.203125
+    },
+    {
+      "ok": true,
+      "detail": "simulated BFCache retains logo scene at #reviews"
+    },
+    {
+      "ok": true,
+      "detail": "persistent reviews CTA activates by keyboard from final narrative"
+    },
+    {
+      "ok": true,
+      "detail": "direct #contact retains anchor after longer hero enhancement",
+      "evidence": -0.359375
+    },
+    {
+      "ok": true,
+      "detail": "simulated BFCache retains logo scene at #contact"
+    },
+    {
+      "ok": true,
+      "detail": "persistent contact CTA activates by keyboard from final narrative"
+    },
+    {
+      "ok": true,
+      "detail": "no browser console/page/HTTP errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

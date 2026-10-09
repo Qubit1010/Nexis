@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:4323/",
+  "form": "desktop",
+  "runs": 3,
+  "summary": {
+    "performance": 71,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100,
+    "lcpMs": 523,
+    "cls": 0,
+    "tbtMs": 832
+  },
+  "rows": [
+    {
+      "performance": 70,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 538,
+      "cls": 0,
+      "tbtMs": 959
+    },
+    {
+      "performance": 100,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 523,
+      "cls": 0.001,
+      "tbtMs": 57
+    },
+    {
+      "performance": 71,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 510,
+      "cls": 0,
+      "tbtMs": 832
+    }
+  ]
+}

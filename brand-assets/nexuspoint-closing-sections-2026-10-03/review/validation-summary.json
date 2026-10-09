@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-03",
+  "preview": "http://127.0.0.1:4323/#reviews",
+  "sourceHashFile": "source-hashes-final.json",
+  "astroCheck": {
+    "errors": 0,
+    "hints": 3,
+    "warnings": 0
+  },
+  "build": {
+    "pages": 18,
+    "status": "passed",
+    "assertions": 56
+  },
+  "brandAssertions": 29,
+  "copyLint": {
+    "status": "clean",
+    "files": 18
+  },
+  "browser": {
+    "errors": 0,
+    "failed": 0,
+    "report": "validated-final-browser-report.json",
+    "passed": 242
+  },
+  "performance": {
+    "sampleRuns": 1,
+    "report": "performance-final/lighthouse/mobile-summary.json",
+    "result": {
+      "performance": 80,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpMs": 2835,
+      "cls": 0,
+      "tbtMs": 414
+    },
+    "limitation": "Software Chromium timing sample; physical-device frame rates unverified."
+  },
+  "deployed": false
+}

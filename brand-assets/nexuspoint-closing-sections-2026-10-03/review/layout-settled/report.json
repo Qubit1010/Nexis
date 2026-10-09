@@ -1,0 +1,183 @@
+{
+  "status": "complete",
+  "target": "http://127.0.0.1:4323/",
+  "selection": "layout",
+  "passed": 13,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "375x667: full review width remains visible",
+      "evidence": {
+        "x": 34,
+        "y": 347.921875,
+        "right": 341.5,
+        "bottom": 907.28125,
+        "width": 307.5,
+        "height": 559.359375
+      }
+    },
+    {
+      "ok": true,
+      "name": "375x667: all closing section layouts fit the page"
+    },
+    {
+      "ok": true,
+      "name": "768x1024: full review width remains visible",
+      "evidence": {
+        "x": 213.71875,
+        "y": 434.203125,
+        "right": 553.71875,
+        "bottom": 939.46875,
+        "width": 340,
+        "height": 505.265625
+      }
+    },
+    {
+      "ok": true,
+      "name": "768x1024: all closing section layouts fit the page"
+    },
+    {
+      "ok": true,
+      "name": "1050x740: full review width remains visible",
+      "evidence": {
+        "x": 335.375,
+        "y": 317.4375,
+        "right": 715.375,
+        "bottom": 668.4375,
+        "width": 380,
+        "height": 351
+      }
+    },
+    {
+      "ok": true,
+      "name": "1050x740: sticky review quote and controls clear the viewport edge",
+      "evidence": {
+        "controls": {
+          "x": 465.5,
+          "y": 682.4375,
+          "right": 564.5,
+          "bottom": 724.4375,
+          "width": 99,
+          "height": 42
+        },
+        "quote": {
+          "x": 360.375,
+          "y": 476.328125,
+          "right": 690.375,
+          "bottom": 594.046875,
+          "width": 330,
+          "height": 117.71875
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1050x740: process panels span the full wrapper",
+      "evidence": {
+        "board": {
+          "x": 47.25,
+          "y": 778.359375,
+          "right": 1002.75,
+          "bottom": 1238.359375,
+          "width": 955.5,
+          "height": 460
+        },
+        "wrap": {
+          "x": 47.25,
+          "y": 192.15625,
+          "right": 1002.75,
+          "bottom": 1304.953125,
+          "width": 955.5,
+          "height": 1112.796875
+        },
+        "last": {
+          "x": 882.15625,
+          "y": 778.359375,
+          "right": 1002.75,
+          "bottom": 1238.359375,
+          "width": 120.59375,
+          "height": 460
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1050x740: all closing section layouts fit the page"
+    },
+    {
+      "ok": true,
+      "name": "1920x1080: full review width remains visible",
+      "evidence": {
+        "x": 1258.796875,
+        "y": 373.125,
+        "right": 1803.796875,
+        "bottom": 1008.125,
+        "width": 545,
+        "height": 635
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920x1080: sticky review quote and controls clear the viewport edge",
+      "evidence": {
+        "controls": {
+          "x": 900.5,
+          "y": 1022.125,
+          "right": 999.5,
+          "bottom": 1064.125,
+          "width": 99,
+          "height": 42
+        },
+        "quote": {
+          "x": 1283.796875,
+          "y": 790.09375,
+          "right": 1778.796875,
+          "bottom": 933.734375,
+          "width": 495,
+          "height": 143.640625
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920x1080: process panels span the full wrapper",
+      "evidence": {
+        "board": {
+          "x": 86.390625,
+          "y": 1017.484375,
+          "right": 1833.609375,
+          "bottom": 1647.484375,
+          "width": 1747.21875,
+          "height": 630
+        },
+        "wrap": {
+          "x": 86.390625,
+          "y": 257.6875,
+          "right": 1833.609375,
+          "bottom": 1714.078125,
+          "width": 1747.21875,
+          "height": 1456.390625
+        },
+        "last": {
+          "x": 1607.453125,
+          "y": 1017.484375,
+          "right": 1833.609375,
+          "bottom": 1647.484375,
+          "width": 226.15625,
+          "height": 630
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1920x1080: all closing section layouts fit the page"
+    },
+    {
+      "ok": true,
+      "name": "browser produced no uncaught page or console errors",
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

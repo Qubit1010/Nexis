@@ -1,0 +1,711 @@
+{
+  "status": "complete",
+  "target": "http://127.0.0.1:4323/",
+  "checkedAt": "2026-10-02T17:16:35.118Z",
+  "passed": 57,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "390: live #work initial load preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 87.78125,
+        "bottom": 2815.390625,
+        "margin": 80,
+        "window": 844,
+        "scroll": 5356,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #work initial load has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: live #work reload preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 87.78125,
+        "bottom": 2815.390625,
+        "margin": 80,
+        "window": 844,
+        "scroll": 5356,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #work reload has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: live #work: forward mouse wheel advances scene",
+      "evidence": {
+        "before": 0.25,
+        "after": {
+          "settled": true,
+          "progress": 0.452596,
+          "visible": true,
+          "loaded": true,
+          "paused": false,
+          "blocked": false,
+          "failed": false,
+          "manualPlayback": false,
+          "playing": true,
+          "readyState": 4,
+          "mode": "live",
+          "enhanced": true,
+          "reserved": false,
+          "menuOpen": false,
+          "dialogOpen": false,
+          "scroll": 4115
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #work: forward wheel settles before reversal",
+      "evidence": {
+        "settled": true,
+        "elapsed": 1474.5000000005584,
+        "stableFrames": 36,
+        "scroll": 4335,
+        "progress": 0.700903,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #work: reverse mouse wheel reverses scene",
+      "evidence": {
+        "before": 0.700903,
+        "after": {
+          "settled": true,
+          "elapsed": 1396.4000000003725,
+          "stableFrames": 24,
+          "scroll": 4035,
+          "progress": 0.362303,
+          "visible": true,
+          "loaded": true,
+          "paused": false,
+          "blocked": false,
+          "failed": false,
+          "manualPlayback": false,
+          "playing": true,
+          "readyState": 4,
+          "mode": "live",
+          "enhanced": true,
+          "reserved": false,
+          "menuOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #work: PageDown advances scene",
+      "evidence": {
+        "before": 0.3,
+        "after": {
+          "settled": true,
+          "progress": 1,
+          "visible": true,
+          "loaded": true,
+          "paused": false,
+          "blocked": false,
+          "failed": false,
+          "manualPlayback": false,
+          "playing": true,
+          "readyState": 1,
+          "mode": "live",
+          "enhanced": true,
+          "reserved": false,
+          "menuOpen": false,
+          "dialogOpen": false,
+          "scroll": 4717
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #work: PageDown settles before reversal",
+      "evidence": {
+        "settled": true,
+        "elapsed": 302.50000000055843,
+        "stableFrames": 33,
+        "scroll": 4717,
+        "progress": 1,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #work: PageUp reverses scene",
+      "evidence": {
+        "before": 1,
+        "after": {
+          "settled": true,
+          "elapsed": 304.5000000007449,
+          "stableFrames": 20,
+          "scroll": 3979,
+          "progress": 0.299097,
+          "visible": true,
+          "loaded": true,
+          "paused": false,
+          "blocked": false,
+          "failed": false,
+          "manualPlayback": false,
+          "playing": true,
+          "readyState": 4,
+          "mode": "live",
+          "enhanced": true,
+          "reserved": false,
+          "menuOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #work: visibilitychange handler pauses when document reports hidden"
+    },
+    {
+      "ok": true,
+      "name": "390: live #work: visibilitychange handler resumes when visible",
+      "evidence": {
+        "settled": true,
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "scroll": 4440
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #reviews initial load preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 88.3125,
+        "bottom": 3720.75,
+        "margin": 0,
+        "window": 844,
+        "scroll": 15622,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #reviews initial load has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: live #reviews reload preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 88.3125,
+        "bottom": 3720.75,
+        "margin": 0,
+        "window": 844,
+        "scroll": 15622,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: live #reviews reload has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #work initial load preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 88.1875,
+        "bottom": 2815.796875,
+        "margin": 80,
+        "window": 844,
+        "scroll": 2486,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #work initial load has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #work initial load removes the unavailable hero's extra scroll distance",
+      "evidence": {
+        "live": false,
+        "height": 844,
+        "viewport": 844,
+        "mode": "no-webgl"
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #work reload preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 88.1875,
+        "bottom": 2815.796875,
+        "margin": 80,
+        "window": 844,
+        "scroll": 2486,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #work reload has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #work reload removes the unavailable hero's extra scroll distance",
+      "evidence": {
+        "live": false,
+        "height": 844,
+        "viewport": 844,
+        "mode": "no-webgl"
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #reviews initial load preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 87.71875,
+        "bottom": 3720.15625,
+        "margin": 0,
+        "window": 844,
+        "scroll": 12753,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #reviews initial load has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #reviews initial load removes the unavailable hero's extra scroll distance",
+      "evidence": {
+        "live": false,
+        "height": 844,
+        "viewport": 844,
+        "mode": "no-webgl"
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #reviews reload preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 87.71875,
+        "bottom": 3720.15625,
+        "margin": 0,
+        "window": 844,
+        "scroll": 12753,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #reviews reload has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "390: no-WebGL #reviews reload removes the unavailable hero's extra scroll distance",
+      "evidence": {
+        "live": false,
+        "height": 844,
+        "viewport": 844,
+        "mode": "no-webgl"
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work initial load preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 88,
+        "bottom": 2630.65625,
+        "margin": 88,
+        "window": 900,
+        "scroll": 6572,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work initial load has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work reload preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 88,
+        "bottom": 2630.65625,
+        "margin": 88,
+        "window": 900,
+        "scroll": 6572,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work reload has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work: forward mouse wheel advances scene",
+      "evidence": {
+        "before": 0.25,
+        "after": {
+          "settled": true,
+          "progress": 0.371429,
+          "visible": true,
+          "loaded": true,
+          "paused": false,
+          "blocked": false,
+          "failed": false,
+          "manualPlayback": false,
+          "playing": true,
+          "readyState": 4,
+          "mode": "live",
+          "enhanced": true,
+          "reserved": false,
+          "menuOpen": false,
+          "dialogOpen": false,
+          "scroll": 4968
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work: forward wheel settles before reversal",
+      "evidence": {
+        "settled": true,
+        "elapsed": 1569.0000000007449,
+        "stableFrames": 31,
+        "scroll": 5215,
+        "progress": 0.56746,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work: reverse mouse wheel reverses scene",
+      "evidence": {
+        "before": 0.56746,
+        "after": {
+          "settled": true,
+          "elapsed": 1501.3999999999996,
+          "stableFrames": 12,
+          "scroll": 4915,
+          "progress": 0.329365,
+          "visible": true,
+          "loaded": true,
+          "paused": false,
+          "blocked": false,
+          "failed": false,
+          "manualPlayback": false,
+          "playing": true,
+          "readyState": 4,
+          "mode": "live",
+          "enhanced": true,
+          "reserved": false,
+          "menuOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work: PageDown advances scene",
+      "evidence": {
+        "before": 0.3,
+        "after": {
+          "settled": true,
+          "progress": 0.370635,
+          "visible": true,
+          "loaded": true,
+          "paused": false,
+          "blocked": false,
+          "failed": false,
+          "manualPlayback": false,
+          "playing": true,
+          "readyState": 1,
+          "mode": "live",
+          "enhanced": true,
+          "reserved": false,
+          "menuOpen": false,
+          "dialogOpen": false,
+          "scroll": 4967
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work: PageDown settles before reversal",
+      "evidence": {
+        "settled": true,
+        "elapsed": 338.3000000005586,
+        "stableFrames": 31,
+        "scroll": 5665,
+        "progress": 0.924603,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 4,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work: PageUp reverses scene",
+      "evidence": {
+        "before": 0.924603,
+        "after": {
+          "settled": true,
+          "elapsed": 427.5000000003729,
+          "stableFrames": 6,
+          "scroll": 4878,
+          "progress": 0.3,
+          "visible": true,
+          "loaded": true,
+          "paused": false,
+          "blocked": false,
+          "failed": false,
+          "manualPlayback": false,
+          "playing": true,
+          "readyState": 4,
+          "mode": "live",
+          "enhanced": true,
+          "reserved": false,
+          "menuOpen": false,
+          "dialogOpen": false
+        }
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work: visibilitychange handler pauses when document reports hidden"
+    },
+    {
+      "ok": true,
+      "name": "1440: live #work: visibilitychange handler resumes when visible",
+      "evidence": {
+        "settled": true,
+        "progress": 0.82,
+        "visible": true,
+        "loaded": true,
+        "paused": false,
+        "blocked": false,
+        "failed": false,
+        "manualPlayback": false,
+        "playing": true,
+        "readyState": 1,
+        "mode": "live",
+        "enhanced": true,
+        "reserved": false,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "scroll": 5533
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #reviews initial load preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 87.859375,
+        "bottom": 1882.75,
+        "margin": 0,
+        "window": 900,
+        "scroll": 14390,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #reviews initial load has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: live #reviews reload preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 87.859375,
+        "bottom": 1882.75,
+        "margin": 0,
+        "window": 900,
+        "scroll": 14390,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: live #reviews reload has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #work initial load preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 88,
+        "bottom": 2630.65625,
+        "margin": 88,
+        "window": 900,
+        "scroll": 2972,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #work initial load has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #work initial load removes the unavailable hero's extra scroll distance",
+      "evidence": {
+        "live": false,
+        "height": 900,
+        "viewport": 900,
+        "mode": "no-webgl"
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #work reload preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 88,
+        "bottom": 2630.65625,
+        "margin": 88,
+        "window": 900,
+        "scroll": 2972,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #work reload has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #work reload removes the unavailable hero's extra scroll distance",
+      "evidence": {
+        "live": false,
+        "height": 900,
+        "viewport": 900,
+        "mode": "no-webgl"
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #reviews initial load preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 87.859375,
+        "bottom": 1882.75,
+        "margin": 0,
+        "window": 900,
+        "scroll": 10790,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #reviews initial load has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #reviews initial load removes the unavailable hero's extra scroll distance",
+      "evidence": {
+        "live": false,
+        "height": 900,
+        "viewport": 900,
+        "mode": "no-webgl"
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #reviews reload preserves intended anchor placement after both async enhancements",
+      "evidence": {
+        "top": 87.859375,
+        "bottom": 1882.75,
+        "margin": 0,
+        "window": 900,
+        "scroll": 10790,
+        "expected": 88
+      }
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #reviews reload has no page overflow"
+    },
+    {
+      "ok": true,
+      "name": "1440: no-WebGL #reviews reload removes the unavailable hero's extra scroll distance",
+      "evidence": {
+        "live": false,
+        "height": 900,
+        "viewport": 900,
+        "mode": "no-webgl"
+      }
+    },
+    {
+      "ok": true,
+      "name": "No page or console errors during anchors, no-WebGL or browser inputs",
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "390: live #work: headless Chromium keeps document.hidden=false even after another tab is foregrounded. Native visibility could not be simulated honestly. Checking visibilitychange handler with a controlled hidden getter instead.",
+    "1440: live #work: headless Chromium keeps document.hidden=false even after another tab is foregrounded. Native visibility could not be simulated honestly. Checking visibilitychange handler with a controlled hidden getter instead."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "symbol": {
+    "white_outline_IoU": 0.9833708286464192,
+    "boundary_distance_source_pixels_mean": 0.34319067001342773,
+    "boundary_distance_source_pixels_p95": 1.0,
+    "boundary_distance_source_pixels_max": 1.0
+  },
+  "wordmark": {
+    "white_outline_IoU": 0.9654475720841038,
+    "boundary_distance_source_pixels_mean": 0.3957446813583374,
+    "boundary_distance_source_pixels_p95": 1.0,
+    "boundary_distance_source_pixels_max": 1.399999976158142
+  },
+  "svg_count": 28,
+  "all_svgs_native_paths_no_embedded_raster_or_font_dependency": true,
+  "portfolio_blue_core_rgba": [
+    2,
+    161,
+    225,
+    255
+  ],
+  "ico_sizes": [
+    [
+      16,
+      16
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      48,
+      48
+    ],
+    [
+      64,
+      64
+    ],
+    [
+      256,
+      256
+    ]
+  ],
+  "approved_reference_sha256": "239041b0e4cabcedd8bb4e8ba9203ca59ec2cd0708352bc568d68bc9b0eed84f",
+  "small_size_visual_review": "16px remains identifiable but fold seams and hooked tips lose detail. Full-detail symbol is clear at 32/64px. Recommended symbol minimum 32px and preferred 48px or more. No geometry simplification applied.",
+  "limitations": "This is an editable contour reconstruction of a generated raster, not an original designer vector. The fitted circle is flat exact blue. Slight original raster irregularities are retained. Wordmark is custom outlined geometry; no named typeface claim."
+}

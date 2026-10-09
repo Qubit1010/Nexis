@@ -1,0 +1,35 @@
+{
+  "url": "http://127.0.0.1:4321/",
+  "capturedAt": "2026-10-02T13:09:55.142Z",
+  "options": {
+    "widths": [
+      390,
+      1440
+    ],
+    "frames": 0,
+    "full": false,
+    "video": false,
+    "reducedMotion": true,
+    "headed": false,
+    "noJs": false,
+    "noWebgl": false
+  },
+  "files": [
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\reduced-motion\\390.png",
+    "C:\\Users\\qubit\\OneDrive\\Documents\\Automations\\Nexis\\brand-assets\\nexuspoint-confluence-hero-2026-10-02\\review\\final\\reduced-motion\\1440.png"
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "warnings": [],
+  "fontsLoaded": {
+    "390": {
+      "Conthrax": true,
+      "Inter": true
+    },
+    "1440": {
+      "Conthrax": true,
+      "Inter": true
+    }
+  }
+}

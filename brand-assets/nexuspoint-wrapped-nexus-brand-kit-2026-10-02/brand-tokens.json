@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "brand": "NexusPoint",
+  "identity": "Wrapped Nexus",
+  "date": "2026-10-02",
+  "source": {
+    "portfolio": "https://www.aleemuh.com/",
+    "extraction": "sources/extracted-style.json",
+    "logo": "logos/nexuspoint-outline-master.svg"
+  },
+  "colors": {
+    "accent": "#02A1E1",
+    "accentHover": "#0289BF",
+    "accentOnLight": "#0079AA",
+    "ink": "#000000",
+    "surface": "#101010",
+    "line": "#1D1E1F",
+    "bandDeep": "#060607",
+    "white": "#FFFFFF",
+    "logoNavy": "#02040A",
+    "textSecondary": "#CCCCCC",
+    "textMuted": "#8A8A8A",
+    "uiBoundary": "#646464",
+    "success": "#4ADE80",
+    "warning": "#FBBF24",
+    "error": "#F87171"
+  },
+  "provenance": {
+    "measuredPortfolio": [
+      "accent",
+      "accentHover",
+      "ink",
+      "surface",
+      "line",
+      "bandDeep",
+      "white"
+    ],
+    "derivedForKit": [
+      "accentOnLight",
+      "textSecondary",
+      "textMuted",
+      "uiBoundary"
+    ],
+    "retainedLogo": [
+      "logoNavy"
+    ],
+    "functionalExistingAgency": [
+      "success",
+      "warning",
+      "error"
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "Ethnocentric",
+      "weight": 400,
+      "lineHeight": 1.08,
+      "letterSpacing": "-0.01em",
+      "size": "clamp(44px, calc(8px + 6.9vw), 104px)",
+      "license": "Acquire applicable desktop/web license; binaries excluded from shared handoff"
+    },
+    "section": {
+      "family": "Mokoto",
+      "weight": 400,
+      "license": "Acquire commercial use license; binaries excluded"
+    },
+    "subheading": {
+      "family": "Conthrax",
+      "cssRequestedWeight": 300,
+      "availableFaceWeight": 400,
+      "currentFreeFoundryStyle": "SemiBold",
+      "portfolioBinaryStyle": "Conthrax-SemiBold",
+      "portfolioBinaryVersion": "3.000",
+      "license": "Acquire applicable license; binaries excluded"
+    },
+    "navigation": {
+      "family": "Nasalization",
+      "weight": 400,
+      "letterSpacing": "0.02em",
+      "license": "Acquire applicable license; binaries excluded"
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        300,
+        400,
+        500
+      ],
+      "size": 16,
+      "lineHeight": 1.6,
+      "license": "SIL Open Font License; bundled"
+    },
+    "editorial": {
+      "family": "Gambetta",
+      "weight": 300,
+      "style": "italic",
+      "license": "ITF FFL 2.0; acquire directly; external font redistribution prohibited"
+    },
+    "logoWordmark": {
+      "type": "Outlined artwork",
+      "family": "Custom reconstructed glyph paths; no exact typeface attribution"
+    },
+    "portableDefault": {
+      "family": "Inter",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "license": "OFL"
+    }
+  },
+  "spacing": {
+    "unit": 4,
+    "scale": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64,
+      96,
+      128
+    ]
+  },
+  "radii": {
+    "sharp": 2,
+    "card": 10,
+    "pill": 500
+  },
+  "breakpoints": {
+    "sm": 640,
+    "md": 768,
+    "lg": 1024,
+    "xl": 1280,
+    "2xl": 1536
+  },
+  "layout": {
+    "decorativeGrid": 76,
+    "decorativeGridOpacity": 0.043,
+    "blueHaloMaxOpacity": 0.13,
+    "contentMaxWidth": 1280,
+    "columns": 12,
+    "gutter": 24,
+    "contentMaxWidthProvenance": "Measured live portfolio value",
+    "columnsProvenance": "Proposed kit value"
+  },
+  "motion": {
+    "ease": "cubic-bezier(.25,1,.5,1)",
+    "durationFast": 180,
+    "durationStandard": 280,
+    "respectReducedMotion": true
+  },
+  "logo": {
+    "minimumFullLockupWidth": 240,
+    "minimumFullDetailSymbol": 32,
+    "preferredSymbolSize": 48,
+    "clearSpace": "One centre-dot diameter on all sides; x approximately 0.28 of symbol height"
+  }
+}

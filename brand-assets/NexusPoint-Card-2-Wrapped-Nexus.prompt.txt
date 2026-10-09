@@ -1,0 +1,27 @@
+Use case: precise-object-edit / compositing.
+Asset type: existing two-sided business-card presentation mockup.
+Image 1 is the EDIT TARGET, the current NexusPoint business card front and back on a grey photographic background.
+Image 2 is the approved NEW HORIZONTAL LOGO, white Wrapped Nexus symbol and white NexusPoint wordmark with a #02A1E1 blue central circle.
+Image 3 is the approved NEW STACKED LOGO, the same Wrapped Nexus symbol above the same one-line NexusPoint wordmark.
+
+Primary request: replace ONLY the two old Nexus Point logos in image 1 with the approved new logos. Completely remove the old angular N and its circuit branches, old split Nexus / Point lettering, and the old stylized P. The new symbol must exactly follow the white opposing curled ribbons forming an N around a blue circular centre shown in images 2 and 3. Preserve the precise new logo geometry, gaps, letter shapes, wordmark spelling, flat white and blue. Do not redraw or reinterpret the logo.
+
+Top/front card: use image 2 as a wide, centred horizontal lockup with generous clear space in the existing central logo area, above the unchanged tagline. Use the transparent appearance of the logo without adding a black rectangular image patch; blend the background naturally into the existing black card surface. New logo must be the dominant branding element, but leave the tagline in its existing position.
+Bottom/back card: use image 3 as a smaller stacked lockup fitting inside the existing left branding column above the unchanged QR code, keeping clear space from the curved blue separator and QR. Use the same wordmark as the approved artwork, with no line break inside NexusPoint.
+
+INVARIANTS: preserve the original card sizes, rounded corners, layout, camera angle, grey diagonal backdrop, lighting, shadows, black textures, blue decorative waves, separators, small phone and web icons, all typography outside the two replaced logo regions, and all contact information. The QR code is functional machine-readable artwork: copy its exact black-and-white module pattern and white quiet zone from image 1 unchanged, do not regenerate or stylize any QR modules. Do not alter any phone digits.
+
+All unchanged text must remain legible and VERBATIM:
+"AI Systems & Automation"
+"Aleem Ul Hassan"
+"Co-founder"
+"03108820568"
+"Kaleem Ul Hassan"
+"Co-founder"
+"03118340514"
+"M. Talha Zafar"
+"Lead Developer"
+"03184461377"
+"nexus-point.co"
+
+Colour for the new logos' centre dots: exact portfolio blue #02A1E1, RGB 2,161,225. Existing decorative styling is retained. No added slogan, labels, new contact information, watermark, extra card, or arbitrary new element. Return a single high-resolution square image of the updated mockup, retaining the original composition.

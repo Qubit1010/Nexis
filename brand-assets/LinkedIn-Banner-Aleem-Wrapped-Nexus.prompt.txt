@@ -1,0 +1,20 @@
+Use case: ads-marketing / logo-brand.
+Asset type: LinkedIn PERSONAL PROFILE background banner for Aleem Ul Hassan.
+Canvas: exactly 1584 pixels wide by 396 pixels high, ultra-wide 4:1 ratio. Compose directly for this panoramic shape. Flat uploadable artwork, no frame or mockup.
+
+Input roles:
+Image 1 is the previous LinkedIn banner screenshot, used only to identify the person and existing restrained dark personal-brand direction. Its application frame, close button and central loading spinner are NOT banner content and must not appear.
+Image 2 is the APPROVED NexusPoint Wrapped Nexus logo. Faithfully preserve this white folded N, open black gaps, circular #02A1E1 blue centre point, and original NexusPoint wordmark shapes. The logo stays flat, undistorted and unchanged.
+Image 3 is the recent WhatsApp banner, a visual reference for matte folded black ribbons, subtle blue edge highlights, fine architectural grid, and the connected-system concept. Adapt this style to a personal LinkedIn banner with substantially less text.
+
+Design: premium, minimal, crisp black #000000 and charcoal #101010 background, white readable copy, restrained portfolio blue #02A1E1. Quiet sculptural folded ribbon paths sweep from the outer left and right edges toward one connection point, visually echoing the opposing Wrapped Nexus folds. Subtle tonal texture and a faint technical grid. The approved logo’s blue central circle is the visual focus; no competing bright object, no huge blue panel, no generic circuits.
+
+Layout: leave the leftmost 28% especially its lower half clear of ANY text or logos so a LinkedIn profile portrait can overlay it. That reserved area may contain low-contrast background folds. Keep the main readable content comfortably inside the centre-right 62% with at least 7% outer right margin. Preserve ample top/bottom padding. Put ONE small horizontal approved logo in the upper-right portion, not a huge company logo competing with the person's name. Put a left-aligned personal text block at about x=530 to x=1450, vertically centred. The name is the dominant text, followed by a small role descriptor and one concise outcome line. Place a small but clearly legible portfolio URL near the lower-right of the text block. Strong spacing and a calm hierarchy. No essential content in the lower-left reserved area.
+
+Exact text, VERBATIM, once each:
+"Aleem Ul Hassan"
+"AI Systems & Automation"
+"Automate the work. Own the system."
+"aleemuh.com"
+
+Typography: clean Inter-style geometric sans-serif, name semibold in white with normal or modest letter spacing, descriptor small uppercase or title case as written, outcome line white with a restrained blue emphasis, URL quiet but readable. Keep all lettering sharp at mobile viewing size. Do not copy the widely spaced tiny name treatment from the old banner. Do not add phone numbers, email, services lists, social icons, QR code, fake claims, metrics, extra taglines, arbitrary role title, another logo, LinkedIn UI, watermark, or image borders. The primary intent is a cohesive personal profile banner that belongs to the new Wrapped Nexus brand.

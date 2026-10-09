@@ -1,0 +1,20 @@
+{
+  "method": "Built-in imagegen",
+  "concept": "Wrapped Nexus, Systems you own",
+  "outputs": [
+    {
+      "file": "Banner-WhatsApp-Wrapped-Nexus-Square.png",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "Banner-WhatsApp-Wrapped-Nexus-Wide.png",
+      "pixels": [
+        2172,
+        724
+      ]
+    }
+  ]
+}

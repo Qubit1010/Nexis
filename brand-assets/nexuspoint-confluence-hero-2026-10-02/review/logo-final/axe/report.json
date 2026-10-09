@@ -1,0 +1,58 @@
+[
+  {
+    "width": 390,
+    "progress": 0,
+    "violations": [],
+    "passes": 52,
+    "incomplete": 1
+  },
+  {
+    "width": 390,
+    "progress": 0.33,
+    "violations": [],
+    "passes": 52,
+    "incomplete": 1
+  },
+  {
+    "width": 390,
+    "progress": 0.58,
+    "violations": [],
+    "passes": 52,
+    "incomplete": 1
+  },
+  {
+    "width": 390,
+    "progress": 0.86,
+    "violations": [],
+    "passes": 52,
+    "incomplete": 1
+  },
+  {
+    "width": 1440,
+    "progress": 0,
+    "violations": [],
+    "passes": 52,
+    "incomplete": 1
+  },
+  {
+    "width": 1440,
+    "progress": 0.33,
+    "violations": [],
+    "passes": 52,
+    "incomplete": 1
+  },
+  {
+    "width": 1440,
+    "progress": 0.58,
+    "violations": [],
+    "passes": 52,
+    "incomplete": 1
+  },
+  {
+    "width": 1440,
+    "progress": 0.86,
+    "violations": [],
+    "passes": 52,
+    "incomplete": 1
+  }
+]

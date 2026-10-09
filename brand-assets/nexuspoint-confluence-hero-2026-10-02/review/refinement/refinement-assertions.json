@@ -1,0 +1,732 @@
+{
+  "target": "http://127.0.0.1:4323/",
+  "at": "2026-10-02T14:51:31.924Z",
+  "rows": [
+    {
+      "ok": true,
+      "detail": "375: smaller intact header logo",
+      "evidence": 160
+    },
+    {
+      "ok": true,
+      "detail": "375: self-hosted Mokoto face loaded",
+      "evidence": {
+        "logo": 160,
+        "mokoto": true,
+        "titleFonts": [
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif"
+        ],
+        "overflow": false
+      }
+    },
+    {
+      "ok": true,
+      "detail": "375: no page overflow"
+    },
+    {
+      "ok": true,
+      "detail": "375: keyboard opens unified menu"
+    },
+    {
+      "ok": true,
+      "detail": "375: menu announces expanded state"
+    },
+    {
+      "ok": true,
+      "detail": "375: complete primary navigation"
+    },
+    {
+      "ok": true,
+      "detail": "375: existing destinations retained",
+      "evidence": [
+        "/#services",
+        "/#process",
+        "/#reviews",
+        "/#pricing",
+        "/#contact"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "375: forward focus remains in menu"
+    },
+    {
+      "ok": true,
+      "detail": "375: focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "375: reverse focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "375: background scroll locked"
+    },
+    {
+      "ok": true,
+      "detail": "375: Escape restores menu focus"
+    },
+    {
+      "ok": true,
+      "detail": "375: closed menu state"
+    },
+    {
+      "ok": true,
+      "detail": "375: menu close preserves scroll position"
+    },
+    {
+      "ok": true,
+      "detail": "375: rapid reopen reverses close smoothly"
+    },
+    {
+      "ok": true,
+      "detail": "375: drawer link closes and navigates to proof",
+      "evidence": 88.078125
+    },
+    {
+      "ok": true,
+      "detail": "390: smaller intact header logo",
+      "evidence": 160
+    },
+    {
+      "ok": true,
+      "detail": "390: self-hosted Mokoto face loaded",
+      "evidence": {
+        "logo": 160,
+        "mokoto": true,
+        "titleFonts": [
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif"
+        ],
+        "overflow": false
+      }
+    },
+    {
+      "ok": true,
+      "detail": "390: no page overflow"
+    },
+    {
+      "ok": true,
+      "detail": "390: keyboard opens unified menu"
+    },
+    {
+      "ok": true,
+      "detail": "390: menu announces expanded state"
+    },
+    {
+      "ok": true,
+      "detail": "390: complete primary navigation"
+    },
+    {
+      "ok": true,
+      "detail": "390: existing destinations retained",
+      "evidence": [
+        "/#services",
+        "/#process",
+        "/#reviews",
+        "/#pricing",
+        "/#contact"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "390: forward focus remains in menu"
+    },
+    {
+      "ok": true,
+      "detail": "390: focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "390: reverse focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "390: background scroll locked"
+    },
+    {
+      "ok": true,
+      "detail": "390: open menu accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "detail": "390: Escape restores menu focus"
+    },
+    {
+      "ok": true,
+      "detail": "390: closed menu state"
+    },
+    {
+      "ok": true,
+      "detail": "390: menu close preserves scroll position"
+    },
+    {
+      "ok": true,
+      "detail": "390: rapid reopen reverses close smoothly"
+    },
+    {
+      "ok": true,
+      "detail": "390: drawer link closes and navigates to proof",
+      "evidence": 87.515625
+    },
+    {
+      "ok": true,
+      "detail": "390: refined hero accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "detail": "768: smaller intact header logo",
+      "evidence": 190
+    },
+    {
+      "ok": true,
+      "detail": "768: self-hosted Mokoto face loaded",
+      "evidence": {
+        "logo": 190,
+        "mokoto": true,
+        "titleFonts": [
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif"
+        ],
+        "overflow": false
+      }
+    },
+    {
+      "ok": true,
+      "detail": "768: no page overflow"
+    },
+    {
+      "ok": true,
+      "detail": "768: keyboard opens unified menu"
+    },
+    {
+      "ok": true,
+      "detail": "768: menu announces expanded state"
+    },
+    {
+      "ok": true,
+      "detail": "768: complete primary navigation"
+    },
+    {
+      "ok": true,
+      "detail": "768: existing destinations retained",
+      "evidence": [
+        "/#services",
+        "/#process",
+        "/#reviews",
+        "/#pricing",
+        "/#contact"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "768: forward focus remains in menu"
+    },
+    {
+      "ok": true,
+      "detail": "768: focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "768: reverse focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "768: background scroll locked"
+    },
+    {
+      "ok": true,
+      "detail": "768: Escape restores menu focus"
+    },
+    {
+      "ok": true,
+      "detail": "768: closed menu state"
+    },
+    {
+      "ok": true,
+      "detail": "768: menu close preserves scroll position"
+    },
+    {
+      "ok": true,
+      "detail": "768: rapid reopen reverses close smoothly"
+    },
+    {
+      "ok": true,
+      "detail": "768: drawer link closes and navigates to proof",
+      "evidence": 87.734375
+    },
+    {
+      "ok": true,
+      "detail": "1440: smaller intact header logo",
+      "evidence": 190
+    },
+    {
+      "ok": true,
+      "detail": "1440: self-hosted Mokoto face loaded",
+      "evidence": {
+        "logo": 190,
+        "mokoto": true,
+        "titleFonts": [
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif"
+        ],
+        "overflow": false
+      }
+    },
+    {
+      "ok": true,
+      "detail": "1440: no page overflow"
+    },
+    {
+      "ok": true,
+      "detail": "1440: keyboard opens unified menu"
+    },
+    {
+      "ok": true,
+      "detail": "1440: menu announces expanded state"
+    },
+    {
+      "ok": true,
+      "detail": "1440: complete primary navigation"
+    },
+    {
+      "ok": true,
+      "detail": "1440: existing destinations retained",
+      "evidence": [
+        "/#services",
+        "/#process",
+        "/#reviews",
+        "/#pricing",
+        "/#contact"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "1440: forward focus remains in menu"
+    },
+    {
+      "ok": true,
+      "detail": "1440: focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "1440: reverse focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "1440: background scroll locked"
+    },
+    {
+      "ok": true,
+      "detail": "1440: open menu accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "detail": "1440: Escape restores menu focus"
+    },
+    {
+      "ok": true,
+      "detail": "1440: closed menu state"
+    },
+    {
+      "ok": true,
+      "detail": "1440: menu close preserves scroll position"
+    },
+    {
+      "ok": true,
+      "detail": "1440: rapid reopen reverses close smoothly"
+    },
+    {
+      "ok": true,
+      "detail": "1440: drawer link closes and navigates to proof",
+      "evidence": 88.203125
+    },
+    {
+      "ok": true,
+      "detail": "1440: refined hero accessibility scan",
+      "evidence": []
+    },
+    {
+      "ok": true,
+      "detail": "separated pieces drift at rest",
+      "evidence": {
+        "a": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "ambientTime": 0.19639999999403882,
+          "ambientEnabled": true,
+          "ambientMoving": true,
+          "progress": 0,
+          "framesRendered": 11,
+          "ambientFramesRendered": 3,
+          "ambientPaused": false,
+          "ambientActive": true,
+          "menuOpen": false,
+          "suspended": false,
+          "qa": false,
+          "resting": false,
+          "mode": "live"
+        },
+        "b": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "ambientTime": 0.836399999994039,
+          "ambientEnabled": true,
+          "ambientMoving": true,
+          "progress": 0,
+          "framesRendered": 21,
+          "ambientFramesRendered": 13,
+          "ambientPaused": false,
+          "ambientActive": true,
+          "menuOpen": false,
+          "suspended": false,
+          "qa": false,
+          "resting": false,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "ambient renderer never exceeds its 30 fps cap",
+      "evidence": 10
+    },
+    {
+      "ok": true,
+      "detail": "Pause motion stops ambient GPU frames",
+      "evidence": {
+        "p1": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "ambientTime": 0.9643999999940391,
+          "ambientEnabled": true,
+          "ambientMoving": true,
+          "progress": 0,
+          "framesRendered": 24,
+          "ambientFramesRendered": 15,
+          "ambientPaused": true,
+          "ambientActive": false,
+          "menuOpen": false,
+          "suspended": false,
+          "qa": false,
+          "resting": true,
+          "mode": "live"
+        },
+        "p2": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "ambientTime": 0.9643999999940391,
+          "ambientEnabled": true,
+          "ambientMoving": true,
+          "progress": 0,
+          "framesRendered": 24,
+          "ambientFramesRendered": 15,
+          "ambientPaused": true,
+          "ambientActive": false,
+          "menuOpen": false,
+          "suspended": false,
+          "qa": false,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "Pause motion announces state"
+    },
+    {
+      "ok": true,
+      "detail": "open menu suspends GPU and active drift clock",
+      "evidence": {
+        "m1": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "ambientTime": 1.30109999999404,
+          "ambientEnabled": true,
+          "ambientMoving": true,
+          "progress": 0,
+          "framesRendered": 32,
+          "ambientFramesRendered": 15,
+          "ambientPaused": false,
+          "ambientActive": true,
+          "menuOpen": true,
+          "suspended": true,
+          "qa": false,
+          "resting": true,
+          "mode": "live"
+        },
+        "m2": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "ambientTime": 1.30109999999404,
+          "ambientEnabled": true,
+          "ambientMoving": true,
+          "progress": 0,
+          "framesRendered": 32,
+          "ambientFramesRendered": 15,
+          "ambientPaused": false,
+          "ambientActive": true,
+          "menuOpen": true,
+          "suspended": true,
+          "qa": false,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "closing menu resumes without elapsed-time jump",
+      "evidence": {
+        "m2": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "ambientTime": 1.30109999999404,
+          "ambientEnabled": true,
+          "ambientMoving": true,
+          "progress": 0,
+          "framesRendered": 32,
+          "ambientFramesRendered": 15,
+          "ambientPaused": false,
+          "ambientActive": true,
+          "menuOpen": true,
+          "suspended": true,
+          "qa": false,
+          "resting": true,
+          "mode": "live"
+        },
+        "m3": {
+          "triangles": 10302,
+          "calls": 40,
+          "segments": 19,
+          "assembled": false,
+          "ambientTime": 1.509799999994041,
+          "ambientEnabled": true,
+          "ambientMoving": true,
+          "progress": 0,
+          "framesRendered": 37,
+          "ambientFramesRendered": 15,
+          "ambientPaused": false,
+          "ambientActive": true,
+          "menuOpen": false,
+          "suspended": false,
+          "qa": false,
+          "resting": false,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "assembled logo stays still and GPU rests",
+      "evidence": {
+        "d1": {
+          "triangles": 10196,
+          "calls": 12,
+          "segments": 19,
+          "assembled": true,
+          "ambientTime": 0,
+          "ambientEnabled": true,
+          "ambientMoving": false,
+          "progress": 0.86,
+          "framesRendered": 40,
+          "ambientFramesRendered": 15,
+          "ambientPaused": false,
+          "ambientActive": false,
+          "menuOpen": false,
+          "suspended": false,
+          "qa": false,
+          "resting": true,
+          "mode": "live"
+        },
+        "d2": {
+          "triangles": 10196,
+          "calls": 12,
+          "segments": 19,
+          "assembled": true,
+          "ambientTime": 0,
+          "ambientEnabled": true,
+          "ambientMoving": false,
+          "progress": 0.86,
+          "framesRendered": 40,
+          "ambientFramesRendered": 15,
+          "ambientPaused": false,
+          "ambientActive": false,
+          "menuOpen": false,
+          "suspended": false,
+          "qa": false,
+          "resting": true,
+          "mode": "live"
+        }
+      }
+    },
+    {
+      "ok": true,
+      "detail": "QA seek freezes ambient deterministically"
+    },
+    {
+      "ok": true,
+      "detail": "1920: smaller intact header logo",
+      "evidence": 190
+    },
+    {
+      "ok": true,
+      "detail": "1920: self-hosted Mokoto face loaded",
+      "evidence": {
+        "logo": 190,
+        "mokoto": true,
+        "titleFonts": [
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Mokoto, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif",
+          "Conthrax, Inter, ui-sans-serif, system-ui, sans-serif"
+        ],
+        "overflow": false
+      }
+    },
+    {
+      "ok": true,
+      "detail": "1920: no page overflow"
+    },
+    {
+      "ok": true,
+      "detail": "1920: keyboard opens unified menu"
+    },
+    {
+      "ok": true,
+      "detail": "1920: menu announces expanded state"
+    },
+    {
+      "ok": true,
+      "detail": "1920: complete primary navigation"
+    },
+    {
+      "ok": true,
+      "detail": "1920: existing destinations retained",
+      "evidence": [
+        "/#services",
+        "/#process",
+        "/#reviews",
+        "/#pricing",
+        "/#contact"
+      ]
+    },
+    {
+      "ok": true,
+      "detail": "1920: forward focus remains in menu"
+    },
+    {
+      "ok": true,
+      "detail": "1920: focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "1920: reverse focus trap cycles"
+    },
+    {
+      "ok": true,
+      "detail": "1920: background scroll locked"
+    },
+    {
+      "ok": true,
+      "detail": "1920: Escape restores menu focus"
+    },
+    {
+      "ok": true,
+      "detail": "1920: closed menu state"
+    },
+    {
+      "ok": true,
+      "detail": "1920: menu close preserves scroll position"
+    },
+    {
+      "ok": true,
+      "detail": "1920: rapid reopen reverses close smoothly"
+    },
+    {
+      "ok": true,
+      "detail": "1920: drawer link closes and navigates to proof",
+      "evidence": 87.6875
+    },
+    {
+      "ok": true,
+      "detail": "{\"javaScriptEnabled\":false}: native menu usable"
+    },
+    {
+      "ok": true,
+      "detail": "{\"javaScriptEnabled\":false}: menu links readable"
+    },
+    {
+      "ok": true,
+      "detail": "{\"reducedMotion\":\"reduce\"}: native menu usable"
+    },
+    {
+      "ok": true,
+      "detail": "{\"reducedMotion\":\"reduce\"}: menu links readable"
+    },
+    {
+      "ok": true,
+      "detail": "no browser console errors",
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "axe": [
+    {
+      "width": 390,
+      "state": "menu",
+      "violations": [],
+      "passes": 33
+    },
+    {
+      "width": 390,
+      "state": "hero",
+      "violations": [],
+      "passes": 52
+    },
+    {
+      "width": 1440,
+      "state": "menu",
+      "violations": [],
+      "passes": 33
+    },
+    {
+      "width": 1440,
+      "state": "hero",
+      "violations": [],
+      "passes": 52
+    }
+  ]
+}

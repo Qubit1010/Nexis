@@ -1,0 +1,242 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "errors": [],
+    "stats": {
+      "enhanced": true,
+      "progress": 0,
+      "active": 0,
+      "range": 2310,
+      "travel": 2656.5,
+      "scrollLeft": 0,
+      "height": 3557,
+      "blocked": false,
+      "frame": 0,
+      "count": 7
+    },
+    "stage": {
+      "top": 0.3125,
+      "bottom": 900.3125,
+      "height": 900,
+      "right": 1440
+    },
+    "masthead": {
+      "top": 104.3125,
+      "bottom": 233.15625,
+      "height": 128.84375,
+      "right": 1382.40625
+    },
+    "rail": {
+      "top": 249.15625,
+      "bottom": 281.15625,
+      "height": 32,
+      "right": 1382.40625
+    },
+    "card": {
+      "top": 309.15625,
+      "bottom": 794.15625,
+      "height": 485,
+      "right": 547.1875
+    },
+    "controls": {
+      "top": 842.15625,
+      "bottom": 884.15625,
+      "height": 42,
+      "right": 1382.40625
+    },
+    "overflow": 0
+  },
+  {
+    "width": 1280,
+    "height": 800,
+    "errors": [],
+    "stats": {
+      "enhanced": true,
+      "progress": 0,
+      "active": 0,
+      "range": 2053,
+      "travel": 2360.95,
+      "scrollLeft": 0,
+      "height": 3161,
+      "blocked": false,
+      "frame": 0,
+      "count": 7
+    },
+    "stage": {
+      "top": 0,
+      "bottom": 800,
+      "height": 800,
+      "right": 1280
+    },
+    "masthead": {
+      "top": 104,
+      "bottom": 222.4375,
+      "height": 118.4375,
+      "right": 1228.8125
+    },
+    "rail": {
+      "top": 238.4375,
+      "bottom": 270.4375,
+      "height": 32,
+      "right": 1228.8125
+    },
+    "card": {
+      "top": 298.4375,
+      "bottom": 694.4375,
+      "height": 396,
+      "right": 486.375
+    },
+    "controls": {
+      "top": 742.4375,
+      "bottom": 784.4375,
+      "height": 42,
+      "right": 1228.8125
+    },
+    "overflow": 0
+  },
+  {
+    "width": 1050,
+    "height": 740,
+    "errors": [],
+    "stats": {
+      "enhanced": true,
+      "progress": 0,
+      "active": 0,
+      "range": 1684,
+      "travel": 1936.6,
+      "scrollLeft": 0,
+      "height": 2677,
+      "blocked": false,
+      "frame": 0,
+      "count": 7
+    },
+    "stage": {
+      "top": 0,
+      "bottom": 740,
+      "height": 740,
+      "right": 1050
+    },
+    "masthead": {
+      "top": 104,
+      "bottom": 207.4375,
+      "height": 103.4375,
+      "right": 1008
+    },
+    "rail": {
+      "top": 223.4375,
+      "bottom": 255.4375,
+      "height": 32,
+      "right": 1008
+    },
+    "card": {
+      "top": 283.4375,
+      "bottom": 660.171875,
+      "height": 376.734375,
+      "right": 399
+    },
+    "controls": {
+      "top": 708.171875,
+      "bottom": 750.171875,
+      "height": 42,
+      "right": 1008
+    },
+    "overflow": 0
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "errors": [],
+    "stats": {
+      "enhanced": false,
+      "progress": 0,
+      "active": 0,
+      "range": 2017,
+      "travel": 2319.5499999999997,
+      "scrollLeft": 0,
+      "height": 986,
+      "blocked": false,
+      "frame": 0,
+      "count": 7
+    },
+    "stage": {
+      "top": 0.484375,
+      "bottom": 986.234375,
+      "height": 985.75,
+      "right": 390
+    },
+    "masthead": {
+      "top": 90.484375,
+      "bottom": 259.46875,
+      "height": 168.984375,
+      "right": 366
+    },
+    "rail": {
+      "top": 289.46875,
+      "bottom": 321.46875,
+      "height": 32,
+      "right": 366
+    },
+    "card": {
+      "top": 350.46875,
+      "bottom": 852.234375,
+      "height": 501.765625,
+      "right": 343.796875
+    },
+    "controls": {
+      "top": 900.234375,
+      "bottom": 942.234375,
+      "height": 42,
+      "right": 366
+    },
+    "overflow": 0
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "errors": [],
+    "stats": {
+      "enhanced": true,
+      "progress": 0,
+      "active": 0,
+      "range": 2325,
+      "travel": 2673.75,
+      "scrollLeft": 0,
+      "height": 3754,
+      "blocked": false,
+      "frame": 0,
+      "count": 7
+    },
+    "stage": {
+      "top": 0,
+      "bottom": 1080,
+      "height": 1080,
+      "right": 1920
+    },
+    "masthead": {
+      "top": 104,
+      "bottom": 263.125,
+      "height": 159.125,
+      "right": 1843.203125
+    },
+    "rail": {
+      "top": 279.125,
+      "bottom": 311.125,
+      "height": 32,
+      "right": 1843.203125
+    },
+    "card": {
+      "top": 339.125,
+      "bottom": 974.125,
+      "height": 635,
+      "right": 621.796875
+    },
+    "controls": {
+      "top": 1022.125,
+      "bottom": 1064.125,
+      "height": 42,
+      "right": 1843.203125
+    },
+    "overflow": 0
+  }
+]

@@ -1,0 +1,11 @@
+Another astro preview server is already running.
+
+  URL:  http://127.0.0.1:4323
+  PID:  28796
+
+Run `astro preview stop` to stop it, or use `astro preview --force` to replace it.
+  Location:
+    C:\Users\qubit\OneDrive\Documents\Automations\Website-Creator\Projects\nexuspoint-site\node_modules\astro\dist\cli\preview\index.js:124:11
+  Stack trace:
+    at preview (file:///C:/Users/qubit/OneDrive/Documents/Automations/Website-Creator/Projects/nexuspoint-site/node_modules/astro/dist/cli/preview/index.js:124:11)
+    at async cli (file:///C:/Users/qubit/OneDrive/Documents/Automations/Website-Creator/Projects/nexuspoint-site/node_modules/astro/dist/cli/index.js:222:5)

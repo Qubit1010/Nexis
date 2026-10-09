@@ -1,0 +1,10 @@
+# Licensed portfolio fonts and private references stay local (mirrors the Soft Fold kit).
+fonts/portfolio-local-use/
+sources/private-font-reference/
+sources/Inter-4.1-official.zip
+qa/**/*.png
+qa/**/*.jpg
+qa/**/*.jpeg
+qa/*.png
+qa/*.jpg
+qa/*.jpeg

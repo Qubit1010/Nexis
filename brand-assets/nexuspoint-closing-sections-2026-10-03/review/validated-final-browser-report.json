@@ -1,0 +1,3880 @@
+{
+  "status": "complete",
+  "target": "http://127.0.0.1:4323/",
+  "passed": 242,
+  "failed": 0,
+  "rows": [
+    {
+      "ok": true,
+      "name": "390: seven attributed reviews match the existing source exactly",
+      "evidence": [
+        {
+          "text": "I have used Aleem for several projects and keep coming back to him. I use no-one else. That says it all really.",
+          "name": "Steve"
+        },
+        {
+          "text": "Aleem and us, had a very tight deadline, and despite that he was able to deliver. We are grateful for his work and understanding and cooperation.",
+          "name": "Abdel M Oulhadj"
+        },
+        {
+          "text": "He will be my go-to person for anything involving my websites and automations from here on out. Please give him a go!",
+          "name": "Cullen Blanchfield"
+        },
+        {
+          "text": "He took the time to understand our goals, offered smart recommendations, and executed with speed and precision. Our blog now feels fully integrated with the rest of the site, loads faster, and is set up for long-term success.",
+          "name": "Richard"
+        },
+        {
+          "text": "The attention to detail and commitment to quality were evident in the final product. Highly recommended for anyone looking for talented and reliable developers.",
+          "name": "Ryan Taylor"
+        },
+        {
+          "text": "Incredible work, highly suggest you work with this team. They brought the whole vision to life better than ever imagined!",
+          "name": "Paridhi Goel"
+        },
+        {
+          "text": "His innovative approach and meticulous attention to detail have significantly enhanced user engagement and improved our website functionality.",
+          "name": "Zaid Kazi"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: testimonial identities use no fabricated photographs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: three client outcomes and the existing public record remain available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: all five canonical phase descriptions remain in the document",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: business enquiries use the configured NexusPoint email",
+      "evidence": [
+        "mailto:aleem@nexus-point.co",
+        "mailto:aleem@nexus-point.co"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: footer retains the actual social profiles",
+      "evidence": [
+        {
+          "href": "https://www.linkedin.com/in/aleemuh00137/",
+          "label": "LinkedIn↗"
+        },
+        {
+          "href": "https://www.instagram.com/aleem_uh/",
+          "label": "Instagram↗"
+        },
+        {
+          "href": "https://aleemuh.com/newsletter",
+          "label": "Newsletter↗"
+        },
+        {
+          "href": "https://aleemuh.com",
+          "label": "Meet the founder↗"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: footer retains approved artwork with one accessible brand identity",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: testimonials lead directly into the five-step process",
+      "evidence": [
+        "",
+        "",
+        "work",
+        "trust",
+        "services",
+        "reviews",
+        "process",
+        "pricing",
+        "",
+        "faq",
+        "contact"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: document has no duplicate anchor IDs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: appropriate vertical or native horizontal reading mode",
+      "evidence": {
+        "enhanced": false,
+        "progress": 0,
+        "active": 0,
+        "range": 2017,
+        "travel": 2319.5499999999997,
+        "scrollLeft": 0,
+        "height": 986,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: next button advances one complete review",
+      "evidence": {
+        "enhanced": false,
+        "progress": 0.16311353495290035,
+        "active": 1,
+        "range": 2017,
+        "travel": 2319.5499999999997,
+        "scrollLeft": 329,
+        "height": 986,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: previous button restores the first review",
+      "evidence": {
+        "enhanced": false,
+        "progress": 0.05751115518096182,
+        "active": 0,
+        "range": 2017,
+        "travel": 2319.5499999999997,
+        "scrollLeft": 116,
+        "height": 986,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard End exposes the final review",
+      "evidence": {
+        "enhanced": false,
+        "progress": 1,
+        "active": 6,
+        "range": 2017,
+        "travel": 2319.5499999999997,
+        "scrollLeft": 2017,
+        "height": 986,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard Home exposes the first review",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus reveals full review 1",
+      "evidence": {
+        "card": {
+          "x": 24,
+          "y": 12.46875,
+          "right": 343.796875,
+          "bottom": 514.234375,
+          "width": 319.796875,
+          "height": 501.765625
+        },
+        "stats": {
+          "enhanced": false,
+          "progress": 0,
+          "active": 0,
+          "range": 2017,
+          "travel": 2319.5499999999997,
+          "scrollLeft": 0,
+          "height": 986,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus reveals full review 2",
+      "evidence": {
+        "card": {
+          "x": 34.796875,
+          "y": 12.46875,
+          "right": 354.59375,
+          "bottom": 514.234375,
+          "width": 319.796875,
+          "height": 501.765625
+        },
+        "stats": {
+          "enhanced": false,
+          "progress": 0.16311353495290035,
+          "active": 1,
+          "range": 2017,
+          "travel": 2319.5499999999997,
+          "scrollLeft": 329,
+          "height": 986,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus reveals full review 3",
+      "evidence": {
+        "card": {
+          "x": 35.59375,
+          "y": 12.46875,
+          "right": 355.390625,
+          "bottom": 514.234375,
+          "width": 319.796875,
+          "height": 501.765625
+        },
+        "stats": {
+          "enhanced": false,
+          "progress": 0.33118492811105604,
+          "active": 2,
+          "range": 2017,
+          "travel": 2319.5499999999997,
+          "scrollLeft": 668,
+          "height": 986,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus reveals full review 4",
+      "evidence": {
+        "card": {
+          "x": 35.390625,
+          "y": 12.46875,
+          "right": 355.1875,
+          "bottom": 514.234375,
+          "width": 319.796875,
+          "height": 501.765625
+        },
+        "stats": {
+          "enhanced": false,
+          "progress": 0.4997521070897372,
+          "active": 3,
+          "range": 2017,
+          "travel": 2319.5499999999997,
+          "scrollLeft": 1008,
+          "height": 986,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus reveals full review 5",
+      "evidence": {
+        "card": {
+          "x": 35.1875,
+          "y": 12.46875,
+          "right": 354.984375,
+          "bottom": 514.234375,
+          "width": 319.796875,
+          "height": 501.765625
+        },
+        "stats": {
+          "enhanced": false,
+          "progress": 0.6683192860684184,
+          "active": 4,
+          "range": 2017,
+          "travel": 2319.5499999999997,
+          "scrollLeft": 1348,
+          "height": 986,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus reveals full review 6",
+      "evidence": {
+        "card": {
+          "x": 34.984375,
+          "y": 12.46875,
+          "right": 354.78125,
+          "bottom": 514.234375,
+          "width": 319.796875,
+          "height": 501.765625
+        },
+        "stats": {
+          "enhanced": false,
+          "progress": 0.8368864650470996,
+          "active": 5,
+          "range": 2017,
+          "travel": 2319.5499999999997,
+          "scrollLeft": 1688,
+          "height": 986,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard focus reveals full review 7",
+      "evidence": {
+        "card": {
+          "x": 45.78125,
+          "y": 12.46875,
+          "right": 365.578125,
+          "bottom": 514.234375,
+          "width": 319.796875,
+          "height": 501.765625
+        },
+        "stats": {
+          "enhanced": false,
+          "progress": 1,
+          "active": 6,
+          "range": 2017,
+          "travel": 2319.5499999999997,
+          "scrollLeft": 2017,
+          "height": 986,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: horizontally moving reviews never widen the page",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 testimonials: accessibility scan",
+      "evidence": [],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: full-record action opens the evidence and moves keyboard focus with it",
+      "evidence": {
+        "x": 24,
+        "y": 109.234375,
+        "right": 366,
+        "bottom": 1419.75,
+        "width": 342,
+        "height": 1310.515625
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: evidence disclosure closes natively",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: all five phase controls are available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 1 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 0,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 1 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 23.390625,
+          "y": 149.75,
+          "right": 366.609375,
+          "bottom": 579.734375,
+          "width": 343.21875,
+          "height": 429.984375
+        },
+        "detail": {
+          "x": 24.390625,
+          "y": 218.546875,
+          "right": 365.609375,
+          "bottom": 578.734375,
+          "width": 341.21875,
+          "height": 360.1875
+        },
+        "title": {
+          "x": 67.65625,
+          "y": 172.75,
+          "right": 316.953125,
+          "bottom": 196.546875,
+          "width": 249.296875,
+          "height": 23.796875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 2 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 1,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 2 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 23.390625,
+          "y": 231.546875,
+          "right": 366.609375,
+          "bottom": 661.53125,
+          "width": 343.21875,
+          "height": 429.984375
+        },
+        "detail": {
+          "x": 24.390625,
+          "y": 300.34375,
+          "right": 365.609375,
+          "bottom": 660.53125,
+          "width": 341.21875,
+          "height": 360.1875
+        },
+        "title": {
+          "x": 72.03125,
+          "y": 254.546875,
+          "right": 316.953125,
+          "bottom": 278.34375,
+          "width": 244.921875,
+          "height": 23.796875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 3 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 2,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 3 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 23.390625,
+          "y": 313.34375,
+          "right": 366.609375,
+          "bottom": 721.234375,
+          "width": 343.21875,
+          "height": 407.890625
+        },
+        "detail": {
+          "x": 24.390625,
+          "y": 382.140625,
+          "right": 365.609375,
+          "bottom": 720.234375,
+          "width": 341.21875,
+          "height": 338.09375
+        },
+        "title": {
+          "x": 71.875,
+          "y": 336.34375,
+          "right": 316.953125,
+          "bottom": 360.140625,
+          "width": 245.078125,
+          "height": 23.796875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 4 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 3,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 4 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 23.390625,
+          "y": 395.140625,
+          "right": 366.609375,
+          "bottom": 803.03125,
+          "width": 343.21875,
+          "height": 407.890625
+        },
+        "detail": {
+          "x": 24.390625,
+          "y": 463.9375,
+          "right": 365.609375,
+          "bottom": 802.03125,
+          "width": 341.21875,
+          "height": 338.09375
+        },
+        "title": {
+          "x": 72.359375,
+          "y": 418.140625,
+          "right": 316.953125,
+          "bottom": 441.9375,
+          "width": 244.59375,
+          "height": 23.796875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 5 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 4,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: phase 5 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 23.390625,
+          "y": 436.9375,
+          "right": 366.609375,
+          "bottom": 889.015625,
+          "width": 343.21875,
+          "height": 452.078125
+        },
+        "detail": {
+          "x": 24.390625,
+          "y": 505.734375,
+          "right": 365.609375,
+          "bottom": 888.015625,
+          "width": 341.21875,
+          "height": 382.28125
+        },
+        "title": {
+          "x": 72.03125,
+          "y": 459.9375,
+          "right": 316.953125,
+          "bottom": 483.734375,
+          "width": 244.921875,
+          "height": 23.796875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard End exposes and focuses the handover control",
+      "evidence": {
+        "x": 24.390625,
+        "y": 437.9375,
+        "right": 365.609375,
+        "bottom": 505.734375,
+        "width": 341.21875,
+        "height": 67.796875
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard Home exposes the first phase control",
+      "evidence": {
+        "x": 24.390625,
+        "y": 110.75,
+        "right": 365.609375,
+        "bottom": 178.546875,
+        "width": 341.21875,
+        "height": 67.796875
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: keyboard arrows select the next phase with focus",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: process keyboard focus is visible",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 process: accessibility scan",
+      "evidence": [],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: navigation suspends both process and testimonial rendering",
+      "evidence": {
+        "activeIndex": 2,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": -1,
+        "menuOpen": true,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: Escape restores both section controllers",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: an actual project dialog pauses all three new sections",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: project-dialog close restores all three controllers",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: process requests no frames offscreen",
+      "evidence": {
+        "activeIndex": 2,
+        "mode": "live",
+        "visible": false,
+        "framesPending": false,
+        "manuallySelected": false,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: expanded process artifacts cause no horizontal page overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: footer offers a contact action",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 footer: accessibility scan",
+      "evidence": [],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: footer reviews navigation lands below the header and focuses its heading",
+      "evidence": {
+        "x": 0,
+        "y": 86.484375,
+        "right": 390,
+        "bottom": 1245.234375,
+        "width": 390,
+        "height": 1158.75
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: footer process navigation lands below the header and focuses its heading",
+      "evidence": {
+        "x": 0,
+        "y": 86.234375,
+        "right": 390,
+        "bottom": 1692.828125,
+        "width": 390,
+        "height": 1606.59375
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: footer contact action reaches a readable heading and transfers focus",
+      "evidence": {
+        "x": 24,
+        "y": 180.203125,
+        "right": 366,
+        "bottom": 245.140625,
+        "width": 342,
+        "height": 64.9375
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: offscreen footer has no active animation frame",
+      "evidence": {
+        "mode": "static",
+        "visible": false,
+        "pointerActive": false,
+        "frames": 0,
+        "rafScheduled": false,
+        "reducedMotion": false,
+        "saveData": false,
+        "overlayOpen": false
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: footer and its artwork cause no horizontal overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: seven attributed reviews match the existing source exactly",
+      "evidence": [
+        {
+          "text": "I have used Aleem for several projects and keep coming back to him. I use no-one else. That says it all really.",
+          "name": "Steve"
+        },
+        {
+          "text": "Aleem and us, had a very tight deadline, and despite that he was able to deliver. We are grateful for his work and understanding and cooperation.",
+          "name": "Abdel M Oulhadj"
+        },
+        {
+          "text": "He will be my go-to person for anything involving my websites and automations from here on out. Please give him a go!",
+          "name": "Cullen Blanchfield"
+        },
+        {
+          "text": "He took the time to understand our goals, offered smart recommendations, and executed with speed and precision. Our blog now feels fully integrated with the rest of the site, loads faster, and is set up for long-term success.",
+          "name": "Richard"
+        },
+        {
+          "text": "The attention to detail and commitment to quality were evident in the final product. Highly recommended for anyone looking for talented and reliable developers.",
+          "name": "Ryan Taylor"
+        },
+        {
+          "text": "Incredible work, highly suggest you work with this team. They brought the whole vision to life better than ever imagined!",
+          "name": "Paridhi Goel"
+        },
+        {
+          "text": "His innovative approach and meticulous attention to detail have significantly enhanced user engagement and improved our website functionality.",
+          "name": "Zaid Kazi"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: testimonial identities use no fabricated photographs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: three client outcomes and the existing public record remain available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: all five canonical phase descriptions remain in the document",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: business enquiries use the configured NexusPoint email",
+      "evidence": [
+        "mailto:aleem@nexus-point.co",
+        "mailto:aleem@nexus-point.co"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer retains the actual social profiles",
+      "evidence": [
+        {
+          "href": "https://www.linkedin.com/in/aleemuh00137/",
+          "label": "LinkedIn↗"
+        },
+        {
+          "href": "https://www.instagram.com/aleem_uh/",
+          "label": "Instagram↗"
+        },
+        {
+          "href": "https://aleemuh.com/newsletter",
+          "label": "Newsletter↗"
+        },
+        {
+          "href": "https://aleemuh.com",
+          "label": "Meet the founder↗"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer retains approved artwork with one accessible brand identity",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: testimonials lead directly into the five-step process",
+      "evidence": [
+        "",
+        "",
+        "work",
+        "trust",
+        "services",
+        "reviews",
+        "process",
+        "pricing",
+        "",
+        "faq",
+        "contact"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: document has no duplicate anchor IDs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: appropriate vertical or native horizontal reading mode",
+      "evidence": {
+        "enhanced": true,
+        "progress": 0,
+        "active": 0,
+        "range": 2310,
+        "travel": 2656.5,
+        "scrollLeft": 0,
+        "height": 3557,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: native forward and reverse scroll restore review positions",
+      "evidence": {
+        "start": {
+          "enhanced": true,
+          "progress": 0.15021645021645022,
+          "active": 1,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 347,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        },
+        "forward": {
+          "enhanced": true,
+          "progress": 0.7,
+          "active": 4,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 1617,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        },
+        "reverse": {
+          "enhanced": true,
+          "progress": 0.15021645021645022,
+          "active": 1,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 347,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: next button advances one complete review",
+      "evidence": {
+        "enhanced": true,
+        "progress": 0.02554112554112554,
+        "active": 1,
+        "range": 2310,
+        "travel": 2656.5,
+        "scrollLeft": 59,
+        "height": 3557,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: previous button restores the first review",
+      "evidence": {
+        "enhanced": true,
+        "progress": 0.020346320346320345,
+        "active": 0,
+        "range": 2310,
+        "travel": 2656.5,
+        "scrollLeft": 47,
+        "height": 3557,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard End exposes the final review",
+      "evidence": {
+        "enhanced": true,
+        "progress": 0.9887445887445887,
+        "active": 6,
+        "range": 2310,
+        "travel": 2656.5,
+        "scrollLeft": 2284,
+        "height": 3557,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard Home exposes the first review",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus reveals full review 1",
+      "evidence": {
+        "card": {
+          "x": 57.59375,
+          "y": 302.48150634765625,
+          "right": 547.1875,
+          "bottom": 787.4815063476562,
+          "width": 489.59375,
+          "height": 485
+        },
+        "stats": {
+          "enhanced": true,
+          "progress": 0,
+          "active": 0,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 0,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus reveals full review 2",
+      "evidence": {
+        "card": {
+          "x": 474.734375,
+          "y": 325.84375,
+          "right": 964.328125,
+          "bottom": 810.84375,
+          "width": 489.59375,
+          "height": 485
+        },
+        "stats": {
+          "enhanced": true,
+          "progress": 0.04632034632034632,
+          "active": 1,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 107,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus reveals full review 3",
+      "evidence": {
+        "card": {
+          "x": 474.875,
+          "y": 342.84375,
+          "right": 964.46875,
+          "bottom": 827.84375,
+          "width": 489.59375,
+          "height": 485
+        },
+        "stats": {
+          "enhanced": true,
+          "progress": 0.27316017316017316,
+          "active": 2,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 631,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus reveals full review 4",
+      "evidence": {
+        "card": {
+          "x": 475.015625,
+          "y": 308.84375,
+          "right": 964.609375,
+          "bottom": 793.84375,
+          "width": 489.59375,
+          "height": 485
+        },
+        "stats": {
+          "enhanced": true,
+          "progress": 0.5,
+          "active": 3,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 1155,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus reveals full review 5",
+      "evidence": {
+        "card": {
+          "x": 475.15625,
+          "y": 325.84375,
+          "right": 964.75,
+          "bottom": 810.84375,
+          "width": 489.59375,
+          "height": 485
+        },
+        "stats": {
+          "enhanced": true,
+          "progress": 0.7268398268398268,
+          "active": 4,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 1679,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus reveals full review 6",
+      "evidence": {
+        "card": {
+          "x": 476.296875,
+          "y": 342.84375,
+          "right": 965.890625,
+          "bottom": 827.84375,
+          "width": 489.59375,
+          "height": 485
+        },
+        "stats": {
+          "enhanced": true,
+          "progress": 0.9532467532467532,
+          "active": 5,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 2202,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard focus reveals full review 7",
+      "evidence": {
+        "card": {
+          "x": 892.4375,
+          "y": 308.65625,
+          "right": 1382.03125,
+          "bottom": 793.65625,
+          "width": 489.59375,
+          "height": 485
+        },
+        "stats": {
+          "enhanced": true,
+          "progress": 1,
+          "active": 6,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 2310,
+          "height": 3557,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: review text and navigation remain inside the sticky viewport",
+      "evidence": {
+        "quote": {
+          "x": 917.4375,
+          "y": 562.890625,
+          "right": 1357.03125,
+          "bottom": 714.828125,
+          "width": 439.59375,
+          "height": 151.9375
+        },
+        "controls": {
+          "x": 660.5,
+          "y": 841.65625,
+          "right": 759.5,
+          "bottom": 883.65625,
+          "width": 99,
+          "height": 42
+        },
+        "height": 900
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: hovering a review isolates the selected quote",
+      "evidence": [
+        {
+          "active": false,
+          "filter": "blur(2.99863px) brightness(0.630169)",
+          "opacity": "0.500228"
+        },
+        {
+          "active": false,
+          "filter": "blur(2.99863px) brightness(0.630169)",
+          "opacity": "0.500228"
+        },
+        {
+          "active": true,
+          "filter": "none",
+          "opacity": "1"
+        },
+        {
+          "active": false,
+          "filter": "blur(2.99863px) brightness(0.630169)",
+          "opacity": "0.500228"
+        },
+        {
+          "active": false,
+          "filter": "blur(2.99863px) brightness(0.630169)",
+          "opacity": "0.500228"
+        },
+        {
+          "active": false,
+          "filter": "blur(2.99863px) brightness(0.630169)",
+          "opacity": "0.500228"
+        },
+        {
+          "active": false,
+          "filter": "blur(2.99863px) brightness(0.630169)",
+          "opacity": "0.500228"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: leaving the card restores all neighboring reviews",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: horizontally moving reviews never widen the page",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 testimonials: accessibility scan",
+      "evidence": [],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: full-record action opens the evidence and moves keyboard focus with it",
+      "evidence": {
+        "x": 57.59375,
+        "y": 109.8125,
+        "right": 1382.40625,
+        "bottom": 731.296875,
+        "width": 1324.8125,
+        "height": 621.484375
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: evidence disclosure closes natively",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: all five phase controls are available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 1 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 0,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": 0,
+        "revealProgress": 1,
+        "lastScrollIndex": 2,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 1 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 644.625,
+          "bottom": 901.484375,
+          "width": 579.828125,
+          "height": 561.59375
+        },
+        "detail": {
+          "x": 65.796875,
+          "y": 792.484375,
+          "right": 643.625,
+          "bottom": 900.484375,
+          "width": 577.828125,
+          "height": 108
+        },
+        "title": {
+          "x": 93.796875,
+          "y": 741.0625,
+          "right": 618.515625,
+          "bottom": 778.484375,
+          "width": 524.71875,
+          "height": 37.421875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 1 expansion spans the full process row",
+      "evidence": {
+        "board": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 1310.40625,
+          "height": 561.59375
+        },
+        "first": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 647.515625,
+          "bottom": 901.484375,
+          "width": 582.71875,
+          "height": 561.59375
+        },
+        "last": {
+          "x": 1207.28125,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 167.921875,
+          "height": 561.59375
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 2 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 1,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": 1,
+        "revealProgress": 1,
+        "lastScrollIndex": 2,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 2 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 247.0625,
+          "y": 339.890625,
+          "right": 829.4375,
+          "bottom": 901.484375,
+          "width": 582.375,
+          "height": 561.59375
+        },
+        "detail": {
+          "x": 247.71875,
+          "y": 792.484375,
+          "right": 828.4375,
+          "bottom": 900.484375,
+          "width": 580.71875,
+          "height": 108
+        },
+        "title": {
+          "x": 275.71875,
+          "y": 741.0625,
+          "right": 800.4375,
+          "bottom": 778.484375,
+          "width": 524.71875,
+          "height": 37.421875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 2 expansion spans the full process row",
+      "evidence": {
+        "board": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 1310.40625,
+          "height": 561.59375
+        },
+        "first": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 232.71875,
+          "bottom": 901.484375,
+          "width": 167.921875,
+          "height": 561.59375
+        },
+        "last": {
+          "x": 1207.28125,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 167.921875,
+          "height": 561.59375
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 3 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 2,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": 2,
+        "revealProgress": 1,
+        "lastScrollIndex": 2,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 3 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 428.640625,
+          "y": 339.890625,
+          "right": 1011.359375,
+          "bottom": 901.484375,
+          "width": 582.71875,
+          "height": 561.59375
+        },
+        "detail": {
+          "x": 429.640625,
+          "y": 792.484375,
+          "right": 1010.359375,
+          "bottom": 900.484375,
+          "width": 580.71875,
+          "height": 108
+        },
+        "title": {
+          "x": 457.640625,
+          "y": 741.0625,
+          "right": 982.359375,
+          "bottom": 778.484375,
+          "width": 524.71875,
+          "height": 37.421875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 3 expansion spans the full process row",
+      "evidence": {
+        "board": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 1310.40625,
+          "height": 561.59375
+        },
+        "first": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 232.71875,
+          "bottom": 901.484375,
+          "width": 167.921875,
+          "height": 561.59375
+        },
+        "last": {
+          "x": 1207.28125,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 167.921875,
+          "height": 561.59375
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 4 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 3,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": 3,
+        "revealProgress": 1,
+        "lastScrollIndex": 2,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 4 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 610.5625,
+          "y": 339.890625,
+          "right": 1193.28125,
+          "bottom": 901.484375,
+          "width": 582.71875,
+          "height": 561.59375
+        },
+        "detail": {
+          "x": 611.5625,
+          "y": 792.484375,
+          "right": 1192.28125,
+          "bottom": 900.484375,
+          "width": 580.71875,
+          "height": 108
+        },
+        "title": {
+          "x": 639.5625,
+          "y": 741.0625,
+          "right": 1164.28125,
+          "bottom": 778.484375,
+          "width": 524.71875,
+          "height": 37.421875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 4 expansion spans the full process row",
+      "evidence": {
+        "board": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 1310.40625,
+          "height": 561.59375
+        },
+        "first": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 232.71875,
+          "bottom": 901.484375,
+          "width": 167.921875,
+          "height": 561.59375
+        },
+        "last": {
+          "x": 1207.28125,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 167.921875,
+          "height": 561.59375
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 5 opens its complete description and keeps one selection",
+      "evidence": {
+        "activeIndex": 4,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": 4,
+        "revealProgress": 1,
+        "lastScrollIndex": 2,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 5 title and description do not overlap or escape the panel",
+      "evidence": {
+        "panel": {
+          "x": 792.484375,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 582.71875,
+          "height": 561.59375
+        },
+        "detail": {
+          "x": 793.484375,
+          "y": 792.484375,
+          "right": 1374.203125,
+          "bottom": 900.484375,
+          "width": 580.71875,
+          "height": 108
+        },
+        "title": {
+          "x": 821.484375,
+          "y": 741.0625,
+          "right": 1346.203125,
+          "bottom": 778.484375,
+          "width": 524.71875,
+          "height": 37.421875
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: phase 5 expansion spans the full process row",
+      "evidence": {
+        "board": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 1310.40625,
+          "height": 561.59375
+        },
+        "first": {
+          "x": 64.796875,
+          "y": 339.890625,
+          "right": 232.71875,
+          "bottom": 901.484375,
+          "width": 167.921875,
+          "height": 561.59375
+        },
+        "last": {
+          "x": 792.484375,
+          "y": 339.890625,
+          "right": 1375.203125,
+          "bottom": 901.484375,
+          "width": 582.71875,
+          "height": 561.59375
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard End exposes and focuses the handover control",
+      "evidence": {
+        "x": 793.484375,
+        "y": 340.890625,
+        "right": 1374.203125,
+        "bottom": 900.484375,
+        "width": 580.71875,
+        "height": 559.59375
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard Home exposes the first phase control",
+      "evidence": {
+        "x": 65.796875,
+        "y": 340.890625,
+        "right": 646.515625,
+        "bottom": 900.484375,
+        "width": 580.71875,
+        "height": 559.59375
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: keyboard arrows select the next phase with focus",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: process keyboard focus is visible",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: the process statement reveals its words through native scroll",
+      "evidence": {
+        "start": 0.015349315610412216,
+        "finish": 1
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: native forward and reverse scrolling select the same process phases",
+      "evidence": {
+        "early": {
+          "activeIndex": 0,
+          "mode": "live",
+          "visible": true,
+          "framesPending": false,
+          "manuallySelected": false,
+          "hoverIndex": -1,
+          "revealProgress": 1,
+          "lastScrollIndex": 0,
+          "menuOpen": false,
+          "dialogOpen": false,
+          "panels": [
+            {
+              "active": true,
+              "expanded": true,
+              "hidden": false
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            }
+          ]
+        },
+        "late": {
+          "activeIndex": 4,
+          "mode": "live",
+          "visible": true,
+          "framesPending": false,
+          "manuallySelected": false,
+          "hoverIndex": -1,
+          "revealProgress": 1,
+          "lastScrollIndex": 4,
+          "menuOpen": false,
+          "dialogOpen": false,
+          "panels": [
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": true,
+              "expanded": true,
+              "hidden": false
+            }
+          ]
+        },
+        "reverse": {
+          "activeIndex": 0,
+          "mode": "live",
+          "visible": true,
+          "framesPending": false,
+          "manuallySelected": false,
+          "hoverIndex": -1,
+          "revealProgress": 1,
+          "lastScrollIndex": 0,
+          "menuOpen": false,
+          "dialogOpen": false,
+          "panels": [
+            {
+              "active": true,
+              "expanded": true,
+              "hidden": false
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            }
+          ]
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: hovering expands the selected process artifact",
+      "evidence": {
+        "activeIndex": 3,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": false,
+        "hoverIndex": 3,
+        "revealProgress": 1,
+        "lastScrollIndex": 2,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 process: accessibility scan",
+      "evidence": [],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: navigation suspends both process and testimonial rendering",
+      "evidence": {
+        "activeIndex": 2,
+        "mode": "live",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": 3,
+        "menuOpen": true,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: Escape restores both section controllers",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: an actual project dialog pauses all three new sections",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: project-dialog close restores all three controllers",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: process requests no frames offscreen",
+      "evidence": {
+        "activeIndex": 2,
+        "mode": "live",
+        "visible": false,
+        "framesPending": false,
+        "manuallySelected": false,
+        "hoverIndex": -1,
+        "revealProgress": 1,
+        "lastScrollIndex": 3,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: expanded process artifacts cause no horizontal page overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer offers a contact action",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 footer: accessibility scan",
+      "evidence": [],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer mark responds to the pointer",
+      "evidence": {
+        "mode": "live",
+        "visible": true,
+        "pointerActive": true,
+        "frames": 1,
+        "rafScheduled": false,
+        "reducedMotion": false,
+        "saveData": false,
+        "overlayOpen": false
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer lighting stops requesting frames after the pointer settles",
+      "evidence": {
+        "settled": {
+          "mode": "live",
+          "visible": true,
+          "pointerActive": true,
+          "frames": 16,
+          "rafScheduled": false,
+          "reducedMotion": false,
+          "saveData": false,
+          "overlayOpen": false
+        },
+        "idle": {
+          "mode": "live",
+          "visible": true,
+          "pointerActive": true,
+          "frames": 16,
+          "rafScheduled": false,
+          "reducedMotion": false,
+          "saveData": false,
+          "overlayOpen": false
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: navigation overlay suspends footer motion",
+      "evidence": {
+        "mode": "live",
+        "visible": true,
+        "pointerActive": false,
+        "frames": 16,
+        "rafScheduled": false,
+        "reducedMotion": false,
+        "saveData": false,
+        "overlayOpen": true
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer reviews navigation lands below the header and focuses its heading",
+      "evidence": {
+        "x": 0,
+        "y": 86.3125,
+        "right": 1440,
+        "bottom": 3815.8125,
+        "width": 1440,
+        "height": 3729.5
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer process navigation lands below the header and focuses its heading",
+      "evidence": {
+        "x": 0,
+        "y": 86.8125,
+        "right": 1440,
+        "bottom": 1625.265625,
+        "width": 1440,
+        "height": 1538.453125
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer contact action reaches a readable heading and transfers focus",
+      "evidence": {
+        "x": 128,
+        "y": 243.78125,
+        "right": 684,
+        "bottom": 349.53125,
+        "width": 556,
+        "height": 105.75
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: offscreen footer has no active animation frame",
+      "evidence": {
+        "mode": "live",
+        "visible": false,
+        "pointerActive": false,
+        "frames": 16,
+        "rafScheduled": false,
+        "reducedMotion": false,
+        "saveData": false,
+        "overlayOpen": false
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: footer and its artwork cause no horizontal overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "desktop to mobile: native review layout restores without overflow",
+      "evidence": {
+        "enhanced": false,
+        "progress": 0,
+        "active": 0,
+        "range": 2017,
+        "travel": 2319.5499999999997,
+        "scrollLeft": 0,
+        "height": 986,
+        "blocked": false,
+        "frame": 0,
+        "count": 7
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "desktop to mobile: the process remains selectable",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "live reduced-motion change disables all three enhancements",
+      "evidence": {
+        "reviews": {
+          "enhanced": false,
+          "progress": 0,
+          "active": 0,
+          "range": 2310,
+          "travel": 2656.5,
+          "scrollLeft": 0,
+          "height": 1027,
+          "blocked": false,
+          "frame": 0,
+          "count": 7
+        },
+        "process": {
+          "activeIndex": 3,
+          "mode": "economy",
+          "visible": true,
+          "framesPending": false,
+          "manuallySelected": false,
+          "hoverIndex": -1,
+          "revealProgress": 1,
+          "lastScrollIndex": 0,
+          "menuOpen": false,
+          "dialogOpen": false,
+          "panels": [
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            },
+            {
+              "active": true,
+              "expanded": true,
+              "hidden": false
+            },
+            {
+              "active": false,
+              "expanded": false,
+              "hidden": true
+            }
+          ]
+        },
+        "footer": {
+          "mode": "static",
+          "visible": false,
+          "pointerActive": false,
+          "frames": 16,
+          "rafScheduled": false,
+          "reducedMotion": true,
+          "saveData": false,
+          "overlayOpen": false
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "live reduced-motion change retains a bounded page",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "375x667: full review width remains visible",
+      "evidence": {
+        "x": 34,
+        "y": 347.921875,
+        "right": 341.5,
+        "bottom": 907.28125,
+        "width": 307.5,
+        "height": 559.359375
+      },
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "375x667: all closing section layouts fit the page",
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "768x1024: full review width remains visible",
+      "evidence": {
+        "x": 213.71875,
+        "y": 434.203125,
+        "right": 553.71875,
+        "bottom": 939.46875,
+        "width": 340,
+        "height": 505.265625
+      },
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "768x1024: all closing section layouts fit the page",
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1050x740: full review width remains visible",
+      "evidence": {
+        "x": 335.375,
+        "y": 317.4375,
+        "right": 715.375,
+        "bottom": 668.4375,
+        "width": 380,
+        "height": 351
+      },
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1050x740: sticky review quote and controls clear the viewport edge",
+      "evidence": {
+        "controls": {
+          "x": 465.5,
+          "y": 682.4375,
+          "right": 564.5,
+          "bottom": 724.4375,
+          "width": 99,
+          "height": 42
+        },
+        "quote": {
+          "x": 360.375,
+          "y": 476.328125,
+          "right": 690.375,
+          "bottom": 594.046875,
+          "width": 330,
+          "height": 117.71875
+        }
+      },
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1050x740: process panels span the full wrapper",
+      "evidence": {
+        "board": {
+          "x": 47.25,
+          "y": 778.359375,
+          "right": 1002.75,
+          "bottom": 1238.359375,
+          "width": 955.5,
+          "height": 460
+        },
+        "wrap": {
+          "x": 47.25,
+          "y": 192.15625,
+          "right": 1002.75,
+          "bottom": 1304.953125,
+          "width": 955.5,
+          "height": 1112.796875
+        },
+        "last": {
+          "x": 882.15625,
+          "y": 778.359375,
+          "right": 1002.75,
+          "bottom": 1238.359375,
+          "width": 120.59375,
+          "height": 460
+        }
+      },
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1050x740: all closing section layouts fit the page",
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1920x1080: full review width remains visible",
+      "evidence": {
+        "x": 1258.796875,
+        "y": 373.125,
+        "right": 1803.796875,
+        "bottom": 1008.125,
+        "width": 545,
+        "height": 635
+      },
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1920x1080: sticky review quote and controls clear the viewport edge",
+      "evidence": {
+        "controls": {
+          "x": 900.5,
+          "y": 1022.125,
+          "right": 999.5,
+          "bottom": 1064.125,
+          "width": 99,
+          "height": 42
+        },
+        "quote": {
+          "x": 1283.796875,
+          "y": 790.09375,
+          "right": 1778.796875,
+          "bottom": 933.734375,
+          "width": 495,
+          "height": 143.640625
+        }
+      },
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1920x1080: process panels span the full wrapper",
+      "evidence": {
+        "board": {
+          "x": 86.390625,
+          "y": 1017.484375,
+          "right": 1833.609375,
+          "bottom": 1647.484375,
+          "width": 1747.21875,
+          "height": 630
+        },
+        "wrap": {
+          "x": 86.390625,
+          "y": 257.6875,
+          "right": 1833.609375,
+          "bottom": 1714.078125,
+          "width": 1747.21875,
+          "height": 1456.390625
+        },
+        "last": {
+          "x": 1607.453125,
+          "y": 1017.484375,
+          "right": 1833.609375,
+          "bottom": 1647.484375,
+          "width": 226.15625,
+          "height": 630
+        }
+      },
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1920x1080: all closing section layouts fit the page",
+      "run": "layout-settled/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: seven attributed reviews match the existing source exactly",
+      "evidence": [
+        {
+          "text": "I have used Aleem for several projects and keep coming back to him. I use no-one else. That says it all really.",
+          "name": "Steve"
+        },
+        {
+          "text": "Aleem and us, had a very tight deadline, and despite that he was able to deliver. We are grateful for his work and understanding and cooperation.",
+          "name": "Abdel M Oulhadj"
+        },
+        {
+          "text": "He will be my go-to person for anything involving my websites and automations from here on out. Please give him a go!",
+          "name": "Cullen Blanchfield"
+        },
+        {
+          "text": "He took the time to understand our goals, offered smart recommendations, and executed with speed and precision. Our blog now feels fully integrated with the rest of the site, loads faster, and is set up for long-term success.",
+          "name": "Richard"
+        },
+        {
+          "text": "The attention to detail and commitment to quality were evident in the final product. Highly recommended for anyone looking for talented and reliable developers.",
+          "name": "Ryan Taylor"
+        },
+        {
+          "text": "Incredible work, highly suggest you work with this team. They brought the whole vision to life better than ever imagined!",
+          "name": "Paridhi Goel"
+        },
+        {
+          "text": "His innovative approach and meticulous attention to detail have significantly enhanced user engagement and improved our website functionality.",
+          "name": "Zaid Kazi"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: testimonial identities use no fabricated photographs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: three client outcomes and the existing public record remain available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: all five canonical phase descriptions remain in the document",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: business enquiries use the configured NexusPoint email",
+      "evidence": [
+        "mailto:aleem@nexus-point.co",
+        "mailto:aleem@nexus-point.co"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: footer retains the actual social profiles",
+      "evidence": [
+        {
+          "href": "https://www.linkedin.com/in/aleemuh00137/",
+          "label": "LinkedIn↗"
+        },
+        {
+          "href": "https://www.instagram.com/aleem_uh/",
+          "label": "Instagram↗"
+        },
+        {
+          "href": "https://aleemuh.com/newsletter",
+          "label": "Newsletter↗"
+        },
+        {
+          "href": "https://aleemuh.com",
+          "label": "Meet the founder↗"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: footer retains approved artwork with one accessible brand identity",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: reviews use the native reading layout",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: reviews avoid a pinned scroll reservation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: evidence disclosure works without animation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: process remains readable and interactive",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: every phase description is exposed without JavaScript",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: approved footer mark remains visible",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 no-js: fallbacks cause no horizontal overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: seven attributed reviews match the existing source exactly",
+      "evidence": [
+        {
+          "text": "I have used Aleem for several projects and keep coming back to him. I use no-one else. That says it all really.",
+          "name": "Steve"
+        },
+        {
+          "text": "Aleem and us, had a very tight deadline, and despite that he was able to deliver. We are grateful for his work and understanding and cooperation.",
+          "name": "Abdel M Oulhadj"
+        },
+        {
+          "text": "He will be my go-to person for anything involving my websites and automations from here on out. Please give him a go!",
+          "name": "Cullen Blanchfield"
+        },
+        {
+          "text": "He took the time to understand our goals, offered smart recommendations, and executed with speed and precision. Our blog now feels fully integrated with the rest of the site, loads faster, and is set up for long-term success.",
+          "name": "Richard"
+        },
+        {
+          "text": "The attention to detail and commitment to quality were evident in the final product. Highly recommended for anyone looking for talented and reliable developers.",
+          "name": "Ryan Taylor"
+        },
+        {
+          "text": "Incredible work, highly suggest you work with this team. They brought the whole vision to life better than ever imagined!",
+          "name": "Paridhi Goel"
+        },
+        {
+          "text": "His innovative approach and meticulous attention to detail have significantly enhanced user engagement and improved our website functionality.",
+          "name": "Zaid Kazi"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: testimonial identities use no fabricated photographs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: three client outcomes and the existing public record remain available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: all five canonical phase descriptions remain in the document",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: business enquiries use the configured NexusPoint email",
+      "evidence": [
+        "mailto:aleem@nexus-point.co",
+        "mailto:aleem@nexus-point.co"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: footer retains the actual social profiles",
+      "evidence": [
+        {
+          "href": "https://www.linkedin.com/in/aleemuh00137/",
+          "label": "LinkedIn↗"
+        },
+        {
+          "href": "https://www.instagram.com/aleem_uh/",
+          "label": "Instagram↗"
+        },
+        {
+          "href": "https://aleemuh.com/newsletter",
+          "label": "Newsletter↗"
+        },
+        {
+          "href": "https://aleemuh.com",
+          "label": "Meet the founder↗"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: footer retains approved artwork with one accessible brand identity",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: reviews use the native reading layout",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: reviews avoid a pinned scroll reservation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: evidence disclosure works without animation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: process remains readable and interactive",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: every phase description is exposed without JavaScript",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: approved footer mark remains visible",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 no-js: fallbacks cause no horizontal overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: seven attributed reviews match the existing source exactly",
+      "evidence": [
+        {
+          "text": "I have used Aleem for several projects and keep coming back to him. I use no-one else. That says it all really.",
+          "name": "Steve"
+        },
+        {
+          "text": "Aleem and us, had a very tight deadline, and despite that he was able to deliver. We are grateful for his work and understanding and cooperation.",
+          "name": "Abdel M Oulhadj"
+        },
+        {
+          "text": "He will be my go-to person for anything involving my websites and automations from here on out. Please give him a go!",
+          "name": "Cullen Blanchfield"
+        },
+        {
+          "text": "He took the time to understand our goals, offered smart recommendations, and executed with speed and precision. Our blog now feels fully integrated with the rest of the site, loads faster, and is set up for long-term success.",
+          "name": "Richard"
+        },
+        {
+          "text": "The attention to detail and commitment to quality were evident in the final product. Highly recommended for anyone looking for talented and reliable developers.",
+          "name": "Ryan Taylor"
+        },
+        {
+          "text": "Incredible work, highly suggest you work with this team. They brought the whole vision to life better than ever imagined!",
+          "name": "Paridhi Goel"
+        },
+        {
+          "text": "His innovative approach and meticulous attention to detail have significantly enhanced user engagement and improved our website functionality.",
+          "name": "Zaid Kazi"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: testimonial identities use no fabricated photographs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: three client outcomes and the existing public record remain available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: all five canonical phase descriptions remain in the document",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: business enquiries use the configured NexusPoint email",
+      "evidence": [
+        "mailto:aleem@nexus-point.co",
+        "mailto:aleem@nexus-point.co"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: footer retains the actual social profiles",
+      "evidence": [
+        {
+          "href": "https://www.linkedin.com/in/aleemuh00137/",
+          "label": "LinkedIn↗"
+        },
+        {
+          "href": "https://www.instagram.com/aleem_uh/",
+          "label": "Instagram↗"
+        },
+        {
+          "href": "https://aleemuh.com/newsletter",
+          "label": "Newsletter↗"
+        },
+        {
+          "href": "https://aleemuh.com",
+          "label": "Meet the founder↗"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: footer retains approved artwork with one accessible brand identity",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: reviews use the native reading layout",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: reviews avoid a pinned scroll reservation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: evidence disclosure works without animation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: process remains readable and interactive",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: all phases remain selectable without animated motion",
+      "evidence": {
+        "activeIndex": 4,
+        "mode": "economy",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 0,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: footer lighting uses its static mode",
+      "evidence": {
+        "mode": "static",
+        "visible": false,
+        "pointerActive": false,
+        "frames": 0,
+        "rafScheduled": false,
+        "reducedMotion": true,
+        "saveData": false,
+        "overlayOpen": false
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: approved footer mark remains visible",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced: fallbacks cause no horizontal overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 reduced closing sections: accessibility scan",
+      "evidence": [],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: seven attributed reviews match the existing source exactly",
+      "evidence": [
+        {
+          "text": "I have used Aleem for several projects and keep coming back to him. I use no-one else. That says it all really.",
+          "name": "Steve"
+        },
+        {
+          "text": "Aleem and us, had a very tight deadline, and despite that he was able to deliver. We are grateful for his work and understanding and cooperation.",
+          "name": "Abdel M Oulhadj"
+        },
+        {
+          "text": "He will be my go-to person for anything involving my websites and automations from here on out. Please give him a go!",
+          "name": "Cullen Blanchfield"
+        },
+        {
+          "text": "He took the time to understand our goals, offered smart recommendations, and executed with speed and precision. Our blog now feels fully integrated with the rest of the site, loads faster, and is set up for long-term success.",
+          "name": "Richard"
+        },
+        {
+          "text": "The attention to detail and commitment to quality were evident in the final product. Highly recommended for anyone looking for talented and reliable developers.",
+          "name": "Ryan Taylor"
+        },
+        {
+          "text": "Incredible work, highly suggest you work with this team. They brought the whole vision to life better than ever imagined!",
+          "name": "Paridhi Goel"
+        },
+        {
+          "text": "His innovative approach and meticulous attention to detail have significantly enhanced user engagement and improved our website functionality.",
+          "name": "Zaid Kazi"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: testimonial identities use no fabricated photographs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: three client outcomes and the existing public record remain available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: all five canonical phase descriptions remain in the document",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: business enquiries use the configured NexusPoint email",
+      "evidence": [
+        "mailto:aleem@nexus-point.co",
+        "mailto:aleem@nexus-point.co"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: footer retains the actual social profiles",
+      "evidence": [
+        {
+          "href": "https://www.linkedin.com/in/aleemuh00137/",
+          "label": "LinkedIn↗"
+        },
+        {
+          "href": "https://www.instagram.com/aleem_uh/",
+          "label": "Instagram↗"
+        },
+        {
+          "href": "https://aleemuh.com/newsletter",
+          "label": "Newsletter↗"
+        },
+        {
+          "href": "https://aleemuh.com",
+          "label": "Meet the founder↗"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: footer retains approved artwork with one accessible brand identity",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: reviews use the native reading layout",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: reviews avoid a pinned scroll reservation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: evidence disclosure works without animation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: process remains readable and interactive",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: all phases remain selectable without animated motion",
+      "evidence": {
+        "activeIndex": 4,
+        "mode": "economy",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": 4,
+        "revealProgress": 0,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: footer lighting uses its static mode",
+      "evidence": {
+        "mode": "static",
+        "visible": false,
+        "pointerActive": false,
+        "frames": 0,
+        "rafScheduled": false,
+        "reducedMotion": true,
+        "saveData": false,
+        "overlayOpen": false
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: approved footer mark remains visible",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced: fallbacks cause no horizontal overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 reduced closing sections: accessibility scan",
+      "evidence": [],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: seven attributed reviews match the existing source exactly",
+      "evidence": [
+        {
+          "text": "I have used Aleem for several projects and keep coming back to him. I use no-one else. That says it all really.",
+          "name": "Steve"
+        },
+        {
+          "text": "Aleem and us, had a very tight deadline, and despite that he was able to deliver. We are grateful for his work and understanding and cooperation.",
+          "name": "Abdel M Oulhadj"
+        },
+        {
+          "text": "He will be my go-to person for anything involving my websites and automations from here on out. Please give him a go!",
+          "name": "Cullen Blanchfield"
+        },
+        {
+          "text": "He took the time to understand our goals, offered smart recommendations, and executed with speed and precision. Our blog now feels fully integrated with the rest of the site, loads faster, and is set up for long-term success.",
+          "name": "Richard"
+        },
+        {
+          "text": "The attention to detail and commitment to quality were evident in the final product. Highly recommended for anyone looking for talented and reliable developers.",
+          "name": "Ryan Taylor"
+        },
+        {
+          "text": "Incredible work, highly suggest you work with this team. They brought the whole vision to life better than ever imagined!",
+          "name": "Paridhi Goel"
+        },
+        {
+          "text": "His innovative approach and meticulous attention to detail have significantly enhanced user engagement and improved our website functionality.",
+          "name": "Zaid Kazi"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: testimonial identities use no fabricated photographs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: three client outcomes and the existing public record remain available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: all five canonical phase descriptions remain in the document",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: business enquiries use the configured NexusPoint email",
+      "evidence": [
+        "mailto:aleem@nexus-point.co",
+        "mailto:aleem@nexus-point.co"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: footer retains the actual social profiles",
+      "evidence": [
+        {
+          "href": "https://www.linkedin.com/in/aleemuh00137/",
+          "label": "LinkedIn↗"
+        },
+        {
+          "href": "https://www.instagram.com/aleem_uh/",
+          "label": "Instagram↗"
+        },
+        {
+          "href": "https://aleemuh.com/newsletter",
+          "label": "Newsletter↗"
+        },
+        {
+          "href": "https://aleemuh.com",
+          "label": "Meet the founder↗"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: footer retains approved artwork with one accessible brand identity",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: reviews use the native reading layout",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: reviews avoid a pinned scroll reservation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: evidence disclosure works without animation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: process remains readable and interactive",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: all phases remain selectable without animated motion",
+      "evidence": {
+        "activeIndex": 4,
+        "mode": "economy",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": -1,
+        "revealProgress": 0,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: footer lighting uses its static mode",
+      "evidence": {
+        "mode": "static",
+        "visible": false,
+        "pointerActive": false,
+        "frames": 0,
+        "rafScheduled": false,
+        "reducedMotion": false,
+        "saveData": true,
+        "overlayOpen": false
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: approved footer mark remains visible",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390 save-data: fallbacks cause no horizontal overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: seven attributed reviews match the existing source exactly",
+      "evidence": [
+        {
+          "text": "I have used Aleem for several projects and keep coming back to him. I use no-one else. That says it all really.",
+          "name": "Steve"
+        },
+        {
+          "text": "Aleem and us, had a very tight deadline, and despite that he was able to deliver. We are grateful for his work and understanding and cooperation.",
+          "name": "Abdel M Oulhadj"
+        },
+        {
+          "text": "He will be my go-to person for anything involving my websites and automations from here on out. Please give him a go!",
+          "name": "Cullen Blanchfield"
+        },
+        {
+          "text": "He took the time to understand our goals, offered smart recommendations, and executed with speed and precision. Our blog now feels fully integrated with the rest of the site, loads faster, and is set up for long-term success.",
+          "name": "Richard"
+        },
+        {
+          "text": "The attention to detail and commitment to quality were evident in the final product. Highly recommended for anyone looking for talented and reliable developers.",
+          "name": "Ryan Taylor"
+        },
+        {
+          "text": "Incredible work, highly suggest you work with this team. They brought the whole vision to life better than ever imagined!",
+          "name": "Paridhi Goel"
+        },
+        {
+          "text": "His innovative approach and meticulous attention to detail have significantly enhanced user engagement and improved our website functionality.",
+          "name": "Zaid Kazi"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: testimonial identities use no fabricated photographs",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: three client outcomes and the existing public record remain available",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: all five canonical phase descriptions remain in the document",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: business enquiries use the configured NexusPoint email",
+      "evidence": [
+        "mailto:aleem@nexus-point.co",
+        "mailto:aleem@nexus-point.co"
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: footer retains the actual social profiles",
+      "evidence": [
+        {
+          "href": "https://www.linkedin.com/in/aleemuh00137/",
+          "label": "LinkedIn↗"
+        },
+        {
+          "href": "https://www.instagram.com/aleem_uh/",
+          "label": "Instagram↗"
+        },
+        {
+          "href": "https://aleemuh.com/newsletter",
+          "label": "Newsletter↗"
+        },
+        {
+          "href": "https://aleemuh.com",
+          "label": "Meet the founder↗"
+        }
+      ],
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: footer retains approved artwork with one accessible brand identity",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: reviews use the native reading layout",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: reviews avoid a pinned scroll reservation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: evidence disclosure works without animation",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: process remains readable and interactive",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: all phases remain selectable without animated motion",
+      "evidence": {
+        "activeIndex": 4,
+        "mode": "economy",
+        "visible": true,
+        "framesPending": false,
+        "manuallySelected": true,
+        "hoverIndex": 4,
+        "revealProgress": 0,
+        "lastScrollIndex": -1,
+        "menuOpen": false,
+        "dialogOpen": false,
+        "panels": [
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": false,
+            "expanded": false,
+            "hidden": true
+          },
+          {
+            "active": true,
+            "expanded": true,
+            "hidden": false
+          }
+        ]
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: footer lighting uses its static mode",
+      "evidence": {
+        "mode": "static",
+        "visible": false,
+        "pointerActive": false,
+        "frames": 0,
+        "rafScheduled": false,
+        "reducedMotion": false,
+        "saveData": true,
+        "overlayOpen": false
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: approved footer mark remains visible",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440 save-data: fallbacks cause no horizontal overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: #reviews lands below the header and stays stable after hero layout settles",
+      "evidence": {
+        "first": {
+          "top": 88.484375,
+          "scroll": 13959
+        },
+        "settled": {
+          "top": 88.484375,
+          "scroll": 13959
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: #reviews initial navigation causes no page overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: #process lands below the header and stays stable after hero layout settles",
+      "evidence": {
+        "first": {
+          "top": 88.234375,
+          "scroll": 15118
+        },
+        "settled": {
+          "top": 88.234375,
+          "scroll": 15118
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: #process initial navigation causes no page overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: #contact lands below the header and stays stable after hero layout settles",
+      "evidence": {
+        "first": {
+          "top": 88.296875,
+          "scroll": 21715
+        },
+        "settled": {
+          "top": 88.296875,
+          "scroll": 21715
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "390: #contact initial navigation causes no page overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: #reviews lands below the header and stays stable after hero layout settles",
+      "evidence": {
+        "first": {
+          "top": 88.3125,
+          "scroll": 15965
+        },
+        "settled": {
+          "top": 88.3125,
+          "scroll": 15965
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: #reviews initial navigation causes no page overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: #process lands below the header and stays stable after hero layout settles",
+      "evidence": {
+        "first": {
+          "top": 87.8125,
+          "scroll": 19695
+        },
+        "settled": {
+          "top": 87.8125,
+          "scroll": 19695
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: #process initial navigation causes no page overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: #contact lands below the header and stays stable after hero layout settles",
+      "evidence": {
+        "first": {
+          "top": 88.390625,
+          "scroll": 24431
+        },
+        "settled": {
+          "top": 88.390625,
+          "scroll": 24431
+        }
+      },
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "1440: #contact initial navigation causes no page overflow",
+      "run": "final-complete/report.json"
+    },
+    {
+      "ok": true,
+      "name": "browser produced no uncaught page or console errors",
+      "evidence": [],
+      "run": "layout-settled/report.json"
+    }
+  ],
+  "errors": [],
+  "sourceRuns": [
+    "final-complete/report.json",
+    "layout-settled/report.json"
+  ],
+  "notes": "The final production-preview run includes the panel activation correction. The responsive rerun waits for the selected testimonial to settle instead of measuring it after a fixed 350ms. Corresponding results replace earlier rows without double counting. A one-pixel tolerance handles fractional CSS coordinates."
+}

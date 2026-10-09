@@ -1,0 +1,42 @@
+[
+  {
+    "file": "src/components/home/Proof.astro",
+    "match": true,
+    "sha256": "AC5F9D7DA2AE0742A3019EE900359075AA666509AB473D6DCAC2C6F77F370623"
+  },
+  {
+    "file": "src/components/home/Tie.astro",
+    "match": true,
+    "sha256": "8F6613FAB7A80DB897FF4BDCB0304BBBDBC12C180C6966761DD4806A3C6D6702"
+  },
+  {
+    "file": "src/components/home/ProcessArtwork.astro",
+    "match": true,
+    "sha256": "2553F6BAD19E32F22A1DC2B25FC33C71C0F39E1E71DCBA47B29050D2CFB068DC"
+  },
+  {
+    "file": "src/components/Footer.astro",
+    "match": true,
+    "sha256": "DF86D0047E2A5CF7138C4D89D3B984C9473B8300FAC6F3F1380A3F11EDEC2685"
+  },
+  {
+    "file": "src/scripts/reviews.ts",
+    "match": true,
+    "sha256": "FB397C777DFD0D81642510A08A3529773EC2476A2F89E959E37CC9D1B7FE14FE"
+  },
+  {
+    "file": "src/scripts/process.ts",
+    "match": true,
+    "sha256": "0D0AA6B56D09D3C4369FD6237C9F3B716D42755B1F12105BE0C4315A5B248AEA"
+  },
+  {
+    "file": "src/scripts/footer.ts",
+    "match": true,
+    "sha256": "562663F5EABC5FB7E4142BDD9835ABBD012B87FE1FE020BA81CF9C1F7DCF92FE"
+  },
+  {
+    "file": "src/pages/index.astro",
+    "match": true,
+    "sha256": "B40A4FB1BDCF54064411FA448DCDA4F58EF6DDA4AC928681B7AD21F951BC1DFC"
+  }
+]
