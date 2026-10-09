@@ -1,0 +1,1052 @@
+{
+  "brand": "NexusPoint",
+  "identity": "Soft Fold",
+  "date": "2026-10-02",
+  "hashAlgorithm": "SHA-256",
+  "files": [
+    {
+      "path": "applications/application-sources.json",
+      "bytes": 1607,
+      "sha256": "cf237ea5721e07b834856ea7f6132f2dfe56911db70b87200669839e1a2ceac0"
+    },
+    {
+      "path": "applications/background-master.png",
+      "bytes": 1306234,
+      "sha256": "da2265910b2666e04ac978fb88c10b47670dfd9618b75f91665b5a5166166ab7"
+    },
+    {
+      "path": "applications/business-card-selection.json",
+      "bytes": 1780,
+      "sha256": "457b7a602d1d6204bb14d0b78c10d37e5eddca92b9eea12722e298b91ca5df53"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Back.png",
+      "bytes": 68029,
+      "sha256": "bb57a8c0119b09f5f6bff38bef81a2a345bd9ddcb117dae44524f417bd858c66"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Back.svg",
+      "bytes": 57139,
+      "sha256": "55b7d642765d5a6f680209fb3bf1465b121b6888bd5913251faf3b37e34c3cea"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Final-Proof.png",
+      "bytes": 124472,
+      "sha256": "2d49ca3f803310031e2fdae48fb644f511a856324d63a49012e18f4e7c42145c"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Front.png",
+      "bytes": 65151,
+      "sha256": "03fc48c31bf4c25e09c073460253eed8696b9918c8936b6152676dda47d47f00"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Front.svg",
+      "bytes": 25979,
+      "sha256": "cda2652a97130ea52a6c18ab8ea97417433c7629f727f4bd055c127d449d7ea0"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Print.pdf",
+      "bytes": 25739,
+      "sha256": "cbbdb1038ccc8411e52ae88a2516802403b7ac244c61db7a0544dc8889013359"
+    },
+    {
+      "path": "applications/card-variations/01-ribbon-flow-back.png",
+      "bytes": 78176,
+      "sha256": "91825010afa63298d2f1ec5a06fae6359af8f41ac77e77b28338fed06e6112c0"
+    },
+    {
+      "path": "applications/card-variations/01-ribbon-flow-back.svg",
+      "bytes": 56570,
+      "sha256": "2a9cdf99c5fcdd7e982b570519fa874077adc83f14a8e772f54282629db39362"
+    },
+    {
+      "path": "applications/card-variations/01-ribbon-flow-front.png",
+      "bytes": 74292,
+      "sha256": "a2a4be88edb18ee5977230741bff2eedec84c98e48081b9b280dcfe207b5a53d"
+    },
+    {
+      "path": "applications/card-variations/01-ribbon-flow-front.svg",
+      "bytes": 26184,
+      "sha256": "38ada605cf38ab716319a74520b64060d1f2a7f8ed13f8a0edcc82336a7a9604"
+    },
+    {
+      "path": "applications/card-variations/01-ribbon-flow-print.pdf",
+      "bytes": 27522,
+      "sha256": "79091e07006d9a7dc65ced9bd3fe2f181e5f4d810d4c688906faebf6ccb783aa"
+    },
+    {
+      "path": "applications/card-variations/01-ribbon-flow-proof.png",
+      "bytes": 129855,
+      "sha256": "d42584e934eaa670bd5d7b56fb5dca9161f4642890715eb1930e93956b3b5812"
+    },
+    {
+      "path": "applications/card-variations/02-orbital-field-back.png",
+      "bytes": 71646,
+      "sha256": "9d132de973d8dc3f54fb09502b8b163ec9707d8780239d58ca607c98176c6771"
+    },
+    {
+      "path": "applications/card-variations/02-orbital-field-back.svg",
+      "bytes": 56398,
+      "sha256": "3ac5305ecb7288d0ac199a34bd726e69d406482feceb9cf8982b353f33d48177"
+    },
+    {
+      "path": "applications/card-variations/02-orbital-field-front.png",
+      "bytes": 88338,
+      "sha256": "da76a296f2897e3ee867785dc7a99a88e440c32f742e018eb17d31f8f138044f"
+    },
+    {
+      "path": "applications/card-variations/02-orbital-field-front.svg",
+      "bytes": 29296,
+      "sha256": "4104275a16f737b323805b11ac6d9abd80abfed0287e22f8f6ecc5d8490247b2"
+    },
+    {
+      "path": "applications/card-variations/02-orbital-field-print.pdf",
+      "bytes": 38333,
+      "sha256": "b685b7d204c21123b76bc251815a4cc477aa6f3926b556e538f9c0a09ba08c67"
+    },
+    {
+      "path": "applications/card-variations/02-orbital-field-proof.png",
+      "bytes": 136986,
+      "sha256": "33e0bd8385c35cbc9a56ed8d6b4e2976a9ac3cce0cc3612ae4965a3e1148f2b5"
+    },
+    {
+      "path": "applications/card-variations/03-folded-edge-back.png",
+      "bytes": 66049,
+      "sha256": "7042e57cb014af569901a5cb8e3c634684a8e75a458db59d443372aaaddcf14c"
+    },
+    {
+      "path": "applications/card-variations/03-folded-edge-back.svg",
+      "bytes": 56458,
+      "sha256": "ed8bab55cb7a05cf7074ae9fe32baf5f605d087aa26ce0ab0bf5f6d854f7ed5d"
+    },
+    {
+      "path": "applications/card-variations/03-folded-edge-front.png",
+      "bytes": 66103,
+      "sha256": "8cf846de68f0267794d36899a5292cea54ca04d570b92b21fd194b50c923d22b"
+    },
+    {
+      "path": "applications/card-variations/03-folded-edge-front.svg",
+      "bytes": 25727,
+      "sha256": "2f2c27646f5a386c5abc881eba809fa2d8f2deb0f3886bba05497db40cf921ec"
+    },
+    {
+      "path": "applications/card-variations/03-folded-edge-print.pdf",
+      "bytes": 25116,
+      "sha256": "64915c8f15de7c88ef2cae052b1ed10cc4718e6f856e5d59a7b8fc0b10cb7fca"
+    },
+    {
+      "path": "applications/card-variations/03-folded-edge-proof-spacing-fixed.png",
+      "bytes": 124003,
+      "sha256": "9cda3fec2771618dabd5abc33e619b25660b87c98fd2083ecb8567f87493d69d"
+    },
+    {
+      "path": "applications/card-variations/comparison.html",
+      "bytes": 2738,
+      "sha256": "61bce4c5731993e964eb8672c0ef9c25e4fb4c8e6e008826d044dd8ff8f4eb95"
+    },
+    {
+      "path": "applications/card-variations/comparison.png",
+      "bytes": 411500,
+      "sha256": "7cad3bb291f2198188cf3c9f92ab43fdc68eaef94ef201141a5d6b46c3baaad9"
+    },
+    {
+      "path": "applications/card-variations/design-manifest.json",
+      "bytes": 9331,
+      "sha256": "35d4bfdcd3b13bd8a488429dcb4ea86de1f96efc0efbf8da3a3465f24cf5c1af"
+    },
+    {
+      "path": "applications/card-variations/README.md",
+      "bytes": 1984,
+      "sha256": "e9d5ca2f8f55c3624d5275afc27dde4600180ce97b89260e1206db342aca3bd0"
+    },
+    {
+      "path": "applications/card-variations/render-validation.json",
+      "bytes": 451,
+      "sha256": "d15f67d6f51148642bf58f37a1665977977b3b0b176ff5fa2bb16265c3ee65df"
+    },
+    {
+      "path": "applications/folded-edge-variations/3a-soft-edge-back.png",
+      "bytes": 69093,
+      "sha256": "52647e75c1d114b23ffa436761246e9941b1b196952b09715024193efa80ceff"
+    },
+    {
+      "path": "applications/folded-edge-variations/3a-soft-edge-back.svg",
+      "bytes": 57221,
+      "sha256": "ed7b1aaf59473d7cf68571428693b426893187fc5f1d249da9181abc9e96cbda"
+    },
+    {
+      "path": "applications/folded-edge-variations/3a-soft-edge-front.png",
+      "bytes": 72320,
+      "sha256": "bcd240d7c26fef3814c80d1610419538afef31c421401c2ef85814d05b726862"
+    },
+    {
+      "path": "applications/folded-edge-variations/3a-soft-edge-front.svg",
+      "bytes": 26044,
+      "sha256": "8b0c4eebda4d21231929718e8044fef98c18ba171ac3d27cbf0f1a3e7a312561"
+    },
+    {
+      "path": "applications/folded-edge-variations/3a-soft-edge-print.pdf",
+      "bytes": 26307,
+      "sha256": "e49ce873bedb0a3516a09c22769f9b4c754e58b2fc1912db0a5c06076f651d05"
+    },
+    {
+      "path": "applications/folded-edge-variations/3a-soft-edge-proof.png",
+      "bytes": 128117,
+      "sha256": "5029e9379ea62c5cc658b45e65b2dec3eca94d1802dde5b64d9e21c77166dc7a"
+    },
+    {
+      "path": "applications/folded-edge-variations/3b-layered-fold-back.png",
+      "bytes": 66801,
+      "sha256": "ec8ea2db4d9685152e7e3c02dbc002ba9dcd3f2f76307a52f66c6dff3d577544"
+    },
+    {
+      "path": "applications/folded-edge-variations/3b-layered-fold-back.svg",
+      "bytes": 57141,
+      "sha256": "85c8c3635c740918039329f4d998100927cc4bbc225c75b0333c1b62d1549617"
+    },
+    {
+      "path": "applications/folded-edge-variations/3b-layered-fold-front.png",
+      "bytes": 68951,
+      "sha256": "d72f6cac0b0a897ef3cbbc4a44be002db08652cb05a1ccdaa7ae574735e197ce"
+    },
+    {
+      "path": "applications/folded-edge-variations/3b-layered-fold-front.svg",
+      "bytes": 26004,
+      "sha256": "cb8cadc21b4e635e2f54ad58008038fc4210d725c231d874d585ac66708ef5ca"
+    },
+    {
+      "path": "applications/folded-edge-variations/3b-layered-fold-print.pdf",
+      "bytes": 25253,
+      "sha256": "710291a1b6798512699c1cef69dc27b007b6405c88ec5a6cb0caf31feb696764"
+    },
+    {
+      "path": "applications/folded-edge-variations/3b-layered-fold-proof.png",
+      "bytes": 126292,
+      "sha256": "c748d49cff4fbf9884893687a9d593c1ed08f08de31e58d71316ad3a0cba6809"
+    },
+    {
+      "path": "applications/folded-edge-variations/3c-diagonal-wrap-back.png",
+      "bytes": 68029,
+      "sha256": "bb57a8c0119b09f5f6bff38bef81a2a345bd9ddcb117dae44524f417bd858c66"
+    },
+    {
+      "path": "applications/folded-edge-variations/3c-diagonal-wrap-back.svg",
+      "bytes": 57139,
+      "sha256": "55b7d642765d5a6f680209fb3bf1465b121b6888bd5913251faf3b37e34c3cea"
+    },
+    {
+      "path": "applications/folded-edge-variations/3c-diagonal-wrap-front.png",
+      "bytes": 65151,
+      "sha256": "03fc48c31bf4c25e09c073460253eed8696b9918c8936b6152676dda47d47f00"
+    },
+    {
+      "path": "applications/folded-edge-variations/3c-diagonal-wrap-front.svg",
+      "bytes": 25979,
+      "sha256": "cda2652a97130ea52a6c18ab8ea97417433c7629f727f4bd055c127d449d7ea0"
+    },
+    {
+      "path": "applications/folded-edge-variations/3c-diagonal-wrap-print.pdf",
+      "bytes": 25738,
+      "sha256": "013e1827ce6b7aedce61f2658aa4dae931f668f063520bc1e6eddb62a5f224f4"
+    },
+    {
+      "path": "applications/folded-edge-variations/3c-diagonal-wrap-proof.png",
+      "bytes": 124472,
+      "sha256": "2d49ca3f803310031e2fdae48fb644f511a856324d63a49012e18f4e7c42145c"
+    },
+    {
+      "path": "applications/folded-edge-variations/comparison.html",
+      "bytes": 2732,
+      "sha256": "b064dcfb52bbb2d93a24f21c61fb2b16b38e83410e3505a4e8a5d7191a931462"
+    },
+    {
+      "path": "applications/folded-edge-variations/comparison.png",
+      "bytes": 398373,
+      "sha256": "a5c9746ecfb40c916676ecb1f46d09740b3115b6f225c007593b13e412e93157"
+    },
+    {
+      "path": "applications/folded-edge-variations/design-manifest.json",
+      "bytes": 4609,
+      "sha256": "ab831f6667ae5e8d0f2a4a8659b01c0bbdfd706f4270efc3ee1b8f900d2620b3"
+    },
+    {
+      "path": "applications/folded-edge-variations/README.md",
+      "bytes": 2028,
+      "sha256": "a42fc8195fb84474ed2b4275eaff3b34e290c715579d0a3cdef3b26f2fdaebde"
+    },
+    {
+      "path": "applications/folded-edge-variations/render-validation.json",
+      "bytes": 947,
+      "sha256": "142b4068c90b1e07aa67a5300f6203b8d3bddd7a1bb0b491469ac019d39abc92"
+    },
+    {
+      "path": "applications/LinkedIn-Banner-Conthrax-Soft-Fold.png",
+      "bytes": 603231,
+      "sha256": "d50ef44fc12ccf1b31082b3a59af07a58efea01d071cb1108f2433872b6425fd"
+    },
+    {
+      "path": "applications/LinkedIn-Banner-Conthrax-Soft-Fold.svg",
+      "bytes": 1776880,
+      "sha256": "f24ae029fb504a28f7a5c258f5ba791629a9e9f5f273cf20b17475f3969395c0"
+    },
+    {
+      "path": "applications/portfolio-qr.png",
+      "bytes": 6078,
+      "sha256": "a6c0bc6b7747767f2e1f97f7d117f463b12c3456fe3088ce6f30c544f7437f3a"
+    },
+    {
+      "path": "applications/portfolio-qr.svg",
+      "bytes": 18571,
+      "sha256": "65f9f91dfb1193e778b05988b0887df7c13354060d2498738c15e1b664177fdd"
+    },
+    {
+      "path": "applications/Profile-Avatar-Soft-Fold.png",
+      "bytes": 54030,
+      "sha256": "7249994ae2245cfbf8edcdbfd8096d193194d01be51cd4679561ffecfd6df645"
+    },
+    {
+      "path": "applications/Profile-Avatar-Soft-Fold.svg",
+      "bytes": 5604,
+      "sha256": "48a694eb5c7e0c94f8ff66ae07f2426e660c56a6712f356dd57da40b70d75fdb"
+    },
+    {
+      "path": "applications/README.md",
+      "bytes": 2255,
+      "sha256": "cfdf4d618caa3a59407c184ec80c14417b3b51b0499160a00d9ff84d51fe3002"
+    },
+    {
+      "path": "applications/type-specimen.png",
+      "bytes": 35252,
+      "sha256": "e2c0a824728b5ab6b3ef57dba209baf4ae4b12412bd3fff8164df828c54c5938"
+    },
+    {
+      "path": "applications/type-specimen.svg",
+      "bytes": 13444,
+      "sha256": "19154a15307be812f65df774cbc1ddb189e989fddbfe56843bb5155ee9c62f28"
+    },
+    {
+      "path": "applications/WhatsApp-Banner-Soft-Fold-Square.png",
+      "bytes": 277413,
+      "sha256": "8e926d981980b0e7af5433906bb5376b214e877ff57a2ff85249a8946f5906e0"
+    },
+    {
+      "path": "applications/WhatsApp-Banner-Soft-Fold-Square.svg",
+      "bytes": 1786686,
+      "sha256": "e48cdb41488e3dbe8373ae182436e2ba9fbcf87b4d134a093e8b76da1a33813c"
+    },
+    {
+      "path": "applications/WhatsApp-Banner-Soft-Fold-Wide.png",
+      "bytes": 1566448,
+      "sha256": "83d5b29f2c7bbb118cb9fc395b44018dd3dad2fc92a5ae35f2752e6350f47e76"
+    },
+    {
+      "path": "applications/WhatsApp-Banner-Soft-Fold-Wide.svg",
+      "bytes": 1786462,
+      "sha256": "4a1df10ce37adcff7f38cf9347aaa270434a8be72327829a9259c06838ff3145"
+    },
+    {
+      "path": "brand-guide.html",
+      "bytes": 3532193,
+      "sha256": "c43d26047c92e13f9d7970410bc39ce3e9aa56d17b84bf5c012e19dabd33e47d"
+    },
+    {
+      "path": "brand-guide.md",
+      "bytes": 22642,
+      "sha256": "ba3a4a867b9aadb661008f2e95979ebf8b8184d1fbef2b30fee6585d39fb4380"
+    },
+    {
+      "path": "brand-tokens.css",
+      "bytes": 3197,
+      "sha256": "05eb73dd0257fc09072c827312b3c3962486064d17496bd04c1c26e365dfef42"
+    },
+    {
+      "path": "brand-tokens.json",
+      "bytes": 5660,
+      "sha256": "a89f3157484e7952456fdfa145d39aacec193cb4c7a6e17ed346012d63bd9a03"
+    },
+    {
+      "path": "contrast-report.json",
+      "bytes": 4300,
+      "sha256": "8642230c179ea61886f99f6a32fc5db7e3fb0da970aee83802b8a5f2f3dbc072"
+    },
+    {
+      "path": "fonts/Gambetta-ITF-FFL-2.0.txt",
+      "bytes": 12734,
+      "sha256": "145e7fe2429a3336ba215c070ef722000e01348a3e1baaa127e871bb5012f554"
+    },
+    {
+      "path": "fonts/inter-300.woff2",
+      "bytes": 23916,
+      "sha256": "be0276550393a72b94d673505567dceba801511d5e1ca5a87793190dc5d5a6ca"
+    },
+    {
+      "path": "fonts/inter-400.woff2",
+      "bytes": 23664,
+      "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+    },
+    {
+      "path": "fonts/inter-500.woff2",
+      "bytes": 24272,
+      "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+    },
+    {
+      "path": "fonts/Inter-Bold.otf",
+      "bytes": 631880,
+      "sha256": "9fc6261e817d0b1b2bf1953d8799bb1c837d11aeebbf83ae352e7b4d6de6425d"
+    },
+    {
+      "path": "fonts/Inter-Medium.otf",
+      "bytes": 627988,
+      "sha256": "6c222ed2c3660524dd0c14fb745e00fee65c5361ab28f60fba6730bf4e648763"
+    },
+    {
+      "path": "fonts/Inter-OFL.txt",
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "path": "fonts/Inter-Regular.otf",
+      "bytes": 609600,
+      "sha256": "d4f2b9e148059a15f014cb0f0b8fea8cd11bfa447dd483bedf1b0adc0e2ba799"
+    },
+    {
+      "path": "fonts/Inter-SemiBold.otf",
+      "bytes": 629912,
+      "sha256": "0a4d30778fa2dc239368d90fd854b88b27e7ede737450da72686a90eca66f02c"
+    },
+    {
+      "path": "fonts/Inter-v4.1-OFL.txt",
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "path": "fonts/InterVariable-Italic.ttf",
+      "bytes": 910252,
+      "sha256": "d6f1f6a172d9e588438db9f986fd5cfad7b30f644374080a8a9d4d91e344586f"
+    },
+    {
+      "path": "fonts/InterVariable-Italic.woff2",
+      "bytes": 387976,
+      "sha256": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a"
+    },
+    {
+      "path": "fonts/InterVariable.ttf",
+      "bytes": 879708,
+      "sha256": "4989b125924991b90d05b2d16e0e388c48f7d5bb8b30539bbf9c755278d0ccaf"
+    },
+    {
+      "path": "fonts/InterVariable.woff2",
+      "bytes": 352240,
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    {
+      "path": "fonts/README.md",
+      "bytes": 6218,
+      "sha256": "fa1a205da9f4c4af84a243fe7fae176473348bacf593c4add17ced6445d4277f"
+    },
+    {
+      "path": "logos/favicons/favicon.ico",
+      "bytes": 15875,
+      "sha256": "e62479af36dfe06309cfa93ddd481b1b3b6bdef60e49aea8447e13fa92bfde7a"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-128.png",
+      "bytes": 4543,
+      "sha256": "cef098b5e2b5f2b5085b257d0d179272f1cf647d3c0be66900581e2934a548ca"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-16.png",
+      "bytes": 615,
+      "sha256": "dcc76729f44d772be2614fbebba77208be369fe7c041186e70d7ccb1603f318d"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-180.png",
+      "bytes": 6485,
+      "sha256": "ef9d4a100f05248573456a358773c37c8135fe6e176635b2c41501a7cf1d1959"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-192.png",
+      "bytes": 7091,
+      "sha256": "4072a6a2210e33c49a4ccbe84f51fbb9bc29848f061e364948e9f6d52218bf42"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-256.png",
+      "bytes": 9885,
+      "sha256": "b7a9f8c072835b4bed12255b1f5d4280c6ec8b191f55eff8a2b2dd65e70b86db"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-32.png",
+      "bytes": 1204,
+      "sha256": "77e044ee23f1bb283c360ae2b00b94686582728fbada9e7672205816d77bb7fc"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-48.png",
+      "bytes": 1773,
+      "sha256": "b3c6c59aa4140609d4530b50c1d21c8015285d0ed307ee2cea8daa4064ba54f5"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-512.png",
+      "bytes": 24565,
+      "sha256": "2b23f242ce0027be27e602113f259e5fe82a819bd4b9a51341eea0a000c62fbe"
+    },
+    {
+      "path": "logos/favicons/nexuspoint-64.png",
+      "bytes": 2312,
+      "sha256": "c16bc24443a4ddbc41263fc3c785be971f3bb316a7453cf0c2c8fe215f14e729"
+    },
+    {
+      "path": "logos/geometry-and-method.json",
+      "bytes": 951,
+      "sha256": "89009a4c339d7f7e8318fc87ec0a51fdcfc0d7abd20aacb94b1799c69650b9fc"
+    },
+    {
+      "path": "logos/nexuspoint-favicon.svg",
+      "bytes": 5547,
+      "sha256": "7514944e46c178134c447340e0f9acafee6abe4cf54432bfe4558f5bb6523d0e"
+    },
+    {
+      "path": "logos/nexuspoint-outline-master.svg",
+      "bytes": 16198,
+      "sha256": "d59cc7e75440b380959049126b4d5768ccd91c8b3d1ab3dfadbfd8a454bd204d"
+    },
+    {
+      "path": "logos/nexuspoint-primary-black.svg",
+      "bytes": 16250,
+      "sha256": "5015f1ed56bbff96171bd21274373ad11bb079d501c436252fc0157244e15707"
+    },
+    {
+      "path": "logos/nexuspoint-primary-dark.svg",
+      "bytes": 16250,
+      "sha256": "cec62e29836ed1c37c24bf76ef399cfd6df1c3ca0d1621d3bb385550e36fc844"
+    },
+    {
+      "path": "logos/nexuspoint-primary-light.svg",
+      "bytes": 16250,
+      "sha256": "13960a876f03c8c450f2305babedc135dfca9d946c184ef7425fbb06254f0d10"
+    },
+    {
+      "path": "logos/nexuspoint-primary-mono-black.svg",
+      "bytes": 16198,
+      "sha256": "070f737b74a03ed83bfe43c61b2ef04c0d7525f6b61e3ef3cf1eefde04a7e580"
+    },
+    {
+      "path": "logos/nexuspoint-primary-mono-navy.svg",
+      "bytes": 16198,
+      "sha256": "2dc7ce7f1ce4df02ccc05cd9a37505aed750396ca36501172c1d5ec77907aac9"
+    },
+    {
+      "path": "logos/nexuspoint-primary-mono-white.svg",
+      "bytes": 16198,
+      "sha256": "e008a57fcbbd24ffc5457c9a5def948f07d94ef4bef4fa3bd3b4858d0a0ead9b"
+    },
+    {
+      "path": "logos/nexuspoint-primary-transparent-navy.svg",
+      "bytes": 16198,
+      "sha256": "160f990e9406f69f8572deba5a309ed9c22d8667357335317c9ab2d16bdba303"
+    },
+    {
+      "path": "logos/nexuspoint-primary-transparent-white.svg",
+      "bytes": 16198,
+      "sha256": "d59cc7e75440b380959049126b4d5768ccd91c8b3d1ab3dfadbfd8a454bd204d"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-black.svg",
+      "bytes": 16230,
+      "sha256": "e090c3e1e7d570853fd62bb955b5eb5968d3ee857e98ff3d350a81be2c9fa1a8"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-dark.svg",
+      "bytes": 16230,
+      "sha256": "1b91822db87740600220e89a96cf5e6aac387c4e1e31b614bf91dc6f2640426e"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-light.svg",
+      "bytes": 16230,
+      "sha256": "f10dbc516be8ced31663b8443765b64aea6837332e7a015d9787ff4768efc02c"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-mono-black.svg",
+      "bytes": 16183,
+      "sha256": "ea8bd2a8b190ea7190e36c5a32ae95c6140b602e5355bd3484742e1d4cda3772"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-mono-navy.svg",
+      "bytes": 16183,
+      "sha256": "ea223e8c65a019c44031a520822f824ac42ebb030719ac452ae17565eadd6189"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-mono-white.svg",
+      "bytes": 16183,
+      "sha256": "12892775111f7de4236e99d0d6c600fd1366cec206bdcfada7713b80989c14e1"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-transparent-navy.svg",
+      "bytes": 16183,
+      "sha256": "5c97d700647db753b9075237fc04c01660af24768ed676070449697a6c5ed19d"
+    },
+    {
+      "path": "logos/nexuspoint-stacked-transparent-white.svg",
+      "bytes": 16183,
+      "sha256": "78e1daee6886a1398ed92fc91feca9db48208f676be976d23c78d8ae1ff12d87"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-black.svg",
+      "bytes": 5518,
+      "sha256": "8b06ca689b6cc0ea2760382fc21e49e3a8d112c688f872780f1d4a69c4e29c22"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-dark.svg",
+      "bytes": 5518,
+      "sha256": "026c08ec0b57ea921471f7d835daf8e4900f7103777f15a3afdf52029f8738be"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-light.svg",
+      "bytes": 5518,
+      "sha256": "814f4bda9add7c1a2c552be7d0057cf39aed13ed6e6f377ceeaab02fa59e7753"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-mono-black.svg",
+      "bytes": 5467,
+      "sha256": "040d939a6d95b689497d1c7728ae2b26dadad1c52c570fd0a60447b91c07037d"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-mono-navy.svg",
+      "bytes": 5467,
+      "sha256": "eada07df1238dc3389ebff52746226a0907096abfaee2c6febb962c35bb8fa13"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-mono-white.svg",
+      "bytes": 5467,
+      "sha256": "69daa186fb28fb272923f74d37ca048adbd29178cf03ba3f38ff7ccaacc812c8"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-transparent-navy.svg",
+      "bytes": 5467,
+      "sha256": "2904a83f3efa98d499bfa5b66efb3333fb94fe8031bd148ebd92f3bcb7da1a7b"
+    },
+    {
+      "path": "logos/nexuspoint-symbol-transparent-white.svg",
+      "bytes": 5467,
+      "sha256": "7500610e3cfb794a5b02e9c90cde2d81d2652a4fd57981ef9a76c7f3537d7fc1"
+    },
+    {
+      "path": "logos/nexuspoint-wordmark-navy.svg",
+      "bytes": 10973,
+      "sha256": "c8a54b97f91abf3511fda229eb7154d4ddceb88bf394705ca178d34495db6320"
+    },
+    {
+      "path": "logos/nexuspoint-wordmark-white.svg",
+      "bytes": 10973,
+      "sha256": "11e45bf875376ed9497e36d938061a65817bd58cfb6a54aa7a4232bc02194926"
+    },
+    {
+      "path": "logos/png/favicon-size-review.png",
+      "bytes": 11519,
+      "sha256": "9f6d806672189593109db15f1a5953380c219fe6306b1c478a4eb4c13fbb9eb1"
+    },
+    {
+      "path": "logos/png/nexuspoint-favicon.png",
+      "bytes": 319256,
+      "sha256": "489f5a5ed4da3f6f5426036c909132ca6ff8d2631f3bd4ecc7727849b589654d"
+    },
+    {
+      "path": "logos/png/nexuspoint-outline-master.png",
+      "bytes": 59170,
+      "sha256": "4fa8205b02fc40ad4fc19409f0dd0b4bc745ec889775acfb607b2f6586582c9c"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-black.png",
+      "bytes": 94949,
+      "sha256": "64e1a751cdd6d73c391a3e3385d891cb737673cb77a9b06341758cc4ec23a03e"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-dark.png",
+      "bytes": 94540,
+      "sha256": "dd6e5ddcc888e73604197c4179f3223b444a4fd0bc00d212147ad9ac1483b0fb"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-light.png",
+      "bytes": 82098,
+      "sha256": "e1e54c3d0c489f0693c88a3bf74402c8e057b50677709cae012d9815d8d2417d"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-mono-black.png",
+      "bytes": 60653,
+      "sha256": "7be14e53f6aaa1ac8950bccdd1b4378336cbd9d32f14702555a2725178cdac88"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-mono-navy.png",
+      "bytes": 72166,
+      "sha256": "8cc57e630189cb1c06e48970ae95e6851e51df5a56ca7916fb135e58577cb56c"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-mono-white.png",
+      "bytes": 57712,
+      "sha256": "28245f966af9687367b22bf44332937e854a3b4108c4e82aacf7e8a276970fb1"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-transparent-navy.png",
+      "bytes": 73297,
+      "sha256": "7103607f2a9b8e8c2f2d6523d7a17b75f90004ea35a1a5dc886531c8b36d68f1"
+    },
+    {
+      "path": "logos/png/nexuspoint-primary-transparent-white.png",
+      "bytes": 59170,
+      "sha256": "4fa8205b02fc40ad4fc19409f0dd0b4bc745ec889775acfb607b2f6586582c9c"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-black.png",
+      "bytes": 87781,
+      "sha256": "2e3afec096714a2443e715b694697fad79f46d07528b3a8a220accff3c0ca88d"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-dark.png",
+      "bytes": 88107,
+      "sha256": "f336f970719e44ba9682c13c35272a902babe19f068c77dba30152e26f17cc5d"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-light.png",
+      "bytes": 73921,
+      "sha256": "4a6dff5fcb778b3bc0201307ff840f7aa4cb3b0c4c9390c608241ace4670e143"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-mono-black.png",
+      "bytes": 54475,
+      "sha256": "0e704d8bb631488a44d1d210514ba92132b5c3c241bb8d78f69d6ebd79d0c706"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-mono-navy.png",
+      "bytes": 64821,
+      "sha256": "46d6e2ecfc2664289915f7feea43e975faf31f005f94ee2b7bcc976832d1cdd6"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-mono-white.png",
+      "bytes": 51282,
+      "sha256": "65f7e7afe90a11e49d9d191e7007965af0ea0909a909fff448c1c353119c780b"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-transparent-navy.png",
+      "bytes": 65398,
+      "sha256": "02d61760554494a9212fb96fb001520eda882714be57ea1ca3c171a3e326728f"
+    },
+    {
+      "path": "logos/png/nexuspoint-stacked-transparent-white.png",
+      "bytes": 51992,
+      "sha256": "d646e80e7a3a621d0ef05fc12d05e0c82a1af0d3b322e2567942f7fbeaeecc7b"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-black.png",
+      "bytes": 80388,
+      "sha256": "297a669f2d8c185d0f2f3e27339635c8418898e4601bae4b4624b2b1590529fb"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-dark.png",
+      "bytes": 80003,
+      "sha256": "5a546bdb6a8aa930bd7389de57ba0679f539a6dd69e71e4af4b7f484e44431fd"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-light.png",
+      "bytes": 88037,
+      "sha256": "a9b2d175c9c9bcf1938dc672ba1506903c4bfda475d0d4b05479220f279ca405"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-mono-black.png",
+      "bytes": 67410,
+      "sha256": "d334bbd0e7d7c33c4a56d7fddb5efca202aedfa7c94cc633037655aff7218cd0"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-mono-navy.png",
+      "bytes": 78671,
+      "sha256": "7965773fc830129fe3feb09e2820210f25b9a8cf93ac23718315a92eedd4751b"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-mono-white.png",
+      "bytes": 53222,
+      "sha256": "703faed5e4a8c618ea5bc2ac8dbe700956b023b893cd8c2b49a2c35a30408b5b"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-native-scale-qa.png",
+      "bytes": 39360,
+      "sha256": "068831c32e56d69fe23b991857768002bd4c44ade378df78f62ea929bbe9adbd"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-transparent-navy.png",
+      "bytes": 80133,
+      "sha256": "9cf012ffacf44499c915d927e735ff55f993ab03b89f2edc5ddda3e2ca0677ce"
+    },
+    {
+      "path": "logos/png/nexuspoint-symbol-transparent-white.png",
+      "bytes": 56958,
+      "sha256": "06c71a43b0ab6659eea2beb979421cc0909005247a6af1cce04163eb785c9a6f"
+    },
+    {
+      "path": "logos/png/nexuspoint-wordmark-native-scale-qa.png",
+      "bytes": 15204,
+      "sha256": "e63d32990e185e7d775461086f07af1d8a88af3bf549417515c83de8b5133858"
+    },
+    {
+      "path": "logos/png/nexuspoint-wordmark-navy.png",
+      "bytes": 66389,
+      "sha256": "249a33ecbed9711b15749ede2e011306c18b1ee652137d55722658ce58a906e0"
+    },
+    {
+      "path": "logos/png/nexuspoint-wordmark-white.png",
+      "bytes": 52440,
+      "sha256": "7cee37ebab948646e1c5e2584c427aca0c680126281291554b502869132667f8"
+    },
+    {
+      "path": "logos/README.md",
+      "bytes": 1787,
+      "sha256": "8ebe215b1edaae41f2954491aa60bfe216728ce6d85925a5282e3ca0fd4e562e"
+    },
+    {
+      "path": "logos/reference/approved-soft-fold-original.png",
+      "bytes": 608685,
+      "sha256": "c78c8b67c72ed764516aaa0f8effca8ddef652de26722d1186145cbd0b6739c5"
+    },
+    {
+      "path": "logos/validation-report.json",
+      "bytes": 717,
+      "sha256": "5a2447908407c6669f87255ea35aff01bebfa31d6ad63d84366c359c762ae4ad"
+    },
+    {
+      "path": "NexusPoint-Soft-Fold-Brand-Guide.pdf",
+      "bytes": 2356117,
+      "sha256": "0994afee6c9ed278a72d2044bb2577215bf85aadd4dc8d20ea9f7f49a758add4"
+    },
+    {
+      "path": "previews/soft-fold-primary.png",
+      "bytes": 94949,
+      "sha256": "64e1a751cdd6d73c391a3e3385d891cb737673cb77a9b06341758cc4ec23a03e"
+    },
+    {
+      "path": "qa/application-export-validation.json",
+      "bytes": 1219,
+      "sha256": "4e408407f3d1bb56a7fd6d6d566eba4a920c7b8bf3a8ab3c62cdef7237552854"
+    },
+    {
+      "path": "qa/card-variations/validation.json",
+      "bytes": 3740,
+      "sha256": "eb7cb5e79101c129d80177b04727fc3e089d09f902108f5bd8ee70cd71ca938a"
+    },
+    {
+      "path": "qa/folded-edge-variations/validation.json",
+      "bytes": 3964,
+      "sha256": "9b105eb1d72c0b38a00775358dfe7b42e40ff96ec92b80ebb7aec86c26b6d9f0"
+    },
+    {
+      "path": "qa/handoff-validation.json",
+      "bytes": 10925,
+      "sha256": "40684172160557906e6984213c8b3e34746a53c852f3b20cf39b79972c8107b9"
+    },
+    {
+      "path": "qa/pdf-validation.json",
+      "bytes": 2269,
+      "sha256": "ac47b978f3d2ea264ccf40e42b53b25a1a06ec4e20c3f25014042af54c43ee2f"
+    },
+    {
+      "path": "qa/production-validation.json",
+      "bytes": 3011,
+      "sha256": "0a6fcc967a45c7020012ab65eff106623c31d0b05b26f2aaa0d88de6834c40fe"
+    },
+    {
+      "path": "qa/templates/validation-report.json",
+      "bytes": 1618,
+      "sha256": "e7ff4484d55e4f9058a6b0cf1fe62f8534601d540ed95c5ae95f4f8922453d31"
+    },
+    {
+      "path": "qa/visual-review.json",
+      "bytes": 5276,
+      "sha256": "8c32b23e3e577878523ae81ed16f456ca0bcc976f7b6f987657311bb46be7495"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5692,
+      "sha256": "6adacd589c82632aa72a0d5f6dba5e785c78cf0f5d2add1b0e9f68bba9456e6a"
+    },
+    {
+      "path": "scripts/build-application-exports.cjs",
+      "bytes": 3255,
+      "sha256": "d96232d551683e13d7b8032958291c70a23818710b0ac8ffe059fc90c5655315"
+    },
+    {
+      "path": "scripts/build-applications.py",
+      "bytes": 9584,
+      "sha256": "ea135e3410f4c2e6928e81f1a63dae932f01503491d5c7e34b81e9df89c03dfd"
+    },
+    {
+      "path": "scripts/build-brand-guide.cjs",
+      "bytes": 40840,
+      "sha256": "86c5b7f4f759f0cab0d12c367a649e624e79ec04e6afd252831fbd66065ff1f8"
+    },
+    {
+      "path": "scripts/build-card-variations.py",
+      "bytes": 10239,
+      "sha256": "3d2d8f86cdbdf15e5bd4b994bfef572907f025a8a65058046a60caae88899113"
+    },
+    {
+      "path": "scripts/build-folded-edge-variations.py",
+      "bytes": 5846,
+      "sha256": "18d1e73c2db2566bb446fb74d0d68e3e9d9f3e9ad2498fc8f191ec47f5f49086"
+    },
+    {
+      "path": "scripts/build-handoff-assets.py",
+      "bytes": 12636,
+      "sha256": "1b67e39be5db02ad4737adc83bf16881151f139fef4ee1e3360666c574057d78"
+    },
+    {
+      "path": "scripts/build-logo-assets.cjs",
+      "bytes": 3277,
+      "sha256": "d49cbfdbb6b52b6df83048311afebf42b350662a974e4a072e58f59dfe651f13"
+    },
+    {
+      "path": "scripts/build-soft-fold-logo.py",
+      "bytes": 6977,
+      "sha256": "2e1029828b98094a29a5935e92248fc03488bc4ea1e267d38c8f403680e116c1"
+    },
+    {
+      "path": "scripts/geometry_fit.py",
+      "bytes": 4257,
+      "sha256": "73b43d15827d8845bcf34e2e7d42acfeb964c34adbf32c73410ba4bde4be705f"
+    },
+    {
+      "path": "scripts/package-brand-kit.py",
+      "bytes": 9435,
+      "sha256": "3f3ed75e39dc44dae2715222bbd670c589a8b1e283810c68dae5c84615e7c4ac"
+    },
+    {
+      "path": "scripts/render-card-variations.cjs",
+      "bytes": 6051,
+      "sha256": "2155e030ce9db2e5d3dcfdeab9ac1b7e4089379a3f7cd96f53af2ae9bafdf164"
+    },
+    {
+      "path": "scripts/validate-card-variations.py",
+      "bytes": 4723,
+      "sha256": "3404eff338b3592b30b203490edbecc6cf40f4f6914a946a215b66345a2a50f7"
+    },
+    {
+      "path": "scripts/validate-handoff.cjs",
+      "bytes": 3377,
+      "sha256": "6b08544cf931a84833562720eaaad00a60c38815f9514edc66912c98394a8666"
+    },
+    {
+      "path": "scripts/validate-production.py",
+      "bytes": 6521,
+      "sha256": "2549b14c346e9d5da35bbaf19a7916fd0372fd50ded847f9369da8705b888e6a"
+    },
+    {
+      "path": "sources/about.D7EEYB4O.css",
+      "bytes": 58229,
+      "sha256": "0c3eb20ca866af63d3d530484fa12207a959c7ed0f02afd48345ca60cdb06299"
+    },
+    {
+      "path": "sources/background.prompt.txt",
+      "bytes": 903,
+      "sha256": "82d6394d4f1ad3b7cd857a93df7e2c938aa2114a6f20d77567c8e8fa94ecdff0"
+    },
+    {
+      "path": "sources/build_extracted_style.py",
+      "bytes": 12928,
+      "sha256": "7c6a30556d547c5be1d7d3f7bda45f3799db1db314b65a434d5d4e26c37d33e1"
+    },
+    {
+      "path": "sources/extracted-style.json",
+      "bytes": 29432,
+      "sha256": "6a3ba9b3626de94c8aef880d7b66e94fa2c5f607a3d616a2eab39b51ba80eac5"
+    },
+    {
+      "path": "sources/fontshare-licenses.html",
+      "bytes": 1744,
+      "sha256": "2296ba8f284280e034d2f8952d308a0961e5f41074893ff123b3bd912f040573"
+    },
+    {
+      "path": "sources/index.DcaP5fwH.css",
+      "bytes": 20721,
+      "sha256": "d93238c0976b15220013b3cfbe8545784ee52e7603355c5b9a1798cc65d26ee2"
+    },
+    {
+      "path": "sources/inter-official.css",
+      "bytes": 11497,
+      "sha256": "46d01c7807f64a24c1b2853b756ef15f3a2facdf4a9f066eaf5d39c0c9935441"
+    },
+    {
+      "path": "sources/logo-exploration-prompts.json",
+      "bytes": 7694,
+      "sha256": "5e413fd345e38ec4cfdac160442616e6fdf212b05f4ce6c8622e11f74aac3e4c"
+    },
+    {
+      "path": "sources/mokoto-official.html",
+      "bytes": 1112722,
+      "sha256": "01bab1ed20c5e149ef0d65b4fc9c95f2a3b1006c73dce59882f6566353afc88a"
+    },
+    {
+      "path": "sources/portfolio-live.html",
+      "bytes": 67500,
+      "sha256": "7226806811c360fb296aa71d8f251f61a4de3251425ef14e94f75a6f5bce9482"
+    },
+    {
+      "path": "sources/README.md",
+      "bytes": 907,
+      "sha256": "af38f448f041c551413545704859453b422baebb4f5992695c90ec0eb5538715"
+    },
+    {
+      "path": "sources/typodermic-license.html",
+      "bytes": 81727,
+      "sha256": "081b1bf382346edddffb025692366037943f30fda69aa754a225306bebaa6863"
+    },
+    {
+      "path": "sources/wordmark-navy-original.svg",
+      "bytes": 11010,
+      "sha256": "b1e312a22d59485613070945fa341958620b70e4f5d463c30e0dcc45243c47f3"
+    },
+    {
+      "path": "sources/wordmark-white-original.svg",
+      "bytes": 11010,
+      "sha256": "f24cd9dc7a8bb649125efbf151681dfd8a8912a3918ea0eefdc456c309636ea4"
+    },
+    {
+      "path": "templates/components.html",
+      "bytes": 3133,
+      "sha256": "85bfcc8f37bacd52e2165cc1b2040a59d9a6e449f513998aa68beb7de625d167"
+    },
+    {
+      "path": "templates/email-signature.html",
+      "bytes": 1991,
+      "sha256": "5b1e616e376c178f174d6f501ca4c49fa750aaa90c329f323827b458e03b6647"
+    },
+    {
+      "path": "templates/proposal-cover.pdf",
+      "bytes": 143326,
+      "sha256": "9887fc0a800b8376a283dcc7ab238927d75ab3e90fa83f7f87d4c9b06e959388"
+    },
+    {
+      "path": "templates/proposal-cover.svg",
+      "bytes": 487552,
+      "sha256": "6c9c26ca985b2c8f3c311923e19a8dc83eb96bcfc988ab59e4cfcd581e7b5eec"
+    },
+    {
+      "path": "templates/README.md",
+      "bytes": 1044,
+      "sha256": "4a2151725a1e4e90f2bda355288a129d91483e438dc355d6b1b38b1132e656de"
+    },
+    {
+      "path": "templates/social-cover.png",
+      "bytes": 35891,
+      "sha256": "f5e5d5cc85383d607015fe6e1d30ae56716b95028b88e6885e3ac781ea093199"
+    },
+    {
+      "path": "templates/social-cover.svg",
+      "bytes": 486990,
+      "sha256": "7a52148f3a467a0b0d00740d5ea96b2799508cb961c621dc9f71cac0a7829c85"
+    }
+  ],
+  "excluded": [
+    "fonts/portfolio-local-use/**",
+    "sources/private-font-reference/**",
+    "sources/Inter-4.1-official.zip",
+    "qa image renders",
+    "__pycache__",
+    "superseded draft brand-guide.pdf"
+  ],
+  "note": "Manifest does not hash itself or package-validation.json."
+}

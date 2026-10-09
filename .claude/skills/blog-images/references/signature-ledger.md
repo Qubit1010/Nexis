@@ -37,18 +37,20 @@ Cover the labels. If two covers still read as the same drawing, one of them is w
 | `marketing-system-build-case-study` | a ledger that reconciles strategic decisions against their downstream use, making every missing handoff visible | **a reconciliation ledger** (an operating record) | the linked inherited entries |
 | `smart-marketing-goals-claude-code` | a twelve-week target with a pace gap found in week three by recurring Monday checkpoints, instead of discovered at the quarter-end review | **a timeline with an early break** (a review cadence) | the weekly review loop |
 | `gpt-6-astra-creator-agent-workflows` | a creator workflow contained inside an operating boundary, with research, drafting, and QA held inside before a human gate controls public action | **a map with a boundary** (a governed territory) | the operating boundary around the agent workflow |
+| `frontier-ai-model-comparison-2026` | four output artifacts inspected through one accepted-result lens, making the task's acceptance gate the choice mechanism | **an inspection lens** (a filter instrument) | the central accepted-result lens |
 
 ## Worlds already used, do not reach for these again
 
 two facing panels · a side-on stack · a calibrated ladder · a gauge with a dead zone ·
 a station pipeline · a rail versus a tree · a balance / lever · a switchboard · a nested
-containment · a grid that fills · a timeline with an early break · a map with a boundary
+containment · a grid that fills · a timeline with an early break · a map with a boundary ·
+an inspection lens
 
 ## Worlds still open
 
 a timeline with a break · a funnel (cover-available; used only as a
 supporting figure so far) · a ledger/table that reconciles · a container that leaks
-(cover-available; used only as a supporting figure so far) · a lens or filter stack
+(cover-available; used only as a supporting figure so far)
 
 Note: `codex-vs-claude-code` also used a funnel (3 tests converging) and a leaking container
 (cost mismatch) as **supporting figures**, not covers. Both stay open for a future cover -

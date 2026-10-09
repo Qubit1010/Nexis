@@ -66,6 +66,9 @@ SYNC_FOLDERS = [
     "logs",
     "references",
     ".claude/rules",
+    "output",
+    "tmp",
+    "research",
 ]
 
 WORK_FOLDER_NAME = "Work"
@@ -278,6 +281,18 @@ def cmd_push(svc, ids: dict, folders: list[str], dry_run: bool):
             rel      = item.relative_to(local_root)
             rel_str  = rel.as_posix()
             existing = drive_files.get(rel_str)
+            # Windows paths are case-insensitive; Drive preserves folder casing.
+            # Without this, local Post/ matches Drive's post/ only during folder
+            # creation, and every push uploads another copy of the same file.
+            if existing is None and os.name == "nt":
+                matches = [info for path, info in drive_files.items()
+                           if path.casefold() == rel_str.casefold()]
+                if len(matches) == 1:
+                    existing = matches[0]
+                elif matches:
+                    print(f"    ERROR {rel_str}: ambiguous Drive paths differ only by case")
+                    stats["errors"] += 1
+                    continue
 
             if existing:
                 local_hash = file_md5(item)

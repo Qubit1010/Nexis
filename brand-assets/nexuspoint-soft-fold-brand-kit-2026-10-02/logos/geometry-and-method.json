@@ -1,0 +1,36 @@
+{
+  "identity": "Soft Fold",
+  "selected_by_user": "2026-10-02",
+  "source": "reference/approved-soft-fold-original.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "icon_bounds_source": [
+    187,
+    167,
+    892,
+    932
+  ],
+  "normalized_symbol_size": [
+    271.81115879828326,
+    284
+  ],
+  "horizontal_size": [
+    1269.8111587982833,
+    348
+  ],
+  "dot_center_in_source": [
+    618.5,
+    641.5
+  ],
+  "dot_radius_source": 121.0,
+  "dot_diameter_normalized": 73.74248927038626,
+  "clear_space_to_symbol_height": 0.259656652360515,
+  "symbol_contours": 4,
+  "fit_error_pixels": 0.65,
+  "blue": "#02A1E1",
+  "navy": "#02040A",
+  "wordmark_source": "sources/wordmark-white-original.svg",
+  "method": "Adaptive cubic Bezier fitting of selected Soft Fold raster contours, preserving source proportions. Native circular centre at exact portfolio blue. Existing approved outlined wordmark reused unchanged."
+}

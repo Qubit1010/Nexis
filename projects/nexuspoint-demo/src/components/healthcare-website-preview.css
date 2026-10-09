@@ -1,0 +1,20 @@
+.care-web-preview { margin-block: 28px 40px; }
+.care-web-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+.care-web-toolbar b { font-size: 16px; }
+.care-web-toolbar small { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+.care-web-toolbar .btn { font-size: 12px; padding: 12px 18px; }
+.care-web-devices { display: flex; gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 10px; }
+.care-web-devices button { background: none; border: 0; padding: 8px 13px; font-size: 12px; color: var(--muted); border-radius: 6px; cursor: pointer; }
+.care-web-devices button[aria-pressed="true"] { background: var(--btn); color: var(--btn-ink); }
+.care-web-stage { background: var(--surface-2); padding: 12px; border-radius: 18px; border: 1px solid var(--line); position: relative; display: flex; justify-content: center; }
+.care-web-stage iframe { border: 0; border-radius: 9px; width: 100%; height: 740px; background: #fbfcfa; position: relative; }
+.care-web-stage[data-device="mobile"] iframe { max-width: 390px; }
+.care-web-loading { position: absolute; top: 60px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 20px; z-index: 1; pointer-events: none; }
+.care-web-caption { font-size: 12px; color: var(--muted); margin-top: 14px; text-align: center; }
+@media (max-width: 600px) {
+  .care-web-toolbar { gap: 15px; }
+  .care-web-toolbar > div:first-child { flex: 1 0 100%; }
+  .care-web-toolbar .btn { flex: 1; }
+  .care-web-stage { padding: 6px; border-radius: 12px; }
+  .care-web-stage iframe { height: 640px; }
+}

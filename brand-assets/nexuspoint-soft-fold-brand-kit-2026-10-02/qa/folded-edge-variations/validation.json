@@ -1,0 +1,184 @@
+{
+  "status": "passed",
+  "date": "2026-10-02",
+  "identity": "Soft Fold",
+  "qrDestination": "https://nexus-point.co/work",
+  "svgAndPNG": [
+    {
+      "file": "3a-soft-edge-back.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "3a-soft-edge-front.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "3b-layered-fold-back.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "3b-layered-fold-front.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "3c-diagonal-wrap-back.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "3c-diagonal-wrap-front.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    }
+  ],
+  "printPDFs": [
+    {
+      "file": "3a-soft-edge-print.pdf",
+      "pages": 2,
+      "mediaBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ],
+      "trimBoxPoints": [
+        9,
+        9,
+        261,
+        153
+      ],
+      "bleedBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ]
+    },
+    {
+      "file": "3b-layered-fold-print.pdf",
+      "pages": 2,
+      "mediaBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ],
+      "trimBoxPoints": [
+        9,
+        9,
+        261,
+        153
+      ],
+      "bleedBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ]
+    },
+    {
+      "file": "3c-diagonal-wrap-print.pdf",
+      "pages": 2,
+      "mediaBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ],
+      "trimBoxPoints": [
+        9,
+        9,
+        261,
+        153
+      ],
+      "bleedBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ]
+    }
+  ],
+  "qrDecodedFromPNGAndPDF": [
+    {
+      "file": "applications/folded-edge-variations/3a-soft-edge-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "applications/folded-edge-variations/3b-layered-fold-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "applications/folded-edge-variations/3c-diagonal-wrap-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "qa/folded-edge-variations/3a-soft-edge-print-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "qa/folded-edge-variations/3b-layered-fold-print-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "qa/folded-edge-variations/3c-diagonal-wrap-print-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    }
+  ],
+  "textSafeAreaChecks": 13,
+  "visualReview": "passed",
+  "serviceDivider": {
+    "y": 550,
+    "strokePixels": 2,
+    "captionTopPixels": 576.779296875,
+    "gapToInkPixels": 25.779296875,
+    "gapMillimetres": 2.1826471354166666
+  },
+  "visualReviewNotes": "Paired proofs and native print-PDF page renders inspected. Footer gap is clear; contacts and QR remain readable."
+}

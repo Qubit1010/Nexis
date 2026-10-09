@@ -1,0 +1,63 @@
+{% set d = demo %}{% set p = pr %}
+{% set title = "Presence check: " ~ d.name %}
+{% include "_head.html.j2" %}
+<style>
+  .pr-hero { padding: 3mm 16mm 5mm; position: relative; z-index: 2; }
+  .pr-hero .eyebrow { margin-bottom: 2mm; }
+  .pr-hero h1 { font-size: 18.5pt; line-height: 1.1; max-width: 172mm; }
+  .pr-hero .sub { color: var(--mid); font-size: 8.6pt; margin-top: 2mm; max-width: 170mm; line-height: 1.45; }
+  .pr-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3mm; }
+  .pr-stats .stat { padding: 2.4mm 3.2mm; }
+  .pr-stats .stat .v { font-size: 19pt; }
+  .pr-stats .stat .l { font-size: 7.8pt; margin-top: 1.4mm; }
+  .fnd { display: grid; grid-template-columns: 6mm 1.32fr 1fr; gap: 3mm; background: var(--card); border: 1px solid var(--rule);
+    border-radius: 10px; padding: 2.2mm 3mm; break-inside: avoid; }
+  .fnd .n { font: 700 10.5pt/1 var(--mono); color: var(--brand-deep); padding-top: .5mm; }
+  .fnd h3 { font-size: 9.8pt; line-height: 1.25; margin-bottom: 1mm; }
+  .fnd p { font-size: 7.7pt; color: var(--ink-mid); line-height: 1.38; }
+  .fnd .side { background: var(--tint); border-radius: 7px; padding: 2mm 2.6mm; display: flex; flex-direction: column; gap: 1.2mm; }
+  .fnd .side .label { color: var(--brand-deep); font-size: 6pt; margin-bottom: .2mm; }
+  .fnd .side p { font-size: 7.5pt; color: var(--ink); line-height: 1.35; }
+  .moves { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5mm; }
+  .moves .card { padding: 2.4mm 3mm; border-radius: 10px; }
+  .moves .card .label { margin-bottom: 1mm; }
+  .moves .card p { font-size: 7.6pt; line-height: 1.38; }
+  .pr-stats .stat { border-radius: 10px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="dark glow grid-bg">
+    <div class="topbar">
+      <img class="logo-w" src="{{ a.logo_white }}" alt="NexusPoint">
+      <span class="label">{{ p.label }} &middot; <span class="ltr">{{ prepared }}</span></span>
+    </div>
+    <div class="pr-hero">
+      <div class="label eyebrow">{{ p.eyebrow }}</div>
+      <h1>{{ p.title }}</h1>
+      <p class="sub">{{ p.sub }}</p>
+    </div>
+  </div>
+  <div class="body" style="gap:2.2mm; padding-top:3.4mm">
+    <div class="stats pr-stats">
+      {% for s in p.stats %}<div class="stat"><div class="v">{{ s.v }}</div><div class="l">{{ s.l }}</div></div>{% endfor %}
+    </div>
+    {% for f in p.findings %}
+    <div class="fnd">
+      <div class="n">{{ loop.index }}</div>
+      <div><h3>{{ f.title }}</h3><p>{{ f.seen }}</p></div>
+      <div class="side">
+        <div><div class="label">Why it matters</div><p>{{ f.why }}</p></div>
+        <div><div class="label">Fix</div><p>{{ f.fix }}</p></div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="moves">
+      {% for m in p.moves %}<div class="card"><div class="label">{{ m.when }}</div><p>{{ m.text }}</p></div>{% endfor %}
+    </div>
+    <p class="fine" style="margin-top:auto">{{ p.sources }}</p>
+  </div>
+  <div class="foot"><span class="ltr">NexusPoint &middot; +92 311 8340514 &middot; aleem@nexus-point.co</span><span class="ltr">Most agencies sell hours. We build leverage.</span></div>
+</div>
+</body>
+</html>

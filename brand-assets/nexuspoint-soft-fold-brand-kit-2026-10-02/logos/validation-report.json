@@ -1,0 +1,18 @@
+{
+  "identity": "Soft Fold",
+  "white_outline_IoU": 0.9938562355194586,
+  "boundary_distance_source_pixels_mean": 0.3918178379535675,
+  "boundary_distance_source_pixels_p95": 1.0,
+  "boundary_distance_source_pixels_max": 2.0,
+  "portfolio_blue_core_rgba": [
+    2,
+    161,
+    225,
+    255
+  ],
+  "svg_count": 28,
+  "native_paths_no_raster_or_font_dependency": true,
+  "wordmark_group_unchanged": true,
+  "approved_reference_sha256": "c78c8b67c72ed764516aaa0f8effca8ddef652de26722d1186145cbd0b6739c5",
+  "limitations": "Native contour reconstruction from the selected generated PNG, not recovered designer source. Flat blue circle replaces raster shading. Small curve-fitting variation remains."
+}

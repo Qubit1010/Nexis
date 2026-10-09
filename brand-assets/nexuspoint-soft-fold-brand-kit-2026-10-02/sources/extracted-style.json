@@ -1,0 +1,823 @@
+{
+  "project": "NexusPoint Wrapped Nexus brand kit",
+  "verified_date_local": "2026-10-02",
+  "timezone": "Asia/Karachi",
+  "method": "Public live HTML and referenced CSS fetched over HTTPS. Values are CSS declarations, not screenshot estimates. Font licenses checked against current official foundry sources and included agreements.",
+  "portfolio": "https://www.aleemuh.com/",
+  "canonical": "https://aleemuh.com/",
+  "snapshots": [
+    {
+      "file": "sources/portfolio-live.html",
+      "url": "https://www.aleemuh.com/",
+      "sha256": "7226806811c360fb296aa71d8f251f61a4de3251425ef14e94f75a6f5bce9482",
+      "bytes": 67500
+    },
+    {
+      "file": "sources/about.D7EEYB4O.css",
+      "url": "https://www.aleemuh.com/_astro/about.D7EEYB4O.css",
+      "sha256": "0c3eb20ca866af63d3d530484fa12207a959c7ed0f02afd48345ca60cdb06299",
+      "bytes": 58229
+    },
+    {
+      "file": "sources/index.DcaP5fwH.css",
+      "url": "https://www.aleemuh.com/_astro/index.DcaP5fwH.css",
+      "sha256": "d93238c0976b15220013b3cfbe8545784ee52e7603355c5b9a1798cc65d26ee2",
+      "bytes": 20721
+    },
+    {
+      "file": "sources/inter-official.css",
+      "url": "https://rsms.me/inter/inter.css",
+      "sha256": "46d01c7807f64a24c1b2853b756ef15f3a2facdf4a9f066eaf5d39c0c9935441",
+      "bytes": 11497
+    },
+    {
+      "file": "sources/typodermic-license.html",
+      "url": "https://typodermicfonts.com/license/",
+      "sha256": "081b1bf382346edddffb025692366037943f30fda69aa754a225306bebaa6863",
+      "bytes": 81727
+    },
+    {
+      "file": "sources/mokoto-official.html",
+      "url": "https://drizyfont.com/fonts/mokoto-glitch-typeface-font/",
+      "sha256": "01bab1ed20c5e149ef0d65b4fc9c95f2a3b1006c73dce59882f6566353afc88a",
+      "bytes": 1112722
+    },
+    {
+      "file": "sources/fontshare-licenses.html",
+      "url": "https://www.fontshare.com/licenses",
+      "sha256": "2296ba8f284280e034d2f8952d308a0961e5f41074893ff123b3bd912f040573",
+      "bytes": 1744
+    }
+  ],
+  "colors": {
+    "accent": {
+      "hex": "#02A1E1",
+      "rgb": [
+        2,
+        161,
+        225
+      ],
+      "css_token": "--color-accent",
+      "use": "Centre point, highlighted heading words, focus outlines, selection and highlights"
+    },
+    "accent_hover": {
+      "hex": "#0289BF",
+      "rgb": [
+        2,
+        137,
+        191
+      ],
+      "css_token": "--color-accent-hover"
+    },
+    "ink": {
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "css_token": "--color-ink"
+    },
+    "ink_soft": {
+      "hex": "#101010",
+      "rgb": [
+        16,
+        16,
+        16
+      ],
+      "css_token": "--color-ink-soft"
+    },
+    "ink_line": {
+      "hex": "#1D1E1F",
+      "rgb": [
+        29,
+        30,
+        31
+      ],
+      "css_token": "--color-ink-line"
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "css_token": "--color-white"
+    },
+    "band_deep": {
+      "hex": "#060607",
+      "rgb": [
+        6,
+        6,
+        7
+      ],
+      "css_token": "--band-ground"
+    },
+    "logo_mark_existing_site": {
+      "hex": "#EEF1F4",
+      "rgb": [
+        238,
+        241,
+        244
+      ],
+      "css_selector": ".cta-mark-n"
+    }
+  },
+  "font_roles": [
+    {
+      "role": "H1 / hero primary",
+      "family": "Ethnocentric",
+      "css_weight": 400,
+      "token": "--font-heavy",
+      "evidence": "h1 and .hero-headline"
+    },
+    {
+      "role": "H2 / section headings",
+      "family": "Mokoto",
+      "css_weight": 400,
+      "token": "--font-h2",
+      "evidence": "h2"
+    },
+    {
+      "role": "H3-H4 / display labels",
+      "family": "Conthrax",
+      "css_weight": 300,
+      "token": "--font-display",
+      "evidence": "h1,h2,h3,h4 base rule; h1/h2 overridden; available @font-face is declared 400, so 300 resolves to that face"
+    },
+    {
+      "role": "Heading accent words / navigation / footer links",
+      "family": "Nasalization",
+      "css_weight": 400,
+      "token": "--font-tech",
+      "evidence": "h1 em,h2 em,h3 em; .nav-link; .footer-link"
+    },
+    {
+      "role": "Body / interface / CTA labels",
+      "family": "Inter",
+      "css_weights_available": [
+        300,
+        400,
+        500
+      ],
+      "token": "--font-sans",
+      "evidence": "body; .rule-link",
+      "default": "16px, line-height 1.6"
+    },
+    {
+      "role": "Editorial italic / quotes",
+      "family": "Gambetta",
+      "css_weight": 300,
+      "style": "italic",
+      "token": "--font-serif",
+      "evidence": "em outside H1-H3; .prose-article blockquote"
+    }
+  ],
+  "font_assets": [
+    {
+      "family": "Inter",
+      "css_weight": "300",
+      "style": "normal",
+      "display": "swap",
+      "source_asset_url": "https://www.aleemuh.com/fonts/inter-300.woff2",
+      "evidence": "about.D7EEYB4O.css @font-face",
+      "binary_downloaded": true
+    },
+    {
+      "family": "Inter",
+      "css_weight": "400",
+      "style": "normal",
+      "display": "swap",
+      "source_asset_url": "https://www.aleemuh.com/fonts/inter-400.woff2",
+      "evidence": "about.D7EEYB4O.css @font-face",
+      "binary_downloaded": true
+    },
+    {
+      "family": "Inter",
+      "css_weight": "500",
+      "style": "normal",
+      "display": "swap",
+      "source_asset_url": "https://www.aleemuh.com/fonts/inter-500.woff2",
+      "evidence": "about.D7EEYB4O.css @font-face",
+      "binary_downloaded": true
+    },
+    {
+      "family": "Gambetta",
+      "css_weight": "300",
+      "style": "italic",
+      "display": "swap",
+      "source_asset_url": "https://www.aleemuh.com/fonts/gambetta-300-italic.woff2",
+      "evidence": "about.D7EEYB4O.css @font-face",
+      "binary_downloaded": true
+    },
+    {
+      "family": "Ethnocentric",
+      "css_weight": "400",
+      "style": "normal",
+      "display": "swap",
+      "source_asset_url": "https://www.aleemuh.com/fonts/ethnocentric-400.woff2",
+      "evidence": "about.D7EEYB4O.css @font-face",
+      "binary_downloaded": true
+    },
+    {
+      "family": "Mokoto",
+      "css_weight": "400",
+      "style": "normal",
+      "display": "swap",
+      "source_asset_url": "https://www.aleemuh.com/fonts/mokoto-400.woff2",
+      "evidence": "about.D7EEYB4O.css @font-face",
+      "binary_downloaded": true
+    },
+    {
+      "family": "Conthrax",
+      "css_weight": "400",
+      "style": "normal",
+      "display": "swap",
+      "source_asset_url": "https://www.aleemuh.com/fonts/conthrax-400.woff2",
+      "evidence": "about.D7EEYB4O.css @font-face",
+      "binary_downloaded": true
+    },
+    {
+      "family": "Nasalization",
+      "css_weight": "400",
+      "style": "normal",
+      "display": "swap",
+      "source_asset_url": "https://www.aleemuh.com/fonts/nasalization-400.woff2",
+      "evidence": "about.D7EEYB4O.css @font-face",
+      "binary_downloaded": true
+    }
+  ],
+  "licenses": {
+    "Inter": {
+      "publisher": "Rasmus Andersson / The Inter Project Authors",
+      "official_source": "https://rsms.me/inter/",
+      "official_download": "https://github.com/rsms/inter/releases/download/v4.1/Inter-4.1.zip",
+      "license_url": "https://raw.githubusercontent.com/rsms/inter/v4.1/LICENSE.txt",
+      "license": "SIL Open Font License 1.1",
+      "bundled": true,
+      "note": "OFL font files and copyright/license are included. Exact portfolio WOFF2 300/400/500 are included; official 4.1 desktop files and variable webfonts are an additional handoff resource."
+    },
+    "Gambetta": {
+      "publisher": "Indian Type Foundry / Fontshare",
+      "official_source": "https://www.fontshare.com/fonts/gambetta",
+      "official_download": "https://api.fontshare.com/v2/fonts/download/gambetta",
+      "license_url": "https://www.fontshare.com/licenses",
+      "license": "ITF Free Font License 2.0, 17 Aug 2026",
+      "bundled": false,
+      "note": "Free commercial and self-hosted use. Third-party font redistribution is prohibited. Contractors must download their own copy from Fontshare. A direct download obtained for Aleem is preserved under sources/private-font-reference and must be excluded from shared archives."
+    },
+    "Ethnocentric": {
+      "publisher": "Typodermic Fonts / Ray Larabie",
+      "official_source": "https://typodermicfonts.com/ethnocentric/",
+      "license_url": "https://typodermicfonts.com/license/",
+      "license": "Exact file's original agreement controls; current desktop and embedding routes differ",
+      "bundled": false,
+      "note": "Portfolio CSS declares normal 400. Do not assume its existing license or substitute a current font package. Obtain the matching desktop/web/PDF rights from the foundry when needed."
+    },
+    "Conthrax": {
+      "publisher": "Typodermic Fonts / Ray Larabie",
+      "official_source": "https://typodermicfonts.com/conthrax/",
+      "license_url": "https://typodermicfonts.com/license/",
+      "license": "Exact file's original agreement controls; current desktop and embedding routes differ",
+      "bundled": false,
+      "note": "The site's CSS declares 400 and its H3/H4 rule requests 300. Inspection of the user-requested local copy identifies Conthrax-SemiBold, version 3.000. The local portfolio binary is excluded from shared archives."
+    },
+    "Nasalization": {
+      "publisher": "Typodermic Fonts / Ray Larabie",
+      "official_source": "https://typodermicfonts.com/nasalization/",
+      "license_url": "https://typodermicfonts.com/license/",
+      "license": "Exact file's original agreement controls; current desktop and embedding routes differ",
+      "bundled": false,
+      "note": "Portfolio CSS declares normal 400. Current foundry desktop permission does not establish web embedding or redistribution permission for the portfolio asset."
+    },
+    "Mokoto": {
+      "publisher": "Drizy Font / Drizy Studio",
+      "official_source": "https://drizyfont.com/fonts/mokoto-glitch-typeface-font/",
+      "license_url": "https://drizyfont.com/fonts/mokoto-glitch-typeface-font/",
+      "license": "Commercial license required for commercial use; desktop/web/document routes depend on license",
+      "bundled": false,
+      "note": "Portfolio CSS declares normal 400. Record as extracted identity; purchase or confirm the existing project's relevant commercial license before reuse."
+    }
+  },
+  "font_binary_metadata": {
+    "inter-300.woff2": {
+      "0": [
+        "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)"
+      ],
+      "1": [
+        "Inter Light"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 4.001;git-66647c0bb"
+      ],
+      "6": [
+        "Inter-Light"
+      ],
+      "14": [
+        "https://openfontlicense.org"
+      ]
+    },
+    "inter-400.woff2": {
+      "0": [
+        "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)"
+      ],
+      "1": [
+        "Inter"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 4.001;git-66647c0bb"
+      ],
+      "6": [
+        "Inter-Regular"
+      ],
+      "14": [
+        "https://openfontlicense.org"
+      ]
+    },
+    "inter-500.woff2": {
+      "0": [
+        "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)"
+      ],
+      "1": [
+        "Inter Medium"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 4.001;git-66647c0bb"
+      ],
+      "6": [
+        "Inter-Medium"
+      ],
+      "14": [
+        "https://openfontlicense.org"
+      ]
+    },
+    "Inter-Bold.otf": {
+      "0": [
+        "Copyright 2016 The Inter Project Authors"
+      ],
+      "1": [
+        "Inter"
+      ],
+      "2": [
+        "Bold"
+      ],
+      "5": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "6": [
+        "Inter-Bold"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "Inter-Medium.otf": {
+      "0": [
+        "Copyright 2016 The Inter Project Authors"
+      ],
+      "1": [
+        "Inter Medium"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "6": [
+        "Inter-Medium"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "Inter-Regular.otf": {
+      "0": [
+        "Copyright 2016 The Inter Project Authors"
+      ],
+      "1": [
+        "Inter"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "6": [
+        "Inter-Regular"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "Inter-SemiBold.otf": {
+      "0": [
+        "Copyright 2016 The Inter Project Authors"
+      ],
+      "1": [
+        "Inter SemiBold"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "6": [
+        "Inter-SemiBold"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "InterVariable-Italic.ttf": {
+      "6": [
+        "InterVariableItalic"
+      ],
+      "0": [
+        "Copyright 2016 The Inter Project Authors"
+      ],
+      "1": [
+        "Inter Variable"
+      ],
+      "2": [
+        "Italic"
+      ],
+      "5": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "InterVariable-Italic.woff2": {
+      "6": [
+        "InterVariableItalic"
+      ],
+      "0": [
+        "Copyright 2016 The Inter Project Authors"
+      ],
+      "1": [
+        "Inter Variable"
+      ],
+      "2": [
+        "Italic"
+      ],
+      "5": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "InterVariable.ttf": {
+      "6": [
+        "InterVariable"
+      ],
+      "0": [
+        "Copyright 2016 The Inter Project Authors"
+      ],
+      "1": [
+        "Inter Variable"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "InterVariable.woff2": {
+      "6": [
+        "InterVariable"
+      ],
+      "0": [
+        "Copyright 2016 The Inter Project Authors"
+      ],
+      "1": [
+        "Inter Variable"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 4.001;git-9221beed3"
+      ],
+      "13": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      ],
+      "14": [
+        "http://scripts.sil.org/OFL"
+      ]
+    },
+    "portfolio-local-use/conthrax-400.woff2": {
+      "1": [
+        "Conthrax SemBd"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 3.000"
+      ],
+      "6": [
+        "Conthrax-SemiBold"
+      ],
+      "0": [
+        "© 2016-2024 Typodermic Fonts Inc."
+      ]
+    },
+    "portfolio-local-use/ethnocentric-400.woff2": {
+      "1": [
+        "Ethnocentric"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 5.000"
+      ],
+      "6": [
+        "Ethnocentric-Regular"
+      ],
+      "0": [
+        "© 1999-2025 Typodermic Fonts Inc."
+      ]
+    },
+    "portfolio-local-use/gambetta-300-italic.woff2": {
+      "0": [
+        "Copyright 2017-2022 Indian Type Foundry. All rights reserved."
+      ],
+      "1": [
+        "Gambetta Light"
+      ],
+      "2": [
+        "Italic"
+      ],
+      "5": [
+        "Version 1.002"
+      ],
+      "6": [
+        "false"
+      ],
+      "13": [
+        "This Font Software is protected under domestic and international trademark and copyright law. You agree to identify the ITF fonts by name and credit the ITF's ownership of the trademarks and copyrights in any design or production credits."
+      ],
+      "14": [
+        "https://fontshare.com/terms"
+      ]
+    },
+    "portfolio-local-use/mokoto-400.woff2": {
+      "0": [
+        "Copyright (c) 2017 by faqih. All rights reserved."
+      ],
+      "1": [
+        "Mokoto"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 1.000"
+      ],
+      "6": [
+        "Mokoto-Regular"
+      ]
+    },
+    "portfolio-local-use/nasalization-400.woff2": {
+      "1": [
+        "Nasalization"
+      ],
+      "2": [
+        "Regular"
+      ],
+      "5": [
+        "Version 5.101"
+      ],
+      "6": [
+        "Nasalization-Regular"
+      ],
+      "0": [
+        "© 1999-2026 Typodermic Fonts Inc."
+      ]
+    }
+  },
+  "local_font_copy_policy": "fonts/portfolio-local-use contains exact additional portfolio files for Aleem's local previews at his request. Those files are excluded from external handoff archives.",
+  "raw_theme_tokens": {
+    "--font-sans": "\"Inter\", ui-sans-serif, system-ui, sans-serif",
+    "--font-serif": "\"Gambetta\", ui-serif, Georgia, serif",
+    "--font-mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+    "--color-white": "#fff",
+    "--spacing": ".25rem",
+    "--container-xs": "20rem",
+    "--container-sm": "24rem",
+    "--container-md": "28rem",
+    "--container-xl": "36rem",
+    "--container-2xl": "42rem",
+    "--container-3xl": "48rem",
+    "--container-4xl": "56rem",
+    "--container-5xl": "64rem",
+    "--container-7xl": "80rem",
+    "--text-xs": ".75rem",
+    "--text-xs--line-height": "calc(1 / .75)",
+    "--text-sm": ".875rem",
+    "--text-sm--line-height": "calc(1.25 / .875)",
+    "--text-base": "1rem",
+    "--text-base--line-height": "1.5",
+    "--text-lg": "1.125rem",
+    "--text-lg--line-height": "calc(1.75 / 1.125)",
+    "--text-xl": "1.25rem",
+    "--text-xl--line-height": "calc(1.75 / 1.25)",
+    "--text-2xl": "1.5rem",
+    "--text-2xl--line-height": "calc(2 / 1.5)",
+    "--text-3xl": "1.875rem",
+    "--text-3xl--line-height": "1.2",
+    "--text-4xl": "2.25rem",
+    "--text-4xl--line-height": "calc(2.5 / 2.25)",
+    "--text-5xl": "3rem",
+    "--text-5xl--line-height": "1",
+    "--text-6xl": "3.75rem",
+    "--text-6xl--line-height": "1",
+    "--font-weight-light": "300",
+    "--font-weight-normal": "400",
+    "--font-weight-medium": "500",
+    "--radius-2xl": "1rem",
+    "--ease-in-out": "cubic-bezier(.4, 0, .2, 1)",
+    "--color-ink": "#000",
+    "--color-ink-soft": "#101010",
+    "--color-ink-line": "#1d1e1f",
+    "--color-accent": "#02a1e1",
+    "--color-accent-hover": "#0289bf",
+    "--font-display": "\"Conthrax\", var(--font-sans)",
+    "--font-heavy": "\"Ethnocentric\", var(--font-sans)",
+    "--font-h2": "\"Mokoto\", var(--font-sans)",
+    "--font-tech": "\"Nasalization\", var(--font-sans)",
+    "--text-display-2xl": "clamp(3.25rem, 1.5rem + 8.75vw, 9rem)",
+    "--text-display-2xl--line-height": "1.02",
+    "--text-display-2xl--letter-spacing": "-.02em",
+    "--text-display-xl": "clamp(3rem, 1.5rem + 7.5vw, 8rem)",
+    "--text-display-xl--line-height": "1.05",
+    "--text-display-xl--letter-spacing": "-.02em",
+    "--text-display-lg": "clamp(2.5rem, 1.4rem + 5.5vw, 6rem)",
+    "--text-display-lg--line-height": "1.08",
+    "--text-display-lg--letter-spacing": "-.015em",
+    "--text-display-md": "clamp(2.25rem, 1.35rem + 4.5vw, 4.5rem)",
+    "--text-display-md--line-height": "1.1",
+    "--text-display-md--letter-spacing": "-.015em",
+    "--text-display-sm": "clamp(1.75rem, 1.45rem + 1.5vw, 2.5rem)",
+    "--text-display-sm--line-height": "1.15",
+    "--text-eyebrow": ".8125rem",
+    "--text-eyebrow--line-height": "1.5",
+    "--text-eyebrow--letter-spacing": ".115em",
+    "--radius-sharp": "2px",
+    "--radius-card": "10px",
+    "--radius-pill": "500px",
+    "--ease-standard": "cubic-bezier(.25, 1, .5, 1)"
+  },
+  "layout": {
+    "spacing_unit": "4px (.25rem)",
+    "responsive_breakpoints_px": [
+      640,
+      768,
+      1024,
+      1280,
+      1536
+    ],
+    "content_max_width": "1280px (80rem / --container-7xl)",
+    "radii": {
+      "sharp": "2px",
+      "card": "10px",
+      "pill": "500px"
+    },
+    "hero_grid": {
+      "size": "76px × 76px",
+      "line": "#FFFFFF0B, approximately 4.3% white"
+    },
+    "hero_glow": "13% accent, ellipse 70% × 55% at 78% -8%, fading to transparent at 70%",
+    "card_surface": "5% white fill, 10% white inset edge",
+    "cta_rule": "1px white at 22%; hover at 55%",
+    "focus": "2px accent outline, 3px offset"
+  },
+  "typography": {
+    "hero_actual": {
+      "font_size": "clamp(2.75rem,.5rem + 6.9vw,6.5rem)",
+      "font_size_px": "44px to 104px",
+      "line_height": 1.08,
+      "letter_spacing": "-.01em"
+    },
+    "hero_emphasis": {
+      "family": "Nasalization",
+      "letter_spacing": ".02em"
+    },
+    "eyebrow": {
+      "font_size": "13px",
+      "line_height": 1.5,
+      "letter_spacing": ".115em"
+    },
+    "cta": {
+      "family": "Inter",
+      "weight": 500,
+      "font_size": "13px",
+      "letter_spacing": ".14em",
+      "case": "uppercase"
+    },
+    "article_body": {
+      "line_height": 1.75,
+      "opacity": 0.85
+    }
+  },
+  "motion": {
+    "standard_easing": "cubic-bezier(.25,1,.5,1)",
+    "reveal": "rise .54s, opacity 0 to 1, blur 6px to 0, translateY 20px to 0",
+    "stagger": "75ms increments for initial reveal",
+    "interaction": "300-500ms transitions for cards and links",
+    "reduced_motion": "CSS disables decorative canvas effects and reveal animations when prefers-reduced-motion is reduce"
+  },
+  "contrast_srgb": {
+    "accent_on_black": 7.188,
+    "white_on_accent": 2.922,
+    "accent_on_white": 2.922,
+    "black_on_accent": 7.188,
+    "hover_on_white": 3.938,
+    "note": "Computed sRGB ratios. Logo color is exempt from text contrast requirements; normal live text should follow appropriate WCAG contrast levels. For a blue-filled button, black copy gives stronger contrast than white."
+  },
+  "evidence_rules": {
+    "heading_roles": [
+      "h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}",
+      "h1,h2,h3,h4{font-family:var(--font-display);--tw-font-weight:var(--font-weight-light);font-weight:var(--font-weight-light);text-wrap:balance}",
+      "h1{font-family:var(--font-heavy);font-weight:400}",
+      "h2{font-family:var(--font-h2);font-weight:400}",
+      "em{font-family:var(--font-serif);--tw-font-weight:var(--font-weight-light);font-weight:var(--font-weight-light);font-style:italic}",
+      "h1 em,h2 em,h3 em{font-family:var(--font-tech);color:var(--color-accent);font-style:normal;font-weight:400}",
+      ".hero-headline[data-astro-cid-j7pv25f6]{font-family:var(--font-heavy);font-weight:400;font-size:clamp(2.75rem,.5rem + 6.9vw,6.5rem);line-height:1.08;letter-spacing:-.01em}",
+      ".hero-headline[data-astro-cid-j7pv25f6] em[data-astro-cid-j7pv25f6]{font-family:var(--font-tech);font-style:normal;font-weight:400;letter-spacing:.02em}"
+    ],
+    "navigation": [
+      ".nav-link[data-astro-cid-3ef6ksr2]{font-family:var(--font-tech);font-weight:400}",
+      ".footer-link[data-astro-cid-sz7xmlte]{font-family:var(--font-tech);font-weight:400}"
+    ],
+    "grid_and_surface": [
+      ".card-surface{background-color:#ffffff0d}",
+      ".card-surface{background-color:color-mix(in oklab,var(--color-white) 5%,transparent)}",
+      ".card-surface{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);--tw-ring-color:#ffffff1a}",
+      ".card-surface{--tw-ring-color:color-mix(in oklab, var(--color-white) 10%, transparent)}",
+      ".band-deep{--band-ground:#060607;background-color:var(--band-ground)}",
+      ".hero-field{background-image:radial-gradient(ellipse 70% 55% at 78% -8%,#02a1e121,transparent 70%),linear-gradient(to bottom,transparent 40%,var(--color-ink)),linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px)}",
+      ".hero-field{background-image:radial-gradient(ellipse 70% 55% at 78% -8%,color-mix(in srgb,var(--color-accent) 13%,transparent),transparent 70%),linear-gradient(to bottom,transparent 40%,var(--color-ink)),linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px)}",
+      ".hero-field{background-size:100% 100%,100% 100%,76px 76px,76px 76px}",
+      ".rule-link[data-astro-cid-eu53kmdl]{position:relative;display:flex;align-items:center;appearance:none;background:none;border:0;text-align:left;text-decoration:none;cursor:pointer;min-width:15rem;padding:.7rem 3rem .8rem .15rem;border-bottom:1px solid rgb(255 255 255 / .22);font-family:var(--font-sans);font-size:var(--text-eyebrow);font-weight:500;text-transform:uppercase;letter-spacing:.14em;line-height:1;color:#ffffffdb;overflow:hidden;transition:border-color .5s var(--ease-standard),color .5s var(--ease-standard)}",
+      ".rule-link[data-astro-cid-eu53kmdl]:hover,.rule-link[data-astro-cid-eu53kmdl]:focus-visible{color:var(--color-white);border-bottom-color:#ffffff8c}",
+      ".rule-link[data-astro-cid-eu53kmdl]:hover .rule-link-label[data-astro-cid-eu53kmdl],.rule-link[data-astro-cid-eu53kmdl]:focus-visible .rule-link-label[data-astro-cid-eu53kmdl]{transform:translate(1.85rem)}",
+      ".rule-link[data-astro-cid-eu53kmdl]:hover .rule-link-arrow-rest[data-astro-cid-eu53kmdl],.rule-link[data-astro-cid-eu53kmdl]:focus-visible .rule-link-arrow-rest[data-astro-cid-eu53kmdl]{opacity:0;transform:translate(180%,-50%)}",
+      ".rule-link[data-astro-cid-eu53kmdl]:hover .rule-link-arrow-hover[data-astro-cid-eu53kmdl],.rule-link[data-astro-cid-eu53kmdl]:focus-visible .rule-link-arrow-hover[data-astro-cid-eu53kmdl]{opacity:1;transform:translateY(-50%)}",
+      ".rule-link[data-astro-cid-eu53kmdl]:disabled{opacity:.45;cursor:default}",
+      ".rule-link[data-astro-cid-eu53kmdl]:disabled .rule-link-label[data-astro-cid-eu53kmdl],.rule-link[data-astro-cid-eu53kmdl]:disabled .rule-link-arrow[data-astro-cid-eu53kmdl]{transform:none}",
+      ".rule-link[data-astro-cid-eu53kmdl]:disabled .rule-link-arrow-rest[data-astro-cid-eu53kmdl]{opacity:1;transform:translateY(-50%)}",
+      ".rule-link[data-astro-cid-eu53kmdl]:disabled .rule-link-arrow-hover[data-astro-cid-eu53kmdl]{opacity:0}",
+      ".rule-link[data-astro-cid-eu53kmdl]:hover .rule-link-label[data-astro-cid-eu53kmdl],.rule-link[data-astro-cid-eu53kmdl]:focus-visible .rule-link-label[data-astro-cid-eu53kmdl]{transform:none}",
+      ".rule-link[data-astro-cid-eu53kmdl]:hover .rule-link-arrow-rest[data-astro-cid-eu53kmdl],.rule-link[data-astro-cid-eu53kmdl]:focus-visible .rule-link-arrow-rest[data-astro-cid-eu53kmdl]{opacity:1;transform:translateY(-50%)}",
+      ".rule-link[data-astro-cid-eu53kmdl]:hover .rule-link-arrow-hover[data-astro-cid-eu53kmdl],.rule-link[data-astro-cid-eu53kmdl]:focus-visible .rule-link-arrow-hover[data-astro-cid-eu53kmdl]{opacity:0}"
+    ]
+  },
+  "limitations": [
+    "Fonts were identified from the current live @font-face and element CSS rules. This does not identify the generated logo's wordmark font.",
+    "The screenshot's hero rotator shows pipeline; the fetched live initial word shows revenue. The identity tokens remain consistent.",
+    "The existing display-font licenses on Aleem's portfolio were not provided. No inference of unauthorized use is made; existing agreements may differ from current downloads.",
+    "sources/private-font-reference is Aleem's directly downloaded private Fontshare reference, excluded from external handoff archives."
+  ]
+}

@@ -1,0 +1,91 @@
+{% set d = demo %}{% set ur = lang == 'ur' %}{% set x = d.xray %}{% set h = d.health %}
+{% set title = "Digital Health Check: " ~ d.name %}
+{% include "_head.html.j2" %}
+<style>
+  .hc-hero { padding: 6mm 16mm 8mm; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 44mm; gap: 8mm; align-items: center; }
+  .hc-hero h1 { font-size: 24pt; line-height: 1.08; }
+  [lang="ur"] .hc-hero h1 { font-size: 20pt; line-height: 1.7; }
+  .hc-hero .sub { color: var(--mid); font-size: 9.5pt; margin-top: 2.5mm; }
+  [lang="ur"] .hc-hero .sub { line-height: 1.9; }
+  .ring text { font: 700 30px var(--mono); fill: #F1F5F9; }
+  .ring .of { font: 500 9px var(--mono); fill: #94A3B8; }
+  .items { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 6mm; }
+  .item { display: flex; gap: 2.5mm; align-items: flex-start; font-size: 9.6pt; }
+  [lang="ur"] .item { line-height: 1.85; }
+  .mk { width: 5mm; height: 5mm; border-radius: 50%; display: grid; place-items: center; flex: none; font: 700 8pt/1 var(--mono); color: #fff; margin-top: .4mm; }
+  [lang="ur"] .mk { margin-top: 1.6mm; }
+  .mk.ok { background: #15803D; } .mk.no { background: #B91C1C; }
+  .rv { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .rv .card h3 { display: flex; justify-content: space-between; }
+  .rv li { list-style: none; font-size: 8.8pt; color: var(--ink-mid); padding: 1.2mm 0; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 3mm; }
+  [lang="ur"] .rv li { line-height: 1.8; }
+  .rv li:last-child { border-bottom: 0; }
+  .rv .n { font-family: var(--mono); color: var(--ink-muted); white-space: nowrap; }
+  .callout-r { background: #FEF3C7; border-radius: 10px; padding: 3mm 4mm; font-size: 9.4pt; font-weight: 600; color: #78350F; }
+  [lang="ur"] .callout-r { line-height: 1.9; }
+  .fx { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .fx div { border: 1px solid var(--rule); border-radius: 10px; padding: 3mm; font-size: 8.8pt; background: #fff; }
+  [lang="ur"] .fx div { line-height: 1.85; }
+  .fx b { display: block; font-family: var(--mono); color: var(--brand-deep); margin-bottom: 1mm; }
+  .qrs { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .qrbox { display: flex; gap: 4mm; align-items: center; background: var(--ground); color: var(--hi); border-radius: 12px; padding: 4mm; }
+  .qrbox .qr { width: 26mm; height: 26mm; background: #fff; border-radius: 6px; padding: 1.5mm; flex: none; }
+  .qrbox .qr svg { width: 100%; height: 100%; display: block; }
+  .qrbox h3 { font-size: 11pt; }
+  [lang="ur"] .qrbox h3 { line-height: 1.7; }
+  .qrbox p { color: var(--mid); font-size: 8.4pt; margin-top: 1mm; }
+  [lang="ur"] .qrbox p { line-height: 1.85; }
+  .sl { font-weight: 700; font-size: 11pt; margin-bottom: 2mm; }
+  [lang="ur"] .sl { line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="dark glow grid-bg">
+    <div class="topbar">
+      <img class="logo-w" src="{{ a.logo_white }}" alt="NexusPoint">
+      <span class="label">{{ 'Digital Health Check' if not ur else 'ڈیجیٹل ہیلتھ چیک' }} &middot; <span class="ltr">{{ prepared }}</span></span>
+    </div>
+    <div class="hc-hero">
+      <div>
+        <div class="label eyebrow">{{ 'Prepared privately for' if not ur else 'نجی طور پر تیار' }}</div>
+        <h1>{{ d.name }}</h1>
+        <p class="sub">{% if ur %}یہ وہ ہے جو گاہک آپ کو گوگل پر ڈھونڈتے وقت دیکھتے ہیں، اور آپ کے آخری {{ x.stats.analysed }} ریویوز کیا کہتے ہیں۔{% else %}This is what customers see when they find you on Google, and what your last {{ x.stats.analysed }} reviews say.{% endif %}</p>
+      </div>
+      {% set C = 2 * 3.14159 * 42 %}{% set col = '#4ADE80' if h.score >= 70 else ('#FBBF24' if h.score >= 45 else '#F87171') %}
+      <svg class="ring" viewBox="0 0 100 100" width="44mm" height="44mm">
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#1E293B" stroke-width="9"/>
+        <circle cx="50" cy="50" r="42" fill="none" stroke="{{ col }}" stroke-width="9" stroke-linecap="round" stroke-dasharray="{{ C * h.score / 100 }} {{ C }}" transform="rotate(-90 50 50)"/>
+        <text x="50" y="56" text-anchor="middle" direction="ltr">{{ h.score }}</text><text class="of" x="50" y="70" text-anchor="middle" direction="ltr" unicode-bidi="isolate">/ 100</text>
+      </svg>
+    </div>
+  </div>
+  <div class="body" style="gap:5mm">
+    <div>
+      <p class="sl">{{ 'Your listing and website' if not ur else 'آپ کی لسٹنگ اور ویب سائٹ' }}</p>
+      <div class="items">
+        {% for i in h['items'] %}<div class="item"><span class="mk {{ 'ok' if i.ok else 'no' }}">{{ '✓' if i.ok else '✕' }}</span><span>{{ (i.ur | bidi) if ur else i.en }}</span></div>{% endfor %}
+      </div>
+    </div>
+    {% if x.stats.owner_reply_pct < 50 %}
+    <p class="callout-r">{% if ur %}آپ نے اپنے آخری <bdi dir="ltr">{{ x.stats.analysed }}</bdi> ریویوز میں سے <bdi dir="ltr">{{ x.stats.owner_reply_pct }}%</bdi> کا جواب دیا۔ گاہک فیصلہ کرنے سے پہلے جوابات پڑھتے ہیں۔{% else %}You replied to {{ x.stats.owner_reply_pct }}% of your last {{ x.stats.analysed }} reviews. Customers read the replies before they choose.{% endif %}</p>
+    {% endif %}
+    <div class="rv">
+      <div class="card"><h3>{{ 'What they complain about' if not ur else 'کس بات کی شکایت' }}</h3>
+        <ul>{% for t in x.complaints[:3] %}<li><span>{{ t.theme_ur if ur else t.theme_en }}</span><span class="n ltr">{{ t.count }}</span></li>{% else %}<li><span>{{ 'No clear complaint pattern' if not ur else 'شکایت کا کوئی واضح رجحان نہیں' }}</span></li>{% endfor %}</ul></div>
+      <div class="card"><h3>{{ 'What they love' if not ur else 'کیا پسند کرتے ہیں' }}</h3>
+        <ul>{% for t in x.praise[:3] %}<li><span>{{ t.theme_ur if ur else t.theme_en }}</span><span class="n ltr">{{ t.count }}</span></li>{% endfor %}</ul></div>
+    </div>
+    {% if x.fixes %}
+    <div><p class="sl">{{ 'What we would fix first' if not ur else 'ہم سب سے پہلے کیا ٹھیک کریں گے' }}</p>
+      <div class="fx">{% for f in x.fixes[:3] %}<div><b>{{ loop.index }}</b>{{ (f.ur | bidi) if ur else f.en }}</div>{% endfor %}</div></div>
+    {% endif %}
+    <div class="qrs" style="margin-top:auto;margin-bottom:5mm">
+      <div class="qrbox"><div class="qr">{{ qr_chat }}</div><div><h3>{{ 'Talk to your assistant' if not ur else 'اپنے اسسٹنٹ سے بات کریں' }}</h3><p>{{ 'Scan and ask it anything, the way your customers do.' if not ur else 'اسکین کریں اور ویسے پوچھیں جیسے آپ کے گاہک پوچھتے ہیں۔' }}</p></div></div>
+      <div class="qrbox"><div class="qr">{{ qr_hub }}</div><div><h3>{{ 'Open your private demo' if not ur else 'اپنا نجی ڈیمو کھولیں' }}</h3><p>{{ 'Reviews, dashboard, website draft and your numbers. Live for 14 days.' if not ur else 'ریویوز، ڈیش بورڈ، ویب سائٹ ڈرافٹ اور آپ کے اعداد۔ 14 دن کے لیے۔' }}</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span class="ltr">NexusPoint &middot; +92 311 8340514 &middot; aleem@nexus-point.co</span><span class="ltr">Most agencies sell hours. We build leverage.</span></div>
+</div>
+</body>
+</html>

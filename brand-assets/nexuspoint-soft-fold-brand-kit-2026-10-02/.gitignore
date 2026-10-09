@@ -1,0 +1,15 @@
+# Match the production handoff exclusions in scripts/package-brand-kit.py.
+fonts/portfolio-local-use/
+sources/private-font-reference/
+sources/Inter-4.1-official.zip
+brand-guide.pdf
+brand-guide.next.pdf
+qa/**/*.png
+qa/**/*.jpg
+qa/**/*.jpeg
+qa/*.png
+qa/*.jpg
+qa/*.jpeg
+applications/Business-Card-Soft-Fold-Proof.png
+applications/Business-Card-Soft-Fold-Proof-v2.png
+applications/card-variations/03-folded-edge-proof.png

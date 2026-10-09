@@ -1,0 +1,61 @@
+{
+  "identity": "Soft Fold",
+  "date": "2026-10-02",
+  "selectedDisplayFont": "Conthrax SemiBold, portfolio file version 3.000",
+  "typeMethod": "Native outlines generated from local fonts for finished SVG graphics, no private font files embedded",
+  "backgroundSource": "Existing imagegen background, unchanged pixels",
+  "qrDestination": "https://nexus-point.co/work",
+  "contactsSource": "Existing NexusPoint-Card-2-Wrapped-Nexus.png contacts; QR destination updated by Aleem on 2 October 2026",
+  "contacts": [
+    [
+      "Aleem Ul Hassan",
+      "Co-founder",
+      "03108820568"
+    ],
+    [
+      "Kaleem Ul Hassan",
+      "Co-founder",
+      "03118340514"
+    ],
+    [
+      "M. Talha Zafar",
+      "Lead Developer",
+      "03184461377"
+    ]
+  ],
+  "card": {
+    "artboardPixels": [
+      1125,
+      675
+    ],
+    "pngDensity": 300,
+    "bleedInches": 0.125,
+    "trimInches": [
+      3.5,
+      2
+    ],
+    "mediaInches": [
+      3.75,
+      2.25
+    ],
+    "selectedDirection": "3C Diagonal Wrap"
+  },
+  "files": [
+    "Business-Card-Soft-Fold-Back.svg",
+    "Business-Card-Soft-Fold-Front.svg",
+    "LinkedIn-Banner-Conthrax-Soft-Fold.svg",
+    "Profile-Avatar-Soft-Fold.svg",
+    "WhatsApp-Banner-Soft-Fold-Square.svg",
+    "WhatsApp-Banner-Soft-Fold-Wide.svg",
+    "portfolio-qr.svg",
+    "type-specimen.svg"
+  ],
+  "selectedCard": {
+    "status": "locked",
+    "id": "3C",
+    "name": "Diagonal Wrap",
+    "approvedDate": "2026-10-02",
+    "sourceFolder": "folded-edge-variations",
+    "sourcePrefix": "3c-diagonal-wrap"
+  }
+}

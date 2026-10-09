@@ -1,0 +1,49 @@
+/* NexusPoint / Soft Fold. Measured portfolio values + labelled kit additions. */
+@font-face {font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url("./fonts/InterVariable.woff2") format("woff2");}
+@font-face {font-family:Inter;font-style:italic;font-weight:100 900;font-display:swap;src:url("./fonts/InterVariable-Italic.woff2") format("woff2");}
+:root {
+  --color-accent: #02A1E1;
+  --color-accent-hover: #0289BF;
+  --color-accent-on-light: #0079AA; /* Derived for AA text on white. */
+  --color-ink: #000000;
+  --color-ink-soft: #101010;
+  --color-ink-line: #1D1E1F; /* Decorative only. */
+  --color-band-deep: #060607;
+  --color-white: #FFFFFF;
+  --color-logo-navy: #02040A;
+  --color-text-secondary: #CCCCCC; /* Derived. */
+  --color-text-muted: #8A8A8A; /* Derived. */
+  --color-ui-boundary: #646464; /* Derived. Required control boundaries. */
+  --color-success: #4ADE80;
+  --color-warning: #FBBF24;
+  --color-error: #F87171;
+  --font-display: Conthrax, Inter, sans-serif;
+  --font-section: Conthrax, Inter, sans-serif;
+  --font-subheading: Inter, Inter, sans-serif;
+  --font-navigation: Inter, Inter, sans-serif;
+  --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-editorial: Inter, ui-sans-serif, system-ui, sans-serif;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px;
+  --space-24: 96px; --space-32: 128px;
+  --radius-sharp: 2px; --radius-card: 10px; --radius-pill: 500px;
+  --grid-unit: 76px;
+  --ease-brand: cubic-bezier(.25,1,.5,1);
+  --duration-fast: 180ms; --duration-standard: 280ms;
+}
+/* Inter is the bundled portable default. Load licensed display faces separately. */
+.brand-button {background:var(--color-accent);color:var(--color-ink);border:1px solid var(--color-accent);border-radius:var(--radius-sharp);font:500 16px/1.4 var(--font-body);padding:12px 20px;min-height:44px;}
+.brand-button:hover {background:var(--color-accent-hover);}
+.brand-button:focus-visible {outline:2px solid var(--color-accent);outline-offset:4px;}
+.brand-link {color:var(--color-accent);text-decoration:underline;text-underline-offset:4px;}
+.brand-surface {background:var(--color-ink-soft);color:var(--color-white);}
+.brand-field {background:var(--color-ink);color:var(--color-white);border:1px solid var(--color-ui-boundary);min-height:44px;}
+.brand-field:focus-visible,.brand-link:focus-visible {outline:2px solid var(--color-accent);outline-offset:4px;}
+.brand-light {background:var(--color-white);color:var(--color-ink);}
+.brand-light .brand-link {color:var(--color-accent-on-light);}
+.brand-light .brand-button {border-color:var(--color-ink);}
+.brand-light :focus-visible {outline:2px solid var(--color-ink);outline-offset:4px;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important;}}
+
+/* Load Conthrax through the private local stylesheet only when the appropriate font rights are in place. Shared builds fall back to Inter. */
+.brand-display{font:400 clamp(36px,5vw,72px)/1.12 var(--font-display);letter-spacing:.01em;}

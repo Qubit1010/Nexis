@@ -1,0 +1,24 @@
+{% set C = competitors %}
+<p>{{ C.method }}<sup class="c">S71</sup></p>
+<div class="stats keep" style="--n:4;margin:3mm 0 4mm">
+  <div class="stat"><div class="v num">{{ C.counts.audited }}</div><div class="l">local software-house and agency sites audited</div></div>
+  <div class="stat"><div class="v num">{{ C.counts.mention_ai_or_automation }}</div><div class="l">mention AI or automation somewhere on the site</div></div>
+  <div class="stat"><div class="v num">{{ C.counts.with_ai_demo_or_named_ai_client }}</div><div class="l">show an AI demo or name a client for AI work</div></div>
+  <div class="stat"><div class="v num">{{ C.counts.with_published_prices }}</div><div class="l">publish any price at all</div></div>
+</div>
+<table class="t mini keep">
+  <tr><th style="width:18%">Local firm</th><th style="width:10%">Where</th><th class="r" style="width:6%">Rev.</th><th style="width:28%">What they sell</th><th>What the site actually shows</th></tr>
+  {% for c in C.local %}
+  <tr><td>{{ c.name }}</td><td>{{ c.where }}</td><td class="r num">{{ c.reviews if c.reviews is not none else '&ndash;' }}</td><td>{{ c.sells }}</td><td>{{ c.shows }}</td></tr>
+  {% endfor %}
+</table>
+<div class="keep"><h3>National players selling into Quetta</h3>
+<table class="t mini">
+  <tr><th style="width:24%">Category</th><th>Vendors</th><th style="width:28%">Price</th><th style="width:9%">Src</th></tr>
+  {% for n in C.national %}<tr><td>{{ n.name }}</td><td>{{ n.who }}</td><td>{{ n.price }}</td><td class="num">{{ n.src }}</td></tr>{% endfor %}
+</table></div>
+<div class="two" style="margin-top:4mm">
+  <div class="callout keep"><div class="label">Where we win</div><ul class="ticks mini">{% for w in C.where_we_win %}<li>{{ w }}</li>{% endfor %}</ul></div>
+  <div class="callout warn keep"><div class="label">Where they win, and what to do</div><ul class="dashes mini">{% for w in C.where_they_win %}<li>{{ w }}</li>{% endfor %}</ul>
+  <p class="mini" style="margin-top:2mm">Do not fight on price for commodity software or on who has been around longest. Fight on the demo and the outcome. Where an owner already uses a local vendor's software, integrate with it rather than replace it.</p></div>
+</div>

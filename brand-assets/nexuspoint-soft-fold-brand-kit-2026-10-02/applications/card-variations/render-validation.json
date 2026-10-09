@@ -1,0 +1,22 @@
+{
+  "exports": [
+    {
+      "file": "03-folded-edge-back.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    },
+    {
+      "file": "03-folded-edge-front.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    }
+  ],
+  "printPDFs": 1,
+  "comparisonImages": 2,
+  "missingImages": 0,
+  "mobileViewport": 390,
+  "mobileScrollWidth": 390,
+  "status": "passed visual, QR and print validation"
+}

@@ -29,6 +29,9 @@ Two-way sync between Nexis private folders and **Work / Nexis Business Context**
 | `logs/` | Nexis Business Context/logs/ |
 | `references/` | Nexis Business Context/references/ |
 | `.claude/rules/` | Nexis Business Context/.claude/rules/ |
+| `output/` | Nexis Business Context/output/ |
+| `tmp/` | Nexis Business Context/tmp/ |
+| `research/` | Nexis Business Context/research/ |
 
 Drive is a **permanent backup** — files are never deleted from Drive, even if removed locally.
 

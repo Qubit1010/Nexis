@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-02",
+  "reports": [
+    {
+      "file": "social-cover.svg",
+      "mobile": false,
+      "scrollWidth": 1584,
+      "viewport": 1584,
+      "images": [],
+      "fonts": "loaded",
+      "screenshot": "qa/templates/social-cover.png"
+    },
+    {
+      "file": "proposal-cover.svg",
+      "mobile": false,
+      "scrollWidth": 794,
+      "viewport": 794,
+      "images": [],
+      "fonts": "loaded",
+      "screenshot": "qa/templates/proposal-cover.png"
+    },
+    {
+      "file": "email-signature.html",
+      "mobile": false,
+      "scrollWidth": 1050,
+      "viewport": 1050,
+      "images": [
+        {
+          "source": "../logos/png/nexuspoint-primary-transparent-navy.png",
+          "complete": true,
+          "width": 2400
+        }
+      ],
+      "fonts": "loaded",
+      "screenshot": "qa/templates/email-signature.png"
+    },
+    {
+      "file": "components.html",
+      "mobile": false,
+      "scrollWidth": 1440,
+      "viewport": 1440,
+      "images": [
+        {
+          "source": "../logos/nexuspoint-primary-transparent-white.svg",
+          "complete": true,
+          "width": 1270
+        }
+      ],
+      "fonts": "loaded",
+      "screenshot": "qa/templates/components.png"
+    },
+    {
+      "file": "components.html",
+      "mobile": true,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "images": [
+        {
+          "source": "../logos/nexuspoint-primary-transparent-white.svg",
+          "complete": true,
+          "width": 1270
+        }
+      ],
+      "fonts": "loaded",
+      "screenshot": "qa/templates/components-mobile.png"
+    }
+  ],
+  "errors": []
+}

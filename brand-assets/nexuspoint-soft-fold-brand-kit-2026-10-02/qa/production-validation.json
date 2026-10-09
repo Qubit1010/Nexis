@@ -1,0 +1,164 @@
+{
+  "identity": "Soft Fold",
+  "date": "2026-10-02",
+  "exports": [
+    {
+      "file": "LinkedIn-Banner-Conthrax-Soft-Fold.png",
+      "size": [
+        1584,
+        396
+      ],
+      "dpi": [
+        96.012,
+        96.012
+      ]
+    },
+    {
+      "file": "WhatsApp-Banner-Soft-Fold-Wide.png",
+      "size": [
+        2172,
+        724
+      ],
+      "dpi": [
+        96.012,
+        96.012
+      ]
+    },
+    {
+      "file": "WhatsApp-Banner-Soft-Fold-Square.png",
+      "size": [
+        1080,
+        1080
+      ],
+      "dpi": [
+        96.012,
+        96.012
+      ]
+    },
+    {
+      "file": "Profile-Avatar-Soft-Fold.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "dpi": [
+        96.012,
+        96.012
+      ]
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Front.png",
+      "size": [
+        1125,
+        675
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Back.png",
+      "size": [
+        1125,
+        675
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "file": "portfolio-qr.png",
+      "size": [
+        370,
+        370
+      ],
+      "dpi": [
+        96.012,
+        96.012
+      ]
+    },
+    {
+      "file": "type-specimen.png",
+      "size": [
+        1000,
+        430
+      ],
+      "dpi": [
+        96.012,
+        96.012
+      ]
+    }
+  ],
+  "applicationLettering": "All finished application SVG lettering is outlined; no font binary embedded.",
+  "cardContacts": "Three existing names and phone numbers retained.",
+  "qrDecode": [
+    {
+      "file": "portfolio-qr.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    }
+  ],
+  "cardPDF": [
+    {
+      "mediaBoxPoints": [
+        0.0,
+        0.0,
+        270.0,
+        162.0
+      ],
+      "trimBoxPoints": [
+        9.0,
+        9.0,
+        261.0,
+        153.0
+      ],
+      "bleedBoxPoints": [
+        0.0,
+        0.0,
+        270.0,
+        162.0
+      ]
+    },
+    {
+      "mediaBoxPoints": [
+        0.0,
+        0.0,
+        270.0,
+        162.0
+      ],
+      "trimBoxPoints": [
+        9.0,
+        9.0,
+        261.0,
+        153.0
+      ],
+      "bleedBoxPoints": [
+        0.0,
+        0.0,
+        270.0,
+        162.0
+      ]
+    }
+  ],
+  "cardPDFQRDecode": [
+    {
+      "file": "actual-card-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    }
+  ],
+  "avatar": {
+    "farthestVisiblePixelFromCentre": 442.17,
+    "cropRadius": 512,
+    "result": "all artwork inside circular crop"
+  },
+  "approvedSourceSHA256": "c78c8b67c72ed764516aaa0f8effca8ddef652de26722d1186145cbd0b6739c5",
+  "status": "passed"
+}

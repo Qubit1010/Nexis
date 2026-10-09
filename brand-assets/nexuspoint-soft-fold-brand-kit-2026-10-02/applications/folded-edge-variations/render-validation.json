@@ -1,0 +1,46 @@
+{
+  "exports": [
+    {
+      "file": "3a-soft-edge-back.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    },
+    {
+      "file": "3a-soft-edge-front.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    },
+    {
+      "file": "3b-layered-fold-back.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    },
+    {
+      "file": "3b-layered-fold-front.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    },
+    {
+      "file": "3c-diagonal-wrap-back.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    },
+    {
+      "file": "3c-diagonal-wrap-front.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    }
+  ],
+  "printPDFs": 3,
+  "comparisonImages": 4,
+  "missingImages": 0,
+  "mobileViewport": 390,
+  "mobileScrollWidth": 390,
+  "status": "passed visual, QR and print validation"
+}

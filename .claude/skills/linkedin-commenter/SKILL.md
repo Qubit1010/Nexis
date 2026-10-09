@@ -36,7 +36,7 @@ Reads `docs/linkedin-profiles-posts.txt` (one profile URL per line), fetches rec
 already-seen and hopelessly saturated ones, ranks the rest, and writes
 `docs/linkedin-comments/YYYY-MM-DD.md` with an empty comment slot under each post.
 
-Costs roughly $0.16 per run at 27 profiles (measured). Run it unsandboxed, it needs network.
+Costs roughly $0.16 per run at 27 profiles (measured), so about $0.25 at the current 42 (scaled, not re-measured). Run it unsandboxed, it needs network.
 
 **How the ranking works**, since it decides what he spends attention on: score is attention velocity
 (likes plus weighted shares, per hour) divided by how crowded the comment section already is. That
@@ -160,6 +160,14 @@ Blank lines and `#` comments are ignored. A line may optionally be `url,tier,fol
 wants explicit tiers.
 
 When he asks to add profiles, append them and mention the current count.
+
+**Verify a new URL before adding it.** The actor fails silently on a slug that does not exist
+(`No valid target provided` in the run log, nothing in the results). On 2026-09-29, 18 of 70
+guessed slugs were invalid, so never add a handle from memory. Put candidates in a scratch file and
+run `fetch_posts.py --profiles <file> --dry-run --ignore-seen --max-age-h 168 --top 200
+--max-comments 5000`, then keep only the ones that return posts under the expected author name.
+Prefer mid-size practitioners who write text posts with a real point of view: promo-heavy and
+life-advice accounts (link roundups, cohort ads, quotes) mostly end up as skips.
 
 **Tier balance is worth raising once, not nagging about.** Large creators (100K+) saturate within an
 hour, so the saturation filter will drop most of their posts, which is correct behaviour rather than

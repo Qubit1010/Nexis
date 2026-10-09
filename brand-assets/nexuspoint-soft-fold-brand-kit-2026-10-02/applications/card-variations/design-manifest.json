@@ -1,0 +1,478 @@
+{
+  "brand": "NexusPoint",
+  "identity": "Soft Fold",
+  "date": "2026-10-02",
+  "qrDestination": "https://nexus-point.co/work",
+  "visibleQRLabel": null,
+  "contacts": [
+    [
+      "Aleem Ul Hassan",
+      "Co-founder",
+      "03108820568"
+    ],
+    [
+      "Kaleem Ul Hassan",
+      "Co-founder",
+      "03118340514"
+    ],
+    [
+      "M. Talha Zafar",
+      "Lead Developer",
+      "03184461377"
+    ]
+  ],
+  "card": {
+    "trimInches": [
+      3.5,
+      2
+    ],
+    "bleedInches": 0.125,
+    "mediaInches": [
+      3.75,
+      2.25
+    ],
+    "artboard": [
+      1125,
+      675
+    ],
+    "ppi": 300
+  },
+  "directions": [
+    {
+      "id": "01",
+      "name": "Ribbon Flow",
+      "description": "Soft folded ribbons converge around a quiet black field."
+    },
+    {
+      "id": "02",
+      "name": "Orbital Field",
+      "description": "Circular motion and an asymmetric blue reverse panel."
+    },
+    {
+      "id": "03",
+      "name": "Folded Edge",
+      "description": "Architectural folded planes and a white reverse face."
+    }
+  ],
+  "method": "Native vector layouts, unchanged approved logo paths, actual font outlines, qrcode modules with four-module quiet zone.",
+  "textBounds": [
+    {
+      "text": "SYSTEMS",
+      "bounds": [
+        93.245,
+        401.7,
+        463.883,
+        443.0
+      ],
+      "fontSizePixels": 59
+    },
+    {
+      "text": "YOU OWN.",
+      "bounds": [
+        90.6372311072957,
+        477.7,
+        483.35299999999995,
+        519.0
+      ],
+      "fontSizePixels": 59
+    },
+    {
+      "text": "AI SYSTEMS & AUTOMATION",
+      "bounds": [
+        94.5478515625,
+        567.779296875,
+        454.6947265625002,
+        584.2685546875
+      ],
+      "fontSizePixels": 22
+    },
+    {
+      "text": "Aleem Ul Hassan",
+      "bounds": [
+        394.50555555555553,
+        117.75,
+        769.2,
+        144.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Co-founder",
+      "bounds": [
+        395.787109375,
+        168.1484375,
+        558.736328125,
+        191.3515625
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03108820568",
+      "bounds": [
+        750.60009765625,
+        169.6181640625,
+        942.1728515625,
+        191.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "Kaleem Ul Hassan",
+      "bounds": [
+        396.345,
+        256.75,
+        792.58,
+        283.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Co-founder",
+      "bounds": [
+        395.787109375,
+        307.1484375,
+        558.736328125,
+        330.3515625
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03118340514",
+      "bounds": [
+        750.60009765625,
+        308.6181640625,
+        931.15625,
+        330.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "M. Talha Zafar",
+      "bounds": [
+        396.345,
+        395.085,
+        717.75,
+        422.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Lead Developer",
+      "bounds": [
+        396.63671875,
+        447.173828125,
+        617.330078125,
+        475.123046875
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03184461377",
+      "bounds": [
+        750.60009765625,
+        447.6181640625,
+        934.5830078125,
+        469.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "nexus-point.co",
+      "bounds": [
+        396.240234375,
+        563.5380859375,
+        617.2666015625,
+        593.3271484375
+      ],
+      "fontSizePixels": 31
+    },
+    {
+      "text": "SYSTEMS",
+      "bounds": [
+        503.585,
+        314.1,
+        798.8389999999999,
+        347.0
+      ],
+      "fontSizePixels": 47
+    },
+    {
+      "text": "YOU OWN.",
+      "bounds": [
+        501.5076247803881,
+        380.1,
+        814.3489999999999,
+        413.0
+      ],
+      "fontSizePixels": 47
+    },
+    {
+      "text": "AI SYSTEMS",
+      "bounds": [
+        502.57275390625,
+        473.0419921875,
+        661.5775390625,
+        490.28076171875
+      ],
+      "fontSizePixels": 23
+    },
+    {
+      "text": "& AUTOMATION",
+      "bounds": [
+        503.078125,
+        509.0419921875,
+        707.29013671875,
+        526.25830078125
+      ],
+      "fontSizePixels": 23
+    },
+    {
+      "text": "nexus-point.co",
+      "bounds": [
+        503.734375,
+        572.8359375,
+        674.8515625,
+        595.8984375
+      ],
+      "fontSizePixels": 24
+    },
+    {
+      "text": "Aleem Ul Hassan",
+      "bounds": [
+        82.50555555555556,
+        121.75,
+        457.20000000000005,
+        148.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Co-founder",
+      "bounds": [
+        83.787109375,
+        172.1484375,
+        246.736328125,
+        195.3515625
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03108820568",
+      "bounds": [
+        444.60009765625,
+        173.6181640625,
+        636.1728515625,
+        195.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "Kaleem Ul Hassan",
+      "bounds": [
+        84.345,
+        264.75,
+        480.58000000000004,
+        291.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Co-founder",
+      "bounds": [
+        83.787109375,
+        315.1484375,
+        246.736328125,
+        338.3515625
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03118340514",
+      "bounds": [
+        444.60009765625,
+        316.6181640625,
+        625.15625,
+        338.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "M. Talha Zafar",
+      "bounds": [
+        84.345,
+        407.085,
+        405.75000000000006,
+        434.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Lead Developer",
+      "bounds": [
+        84.63671875,
+        459.173828125,
+        305.330078125,
+        487.123046875
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03184461377",
+      "bounds": [
+        444.60009765625,
+        459.6181640625,
+        628.5830078125,
+        481.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "nexus-point.co",
+      "bounds": [
+        84.240234375,
+        568.5380859375,
+        305.2666015625,
+        598.3271484375
+      ],
+      "fontSizePixels": 31
+    },
+    {
+      "text": "SYSTEMS",
+      "bounds": [
+        93.41,
+        382.6,
+        482.894,
+        426.0
+      ],
+      "fontSizePixels": 62
+    },
+    {
+      "text": "YOU OWN.",
+      "bounds": [
+        90.6696326890226,
+        465.6,
+        503.354,
+        509.0
+      ],
+      "fontSizePixels": 62
+    },
+    {
+      "text": "AI SYSTEMS & AUTOMATION",
+      "bounds": [
+        91.5478515625,
+        576.779296875,
+        447.29472656250005,
+        593.2685546875
+      ],
+      "fontSizePixels": 22
+    },
+    {
+      "text": "Aleem Ul Hassan",
+      "bounds": [
+        403.50555555555553,
+        119.75,
+        778.2,
+        146.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Co-founder",
+      "bounds": [
+        404.787109375,
+        170.1484375,
+        567.736328125,
+        193.3515625
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03108820568",
+      "bounds": [
+        752.60009765625,
+        171.6181640625,
+        944.1728515625,
+        193.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "Kaleem Ul Hassan",
+      "bounds": [
+        405.345,
+        258.75,
+        801.58,
+        285.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Co-founder",
+      "bounds": [
+        404.787109375,
+        309.1484375,
+        567.736328125,
+        332.3515625
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03118340514",
+      "bounds": [
+        752.60009765625,
+        310.6181640625,
+        933.15625,
+        332.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "M. Talha Zafar",
+      "bounds": [
+        405.345,
+        397.085,
+        726.75,
+        424.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Lead Developer",
+      "bounds": [
+        405.63671875,
+        449.173828125,
+        626.330078125,
+        477.123046875
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03184461377",
+      "bounds": [
+        752.60009765625,
+        449.6181640625,
+        936.5830078125,
+        471.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "nexus-point.co",
+      "bounds": [
+        405.240234375,
+        568.5380859375,
+        626.2666015625,
+        598.3271484375
+      ],
+      "fontSizePixels": 31
+    }
+  ],
+  "files": [
+    "01-ribbon-flow-back.svg",
+    "01-ribbon-flow-front.svg",
+    "02-orbital-field-back.svg",
+    "02-orbital-field-front.svg",
+    "03-folded-edge-back.svg",
+    "03-folded-edge-front.svg"
+  ]
+}

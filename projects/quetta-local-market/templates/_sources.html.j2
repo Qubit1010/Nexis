@@ -1,0 +1,3 @@
+{% for s in sources %}
+<p><b class="num">[{{ s.id }}]</b> <span class="label" style="color:#475569">{{ {'P':'Primary','S':'Secondary','N':'Internal'}[s.tier] }}</span> {{ s.text }}</p>
+{% endfor %}

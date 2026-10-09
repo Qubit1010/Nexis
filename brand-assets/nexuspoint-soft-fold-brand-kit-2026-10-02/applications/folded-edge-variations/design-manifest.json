@@ -1,0 +1,220 @@
+{
+  "brand": "NexusPoint",
+  "identity": "Soft Fold",
+  "parentConcept": "03 Folded Edge",
+  "date": "2026-10-02",
+  "qrDestination": "https://nexus-point.co/work",
+  "visibleQRLabel": null,
+  "contacts": [
+    [
+      "Aleem Ul Hassan",
+      "Co-founder",
+      "03108820568"
+    ],
+    [
+      "Kaleem Ul Hassan",
+      "Co-founder",
+      "03118340514"
+    ],
+    [
+      "M. Talha Zafar",
+      "Lead Developer",
+      "03184461377"
+    ]
+  ],
+  "card": {
+    "trimInches": [
+      3.5,
+      2
+    ],
+    "bleedInches": 0.125,
+    "mediaInches": [
+      3.75,
+      2.25
+    ],
+    "artboard": [
+      1125,
+      675
+    ],
+    "ppi": 300
+  },
+  "directions": [
+    {
+      "id": "3A",
+      "slug": "soft-edge",
+      "name": "Soft Edge",
+      "description": "A gently bowed blue edge and curved seam echo the softness of the logo.",
+      "approved": false
+    },
+    {
+      "id": "3B",
+      "slug": "layered-fold",
+      "name": "Layered Fold",
+      "description": "Overlapping blue facets give the edge more structure and depth.",
+      "approved": false
+    },
+    {
+      "id": "3C",
+      "slug": "diagonal-wrap",
+      "name": "Diagonal Wrap",
+      "description": "A sweeping diagonal edge links the dark front and bright reverse.",
+      "approved": true
+    }
+  ],
+  "method": "Native SVG background refinements. All source logo, QR and lettering groups unchanged.",
+  "textBounds": [
+    {
+      "text": "SYSTEMS",
+      "bounds": [
+        93.41,
+        382.6,
+        482.894,
+        426.0
+      ],
+      "fontSizePixels": 62
+    },
+    {
+      "text": "YOU OWN.",
+      "bounds": [
+        90.6696326890226,
+        465.6,
+        503.354,
+        509.0
+      ],
+      "fontSizePixels": 62
+    },
+    {
+      "text": "AI SYSTEMS & AUTOMATION",
+      "bounds": [
+        91.5478515625,
+        576.779296875,
+        447.29472656250005,
+        593.2685546875
+      ],
+      "fontSizePixels": 22
+    },
+    {
+      "text": "Aleem Ul Hassan",
+      "bounds": [
+        403.50555555555553,
+        119.75,
+        778.2,
+        146.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Co-founder",
+      "bounds": [
+        404.787109375,
+        170.1484375,
+        567.736328125,
+        193.3515625
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03108820568",
+      "bounds": [
+        752.60009765625,
+        171.6181640625,
+        944.1728515625,
+        193.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "Kaleem Ul Hassan",
+      "bounds": [
+        405.345,
+        258.75,
+        801.58,
+        285.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Co-founder",
+      "bounds": [
+        404.787109375,
+        309.1484375,
+        567.736328125,
+        332.3515625
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03118340514",
+      "bounds": [
+        752.60009765625,
+        310.6181640625,
+        933.15625,
+        332.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "M. Talha Zafar",
+      "bounds": [
+        405.345,
+        397.085,
+        726.75,
+        424.0
+      ],
+      "fontSizePixels": 35
+    },
+    {
+      "text": "Lead Developer",
+      "bounds": [
+        405.63671875,
+        449.173828125,
+        626.330078125,
+        477.123046875
+      ],
+      "fontSizePixels": 30
+    },
+    {
+      "text": "03184461377",
+      "bounds": [
+        752.60009765625,
+        449.6181640625,
+        936.5830078125,
+        471.283203125
+      ],
+      "fontSizePixels": 29
+    },
+    {
+      "text": "nexus-point.co",
+      "bounds": [
+        405.240234375,
+        568.5380859375,
+        626.2666015625,
+        598.3271484375
+      ],
+      "fontSizePixels": 31
+    }
+  ],
+  "serviceDivider": {
+    "y": 550,
+    "strokePixels": 2,
+    "captionTopPixels": 576.779296875,
+    "gapToInkPixels": 25.779296875,
+    "gapMillimetres": 2.1826471354166666
+  },
+  "files": [
+    "3a-soft-edge-front.svg",
+    "3a-soft-edge-back.svg",
+    "3b-layered-fold-front.svg",
+    "3b-layered-fold-back.svg",
+    "3c-diagonal-wrap-front.svg",
+    "3c-diagonal-wrap-back.svg"
+  ],
+  "sourceFrontSHA256": "2f2c27646f5a386c5abc881eba809fa2d8f2deb0f3886bba05497db40cf921ec",
+  "selection": {
+    "status": "locked",
+    "id": "3C",
+    "name": "Diagonal Wrap",
+    "approvedBy": "Aleem Ul Hassan",
+    "approvedDate": "2026-10-02"
+  }
+}

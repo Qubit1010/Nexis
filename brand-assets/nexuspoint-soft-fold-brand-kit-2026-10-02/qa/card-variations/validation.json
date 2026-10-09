@@ -1,0 +1,177 @@
+{
+  "status": "passed",
+  "date": "2026-10-02",
+  "identity": "Soft Fold",
+  "qrDestination": "https://nexus-point.co/work",
+  "svgAndPNG": [
+    {
+      "file": "01-ribbon-flow-back.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "01-ribbon-flow-front.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "02-orbital-field-back.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "02-orbital-field-front.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "03-folded-edge-back.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    },
+    {
+      "file": "03-folded-edge-front.svg",
+      "nativeVector": true,
+      "outlinedType": true,
+      "exactBluePoint": true,
+      "pngSize": [
+        1125,
+        675
+      ],
+      "ppi": 300
+    }
+  ],
+  "printPDFs": [
+    {
+      "file": "01-ribbon-flow-print.pdf",
+      "pages": 2,
+      "mediaBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ],
+      "trimBoxPoints": [
+        9,
+        9,
+        261,
+        153
+      ],
+      "bleedBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ]
+    },
+    {
+      "file": "02-orbital-field-print.pdf",
+      "pages": 2,
+      "mediaBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ],
+      "trimBoxPoints": [
+        9,
+        9,
+        261,
+        153
+      ],
+      "bleedBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ]
+    },
+    {
+      "file": "03-folded-edge-print.pdf",
+      "pages": 2,
+      "mediaBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ],
+      "trimBoxPoints": [
+        9,
+        9,
+        261,
+        153
+      ],
+      "bleedBoxPoints": [
+        0,
+        0,
+        270,
+        162
+      ]
+    }
+  ],
+  "qrDecodedFromPNGAndPDF": [
+    {
+      "file": "applications/card-variations/01-ribbon-flow-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "applications/card-variations/02-orbital-field-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "applications/card-variations/03-folded-edge-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "qa/card-variations/01-ribbon-flow-print-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "qa/card-variations/02-orbital-field-print-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    },
+    {
+      "file": "qa/card-variations/03-folded-edge-print-back.png",
+      "destination": "https://nexus-point.co/work",
+      "detected": true
+    }
+  ],
+  "textSafeAreaChecks": 41,
+  "visualReview": "passed",
+  "visualReviewNotes": "Paired proofs and native print-PDF page renders inspected. Footer gap is clear; contacts and QR remain readable."
+}

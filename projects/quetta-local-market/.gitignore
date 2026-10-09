@@ -1,0 +1,11 @@
+# Nexis is a PUBLIC repo. Prospect data, pricing, research and rendered
+# collateral stay local (plus Drive). Only README, templates and scripts are tracked.
+data/
+research/
+deliverables/
+build/
+*.xlsx
+*.csv
+*.pdf
+*.pptx
+*.docx

@@ -1,5 +1,8 @@
 Here are the branding guidelines extracted from the NexusPoint banner. 
 
+**Superseded for new branding, 2 October 2026:** Use [the approved Soft Fold kit](nexuspoint-soft-fold-brand-kit-2026-10-02/README.md), portfolio blue #02A1E1, and Conthrax display / Inter body typography. The banner-derived notes below are preserved as historical reference.
+
+
 ### **1. Logo & Iconography**
 * **Primary Logo:** A stylized, tech-forward design where the initial "N" serves as a staggered anchor for both "Nexus" and "Point". 
 * **Icon Details:** The letter "N" incorporates circuit board or data node lines extending from the top-left and bottom-right corners, reflecting a focus on technology, systems, and connectivity.

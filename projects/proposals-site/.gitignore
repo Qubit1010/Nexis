@@ -1,0 +1,5 @@
+# Generated deploy dir. Holds client proposal content: never commit it.
+*
+!.gitignore
+!README.md
+.vercel

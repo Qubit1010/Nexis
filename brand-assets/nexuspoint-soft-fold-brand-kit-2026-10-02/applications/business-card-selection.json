@@ -1,0 +1,45 @@
+{
+  "status": "locked",
+  "approvedBy": "Aleem Ul Hassan",
+  "approvedDate": "2026-10-02",
+  "directionId": "3C",
+  "directionName": "Diagonal Wrap",
+  "identity": "Soft Fold",
+  "sourceFolder": "folded-edge-variations",
+  "sourcePrefix": "3c-diagonal-wrap",
+  "qrDestination": "https://nexus-point.co/work",
+  "serviceDividerGapPixels": 25.779296875,
+  "nativeLettering": "Conthrax display and Inter body outlines",
+  "masters": [
+    {
+      "file": "Business-Card-Soft-Fold-Front.svg",
+      "source": "folded-edge-variations/3c-diagonal-wrap-front.svg",
+      "sha256": "cda2652a97130ea52a6c18ab8ea97417433c7629f727f4bd055c127d449d7ea0"
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Back.svg",
+      "source": "folded-edge-variations/3c-diagonal-wrap-back.svg",
+      "sha256": "55b7d642765d5a6f680209fb3bf1465b121b6888bd5913251faf3b37e34c3cea"
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Front.png",
+      "source": "folded-edge-variations/3c-diagonal-wrap-front.png",
+      "sha256": "03fc48c31bf4c25e09c073460253eed8696b9918c8936b6152676dda47d47f00"
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Back.png",
+      "source": "folded-edge-variations/3c-diagonal-wrap-back.png",
+      "sha256": "bb57a8c0119b09f5f6bff38bef81a2a345bd9ddcb117dae44524f417bd858c66"
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Print.pdf",
+      "source": "folded-edge-variations/3c-diagonal-wrap-print.pdf",
+      "sha256": "cbbdb1038ccc8411e52ae88a2516802403b7ac244c61db7a0544dc8889013359"
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Final-Proof.png",
+      "source": "folded-edge-variations/3c-diagonal-wrap-proof.png",
+      "sha256": "2d49ca3f803310031e2fdae48fb644f511a856324d63a49012e18f4e7c42145c"
+    }
+  ]
+}

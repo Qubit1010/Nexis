@@ -108,7 +108,7 @@ def main():
     stale = [f for f in mirror if top(f) in managed and f not in expected and not f.endswith(KEEP_SUFFIXES)]
     orphans = sorted({top(f) for f in mirror if top(f) not in managed})
     outdated = [p for p, body in expected.items()
-                if not (REPO / p).is_file() or (REPO / p).read_bytes().decode("utf-8") != body]
+                if not (REPO / p).is_file() or (REPO / p).read_text(encoding="utf-8") != body]
 
     print(f"canonical skills: {len(expected)} | pointers to write: {len(outdated)} | "
           f"stale mirror files: {len(stale)} | orphan folders: {len(orphans)} | linked, left alone: {len(linked)}")

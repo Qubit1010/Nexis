@@ -96,6 +96,22 @@ def already_logged(sheet_id: str, tab: str, run_date: str) -> bool:
     return any(row and row[0] == run_date for row in values[1:])
 
 
+def extend_table(sheet_id: str, tab: str) -> None:
+    """append_rows writes just below a Sheets Table without growing it, so the new rows lose the
+    table's header styling and Status dropdown. Stretch the table to cover every filled row."""
+    meta = sheets.get_metadata(sheet_id)
+    total = len(sheets.read_values(sheet_id, tab))
+    for sh in meta.get("sheets", []):
+        if sh["properties"]["title"] != tab:
+            continue
+        for t in sh.get("tables", []):
+            rng = t["range"]
+            if rng.get("endRowIndex", 0) < total:
+                rng["endRowIndex"] = total
+                sheets.batch_update(sheet_id, [{"updateTable": {
+                    "table": {"tableId": t["tableId"], "range": rng}, "fields": "range"}}])
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -124,6 +140,8 @@ def main() -> None:
                r["score"], r["url"], r["preview"], r["comment"], r["status"], ""] for r in rows]
     if not sheets.append_rows(args.sheet, TAB, values):
         sys.exit("Append failed, see error above.")
+
+    extend_table(args.sheet, TAB)
 
     drafted = sum(1 for r in rows if r["status"] == "drafted")
     skipped = sum(1 for r in rows if r["status"] == "skipped")

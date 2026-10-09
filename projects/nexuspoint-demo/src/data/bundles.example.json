@@ -1,0 +1,145 @@
+{
+  "terms": {
+    "payment": "Configure privately before prospect use.",
+    "methods": "Configure privately before prospect use.",
+    "commitment": "Configure privately before prospect use.",
+    "passthrough": "Configure privately before prospect use.",
+    "guarantee": "Configure privately before prospect use.",
+    "ownership": "Configure privately before prospect use.",
+    "pilot": "Configure privately before prospect use."
+  },
+  "sectors": {
+    "healthcare": [
+      {
+        "name": "Starter",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": false,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      },
+      {
+        "name": "Growth",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": true,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      },
+      {
+        "name": "Complete",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": false,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      }
+    ],
+    "food": [
+      {
+        "name": "Starter",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": false,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      },
+      {
+        "name": "Growth",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": true,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      },
+      {
+        "name": "Complete",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": false,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "name": "Starter",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": false,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      },
+      {
+        "name": "Growth",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": true,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      },
+      {
+        "name": "Complete",
+        "tag_en": "Example plan",
+        "tag_ur": "Example plan",
+        "setup": 0,
+        "monthly": 0,
+        "rec": false,
+        "items_en": [
+          "Configure your services privately."
+        ],
+        "items_ur": [
+          "Configure your services privately."
+        ]
+      }
+    ]
+  }
+}

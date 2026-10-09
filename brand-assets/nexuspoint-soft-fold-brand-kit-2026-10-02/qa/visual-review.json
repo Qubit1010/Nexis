@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "date": "2026-10-02",
+  "identity": "Soft Fold",
+  "review": "All 12 actual PDF guide pages inspected in a contact sheet. Full cover, spacing, palette, Conthrax typography, applications, contrast and handoff pages inspected individually. Final LinkedIn/WhatsApp exports, avatar, card proof and both actual print-PDF page renders reviewed. No clipping, missing artwork or copy collision found. Small-size favicon display inspected in the spacing page; fold detail reduces at 16 px as documented.",
+  "reviewedFiles": [
+    {
+      "path": "NexusPoint-Soft-Fold-Brand-Guide.pdf",
+      "sha256": "0994afee6c9ed278a72d2044bb2577215bf85aadd4dc8d20ea9f7f49a758add4"
+    },
+    {
+      "path": "previews/soft-fold-primary.png",
+      "sha256": "64e1a751cdd6d73c391a3e3385d891cb737673cb77a9b06341758cc4ec23a03e"
+    },
+    {
+      "path": "applications/LinkedIn-Banner-Conthrax-Soft-Fold.png",
+      "sha256": "d50ef44fc12ccf1b31082b3a59af07a58efea01d071cb1108f2433872b6425fd"
+    },
+    {
+      "path": "applications/WhatsApp-Banner-Soft-Fold-Wide.png",
+      "sha256": "83d5b29f2c7bbb118cb9fc395b44018dd3dad2fc92a5ae35f2752e6350f47e76"
+    },
+    {
+      "path": "applications/WhatsApp-Banner-Soft-Fold-Square.png",
+      "sha256": "8e926d981980b0e7af5433906bb5376b214e877ff57a2ff85249a8946f5906e0"
+    },
+    {
+      "path": "applications/Profile-Avatar-Soft-Fold.png",
+      "sha256": "7249994ae2245cfbf8edcdbfd8096d193194d01be51cd4679561ffecfd6df645"
+    },
+    {
+      "path": "applications/type-specimen.png",
+      "sha256": "e2c0a824728b5ab6b3ef57dba209baf4ae4b12412bd3fff8164df828c54c5938"
+    },
+    {
+      "path": "applications/card-variations/01-ribbon-flow-proof.png",
+      "sha256": "d42584e934eaa670bd5d7b56fb5dca9161f4642890715eb1930e93956b3b5812"
+    },
+    {
+      "path": "applications/card-variations/02-orbital-field-proof.png",
+      "sha256": "33e0bd8385c35cbc9a56ed8d6b4e2976a9ac3cce0cc3612ae4965a3e1148f2b5"
+    },
+    {
+      "path": "applications/card-variations/01-ribbon-flow-print.pdf",
+      "sha256": "79091e07006d9a7dc65ced9bd3fe2f181e5f4d810d4c688906faebf6ccb783aa"
+    },
+    {
+      "path": "applications/card-variations/02-orbital-field-print.pdf",
+      "sha256": "b685b7d204c21123b76bc251815a4cc477aa6f3926b556e538f9c0a09ba08c67"
+    },
+    {
+      "path": "applications/card-variations/03-folded-edge-proof-spacing-fixed.png",
+      "sha256": "9cda3fec2771618dabd5abc33e619b25660b87c98fd2083ecb8567f87493d69d"
+    },
+    {
+      "path": "applications/card-variations/03-folded-edge-print.pdf",
+      "sha256": "64915c8f15de7c88ef2cae052b1ed10cc4718e6f856e5d59a7b8fc0b10cb7fca"
+    },
+    {
+      "path": "applications/folded-edge-variations/3a-soft-edge-proof.png",
+      "sha256": "5029e9379ea62c5cc658b45e65b2dec3eca94d1802dde5b64d9e21c77166dc7a"
+    },
+    {
+      "path": "applications/folded-edge-variations/3b-layered-fold-proof.png",
+      "sha256": "c748d49cff4fbf9884893687a9d593c1ed08f08de31e58d71316ad3a0cba6809"
+    },
+    {
+      "path": "applications/folded-edge-variations/3c-diagonal-wrap-proof.png",
+      "sha256": "2d49ca3f803310031e2fdae48fb644f511a856324d63a49012e18f4e7c42145c"
+    },
+    {
+      "path": "applications/folded-edge-variations/3a-soft-edge-print.pdf",
+      "sha256": "e49ce873bedb0a3516a09c22769f9b4c754e58b2fc1912db0a5c06076f651d05"
+    },
+    {
+      "path": "applications/folded-edge-variations/3b-layered-fold-print.pdf",
+      "sha256": "710291a1b6798512699c1cef69dc27b007b6405c88ec5a6cb0caf31feb696764"
+    },
+    {
+      "path": "applications/folded-edge-variations/3c-diagonal-wrap-print.pdf",
+      "sha256": "013e1827ce6b7aedce61f2658aa4dae931f668f063520bc1e6eddb62a5f224f4"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Front.png",
+      "sha256": "03fc48c31bf4c25e09c073460253eed8696b9918c8936b6152676dda47d47f00"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Back.png",
+      "sha256": "bb57a8c0119b09f5f6bff38bef81a2a345bd9ddcb117dae44524f417bd858c66"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Print.pdf",
+      "sha256": "cbbdb1038ccc8411e52ae88a2516802403b7ac244c61db7a0544dc8889013359"
+    },
+    {
+      "path": "applications/Business-Card-Soft-Fold-Final-Proof.png",
+      "sha256": "2d49ca3f803310031e2fdae48fb644f511a856324d63a49012e18f4e7c42145c"
+    }
+  ],
+  "cardRevision": "Original corrected card proof, three revised front/back pairs and all six actual print-PDF page renders inspected. Blue points remain distinct, service labels readable, no visible Portfolio QR caption. Existing contact copy preserved. QR destination independently decoded from PNG and PDF.",
+  "foldedEdgeRevision": "Original Folded Edge plus three refinements inspected in paired PNG proofs and eight actual print-PDF page renders. Divider-to-caption gap is 25.78 artwork pixels. Native source logo, contact lettering and QR groups retained unchanged. Final variant selection pending.",
+  "approvedBusinessCard": "3C Diagonal Wrap locked by Aleem. Master SVGs and PNGs match the reviewed approved source exactly. Two-page master PDF retains the approved layout; QR and trim/bleed revalidated after promotion."
+}

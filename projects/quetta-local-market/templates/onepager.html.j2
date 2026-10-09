@@ -1,0 +1,149 @@
+{% set o = s.op[lang] %}{% set t = kit.i18n[lang] %}
+{% set title = s.name ~ " one-pager (" ~ lang ~ ")" %}
+{% include "_head.html.j2" %}
+<style>
+  .hero { padding: 0 16mm 5mm; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 62mm; gap: 8mm; align-items: center; margin-top: 4mm; }
+  .hero h1 { font-size: 22pt; line-height: 1.06; }
+  [lang="ur"] .hero h1 { font-size: 18.5pt; line-height: 1.65; }
+  .hero .sub { font-size: 9pt; margin-top: 3mm; }
+  [lang="ur"] .hero .sub { font-size: 8.6pt; line-height: 1.9; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1.6mm; margin-top: 3.5mm; }
+  [lang="ur"] .chip { font: 400 7.2pt/1.7 var(--urdu); letter-spacing: 0; text-transform: none; padding: .6mm 2.4mm; }
+  .aud { color: var(--muted); font-size: 8.4pt; }
+  [lang="ur"] .aud { font-size: 9pt; }
+
+  .phone { background: var(--slate); border: 1px solid var(--rule-dark); border-radius: 16px; overflow: hidden; }
+  .phone .pbar { display: flex; align-items: center; gap: 2.5mm; padding: 2.4mm 3.2mm; background: var(--deep); border-bottom: 1px solid var(--rule-dark); }
+  .phone .av { width: 7mm; height: 7mm; border-radius: 50%; background: var(--brand-deep); display: grid; place-items: center; font: 700 8pt/1 var(--sans); color: #fff; }
+  .phone .nm { font: 600 8.4pt/1.2 var(--sans); color: var(--hi); }
+  .phone .st { font: 500 6.5pt/1.2 var(--mono); color: var(--accent); letter-spacing: .06em; direction: ltr; }
+  [lang="ur"] .phone .nm { font: 600 8.4pt/1.8 var(--urdu); }
+  [lang="ur"] .phone .st { font: 400 6.8pt/1.6 var(--urdu); direction: rtl; letter-spacing: 0; }
+  [lang="ur"] .phone .cap { font: 400 7pt/1.6 var(--urdu); letter-spacing: 0; text-transform: none; }
+  .phone .msgs { padding: 2.6mm; display: flex; flex-direction: column; gap: 1.6mm; }
+  .bub { max-width: 88%; padding: 1.6mm 2.4mm 1.1mm; border-radius: 9px; font-size: 7.1pt; line-height: 1.35; }
+  [lang="ur"] .bub { font-size: 7pt; line-height: 1.85; }
+  .bub .tm { display: block; text-align: right; font: 500 5.6pt/1 var(--mono); opacity: .7; margin-top: .8mm; direction: ltr; }
+  .bub.them { background: #1E293B; color: var(--hi); align-self: flex-start; border-bottom-left-radius: 2px; }
+  .bub.us { background: var(--brand-deep); color: #fff; align-self: flex-end; border-bottom-right-radius: 2px; }
+  [lang="ur"] .bub.them { border-bottom-left-radius: 9px; border-bottom-right-radius: 2px; }
+  [lang="ur"] .bub.us { border-bottom-right-radius: 9px; border-bottom-left-radius: 2px; }
+  .phone .note { margin: 0 3mm 3mm; padding: 1.8mm 2.4mm; border-radius: 8px; background: rgba(74,222,128,.1); color: #86EFAC; font: 500 6.4pt/1.4 var(--mono); text-align: center; }
+  [lang="ur"] .phone .note { font: 400 7pt/1.9 var(--urdu); }
+  .phone .cap { text-align: center; font: 500 6pt/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-bottom: 2.6mm; }
+
+  .body { gap: 3.4mm; padding-top: 5mm; }
+  .pillars { --n: 3; }
+  .pillar h3 { font-size: 10.5pt; }
+  [lang="ur"] .pillar h3 { font-size: 10.5pt; }
+  .pillar p { font-size: 8.3pt; }
+  [lang="ur"] .pillar p { font-size: 8.2pt; line-height: 1.85; }
+  .pillars { padding: 4mm 2mm; }
+  .setup .ticks { display: grid; grid-template-columns: 1fr 1fr; column-gap: 6mm; }
+  .setup { padding: 4mm 5mm; }
+  .setup h3 { font-size: 10.5pt; margin-bottom: .5mm; }
+  .setup .ticks li { font-size: 8.5pt; margin-top: 1.3mm; }
+  [lang="ur"] .setup .ticks li { font-size: 8.4pt; line-height: 1.85; margin-top: .4mm; }
+  .steps { counter-reset: st; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+  .step { counter-increment: st; display: grid; grid-template-columns: 7mm 1fr; gap: 1.5mm; }
+  .step::before { content: counter(st); width: 6mm; height: 6mm; border-radius: 50%; background: var(--ground); color: var(--accent); display: grid; place-items: center; font: 700 8pt/1 var(--mono); }
+  .step b { display: block; font-size: 9.4pt; }
+  .step span { font-size: 8pt; color: var(--ink-mid); line-height: 1.4; display: block; }
+  [lang="ur"] .step span { line-height: 1.9; }
+  .proofrow { display: grid; grid-template-columns: 1fr 1fr 1fr 2.3fr; gap: 3mm; align-items: center; }
+  .qcell { margin-left: 2mm; }
+  [lang="ur"] .qcell { margin-left: 0; margin-right: 2mm; }
+  .proofrow .stat { padding: 2.8mm 3.4mm; }
+  .proofrow .stat .v { font-size: 15pt; }
+  .proofrow .stat .l { font-size: 7.2pt; margin-top: 1.2mm; }
+  [lang="ur"] .proofrow .stat .l { font-size: 7.6pt; line-height: 1.8; }
+  .quote p { font-size: 8.4pt; line-height: 1.4; }
+  .quote .who { font-size: 6.2pt; }
+  [lang="ur"] .quote p { font-size: 8.2pt; line-height: 1.8; }
+  [lang="ur"] .quote .who { font: 400 7pt/1.6 var(--urdu); letter-spacing: 0; text-transform: none; }
+  .cta { padding: 3.6mm 5mm; }
+  .cta .qr { width: 21mm; height: 21mm; }
+  .cta p { font-size: 8.4pt; }
+  .cta { margin-top: auto; }
+  [lang="ur"] .cta h3 { font-size: 12pt; line-height: 1.8; }
+  [lang="ur"] .cta p { line-height: 1.9; }
+  .cta .kick { color: var(--accent); margin-bottom: 1mm; }
+  .scan { font: 500 6pt/1.2 var(--mono); color: var(--muted); text-align: center; margin-top: 1.4mm; letter-spacing: .06em; text-transform: uppercase; }
+  [lang="ur"] .scan { font: 400 7pt/1.6 var(--urdu); text-transform: none; }
+  .foot { background: var(--paper); }
+  /* Urdu density: Nastaliq needs ~1.7 line-height minimum; trim size, not leading */
+  [lang="ur"] .hero h1 { font-size: 17pt; line-height: 1.6; }
+  [lang="ur"] .hero .sub { font-size: 8.2pt; line-height: 1.8; }
+  [lang="ur"] .bub { font-size: 6.8pt; line-height: 1.7; }
+  [lang="ur"] .pillar h3 { font-size: 10pt; line-height: 1.7; }
+  [lang="ur"] .pillar p { font-size: 7.9pt; line-height: 1.75; }
+  [lang="ur"] .setup h3 { line-height: 1.7; }
+  [lang="ur"] .setup .ticks li { font-size: 8pt; line-height: 1.75; margin-top: 0; }
+  [lang="ur"] .step b { line-height: 1.7; font-size: 9pt; }
+  [lang="ur"] .step span { font-size: 7.7pt; line-height: 1.75; }
+  [lang="ur"] .proofrow .stat .l { line-height: 1.7; }
+  [lang="ur"] .quote p { line-height: 1.7; }
+  [lang="ur"] .cta h3 { font-size: 11pt; line-height: 1.6; }
+  [lang="ur"] .cta p { font-size: 8pt; line-height: 1.75; }
+  [lang="ur"] .label.u { line-height: 1.6; }
+  [lang="ur"] .pillars { padding: 3.4mm 2mm; }
+  [lang="ur"] .body { gap: 3mm; }
+  .body { padding-bottom: 1mm; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="dark glow grid-bg">
+    <div class="topbar">
+      <img class="logo-w" src="{{ a.logo_white }}" alt="NexusPoint">
+      <span class="aud">{{ o.audience }}</span>
+    </div>
+    <div class="hero">
+      <div>
+        <h1>{{ o.headline }}</h1>
+        <p class="sub">{{ o.sub }}</p>
+        <div class="chips">{% for c in t.chips %}<span class="chip">{{ c }}</span>{% endfor %}</div>
+      </div>
+      <div>
+        <div class="phone">
+          <div class="pbar"><div class="av">+</div><div><div class="nm">{{ 'Your Clinic' if lang == 'en' else 'آپ کا کلینک' }}</div><div class="st">{{ 'AI receptionist &middot; online' if lang == 'en' else 'اے آئی ریسیپشنسٹ · آن لائن' }}</div></div></div>
+          <div class="msgs">
+            {% for m in o.chat %}<div class="bub {{ m.from }}">{{ m.text }}<span class="tm">{{ m.time }}</span></div>{% endfor %}
+          </div>
+          <div class="note">{{ o.chat_note }}</div>
+          <div class="cap">{{ 'Example conversation' if lang == 'en' else 'مثال کے طور پر گفتگو' }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="pillars">
+      {% for p in o.pillars %}<div class="pillar"><div class="label">0{{ loop.index }}</div><h3>{{ p.t }}</h3><p>{{ p.d }}</p></div>{% endfor %}
+    </div>
+
+    <div class="card setup"><h3>{{ t.setup_title }}</h3><ul class="ticks">{% for b in o.bundle %}<li>{{ b }}</li>{% endfor %}</ul></div>
+
+    <div><div class="sec-label label u">{{ t.how_title }}</div>
+    <div class="steps">{% for st in t.steps %}<div class="step"><div><b>{{ st.t }}</b><span>{{ st.d }}</span></div></div>{% endfor %}</div></div>
+
+    <div>
+      <div class="sec-label label u">{{ t.proof_title }}</div>
+      <div class="proofrow">{% for p in t.proof %}<div class="stat"><div class="v num">{{ p.v }}</div><div class="l">{{ p.l }}</div></div>{% endfor %}
+        <div class="quote qcell"><p>&ldquo;{{ t.quote }}&rdquo;</p><div class="who">{{ t.quote_who }}</div></div></div>
+    </div>
+
+    <div class="cta">
+      <div style="flex:1">
+        <div class="label kick u">{{ t.cta_kicker }}</div>
+        <h3>{{ o.cta_title }}</h3>
+        <p>{{ o.cta_text }}</p>
+      </div>
+      <div class="contact ltr"><b>{{ kit.meta.founder }}</b><br>{{ kit.meta.whatsapp }}<br>{{ kit.meta.email }}<br>{{ kit.meta.website }}</div>
+      <div><div class="qr">{{ qr_whatsapp }}</div><div class="scan">{{ t.scan }}</div></div>
+    </div>
+  </div>
+  <div class="foot"><span class="ltr">NexusPoint &middot; {{ kit.meta.website }}</span><span class="ltr">{{ kit.meta.tagline }}</span></div>
+</div>
+</body>
+</html>

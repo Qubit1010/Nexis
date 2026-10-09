@@ -19,6 +19,19 @@ Turns the raw work of a session into organized memory: a clean summary, logged d
 
 ## Step 1 — Gather What Changed
 
+### Resolve the checkout and private knowledge first
+
+Run `git worktree list --porcelain` and `git rev-parse --git-common-dir` before
+declaring the session unchanged. Codex may be in an isolated worktree while the
+main checkout holds the pending work and gitignored knowledge. If `context/`,
+`decisions/`, or `references/` is missing here, inspect the main checkout instead
+of treating those folders as empty. Read `context/me.md`, `context/work.md`, and
+`context/team.md` from that checkout. State which checkout the closeout covers.
+
+Inspect both checkouts when necessary, and distinguish this chat's changes from
+earlier pending work. Do not overwrite or commit another chat's work merely
+because it appears in the main checkout.
+
 Before summarizing, ground yourself in actual changes made. Run the following:
 
 ```bash
@@ -27,6 +40,19 @@ git diff --stat HEAD
 ```
 
 This tells you what files were created or modified — use it as a concrete anchor for the summary. Don't rely on memory alone; the diff doesn't lie.
+
+Status and statistics are only the inventory. Read the staged and unstaged diffs
+of meaningful changes, plus the README, release records, validation reports or
+source of important untracked projects. Check asset moves against their archived
+originals. Compare the findings with the decision log to identify unlogged work;
+do not summarize only the decisions that were already recorded.
+
+Use the resolved knowledge checkout for the private-folder scan and sync checks.
+`brain-sync` derives `NEXIS` from its script path and `gdrive-sync` derives
+`REPO_ROOT` from its script path, so running the isolated worktree's scripts without
+resolving their inputs can report an empty log as current or skip private files.
+Verify the configured backup folders against the script before claiming a full
+Drive sync. Respect linked skills when checking the pointer mirror.
 
 Git cannot see the gitignored knowledge folders, and unclosed work has hidden there more than once. Scan them for anything newer than the last commit:
 

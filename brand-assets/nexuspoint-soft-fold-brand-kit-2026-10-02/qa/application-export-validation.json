@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-02",
+  "exports": [
+    {
+      "file": "Business-Card-Soft-Fold-Back.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    },
+    {
+      "file": "Business-Card-Soft-Fold-Front.png",
+      "width": 1125,
+      "height": 675,
+      "density": 300
+    },
+    {
+      "file": "LinkedIn-Banner-Conthrax-Soft-Fold.png",
+      "width": 1584,
+      "height": 396,
+      "density": 96
+    },
+    {
+      "file": "portfolio-qr.png",
+      "width": 370,
+      "height": 370,
+      "density": 96
+    },
+    {
+      "file": "Profile-Avatar-Soft-Fold.png",
+      "width": 1024,
+      "height": 1024,
+      "density": 96
+    },
+    {
+      "file": "type-specimen.png",
+      "width": 1000,
+      "height": 430,
+      "density": 96
+    },
+    {
+      "file": "WhatsApp-Banner-Soft-Fold-Square.png",
+      "width": 1080,
+      "height": 1080,
+      "density": 96
+    },
+    {
+      "file": "WhatsApp-Banner-Soft-Fold-Wide.png",
+      "width": 2172,
+      "height": 724,
+      "density": 96
+    }
+  ],
+  "cardPDF": "Business-Card-Soft-Fold-Print.pdf",
+  "status": "dimensions, font outlines, QR destination and card trim/bleed validated"
+}

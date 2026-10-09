@@ -255,3 +255,12 @@ agent/skills/website-to-video/
 # Regenerable, and the page cache holds whole client sites - this repo is public.
 .claude/skills/seo-onpage/.cache/
 .claude/skills/seo-onpage/tmp-*.json
+
+# Private drafts and local generated/session output
+/drafts/
+/output/
+/tmp/
+/.tmp/
+/.astro/
+/.codex-staging/
+/.claude/launch.json

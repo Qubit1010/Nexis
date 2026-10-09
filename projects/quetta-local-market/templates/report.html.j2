@@ -1,0 +1,304 @@
+{% set title = "Quetta Market Intelligence Report" %}
+{% include "_head.html.j2" %}
+<style>
+  @page { size: A4; margin: 16mm 0 18mm; }
+  body { background: #fff; }
+  .report { padding: 0 16mm; }
+  .kicker { color: var(--brand-deep); margin-bottom: 2mm; }
+  .findings { counter-reset: f; margin: 2mm 0 4mm; }
+  .finding { counter-increment: f; display: grid; grid-template-columns: 11mm 1fr; gap: 2mm; padding: 3mm 0; border-bottom: 1px solid var(--rule); break-inside: avoid; }
+  .finding::before { content: counter(f, decimal-leading-zero); font: 600 9pt/1.4 var(--mono); color: var(--brand-deep); }
+  .finding h4 { margin: 0 0 1mm; font-size: 10.5pt; color: var(--ink); }
+  .finding p { margin: 0; font-size: 9.3pt; }
+  .score-row td { vertical-align: middle; }
+  .wave { display: inline-block; font: 600 6.5pt/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 1.2mm 2mm; border-radius: 99px; }
+  .wave.beachhead { background: var(--ground); color: var(--accent); }
+  .wave.second { background: var(--tint); color: var(--brand-deep); }
+  .wave.watch { background: #F1F5F9; color: var(--ink-muted); }
+  .wave.skip { background: #FEF3C7; color: var(--warn); }
+  .mini { font-size: 8pt; }
+  table.t.mini td, table.t.mini th { padding: 1.6mm 2mm; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .sectorhead { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--ink); padding-bottom: 2mm; margin-bottom: 3mm; }
+  .sectorhead .sc { font: 700 24pt/1 var(--sans); color: var(--brand-deep); }
+  .sectorhead .sc small { font: 500 7pt/1 var(--mono); letter-spacing: .1em; color: var(--ink-muted); display: block; text-align: right; margin-top: 1mm; }
+  .tiers-light { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .tl { border: 1px solid var(--rule); border-radius: 10px; padding: 3.5mm; break-inside: avoid; }
+  .tl.rec { border: 2px solid var(--brand-deep); background: var(--tint); }
+  .tl .p { font: 700 12pt/1.2 var(--sans); color: var(--ink); margin: 1mm 0; }
+  .tl .m { font-size: 8.5pt; color: var(--ink-muted); }
+  .tl li { font-size: 8.2pt; color: var(--ink-mid); }
+  .src-list p { font-size: 7.6pt; margin: 0 0 1.4mm; word-break: break-word; }
+  .timeline { border-left: 2px solid var(--rule); margin-left: 2mm; padding-left: 5mm; }
+  .timeline .ev { position: relative; margin-bottom: 2.4mm; break-inside: avoid; }
+  .timeline .ev::before { content: ""; position: absolute; left: -6.6mm; top: 1.4mm; width: 2.4mm; height: 2.4mm; border-radius: 50%; background: var(--brand-deep); }
+  .timeline .when { font: 600 7.5pt/1.3 var(--mono); color: var(--ink-muted); letter-spacing: .06em; }
+  .timeline p { margin: 0; font-size: 9pt; }
+</style>
+</head>
+<body>
+{% set S = summary %}
+{% set total = S.values() | map(attribute='businesses') | sum %}
+{% set W = {} %}{% for c in kit.scoring.criteria %}{% set _ = W.update({c.key: c.weight}) %}{% endfor %}
+{% macro score(sec) %}{% set ns = namespace(t=0) %}{% for k, w in W.items() %}{% set ns.t = ns.t + sec.scores[k] * w %}{% endfor %}{{ (ns.t / 5) | round | int }}{% endmacro %}
+{% set beach = kit.sectors | selectattr('wave', 'equalto', 'beachhead') | list %}
+<div class="report">
+
+<!-- ============ 1. THE SHORT VERSION ============ -->
+<div class="label kicker">01 &middot; The short version</div>
+<h2 class="ch">Sell outcomes on WhatsApp, prove it on the spot, start with three sectors</h2>
+<p class="lead">Quetta is not short of software vendors. It is short of anyone who can show a working system in the owner's own chat app, in Urdu, and name what it did for a real client. That is the gap NexusPoint fills.</p>
+
+<div class="findings">
+  <div class="finding"><div><h4>The digital gap is wide and measurable</h4><p>Of {{ "{:,}".format(total) }} Quetta businesses we pulled from Google Maps, most have no website of their own: {{ S.healthcare.no_own_website_pct }}% in healthcare, {{ S.food.no_own_website_pct }}% in restaurants and cafes, {{ S.education.no_own_website_pct }}% in schools and academies. Many popular places have hundreds of reviews and nowhere to send the customer next.</p></div></div>
+  <div class="finding"><div><h4>The government is forcing digitisation this year</h4><p>BRA is visiting Quetta restaurants and threatening sealing for anyone not on a BRA-linked POS (July and September 2026). FBR put private hospitals under a POS mandate, which doctors struck against on 30 September. Sales-tax-registered traders must e-invoice. Owners are being pushed; we should be the calm, useful option when they are.<sup class="c">S20 S21 S25 S26</sup></p></div></div>
+  <div class="finding"><div><h4>Local competitors say "AI" but show nothing</h4><p>We audited 40 local software-house and agency websites. {{ competitors.counts.mention_ai_or_automation }} mention AI or automation; none shows a demo or names a client for AI work, and only one publishes a price. The most visible one publishes dramatic results (a 340% rise in reservations) with nothing behind them. Proof is the moat, not the label.<sup class="c">S61 S71</sup></p></div></div>
+  <div class="finding"><div><h4>The internet gets cut, so design for it</h4><p>Mobile internet in Quetta was suspended repeatedly in 2025 and again in August 2026, while fixed broadband mostly kept working. Every system we sell falls back to SMS and phone, and keeps billing offline. None of the 30 local competitor sites we could read mentions offline operation or shutdowns; only national POS vendors do.<sup class="c">S10 S11 S12 S15 S71</sup></p></div></div>
+  <div class="finding"><div><h4>Commodity software is cheap, so do not sell it</h4><p>Clinic software costs about PKR 1,500 a month, POS PKR 2,000 to 7,000, school software PKR 15 to 50 per student. We sell the layer on top: an AI front desk on WhatsApp, reminders, ordering, reviews and marketing, tied to one outcome the owner cares about.<sup class="c">S50 S52 S53</sup></p></div></div>
+  <div class="finding"><div><h4>Start with healthcare, restaurants and schools</h4><p>Healthcare scores highest ({{ score(beach[0]) }}/100) on money and pain. Restaurants ({{ score(beach[1]) }}) have a dated regulatory trigger. Schools tie with real estate and hotels, and win the tie on the calendar: Quetta schools close 16 December and reopen 1 March, so the selling window is now.<sup class="c">S43</sup></p></div></div>
+</div>
+
+<div class="callout dark keep">
+  <div class="label">What to do in the next 30 days</div>
+  <p>Walk the healthcare cluster on Jinnah Road, Zarghoon Road and Brewery Road with a printed Digital Health Check for each clinic and the demo on your phone. Sign 3 founding clients at the pilot price. Book every school owner on the list before 15 December. Run the response-time test on 30 businesses so you have a Quetta number of your own to quote.</p>
+</div>
+
+<!-- ============ 2. QUETTA IN NUMBERS ============ -->
+<div class="chapter"></div>
+<div class="label kicker">02 &middot; The city</div>
+<h2 class="ch">Quetta in numbers, and the conditions every offer must survive</h2>
+<div class="stats keep" style="--n:4;margin:3mm 0 5mm">
+  <div class="stat"><div class="v num">2.6<small>M</small></div><div class="l">people in Quetta District, 60% urban</div><div class="src">Census 2023 &middot; S1</div></div>
+  <div class="stat"><div class="v num">60<small>%</small></div><div class="l">speak Pashto first; Urdu is the shared business language</div><div class="src">Census 2023 &middot; S1</div></div>
+  <div class="stat"><div class="v num">117<small>M</small></div><div class="l">internet users in Pakistan, 45.6% of people</div><div class="src">DataReportal 2026 &middot; S3</div></div>
+  <div class="stat"><div class="v num">92<small>%</small></div><div class="l">of Pakistan's retail transactions were digital in Q1 2026</div><div class="src">SBP via Tribune &middot; S5</div></div>
+</div>
+<p>Quetta is a city of 2.6 million with a literacy rate of 56%, and a trade economy built on the Afghan and Iranian borders, minerals, horticulture and government services.<sup class="c">S1 S2</sup> WhatsApp is the country's default business channel, with an estimated 95 to 105 million users.<sup class="c">S4</sup> Pakistan's payments are going digital fast at the consumer level, but merchants still hesitate because of fees, awareness and fear of tax exposure.<sup class="c">S5</sup> That last point matters: a pitch that sounds like documentation for the tax office will stall.</p>
+
+<h3>The operating conditions</h3>
+<div class="two">
+<div class="timeline">
+  <div class="ev"><div class="when">Apr 2025</div><p>Mobile and internet services suspended in Quetta for 3 days.<sup class="c">S14</sup></p></div>
+  <div class="ev"><div class="when">Aug 30 and Sep 6, 2025</div><p>3G and 4G suspended across Balochistan.<sup class="c">S11</sup></p></div>
+  <div class="ev"><div class="when">Oct 2025</div><p>Pakistan-Afghanistan border closed; Pakistani exports to Afghanistan fell 15% in Q1 FY26.<sup class="c">S19</sup></p></div>
+  <div class="ev"><div class="when">Nov 10 to 16, 2025</div><p>Mobile internet suspended across all districts for a week.<sup class="c">S10</sup></p></div>
+  <div class="ev"><div class="when">Apr 25, 2026</div><p>Transit order routes Iran-bound cargo through Quetta: a tailwind for transporters.<sup class="c">S18</sup></p></div>
+  <div class="ev"><div class="when">May 2026</div><p>Month-long "smart lockdown"; traders threaten shutter-down strikes before Eid.<sup class="c">S16</sup></p></div>
+  <div class="ev"><div class="when">Aug 9 and 26, 2026</div><p>Mobile internet suspended again; delivery riders could not receive orders.<sup class="c">S12 S13</sup></p></div>
+</div>
+<div>
+  <div class="callout keep"><div class="label">What this means for what we sell</div>
+  <p>Build for broken connectivity. Host WhatsApp numbers and dashboards on broadband and cloud, send reminders by SMS when mobile data is down, keep POS billing offline with later sync, and never sell a system that stops the shop when 4G drops. Say this in every pitch: it is true, it is local, and no Quetta competitor says it.</p></div>
+  <div class="callout warn keep"><div class="label">Safety and timing</div>
+  <p>Lockdowns and checkpoint delays make some days unworkable. Plan walk-ins around the news, keep meetings in commercial areas in daylight, and let WhatsApp carry follow-ups on days you cannot move.</p></div>
+</div>
+</div>
+
+<!-- ============ 3. TRIGGERS ============ -->
+<div class="chapter"></div>
+<h3 style="margin-top:0">The triggers pushing businesses to digitise</h3>
+<table class="t mini keep">
+  <tr><th>Trigger</th><th>Who it hits</th><th>What it forces</th><th>Status</th><th>Src</th></tr>
+  <tr class="hl"><td>BRA POS enforcement</td><td>Restaurants, cafes; beauty, gyms named for sealing</td><td>POS linked to BRA portal, e-invoice on every bill</td><td>Notices Jul 2026, visits Sep 2026</td><td>S20 S21 S22</td></tr>
+  <tr><td>Balochistan Finance Act 2025</td><td>All service businesses</td><td>Every service taxable unless exempted (negative list)</td><td>In force Jul 2025</td><td>S22</td></tr>
+  <tr class="hl"><td>FBR POS for private hospitals</td><td>Private hospitals, clinics</td><td>POS integration; fines and raids reported</td><td>Contested: PMA strike 30 Sep 2026</td><td>S26</td></tr>
+  <tr><td>FBR e-invoicing, SRO 709</td><td>Sales-tax-registered distributors, manufacturers</td><td>Invoices sent to FBR through a licensed integrator</td><td>Phased from Sep 2025</td><td>S25</td></tr>
+  <tr><td>Balochistan Health Card</td><td>Empanelled private hospitals</td><td>More insured patients, more claims admin</td><td>Cap of PKR 1M per family a year</td><td>S27</td></tr>
+  <tr><td>Meta WhatsApp pricing</td><td>Anyone using the WhatsApp API</td><td>Service replies charged from 1 Oct 2026 ($0.015)</td><td>Reported; verify on Meta's rate card</td><td>S59</td></tr>
+</table>
+<p class="fine">Restaurant tax rate caution: sources disagree on the current rate (4% or 8% standard; 2% for card or POS-documented bills). The primary Act is a scanned PDF we could not machine-read. Never quote a rate to an owner; say "BRA gives a lower rate to POS-linked bills, confirm yours with BRA".<sup class="c">S22 S23</sup></p>
+
+<!-- ============ 4. THE DIGITAL GAP ============ -->
+<div class="chapter"></div>
+<div class="label kicker">03 &middot; Measured, not guessed</div>
+<h2 class="ch">The digital gap, sector by sector</h2>
+<p>We pulled {{ "{:,}".format(total) }} Quetta businesses from Google Maps on {{ kit.meta.date }} across 26 searches, removed government, military and closed listings, and checked every listed website. "No own website" counts businesses with none, or only a Facebook or Instagram page. An unclaimed listing means the owner has never taken control of it on Google.</p>
+<table class="t keep">
+  <tr><th>Sector</th><th class="r">Businesses</th><th class="r">No own site</th><th class="r">Unclaimed</th><th class="r">Mobile no.</th><th class="r">100+ reviews</th><th class="r">&lt;4&#9733; (20+ rev.)</th></tr>
+  {% for key, v in S.items() if key != 'competitor' %}
+  <tr{% if key in ['healthcare','food','education'] %} class="hl"{% endif %}><td>{{ v.name }}</td><td class="r num">{{ v.businesses }}</td><td class="r num">{{ v.no_own_website_pct }}%</td><td class="r num">{{ v.unclaimed_pct }}%</td><td class="r num">{{ v.mobile_phone_pct }}%</td><td class="r num">{{ v.with_100plus_reviews }}</td><td class="r num">{{ v.rated_below_4_with_20plus }}</td></tr>
+  {% endfor %}
+</table>
+<p class="fine">Google Maps under-counts sectors that trade offline. Distributors, property dealers and car showrooms barely appear, with a median of about 1 review, so their numbers describe visibility, not market size. Those sectors are prospected on foot, in their market clusters.</p>
+
+<h3>What the gap looks like on the ground</h3>
+<div class="cards c3 keep">
+{% for key in ['healthcare','food','hospitality'] %}
+  {% set top = prospects | top(key, 60) | selectattr('reviews', 'ge', 80) | list %}
+  <div class="card"><div class="label">{{ S[key].name }}</div>
+  <ul class="dashes">{% for r in top[:4] %}<li><b>{{ r.name[:34] }}</b>: {{ "{:,}".format(r.reviews) }} reviews, {{ r.rating }}&#9733;{% if r.website_status in ['none','social-only'] %}, no website{% endif %}</li>{% endfor %}</ul></div>
+{% endfor %}
+</div>
+<p style="margin-top:3mm">Demand is visible; capture is missing. A restaurant with 700 reviews and no website is sending every curious customer back to Google, where the next listing is one tap away.</p>
+
+<!-- ============ 5. SECTOR SCORING ============ -->
+<div class="chapter"></div>
+<div class="label kicker">04 &middot; Where to play</div>
+<h2 class="ch">Ten sectors scored on money, pain and how fast they buy</h2>
+<p>Each sector gets 1 to 5 on eight criteria, weighted to 100. The scores are judgment informed by the evidence in this report, not measurement. Differences of 2 points or less are ties.</p>
+<table class="t mini keep">
+  <tr><th>Sector</th>{% for c in kit.scoring.criteria %}<th class="r" title="{{ c.name }}">{{ c.name.split(' ')[0] }}<br><span style="font-weight:400">{{ c.weight }}%</span></th>{% endfor %}<th class="r">Score</th><th>Call</th></tr>
+  {% for sec in kit.sectors %}
+  <tr class="score-row{% if sec.wave=='beachhead' %} hl{% endif %}"><td>{{ sec.name }}</td>{% for c in kit.scoring.criteria %}<td class="r num">{{ sec.scores[c.key] }}</td>{% endfor %}<td class="r num"><b>{{ score(sec) }}</b></td><td><span class="wave {{ sec.wave }}">{{ {'beachhead':'Start','second':'Next','watch':'Watch','skip':'Skip'}[sec.wave] }}</span></td></tr>
+  {% endfor %}
+</table>
+<div class="cards c3" style="margin-top:4mm">
+{% for sec in kit.sectors if sec.wave in ['beachhead'] %}
+  <div class="card keep"><div class="label">Start &middot; {{ loop.index }}</div><h3>{{ sec.name }} &middot; {{ score(sec) }}</h3><p style="font-size:8pt">{{ (sec.why.split('. ')[:2] | join('. ')).rstrip('.') }}.</p></div>
+{% endfor %}
+</div>
+
+<!-- ============ 6. BEACHHEAD DEEP DIVES ============ -->
+{% for sec in beach %}
+<div class="chapter"></div>
+<div class="label kicker">05 &middot; Beachhead {{ loop.index }} of 3</div>
+<div class="sectorhead"><div><h2 class="ch" style="margin:0">{{ sec.name }}</h2><div class="copy mini">{{ sec.long }}</div></div><div class="sc num">{{ score(sec) }}<small>of 100</small></div></div>
+<p class="lead">{{ sec.pain_line }}</p>
+<div class="two">
+  <div>
+    <h4>Evidence</h4>
+    <ul class="b mini">{% for e in sec.evidence %}<li>{{ e | replace('[', '<sup class="c">') | replace(']', '</sup>') }}</li>{% endfor %}</ul>
+    <h4>Buyer</h4><p class="mini">{{ sec.buyer }}. Visit in person; follow up on WhatsApp.</p>
+    <h4>The bundle</h4>
+    <ul class="ticks mini">{% for b in sec.bundle %}<li>{{ b }}</li>{% endfor %}</ul>
+  </div>
+  <div>
+    <h4>Top prospects from the scan</h4>
+    <table class="t mini">
+      <tr><th>Business</th><th class="r">Rev.</th><th>Gap</th></tr>
+      {% for r in prospects | top(sec.key, 60) if 'chain' not in r.top_opportunity %}{% if loop.index <= 10 %}
+      <tr><td>{{ r.name[:32] }}</td><td class="r num">{{ r.reviews }}</td><td>{{ r.gap_short }}</td></tr>
+      {% endif %}{% endfor %}
+    </table>
+    <p class="fine">Full ranked list with phones and map links: Quetta-Prospects.xlsx, sheet "{{ sec.name }}".</p>
+  </div>
+</div>
+<h4 style="margin-top:4mm">Objections to expect</h4>
+<table class="t mini keep">{% for o in sec.objections %}<tr><td style="width:38%">"{{ o.q }}"</td><td>{{ o.a }}</td></tr>{% endfor %}</table>
+{% endfor %}
+
+<!-- ============ 7. SECOND WAVE ============ -->
+<div class="chapter"></div>
+<div class="label kicker">06 &middot; Next</div>
+<h2 class="ch">Second wave: sell here once the first case studies exist</h2>
+{% for sec in kit.sectors if sec.wave == 'second' %}
+<div class="keep" style="margin-bottom:4mm">
+<h3 style="margin-top:3mm">{{ sec.name }} &middot; {{ score(sec) }}</h3>
+<p class="mini">{{ sec.why }}</p>
+{% if sec.evidence %}<ul class="b mini">{% for e in sec.evidence %}<li>{{ e | replace('[', '<sup class="c">') | replace(']', '</sup>') }}</li>{% endfor %}</ul>{% endif %}
+<p class="mini"><b>Lead offer:</b> {{ sec.headline }}. <b>Bundle:</b> {{ sec.bundle | join(', ') }}.</p>
+</div>
+{% endfor %}
+<div class="keep"><h3 style="margin-top:3mm">Not now</h3>
+<table class="t mini">{% for sec in kit.sectors if sec.wave in ['watch','skip'] %}<tr><td style="width:24%">{{ sec.name }} &middot; {{ score(sec) }}</td><td>{{ sec.why }}</td></tr>{% endfor %}</table></div>
+
+<!-- ============ 8. COMPETITORS ============ -->
+<div class="chapter"></div>
+<div class="label kicker">07 &middot; Competition</div>
+<h2 class="ch">Who else sells software and marketing in Quetta, and what they actually show</h2>
+{% include "_competitors.html.j2" %}
+
+<!-- ============ 9. POSITIONING ============ -->
+<div class="chapter"></div>
+<div class="label kicker">08 &middot; Positioning</div>
+<h2 class="ch">Be the firm that shows it working</h2>
+<p class="lead">"{{ kit.meta.positioning }}"</p>
+<p>Lead with the owner's outcome in their words: patients answered, orders captured, fees collected. AI is how it works, not what we sell. Every claim carries a number a prospect can check on their own phone.</p>
+<div class="pillars keep" style="--n:5;margin:4mm 0">
+  <div class="pillar"><div class="label">01</div><h3>Show, do not tell</h3><p>A live WhatsApp demo in the meeting. Nobody local does this.</p></div>
+  <div class="pillar"><div class="label">02</div><h3>Checkable proof</h3><p>{{ kit.proof.upwork_jss }} Job Success, {{ kit.proof.upwork_badge }}, {{ kit.proof.upwork_jobs_completed }} completed jobs on a public profile.</p></div>
+  <div class="pillar"><div class="label">03</div><h3>Built for Quetta</h3><p>Urdu and Roman Urdu, SMS fallback, offline billing.</p></div>
+  <div class="pillar"><div class="label">04</div><h3>One outcome</h3><p>Each bundle is sold on one number the owner already tracks.</p></div>
+  <div class="pillar"><div class="label">05</div><h3>You own it</h3><p>Number, site, listing and customer list stay with the client.</p></div>
+</div>
+<div class="two">
+  <div class="keep"><h4>Say</h4><ul class="ticks mini"><li>"Every patient gets an answer in under a minute, even at night."</li><li>"It is WhatsApp. Your customers already use it."</li><li>"When mobile internet goes down, it falls back to SMS."</li><li>"You can check our record on Upwork right now."</li><li>"Try it before you pay the second half."</li></ul></div>
+  <div class="keep" data-lint="skip"><h4>Never say</h4><ul class="dashes mini"><li>"Agentic", "RAG", "LLM", "cutting-edge", "solutions", "seamless".</li><li>"90+ clients" or any figure not in the verified list.</li><li>Tax rates, or anything that sounds like reporting them to the tax office.</li><li>Big-brand names from the portfolio that were reference builds.</li><li>"Up to X% more sales." No invented percentages.</li></ul></div>
+</div>
+
+<!-- ============ 10. PRICING ============ -->
+<div class="chapter"></div>
+<div class="label kicker">09 &middot; Offer and price</div>
+<h2 class="ch">Three tiers per sector, priced against what Quetta already pays <span class="draft-flag">Draft</span></h2>
+<p>Every price below is a draft for Aleem's approval. It is anchored to published Pakistani market rates and priced above commodity because each tier bundles several of them around one outcome.</p>
+<table class="t mini keep">
+  <tr><th>Benchmark</th><th>Market rate (PKR)</th><th>Source</th></tr>
+  <tr><td>Basic 5-page website</td><td>25,000 to 60,000</td><td>S54</td></tr>
+  <tr><td>Small-business site, mid-level agency</td><td>60,000 to 200,000</td><td>S54</td></tr>
+  <tr><td>Social media management, national</td><td>15,000 to 55,000 a month (mid tier)</td><td>S55</td></tr>
+  <tr class="hl"><td>Social media management, Quetta (AdZensei)</td><td>40,000 / 70,000 / 100,000 a month</td><td>S69</td></tr>
+  <tr><td>WhatsApp chatbot setup / upkeep</td><td>25,000 to 60,000 / 5,000 to 12,000 a month</td><td>S56</td></tr>
+  <tr><td>WhatsApp API platform fee (BSP)</td><td>about 14,000 a month plus Meta message fees</td><td>S57</td></tr>
+  <tr><td>POS software</td><td>2,000 to 7,000 a month</td><td>S53</td></tr>
+  <tr><td>Clinic software / school software</td><td>1,500 to 2,000 a month / 15 to 50 per student a month</td><td>S50 S52</td></tr>
+</table>
+{% for sec in beach %}
+<div class="keep"><h3>{{ sec.name }}</h3>
+<div class="tiers-light">
+{% for t in sec.tiers %}
+  <div class="tl{% if t.get('rec') %} rec{% endif %}"><div class="label">{{ t.name }} &middot; {{ t.tag }}</div>
+  <div class="p num">{{ t.setup | pkr }}</div><div class="m">setup, then <b class="num">{{ t.monthly | pkr }}</b> a month</div>
+  <ul class="ticks">{% for i in t['items'][:5] %}<li>{{ i }}</li>{% endfor %}</ul></div>
+{% endfor %}
+</div></div>
+{% endfor %}
+<div class="two" style="margin-top:4mm">
+  <div class="callout keep"><div class="label">Founding-client pilot</div><p>{{ kit.terms.pilot }}</p></div>
+  <div class="callout keep"><div class="label">Terms</div><p>{{ kit.terms.payment }} {{ kit.terms.commitment }} {{ kit.terms.guarantee }}</p></div>
+</div>
+<p class="fine">Why Growth is the recommended tier: it is the first tier that changes an outcome (answer time, bookings, orders, fees), and it is the one the demo shows. Starter exists so a hesitant owner has a small yes; Complete exists so Growth looks reasonable.</p>
+
+<!-- ============ 11. GO TO MARKET ============ -->
+<div class="chapter"></div>
+<div class="label kicker">10 &middot; Go to market</div>
+<h2 class="ch">The first 90 days</h2>
+<p>The full scripts are in the Outreach Playbook. This is the shape of it.</p>
+<table class="t keep">
+  <tr><th style="width:22%">When</th><th>Focus</th><th style="width:26%">Target by end</th></tr>
+  <tr class="hl"><td>Weeks 1 to 2<br><span class="mini">Oct 2026</span></td><td>Set up: Google listing for NexusPoint Quetta, WhatsApp Business, printed kit, demo on phone. Run the response-time test on 30 businesses. Walk the healthcare cluster: 40 doors with a pre-filled Digital Health Check.</td><td>40 visits, 12 demos, 3 proposals</td></tr>
+  <tr><td>Weeks 3 to 6<br><span class="mini">Nov 2026</span></td><td>Close healthcare pilots. Start restaurants: 40 doors, lead with WhatsApp ordering and the BRA POS question. Book every school owner on the list for a 15-minute visit.</td><td>3 healthcare pilots signed, 20 school meetings booked</td></tr>
+  <tr><td>Weeks 7 to 10<br><span class="mini">Late Nov to mid Dec</span></td><td>Close school pilots before the 16 December closure. Deliver and measure the first healthcare builds. Ask every pilot for 2 introductions.</td><td>6 to 8 paying clients, 1 measured result</td></tr>
+  <tr><td>Weeks 11 to 13<br><span class="mini">Dec to Jan</span></td><td>Build schools over the vacation. Publish the first Quetta case study. Restaurants ahead of Ramadan (expected to begin around 8 February 2027, date depends on the moon).</td><td>First case study live, restaurant pilots signed</td></tr>
+</table>
+<div class="stats keep" style="--n:4;margin-top:4mm">
+  <div class="stat"><div class="v num">15</div><div class="l">door visits a week, in 2 afternoons</div></div>
+  <div class="stat"><div class="v num">5</div><div class="l">demos a week</div></div>
+  <div class="stat"><div class="v num">2</div><div class="l">proposals a week</div></div>
+  <div class="stat"><div class="v num">1</div><div class="l">close a week, from week 4</div></div>
+</div>
+<p class="fine">These activity targets are planning assumptions, not benchmarks from a source. Replace them with your own conversion numbers after the first 40 visits.</p>
+
+<!-- ============ 12. RISKS ============ -->
+<div class="chapter"></div>
+<div class="label kicker">11 &middot; Honest caveats</div>
+<h2 class="ch">What could go wrong, and what we could not verify</h2>
+<table class="t keep">
+  <tr><th style="width:30%">Risk</th><th>Mitigation</th></tr>
+  <tr><td>PKR tickets are small next to USD work</td><td>Productise: the same WhatsApp agent, site template and reminder engine across every client in a sector. Target 3 to 4 days of team time per Growth build. Quetta wins double as Pakistan SMB case studies.</td></tr>
+  <tr><td>Shutdowns and lockdowns</td><td>SMS fallback, broadband hosting, offline POS; WhatsApp follow-ups on days you cannot visit.</td></tr>
+  <tr><td>Owners fear tax exposure</td><td>Never lead with compliance. Offer compliant POS through partners only when the owner raises it.</td></tr>
+  <tr><td>No local proof yet</td><td>Founding-client pilots, a live demo, and a public Upwork record. First measured result by week 10.</td></tr>
+  <tr><td>Meta raises WhatsApp prices again</td><td>Bill messages at cost, keep Starter on the free WhatsApp Business app, keep SMS as a fallback channel.</td></tr>
+  <tr><td>A competitor copies the pitch</td><td>They can copy words, not a working demo and a record. Move fast in the beachheads and lock in referrals.</td></tr>
+</table>
+<h4>Not verified, do not quote</h4>
+<ul class="b mini">
+  <li>The current BRA restaurant tax rate (sources conflict; primary Act is a scanned PDF).</li>
+  <li>Meta's exact Pakistan WhatsApp rates after 1 October 2026 (reported by one outlet; Meta's page not yet updated).</li>
+  <li>Any Quetta-specific figure for internet penetration, WhatsApp use or number of private hospitals. None was found in sources.</li>
+  <li>Response times of Quetta businesses. Measure them yourself with the test in the playbook.</li>
+  <li>Price tolerance in Quetta specifically. The draft tiers use national benchmarks; the first 10 conversations will tell us if they need to move.</li>
+</ul>
+
+<!-- ============ SOURCES ============ -->
+<div class="chapter"></div>
+<div class="label kicker">Sources</div>
+<h2 class="ch">Sources</h2>
+<p class="fine">P = primary (government, regulator, original study, company's own site). S = secondary. All accessed 30 September 2026. NexusPoint proof figures are from internal records: Upwork profile as of 26 July 2026 and the portfolio log.</p>
+<div class="src-list">
+{% include "_sources.html.j2" %}
+</div>
+
+</div>
+</body>
+</html>

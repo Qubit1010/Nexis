@@ -1,0 +1,95 @@
+{
+  "healthcare": {
+    "noun": {"en": "clinic", "ur": "کلینک"},
+    "assistant_role": "front-desk assistant",
+    "about_default": "Private healthcare provider. Patients book consultations and ask about timings, doctors and location.",
+    "services_sample": ["General consultation", "Specialist OPD", "Lab tests", "Follow-up visits"],
+    "services_by_category": [
+      {"match": "dent", "services": ["Checkup and consultation", "Scaling and polishing", "Fillings", "Root canal treatment (RCT)", "Crowns and bridges", "Teeth whitening", "Braces and aligners", "Implants"]},
+      {"match": "skin|derma|cosmet|laser|allerg", "services": ["Acne and acne scar treatment", "Vitiligo treatment", "Psoriasis, eczema and dermatitis", "Hair loss and alopecia treatment", "Pigmentation and melasma", "Laser hair removal", "Fractional and scar laser", "PRP and hair regeneration", "Skin allergy consultation and testing"]},
+      {"match": "physio|physical therapy|rehab", "services": ["Assessment and consultation", "Back and neck pain", "Sports injury rehab", "Post-surgery rehab", "Home visits"]},
+      {"match": "lab|diagnostic|blood", "services": ["Blood tests", "Home sample collection", "Online reports", "Health checkup packages"]}
+    ],
+    "questions": [
+      {"key": "patient", "ask": "The patient's name"},
+      {"key": "timing", "ask": "Which day and time suits them"},
+      {"key": "reason", "ask": "Which doctor or what the visit is for"}
+    ],
+    "warm_when": "The patient wants an appointment in the next 7 days, or reports pain or an urgent problem.",
+    "unqualified_when": "The person is selling something or job-hunting.",
+    "action": "booking",
+    "demo_hint": "Offer two concrete slots from the opening hours and book one. Fees, doctor availability and medical questions go to staff.",
+    "roi": {"missed_per_week": 6, "ticket": 2000, "recover_pct": 50, "ticket_label": {"en": "Average consultation fee (PKR)", "ur": "اوسط کنسلٹیشن فیس (روپے)"}, "missed_label": {"en": "Patients lost per week (unanswered calls, no-shows)", "ur": "ہر ہفتے ضائع ہونے والے مریض (بغیر جواب کالز، غیر حاضری)"}},
+    "bundle": "healthcare",
+    "posts": {
+      "en": ["No more waiting on hold. Message {name} on WhatsApp any time, book your slot in under a minute, and get a reminder the day before.", "Your health, your time. {name} now answers on WhatsApp in Urdu and English, day or night. Save our number and message us to book."],
+      "ur": ["اب انتظار ختم۔ {name} کو کسی بھی وقت واٹس ایپ پر میسج کریں، ایک منٹ میں اپنا وقت بک کریں، اور ایک دن پہلے یاد دہانی پائیں۔", "آپ کی صحت، آپ کا وقت۔ {name} اب واٹس ایپ پر اردو اور انگریزی میں دن رات جواب دیتا ہے۔ ہمارا نمبر محفوظ کریں اور بکنگ کے لیے میسج کریں۔"]
+    },
+    "site": {
+      "en": {"hero": "Care you can book in a minute", "sub": "Message us on WhatsApp to book a consultation, any time of day.", "section": "What we offer", "cta": "Book on WhatsApp"},
+      "ur": {"hero": "علاج جو ایک منٹ میں بک ہو", "sub": "کنسلٹیشن بک کرنے کے لیے کسی بھی وقت واٹس ایپ پر میسج کریں۔", "section": "ہماری سہولیات", "cta": "واٹس ایپ پر بک کریں"}
+    },
+    "suggested_prompts": {
+      "en": ["Dr sahab kal shaam mil sakte hain?", "Aap ka clinic kahan hai?", "Timings kya hain?"],
+      "ur": ["ڈاکٹر صاحب کل شام مل سکتے ہیں؟", "آپ کا کلینک کہاں ہے؟", "اوقات کیا ہیں؟"]
+    }
+  },
+  "food": {
+    "noun": {"en": "restaurant", "ur": "ریسٹورنٹ"},
+    "assistant_role": "ordering assistant",
+    "about_default": "Restaurant in Quetta taking dine-in, takeaway and delivery orders.",
+    "services_sample": ["Chicken karahi", "Mutton karahi", "Sajji", "BBQ platter", "Naan and roti", "Tea"],
+    "questions": [
+      {"key": "items", "ask": "What they would like to order, with quantities"},
+      {"key": "mode", "ask": "Delivery or pickup"},
+      {"key": "address_time", "ask": "The delivery address or pickup time"}
+    ],
+    "warm_when": "The customer has confirmed items and delivery or pickup details.",
+    "unqualified_when": "The person is selling something or job-hunting.",
+    "action": "order",
+    "demo_hint": "Take the order item by item, confirm it back, say the restaurant confirms the total and time. Never state prices or delivery fees; the restaurant confirms them.",
+    "roi": {"missed_per_week": 20, "ticket": 2500, "recover_pct": 50, "ticket_label": {"en": "Average order value (PKR)", "ur": "اوسط آرڈر (روپے)"}, "missed_label": {"en": "Orders lost per week (missed calls, slow replies at peak)", "ur": "ہر ہفتے ضائع ہونے والے آرڈر (مسڈ کالز، رش میں دیر)"}},
+    "bundle": "food",
+    "posts": {
+      "en": ["Hungry? Skip the busy line. Order from {name} on WhatsApp, we'll confirm in a minute and start cooking.", "Your favourites from {name}, one WhatsApp message away. Delivery or pickup, in Urdu or English."],
+      "ur": ["بھوک لگی ہے؟ مصروف لائن چھوڑیں۔ {name} سے واٹس ایپ پر آرڈر کریں، ہم ایک منٹ میں کنفرم کر کے کھانا بنانا شروع کر دیں گے۔", "{name} کے پسندیدہ کھانے، صرف ایک واٹس ایپ میسج دور۔ ڈیلیوری یا پک اپ، اردو یا انگریزی میں۔"]
+    },
+    "site": {
+      "en": {"hero": "Order in one message", "sub": "Send your order on WhatsApp. We confirm in a minute.", "section": "On the menu (sample)", "cta": "Order on WhatsApp"},
+      "ur": {"hero": "ایک میسج میں آرڈر", "sub": "اپنا آرڈر واٹس ایپ پر بھیجیں۔ ہم ایک منٹ میں کنفرم کرتے ہیں۔", "section": "مینو (نمونہ)", "cta": "واٹس ایپ پر آرڈر کریں"}
+    },
+    "suggested_prompts": {
+      "en": ["2 chicken karahi aur 4 naan chahiye", "Delivery hoti hai?", "Aaj raat kab tak khula hai?"],
+      "ur": ["دو چکن کڑاہی اور چار نان چاہییں", "ڈیلیوری ہوتی ہے؟", "آج رات کب تک کھلا ہے؟"]
+    }
+  },
+  "education": {
+    "noun": {"en": "school", "ur": "اسکول"},
+    "assistant_role": "parent and admissions assistant",
+    "about_default": "Private school or college in Quetta. Parents ask about fees due, timings and admissions; new families enquire about seats and visits.",
+    "services_sample": ["Admissions enquiries", "Fee status and reminders", "School timings", "Campus visits"],
+    "questions": [
+      {"key": "student", "ask": "The student's name and class, or the class they want admission in"},
+      {"key": "need", "ask": "Whether they need fee status, timings or an admission visit"},
+      {"key": "visit", "ask": "For admissions, a day to visit the campus"}
+    ],
+    "warm_when": "A new family wants to visit or apply, or a parent confirms a payment.",
+    "unqualified_when": "The person is selling something or job-hunting.",
+    "action": "fee_lookup",
+    "demo_hint": "The demo has one sample record: Ayesha Khan, Class 6-B, September fee pending, due 10 October. Use it only if the parent names her or asks generally about their child's fee in this demo. For any other student, say the office will confirm. Admissions: offer a campus visit slot within opening hours. Never state fee amounts.",
+    "roi": {"missed_per_week": 8, "ticket": 5000, "recover_pct": 50, "ticket_label": {"en": "Monthly fee per student (PKR)", "ur": "فی طالب علم ماہانہ فیس (روپے)"}, "missed_label": {"en": "Late or missed fees a week (plus lost admission enquiries)", "ur": "ہر ہفتے تاخیر یا رہ جانے والی فیس (اور ضائع داخلہ انکوائریاں)"}},
+    "bundle": "education",
+    "posts": {
+      "en": ["Admissions are open at {name}. Message us on WhatsApp to ask about classes and book a campus visit.", "Parents of {name}: ask about fees, timings and results on WhatsApp, and get an answer in a minute, in Urdu or English."],
+      "ur": ["{name} میں داخلے جاری ہیں۔ کلاسز کے بارے میں پوچھنے اور کیمپس وزٹ بک کرنے کے لیے واٹس ایپ پر میسج کریں۔", "{name} کے والدین: فیس، اوقات اور نتائج کے بارے میں واٹس ایپ پر پوچھیں اور ایک منٹ میں جواب پائیں، اردو یا انگریزی میں۔"]
+    },
+    "site": {
+      "en": {"hero": "Admissions open. Ask us anything on WhatsApp.", "sub": "Fees, timings, results and campus visits, answered in a minute.", "section": "For parents", "cta": "Message the office"},
+      "ur": {"hero": "داخلے جاری ہیں۔ واٹس ایپ پر کچھ بھی پوچھیں۔", "sub": "فیس، اوقات، نتائج اور کیمپس وزٹ، ایک منٹ میں جواب۔", "section": "والدین کے لیے", "cta": "آفس کو میسج کریں"}
+    },
+    "suggested_prompts": {
+      "en": ["Ayesha Khan Class 6 ki fee kitni baqi hai?", "Class 1 mein admission hai?", "School timings kya hain?"],
+      "ur": ["عائشہ خان کلاس 6 کی فیس کتنی باقی ہے؟", "کلاس 1 میں داخلہ ہے؟", "اسکول کے اوقات کیا ہیں؟"]
+    }
+  }
+}

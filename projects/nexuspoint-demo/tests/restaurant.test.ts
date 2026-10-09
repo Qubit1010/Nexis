@@ -1,0 +1,9 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { tableSlots,nextOrderStatus,type RestaurantState,type Order } from '../src/lib/restaurant-types.ts';
+const tables=[{id:'one',name:'T01',seats:4,area:'Family',active:true}],settings={open_min:720,close_min:1440,accepting:true,prep_minutes:30};
+const now=new Date('2026-10-02T06:00:00Z'),expiry='2026-10-16T06:00:00Z';
+test('table availability uses PKT, 90-minute duration and midnight closing',()=>{const a=tableSlots('2026-10-02',4,tables,[],settings,expiry,now);assert.equal(a[0],'2026-10-02T07:00:00.000Z');assert.equal(a.at(-1),'2026-10-02T17:30:00.000Z');assert.equal(a.length,22)});
+test('overlapping reservations block a table but cancelled bookings release it',()=>{const busy=[{table_id:'one',starts_at:'2026-10-02T07:30:00Z',ends_at:'2026-10-02T09:00:00Z',status:'confirmed'}] as RestaurantState['busy'];const a=tableSlots('2026-10-02',4,tables,busy,settings,expiry,now);assert.equal(a[0],'2026-10-02T09:00:00.000Z');busy[0].status='cancelled';assert.equal(tableSlots('2026-10-02',4,tables,busy,settings,expiry,now)[0],'2026-10-02T07:00:00.000Z')});
+test('capacity, blocking, past times and expiry bound table slots',()=>{assert.equal(tableSlots('2026-10-02',5,tables,[],settings,expiry,now).length,0);assert.equal(tableSlots('2026-10-02',2,[{...tables[0],active:false}],[],settings,expiry,now).length,0);assert.equal(tableSlots('2026-10-01',2,tables,[],settings,expiry,now).length,0);assert.equal(tableSlots('2026-10-16',2,tables,[],settings,expiry,now).length,0);assert.equal(tableSlots('2026-10-02',2,tables,[],settings,'2026-10-02T08:00:00Z',now).length,0)});
+test('delivery and pickup progress have different handoff states',()=>{assert.equal(nextOrderStatus({status:'ready',mode:'delivery'} as Order),'out_for_delivery');assert.equal(nextOrderStatus({status:'ready',mode:'pickup'} as Order),'completed');assert.equal(nextOrderStatus({status:'completed'} as Order),null)});
