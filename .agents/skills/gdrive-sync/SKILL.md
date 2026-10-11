@@ -8,7 +8,7 @@ description: >
   client-projects", "back up my decisions", "check Drive for new files", "gdrive
   sync", "set up Drive sync", "set up weekly sync", "is there anything on Drive
   I'm missing", "pull from Drive", "what's new on Drive", "gdrive sync setup".
-  Also invoke after the user adds files to archives/, catalog/, client-projects/,
+  Also invoke after the user adds files to agency/, archives/, catalog/, client-projects/,
   context/, decisions/, logs/, or references/ and the gdrive-sync-prompt rule fires.
 ---
 

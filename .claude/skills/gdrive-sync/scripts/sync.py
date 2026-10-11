@@ -57,6 +57,7 @@ SCRIPTS_DIR = Path(__file__).parent
 REPO_ROOT   = SCRIPTS_DIR.parents[3]
 
 SYNC_FOLDERS = [
+    "agency",
     "archives",
     "catalog",
     "client-projects",

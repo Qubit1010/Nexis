@@ -8,7 +8,7 @@ description: >
   client-projects", "back up my decisions", "check Drive for new files", "gdrive
   sync", "set up Drive sync", "set up weekly sync", "is there anything on Drive
   I'm missing", "pull from Drive", "what's new on Drive", "gdrive sync setup".
-  Also invoke after the user adds files to archives/, catalog/, client-projects/,
+  Also invoke after the user adds files to agency/, archives/, catalog/, client-projects/,
   context/, decisions/, logs/, or references/ and the gdrive-sync-prompt rule fires.
 ---
 
@@ -20,6 +20,7 @@ Two-way sync between Nexis private folders and **Work / Nexis Business Context**
 
 | Local | Drive |
 |-------|-------|
+| `agency/` | Nexis Business Context/agency/ |
 | `archives/` | Nexis Business Context/archives/ |
 | `catalog/` | Nexis Business Context/catalog/ |
 | `client-projects/` | Nexis Business Context/client-projects/ |
@@ -34,6 +35,12 @@ Two-way sync between Nexis private folders and **Work / Nexis Business Context**
 | `research/` | Nexis Business Context/research/ |
 
 Drive is a **permanent backup** — files are never deleted from Drive, even if removed locally.
+
+When using a Git worktree, resolve `git worktree list --porcelain` and run private-folder
+pushes from the checkout that contains the selected folder, usually the main checkout.
+`sync.py` derives `REPO_ROOT` from its own file path, so a worktree copy can silently
+skip `agency/` and other gitignored folders. Use that checkout's script and
+`folder_ids.json`; do not treat a missing worktree folder as an empty backup.
 
 ---
 
