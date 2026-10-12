@@ -31,6 +31,35 @@ npx drizzle-kit push
 
 Search keys (`EXA_API_KEY`, `TAVILY_API_KEY`, `SERPER_API_KEY`) live in the repo-root `.env` and auto-load — see `.env.example`.
 
+Install the research dependencies in a project environment:
+```bash
+python -m venv .venv
+# Windows
+.venv/Scripts/python.exe -m pip install exa-py
+# macOS / Linux
+.venv/bin/python -m pip install exa-py
+```
+The dashboard uses this `.venv` automatically. Set `RESEARCH_PYTHON` to use another
+interpreter with `exa-py` installed; otherwise it falls back to Python on `PATH`.
+
+For YouTube Intelligence, install its dependencies into the same environment:
+```bash
+.venv/Scripts/python.exe -m pip install -r ../../.claude/skills/youtube-daily-brief/scripts/requirements.txt
+```
+Use `.venv/bin/python` on macOS / Linux. Add `GOOGLE_API_KEY` (YouTube Data API v3)
+and `OPENAI_API_KEY` to the repo-root or project `.env`. YouTube reads these files
+on each run, so adding a missing key does not require restarting the dashboard.
+Set `YOUTUBE_BRIEF_PYTHON` to override its interpreter. The legacy
+`LAST30DAYS_PYTHON` and shared `RESEARCH_PYTHON` overrides are also supported.
+
+For Google Sheets saves, install the Google Workspace CLI (`npm install -g
+@googleworkspace/cli`) and sign in with `gws auth login`. Set
+`GOOGLE_SHEETS_SPREADSHEET_ID` in the repo-root or project `.env`. Saves target
+the `Saved Articles`, `Youtube bookmarked`, `Content Opportunities`, and
+`Tool Content Drafts` tabs, creating a missing tab with headers automatically.
+`GOOGLE_SHEETS_TOOLS_TAB` can override the tool tab name. Sheet settings are read
+on each save, so editing them does not require a dashboard restart.
+
 ## Usage
 
 **Generate a brief:**

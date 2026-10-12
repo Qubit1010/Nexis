@@ -35,7 +35,7 @@ This skill is fully self-contained. All Python scripts live in `scripts/` in thi
 Two Python scripts run sequentially:
 
 1. **`scripts/scrape_channels.py`** — YouTube Data API v3 scrape of 13 channels (5 recent videos each, Shorts under 3 min skipped). Writes raw video data to `.tmp/raw_videos.json` and archives a daily snapshot to `.tmp/history/`.
-2. **`scripts/analyze_content.py`** — GPT-5.2 analysis (`reasoning_effort=medium`, `max_completion_tokens=8192`) of scraped videos. Writes structured analysis to `.tmp/analysis.json`.
+2. **`scripts/analyze_content.py`** — GPT-5.2 analysis (`reasoning_effort=low`, `max_completion_tokens=16000`) of scraped videos. Writes structured analysis to `.tmp/analysis.json`. Empty scrapes and failed analysis return an error; an existing analysis file is preserved but is not published as a fresh brief.
 
 The Next.js pipeline (`src/lib/pipeline/youtube-run.ts`) spawns both scripts, reads `analysis.json`, and stores results in SQLite via Drizzle. It resolves this skill dir automatically (or honors `YOUTUBE_BRIEF_DIR` if set).
 
@@ -65,7 +65,7 @@ cd .claude/skills/youtube-daily-brief
 python scripts/scrape_channels.py
 python scripts/analyze_content.py
 ```
-For direct runs, drop a `scripts/.env` with `GOOGLE_API_KEY` + `OPENAI_API_KEY` (gitignored). When run via the dashboard/cron, the keys come from `projects/daily-news-brief/.env` through the inherited process env.
+Keys can live in the repo-root `.env`, `projects/daily-news-brief/.env`, or the inherited process environment. Direct Python runs also support a `scripts/.env` (gitignored). The dashboard rereads the repo and project files on each generation, so adding a missing key does not require a server restart.
 
 ### View the dashboard
 ```bash
@@ -75,18 +75,23 @@ Then open http://localhost:3000/youtube/[date]
 
 ## Prerequisites
 
-**Keys** — set in `projects/daily-news-brief/.env` (the cron/API entrypoints load it, then pass it to the Python subprocess):
+**Keys** — set in the repo-root or `projects/daily-news-brief/.env`:
 - `GOOGLE_API_KEY` — YouTube Data API v3 key (required)
 - `OPENAI_API_KEY` — GPT-5.2 analysis (required — reused from the news pipeline)
 
-**Python deps** (install once):
+**Python deps** (install once in the dashboard's shared environment):
 ```bash
-pip install -r .claude/skills/youtube-daily-brief/scripts/requirements.txt
+cd projects/daily-news-brief
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -r ../../.claude/skills/youtube-daily-brief/scripts/requirements.txt
 ```
+Use `.venv/bin/python` on macOS / Linux. News research uses this same environment.
 
 **Optional `.env` overrides** (`projects/daily-news-brief/.env`):
 - `YOUTUBE_BRIEF_DIR` — override the skill dir (defaults to `<repo>/.claude/skills/youtube-daily-brief`)
-- `LAST30DAYS_PYTHON` — Python interpreter path (reused from the news pipeline)
+- `YOUTUBE_BRIEF_PYTHON` — override the interpreter; otherwise the dashboard uses its `.venv` or Python on `PATH`
+- `LAST30DAYS_PYTHON` — legacy interpreter override, still supported
+- `RESEARCH_PYTHON` — shared interpreter override if neither YouTube override is set
 
 ## Editing the Channel List
 
@@ -122,7 +127,7 @@ All stored in `projects/daily-news-brief/data/news.db` (SQLite):
 | "scrape_channels.py exited 1" | Check `GOOGLE_API_KEY` in `projects/daily-news-brief/.env` — likely missing or quota exceeded |
 | "analyze_content.py exited 1" | Check `OPENAI_API_KEY` in `projects/daily-news-brief/.env`; also check quota/credits |
 | "No module named googleapiclient/openai" | Run `pip install -r scripts/requirements.txt` |
-| Python not found | Set `LAST30DAYS_PYTHON` in `projects/daily-news-brief/.env` to the correct interpreter |
+| Python not found | Create the dashboard's `.venv` or set `YOUTUBE_BRIEF_PYTHON` to an interpreter with the requirements installed |
 | `.tmp/analysis.json` not found after script | scrape_channels.py failed — check `.tmp/raw_videos.json` exists first |
 | Thumbnails not loading | `i.ytimg.com` must be in `next.config.ts` `images.remotePatterns` (already added) |
 | Stale data shown | Run generate again; the pipeline is idempotent — re-running a date overwrites the existing brief |

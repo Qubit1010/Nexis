@@ -36,7 +36,7 @@ const TRANSIENT = [
   "network", "unavailable",
 ];
 
-function runOnce(args: string[]): Promise<unknown> {
+export function runGwsCommand(args: string[]): Promise<any> {
   return new Promise((resolvePromise, reject) => {
     const child = spawn(GWS.cmd, [...GWS.base, ...args], {
       shell: GWS.shell,
@@ -53,13 +53,25 @@ function runOnce(args: string[]): Promise<unknown> {
         const s = out.trim();
         if (!s) return resolvePromise({});
         try {
-          resolvePromise(JSON.parse(s));
+          const result = JSON.parse(s);
+          if (result.error) {
+            reject(new Error(result.error.message || JSON.stringify(result.error)));
+          } else {
+            resolvePromise(result);
+          }
         } catch {
           resolvePromise({ raw: s });
         }
         return;
       }
-      reject(new Error(err.trim() || `gws exited ${code}`));
+      // The CLI reports API failures on stdout, while stderr may contain only
+      // the keyring notice. Return the useful error without the command payload.
+      try {
+        const result = JSON.parse(out.trim());
+        reject(new Error(result.error?.message || result.message || err.trim() || `gws exited ${code}`));
+      } catch {
+        reject(new Error(err.trim() || out.trim() || `gws exited ${code}`));
+      }
     });
   });
 }
@@ -69,7 +81,7 @@ async function runGws(args: string[], jsonBody?: unknown): Promise<any> {
   let lastErr = "gws error";
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
-      return await runOnce(full);
+      return await runGwsCommand(full);
     } catch (e) {
       lastErr = (e as Error).message;
       if (attempt < 2 && TRANSIENT.some((m) => lastErr.toLowerCase().includes(m))) {

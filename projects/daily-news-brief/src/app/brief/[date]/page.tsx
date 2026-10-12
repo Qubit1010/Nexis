@@ -19,6 +19,7 @@ import { SentimentTimeline } from "@/components/sentiment-timeline";
 import { KeyboardNav } from "@/components/keyboard-nav";
 import { ReadingProgress } from "@/components/reading-progress";
 import { CollapsibleSection } from "@/components/collapsible-section";
+import { EmptyState } from "@/components/empty-state";
 
 export const dynamic = "force-dynamic";
 
@@ -36,7 +37,8 @@ export default async function BriefPage({ params }: BriefPageProps) {
     .get();
 
   if (!brief) {
-    notFound();
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) notFound();
+    return <EmptyState date={date} />;
   }
 
   const cats = db

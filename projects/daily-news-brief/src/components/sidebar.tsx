@@ -80,6 +80,7 @@ export function Sidebar() {
   const [generating, setGenerating] = useState(false);
   const [generatingTools, setGeneratingTools] = useState(false);
   const [generatingYoutube, setGeneratingYoutube] = useState(false);
+  const [generationError, setGenerationError] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const [searchOpen, setSearchOpen] = useState(false);
   const [bookmarksOpen, setBookmarksOpen] = useState(false);
@@ -156,15 +157,18 @@ export function Sidebar() {
 
   async function handleGenerate() {
     setGenerating(true);
+    setGenerationError(null);
     try {
       const res = await fetch("/api/generate", { method: "POST" });
       const data = await res.json();
-      if (data.date) {
+      if (data.briefId && data.date) {
         router.push(`/brief/${data.date}`);
         router.refresh();
+      } else {
+        throw new Error(data.error || data.errors?.join("\n") || "Failed to generate brief");
       }
-    } catch {
-      // minimal error handling for personal tool
+    } catch (error) {
+      setGenerationError(error instanceof Error ? error.message : "Failed to generate brief");
     } finally {
       setGenerating(false);
     }
@@ -172,15 +176,18 @@ export function Sidebar() {
 
   async function handleGenerateTools() {
     setGeneratingTools(true);
+    setGenerationError(null);
     try {
       const res = await fetch("/api/generate-tools", { method: "POST" });
       const data = await res.json();
-      if (data.date) {
+      if (data.briefId && data.date) {
         router.push(`/tools/${data.date}`);
         router.refresh();
+      } else {
+        throw new Error(data.error || data.errors?.join("\n") || "Failed to generate Practical AI brief");
       }
-    } catch {
-      // minimal error handling
+    } catch (error) {
+      setGenerationError(error instanceof Error ? error.message : "Failed to generate Practical AI brief");
     } finally {
       setGeneratingTools(false);
     }
@@ -188,6 +195,7 @@ export function Sidebar() {
 
   async function handleGenerateYoutube() {
     setGeneratingYoutube(true);
+    setGenerationError(null);
     try {
       const res = await fetch("/api/generate-youtube", { method: "POST" });
       const data = await res.json();
@@ -197,12 +205,10 @@ export function Sidebar() {
         router.push(`/youtube/${data.date}`);
         router.refresh();
       } else {
-        alert(
-          `YouTube brief failed:\n${(data.errors || ["unknown error"]).join("\n")}`
-        );
+        throw new Error(data.error || data.errors?.join("\n") || "Failed to generate YouTube brief");
       }
-    } catch {
-      // minimal error handling
+    } catch (error) {
+      setGenerationError(error instanceof Error ? error.message : "Failed to generate YouTube brief");
     } finally {
       setGeneratingYoutube(false);
     }
@@ -312,6 +318,11 @@ export function Sidebar() {
             <p className="text-[11px] leading-snug text-zinc-500 px-1 pt-0.5">
               Fetching sources and analyzing with AI. This takes 3-5 minutes,
               keep this tab open.
+            </p>
+          )}
+          {generationError && (
+            <p role="alert" className="text-[12px] leading-snug text-rose-400 whitespace-pre-line px-1 pt-1">
+              {generationError}
             </p>
           )}
         </div>

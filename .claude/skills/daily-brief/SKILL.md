@@ -30,9 +30,9 @@ filter drops GitHub issues/PRs/commits, bare Hacker News threads, Reddit comment
 and blocklisted domains before anything reaches the LLM; a TRUSTED_DOMAINS set gives
 authoritative publishers a small rank nudge.
 
-**Interpreter:** `RESEARCH_PYTHON` must point at a Python with the research skill's deps
-(`exa-py`) installed — on this machine `.../Python312/python.exe`, NOT the 3.14 install
-the retired last30days engine used. Search keys (`EXA_API_KEY`, `TAVILY_API_KEY`,
+**Interpreter:** the dashboard prefers `projects/daily-news-brief/.venv/` with the
+research dependency (`exa-py`) installed. Override with `RESEARCH_PYTHON` to use
+another interpreter, or it falls back to Python on `PATH`. Search keys (`EXA_API_KEY`, `TAVILY_API_KEY`,
 `SERPER_API_KEY`) auto-load from the repo-root `.env`.
 
 ## News Brief
@@ -141,7 +141,7 @@ Dashboard: `/youtube/[date]`. Full details in the `youtube-daily-brief` skill.
 
 | Issue | Fix |
 |-------|-----|
-| "exa-py not installed" / research returns nothing | Point `RESEARCH_PYTHON` at the Python312 interpreter that has `exa-py`; check repo-root `.env` has EXA/TAVILY/SERPER keys |
+| "exa-py not installed" / research returns nothing | Install `exa-py` in the project's `.venv`, or point `RESEARCH_PYTHON` at an interpreter that has it; check repo-root `.env` has EXA/TAVILY/SERPER keys |
 | "No articles fetched" | Every research query failed — check internet + keys; research.py fails open per query and exits 0 even when all engines fail |
 | Brief header shows a low source count | Expected when few results are cross-corroborated; the stat now counts real publisher domains |
 | Digest email didn't arrive | Run `npx tsx scripts/daily-digest.ts` by hand and read the output; gws must be authenticated (`gws` account = the digest recipient default) |

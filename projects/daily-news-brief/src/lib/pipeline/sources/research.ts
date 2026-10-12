@@ -3,6 +3,7 @@ import { readFileSync } from "fs";
 import { join, resolve } from "path";
 import { parse as parseDotenv } from "dotenv";
 import type { RawArticle } from "./types";
+import { pythonExecutable } from "../python";
 
 export type Depth = "lean" | "full";
 
@@ -24,15 +25,6 @@ function engineDir(): string {
   return (
     process.env.RESEARCH_DIR ||
     resolve(repoRoot(), ".claude", "skills", "research", "scripts")
-  );
-}
-
-function pythonExe(): string {
-  // The research skill's deps (exa-py) live under Python312, not the 3.14
-  // install the old last30days engine used.
-  return (
-    process.env.RESEARCH_PYTHON ||
-    "C:/Users/qubit/AppData/Local/Programs/Python/Python312/python.exe"
   );
 }
 
@@ -163,7 +155,7 @@ function runResearchQuery(
   ];
 
   return new Promise((resolvePromise, reject) => {
-    const child = spawn(pythonExe(), args, {
+    const child = spawn(pythonExecutable(projectRoot(), env.RESEARCH_PYTHON), args, {
       cwd: dir, // research.py uses bare sibling imports; cwd must be its dir
       env,
       timeout: PER_QUERY_TIMEOUT_MS,

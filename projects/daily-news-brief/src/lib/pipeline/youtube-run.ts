@@ -11,6 +11,8 @@ import {
   youtubeSuggestedTopics,
 } from "../db/schema";
 import { eq } from "drizzle-orm";
+import { parse as parseDotenv } from "dotenv";
+import { pythonExecutable } from "./python";
 
 interface YoutubeBriefResult {
   success: boolean;
@@ -28,34 +30,48 @@ function youtubeBriefDir(): string {
   return resolve(repoRoot, ".claude", "skills", "youtube-daily-brief");
 }
 
-function pythonExe(): string {
-  return (
-    process.env.LAST30DAYS_PYTHON ||
-    "C:/Users/qubit/AppData/Local/Python/bin/python3.14.exe"
-  );
-}
-
 function childEnv(): NodeJS.ProcessEnv {
-  // The cron/API entrypoints load projects/daily-news-brief/.env into process.env;
-  // the Python scripts read GOOGLE_API_KEY / OPENAI_API_KEY straight from there.
-  return { ...process.env, PYTHONIOENCODING: "utf-8" };
+  // Read files on each run so adding a missing key does not require a restart.
+  let parsed: Record<string, string> = {};
+  for (const envPath of [resolve(process.cwd(), "..", "..", ".env"), resolve(process.cwd(), ".env")]) {
+    try {
+      parsed = { ...parsed, ...parseDotenv(readFileSync(envPath)) };
+    } catch {
+      // An environment file is optional when keys are already in process.env.
+    }
+  }
+  return { ...parsed, ...process.env, PYTHONIOENCODING: "utf-8" };
 }
 
-function runPythonScript(scriptRelPath: string, dir: string): Promise<void> {
+function runPythonScript(scriptRelPath: string, dir: string, env: NodeJS.ProcessEnv): Promise<void> {
   return new Promise((resolvePromise, reject) => {
-    const child = spawn(pythonExe(), [scriptRelPath], {
+    const python = pythonExecutable(
+      process.cwd(),
+      env.YOUTUBE_BRIEF_PYTHON || env.LAST30DAYS_PYTHON || env.RESEARCH_PYTHON
+    );
+    const child = spawn(python, [scriptRelPath], {
       cwd: dir,
-      env: childEnv(),
+      env,
       windowsHide: true,
     });
 
-    const stderr: string[] = [];
+    const output: string[] = [];
+    const redactKeys = (text: string) => {
+      for (const key of [env.GOOGLE_API_KEY, env.OPENAI_API_KEY]) {
+        if (key) text = text.split(key).join("[redacted]");
+      }
+      return text;
+    };
     child.stderr.on("data", (d: Buffer) => {
-      const line = d.toString();
-      stderr.push(line);
+      const line = redactKeys(d.toString());
+      output.push(line);
       process.stderr.write(line);
     });
-    child.stdout.on("data", (d: Buffer) => process.stdout.write(d.toString()));
+    child.stdout.on("data", (d: Buffer) => {
+      const line = redactKeys(d.toString());
+      output.push(line);
+      process.stdout.write(line);
+    });
 
     const timer = setTimeout(() => {
       child.kill();
@@ -72,7 +88,10 @@ function runPythonScript(scriptRelPath: string, dir: string): Promise<void> {
     child.on("close", (code) => {
       clearTimeout(timer);
       if (code === 0) resolvePromise();
-      else reject(new Error(`Script ${scriptRelPath} exited ${code}: ${stderr.join("")}`));
+      else {
+        const details = output.join("").trim().split(/\r?\n/).slice(-10).join("\n");
+        reject(new Error(`Script ${scriptRelPath} exited ${code}: ${details}`));
+      }
     });
   });
 }
@@ -91,10 +110,20 @@ export async function generateYoutubeBrief(date?: string): Promise<YoutubeBriefR
   console.log(`  Generating YOUTUBE INTELLIGENCE brief for ${targetDate}`);
   console.log(`========================================\n`);
 
+  const env = childEnv();
+  const missingKeys = ["GOOGLE_API_KEY", "OPENAI_API_KEY"].filter((key) => !env[key]?.trim());
+  if (missingKeys.length > 0) {
+    return {
+      success: false,
+      date: targetDate,
+      errors: [`Missing ${missingKeys.join(" and ")}. Add the key to the repo .env or projects/daily-news-brief/.env. GOOGLE_API_KEY must support YouTube Data API v3.`],
+    };
+  }
+
   // Step 1: Scrape channels
   console.log("[Step 1/4] Scraping YouTube channels...");
   try {
-    await runPythonScript("scripts/scrape_channels.py", dir);
+    await runPythonScript("scripts/scrape_channels.py", dir, env);
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     errors.push(`Scrape failed: ${msg}`);
@@ -104,7 +133,7 @@ export async function generateYoutubeBrief(date?: string): Promise<YoutubeBriefR
   // Step 2: Analyze with OpenAI
   console.log("\n[Step 2/4] Analyzing content with OpenAI...");
   try {
-    await runPythonScript("scripts/analyze_content.py", dir);
+    await runPythonScript("scripts/analyze_content.py", dir, env);
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     errors.push(`Analysis failed: ${msg}`);

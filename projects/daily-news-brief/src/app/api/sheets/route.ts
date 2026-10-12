@@ -1,12 +1,5 @@
 import { NextResponse } from "next/server";
-import { execFile } from "child_process";
-import { promisify } from "util";
-
-const execFileAsync = promisify(execFile);
-
-const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
-// Direct path to gws JS entry point — avoids .cmd wrapper PATH issues on Windows
-const GWS_SCRIPT = "C:/Users/qubit/AppData/Roaming/npm/node_modules/@googleworkspace/cli/run.js";
+import { appendToSheet, sheetsError } from "@/lib/google-sheets";
 
 interface SaveRequest {
   briefDate: string;
@@ -20,15 +13,11 @@ interface SaveRequest {
 }
 
 export async function POST(request: Request) {
-  if (!SPREADSHEET_ID) {
-    return NextResponse.json(
-      { error: "GOOGLE_SHEETS_SPREADSHEET_ID not configured" },
-      { status: 500 }
-    );
-  }
-
   try {
     const body: SaveRequest = await request.json();
+    if (!body.title?.trim() || !Array.isArray(body.keyPoints) || !Array.isArray(body.relatedTrends)) {
+      return NextResponse.json({ error: "A title, key points and related trends are required." }, { status: 400 });
+    }
 
     const now = new Date().toISOString().slice(0, 19).replace("T", " ");
     const keyPoints = body.keyPoints.join("\n");
@@ -47,32 +36,13 @@ export async function POST(request: Request) {
       "New",
     ];
 
-    const jsonValues = JSON.stringify([row]);
-
-    const { stdout, stderr } = await execFileAsync(
-      process.execPath, // use the same Node.js binary running Next.js
-      [
-        GWS_SCRIPT,
-        "sheets",
-        "+append",
-        "--spreadsheet",
-        SPREADSHEET_ID,
-        "--json-values",
-        jsonValues,
-      ],
-      { timeout: 15000 }
+    const saved = await appendToSheet(
+      "Content Opportunities",
+      ["Date Saved", "Brief Date", "Title", "Format", "Timeliness", "Angle", "Hook", "Key Points", "Related Trends", "Status"],
+      row
     );
-
-    // gws writes "Using keyring backend" to stderr — only treat as error if actual API error
-    if (stderr && stderr.includes('"code"') && stderr.includes('"message"')) {
-      console.error("[Sheets] gws error:", stderr);
-      return NextResponse.json({ error: "Failed to save to sheet" }, { status: 500 });
-    }
-
-    return NextResponse.json({ success: true, message: "Saved to Google Sheet" });
+    return NextResponse.json({ success: true, message: "Saved to Google Sheet", ...saved });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    console.error("[Sheets] Error:", message);
-    return NextResponse.json({ error: message }, { status: 500 });
+    return sheetsError(error);
   }
 }

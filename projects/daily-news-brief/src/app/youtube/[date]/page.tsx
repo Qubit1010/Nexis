@@ -38,21 +38,28 @@ export default async function YouTubePage({ params }: YouTubePageProps) {
     .where(eq(youtubeTrendingTopics.briefId, brief.id))
     .orderBy(asc(youtubeTrendingTopics.sortOrder))
     .all()
-    .map((t) => ({ ...t, channels: JSON.parse(t.channels) as string[] }));
+    .map((t) => ({ ...t, mentionCount: t.mentionCount ?? 0, channels: JSON.parse(t.channels) as string[] }));
 
   const videos = db
     .select()
     .from(youtubeTopVideos)
     .where(eq(youtubeTopVideos.briefId, brief.id))
     .orderBy(asc(youtubeTopVideos.sortOrder))
-    .all();
+    .all()
+    .map((v) => ({ ...v, viewCount: v.viewCount ?? 0 }));
 
   const channels = db
     .select()
     .from(youtubeChannelStats)
     .where(eq(youtubeChannelStats.briefId, brief.id))
     .orderBy(asc(youtubeChannelStats.sortOrder))
-    .all();
+    .all()
+    .map((c) => ({
+      ...c,
+      videosScraped: c.videosScraped ?? 0,
+      totalViews: c.totalViews ?? 0,
+      avgViews: c.avgViews ?? 0,
+    }));
 
   const ideas = db
     .select()

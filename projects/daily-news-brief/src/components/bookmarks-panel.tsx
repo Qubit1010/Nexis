@@ -13,11 +13,13 @@ export function BookmarksPanel({
   const { bookmarks, toggleBookmark, clearBookmarks } = useBookmarkContext();
   const [savingId, setSavingId] = useState<number | null>(null);
   const [savedIds, setSavedIds] = useState<Set<number>>(new Set());
+  const [saveErrors, setSaveErrors] = useState<Record<number, string>>({});
 
   const saveToSheet = useCallback(
     async (b: (typeof bookmarks)[0]) => {
       if (savedIds.has(b.id)) return;
       setSavingId(b.id);
+      setSaveErrors((prev) => ({ ...prev, [b.id]: "" }));
       try {
         const res = await fetch("/api/sheets/articles", {
           method: "POST",
@@ -30,10 +32,12 @@ export function BookmarksPanel({
             tldr: b.tldr,
           }),
         });
-        if (!res.ok) throw new Error("Failed to save");
+        const result = await res.json().catch(() => null);
+        if (!res.ok || !result?.success) throw new Error(result?.error || "Could not save to Google Sheets. Try again.");
         setSavedIds((prev) => new Set(prev).add(b.id));
       } catch (err) {
         console.error("Failed to save article to sheet:", err);
+        setSaveErrors((prev) => ({ ...prev, [b.id]: err instanceof Error ? err.message : "Could not reach the dashboard server. Try again." }));
       } finally {
         setSavingId(null);
       }
@@ -100,6 +104,7 @@ export function BookmarksPanel({
                 </a>
                 <div className="flex items-center gap-1 shrink-0 mt-0.5">
                   <button
+                    type="button"
                     onClick={() => saveToSheet(b)}
                     disabled={savingId === b.id || savedIds.has(b.id)}
                     className={`w-6 h-6 rounded flex items-center justify-center transition-all duration-200 ${
@@ -109,7 +114,8 @@ export function BookmarksPanel({
                           ? "text-muted-foreground/40 animate-pulse"
                           : "text-muted-foreground/40 hover:text-foreground hover:bg-accent/60"
                     }`}
-                    title={savedIds.has(b.id) ? "Saved to Google Sheet" : "Save to Google Sheet"}
+                    title={savedIds.has(b.id) ? "Saved to Google Sheets" : savingId === b.id ? "Saving to Google Sheets" : "Save to Google Sheets"}
+                    aria-label={savedIds.has(b.id) ? "Saved to Google Sheets" : "Save to Google Sheets"}
                   >
                     <svg
                       width="13"
@@ -130,6 +136,7 @@ export function BookmarksPanel({
                     </svg>
                   </button>
                   <button
+                    type="button"
                     onClick={() =>
                       toggleBookmark({
                         id: b.id,
@@ -142,6 +149,7 @@ export function BookmarksPanel({
                     }
                     className="text-amber-400 hover:text-red-400 transition-colors"
                     title="Remove bookmark"
+                    aria-label="Remove bookmark"
                   >
                     <svg
                       width="14"
@@ -164,6 +172,8 @@ export function BookmarksPanel({
               <p className="text-[13px] text-muted-foreground/60 mt-1 line-clamp-2">
                 {b.tldr}
               </p>
+              {savedIds.has(b.id) && <p role="status" className="text-[12px] text-green-400 mt-1">Saved to Google Sheets</p>}
+              {saveErrors[b.id] && <p role="alert" className="text-[12px] text-red-400 mt-1">{saveErrors[b.id]} Click the sheet icon to retry.</p>}
             </div>
           ))}
         </div>

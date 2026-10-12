@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     const result = await generateDailyBrief(date, opts);
 
     return NextResponse.json(result, {
-      status: result.success ? 200 : 207, // 207 = partial success
+      status: result.success ? 200 : result.briefId ? 207 : 500,
     });
   } catch (error) {
     const message =

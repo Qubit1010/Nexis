@@ -23,6 +23,7 @@ HISTORY_DIR.mkdir(exist_ok=True)
 load_dotenv(SCRIPTS_DIR / ".env", override=False)                        # direct-run convenience
 REPO_ROOT = SKILL_DIR.parents[2]                                          # .claude/skills/X -> repo root
 load_dotenv(REPO_ROOT / "projects" / "daily-news-brief" / ".env", override=False)
+load_dotenv(REPO_ROOT / ".env", override=False)
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")

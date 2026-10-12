@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
-export function EmptyState() {
+export function EmptyState({ date }: { date?: string }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -11,12 +11,16 @@ export function EmptyState() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/generate", { method: "POST" });
+      const res = await fetch("/api/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(date ? { date } : {}),
+      });
       const data = await res.json();
-      if (data.success || data.briefId) {
+      if (data.briefId && data.date) {
         window.location.href = `/brief/${data.date}`;
       } else {
-        setError(data.error || "Failed to generate brief");
+        setError(data.error || data.errors?.join("\n") || "Failed to generate brief");
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Network error");
@@ -32,11 +36,12 @@ export function EmptyState() {
           <span className="text-primary text-2xl font-bold">NB</span>
         </div>
         <h1 className="text-4xl font-bold tracking-tight">
-          Daily News Brief
+          {date ? `No brief for ${date}` : "Daily News Brief"}
         </h1>
         <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
-          Generate your first AI-powered news digest. We'll pull the latest
-          tech news and summarize it for you.
+          {date
+            ? "Generate a brief for this date to view it here."
+            : "Generate your first AI-powered news digest. We'll pull the latest tech news and summarize it for you."}
         </p>
       </div>
       <Button
@@ -51,7 +56,7 @@ export function EmptyState() {
             Generating your brief...
           </span>
         ) : (
-          "Generate Today's Brief"
+          date ? "Generate Brief" : "Generate Today's Brief"
         )}
       </Button>
       {error && (

@@ -1,13 +1,5 @@
 import { NextResponse } from "next/server";
-import { execFile } from "child_process";
-import { promisify } from "util";
-
-const execFileAsync = promisify(execFile);
-
-// Reuse the same spreadsheet, but append to a different tab
-const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
-const SHEET_TAB = process.env.GOOGLE_SHEETS_TOOLS_TAB || "Tool Content Drafts";
-const GWS_SCRIPT = "C:/Users/qubit/AppData/Roaming/npm/node_modules/@googleworkspace/cli/run.js";
+import { appendToSheet, sheetsConfig, sheetsError } from "@/lib/google-sheets";
 
 interface SaveRequest {
   briefDate: string;
@@ -24,15 +16,12 @@ interface SaveRequest {
 }
 
 export async function POST(request: Request) {
-  if (!SPREADSHEET_ID) {
-    return NextResponse.json(
-      { error: "GOOGLE_SHEETS_SPREADSHEET_ID not configured" },
-      { status: 500 }
-    );
-  }
-
   try {
     const body: SaveRequest = await request.json();
+    if (!body.name?.trim() || !Array.isArray(body.howToSteps) || !Array.isArray(body.tags)) {
+      return NextResponse.json({ error: "A tool name, steps and tags are required." }, { status: 400 });
+    }
+    const sheetTab = sheetsConfig().GOOGLE_SHEETS_TOOLS_TAB || "Tool Content Drafts";
 
     const now = new Date().toISOString().slice(0, 19).replace("T", " ");
     const howTo = body.howToSteps.map((s, i) => `${i + 1}. ${s}`).join("\n");
@@ -53,39 +42,16 @@ export async function POST(request: Request) {
       "New",
     ];
 
-    const jsonValues = JSON.stringify([row]);
-
-    const args = [
-      GWS_SCRIPT,
-      "sheets",
-      "+append",
-      "--spreadsheet",
-      SPREADSHEET_ID,
-      "--json-values",
-      jsonValues,
-      "--range",
-      `${SHEET_TAB}!A:L`,
-    ];
-
-    const { stderr } = await execFileAsync(process.execPath, args, {
-      timeout: 15000,
-    });
-
-    if (stderr && stderr.includes('"code"') && stderr.includes('"message"')) {
-      console.error("[ToolsSheets] gws error:", stderr);
-      return NextResponse.json(
-        { error: "Failed to save to sheet" },
-        { status: 500 }
-      );
-    }
+    const saved = await appendToSheet(sheetTab,
+      ["Date Saved", "Brief Date", "Tool", "URL", "Domain", "Pricing", "One Liner", "Best Use Case", "How To", "Audience Hook", "Tags", "Status"],
+      row);
 
     return NextResponse.json({
       success: true,
-      message: `Saved to "${SHEET_TAB}" tab`,
+      message: `Saved to "${sheetTab}" tab`,
+      ...saved,
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    console.error("[ToolsSheets] Error:", message);
-    return NextResponse.json({ error: message }, { status: 500 });
+    return sheetsError(error);
   }
 }

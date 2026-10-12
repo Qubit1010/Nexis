@@ -128,8 +128,8 @@ def get_transcript(video_id: str) -> str | None:
     def _fetch():
         try:
             from youtube_transcript_api import YouTubeTranscriptApi
-            transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
-            text = " ".join(entry["text"] for entry in transcript_list)
+            transcript = YouTubeTranscriptApi().fetch(video_id, languages=["en"])
+            text = " ".join(entry.text for entry in transcript)
             result[0] = text[:TRANSCRIPT_MAX_CHARS] if text else None
         except Exception:
             result[0] = None

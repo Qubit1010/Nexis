@@ -25,6 +25,7 @@ data/*.db-wal
 
 # Local digest state (machine-specific sheet id)
 data/digest-sheet.json
+data/dashboard.*.log
 
 # OS
 .DS_Store

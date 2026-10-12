@@ -254,6 +254,10 @@ def main():
 
     print(f"Loaded {len(scraped.get('videos', []))} videos from {RAW_VIDEOS_PATH.name}")
 
+    if not scraped.get("videos"):
+        print("Error: No videos were scraped. Check the YouTube API key and channel errors.")
+        sys.exit(1)
+
     history = load_history()
     print(f"Loaded {len(history)} days of history")
 
@@ -265,10 +269,10 @@ def main():
         print(f"\nSaved analysis to {ANALYSIS_PATH}")
     else:
         if ANALYSIS_PATH.exists():
-            print("\nKeeping existing (stale) analysis.json as fallback.")
+            print("\nAnalysis failed. Existing analysis.json was preserved; no fresh brief generated.")
         else:
             print("\nNo analysis generated. Check your API key and try again.")
-            sys.exit(1)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

@@ -40,6 +40,7 @@ export function SaveToSheetButton({ payload, className = "" }: SaveToSheetButton
   return (
     <span className="inline-flex items-center gap-1">
       <button
+        type="button"
         onClick={handleSave}
         disabled={state === "saving" || state === "saved"}
         aria-label={state === "error" ? `${errorMessage}. Click to retry.` : state === "saved" ? "Saved to Google Sheets" : "Save to Google Sheets"}
@@ -64,9 +65,10 @@ export function SaveToSheetButton({ payload, className = "" }: SaveToSheetButton
       </button>
       {state === "error" && (
         <span role="status" className="max-w-40 text-[10px] leading-tight text-red-400">
-          Save failed. Hover for details.
+          {errorMessage} Click to retry.
         </span>
       )}
+      {state === "saved" && <span role="status" className="text-[10px] text-green-400">Saved</span>}
     </span>
   );
 }

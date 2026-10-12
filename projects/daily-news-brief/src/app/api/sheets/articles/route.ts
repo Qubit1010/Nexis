@@ -1,11 +1,5 @@
 import { NextResponse } from "next/server";
-import { execFile } from "child_process";
-import { promisify } from "util";
-
-const execFileAsync = promisify(execFile);
-
-const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
-const GWS_SCRIPT = "C:/Users/qubit/AppData/Roaming/npm/node_modules/@googleworkspace/cli/run.js";
+import { appendToSheet, sheetsError } from "@/lib/google-sheets";
 
 interface SaveArticleRequest {
   briefDate: string;
@@ -16,15 +10,11 @@ interface SaveArticleRequest {
 }
 
 export async function POST(request: Request) {
-  if (!SPREADSHEET_ID) {
-    return NextResponse.json(
-      { error: "GOOGLE_SHEETS_SPREADSHEET_ID not configured" },
-      { status: 500 }
-    );
-  }
-
   try {
     const body: SaveArticleRequest = await request.json();
+    if (!body.title?.trim() || !body.url?.trim()) {
+      return NextResponse.json({ error: "An article title and URL are required." }, { status: 400 });
+    }
 
     const now = new Date().toISOString().slice(0, 19).replace("T", " ");
 
@@ -38,40 +28,13 @@ export async function POST(request: Request) {
       "New",
     ];
 
-    // Use raw values.append API to target "Saved Articles" sheet tab
-    const params = JSON.stringify({
-      spreadsheetId: SPREADSHEET_ID,
-      range: "Saved Articles!A1",
-      valueInputOption: "USER_ENTERED",
-    });
-
-    const json = JSON.stringify({ values: [row] });
-
-    const { stderr } = await execFileAsync(
-      process.execPath,
-      [
-        GWS_SCRIPT,
-        "sheets",
-        "spreadsheets",
-        "values",
-        "append",
-        "--params",
-        params,
-        "--json",
-        json,
-      ],
-      { timeout: 15000 }
+    const saved = await appendToSheet(
+      "Saved Articles",
+      ["Date Saved", "Brief Date", "Title", "Source", "URL", "TLDR", "Status"],
+      row
     );
-
-    if (stderr && stderr.includes('"code"') && stderr.includes('"message"')) {
-      console.error("[Sheets/Articles] gws error:", stderr);
-      return NextResponse.json({ error: "Failed to save to sheet" }, { status: 500 });
-    }
-
-    return NextResponse.json({ success: true, message: "Article saved to Google Sheet" });
+    return NextResponse.json({ success: true, message: "Article saved to Google Sheet", ...saved });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    console.error("[Sheets/Articles] Error:", message);
-    return NextResponse.json({ error: message }, { status: 500 });
+    return sheetsError(error);
   }
 }

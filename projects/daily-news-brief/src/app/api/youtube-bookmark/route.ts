@@ -1,11 +1,5 @@
 import { NextResponse } from "next/server";
-import { execFile } from "child_process";
-import { promisify } from "util";
-
-const execFileAsync = promisify(execFile);
-const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
-const GWS_SCRIPT =
-  "C:/Users/qubit/AppData/Roaming/npm/node_modules/@googleworkspace/cli/run.js";
+import { appendToSheet, sheetsError } from "@/lib/google-sheets";
 const SHEET_TAB = "Youtube bookmarked";
 
 function formatDuration(seconds: number): string {
@@ -18,15 +12,11 @@ function formatDuration(seconds: number): string {
 }
 
 export async function POST(request: Request) {
-  if (!SPREADSHEET_ID) {
-    return NextResponse.json(
-      { error: "GOOGLE_SHEETS_SPREADSHEET_ID not configured" },
-      { status: 500 }
-    );
-  }
-
   try {
     const body = await request.json();
+    if (!["video", "idea", "topic"].includes(body.type) || !(body.type === "topic" ? body.topic : body.title)?.trim()) {
+      return NextResponse.json({ error: "An item type and title are required." }, { status: 400 });
+    }
     const dateSaved = new Date().toISOString().slice(0, 10);
 
     let row: (string | number)[];
@@ -69,51 +59,13 @@ export async function POST(request: Request) {
       row = [dateSaved, body.topic, channels, "", "", "", "", "", "", "New"];
     }
 
-    const params = JSON.stringify({
-      spreadsheetId: SPREADSHEET_ID,
-      range: `${SHEET_TAB}!A1`,
-      valueInputOption: "USER_ENTERED",
-    });
-    const json = JSON.stringify({ values: [row] });
-
-    const { stderr } = await execFileAsync(
-      process.execPath,
-      [
-        GWS_SCRIPT,
-        "sheets",
-        "spreadsheets",
-        "values",
-        "append",
-        "--params",
-        params,
-        "--json",
-        json,
-      ],
-      { timeout: 15000 }
+    const saved = await appendToSheet(
+      SHEET_TAB,
+      ["Date Saved", "Title", "Channel", "URL", "Views", "Likes", "Eng Rate", "Duration", "Published Date", "Status"],
+      row
     );
-
-    if (stderr && stderr.includes('"code"') && stderr.includes('"message"')) {
-      console.error("[YT Bookmark] gws error:", stderr);
-      return NextResponse.json({ error: "Failed to save to sheet" }, { status: 500 });
-    }
-
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, ...saved });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    console.error("[YT Bookmark] Error:", message);
-    const stderr =
-      error && typeof error === "object" && "stderr" in error
-        ? String(error.stderr)
-        : "";
-    if (/invalid_grant|authentication failed|auth error/i.test(`${message}\n${stderr}`)) {
-      return NextResponse.json(
-        { error: "Google Sheets sign-in expired. Reauthenticate gws on this machine, then retry." },
-        { status: 503 }
-      );
-    }
-    return NextResponse.json(
-      { error: "Google Sheets could not save this item. Check sheet access and try again." },
-      { status: 500 }
-    );
+    return sheetsError(error);
   }
 }
