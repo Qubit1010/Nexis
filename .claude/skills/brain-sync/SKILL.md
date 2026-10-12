@@ -5,7 +5,7 @@ description: Two-way sync between Nexis and the agency-brain Obsidian vault (the
 
 # Brain Sync
 
-Keeps the Nexis repo and the agency-brain vault (`C:\Users\qubit\OneDrive\Documents\agency-brain`, env `OBSIDIAN_VAULT_PATH`) in step. The vault is an additional working directory — read/write it directly by absolute path.
+Keeps the Nexis repo and the agency-brain vault in step. Set `OBSIDIAN_VAULT_PATH` to override the default sibling directory `../agency-brain` (on this device, `D:\agency-brain`). The vault is an additional working directory, read/write it directly by absolute path.
 
 ## The contract (never violate)
 

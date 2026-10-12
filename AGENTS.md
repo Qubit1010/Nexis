@@ -126,6 +126,21 @@ equivalent MCP server for Codex if a task genuinely needs one.
   full set, they live in `.claude/rules/` and are worth a `Read` for anything
   touching skill creation, session closeout, or Google Docs formatting gotchas.
 
+## Second Brain (Agency AI OS)
+
+The agency knowledge vault is the sibling directory `../agency-brain`, currently
+`D:\agency-brain`. `OBSIDIAN_VAULT_PATH` overrides the sync script's sibling default.
+Read its `CRITICAL_FACTS.md` as the ground truth bridge for agency work, then use
+`wiki/index.md` to find the relevant knowledge page. Answer from `wiki/`, not `raw/`.
+
+After `context/` or `decisions/log.md` changes, follow
+`.claude/skills/brain-sync/SKILL.md`: check drift, mirror only `context/**/*.md`, and
+union-merge decisions without losing past entries. Resolve genuine context
+conflicts with Aleem before overwriting. Distill evergreen knowledge into the
+vault's `wiki/` and refresh `CRITICAL_FACTS.md` through the ingest workflow.
+Keep CRMs, finances, `.env`, `client-projects/`, and lead sheets out of the vault.
+The reusable setup SOP is `references/sops/build-a-second-brain.md`.
+
 ## Archives
 
 Don't delete old material. Move it to `archives/` instead.

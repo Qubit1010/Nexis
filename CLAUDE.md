@@ -75,13 +75,13 @@ Active workstreams live in `projects/`. Each active project should get a folder 
 
 NexusPoint has a dedicated **second brain** — a standalone Obsidian vault + Karpathy-style LLM Wiki + Graphify knowledge graph, separate from this repo but **live-connected** (an additional working directory; read/write it by absolute path).
 
-- **Location:** `C:\Users\qubit\OneDrive\Documents\agency-brain` (env var `OBSIDIAN_VAULT_PATH`; its own `CLAUDE.md`, `context/`, `decisions/`, `raw/`, `wiki/`, `skills/`, `clients/`).
+- **Location:** sibling directory `../agency-brain`, currently `D:\agency-brain` (env var `OBSIDIAN_VAULT_PATH`; its own `CLAUDE.md`, `context/`, `decisions/`, `raw/`, `wiki/`, `skills/`, `clients/`).
 - **Ground truth facts:** the vault's `CRITICAL_FACTS.md` — imported below. Keep it under ~40 lines; it is the one always-loaded bridge between the repo and the vault.
 
-@C:\Users\qubit\OneDrive\Documents\agency-brain\CRITICAL_FACTS.md
+@../agency-brain/CRITICAL_FACTS.md
 
 - **When to consult the brain:** before agency-knowledge tasks (positioning, offers, proposals, case studies, client history), read the relevant `wiki/` page — `wiki/index.md` is the catalog. Answer from `wiki/`, not `raw/`.
-- **When to update the brain:** after `context/` or `decisions/log.md` change here, or when evergreen knowledge is produced (a new offer, case study, strategic call), run the `brain-sync` skill (`.claude/skills/brain-sync/`): `--check` for drift, `--push`/`--pull` to mirror `context/` + `decisions/log.md`, `--ingest` to distill new knowledge into `wiki/` and refresh `CRITICAL_FACTS.md`.
+- **When to update the brain:** after `context/` or `decisions/log.md` change here, or when evergreen knowledge is produced (a new offer, case study, strategic call), follow `brain-sync` (`.claude/skills/brain-sync/`): `--check` for drift, `--push`/`--pull` to mirror `context/` + `decisions/log.md`, then follow its ingest workflow to distill new knowledge into `wiki/` and refresh `CRITICAL_FACTS.md`.
 - **What it holds:** distilled, evergreen agency knowledge — overview, offer/positioning, services, proposals, Upwork keywords, portfolio, team, strategy, and a 73-project case-study log. Live/sensitive data (CRMs, finances, `.env`, `client-projects/`) is deliberately kept OUT and never syncs.
 - **Reusable build SOP:** `references/sops/build-a-second-brain.md` — the step-by-step playbook (also in the vault at `agency-brain/skills/build-a-second-brain.md`). Use it to spin up a brain for a **client** or **team member** (each gets its own scoped vault + its own `OBSIDIAN_VAULT_PATH`). Captures the Graphify gotchas (`--backend openai`, exclude `.obsidian/plugins/`, the dead global Anthropic key).
 

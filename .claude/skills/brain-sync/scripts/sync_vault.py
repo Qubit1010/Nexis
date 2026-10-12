@@ -41,16 +41,17 @@ from datetime import datetime
 
 NEXIS = Path(__file__).resolve().parents[4]
 VAULT = Path(os.environ.get("OBSIDIAN_VAULT_PATH")
-             or r"C:\Users\qubit\OneDrive\Documents\agency-brain")
+             or NEXIS.parent / "agency-brain")
 
 DECISIONS_KEY = "decisions/log.md"
 
 
 def file_md5(path: Path) -> str:
+    """Hash Markdown content with universal newlines for Windows/Git checkouts."""
     h = hashlib.md5()
-    with open(path, "rb") as fh:
-        for chunk in iter(lambda: fh.read(65536), b""):
-            h.update(chunk)
+    with open(path, "r", encoding="utf-8") as fh:
+        for chunk in iter(lambda: fh.read(65536), ""):
+            h.update(chunk.encode("utf-8"))
     return h.hexdigest()
 
 
@@ -412,6 +413,13 @@ def selftest():
         cmd_mirror("pull", dry=False)
         assert (NEXIS / "context/vault-note.md").read_text(encoding="utf-8") == "vault only"
         assert cmd_check() == 0, "must be in sync after push+pull"
+
+        # A Windows clone may use CRLF while the other checkout uses LF.
+        (NEXIS / "context/a.md").write_bytes(b"line one\nline two\n")
+        (VAULT / "context/a.md").write_bytes(b"line one\r\nline two\r\n")
+        assert cmd_check() == 0, "line endings alone must not count as drift"
+        (VAULT / "context/a.md").write_bytes(b"line one\r\nchanged line\r\n")
+        assert cmd_check() == 1, "content changes must still count as drift"
 
         # ingest staleness detector: fresh baseline, then a new skill flips it
         (NEXIS / ".claude" / "skills" / "a").mkdir(parents=True)

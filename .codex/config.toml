@@ -3,4 +3,4 @@ inherit = "core"
 
 [shell_environment_policy.set]
 PYTHONIOENCODING = "utf-8"
-OBSIDIAN_VAULT_PATH = 'C:\Users\qubit\OneDrive\Documents\agency-brain'
+OBSIDIAN_VAULT_PATH = 'D:\agency-brain'
