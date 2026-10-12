@@ -42,6 +42,9 @@ pushes from the checkout that contains the selected folder, usually the main che
 skip `agency/` and other gitignored folders. Use that checkout's script and
 `folder_ids.json`; do not treat a missing worktree folder as an empty backup.
 
+Environment files, private keys, OAuth tokens and credential JSON files are excluded
+from uploads and pulls, including archived copies. A push with upload errors exits nonzero.
+
 ---
 
 ## Modes
@@ -70,6 +73,10 @@ python sync.py --setup
 
 This creates `Work / Nexis Business Context / {folder}` on Drive and saves folder IDs to `folder_ids.json`. Requires `gws auth login` to be authenticated first.
 
+Rerun `--setup` when a synced folder is added, even if `folder_ids.json` already exists, so its cached ID is available before pushing or pulling.
+
+On a new device, cloning Git does not restore the private folders. Pull missing files from the existing Drive backup after setup. If `agency/` has never been backed up, run setup and `--push --folder agency` on the device that still has it first. An empty Drive folder cannot recover files from another device.
+
 If `folder_ids.json` doesn't exist yet, always run `--setup` before any push or check.
 
 ---
@@ -83,7 +90,9 @@ The script reuses the existing GWS OAuth token — no separate login needed as l
 3. `~\.config\gws\token.json`
 4. `.claude/skills/gdrive-sync/scripts/gdrive_token.json` (standalone fallback)
 
-If all fail: tell the user to run `gws auth login` and retry.
+If cached tokens are unavailable, the script uses `gws auth export --unmasked` to
+load the CLI's encrypted credentials in memory. It never prints or saves that export.
+If authentication fails: tell the user to run `gws auth login` and retry.
 
 ---
 

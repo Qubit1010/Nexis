@@ -22,6 +22,7 @@ import hashlib
 import argparse
 import mimetypes
 import subprocess
+import shutil
 from pathlib import Path
 
 # Windows consoles default to cp1252, which cannot encode the arrows in this script's
@@ -38,6 +39,7 @@ from datetime import datetime, timezone
 try:
     from google.oauth2.credentials import Credentials
     from google.auth.transport.requests import Request
+    from google.auth.exceptions import GoogleAuthError
     from google_auth_oauthlib.flow import InstalledAppFlow
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
@@ -98,6 +100,31 @@ GWS_CLIENT_SECRET = Path.home() / ".config" / "gws" / "client_secret.json"
 STANDALONE_TOKEN  = SCRIPTS_DIR / "gdrive_token.json"
 
 
+def _load_gws_credentials() -> Credentials | None:
+    """Reuse encrypted CLI credentials in memory without writing a plain token."""
+    npm_dir = Path(os.environ.get("APPDATA", "")) / "npm"
+    cli_dir = npm_dir / "node_modules" / "@googleworkspace" / "cli"
+    entry = next((cli_dir / name for name in ("run.js", "run-gws.js")
+                  if (cli_dir / name).is_file()), None)
+    if entry and shutil.which("node"):
+        command = [shutil.which("node"), str(entry)]
+    elif os.name != "nt" and shutil.which("gws"):
+        command = [shutil.which("gws")]
+    else:
+        return None
+    try:
+        result = subprocess.run(
+            [*command, "auth", "export", "--unmasked"],
+            capture_output=True, text=True, timeout=30, check=True,
+        )
+        creds = Credentials.from_authorized_user_info(json.loads(result.stdout), SCOPES)
+        if not creds.valid:
+            creds.refresh(Request())
+        return creds
+    except (OSError, ValueError, subprocess.SubprocessError, GoogleAuthError):
+        return None
+
+
 def get_drive_service():
     # Try cached token files first
     token_locations = [
@@ -111,6 +138,10 @@ def get_drive_service():
             creds = _load_token(loc)
             if creds:
                 return build("drive", "v3", credentials=creds, cache_discovery=False)
+
+    creds = _load_gws_credentials()
+    if creds:
+        return build("drive", "v3", credentials=creds, cache_discovery=False)
 
     # Fall back to interactive OAuth using GWS client_secret.json
     if GWS_CLIENT_SECRET.exists():
@@ -188,6 +219,15 @@ def file_md5(path: Path) -> str:
     return h.hexdigest()
 
 
+def is_secret_file(path: Path) -> bool:
+    name = path.name.casefold()
+    return (name.startswith(".env")
+            or path.suffix.casefold() in {".key", ".pem", ".secret"}
+            or name in {"token.json", "gdrive_token.json"}
+            or name.endswith("_token.json")
+            or (name.endswith(".json") and name.startswith(("credentials", "client_secret"))))
+
+
 def ensure_parent_folder(svc, rel_parts: tuple[str, ...], root_id: str) -> str:
     """Walk/create the subfolder chain for a nested file path."""
     current = root_id
@@ -260,6 +300,7 @@ def cmd_setup(svc):
 # ── push ──────────────────────────────────────────────────────────────────────
 def cmd_push(svc, ids: dict, folders: list[str], dry_run: bool):
     stats = {"uploaded": 0, "updated": 0, "skipped": 0, "errors": 0}
+    excluded = 0
 
     for folder in folders:
         if folder not in ids["subfolders"]:
@@ -278,6 +319,9 @@ def cmd_push(svc, ids: dict, folders: list[str], dry_run: bool):
 
         for item in sorted(local_root.rglob("*")):
             if item.is_dir():
+                continue
+            if is_secret_file(item):
+                excluded += 1
                 continue
             rel      = item.relative_to(local_root)
             rel_str  = rel.as_posix()
@@ -318,7 +362,8 @@ def cmd_push(svc, ids: dict, folders: list[str], dry_run: bool):
 
     prefix = "[DRY RUN] " if dry_run else ""
     print(f"\n{prefix}Push complete — uploaded: {stats['uploaded']}, updated: {stats['updated']}, "
-          f"skipped: {stats['skipped']}, errors: {stats['errors']}")
+          f"skipped: {stats['skipped']}, errors: {stats['errors']}, secret files excluded: {excluded}")
+    return stats
 
 
 # ── check (two-way awareness) ─────────────────────────────────────────────────
@@ -342,6 +387,8 @@ def cmd_check(svc, ids: dict, folders: list[str]):
         drive_files = list_drive_folder(svc, drive_root)
 
         for rel_str, dfile in drive_files.items():
+            if is_secret_file(Path(rel_str)):
+                continue
             local_path = local_root / rel_str.replace("/", os.sep)
 
             if not local_path.exists():
@@ -379,11 +426,16 @@ def cmd_check(svc, ids: dict, folders: list[str]):
 # ── pull ──────────────────────────────────────────────────────────────────────
 def cmd_pull(svc, ids: dict, files: list[tuple[str, str, str]]):
     """Download specified files from Drive to local."""
+    pulled = 0
     for folder, rel_str, file_id in files:
+        if is_secret_file(Path(rel_str)):
+            print(f"  excluded secret file: {folder}/{rel_str}")
+            continue
         local_path = REPO_ROOT / folder / rel_str.replace("/", os.sep)
         print(f"  pulling: {folder}/{rel_str}")
         download_file(svc, file_id, local_path)
-    print(f"\nPulled {len(files)} file(s).")
+        pulled += 1
+    print(f"\nPulled {pulled} file(s).")
 
 
 # ── schedule ──────────────────────────────────────────────────────────────────
@@ -472,7 +524,9 @@ def main():
     folders = [args.folder] if args.folder else SYNC_FOLDERS
 
     if args.push:
-        cmd_push(svc, ids, folders, args.dry_run)
+        stats = cmd_push(svc, ids, folders, args.dry_run)
+        if stats["errors"]:
+            sys.exit(1)
 
     if args.check or (args.pull and not args.files):
         drive_only, drive_newer = cmd_check(svc, ids, folders)
