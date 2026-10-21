@@ -14,7 +14,8 @@ on 2026-10-21, about 40% above Quetta (see `decisions/log.md`).
 | `assets/fonts/` | Mokoto, Conthrax, Inter copied from the website source (licensed for NexusPoint use only) | No |
 | `deliverables/` | Finished PDFs and the prospect workbook | No, regenerate |
 
-Prospect data and the display fonts stay out of git: the Nexis repo is public.
+Prospect data and the display fonts stay out of git: the Nexis repo is public. `data/` and `research/`
+are backed up to Google Drive by `gdrive-sync` (`--push --folder projects/islamabad-local-market/data`).
 
 ## Rebuild
 

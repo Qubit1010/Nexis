@@ -33,6 +33,11 @@ Two-way sync between Nexis private folders and **Work / Nexis Business Context**
 | `output/` | Nexis Business Context/output/ |
 | `tmp/` | Nexis Business Context/tmp/ |
 | `research/` | Nexis Business Context/research/ |
+| `projects/islamabad-local-market/data/` | Nexis Business Context/projects/islamabad-local-market/data/ (one Drive folder named by the path) |
+| `projects/islamabad-local-market/research/` | Nexis Business Context/projects/islamabad-local-market/research/ |
+
+Nested paths work like `.claude/rules`: add the repo-relative path to `SYNC_FOLDERS` in `sync.py`, then rerun `--setup`
+to create its Drive folder before pushing.
 
 Drive is a **permanent backup** — files are never deleted from Drive, even if removed locally.
 
