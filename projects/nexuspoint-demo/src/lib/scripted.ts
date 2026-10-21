@@ -36,6 +36,8 @@ const I = {
   fee: /\b(fee|fees|baqi|due|dues|challan)\b|فیس|باقی|واجب/i,
   admission: /\b(admission|dakhla|enroll|seat|seats)\b|داخلہ|داخلے/i,
   thanks: /\b(thanks|thank you|shukriya|ok|okay|theek)\b|شکریہ|ٹھیک/i,
+  legal: /\b(noc|legal|approved|approval|transfer|mutation|registry|intiqal|possession|tax)\b|این او سی|قانونی|منظور|انتقال|رجسٹری|ٹیکس|قبضہ/i,
+  property: /\b(plot|house|apartment|flat|marla|kanal|crore|lakh|society|site visit|property|file)\b|پلاٹ|گھر|مرلہ|کنال|کروڑ|لاکھ|سوسائٹی|پراپرٹی/i,
 };
 
 export function introLine(lang: Lang, name: string): string {
@@ -155,6 +157,34 @@ export function scriptedDecide(
           { key: "Due", value: "10 October" },
         ],
       },
+    };
+  if (sector === "real-estate" && has(t, I.legal))
+    return {
+      ...base,
+      stage: "needs_human",
+      reply:
+        intro +
+        say(
+          lang,
+          "Legal, NOC, transfer and tax questions are answered by an agent who checks the documents. I have passed this to an agent.",
+          "Legal, NOC, transfer aur tax ke sawal agent kaghzat dekh kar batata hai. Main ne agent ko bata diya hai.",
+          "قانونی، این او سی، انتقال اور ٹیکس کے سوالات کا جواب ایجنٹ کاغذات دیکھ کر دیتا ہے۔ ایجنٹ کو بتا دیا گیا ہے۔",
+        ),
+      summary: "Legal or NOC question; needs an agent.",
+    };
+  if (sector === "real-estate" && (has(t, I.price) || has(t, I.property)))
+    return {
+      ...base,
+      stage: has(t, I.price) ? "needs_human" : "qualifying",
+      reply:
+        intro +
+        say(
+          lang,
+          "An agent confirms prices and availability. Share your budget, preferred society and plot size, and pick a site-visit time in the buyer portal.",
+          "Prices aur availability agent confirm karta hai. Apna budget, society aur plot size batayein, aur buyer portal mein site visit ka waqt chunein.",
+          "قیمت اور دستیابی ایجنٹ کنفرم کرتا ہے۔ اپنا بجٹ، سوسائٹی اور پلاٹ سائز بتائیں، اور خریدار پورٹل میں سائٹ وزٹ کا وقت منتخب کریں۔",
+        ),
+      summary: "Property enquiry; qualification and visit in the buyer portal.",
     };
   if (has(t, I.price))
     return {

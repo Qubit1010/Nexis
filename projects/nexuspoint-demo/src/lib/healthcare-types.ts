@@ -78,7 +78,7 @@ export type ClinicalRecord = {
   updated_at: string;
 };
 export type Choice = {
-  kind: "doctor" | "slot" | "mode" | "cancel" | "reschedule" | "food_item" | "food_mode" | "food_confirm" | "food_clear" | "table_party" | "table_time" | "table_confirm" | "school_student" | "school_program" | "school_visit" | "school_time" | "school_confirm";
+  kind: "doctor" | "slot" | "mode" | "cancel" | "reschedule" | "food_item" | "food_mode" | "food_confirm" | "food_clear" | "table_party" | "table_time" | "table_confirm" | "school_student" | "school_program" | "school_visit" | "school_time" | "school_confirm" | "re_budget" | "re_area" | "re_size" | "re_timeline" | "re_overseas" | "re_listing" | "re_visit" | "re_time" | "re_confirm" | "re_restart";
   value: string;
   label: string;
 };

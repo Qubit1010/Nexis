@@ -4,6 +4,8 @@ import QRCode from "qrcode";
 import { authorised, expired, getBusiness, logEvent } from "@/lib/db";
 import { scriptedDecide } from "@/lib/scripted";
 import bundles from "@/data/bundles.json";
+import { tiersFor, type Bundles } from "@/lib/bundles";
+import { cityOf, marketOf } from "@/lib/city";
 import sectors from "@/data/sectors.json";
 import Hub from "@/components/Hub";
 import ChatMode from "@/components/ChatMode";
@@ -39,7 +41,7 @@ export default async function Page({ params, searchParams }: Props) {
 
   if (sp.chat === "1") {
     await logEvent(b.slug, "chat_view");
-    return <ChatMode slug={b.slug} token={b.token} name={b.name} lang={lang} prompts={[...sector.suggested_prompts[lang]]} healthcare={b.sector==="healthcare"} restaurant={b.sector==="food"} school={b.sector==="education"} />;
+    return <ChatMode slug={b.slug} token={b.token} name={b.name} lang={lang} prompts={[...sector.suggested_prompts[lang]]} healthcare={b.sector==="healthcare"} restaurant={b.sector==="food"} school={b.sector==="education"} realEstate={b.sector==="real-estate"} />;
   }
 
   // Snapshot mode: a pre-played conversation for the offline copy (no network needed to show it).
@@ -58,7 +60,7 @@ export default async function Page({ params, searchParams }: Props) {
     <Hub
       biz={{ slug: b.slug, token: b.token, code: b.code, name: b.name, sector: b.sector, expires_at: b.expires_at,
         created_at: b.created_at, profile: b.profile, xray: b.xray, site: b.site, roi: b.roi, health: b.health }}
-      tiers={bundles.sectors[b.sector as keyof typeof bundles.sectors]}
+      tiers={tiersFor(bundles as Bundles, marketOf(b.profile), b.sector)} city={cityOf(b.profile)}
       sector={{ noun: sector.noun, site: sector.site, prompts: sector.suggested_prompts }}
       qr={qr} chatUrl={chatUrl} viaWhatsApp={!!wa} initialLang={lang} snapshot={snapshot}
     />

@@ -1,0 +1,153 @@
+{% set ur = lang == 'ur' %}{% set o = s.op[lang] %}{% set i = kit.i18n[lang] %}
+{% set title = "NexusPoint · " ~ s.name ~ " · Islamabad" %}
+{% include "_head.html.j2" %}
+<style>
+  .page > * { flex: none; }
+  .page > .body { flex: 1 1 auto; }
+  .hero { padding-bottom: 5mm; }
+  .hero .topbar { padding-top: 7.5mm; }
+  .phone .msg { font-size: 7.2pt; padding: 1.4mm 2.2mm 1.1mm; margin-bottom: 1.4mm; }
+  [lang="ur"] .phone .msg { font-size: 7.4pt; line-height: 2.15; }
+  .phone .ph-top { padding-bottom: 2mm; margin-bottom: 2mm; }
+  .hero .aud { margin-top: 5.5mm; display: flex; align-items: center; gap: 2.4mm; color: var(--blue); }
+  .hero h1 { font: 400 20pt/1.13 var(--display); margin-top: 3mm; max-width: 150mm; letter-spacing: .005em; }
+  [lang="ur"] .hero h1 { font: 700 19pt/1.9 var(--urdu); max-width: 170mm; margin-top: 2mm; }
+  .hero .sub { color: var(--t2); font-size: 9.2pt; line-height: 1.55; margin-top: 3.5mm; max-width: 172mm; }
+  [lang="ur"] .hero .sub { font-size: 8.8pt; line-height: 2.3; max-width: 172mm; margin-top: 2mm; }
+  .hero .pain { margin-top: 3.5mm; display: grid; grid-template-columns: 1mm 1fr; gap: 3.5mm; max-width: 160mm; }
+  .hero .pain::before { content: ""; background: var(--blue); }
+  .hero .pain p { font-size: 8.6pt; color: var(--white); line-height: 1.5; }
+  .hero .pain .label { color: var(--t3); display: block; margin-bottom: 1.2mm; }
+  [lang="ur"] .hero .pain p { line-height: 2; }
+  .hero .point { right: 15mm; top: 26mm; }
+  [lang="ur"] .hero .point { right: auto; left: 15mm; }
+
+  .body { padding-top: 5mm; padding-bottom: 3.5mm; display: flex; flex-direction: column; gap: 3.5mm; flex: 1; }
+  .cols { display: grid; grid-template-columns: 1fr 66mm; gap: 7mm; }
+  .pillars { display: grid; gap: 3mm; }
+  .lead { font: 400 10.5pt/1.5 var(--sans); color: var(--ink); margin-bottom: 4.5mm; max-width: 110mm; }
+  [lang="ur"] .lead { font: 400 10.5pt/2 var(--urdu); }
+  .pil { display: grid; grid-template-columns: 8mm 1fr; gap: 2mm; }
+  .pil .n { font: 400 9pt/1.4 var(--display); color: var(--blue-text); }
+  .pil h3 { font: 600 9.6pt/1.35 var(--sans); }
+  [lang="ur"] .pil h3 { font: 700 9.6pt/2.1 var(--urdu); }
+  .pil p { font-size: 8.4pt; color: var(--ink-3); line-height: 1.45; margin-top: .4mm; }
+  [lang="ur"] .pil p { font-size: 8.2pt; line-height: 2.15; }
+  .setup h4 { margin-bottom: 1mm; }
+  .tiers-wrap .head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2.5mm; }
+  .tiers-wrap .head .label { color: var(--ink-3); }
+  .tier ul { margin-top: 2.2mm; }
+  .tier .plus { font-size: 6.8pt; color: var(--blue-text); margin-top: 2.4mm; }
+  .tier.rec .plus { color: var(--blue); }
+  .tier .plus + ul { margin-top: 1mm; }
+  .tier li { font-size: 7pt; line-height: 1.35; color: var(--ink-2); padding: .8mm 0; border-top: 1px solid var(--rule); }
+  .tier.rec li { color: var(--t2); border-top-color: #222; }
+  [lang="ur"] .tier li { font-size: 7.2pt; line-height: 2.1; }
+  .pilot { font-size: 7.4pt; color: var(--ink-2); line-height: 1.5; margin-top: -1.5mm; }
+  [lang="ur"] .pilot { font-size: 7.4pt; line-height: 2.2; }
+  .pilot b { font: 400 6.2pt/1 var(--loud); letter-spacing: .14em; text-transform: uppercase; color: var(--blue-text); margin-right: 1.2mm; }
+  [lang="ur"] .pilot b { font: 700 8pt/1 var(--urdu); letter-spacing: 0; margin: 0 0 0 1.2mm; }
+  .terms { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; font-size: 7.4pt; color: var(--ink-2); line-height: 1.45; }
+  [lang="ur"] .pilot { font-size: 7.4pt; color: var(--ink-2); line-height: 1.5; margin-top: -1.5mm; }
+  [lang="ur"] .pilot { font-size: 7.4pt; line-height: 2.2; }
+  .pilot b { font: 400 6.2pt/1 var(--loud); letter-spacing: .14em; text-transform: uppercase; color: var(--blue-text); margin-right: 1.2mm; }
+  [lang="ur"] .pilot b { font: 700 8pt/1 var(--urdu); letter-spacing: 0; margin: 0 0 0 1.2mm; }
+  .terms { font-size: 7.8pt; line-height: 1.9; }
+  .terms b { font: 400 6.2pt/1.4 var(--loud); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); display: block; margin-bottom: .6mm; }
+
+  .close { padding: 4mm 14mm; display: grid; grid-template-columns: 1fr auto; gap: 8mm; align-items: center; }
+  .close h2 { font: 400 12pt/1.15 var(--display); }
+  .close .qr { width: 21mm; height: 21mm; }
+  [lang="ur"] .close h2 { font: 700 14pt/1.7 var(--urdu); }
+  .close p { color: var(--t2); font-size: 8.2pt; line-height: 1.5; margin-top: 1.6mm; max-width: 145mm; }
+  [lang="ur"] .close p { line-height: 2.2; font-size: 7.8pt; }
+  .proofbox { margin-top: 4mm; padding-top: 3.5mm; border-top: 1px solid var(--rule); }
+  .proofbox .stats { display: flex; gap: 7mm; }
+  .proofbox .stat .v { font-size: 14pt; }
+  .proofbox .stat .l { font-size: 6.8pt; max-width: 30mm; }
+  [lang="ur"] .proofbox .stat .l { font-size: 7.2pt; line-height: 1.7; }
+  .proofbox .q { font-size: 8pt; line-height: 1.5; color: var(--ink-2); margin-top: 3.5mm; font-style: italic; }
+  [lang="ur"] .proofbox .q { font-style: normal; line-height: 1.95; }
+  .proofbox .q span { display: block; font: 400 6pt/1.4 var(--loud); letter-spacing: .12em; text-transform: uppercase; font-style: normal; color: var(--ink-3); margin-top: 1.2mm; }
+  [lang="ur"] .proofbox .q span { font: 400 7pt/1.6 var(--urdu); letter-spacing: 0; }
+  .close .stats { display: flex; gap: 8mm; margin-top: 4.5mm; }
+  .close .stat .v { font-size: 14pt; color: var(--white); }
+  .close .stat .l { max-width: 32mm; font-size: 6.8pt; }
+  [lang="ur"] .close .stat .l { font-size: 7.2pt; line-height: 1.7; }
+  .close .qrcol { text-align: center; }
+  .close .qrcol .label { color: var(--t3); margin-top: 2mm; display: block; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="band hero pad">
+    <div class="mark">{{ symbol_svg }}</div>
+    <span class="point"></span>
+    <div class="topbar">
+      <img src="{{ a.logo_white }}" alt="NexusPoint">
+      <span class="label ltr">Islamabad &middot; {{ s.name }}</span>
+    </div>
+    <div class="aud"><span class="dot"></span><span class="{{ '' if ur else 'label' }}" style="{{ 'font-size:9pt' if ur else 'color:var(--blue)' }}">{{ o.audience }}</span></div>
+    <h1>{{ o.headline }}</h1>
+    <p class="sub">{{ (o.sub | bidi) if ur else o.sub }}</p>
+    {% if not ur %}<div class="pain"><p><span class="label">What we hear</span>{{ s.pain_line }}</p></div>{% endif %}
+  </div>
+  <div class="band-rule"></div>
+
+  <div class="body pad">
+    <div class="cols">
+      <div>
+        <div class="pillars">
+          {% for p in o.pillars %}
+          <div class="pil"><span class="n ltr">0{{ loop.index }}</span><div><h3>{{ p.t }}</h3><p>{{ (p.d | bidi) if ur else p.d }}</p></div></div>
+          {% endfor %}
+        </div>
+        <div class="proofbox">
+          <div class="stats">
+            {% for p in i.proof %}<div class="stat"><div class="v ltr num">{{ p.v }}</div><div class="l">{{ (p.l | bidi) if ur else p.l }}</div></div>{% endfor %}
+          </div>
+          {% if not ur %}<p class="q">&ldquo;{{ i.quote }}&rdquo;<span>{{ i.quote_who }}</span></p>{% endif %}
+        </div>
+      </div>
+      <div>
+        <div class="phone clip">
+          <div class="ph-top"><div class="ph-av"><span></span></div><div><div class="ph-name ltr">{{ 'Your business' if not ur else 'آپ کا کاروبار' }}</div><div class="ph-sub ltr">{{ 'AI assistant · online' if not ur else 'اے آئی اسسٹنٹ · آن لائن' }}</div></div></div>
+          {% for m in o.chat %}<div class="msg {{ m.from }}"><span dir="auto">{{ m.text }}</span><span class="t ltr">{{ m.time }}{% if m.from == 'us' %} ✓✓{% endif %}</span></div>{% endfor %}
+        </div>
+        <p class="chat-note" style="color:var(--ink-3)"><span class="dot"></span><span>{{ o.chat_note }}</span></p>
+      </div>
+    </div>
+
+    <div class="tiers-wrap">
+      <div class="head"><div class="sh" style="margin:0"><span class="idx ltr">04</span><h2>{{ 'Plans' if not ur else 'پلانز' }}</h2></div><span class="label ltr">{{ 'One-time setup + monthly · PKR' if not ur else 'ایک بار سیٹ اپ + ماہانہ · روپے' }}</span></div>
+      <div class="tiers">
+        {% for t in s.tiers %}
+        <div class="tier {{ 'rec clip' if t.get('rec') else 'clip' }}">
+          {% if t.get('rec') %}<span class="flag">{{ 'Most chosen' if not ur else 'سب سے مقبول' }}</span>{% endif %}
+          <div class="tn ltr">{{ t.name }}</div>
+          <div class="tt">{{ t.tag_ur if ur else t.tag }}</div>
+          <div class="px ltr num">{{ t.setup | k }}</div>
+          <div class="pm ltr num">+ {{ t.monthly | k }} {{ '/ month' if not ur else 'ماہانہ' }}</div>
+          {% set its = (t.items_ur if ur else t['items']) %}{% set base = its[0] if (loop.index > 1) else none %}
+          {% if base %}<div class="plus">{{ base }}{{ '، اور:' if ur else ', plus:' }}</div>{% endif %}
+          <ul>{% for it in (its[1:(2 if ur else 3)] if base else its[:(2 if ur else 3)]) %}<li>{{ (it | bidi) if ur else it }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <p class="pilot">{% if ur %}<b>پائلٹ</b> ہر شعبے کے پہلے تین کاروباروں کے لیے گروتھ سیٹ اپ پر <bdi dir="ltr">40%</bdi> رعایت، بدلے میں کیس اسٹڈی اور دو تعارف۔ <b>ضمانت</b> چودہ دن میں چالو، ورنہ مزید ادائیگی نہیں۔ ویب سائٹ، نمبر اور ڈیٹا آپ کی ملکیت۔{% else %}<b>Founding pilot</b> 40% off Growth setup for the first 3 businesses in each sector, for a case study and 2 introductions. <b>Guarantee</b> {{ kit.terms.guarantee }} You own the website, the number and every customer record.{% endif %}</p>
+  </div>
+
+  <div class="band close">
+    <div>
+      <span class="label" style="color:var(--blue)">{{ i.cta_kicker }}</span>
+      <h2 style="margin-top:2mm">{{ o.cta_title }}</h2>
+      <p>{{ (o.cta_text | bidi) if ur else o.cta_text }}</p>
+    </div>
+    <div class="qrcol"><div class="qr">{{ qr_whatsapp }}</div><span class="label">{{ i.scan }}</span></div>
+  </div>
+  <div class="foot" style="border-top:1px solid var(--line-dark)"><span class="ltr"><b>NexusPoint</b> &middot; {{ kit.meta.website }} &middot; {{ kit.meta.email }}</span><span class="ltr">{{ kit.meta.tagline }}</span></div>
+</div>
+</body>
+</html>

@@ -45,6 +45,7 @@ export default function ChatWindow({
   healthcare = false,
   restaurant = false,
   school = false,
+  realEstate = false,
 }: {
   slug: string;
   token: string;
@@ -56,6 +57,7 @@ export default function ChatWindow({
   healthcare?: boolean;
   restaurant?: boolean;
   school?: boolean;
+  realEstate?: boolean;
 }) {
   const t = T[lang];
   const [msgs, setMsgs] = useState<Msg[]>(() =>
@@ -195,6 +197,7 @@ export default function ChatWindow({
         )}
         {restaurant && <a className="chat-portal-link" href={`/d/${slug}/customer?t=${encodeURIComponent(token)}${lang==='ur'?'&lang=ur':''}`}>{lang==='ur'?'کسٹمر پورٹل':'Customer portal'}</a>}
         {school && <a className="chat-portal-link" href={`/d/${slug}/parent?t=${encodeURIComponent(token)}${lang==='ur'?'&lang=ur':''}`}>{lang==='ur'?'والدین پورٹل':'Parent portal'}</a>}
+        {realEstate && <a className="chat-portal-link" href={`/d/${slug}/buyer?t=${encodeURIComponent(token)}${lang==='ur'?'&lang=ur':''}`}>{lang==='ur'?'خریدار پورٹل':'Buyer portal'}</a>}
       </div>
       <div className="msgs" ref={box} aria-live="polite">
         {msgs.length === 0 && (

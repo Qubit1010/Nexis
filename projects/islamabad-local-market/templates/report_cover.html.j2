@@ -1,0 +1,35 @@
+{% set lang = 'en' %}{% set title = "Islamabad Market Intelligence" %}
+{% include "_head.html.j2" %}
+<style>
+  .cover { height: 297mm; display: flex; flex-direction: column; }
+  .cover .band { flex: 1; display: flex; flex-direction: column; }
+  .cover .mark { width: 190mm; right: -60mm; top: 40mm; opacity: .08; }
+  .cover .point { right: 48mm; top: 128mm; width: 4mm; height: 4mm; }
+  .cover .kick { margin-top: 62mm; color: var(--blue); }
+  .cover h1 { font: 400 46pt/.95 var(--loud); text-transform: uppercase; margin-top: 6mm; letter-spacing: -.005em; }
+  .cover h1 span { display: block; font: 400 21pt/1.15 var(--display); text-transform: none; color: var(--blue); margin-top: 5mm; }
+  .cover .lede { color: var(--t2); font-size: 11pt; line-height: 1.55; max-width: 120mm; margin-top: 9mm; }
+  .cover .meta { margin-top: auto; padding-bottom: 14mm; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6mm; border-top: 1px solid var(--line-dark); padding-top: 6mm; }
+  .cover .meta .label { display: block; margin-bottom: 2mm; }
+  .cover .meta b { font: 400 13pt/1 var(--display); color: var(--white); }
+</style>
+</head>
+<body>
+<div class="page cover">
+  <div class="band pad">
+    <div class="mark">{{ symbol_svg }}</div>
+    <span class="point"></span>
+    <div class="topbar"><img src="{{ a.logo_white }}" alt="NexusPoint"><span class="label">Internal &middot; {{ today }}</span></div>
+    <span class="label kick">Market intelligence &middot; local outreach</span>
+    <h1>Islamabad<span>Where to sell first, what to say, and what to charge</span></h1>
+    <p class="lede">A desk-research and Google Maps study of {{ summary.total_kept | default(0) }} Islamabad businesses, scored on the same method as Quetta, for the healthcare, restaurant and real-estate launch.</p>
+    <div class="meta">
+      <div><span class="label">Businesses scanned</span><b class="num">{{ "{:,}".format(summary.total_kept | default(0)) }}</b></div>
+      <div><span class="label">Launch prospects</span><b class="num">{{ "{:,}".format(prospects | length) }}</b></div>
+      <div><span class="label">Areas</span><b>5</b></div>
+      <div><span class="label">Sources</span><b class="num">{{ sources | length }}</b></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

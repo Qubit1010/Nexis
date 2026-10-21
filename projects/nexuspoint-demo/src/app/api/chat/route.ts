@@ -25,7 +25,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   const { slug, t, visitor, text,choice } = (await req.json().catch(() => ({}))) as {slug:string;t:string;visitor:string;text:string;choice?:Choice};
   if([slug,t,visitor,text].some(v=>typeof v!=="string")) return NextResponse.json({error:"bad request"},{status:400});
-  if(choice&&(!["doctor","slot","mode","cancel","reschedule","food_item","food_mode","food_confirm","food_clear","table_party","table_time","table_confirm","school_student","school_program","school_visit","school_time","school_confirm"].includes(choice.kind)||typeof choice.value!=="string"||choice.value.length>200||typeof choice.label!=="string")) return NextResponse.json({error:"bad choice"},{status:400});
+  if(choice&&(!["doctor","slot","mode","cancel","reschedule","food_item","food_mode","food_confirm","food_clear","table_party","table_time","table_confirm","school_student","school_program","school_visit","school_time","school_confirm","re_budget","re_area","re_size","re_timeline","re_overseas","re_listing","re_visit","re_time","re_confirm","re_restart"].includes(choice.kind)||typeof choice.value!=="string"||choice.value.length>200||typeof choice.label!=="string")) return NextResponse.json({error:"bad choice"},{status:400});
   if (!slug || !visitor || !text?.trim()) return NextResponse.json({ error: "bad request" }, { status: 400 });
   const b = await getBusiness(slug);
   if (!authorised(b, t)) return NextResponse.json({ error: "not found" }, { status: 404 });

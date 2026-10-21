@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import ChatWindow from "./ChatWindow";
 import HealthcareWebsitePreview from "./HealthcareWebsitePreview";
 import { T, fill, type Lang } from "@/lib/i18n";
+import { cityUr } from "@/lib/city";
 import type { Health, Profile, RoiDefaults, Xray } from "@/lib/db";
 
 type Tier = { name: string; tag_en: string; tag_ur: string; setup: number; monthly: number; rec: boolean; items_en: string[]; items_ur: string[] };
@@ -23,8 +24,8 @@ function track(slug: string, t: string, kind: string) {
   fetch("/api/event", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ slug, t, kind }) }).catch(() => {});
 }
 
-export default function Hub({ biz, tiers, sector, qr, chatUrl, viaWhatsApp, initialLang, snapshot }: {
-  biz: Biz; tiers: Tier[]; sector: SectorUi; qr: string; chatUrl: string; viaWhatsApp: boolean; initialLang: Lang;
+export default function Hub({ biz, tiers, city, sector, qr, chatUrl, viaWhatsApp, initialLang, snapshot }: {
+  biz: Biz; tiers: Tier[] | null; city: string; sector: SectorUi; qr: string; chatUrl: string; viaWhatsApp: boolean; initialLang: Lang;
   snapshot: { role: "customer" | "business"; content: string }[] | null;
 }) {
   const [lang, setLang] = useState<Lang>(initialLang);
@@ -63,7 +64,7 @@ export default function Hub({ biz, tiers, sector, qr, chatUrl, viaWhatsApp, init
           </div>
         </div>
         <nav className="wrap chips" aria-label="Sections">
-          {(["reviews", "assistant", "dashboard", "website", "numbers", "plan"] as const).map((k) => <a key={k} href={`#${k}`}>{t.nav[k]}</a>)}
+          {(["reviews", "assistant", "dashboard", "website", "numbers", "plan"] as const).filter((k) => tiers || (k !== "numbers" && k !== "plan")).map((k) => <a key={k} href={`#${k}`}>{t.nav[k]}</a>)}
         </nav>
         <p className="wrap ribbon">{fill(t.privateUntil, { name: biz.name, date: fmtDate(biz.expires_at, lang) })}</p>
       </header>
@@ -99,7 +100,7 @@ export default function Hub({ biz, tiers, sector, qr, chatUrl, viaWhatsApp, init
               </div>
             </div>
             <div className="phone"><div className="screen">
-              <ChatWindow slug={biz.slug} token={biz.token} name={biz.name} lang={lang} prompts={[...sector.prompts[lang]]} snapshot={snapshot} healthcare={biz.sector==="healthcare"} restaurant={biz.sector==="food"} school={biz.sector==="education"} />
+              <ChatWindow slug={biz.slug} token={biz.token} name={biz.name} lang={lang} prompts={[...sector.prompts[lang]]} snapshot={snapshot} healthcare={biz.sector==="healthcare"} restaurant={biz.sector==="food"} school={biz.sector==="education"} realEstate={biz.sector==="real-estate"} />
             </div></div>
           </div>
         </section>
@@ -107,10 +108,11 @@ export default function Hub({ biz, tiers, sector, qr, chatUrl, viaWhatsApp, init
         {biz.sector==="healthcare"&&<section className="sec" id="care-workspaces"><div className="wrap"><div className="sec-head"><p className="k">{ur?"کلینک کا مربوط ڈیمو":"Your connected clinic"}</p><h2>{ur?"بکنگ سے مریض کے ریکارڈ تک":"From the first message to the visit record"}</h2><p>{ur?"مریض، استقبالیہ اور ڈاکٹر ایک ہی ورک فلو سے جڑے ہیں۔ ڈاکٹر، اوقات اور طبی ریکارڈ فرضی نمونے ہیں۔":"Explore the same booking from the patient, reception and doctor perspectives. Doctors, availability and medical records are fictional samples."}</p></div><div className="care-previews">{[["patient",ur?"مریض پورٹل":"Patient portal",ur?"ڈاکٹر، دستیاب اوقات، کال بکنگ اور شائع شدہ طبی رپورٹس۔":"Find doctors, book a visit or call, and view published diagnoses and reports.","01"],["clinic",ur?"کلینک انتظام":"Clinic operations",ur?"ڈاکٹر کا کیلنڈر، انتظار کی قطار، گفتگو اور عملے کی منتقلی۔":"Doctor calendars, check-in queues, conversations and staff takeover.","02"],["doctor",ur?"ڈاکٹر ورک اسپیس":"Doctor workspace",ur?"روزانہ شیڈول، ملاقات کے نوٹس، نسخے اور ریکارڈ کی اشاعت۔":"Personal schedule, visit notes, prescriptions and record publication.","03"]].map(([role,title,description,n])=><a className="care-preview" key={role} href={`/d/${biz.slug}/${role}?t=${encodeURIComponent(biz.token)}${ur?"&lang=ur":""}`}><span className="num">{n}</span><h3>{title}</h3><p>{description}</p><b>{ur?"ڈیمو کھولیں":"Open workspace"} →</b></a>)}</div></div></section>}
         {biz.sector==='food'&&<section className="sec" id="restaurant-workspaces"><div className="wrap"><div className="sec-head"><p className="k">{ur?'آپ کا مربوط ریسٹورنٹ':'Your connected restaurant'}</p><h2>{ur?'پہلے پیغام سے کچن ٹکٹ تک':'From the first message to the kitchen ticket'}</h2><p>{ur?'آرڈر، میز بکنگ اور گفتگو ایک ساتھ۔ مینو، قیمتیں، میزیں اور مہمان فرضی نمونے ہیں۔':'Follow the same order through the customer portal, manager dashboard and kitchen. Menu prices, tables and guests are fictional samples.'}</p></div><div className="care-previews">{[['customer',ur?'کسٹمر پورٹل':'Customer portal',ur?'مینو، باسکٹ، آرڈر کی حالت، میز بکنگ اور رسیدیں۔':'Browse the menu, place sample orders, track progress and reserve tables.'],['restaurant',ur?'ریسٹورنٹ انتظام':'Restaurant operations',ur?'آرڈر، میزیں، مہمان، گفتگو اور عملے کی منتقلی۔':'Manage orders, tables, waiting guests, conversations and staff takeover.'],['kitchen',ur?'کچن بورڈ':'Kitchen board',ur?'تیاری کے ٹکٹ، مقدار، مصالحہ اور تیار آرڈر۔':'Live preparation tickets with quantities, spice preferences and item notes.']].map(([role,title,description],i)=><a className="care-preview" key={role} href={`/d/${biz.slug}/${role}?t=${encodeURIComponent(biz.token)}${ur?'&lang=ur':''}`}><span className="num">0{i+1}</span><h3>{title}</h3><p>{description}</p><b>{ur?'ڈیمو کھولیں':'Open workspace'} →</b></a>)}</div></div></section>}
         {biz.sector==='education'&&<section className="sec" id="school-workspaces"><div className="wrap"><div className="sec-head"><p className="k">{ur?'آپ کا مربوط کیمپس':'Your connected campus'}</p><h2>{ur?'پہلے سوال سے طالب علم کے ریکارڈ تک':'From the first enquiry to the student report'}</h2><p>{ur?'والدین، دفتر اور استاد کا ایک مربوط ورک فلو۔ طلبہ، کلاسیں، فیس اور نتائج فرضی ہیں۔':'Explore the same family across the parent portal, school office and teacher workspace. Students, classes, fees and results are fictional samples.'}</p></div><div className="care-previews">{[['parent',ur?'والدین پورٹل':'Parent portal',ur?'حاضری، ہوم ورک، نتائج، فیس رسیدیں اور کیمپس ملاقاتیں۔':'Follow attendance, submit homework, view published results, track fees and book campus visits.'],['school',ur?'اسکول دفتر':'School office',ur?'طلبہ، فیس کی تصدیق، داخلہ، ملاقاتیں اور گفتگو۔':'Manage students, verify sample fees, review admissions and take over family conversations.'],['teacher',ur?'استاد ورک اسپیس':'Teacher workspace',ur?'کلاس رجسٹر، ہوم ورک، طلبہ کے جواب اور نتائج کی اشاعت۔':'Record attendance, publish homework, review responses and release assessment results.']].map(([role,title,description],i)=><a className="care-preview" key={role} href={`/d/${biz.slug}/${role}?t=${encodeURIComponent(biz.token)}${ur?'&lang=ur':''}`}><span className="num">0{i+1}</span><h3>{title}</h3><p>{description}</p><b>{ur?'ڈیمو کھولیں':'Open workspace'} →</b></a>)}</div></div></section>}
+        {biz.sector==='real-estate'&&<section className="sec" id="property-workspaces"><div className="wrap"><div className="sec-head"><p className="k">{ur?'آپ کا مربوط سیلز آفس':'Your connected sales office'}</p><h2>{ur?'پہلے پیغام سے سائٹ وزٹ تک':'From the first message to the site visit'}</h2><p>{ur?`${cityUr(city)} کے خریدار، ایجنٹ اور منیجر ایک ہی پائپ لائن پر۔ لسٹنگز، قیمتیں، ایجنٹ اور خریدار فرضی نمونے ہیں۔`:`Follow the same buyer through the buyer portal, the agent pipeline and the manager view in ${city}. Listings, prices, agents and buyers are fictional samples.`}</p></div><div className="care-previews">{[['buyer',ur?'خریدار پورٹل':'Buyer portal',ur?'نمونہ لسٹنگز، اسسٹنٹ سے گفتگو اور سائٹ وزٹ بکنگ۔':'Browse sample listings, chat with the assistant and book a site visit.'],['agents',ur?'ایجنٹ پائپ لائن':'Agent pipeline',ur?'ہر لیڈ کا مرحلہ، اے آئی خلاصہ اور ذمہ دار ایجنٹ۔':'Every lead by stage, with its AI summary and the agent who owns it.'],['manager',ur?'منیجر منظر':'Manager view',ur?'لیڈز کے ذرائع، جواب کا وقت اور وزٹس۔':'Lead sources, response times, visits and deals in one view.']].map(([role,title,description],i)=><a className="care-preview" key={role} href={`/d/${biz.slug}/${role}?t=${encodeURIComponent(biz.token)}${ur?'&lang=ur':''}`}><span className="num">0{i+1}</span><h3>{title}</h3><p>{description}</p><b>{ur?'ڈیمو کھولیں':'Open workspace'} →</b></a>)}</div></div></section>}
         <Dashboard biz={biz} lang={lang} live={!snapshot} />
         <Website biz={biz} sector={sector} lang={lang} chatUrl={chatUrl} />
-        {biz.roi && <Numbers roi={biz.roi} tier={tiers.find((x) => x.rec) ?? tiers[1]} lang={lang} onUse={() => track(biz.slug, biz.token, "roi_used")} />}
-        <Plan biz={biz} tiers={tiers} lang={lang} />
+        {biz.roi && tiers && <Numbers roi={biz.roi} tier={tiers.find((x) => x.rec) ?? tiers[1] ?? tiers[0]} lang={lang} onUse={() => track(biz.slug, biz.token, "roi_used")} />}
+        {tiers && <Plan biz={biz} tiers={tiers} lang={lang} />}
       </main>
       <footer className="foot"><div className="wrap">{fill(t.foot, { date: fmtDate(biz.created_at, lang) })}</div></footer>
     </div>
@@ -256,13 +258,14 @@ function Website({ biz, sector, lang, chatUrl }: { biz: Biz; sector: SectorUi; l
   const posts = biz.site?.posts ?? { en: [], ur: [] };
   const all = [...posts.en.slice(0, 1).map((p) => ({ p, l: "en" })), ...posts.ur.slice(0, 1).map((p) => ({ p, l: "ur" }))];
   const education = biz.sector === "education";
-  const websiteTitle = education ? lang === "ur" ? "پہلی درخواست سے روزمرہ تعلیم تک" : "From a first enquiry to everyday learning" : biz.sector === "food" ? lang === "ur" ? "پہلی جھلک سے اگلی دعوت تک" : "From a first look to the next gathering" : lang === "ur" ? "پہلے تاثر سے اگلی ملاقات تک" : "From a first impression to the next appointment";
-  const websiteDescription = education ? lang === "ur" ? "آپ کے اسکول یا اکیڈمی کے لیے مکمل لینڈنگ پیج نمونہ۔ پروگرام، داخلہ درخواست، والدین پورٹل اور کیمپس ملاقات ایک صفحے پر۔" : "A complete landing page concept for your school or academy. Programs, admissions enquiries, parent access and campus visits, all on one page." : biz.sector === "food" ? lang === "ur" ? "آپ کے ریسٹورنٹ کے لیے مکمل لینڈنگ پیج نمونہ۔ مینو، آرڈر، میز بکنگ، ریویوز اور راستہ ایک صفحے پر۔" : "A complete landing page concept for your restaurant. Menu, ordering, table reservations, reviews and directions, all on one page." : lang === "ur" ? "آپ کے کاروبار کے لیے ایک مکمل لینڈنگ پیج نمونہ۔ خدمات، ڈاکٹر، مریض پورٹل، اوقات اور راستہ ایک صفحے پر۔" : "A complete landing page concept for your clinic. Services, consultants, patient access, visiting hours and directions, all on one page.";
-  if (biz.sector === "healthcare" || biz.sector === "food" || biz.sector === "education") return (
+  const property = biz.sector === "real-estate";
+  const websiteTitle = property ? lang === "ur" ? "پہلی تلاش سے سائٹ وزٹ تک" : "From a first search to the site visit" : education ? lang === "ur" ? "پہلی درخواست سے روزمرہ تعلیم تک" : "From a first enquiry to everyday learning" : biz.sector === "food" ? lang === "ur" ? "پہلی جھلک سے اگلی دعوت تک" : "From a first look to the next gathering" : lang === "ur" ? "پہلے تاثر سے اگلی ملاقات تک" : "From a first impression to the next appointment";
+  const websiteDescription = property ? lang === "ur" ? "آپ کے پراپرٹی آفس کے لیے مکمل لینڈنگ پیج نمونہ۔ نمونہ لسٹنگز، لیڈ فارم، سائٹ وزٹ اور واٹس ایپ ایک صفحے پر، اور ہر فارم سیدھا ایجنٹ پائپ لائن میں۔" : "A complete project and listings page for your office. Sample listings, a lead form, site visits and WhatsApp on one page, and every form lands in the agent pipeline." : education ? lang === "ur" ? "آپ کے اسکول یا اکیڈمی کے لیے مکمل لینڈنگ پیج نمونہ۔ پروگرام، داخلہ درخواست، والدین پورٹل اور کیمپس ملاقات ایک صفحے پر۔" : "A complete landing page concept for your school or academy. Programs, admissions enquiries, parent access and campus visits, all on one page." : biz.sector === "food" ? lang === "ur" ? "آپ کے ریسٹورنٹ کے لیے مکمل لینڈنگ پیج نمونہ۔ مینو، آرڈر، میز بکنگ، ریویوز اور راستہ ایک صفحے پر۔" : "A complete landing page concept for your restaurant. Menu, ordering, table reservations, reviews and directions, all on one page." : lang === "ur" ? "آپ کے کاروبار کے لیے ایک مکمل لینڈنگ پیج نمونہ۔ خدمات، ڈاکٹر، مریض پورٹل، اوقات اور راستہ ایک صفحے پر۔" : "A complete landing page concept for your clinic. Services, consultants, patient access, visiting hours and directions, all on one page.";
+  if (biz.sector === "healthcare" || biz.sector === "food" || biz.sector === "education" || biz.sector === "real-estate") return (
     <section id="website" className="sec tint">
       <div className="wrap">
         <div className="sec-head"><p className="k">{lang === "ur" ? "آپ کی ویب سائٹ" : "Your website"}</p><h2>{websiteTitle}</h2><p>{websiteDescription}</p></div>
-        <HealthcareWebsitePreview slug={biz.slug} token={biz.token} name={biz.name} lang={lang} sector={biz.sector} />
+        <HealthcareWebsitePreview slug={biz.slug} token={biz.token} name={biz.name} lang={lang} sector={biz.sector as "healthcare" | "food" | "education" | "real-estate"} />
         <h3 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>{t.postsH}</h3>
         <div className="posts" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: "1rem" }}>
           {all.map(({ p, l }, i) => <div className="post" key={i} lang={l}><div className="ph"><span>{l === "ur" ? "اردو" : "English"} · Facebook / Instagram</span><button type="button" onClick={() => { navigator.clipboard?.writeText(p); setCopied(i); setTimeout(() => setCopied(null), 1500); }}>{copied === i ? t.copied : t.copy}</button></div><p>{p}</p></div>)}
@@ -325,6 +328,9 @@ function Field({ label, value, min, max, step, set }: { label: string; value: nu
 
 function Numbers({ roi, tier, lang, onUse }: { roi: RoiDefaults; tier: Tier; lang: Lang; onUse: () => void }) {
   const t = T[lang];
+  const [mMin, mMax, mStep] = roi.missed_range ?? [1, 100, 1];
+  const [tMin, tMax, tStep] = roi.ticket_range ?? [200, 20000, 100];
+  const [rMin, rMax, rStep] = roi.recover_range ?? [10, 90, 5];
   const [missed, setMissed] = useState(roi.missed_per_week);
   const [ticket, setTicket] = useState(roi.ticket);
   const [pct, setPct] = useState(roi.recover_pct);
@@ -339,10 +345,10 @@ function Numbers({ roi, tier, lang, onUse }: { roi: RoiDefaults; tier: Tier; lan
         <div className="sec-head"><p className="k">{t.nuK}</p><h2>{t.nuH}</h2><p>{t.nuP}</p></div>
         <div className="roi">
           <div className="roi-in">
-            <Field label={roi.missed_label[lang]} value={missed} min={1} max={100} step={1} set={(n) => { setMissed(n); touch(); }} />
-            <Field label={roi.ticket_label[lang]} value={ticket} min={200} max={20000} step={100} set={(n) => { setTicket(n); touch(); }} />
-            <Field label={t.recover} value={pct} min={10} max={90} step={5} set={(n) => { setPct(n); touch(); }} />
-            <p className="formula">{t.formula}</p>
+            <Field label={roi.missed_label[lang]} value={missed} min={mMin} max={mMax} step={mStep} set={(n) => { setMissed(n); touch(); }} />
+            <Field label={roi.ticket_label[lang]} value={ticket} min={tMin} max={tMax} step={tStep} set={(n) => { setTicket(n); touch(); }} />
+            <Field label={roi.recover_label?.[lang] ?? t.recover} value={pct} min={rMin} max={rMax} step={rStep} set={(n) => { setPct(n); touch(); }} />
+            <p className="formula">{roi.formula?.[lang] ?? t.formula}</p>
           </div>
           <div className="roi-out">
             <p className="big ltr">{pkr(monthly)}</p><p className="lbl">{t.perMonth}</p>

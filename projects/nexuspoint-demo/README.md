@@ -17,6 +17,7 @@ A private, per-prospect demo: the owner's own business, already running on Nexus
 
 ```
 python projects/quetta-local-market/scripts/make_demo.py "<maps link | placeId | name>" --reset
+python projects/islamabad-local-market/scripts/make_demo.py "<maps link | placeId | name>" --reset   # Islamabad / Rawalpindi
 python projects/nexuspoint-demo/scripts/snapshot.py <slug>          # offline copy
 python projects/nexuspoint-demo/scripts/reset_demo.py <slug>        # clear chats before a meeting
 ```
@@ -77,12 +78,28 @@ parent portal entry points. Supports Urdu, both themes and desktop/mobile previe
 See docs/school-landing-template.md and docs/school-imagery.md. Run
 `python tests/school_landing_checks.py <base-url> [--vercel]` for access and data isolation checks.
 
+Real estate prospects (agencies, developers, builders, property managers) get Leadline: a buyer portal,
+an agent pipeline and a manager view at /d/<slug>/buyer, /d/<slug>/agents and /d/<slug>/manager. The
+assistant qualifies budget, society, size, timeline and overseas status, shows only stored sample listings
+and books site visits through an atomic per-agent reservation. Legal, NOC and price questions go to an
+agent. Your website is a project and listings page whose lead form feeds the same pipeline. Listings,
+prices, agents and buyers are synthetic. See docs/real-estate-walkthrough.md.
+
+## Cities
+
+A demo carries its city in profile.city (default Quetta, so older demos are unchanged). The assistant
+prompt, sector copy, landing pages and footers use it, and Islamabad or Rawalpindi demos quote the
+Islamabad price list. python scripts/sync_bundles.py writes both markets into src/data/bundles.json:
+quetta from the Quetta kit and landing site.json (kept as is when those files are missing), islamabad
+from projects/islamabad-local-market/data/kit.json.
+
 Run python tests/school_eval.py http://localhost:4400 for transaction and privacy checks, and
 python tests/school_browser.py http://localhost:4400 for the connected browser walkthrough.
 Protected preview API tests accept --vercel. Education resets archive activity and retain analytics.
 
 ```
-npm test                                            # assistant + healthcare + restaurant + school (35 tests)
+npm test                                            # assistant + healthcare + restaurant + school + real estate (46 tests)
+python tests/real_estate_eval.py http://localhost:4400      # isolated property office: API, concurrency, chat rules
 python tests/healthcare_eval.py http://localhost:4400 --ui # isolated clinic integration + browser checks
 python tests/healthcare_eval.py <preview-url> --vercel    # protected preview API checks using Vercel auth
 python tests/chat_eval.py https://nexuspoint-demo.vercel.app   # live rules + latency
@@ -101,5 +118,5 @@ The approved pricing file `src/data/bundles.json` is private and excluded from G
 For a fresh checkout, copy `src/data/bundles.example.json` to `src/data/bundles.json`
 before `npm install` and `npm run build`. The example has zero prices and placeholder
 terms, so configure the real private file before using a prospect demo. On the agency
-checkout, `python scripts/sync_bundles.py` regenerates it from the private Quetta kit.
+checkout, `python scripts/sync_bundles.py` regenerates it per market from the private Quetta and Islamabad kits.
 Prospect records, access tokens, environment variables and captured sessions remain local.

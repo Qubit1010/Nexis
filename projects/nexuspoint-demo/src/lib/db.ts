@@ -4,7 +4,7 @@
 export type Json = Record<string, unknown>;
 
 export type Business = {
-  slug: string; token: string; code: string; sector: "healthcare" | "food" | "education"; name: string;
+  slug: string; token: string; code: string; sector: "healthcare" | "food" | "education" | "real-estate"; name: string;
   profile: Profile; xray: Xray | null; site: { posts: { en: string[]; ur: string[] } } | null;
   roi: RoiDefaults | null; health: Health | null; created_at: string; expires_at: string;
 };
@@ -12,6 +12,7 @@ export type Profile = {
   facts: { name: string; category: string | null; address: string | null; neighborhood: string | null; city?: string | null;
     hours: { day: string; hours: string }[]; extras: string[]; rating: number | null; reviews: number | null;
     maps_url: string; location?: { lat: number; lng: number } };
+  city?: string | null; market?: "quetta" | "islamabad" | null;
   about: string; sector: string; services_sample: string[]; questions: { key: string; ask: string }[];
   warm_when: string; unqualified_when: string; action: string; demo_hint: string;
   fallback_reply: { en: string; ur: string };
@@ -24,7 +25,10 @@ export type Xray = {
     mix: Record<string, number>; owner_reply_pct: number; newest: string | null; oldest: string | null };
 };
 export type RoiDefaults = { missed_per_week: number; ticket: number; recover_pct: number;
-  ticket_label: { en: string; ur: string }; missed_label: { en: string; ur: string } };
+  ticket_label: { en: string; ur: string }; missed_label: { en: string; ur: string };
+  // Optional per-sector slider ranges [min, max, step]; real estate deals are far larger than a meal.
+  missed_range?: [number, number, number]; ticket_range?: [number, number, number]; recover_range?: [number, number, number];
+  recover_label?: { en: string; ur: string }; formula?: { en: string; ur: string } };
 export type Health = { score: number; items: { key: string; ok: boolean; weight: number; en: string; ur: string }[] };
 
 export type Conversation = { id: string; slug: string; channel: string; visitor: string; stage: string | null;

@@ -6,6 +6,9 @@ import RestaurantLanding, { type LandingMenuItem } from "@/components/Restaurant
 import { ensureRestaurant } from "@/lib/restaurant";
 import { ensureSchool } from "@/lib/school";
 import SchoolLanding, { type LandingProgram } from "@/components/SchoolLanding";
+import RealEstateLanding from "@/components/RealEstateLanding";
+import { landingListings } from "@/lib/real-estate";
+import { cityOf } from "@/lib/city";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Landing page preview | NexusPoint", referrer: "no-referrer" as const };
@@ -17,7 +20,7 @@ export default async function Page({ params, searchParams }: {
   const { slug } = await params;
   const sp = await searchParams;
   const b = await getBusiness(slug);
-  if (!authorised(b, sp.t ?? null) || !["healthcare", "food", "education"].includes(b.sector)) notFound();
+  if (!authorised(b, sp.t ?? null) || !["healthcare", "food", "education", "real-estate"].includes(b.sector)) notFound();
   if (expired(b)) return <div className="hub gone" dir={sp.lang === "ur" ? "rtl" : "ltr"}><div><h1>{sp.lang === "ur" ? "اس ڈیمو کی مدت ختم ہو گئی ہے۔" : "This demo has ended"}</h1><p>{sp.lang === "ur" ? "تازہ نمونے کے لیے نیکسس پوائنٹ سے رابطہ کریں۔" : "Contact NexusPoint for a fresh preview."}</p></div></div>;
   const business = { slug: b.slug, token: b.token, name: b.name, profile: b.profile, xray: b.xray, created_at: b.created_at };
   if (b.sector === "education") {
@@ -28,7 +31,12 @@ export default async function Page({ params, searchParams }: {
       programs = await rest<LandingProgram>("GET", `demo_school_classes?slug=eq.${encodeURIComponent(slug)}&select=id,name&order=name`);
     } catch { programsUnavailable = true; }
     if (sp.embed !== "1") await logEvent(slug, "website_view");
-    return <SchoolLanding business={{ slug: b.slug, token: b.token, name: b.name, profile: { facts: b.profile.facts }, xray: b.xray ? { praise: b.xray.praise } : null }} programs={programs} programsUnavailable={programsUnavailable} initialLang={sp.lang === "ur" ? "ur" : "en"} embedded={sp.embed === "1"} />;
+    return <SchoolLanding business={{ slug: b.slug, token: b.token, name: b.name, profile: { facts: b.profile.facts, city: cityOf(b.profile) }, xray: b.xray ? { praise: b.xray.praise } : null }} programs={programs} programsUnavailable={programsUnavailable} initialLang={sp.lang === "ur" ? "ur" : "en"} embedded={sp.embed === "1"} />;
+  }
+  if (b.sector === "real-estate") {
+    const { listings, unavailable } = await landingListings(b);
+    if (sp.embed !== "1") await logEvent(slug, "website_view");
+    return <RealEstateLanding business={{ ...business, profile: { facts: b.profile.facts, city: cityOf(b.profile) }, xray: b.xray ? { praise: b.xray.praise } : null }} listings={listings} listingsUnavailable={unavailable} initialLang={sp.lang === "ur" ? "ur" : "en"} embedded={sp.embed === "1"} />;
   }
   if (b.sector === "food") {
     let menu: LandingMenuItem[] = [];
@@ -38,7 +46,7 @@ export default async function Page({ params, searchParams }: {
       menu = await rest<LandingMenuItem>("GET", `demo_menu_items?slug=eq.${encodeURIComponent(slug)}&select=id,name,name_ur,category,description,price,available,art&order=category,name`);
     } catch { menuUnavailable = true; }
     if (sp.embed !== "1") await logEvent(slug, "website_view");
-    return <RestaurantLanding business={{ ...business, profile: { facts: b.profile.facts }, xray: b.xray ? { praise: b.xray.praise } : null }} menu={menu} menuUnavailable={menuUnavailable} initialLang={sp.lang === "ur" ? "ur" : "en"} embedded={sp.embed === "1"} />;
+    return <RestaurantLanding business={{ ...business, profile: { facts: b.profile.facts, city: cityOf(b.profile) }, xray: b.xray ? { praise: b.xray.praise } : null }} menu={menu} menuUnavailable={menuUnavailable} initialLang={sp.lang === "ur" ? "ur" : "en"} embedded={sp.embed === "1"} />;
   }
   let doctors: LandingDoctor[] = [];
   try {

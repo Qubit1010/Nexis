@@ -43,3 +43,7 @@ for slug in slugs:
     if business and business[0]["sector"]=="education":
         call("POST","rpc/demo_school_action",body={"p_slug":slug,"p_visitor":"system-reset","p_role":"system","p_action":"reset","p_data":{}})
         print(f"{slug}: archived school activity; the next visit seeds a fresh sample workspace")
+        continue
+    if business and business[0]["sector"]=="real-estate":
+        call("POST","rpc/demo_re_action",body={"p_slug":slug,"p_visitor":"system-reset","p_role":"system","p_action":"reset","p_data":{}})
+        print(f"{slug}: archived property activity; the next visit seeds a fresh sample sales office")

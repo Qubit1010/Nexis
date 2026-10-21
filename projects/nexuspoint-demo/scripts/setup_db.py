@@ -1,4 +1,7 @@
-"""One-time (idempotent): create the demo tables from sql/demo_schema.sql.
+"""One-time (idempotent): create the demo tables from sql/*.sql.
+
+    python scripts/setup_db.py                              # every schema, in order
+    python scripts/setup_db.py sql/real_estate_schema.sql   # only the named files (additive sectors)
 
 Uses the Supabase Management API (SUPABASE_ACCESS_TOKEN): the direct db.<ref>.supabase.co host is
 IPv6-only from this machine. Detects a paused project (free tier pauses after about a week idle).
@@ -40,10 +43,11 @@ if status != "ACTIVE_HEALTHY":
     sys.exit(f"project {ref} is {status}. Restore it (POST /v1/projects/{ref}/restore), then rerun.")
 
 q = lambda sql: api("/database/query", {"query": sql})  # noqa: E731
-q((ROOT / "sql" / "demo_schema.sql").read_text(encoding="utf-8"))
-q((ROOT / "sql" / "healthcare_schema.sql").read_text(encoding="utf-8"))
-q((ROOT / "sql" / "restaurant_schema.sql").read_text(encoding="utf-8"))
-q((ROOT / "sql" / "school_schema.sql").read_text(encoding="utf-8"))
+ALL = ["demo_schema.sql", "healthcare_schema.sql", "restaurant_schema.sql", "school_schema.sql", "real_estate_schema.sql"]
+files = [Path(a) if Path(a).is_absolute() else ROOT / a for a in sys.argv[1:]] or [ROOT / "sql" / f for f in ALL]
+for f in files:
+    q(f.read_text(encoding="utf-8"))
+    print("applied", f.name)
 rows = q("select relname, relrowsecurity from pg_class where relname like 'demo_%' and relkind = 'r' order by 1")
 for r in rows:
     print(f"{r['relname']:20} RLS {'on' if r['relrowsecurity'] else 'OFF'}")

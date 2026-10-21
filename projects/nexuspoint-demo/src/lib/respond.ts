@@ -16,24 +16,8 @@ import { restaurantChat } from "./restaurant-chat.ts";
 import { schoolChat } from "./school-chat.ts";
 import type { Choice } from "./healthcare-types.ts";
 import { detectLang, introLine } from "./scripted.ts";
-
-export function quettaToday(): string {
-  return (
-    new Date().toLocaleDateString("en-GB", {
-      timeZone: "Asia/Karachi",
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    }) +
-    ", " +
-    new Date().toLocaleTimeString("en-US", {
-      timeZone: "Asia/Karachi",
-      hour: "numeric",
-      minute: "2-digit",
-    })
-  );
-}
+import { pktToday } from "./city.ts";
+import { realEstateChat } from "./real-estate-chat.ts";
 
 export async function respond(
   b: Business,
@@ -72,8 +56,9 @@ export async function respond(
     ...prior.map((m) => ({ role: m.role, content: m.content })),
     { role: "customer", content: text.slice(0, 1000) },
   ];
-  if (b.sector === "healthcare" || b.sector === "food" || b.sector === "education") {
-    const h = b.sector === "food" ? await restaurantChat(b, conv, text, choice) : b.sector === "education" ? await schoolChat(b, conv, text, choice) : await healthcareChat(b, conv, text, choice);
+  const workspaceSource: Record<string, string> = { food: "restaurant", education: "school", healthcare: "healthcare", "real-estate": "real-estate" };
+  if (workspaceSource[b.sector]) {
+    const h = b.sector === "food" ? await restaurantChat(b, conv, text, choice) : b.sector === "education" ? await schoolChat(b, conv, text, choice) : b.sector === "real-estate" ? await realEstateChat(b, conv, text, choice) : await healthcareChat(b, conv, text, choice);
     if (h) {
       if (!prior.some((m) => m.role === "business"))
         h.reply = introLine(detectLang(text), b.name) + h.reply;
@@ -102,7 +87,7 @@ export async function respond(
                   conversation_id: conv.id,
                   role: "business",
                   content: h.reply,
-                  source: b.sector === "food" ? "restaurant" : b.sector === "education" ? "school" : "healthcare",
+                  source: workspaceSource[b.sector],
                   latency_ms: Date.now() - started,
                   cards: h.cards,
                 },
@@ -125,14 +110,14 @@ export async function respond(
         reply: paused ? null : h.reply,
         stage: paused ? "needs_human" : h.stage,
         latency: Date.now() - started,
-        source: paused ? "staff" : b.sector === "food" ? "restaurant" : b.sector === "education" ? "school" : "healthcare",
+        source: paused ? "staff" : workspaceSource[b.sector],
         provider: null,
         cards: paused ? [] : h.cards,
       };
     }
   }
   const brainBusiness=b.sector==='education'?{...b,profile:{...b.profile,demo_hint:'Student records, fee verification, results and campus reservations are handled by a separate persistent school service. Do not infer or invent records. Refer unknown questions to the school office.'}}:b;
-  const d = await decide(brainBusiness, history, chatJson, quettaToday());
+  const d = await decide(brainBusiness, history, chatJson, pktToday());
   if (b.sector==='education'&&d.action.type!=='none') {
     d.action={type:'none',details:[]};d.stage='needs_human';
     d.reply=detectLang(text)==='ur'?'دفتر اس معلومات کی تصدیق کرے گا۔ نمونہ ریکارڈ اور کیمپس بکنگ والدین پورٹل میں دیکھیں۔':'The office can confirm that information. Use the parent portal for recorded sample information and available campus visits.';
@@ -140,6 +125,16 @@ export async function respond(
   if (b.sector === "food" && d.action.type === "order") {
     d.action = { type: "none", details: [] }; d.stage = "needs_human";
     d.reply = detectLang(text) === "ur" ? "نمونہ مینو سے آئٹمز منتخب کریں۔ آرڈر محفوظ ہونے کے بعد ہی تصدیق ہوگی۔ عملہ مدد کر سکتا ہے۔" : "Use the sample menu to choose items. Orders are confirmed only after they are saved. Staff can help with details.";
+  }
+  // Property visits are only confirmed by the stored reservation service, never by the model.
+  if (b.sector === "real-estate" && d.action.type !== "none") {
+    d.action = { type: "none", details: [] };
+    const lang = detectLang(text);
+    d.reply = lang === "ur"
+      ? "سائٹ وزٹ کا وقت خریدار پورٹل میں دستیاب نمونہ اوقات سے منتخب کریں۔ وزٹ محفوظ ہونے کے بعد ہی تصدیق ہوگی۔"
+      : lang === "roman"
+        ? "Site visit ka waqt buyer portal mein available sample slots se chunein. Visit save hone ke baad hi confirm hogi."
+        : "Please pick a site-visit time from the available sample slots in the buyer portal. A visit is confirmed only after it is saved.";
   }
   // Healthcare confirmations only come from the booking service, never model-generated actions.
   if (b.sector === "healthcare" && d.action.type === "booking") {

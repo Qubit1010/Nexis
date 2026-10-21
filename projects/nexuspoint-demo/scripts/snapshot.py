@@ -19,8 +19,20 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-DEMOS = ROOT.parent / "quetta-local-market" / "data" / "demos"
-OUT = ROOT.parent / "quetta-local-market" / "deliverables"
+MARKETS = [ROOT.parent / "quetta-local-market", ROOT.parent / "islamabad-local-market"]
+
+
+def demo_file(slug: str) -> Path:
+    """Demo records live in the market project that made them (Quetta or Islamabad)."""
+    for m in MARKETS:
+        f = m / "data" / "demos" / f"{slug}.json"
+        if f.exists():
+            return f
+    return MARKETS[0] / "data" / "demos" / f"{slug}.json"
+
+
+def out_dir(slug: str) -> Path:
+    return demo_file(slug).parents[2] / "deliverables"
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"}
 KEEP_SUBSETS = ("/* latin */", "/* arabic */")
 
@@ -47,12 +59,12 @@ def inline_fonts(css_url: str, lang: str) -> str:
 
 
 async def snap(slugs: list[str], base: str) -> None:
-    OUT.mkdir(exist_ok=True)
     img_cache: dict[str, str] = {}
     async with async_playwright() as p:
         b = await p.chromium.launch()
         for slug in slugs:
-            d = json.loads((DEMOS / f"{slug}.json").read_text(encoding="utf-8"))
+            d = json.loads(demo_file(slug).read_text(encoding="utf-8"))
+            out_dir(slug).mkdir(exist_ok=True)
             for lang in ("en", "ur"):
                 ctx = await b.new_context(viewport={"width": 1280, "height": 900})
                 pg = await ctx.new_page()
@@ -75,7 +87,7 @@ async def snap(slugs: list[str], base: str) -> None:
                 html = html.replace("</head>", "<style>" + "\n".join(styles) + "</style></head>", 1)
                 # static copy: make every in-page link inert except section anchors
                 html = re.sub(r'href="(?!#)[^"]*"', 'href="#"', html)
-                path = OUT / f"Offline-Demo-{slug}-{lang}.html"
+                path = out_dir(slug) / f"Offline-Demo-{slug}-{lang}.html"
                 path.write_text("<!doctype html>" + html, encoding="utf-8")
                 off = await b.new_context(offline=True, viewport={"width": 390, "height": 844})
                 op = await off.new_page()
@@ -93,5 +105,5 @@ async def snap(slugs: list[str], base: str) -> None:
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--base")]
     base = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--base=")), "https://nexuspoint-demo.vercel.app")
-    slugs = [f.stem for f in DEMOS.glob("*-*.json")] if args in (["--all"], []) else args
+    slugs = [f.stem for m in MARKETS for f in (m / "data" / "demos").glob("*-*.json")] if args in (["--all"], []) else args
     asyncio.run(snap(slugs, base))

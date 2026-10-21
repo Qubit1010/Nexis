@@ -6,10 +6,11 @@ import type { Lang } from "@/lib/i18n";
 import type { MenuItem } from "@/lib/restaurant-types";
 import { money } from "@/lib/restaurant-types";
 import { FoodArt } from "./RestaurantUI";
+import { cityOf, cityUr } from "@/lib/city";
 import "./restaurant-landing.css";
 
 export type LandingMenuItem = Omit<MenuItem, "allergens">;
-type Business = { slug: string; token: string; name: string; profile: Pick<Profile, "facts">; xray: Pick<Xray, "praise"> | null; created_at: string };
+type Business = { slug: string; token: string; name: string; profile: Pick<Profile, "facts" | "city">; xray: Pick<Xray, "praise"> | null; created_at: string };
 type SymbolName = "arrow" | "pin" | "clock" | "table" | "bag" | "chat" | "sun" | "menu" | "close" | "search" | "dish";
 function Symbol({ name }: { name: SymbolName }) {
   const paths: Record<SymbolName, React.ReactNode> = {
@@ -55,6 +56,7 @@ export default function RestaurantLanding({ business: b, menu: dishes, menuUnava
   const [showAll, setShowAll] = useState(false);
   const S = (en: string, ur: string) => lang === "ur" ? ur : en;
   const f = b.profile.facts;
+  const city = cityOf(b.profile), cityName = S(city, cityUr(city));
   const base = `/d/${b.slug}?t=${encodeURIComponent(b.token)}${lang === "ur" ? "&lang=ur" : ""}`;
   const customer = (tab: string, item?: string) => `/d/${b.slug}/customer?t=${encodeURIComponent(b.token)}&tab=${tab}${item ? "&item=" + encodeURIComponent(item) : ""}${lang === "ur" ? "&lang=ur" : ""}`;
   const reserveUrl = customer("reservations") + "&reserve=1";
@@ -93,7 +95,7 @@ export default function RestaurantLanding({ business: b, menu: dishes, menuUnava
     <div className="rl-preview-strip"><span>{S("Private landing page preview", "نجی لینڈنگ پیج نمونہ")} <b>·</b> {S("Sample menu, prices & photography", "نمونہ مینو، قیمتیں اور تصاویر")}</span><a href={base} target={embedded ? "_top" : undefined}>{S("Back to your report", "اپنی رپورٹ پر واپس")} ↗</a></div>
     <header className="rl-header">
       <div className="rl-wrap rl-header-row">
-        <a className="rl-brand" href="#food-main" aria-label={b.name + S(" home", " ہوم")}><span className="rl-brand-mark"><Symbol name="dish" /></span><span><b>{b.name}</b><small>{f.neighborhood ? f.neighborhood + " · " : ""}{S("Quetta", "کوئٹہ")}</small></span></a>
+        <a className="rl-brand" href="#food-main" aria-label={b.name + S(" home", " ہوم")}><span className="rl-brand-mark"><Symbol name="dish" /></span><span><b>{b.name}</b><small>{f.neighborhood ? f.neighborhood + " · " : ""}{cityName}</small></span></a>
         <nav className={`rl-nav ${navOpen ? "open" : ""}`} id="food-navigation" aria-label={S("Page navigation", "صفحے کی نیویگیشن")}>{nav.map(([id, label]) => <a key={id} href={"#" + id} onClick={() => setNavOpen(false)}>{label}</a>)}<a className="rl-nav-reserve" href={reserveUrl} target={embedded ? "_top" : undefined}>{S("Book a table", "میز بک کریں")} ↗</a></nav>
         <div className="rl-tools">
           <button type="button" className="rl-icon-button" onClick={changeLang} aria-label={S("Read in Urdu", "Read in English")}>{lang === "en" ? "اردو" : "EN"}</button>
@@ -104,7 +106,7 @@ export default function RestaurantLanding({ business: b, menu: dishes, menuUnava
     </header>
     <main id="food-main">
       <section className="rl-wrap rl-hero">
-        <div className="rl-hero-copy"><p className="rl-kicker"><span />{S("A place at the table, in Quetta", "کوئٹہ میں، آپ کے لیے ایک میز")}</p><h1>{S("Good food.", "اچھا کھانا۔")}<br /><em>{S("Great company.", "اچھا ساتھ۔")}</em></h1><p className="rl-lead">{S("For the meals that turn into moments. Explore the flavours, gather your people and make yourself at home at ", "وہ کھانا جو یادگار لمحہ بن جائے۔ پسندیدہ ذائقے منتخب کریں اور اپنوں کے ساتھ آئیں، ")}<b>{b.name}</b>.</p><div className="rl-actions"><Link href="#food-menu">{S("Explore the menu", "مینو دیکھیں")}</Link><Link href={reserveUrl} secondary>{S("Book a table", "میز بک کریں")}</Link></div><p className="rl-micro">{S("Try ordering and reservations in the connected demo.", "مربوط ڈیمو میں آرڈر اور میز بکنگ آزمائیں۔")}</p></div>
+        <div className="rl-hero-copy"><p className="rl-kicker"><span />{S("A place at the table, in " + city, cityUr(city) + " میں، آپ کے لیے ایک میز")}</p><h1>{S("Good food.", "اچھا کھانا۔")}<br /><em>{S("Great company.", "اچھا ساتھ۔")}</em></h1><p className="rl-lead">{S("For the meals that turn into moments. Explore the flavours, gather your people and make yourself at home at ", "وہ کھانا جو یادگار لمحہ بن جائے۔ پسندیدہ ذائقے منتخب کریں اور اپنوں کے ساتھ آئیں، ")}<b>{b.name}</b>.</p><div className="rl-actions"><Link href="#food-menu">{S("Explore the menu", "مینو دیکھیں")}</Link><Link href={reserveUrl} secondary>{S("Book a table", "میز بک کریں")}</Link></div><p className="rl-micro">{S("Try ordering and reservations in the connected demo.", "مربوط ڈیمو میں آرڈر اور میز بکنگ آزمائیں۔")}</p></div>
         <div className="rl-hero-visual">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="rl-hero-photo" src="/restaurant/feast.webp" alt={S("Illustrative Pakistani feast with karahi, sajji, naan and sides", "کڑاہی، سجی، نان اور دیگر کھانوں کی نمونہ تصویر")} width="1536" height="1024" fetchPriority="high" />
@@ -114,7 +116,7 @@ export default function RestaurantLanding({ business: b, menu: dishes, menuUnava
         </div>
       </section>
       <div className="rl-wrap rl-at-a-glance">
-        <div><Symbol name="pin" /><span><small>{S("COME FIND US", "ہم تک آئیں")}</small><b>{f.neighborhood || S("Quetta", "کوئٹہ")}</b></span><a href="#food-visit" aria-label={S("View location and hours", "پتہ اور اوقات دیکھیں")}><Symbol name="arrow" /></a></div>
+        <div><Symbol name="pin" /><span><small>{S("COME FIND US", "ہم تک آئیں")}</small><b>{f.neighborhood || cityName}</b></span><a href="#food-visit" aria-label={S("View location and hours", "پتہ اور اوقات دیکھیں")}><Symbol name="arrow" /></a></div>
         <div><Symbol name="dish" /><span><small>{S("SOMETHING FOR EVERY CRAVING", "ہر پسند کا ذائقہ")}</small><b>{S("Karahi. Grill. Chai.", "کڑاہی۔ گرل۔ چائے۔")}</b></span></div>
         <div><Symbol name="table" /><span><small>{S("YOUR NEXT GET-TOGETHER", "اگلی محفل کی تیاری")}</small><b>{S("Save a seat, skip the guesswork", "پہلے سے اپنی میز بک کریں")}</b></span><a href={reserveUrl} target={embedded ? "_top" : undefined} aria-label={S("Find a sample table", "نمونہ میز تلاش کریں")}><Symbol name="arrow" /></a></div>
       </div>
@@ -152,7 +154,7 @@ export default function RestaurantLanding({ business: b, menu: dishes, menuUnava
       </div></section>
 
       <section className="rl-wrap rl-section" id="food-visit"><div className="rl-section-head"><div><p className="rl-kicker"><span className="rl-section-number">05</span>{S("COME ON OVER", "ہم تک آئیں")}</p><h2>{S("We’ll save you", "آپ کے لیے")}<br /><em>{S("a place.", "ایک جگہ۔")}</em></h2></div><Link href={reserveUrl}>{S("Plan a sample visit", "نمونہ ملاقات بک کریں")}</Link></div>
-        <div className="rl-visit-grid"><div className="rl-location-card"><div className="rl-map-art" aria-hidden="true"><svg viewBox="0 0 600 280" fill="none"><path d="m0 20 600 235M60 0 90 280M340 0 390 280M0 150l600-40M490 0 180 280" stroke="currentColor" strokeWidth="28" /><path d="m0 20 600 235M60 0 90 280M340 0 390 280M0 150l600-40M490 0 180 280" stroke="#e8d7ad" strokeWidth="2" strokeDasharray="4 8" /></svg><div className="rl-map-pin"><Symbol name="pin" /></div><span>{S("QUETTA", "کوئٹہ")}</span></div><div className="rl-location-body"><p className="rl-kicker">{S("FIND US", "پتہ")}</p><h3>{b.name}</h3><p dir="auto">{f.address || S("Ask the team for location details.", "پتہ معلوم کرنے کے لیے عملے سے پوچھیں۔")}</p><a href={mapsUrl} target="_blank" rel="noopener noreferrer">{S("Get directions on Google Maps", "گوگل میپس پر راستہ دیکھیں")}<Symbol name="arrow" /></a><small>{S("Decorative map illustration. Open Google Maps for directions.", "نمونہ نقشہ۔ اصل راستے کے لیے گوگل میپس کھولیں۔")}</small></div></div>
+        <div className="rl-visit-grid"><div className="rl-location-card"><div className="rl-map-art" aria-hidden="true"><svg viewBox="0 0 600 280" fill="none"><path d="m0 20 600 235M60 0 90 280M340 0 390 280M0 150l600-40M490 0 180 280" stroke="currentColor" strokeWidth="28" /><path d="m0 20 600 235M60 0 90 280M340 0 390 280M0 150l600-40M490 0 180 280" stroke="#e8d7ad" strokeWidth="2" strokeDasharray="4 8" /></svg><div className="rl-map-pin"><Symbol name="pin" /></div><span>{lang === "ur" ? cityUr(city) : city.toUpperCase()}</span></div><div className="rl-location-body"><p className="rl-kicker">{S("FIND US", "پتہ")}</p><h3>{b.name}</h3><p dir="auto">{f.address || S("Ask the team for location details.", "پتہ معلوم کرنے کے لیے عملے سے پوچھیں۔")}</p><a href={mapsUrl} target="_blank" rel="noopener noreferrer">{S("Get directions on Google Maps", "گوگل میپس پر راستہ دیکھیں")}<Symbol name="arrow" /></a><small>{S("Decorative map illustration. Open Google Maps for directions.", "نمونہ نقشہ۔ اصل راستے کے لیے گوگل میپس کھولیں۔")}</small></div></div>
           <div className="rl-hours-card"><div className="rl-hours-head"><Symbol name="clock" /><h3>{S("Make time for a meal.", "کھانے کے لیے وقت نکالیے۔")}</h3></div><p>{S("Listed visiting hours · Pakistan Standard Time", "لسٹنگ کے اوقات · پاکستان کا وقت")}</p>{f.hours.length ? <dl>{f.hours.map(h => <div key={h.day}><dt>{lang === "ur" ? weekdays[h.day] ?? h.day : h.day}</dt><dd dir="ltr">{lang === "ur" ? h.hours.replace(/Closed/gi, "بند").replace(/AM/g, "صبح").replace(/PM/g, "شام").replace(/to/g, "تا") : h.hours}</dd></div>)}</dl> : <p className="rl-missing-hours">{S("Hours are not listed. Ask the team before visiting.", "اوقات درج نہیں۔ آنے سے پہلے عملے سے تصدیق کریں۔")}</p>}<p className="rl-hours-note">{S("Confirm current hours with the restaurant before a real visit. Demo reservation times are illustrative.", "حقیقی ملاقات سے پہلے ریسٹورنٹ سے اوقات کی تصدیق کریں۔ ڈیمو بکنگ کے اوقات فرضی ہیں۔")}</p><Link href={reserveUrl}>{S("Find a sample table", "نمونہ میز تلاش کریں")}</Link></div>
         </div>
       </section>
@@ -166,6 +168,6 @@ export default function RestaurantLanding({ business: b, menu: dishes, menuUnava
 
       <section className="rl-wrap rl-last"><div className="rl-last-copy"><p className="rl-kicker">{S("GOOD PLANS START WITH GOOD FOOD", "اچھے کھانے سے اچھی محفل")}</p><h2>{S("Come hungry.", "بھوک لے کر آئیں۔")}<br /><em>{S("Bring your people.", "اپنوں کو ساتھ لائیں۔")}</em></h2><div className="rl-actions"><Link href={reserveUrl}>{S("Book a table", "میز بک کریں")}</Link><Link href={menuUrl} secondary>{S("Start a sample order", "نمونہ آرڈر شروع کریں")}</Link></div></div><Flourish className="rl-last-flourish" /></section>
     </main>
-    <footer className="rl-wrap rl-footer"><div><b>{b.name}</b><p>{f.neighborhood || S("Quetta", "کوئٹہ")} · {S("Quetta, Pakistan", "کوئٹہ، پاکستان")}</p></div><nav aria-label={S("Footer navigation", "فوٹر نیویگیشن")}><a href="#food-menu">{S("Menu", "مینو")}</a><a href={customer("orders")} target={embedded ? "_top" : undefined}>{S("My orders", "میرے آرڈرز")}</a><a href={reserveUrl} target={embedded ? "_top" : undefined}>{S("Reservations", "میز بکنگ")}</a><a href={chatUrl} target={embedded ? "_top" : undefined}>{S("Ask a question", "سوال پوچھیں")}</a></nav><div className="rl-footer-bottom"><span>{S("Landing page concept by NexusPoint", "NexusPoint کا لینڈنگ پیج نمونہ")}</span><span>{S("Sample menu & imagery. A private outreach preview.", "نمونہ مینو اور تصاویر۔ نجی آؤٹ ریچ پیش منظر۔")}</span><a href={base} target={embedded ? "_top" : undefined}>{S("Your review report", "آپ کی ریویو رپورٹ")} ↗</a></div></footer>
+    <footer className="rl-wrap rl-footer"><div><b>{b.name}</b><p>{f.neighborhood || cityName} · {S(city + ", Pakistan", cityUr(city) + "، پاکستان")}</p></div><nav aria-label={S("Footer navigation", "فوٹر نیویگیشن")}><a href="#food-menu">{S("Menu", "مینو")}</a><a href={customer("orders")} target={embedded ? "_top" : undefined}>{S("My orders", "میرے آرڈرز")}</a><a href={reserveUrl} target={embedded ? "_top" : undefined}>{S("Reservations", "میز بکنگ")}</a><a href={chatUrl} target={embedded ? "_top" : undefined}>{S("Ask a question", "سوال پوچھیں")}</a></nav><div className="rl-footer-bottom"><span>{S("Landing page concept by NexusPoint", "NexusPoint کا لینڈنگ پیج نمونہ")}</span><span>{S("Sample menu & imagery. A private outreach preview.", "نمونہ مینو اور تصاویر۔ نجی آؤٹ ریچ پیش منظر۔")}</span><a href={base} target={embedded ? "_top" : undefined}>{S("Your review report", "آپ کی ریویو رپورٹ")} ↗</a></div></footer>
   </div>;
 }

@@ -1,0 +1,157 @@
+{% set lang = 'en' %}{% set title = "Islamabad Market Intelligence" %}
+{% include "_head.html.j2" %}
+<style>
+  body { background: #fff; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 3mm 0 5mm; }
+  .kpi { background: var(--paper); padding: 4mm; }
+  .kpi .v { font: 400 16pt/1 var(--display); }
+  .kpi .l { font-size: 7.4pt; color: var(--ink-3); margin-top: 1.6mm; line-height: 1.35; }
+  .sector-head { background: var(--ink); color: var(--white); padding: 6mm 6mm 5mm; margin: 8mm 0 4mm; break-inside: avoid; break-after: avoid; position: relative; overflow: hidden; }
+  .sector-head .label { color: var(--blue); }
+  .sector-head h2 { color: var(--white); margin: 2mm 0 0; }
+  .sector-head p { color: var(--t2); margin: 2.5mm 0 0; max-width: 150mm; }
+  .sector-head .score { position: absolute; right: 6mm; top: 6mm; text-align: right; }
+  .sector-head .score b { font: 400 24pt/1 var(--display); color: var(--blue); display: block; }
+  .tier-row td:first-child { font-weight: 600; color: var(--ink); }
+  .pill { font: 400 5.8pt/1 var(--loud); letter-spacing: .12em; text-transform: uppercase; background: var(--blue); color: var(--ink); padding: .8mm 1.4mm; margin-left: 1.5mm; }
+  .obj { break-inside: avoid; margin-bottom: 2.6mm; }
+  .obj b { display: block; color: var(--ink); }
+  .obj span { color: var(--ink-2); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 3mm 0 4mm; }
+  .steps div { background: var(--paper); padding: 4mm; font-size: 8.2pt; line-height: 1.45; color: var(--ink-2); break-inside: avoid; }
+  .steps b { display: block; font: 400 7pt/1.3 var(--loud); letter-spacing: .12em; text-transform: uppercase; color: var(--ink); margin-bottom: 1.6mm; }
+  .steps i { font-style: normal; font: 400 12pt/1 var(--display); color: var(--blue-text); display: block; margin-bottom: 2mm; }
+</style>
+</head>
+<body>
+{% set S = summary %}
+{% set by = {} %}
+{% for key in ['healthcare', 'food', 'real-estate'] %}{% set _ = by.update({key: prospects | selectattr('launch', 'equalto', key) | list}) %}{% endfor %}
+<div class="doc">
+
+<h2><span class="idx">01</span>The short version</h2>
+<p class="lede">Launch Islamabad with three sectors: <b>healthcare</b> (aesthetic, dental and specialist clinics first), <b>restaurants and cafes</b>, and <b>real estate</b> (developers, society sales offices and agencies). Islamabad businesses are already online and already pay for marketing, so the offer is not "get a website". It is "stop losing the enquiries you already pay for".</p>
+<div class="kpis">
+  <div class="kpi clip"><div class="v num">{{ "{:,}".format(S.total_kept) }}</div><div class="l">businesses kept from a Google Maps scan of 5 areas, 21 Oct 2026 [N1]</div></div>
+  <div class="kpi clip"><div class="v num">{{ "{:,}".format(prospects | length) }}</div><div class="l">prospects in the three launch sectors, scored and ranked</div></div>
+  <div class="kpi clip"><div class="v num">2.36M</div><div class="l">people in Islamabad Capital Territory, 83.97% literate (Census 2023) <sup>S1</sup></div></div>
+  <div class="kpi clip"><div class="v num">96</div><div class="l">digital marketing agencies already listed in Islamabad <sup>S41</sup></div></div>
+</div>
+<div class="callout clip">
+  <span class="label">The decision</span>
+  <p><b>Sell conversion and reply speed, proven with working demos.</b> Every launch sector already faces a dated trigger (FBR POS and e-invoicing for Islamabad service providers <sup style="color:var(--blue)">S20</sup>, IHRA sealing <sup style="color:var(--blue)">S23</sup>, a 5% card rate for restaurants <sup style="color:var(--blue)">S29</sup>), but compliance is a commodity we partner on. Prices are set about 40% above Quetta and were approved on 21 October 2026.</p>
+</div>
+
+<h2><span class="idx">02</span>How Islamabad differs from Quetta</h2>
+<ul class="b">
+  <li><b>Already online.</b> {{ S.sectors.aesthetics.no_website_pct }}% of aesthetic clinics and {{ S.sectors['study-abroad'].no_website_pct }}% of study-abroad consultants lack a website, against 87% of Quetta healthcare. "You don't have a website" is a dead opener here.</li>
+  <li><b>Crowded, and AI is not new.</b> Of 45 local agency sites we fetched, 21 mention AI and 6 already sell a chatbot or AI agent [N2]. One publishes Urdu and Roman Urdu WhatsApp assistants with public PKR prices <sup>S42</sup>. Our edge is working sector demos, named proof and the go-live guarantee.</li>
+  <li><b>Regulation already in force.</b> STGO 05 of 2026 made POS and e-invoicing mandatory for all registered ICT service providers by 25 June 2026 <sup>S20</sup>; FBR's July notification names restaurants, hotels, salons, gyms, schools, clinics, labs and hospitals <sup>S21</sup>.</li>
+  <li><b>Lower connectivity risk.</b> Mobile internet was cut in the twin cities on 26 and 27 September 2026 for a political march <sup>S27</sup>: episodic, not the chronic Balochistan shutdowns.</li>
+  <li><b>Buyers compare.</b> Directories and price lists are public. Expect to be asked for prices and results in the first meeting.</li>
+</ul>
+
+<h2><span class="idx">03</span>The scan</h2>
+<p>Google Maps via Apify, two passes on 21 October 2026: the city core (F, G, E, H and I sectors and Blue Area, 24 categories) and the societies the core polygon misses (DHA, Bahria Town, Gulberg, B-17) for the three launch sectors. Government, military, closed and off-category rows were removed. Each category was capped at 25 to 80 places, so this is a ranked sample, not a census.</p>
+<table>
+  <tr><th>Area</th><th class="n">Businesses</th><th class="n">No working site</th><th class="n">Unclaimed</th><th class="n">Mobile number</th><th class="n">Median reviews</th><th class="n">100+ reviews</th></tr>
+  {% set area_names = {'core': 'Islamabad core', 'dha': 'DHA', 'bahria': 'Bahria Town', 'gulberg': 'Gulberg', 'b17': 'B-17'} %}
+  {% for k in ['core', 'dha', 'bahria', 'gulberg', 'b17'] %}{% set a = S.areas[k] %}
+  <tr><td>{{ area_names[k] }}</td><td class="n">{{ a.businesses }}</td><td class="n">{{ a.no_working_site_pct }}%</td><td class="n">{{ a.unclaimed_pct }}%</td><td class="n">{{ a.mobile_phone_pct }}%</td><td class="n">{{ a.median_reviews | int }}</td><td class="n">{{ a.with_100plus_reviews }}</td></tr>
+  {% endfor %}
+</table>
+<p>The societies are less mature online than the core: no working site rises from {{ S.areas.core.no_working_site_pct }}% in the core to {{ S.areas.gulberg.no_working_site_pct }}% in Gulberg and {{ S.areas.b17.no_working_site_pct }}% in B-17. That is where presence is still a sellable gap; in the core, the gap is reply speed.</p>
+
+{% set names = {'healthcare': 'Healthcare', 'food': 'Restaurants and cafes', 'real-estate': 'Real estate'} %}
+{% for s in kit.sectors %}{% set rows = by[s.key] %}{% set st = rows | sstats %}
+{% set w = {} %}{% for c in kit.scoring.criteria %}{% set _ = w.update({c.key: c.weight}) %}{% endfor %}
+{% set score = namespace(v=0) %}{% for k, v in s.scores.items() %}{% set score.v = score.v + v * w[k] %}{% endfor %}
+<div class="sector-head clip">
+  <span class="label">Launch sector 0{{ loop.index }}</span>
+  <h2>{{ names[s.key] }}</h2>
+  <p>{{ s.long }}. Buyer: {{ s.buyer | lower }}.</p>
+  <div class="score"><b>{{ (score.v / 5) | int }}</b><span class="label" style="color:var(--t3)">score / 100</span></div>
+</div>
+<p class="lede" style="font-size:10pt">{{ s.why }}</p>
+<div class="two">
+  <div>
+    <h3>Evidence</h3>
+    <ul class="b">{% for e in s.evidence %}<li>{{ e | cite }}</li>{% endfor %}</ul>
+  </div>
+  <div>
+    <h3>In our scan</h3>
+    <table>
+      <tr><td>Prospects</td><td class="n">{{ st.n }}</td></tr>
+      <tr><td>No working website</td><td class="n">{{ st.no_site }}%</td></tr>
+      <tr><td>Google listing unclaimed</td><td class="n">{{ st.unclaimed }}%</td></tr>
+      <tr><td>Mobile (WhatsApp-able) number</td><td class="n">{{ st.mobile }}%</td></tr>
+      <tr><td>Median Google reviews</td><td class="n">{{ st.median_reviews }}</td></tr>
+      <tr><td>100+ reviews</td><td class="n">{{ st.r100 }}</td></tr>
+      <tr><td>Under 4 stars on 20+ reviews</td><td class="n">{{ st.low }}</td></tr>
+      <tr class="hl"><td>Score 70+ (start here)</td><td class="n">{{ st.s70 }}</td></tr>
+    </table>
+  </div>
+</div>
+<h3>Top ten to visit first</h3>
+<table>
+  <tr><th>#</th><th>Business</th><th>Area</th><th class="n">Rating</th><th class="n">Reviews</th><th>Site</th><th class="n">Score</th></tr>
+  {% for r in rows[:10] %}
+  <tr><td>{{ loop.index }}</td><td>{{ r.name[:48] }}</td><td>{{ (r.neighborhood or r.area)[:22] }}</td><td class="n">{{ r.rating or '' }}</td><td class="n">{{ "{:,}".format(r.reviews) }}</td><td>{{ r.website_status[:14] }}</td><td class="n">{{ r.score }}</td></tr>
+  {% endfor %}
+</table>
+<div class="two avoid">
+  <div>
+    <h3>The offer</h3>
+    <table>
+      <tr><th>Plan</th><th class="n">Setup</th><th class="n">Monthly</th></tr>
+      {% for t in s.tiers %}<tr class="tier-row"><td>{{ t.name }}{% if t.get('rec') %}<span class="pill">Lead with</span>{% endif %}<br><span style="font-weight:400;color:var(--ink-3)">{{ t.tag }}</span></td><td class="n">{{ t.setup | pkr }}</td><td class="n">{{ t.monthly | pkr }}</td></tr>{% endfor %}
+    </table>
+    <p style="font-size:8.4pt"><b>Opening line.</b> {{ s.pain_line }}</p>
+  </div>
+  <div>
+    <h3>Objections to expect</h3>
+    {% for o in s.objections %}<div class="obj"><b>&ldquo;{{ o.q }}&rdquo;</b><span>{{ o.a }}</span></div>{% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+<h2><span class="idx">{{ "%02d" | format(kit.sectors | length + 4) }}</span>Competition</h2>
+<p>Islamabad is the most crowded agency market NexusPoint has entered. TechBehemoths lists 96 digital marketing agencies <sup>S41</sup>; our scan found {{ S.sectors.competitor.businesses }} agencies and software houses in the core alone, and the 45 with a working website break down as follows [N2].</p>
+<table style="width:70%">
+  <tr><th>Site mentions</th><th class="n">Of 45</th><th style="width:40%"></th></tr>
+  {% for label, v in [('WhatsApp', 28), ('AI', 21), ('Automation', 17), ('A chatbot or AI agent', 6), ('Published PKR prices', 5)] %}
+  <tr><td>{{ label }}</td><td class="n">{{ v }}</td><td><div class="bar"><i class="{{ 'b' if v < 10 else '' }}" style="width:{{ (v / 45 * 100) | round(0) }}%"></i></div></td></tr>
+  {% endfor %}
+</table>
+<p><b>Price anchors.</b> One local agency publishes social media management at PKR 15,000, 35,000 and 70,000+ a month and says most local agencies start near PKR 35,000 <sup>S42</sup>; an SEO shop lists PKR 84,000 to 197,000 a month <sup>S44</sup>. Our Growth plans (PKR 190,000 to 240,000 setup, 30,000 to 40,000 a month) sit above social-media retainers and below SEO retainers, and they include the build.</p>
+<p><b>How we win.</b> Show, do not claim: the prospect's own business running in a private demo, their review x-ray, and a timed reply test. Few local competitors show a working AI demo or a named client.</p>
+
+<h2><span class="idx">{{ "%02d" | format(kit.sectors | length + 5) }}</span>The outreach plan</h2>
+<div class="steps">
+  <div><i>01</i><b>Door-opener</b>Free Digital Health Check for clinics and restaurants; a Lead Response Check (test enquiry, timed) for property offices.</div>
+  <div><i>02</i><b>Private demo</b>Their own business in the demo app: assistant, dashboard, website draft, review x-ray, ROI in PKR.</div>
+  <div><i>03</i><b>Founding pilot</b>First 3 per sector: 40% off Growth setup for a case study, a video testimonial and 2 introductions.</div>
+  <div><i>04</i><b>Live in 14 days</b>Built on their own WhatsApp number, or they pay nothing more until it is.</div>
+</div>
+<ul class="b">
+  <li><b>Walk the clusters.</b> I-8 Markaz, Blue Area (G-6, G-7, F-6/F-7 blocks), F-6, F-7, F-8 and G-9 Markaz in the core; the society commercial areas of DHA, Bahria, Gulberg and B-17 for property offices.</li>
+  <li><b>Order of work.</b> Healthcare first (highest score, demo ready), restaurants in parallel (fast decisions), real estate once the demo is ready, starting with developers and society sales offices rather than single dealers.</li>
+  <li><b>Track every touch</b> in the prospect workbook's Status column. Re-rank the sectors after five qualified conversations, the same rule as Quetta.</li>
+  <li><b>Learn from Quetta first.</b> The Quetta outreach outcome is not logged anywhere. Its replies, objections and price reactions should be reviewed before the first Islamabad visit.</li>
+</ul>
+
+<h2><span class="idx">{{ "%02d" | format(kit.sectors | length + 6) }}</span>Gaps and caveats</h2>
+<ul class="b">
+  <li>The scan is a ranked sample (25 to 80 places per category and area), skewed to businesses Google surfaces first. Rawalpindi proper was not scanned.</li>
+  <li>Several triggers rest on news or social posts rather than primary documents (Budget 2026-27 property taxes, the STGO 05 timetable via a practitioner post). They are marked where used.</li>
+  <li>Sector scores are judgments informed by evidence, not measurements.</li>
+  <li>Prices were approved for Islamabad on 21 October 2026 without local price testing; watch for price objections in the first five conversations.</li>
+</ul>
+
+<h2><span class="idx">{{ "%02d" | format(kit.sectors | length + 7) }}</span>Sources</h2>
+<p style="font-size:7.6pt;color:var(--ink-3)">Accessed 21 October 2026. P = primary (government, regulator, the business's own site); S = secondary; N = NexusPoint's own data.</p>
+{% for src in sources %}<p class="src"><b>[{{ src.id }}]</b> {{ src.tier }} &middot; {{ src.text }}</p>{% endfor %}
+</div>
+</body>
+</html>

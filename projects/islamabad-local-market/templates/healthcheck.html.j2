@@ -1,0 +1,121 @@
+{% set d = demo %}{% set ur = lang == 'ur' %}{% set x = d.xray %}{% set h = d.health %}
+{% set title = "Digital Health Check: " ~ d.name %}
+{% include "_head.html.j2" %}
+<style>
+  .page > * { flex: none; }
+  .page > .body { flex: 1 1 auto; }
+  .hc-hero { padding-bottom: 6mm; }
+  .hc-grid { display: grid; grid-template-columns: 1fr 38mm; gap: 10mm; align-items: end; margin-top: 7mm; position: relative; z-index: 2; }
+  .hc-grid h1 { font: 400 22pt/1.12 var(--display); margin-top: 3mm; }
+  [lang="ur"] .hc-grid h1 { font: 700 20pt/1.8 var(--urdu); }
+  .hc-grid .sub { color: var(--t2); font-size: 9.4pt; line-height: 1.6; margin-top: 3.5mm; max-width: 120mm; }
+  [lang="ur"] .hc-grid .sub { line-height: 2.2; font-size: 9pt; }
+  .ring { display: block; }
+  .ring .v { font: 400 25px var(--display); fill: #fff; }
+  .ring .of { font: 400 6px var(--loud); letter-spacing: 1.4px; fill: #8A8A8A; }
+  .score-cap { text-align: center; margin-top: 2mm; }
+
+  .body { padding-top: 5mm; padding-bottom: 5mm; display: flex; flex-direction: column; gap: 4.5mm; }
+  .items { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8mm; }
+  .item { display: grid; grid-template-columns: 5mm 1fr; gap: 2.5mm; align-items: start; font-size: 9pt; line-height: 1.45; padding: 1.5mm 0; border-bottom: 1px solid var(--rule); }
+  [lang="ur"] .item { line-height: 2.1; font-size: 8.8pt; }
+  .mk { width: 4.6mm; height: 4.6mm; display: grid; place-items: center; font: 600 7pt/1 var(--sans); color: #fff; margin-top: .3mm;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%); }
+  [lang="ur"] .mk { margin-top: 1.6mm; }
+  .mk.ok { background: var(--ok); } .mk.no { background: var(--bad); }
+
+  .callout { background: var(--ink); color: var(--white); padding: 3.5mm 5mm; display: grid; grid-template-columns: auto 1fr; gap: 5mm; align-items: center; }
+  .callout .big { font: 400 22pt/1 var(--display); color: var(--blue); }
+  .callout p { font-size: 9pt; line-height: 1.55; color: var(--t2); }
+  .callout p b { color: var(--white); font-weight: 600; }
+  [lang="ur"] .callout p { line-height: 2.1; }
+
+  .rv { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .rv .panel h3 { font: 400 8pt/1.2 var(--loud); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2mm; display: flex; justify-content: space-between; }
+  [lang="ur"] .rv .panel h3 { font: 700 9.5pt/1.8 var(--urdu); letter-spacing: 0; }
+  .rv li { display: flex; justify-content: space-between; gap: 3mm; font-size: 8.6pt; color: var(--ink-2); padding: 1.6mm 0; border-top: 1px solid var(--rule); }
+  [lang="ur"] .rv li { line-height: 1.85; }
+  .rv .n { font: 400 8pt/1.4 var(--display); color: var(--ink); white-space: nowrap; }
+
+  .fx { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .fx div { background: var(--paper); padding: 3.2mm 3.6mm; font-size: 8.2pt; line-height: 1.4; }
+  [lang="ur"] .fx div { line-height: 1.95; font-size: 7.9pt; }
+  .fx b { display: block; font: 400 11pt/1 var(--display); color: var(--blue-text); margin-bottom: 1.6mm; }
+
+  .qrs { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: auto; }
+  .qrbox { display: flex; gap: 4mm; align-items: center; background: var(--ink); color: var(--white); padding: 3mm 4mm; }
+  .qrbox .qr { width: 19mm; height: 19mm; }
+  .qrbox h3 { font: 400 10pt/1.2 var(--display); }
+  [lang="ur"] .qrbox h3 { font: 700 10.5pt/1.8 var(--urdu); }
+  .qrbox p { color: var(--t3); font-size: 7.8pt; margin-top: 1.4mm; line-height: 1.45; }
+  [lang="ur"] .qrbox p { line-height: 2; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="band hc-hero pad">
+    <div class="mark">{{ symbol_svg }}</div>
+    <div class="topbar">
+      <img src="{{ a.logo_white }}" alt="NexusPoint">
+      <span class="label">{{ 'Digital Health Check' if not ur else 'ڈیجیٹل ہیلتھ چیک' }} &middot; <span class="ltr">{{ prepared }}</span></span>
+    </div>
+    <div class="hc-grid">
+      <div>
+        <span class="label" style="color:var(--blue)">{{ 'Prepared privately for' if not ur else 'نجی طور پر تیار کردہ' }}</span>
+        <h1 dir="auto">{{ d.name }}</h1>
+        <p class="sub">{% if ur %}یہ وہ ہے جو گاہک آپ کو گوگل پر ڈھونڈتے وقت دیکھتے ہیں، اور آپ کے آخری <bdi dir="ltr">{{ x.stats.analysed }}</bdi> ریویوز کیا کہتے ہیں۔{% else %}What customers see when they find you on Google, and what your last {{ x.stats.analysed }} reviews say about you.{% endif %}</p>
+      </div>
+      <div>
+        {% set C = 2 * 3.14159 * 42 %}{% set col = '#4ADE80' if h.score >= 70 else ('#FBBF24' if h.score >= 45 else '#F87171') %}
+        <svg class="ring" viewBox="0 0 100 100" width="38mm" height="38mm" direction="ltr">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="#1D1E1F" stroke-width="7"/>
+          <circle cx="50" cy="50" r="42" fill="none" stroke="{{ col }}" stroke-width="7" stroke-dasharray="{{ C * h.score / 100 }} {{ C }}" transform="rotate(-90 50 50)"/>
+          <text class="v" x="50" y="56" text-anchor="middle">{{ h.score }}</text>
+          <text class="of" x="50" y="68" text-anchor="middle">OUT OF 100</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="band-rule"></div>
+
+  <div class="body pad">
+    <div>
+      <div class="sh"><span class="idx ltr">01</span><h2>{{ 'Your listing and website' if not ur else 'آپ کی لسٹنگ اور ویب سائٹ' }}</h2></div>
+      <div class="items">
+        {% for i in h['items'] %}<div class="item"><span class="mk {{ 'ok' if i.ok else 'no' }}">{{ '✓' if i.ok else '✕' }}</span><span>{{ (i.ur | bidi) if ur else i.en }}</span></div>{% endfor %}
+      </div>
+    </div>
+
+    {% if x.stats.owner_reply_pct < 50 %}
+    <div class="callout clip">
+      <span class="big ltr">{{ x.stats.owner_reply_pct }}%</span>
+      <p>{% if ur %}آپ کے آخری <bdi dir="ltr">{{ x.stats.analysed }}</bdi> ریویوز میں سے صرف اتنے فیصد کا جواب دیا گیا۔ <b>گاہک فیصلہ کرنے سے پہلے جوابات پڑھتے ہیں۔</b>{% else %}of your last {{ x.stats.analysed }} reviews got a reply from you. <b>Customers read the replies before they choose who to call.</b>{% endif %}</p>
+    </div>
+    {% endif %}
+
+    <div>
+      <div class="sh"><span class="idx ltr">02</span><h2>{{ 'What your reviews say' if not ur else 'آپ کے ریویوز کیا کہتے ہیں' }}</h2></div>
+      <div class="rv">
+        <div class="panel clip"><h3><span>{{ 'Complaints' if not ur else 'شکایات' }}</span><span class="ltr">{{ 'Mentions' if not ur else '' }}</span></h3>
+          <ul>{% for t in x.complaints[:3] %}<li><span>{{ t.theme_ur if ur else t.theme_en }}</span><span class="n ltr">{{ t.count }}</span></li>{% else %}<li><span>{{ 'No clear complaint pattern' if not ur else 'شکایت کا کوئی واضح رجحان نہیں' }}</span></li>{% endfor %}</ul></div>
+        <div class="panel clip"><h3><span>{{ 'Praise' if not ur else 'تعریف' }}</span><span class="ltr">{{ 'Mentions' if not ur else '' }}</span></h3>
+          <ul>{% for t in x.praise[:3] %}<li><span>{{ t.theme_ur if ur else t.theme_en }}</span><span class="n ltr">{{ t.count }}</span></li>{% endfor %}</ul></div>
+      </div>
+    </div>
+
+    {% if x.fixes %}
+    <div>
+      <div class="sh"><span class="idx ltr">03</span><h2>{{ 'What we would fix first' if not ur else 'ہم سب سے پہلے کیا ٹھیک کریں گے' }}</h2></div>
+      <div class="fx">{% for f in x.fixes[:3] %}<div class="clip"><b class="ltr">0{{ loop.index }}</b>{{ (f.ur | bidi) if ur else f.en }}</div>{% endfor %}</div>
+    </div>
+    {% endif %}
+
+    <div class="qrs">
+      <div class="qrbox clip"><div class="qr">{{ qr_chat }}</div><div><h3>{{ 'Talk to your assistant' if not ur else 'اپنے اسسٹنٹ سے بات کریں' }}</h3><p>{{ 'Scan and ask it anything, the way your customers do.' if not ur else 'اسکین کریں اور ویسے پوچھیں جیسے آپ کے گاہک پوچھتے ہیں۔' }}</p></div></div>
+      <div class="qrbox clip"><div class="qr">{{ qr_hub }}</div><div><h3>{{ 'Open your private demo' if not ur else 'اپنا نجی ڈیمو کھولیں' }}</h3><p>{{ 'Reviews, dashboard, website draft and your numbers. Live for 14 days.' if not ur else 'ریویوز، ڈیش بورڈ، ویب سائٹ ڈرافٹ اور آپ کے اعداد۔ چودہ دن کے لیے۔' }}</p></div></div>
+    </div>
+  </div>
+  <div class="foot"><span class="ltr"><b>NexusPoint</b> &middot; {{ kit.meta.website }} &middot; {{ kit.meta.email }}</span><span class="ltr">{{ kit.meta.tagline }}</span></div>
+</div>
+</body>
+</html>

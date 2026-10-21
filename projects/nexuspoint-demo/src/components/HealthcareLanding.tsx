@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { Profile, Xray } from "@/lib/db";
 import type { Doctor } from "@/lib/healthcare-types";
 import type { Lang } from "@/lib/i18n";
+import { cityOf, cityUr as cityInUrdu } from "@/lib/city";
 import "./healthcare-landing.css";
 
 export type LandingBusiness = {
@@ -59,7 +60,6 @@ const serviceCopy: Record<string, [string, string, string, SymbolName]> = {
   "PRP and hair regeneration": ["پی آر پی اور بالوں کی بحالی", "Book an assessment to discuss your skin concerns and the treatment options.", "اپنے مسئلے اور علاج کے طریقوں پر بات کرنے کے لیے معائنہ بک کریں۔", "heart"],
   "Skin allergy consultation and testing": ["جلد کی الرجی کا معائنہ اور ٹیسٹ", "Book an assessment to discuss your skin concerns and the treatment options.", "اپنے مسئلے اور علاج کے طریقوں پر بات کرنے کے لیے معائنہ بک کریں۔", "heart"],
 };
-const cityNames: Record<string, string> = { Quetta: "کوئٹہ", Islamabad: "اسلام آباد", Rawalpindi: "راولپنڈی", Lahore: "لاہور", Karachi: "کراچی", Peshawar: "پشاور" };
 const specialties: Record<string, string> = {
   "General medicine": "جنرل میڈیسن", Cardiology: "امراض قلب", Pediatrics: "بچوں کے امراض", Gynecology: "امراض نسواں",
   "General dentistry": "جنرل ڈینٹسٹری", Orthodontics: "آرتھوڈونٹکس", "Restorative dentistry": "دانتوں کی بحالی",
@@ -78,8 +78,8 @@ export default function HealthcareLanding({ business: b, doctors, initialLang, e
   const f = b.profile.facts;
   const dental = /dent/i.test(f.category ?? b.name);
   const derm = !dental && /skin|derma|cosmet|laser|allerg/i.test(`${f.category ?? ""} ${b.name}`);
-  const city = f.city || "Quetta";
-  const cityUr = cityNames[city] ?? city;
+  const city = cityOf(b.profile);
+  const cityUr = cityInUrdu(city);
   const base = `/d/${b.slug}?t=${encodeURIComponent(b.token)}${lang === "ur" ? "&lang=ur" : ""}`;
   const patient = (tab: string, doctor?: string) => `/d/${b.slug}/patient?t=${encodeURIComponent(b.token)}&tab=${tab}${doctor ? "&book=1&doctor=" + encodeURIComponent(doctor) : ""}${lang === "ur" ? "&lang=ur" : ""}`;
   const bookingUrl = patient("appointments") + "&book=1";

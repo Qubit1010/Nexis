@@ -1,0 +1,141 @@
+{% set lang = 'en' %}{% set title = "NexusPoint · Islamabad" %}
+{% include "_head.html.j2" %}
+<style>
+  @page { size: 338.67mm 190.5mm; margin: 0; }
+  .slide .mark { pointer-events: none; opacity: .11; width: 200mm; right: -40mm; bottom: auto; top: -6mm; }
+  .slide .s-sub { font-size: 13pt; }
+  .slide h2 { font-size: 28pt; }
+  .chips { display: flex; gap: 3mm; margin-top: auto; margin-bottom: 8mm; }
+  .chips span { font: 400 8pt/1 var(--loud); letter-spacing: .14em; text-transform: uppercase; padding: 3.4mm 4.5mm; box-shadow: inset 0 0 0 1px var(--edge-dark); background: var(--ink-soft);
+    clip-path: polygon(0 0, calc(100% - 3mm) 0, 100% 3mm, 100% 100%, 0 100%); }
+  .chips span:first-child { background: var(--blue); color: var(--ink); box-shadow: none; }
+  .big { font: 400 74pt/.92 var(--loud); text-transform: uppercase; margin-top: 18mm; }
+  .big span { display: block; font: 400 24pt/1.15 var(--display); text-transform: none; color: var(--blue); margin-top: 6mm; }
+  .cards { display: grid; gap: 4mm; margin-top: 10mm; }
+  .c4 { grid-template-columns: repeat(4, 1fr); } .c3 { grid-template-columns: repeat(3, 1fr); }
+  .card { background: var(--ink-soft); box-shadow: inset 0 0 0 1px var(--edge-dark); padding: 6mm; }
+  .light .card { background: var(--paper); box-shadow: none; }
+  .card i { font: 400 13pt/1 var(--display); color: var(--blue); font-style: normal; display: block; margin-bottom: 5mm; }
+  .light .card i { color: var(--blue-text); }
+  .card h3 { font: 400 16pt/1.2 var(--display); }
+  .card p { font-size: 12pt; line-height: 1.5; color: var(--t2); margin-top: 3mm; }
+  .light .card p { color: var(--ink-2); }
+  .stat3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; margin-top: 12mm; }
+  .stat3 .v { font: 400 60pt/1 var(--display); color: var(--blue); }
+  .stat3 .l { font-size: 13pt; color: var(--t2); margin-top: 3mm; line-height: 1.45; max-width: 80mm; }
+  .stat3 .src { font-size: 7pt; color: var(--t3); margin-top: 2mm; }
+  .sector { display: grid; grid-template-columns: 1fr 92mm; gap: 14mm; margin-top: 8mm; flex: 1; }
+  .sector h2 { margin-top: 3mm; font-size: 22pt; }
+  .sector .pain { margin-top: 6mm; padding-left: 5mm; border-left: 1.2mm solid var(--blue); font-size: 11pt; line-height: 1.5; }
+  .sector ul { margin-top: 6mm; columns: 2; column-gap: 8mm; }
+  .sector li { font-size: 10pt; color: var(--t2); padding: 1.6mm 0 1.6mm 5mm; position: relative; break-inside: avoid; }
+  .sector li::before { content: ""; position: absolute; left: 0; top: 3.4mm; width: 2.2mm; height: 2.2mm; background: var(--blue); clip-path: polygon(0 0,100% 0,100% 100%,35% 100%,0 65%); }
+  .sector .phone { padding: 4mm; }
+  .sector .msg { font-size: 9.4pt; }
+  .price { width: 100%; border-collapse: collapse; margin-top: 10mm; }
+  .price th { font: 400 7.5pt/1 var(--loud); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); text-align: left; padding: 0 0 3mm; border-bottom: 1px solid var(--ink); }
+  .price td { padding: 4mm 0; border-bottom: 1px solid var(--rule); font-size: 11pt; }
+  .price td.n, .price th.n { text-align: right; font-family: var(--display); }
+  .price tr td:first-child { font: 400 12pt/1.2 var(--loud); text-transform: uppercase; }
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 8mm; }
+  .quotes blockquote { margin: 0; background: var(--ink-soft); box-shadow: inset 0 0 0 1px var(--edge-dark); padding: 7mm; font-size: 13pt; line-height: 1.5; }
+  .quotes cite { display: block; font: 400 7pt/1.4 var(--loud); letter-spacing: .12em; text-transform: uppercase; font-style: normal; color: var(--t3); margin-top: 4mm; }
+  .cta-grid { display: grid; grid-template-columns: 1fr auto; gap: 14mm; align-items: end; margin-top: auto; }
+  .cta-grid .qr { width: 42mm; height: 42mm; padding: 2.5mm; }
+</style>
+</head>
+<body>
+{% set top = 'NexusPoint &middot; Islamabad' %}
+
+<section class="slide">
+  <div class="mark">{{ symbol_svg }}</div>
+  <div class="s-top"><img src="{{ a.logo_white }}" alt="NexusPoint"><span class="label">Islamabad &middot; {{ today }}</span></div>
+  <h1 class="big">Reply first.<span>Win the booking.</span></h1>
+  <p class="s-sub">AI assistants, websites and automation for Islamabad clinics, restaurants and property offices. Built on your own WhatsApp number, live in 14 days.</p>
+  <div class="chips"><span>Clinics</span><span>Restaurants &amp; cafes</span><span>Real estate</span></div>
+  <div class="s-foot" style="margin-top:0"><span>{{ kit.meta.website }}</span><span>{{ kit.meta.tagline }}</span></div>
+</section>
+
+<section class="slide">
+  <div class="s-top"><img src="{{ a.logo_white }}" alt=""><span class="label">01 &middot; The leak</span></div>
+  <h2>Your customers already found you.<br>The reply is where they leave.</h2>
+  <div class="stat3">
+    <div><div class="v">7&times;</div><div class="l">more likely to qualify a lead when you reply within an hour than an hour later.</div><div class="src">Oldroyd et al., HBR 2011</div></div>
+    <div><div class="v">30%</div><div class="l">of booked appointments at a Pakistani hospital clinic were no-shows. A reminder halved the risk.</div><div class="src">Aga Khan University, JMIR 2018</div></div>
+    <div><div class="v">1am</div><div class="l">when the overseas buyer fills your form. Your office opens at 10.</div><div class="src">Islamabad property offices, every week</div></div>
+  </div>
+  <div class="s-foot"><span>{{ top }}</span><span>02</span></div>
+</section>
+
+<section class="slide light">
+  <div class="s-top"><img src="{{ a.logo_navy }}" alt=""><span class="label">02 &middot; What we build</span></div>
+  <h2>One assistant, on your number, that does the first minute of every conversation.</h2>
+  <div class="cards c4">
+    <div class="card clip"><i>01</i><h3>Answers</h3><p>WhatsApp and Instagram, in English, Urdu and Roman Urdu, from facts you approve.</p></div>
+    <div class="card clip"><i>02</i><h3>Books</h3><p>Appointments, tables and site visits into a calendar your staff already see.</p></div>
+    <div class="card clip"><i>03</i><h3>Reminds</h3><p>The day before and 2 hours before. Courses, instalments and repeat orders.</p></div>
+    <div class="card clip"><i>04</i><h3>Hands off</h3><p>Prices, medical and legal questions go to a person, with a summary.</p></div>
+  </div>
+  <div class="s-foot" style="color:var(--ink-3)"><span>{{ top }}</span><span>03</span></div>
+</section>
+
+{% for s in kit.sectors %}{% set o = s.op.en %}
+<section class="slide">
+  <div class="mark">{{ symbol_svg }}</div>
+  <div class="s-top"><img src="{{ a.logo_white }}" alt=""><span class="label">0{{ loop.index + 2 }} &middot; {{ s.name }}</span></div>
+  <div class="sector">
+    <div>
+      <span class="label" style="color:var(--blue)">{{ o.audience }}</span>
+      <h2>{{ s.headline }}</h2>
+      <p class="pain">{{ s.pain_line }}</p>
+      <ul>{% for b in o.bundle %}<li>{{ b }}</li>{% endfor %}</ul>
+    </div>
+    <div>
+      <div class="phone clip">
+        <div class="ph-top"><div class="ph-av"><span></span></div><div><div class="ph-name">Your business</div><div class="ph-sub">AI assistant &middot; online</div></div></div>
+        {% for m in o.chat %}<div class="msg {{ m.from }}">{{ m.text }}<span class="t">{{ m.time }}{% if m.from == 'us' %} ✓✓{% endif %}</span></div>{% endfor %}
+      </div>
+      <p class="chat-note"><span class="dot"></span>{{ o.chat_note }}</p>
+    </div>
+  </div>
+  <div class="s-foot"><span>{{ top }}</span><span>0{{ loop.index + 3 }}</span></div>
+</section>
+{% endfor %}
+
+<section class="slide light">
+  <div class="s-top"><img src="{{ a.logo_navy }}" alt=""><span class="label">06 &middot; Plans</span></div>
+  <h2>Prices in the open.</h2>
+  <table class="price">
+    <tr><th>Sector</th><th>Recommended plan</th><th class="n">Setup</th><th class="n">Monthly</th><th class="n">Founding pilot setup</th></tr>
+    {% for s in kit.sectors %}{% set g = s.tiers[1] %}
+    <tr><td>{{ s.name }}</td><td>{{ g.name }}: {{ g.tag }}</td><td class="n">{{ g.setup | pkr }}</td><td class="n">{{ g.monthly | pkr }}</td><td class="n" style="color:var(--blue-text)">{{ (g.setup * 0.6) | int | pkr }}</td></tr>
+    {% endfor %}
+  </table>
+  <p class="s-sub" style="font-size:10pt">Starter from {{ (kit.sectors | map(attribute='tiers') | map('first') | map(attribute='setup') | min) | pkr }}. Founding pilot: the first 3 businesses in each sector, in return for a case study and 2 introductions. {{ kit.terms.passthrough }}</p>
+  <div class="s-foot" style="color:var(--ink-3)"><span>{{ top }}</span><span>07</span></div>
+</section>
+
+<section class="slide">
+  <div class="s-top"><img src="{{ a.logo_white }}" alt=""><span class="label">07 &middot; Proof</span></div>
+  <h2>An international record. Now in Islamabad, in person.</h2>
+  <div class="stat3" style="margin-top:8mm">
+    {% for p in kit.i18n.en.proof %}<div><div class="v">{{ p.v }}</div><div class="l">{{ p.l }}</div></div>{% endfor %}
+  </div>
+  <div class="quotes">
+    {% for t in kit.proof.testimonials %}<blockquote class="clip">&ldquo;{{ t.text }}&rdquo;<cite>{{ t.name }} &middot; {{ t.role }}</cite></blockquote>{% endfor %}
+  </div>
+  <div class="s-foot"><span>{{ top }}</span><span>08</span></div>
+</section>
+
+<section class="slide">
+  <div class="mark">{{ symbol_svg }}</div>
+  <div class="s-top"><img src="{{ a.logo_white }}" alt=""><span class="label">08 &middot; Next step</span></div>
+  <h1 class="big" style="margin-top:14mm">Start here.<span>Book a free Digital Health Check.</span></h1>
+  <div class="cta-grid">
+    <p class="s-sub" style="margin:0">15 minutes at your business. We time how fast you reply, show you what customers see on Google, and name the three fixes worth making first. {{ kit.terms.guarantee }} {{ kit.terms.ownership.split('.')[0] }}.<br><br><span style="color:var(--white)">{{ kit.meta.email }} &middot; {{ kit.meta.website }}</span></p>
+    <div style="text-align:center"><div class="qr">{{ qr_whatsapp }}</div><span class="label" style="display:block;margin-top:3mm">Scan to WhatsApp us</span></div>
+  </div>
+  <div class="s-foot" style="margin-top:8mm"><span>{{ top }}</span><span>{{ kit.meta.tagline }}</span></div>
+</section>
+</body>
+</html>

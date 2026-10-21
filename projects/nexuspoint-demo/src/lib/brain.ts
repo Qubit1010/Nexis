@@ -6,6 +6,7 @@
 // Order of fall-through: AI provider chain -> scripted sector brain -> fixed fallback reply.
 
 import { clean, problems } from "./guards.ts";
+import { cityOf, fillCity } from "./city.ts";
 import {
   detectLang,
   introLine,
@@ -33,6 +34,7 @@ export type BrainBusiness = {
   name: string;
   sector: string;
   profile: {
+    city?: string | null;
     about: string;
     services_sample: string[];
     questions: { key: string; ask: string }[];
@@ -60,16 +62,18 @@ const STAGES: Stage[] = [
 
 export function systemPrompt(b: BrainBusiness, today: string): string {
   const p = b.profile;
+  const city = cityOf(p);
   const qs = p.questions.map((q) => `- ${q.key}: ${q.ask}`).join("\n");
-  return `You are the ${p.action === "order" ? "ordering" : "front-desk"} assistant for ${b.name} in ${p.facts.city || "Quetta"}, replying on WhatsApp within a minute.
+  const role = p.action === "order" ? "ordering" : b.sector === "real-estate" ? "property enquiries" : "front-desk";
+  return `You are the ${role} assistant for ${b.name} in ${city}, replying on WhatsApp within a minute.
 This is a live DEMO that NexusPoint built to show the owner how it works.
 
 About the business (facts from its Google listing):
-${p.about}
+${fillCity(p.about, city)}
 
 Services or items (SAMPLE for the demo, not confirmed by the owner): ${p.services_sample.join(", ")}.
 Demo scenario: ${p.demo_hint}
-Today in ${p.facts.city || "Quetta"}: ${today}.
+Today in ${city}: ${today}.
 
 Every turn:
 1. Write the business's next message. Answer what they asked, then move forward.
@@ -85,6 +89,7 @@ ${qs}
 
 Rules:
 ${b.sector === "healthcare" ? "- Doctor availability and reservations are handled by a separate database booking service. Never offer free slots or confirm a reservation from this conversation alone. Direct booking requests to the patient portal or staff and use action none." : ""}
+${b.sector === "real-estate" ? "- Listings, demand prices and site-visit reservations live in a separate stored property service. Never quote a price, discount, payment plan or availability from this conversation, never confirm a visit yourself, and use action none. Legal, NOC, approval, transfer, possession and tax questions always go to an agent (stage needs_human)." : ""}
 ${b.sector === "education" ? "- Attendance, homework, fees, admissions, results and campus reservations use a separate stored school service. Never infer student records or confirm a payment or visit. Unknown information goes to the school office. Use action none." : ""}
 - Use only the facts above. Never invent prices, fees, delivery charges, doctor names or availability outside the opening hours.
 - Reply in the customer's language and script: Roman Urdu if they write Roman Urdu, Urdu script if they write Urdu, otherwise English.
