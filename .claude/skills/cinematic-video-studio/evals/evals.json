@@ -1,0 +1,8 @@
+{
+  "skill_name": "cinematic-video-studio",
+  "evals": [
+    {"id": 1, "prompt": "Jallah liked the v2 films. Upgrade CURE concept 5 'Myth or Fact?' (client-projects/primara/cure/event-videos/creative-variations.md, section 5) to the same cinematic v2 standard as the Pearl Diver/Majlis/Three Generations v2 cuts. PLAN ONLY for now: write the script with shot list, the still and motion prompts, the spec.json for the build, and a credit estimate. Do not call any Higgsfield generation tools.", "expected_output": "script.md + prompts + spec.json + cost estimate honouring CURE's profile (doctor placeholder, no AI doctor, banned words, quiz CTA end card)", "files": []},
+    {"id": 2, "prompt": "do the same v2 upgrade for concept 3 grandma vs the phone at CURE. plan it fully (script, shots, prompts, spec, cost) but dont generate anything yet, I want to check the plan with the client first", "expected_output": "plan for a comedy film with Umm Hamad, fake-ad handling flagged for compliance, saved character element, voices from profile", "files": []},
+    {"id": 3, "prompt": "New client: Smile Lab, a dental clinic in Dubai Marina (DHA-licensed). They want a ~50 second cinematic Instagram reel explaining why flossing matters, English first with Arabic subtitles, warm family feel. Set them up and plan the film (profile, script, shot list, prompts, spec, cost). Don't spend any Higgsfield credits yet.", "expected_output": "new client profile in client-projects (not in the skill), DHA-aware hard rules, real-dentist placeholder, plan + spec + cost", "files": []}
+  ]
+}
