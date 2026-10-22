@@ -56,7 +56,13 @@ export function YouTubeSuggestedTopics({ topics }: YouTubeSuggestedTopicsProps) 
                 <h3 className="text-sm font-semibold leading-snug">{t.topic}</h3>
                 <div className="flex items-center gap-1.5 shrink-0">
                   <SaveToSheetButton
-                    payload={{ type: "idea", title: t.topic, formatSuggestion: t.targetFormat }}
+                    payload={{
+                      type: "idea",
+                      title: t.topic,
+                      formatSuggestion: t.targetFormat,
+                      summary: [t.angle, t.whyNow].filter(Boolean).join("\n\n"),
+                      details: { competitionLevel: t.competitionLevel, referenceVideos: t.referenceVideos },
+                    }}
                   />
                   {t.competitionLevel && (
                     <span

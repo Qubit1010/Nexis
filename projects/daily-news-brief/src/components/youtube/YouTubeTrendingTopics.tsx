@@ -43,7 +43,14 @@ export function YouTubeTrendingTopics({ topics }: YouTubeTrendingTopicsProps) {
                 <h3 className="font-semibold text-sm leading-snug">{t.topic}</h3>
                 <div className="flex items-center gap-1.5 shrink-0">
                   <SaveToSheetButton
-                    payload={{ type: "topic", topic: t.topic, mentionCount: t.mentionCount, channels: t.channels }}
+                    payload={{
+                      type: "topic",
+                      topic: t.topic,
+                      mentionCount: t.mentionCount,
+                      channels: t.channels,
+                      summary: t.summary,
+                      sentiment: t.sentiment,
+                    }}
                   />
                   <span className="text-xs font-bold text-rose-400">
                     {t.mentionCount}x

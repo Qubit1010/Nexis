@@ -191,8 +191,8 @@ echo '{"platform":"...","format":"...","goal":"...","title":"...","hook":"...","
 
 **This skill does not research.** Source discovery belongs to the `research` skill, and for a
 scheduled row it is `post-creator` step 2 that calls it. `scripts/research_notebooklm.py` stays
-on disk because `projects/content-engine-dashboard`'s `/api/research` routes still execute it,
-but it is not a path this skill offers: it bypasses the `research` skill and goes straight to
+on disk for history only: the dashboard that ran it (`projects/content-engine-dashboard`) was
+archived on 2026-10-22, replaced by `projects/content-os`. It is not a path this skill offers: it bypasses the `research` skill and goes straight to
 NotebookLM with its own depth ladder, which is a second unranked research surface. If a RUN
 needs sources, hand the topic to `research` or to `post-creator`.
 

@@ -42,6 +42,8 @@ export function useBookmarks() {
 
   const toggleBookmark = useCallback(
     (article: Omit<BookmarkedArticle, "savedAt">) => {
+      // Read storage synchronously: React may run the updater below after this returns.
+      const added = !loadBookmarks().some((b) => b.id === article.id);
       setBookmarks((prev) => {
         const exists = prev.some((b) => b.id === article.id);
         const next = exists
@@ -50,6 +52,21 @@ export function useBookmarks() {
         saveBookmarks(next);
         return next;
       });
+      // One click is enough: a new bookmark also lands in the Content OS inbox
+      // (deduped there, so re-bookmarking never creates a second idea).
+      if (added) {
+        void fetch("/api/content-os", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title: article.title,
+            url: article.url,
+            summary: article.tldr || null,
+            source: "news_article",
+            payload: { publisher: article.source, briefDate: article.date },
+          }),
+        }).catch(() => {});
+      }
     },
     []
   );

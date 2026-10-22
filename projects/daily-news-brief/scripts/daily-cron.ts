@@ -3,6 +3,8 @@ import { resolve } from "path";
 
 // Load .env from project root
 config({ path: resolve(__dirname, "..", ".env") });
+// Then the Nexis root .env (the project has none; the keys live there). Earlier values win.
+config({ path: resolve(__dirname, "..", "..", "..", ".env") });
 
 import { generateDailyBrief, type BriefOptions } from "../src/lib/pipeline/run";
 import { generateYoutubeBrief } from "../src/lib/pipeline/youtube-run";

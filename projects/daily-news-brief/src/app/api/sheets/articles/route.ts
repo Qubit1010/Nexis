@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { appendToSheet, sheetsError } from "@/lib/google-sheets";
+import { saveEverywhere } from "@/lib/content-os";
 
 interface SaveArticleRequest {
   briefDate: string;
@@ -28,12 +29,29 @@ export async function POST(request: Request) {
       "New",
     ];
 
-    const saved = await appendToSheet(
-      "Saved Articles",
-      ["Date Saved", "Brief Date", "Title", "Source", "URL", "TLDR", "Status"],
-      row
+    const result = await saveEverywhere(
+      () =>
+        appendToSheet(
+          "Saved Articles",
+          ["Date Saved", "Brief Date", "Title", "Source", "URL", "TLDR", "Status"],
+          row
+        ),
+      {
+        title: body.title,
+        url: body.url,
+        summary: body.tldr || null,
+        source: "news_article",
+        payload: { publisher: body.source, briefDate: body.briefDate },
+      }
     );
-    return NextResponse.json({ success: true, message: "Article saved to Google Sheet", ...saved });
+    if (!result.ok) return sheetsError(result.sheetError);
+    return NextResponse.json({
+      success: true,
+      message: result.sheet ? "Article saved to Google Sheet" : "Saved to Content OS (Google Sheet save failed)",
+      ...(result.sheet || {}),
+      contentOs: result.contentOs,
+      sheetSaved: !!result.sheet,
+    });
   } catch (error) {
     return sheetsError(error);
   }

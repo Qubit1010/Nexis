@@ -101,9 +101,8 @@ export function YouTubeTopVideos({ videos }: YouTubeTopVideosProps) {
                   channelName: v.channelName,
                   url: v.url,
                   viewCount: v.viewCount,
-                  likeCount: 0,
                   publishedDate: v.publishedDate,
-                  durationSeconds: null,
+                  summary: v.performanceNote,
                 }}
               />
               <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/30 group-hover:text-rose-400/60 transition-colors" />

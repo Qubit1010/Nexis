@@ -2,6 +2,8 @@ import { config } from "dotenv";
 import { resolve } from "path";
 
 config({ path: resolve(__dirname, "..", ".env") });
+// Then the Nexis root .env (the project has none; the keys live there). Earlier values win.
+config({ path: resolve(__dirname, "..", "..", "..", ".env") });
 
 import { generateToolsBrief } from "../src/lib/pipeline/tool-run";
 

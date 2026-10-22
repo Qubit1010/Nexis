@@ -16,6 +16,10 @@ That framing comes from `content-advisor/references/format-specs/newsletter.md`,
 LinkedIn-specific mechanics as unverified. Treat anything about how LinkedIn ranks or notifies as
 something to check live, not a fact.
 
+**Run headless by Content OS?** Follow `references/content-os-contract.md`: it covers the agency
+edition, skips the Doc and issue-log steps, and replaces every "ask Aleem" with a decision you
+record for the reviewer.
+
 ---
 
 ## Load before writing
@@ -36,7 +40,7 @@ no em dashes anywhere. Docs corrupts them and the rule applies to body text rega
 ## Three inputs, three starting points
 
 **A published blog post** (slug, URL or "the latest post"). Read the markdown from
-`C:\Users\qubit\OneDrive\Documents\Automations\Website-Creator\Projects\aleem-portfolio\src\content\blog\<slug>.md`.
+`D:\aleem-portfolio\src\content\blog\<slug>.md`.
 Confirm the post returns 200 at `https://aleemuh.com/blog/<slug>`; if it does not, the backlink
 would be dead, so stop and say the post is not live yet. This is a **condensed edition**, not a
 copy: the blog already holds the full argument and ranks on Google, and a verbatim copy on

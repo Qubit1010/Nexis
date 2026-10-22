@@ -54,7 +54,13 @@ export function YouTubeContentIdeas({ ideas }: YouTubeContentIdeasProps) {
                 <h3 className="text-sm font-semibold leading-snug">{idea.idea}</h3>
                 <div className="flex items-center gap-1.5 shrink-0">
                   <SaveToSheetButton
-                    payload={{ type: "idea", title: idea.idea, formatSuggestion: idea.formatSuggestion }}
+                    payload={{
+                      type: "idea",
+                      title: idea.idea,
+                      formatSuggestion: idea.formatSuggestion,
+                      summary: idea.reasoning,
+                      details: { estimatedInterest: idea.estimatedInterest },
+                    }}
                   />
                   {idea.estimatedInterest && (
                     <span

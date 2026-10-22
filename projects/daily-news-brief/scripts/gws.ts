@@ -6,11 +6,34 @@
  * rows, one email), so no batching machinery is needed.
  */
 import { spawn } from "child_process";
-import { existsSync } from "fs";
+import { existsSync, readdirSync } from "fs";
 import { join } from "path";
 
+/** %APPDATA%\npm first; then the Codex app's virtualized AppData, the only gws install on some machines. */
+function npmDirs(): string[] {
+  const dirs = [join(process.env.APPDATA || "", "npm")];
+  const packages = join(process.env.LOCALAPPDATA || "", "Packages");
+  try {
+    for (const d of readdirSync(packages)) {
+      if (d.startsWith("OpenAI.Codex_")) dirs.push(join(packages, d, "LocalCache", "Roaming", "npm"));
+    }
+  } catch {
+    // No Packages folder: nothing extra to search.
+  }
+  return dirs;
+}
+
 function findGws(): { cmd: string; base: string[]; shell: boolean } {
-  const npmDir = join(process.env.APPDATA || "", "npm");
+  for (const npmDir of npmDirs()) {
+    const found = findGwsIn(npmDir);
+    if (found) return found;
+  }
+  const gwsCmd = join(process.env.APPDATA || "", "npm", "gws.cmd");
+  if (existsSync(gwsCmd)) return { cmd: gwsCmd, base: [], shell: true };
+  return { cmd: "gws", base: [], shell: true };
+}
+
+function findGwsIn(npmDir: string): { cmd: string; base: string[]; shell: boolean } | null {
   for (const js of ["run.js", "run-gws.js"]) {
     const gwsJs = join(npmDir, "node_modules", "@googleworkspace", "cli", js);
     if (existsSync(gwsJs)) {
@@ -23,9 +46,7 @@ function findGws(): { cmd: string; base: string[]; shell: boolean } {
       return { cmd: "node", base: [gwsJs], shell: false };
     }
   }
-  const gwsCmd = join(npmDir, "gws.cmd");
-  if (existsSync(gwsCmd)) return { cmd: gwsCmd, base: [], shell: true };
-  return { cmd: "gws", base: [], shell: true };
+  return null;
 }
 
 const GWS = findGws();

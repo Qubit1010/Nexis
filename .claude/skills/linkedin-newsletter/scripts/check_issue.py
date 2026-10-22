@@ -1,6 +1,10 @@
-"""Mechanical checks for a Notes from the Workbench issue.
+"""Mechanical checks for a LinkedIn newsletter issue.
 
-    python check_issue.py <issue.md> [--source-url https://aleemuh.com/blog/<slug>]
+    python check_issue.py <issue.md> [--source-url https://aleemuh.com/blog/<slug>] [--edition personal|agency]
+
+`personal` (default) is Notes from the Workbench: personal-brand terms banned, one aleemuh.com
+CTA. `agency` is the NexusPoint edition: the agency name is allowed and the single CTA is
+subscribing to the LinkedIn newsletter itself (the adaptation prepare_issue.py used to patch in).
 
 Checks only the part above `<!-- end issue -->`. Exits 1 on any failure, so a caller cannot
 mistake a failed check for a pass. Always prints the word count first: no word count in the
@@ -16,12 +20,21 @@ EMOJI = re.compile("[\U0001F300-\U0001FAFF\U00002600-\U000027BF\U0001F000-\U0001
 PLACEHOLDER = re.compile(r"\[(?:[^\]]*\b(?:TODO|TBD|placeholder|insert|X+)\b[^\]]*)\]", re.I)
 CTA = re.compile(r"https://aleemuh\.com/(newsletter|contact)\b")
 
+EDITIONS = {
+    "personal": (BANNED, CTA),
+    "agency": ([p for p in BANNED if p != r"nexus\s*-?\s*point"], re.compile(r"\b(Subscribe to this newsletter)\b")),
+}
+
 
 def main() -> int:
+    global BANNED, CTA
     ap = argparse.ArgumentParser()
     ap.add_argument("path")
     ap.add_argument("--source-url")
+    ap.add_argument("--edition", choices=sorted(EDITIONS), default="personal")
     args = ap.parse_args()
+    if args.edition != "personal":
+        BANNED, CTA = EDITIONS[args.edition]
 
     text = open(args.path, encoding="utf-8").read()
     if "<!-- end issue -->" not in text:

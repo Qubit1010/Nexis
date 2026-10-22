@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { appendToSheet, sheetsError } from "@/lib/google-sheets";
+import { saveEverywhere, type ContentOsIdea } from "@/lib/content-os";
 const SHEET_TAB = "Youtube bookmarked";
 
 function formatDuration(seconds: number): string {
@@ -20,11 +21,14 @@ export async function POST(request: Request) {
     const dateSaved = new Date().toISOString().slice(0, 10);
 
     let row: (string | number)[];
+    let idea: ContentOsIdea;
 
     if (body.type === "video") {
+      // Likes are not in the stored brief data; leave Eng Rate blank rather than writing a false 0.
+      const likes = typeof body.likeCount === "number" && body.likeCount > 0 ? body.likeCount : null;
       const engRate =
-        body.viewCount > 0
-          ? Number(((body.likeCount / body.viewCount) * 100).toFixed(2))
+        likes && body.viewCount > 0
+          ? Number(((likes / body.viewCount) * 100).toFixed(2))
           : "";
       row = [
         dateSaved,
@@ -32,12 +36,19 @@ export async function POST(request: Request) {
         body.channelName,
         body.url,
         body.viewCount || "",
-        body.likeCount || "",
+        likes ?? "",
         engRate,
         body.durationSeconds ? formatDuration(body.durationSeconds) : "",
         body.publishedDate ? String(body.publishedDate).slice(0, 10) : "",
         "New",
       ];
+      idea = {
+        title: body.title,
+        url: body.url,
+        summary: body.summary || null,
+        source: "youtube_video",
+        payload: { channel: body.channelName, views: body.viewCount ?? null, publishedDate: body.publishedDate ?? null },
+      };
     } else if (body.type === "idea") {
       row = [
         dateSaved,
@@ -51,20 +62,37 @@ export async function POST(request: Request) {
         "",
         "New",
       ];
+      idea = {
+        title: body.title,
+        summary: body.summary || null,
+        source: "youtube_idea",
+        payload: { format: body.formatSuggestion || null, ...(body.details || {}) },
+      };
     } else {
       // topic
       const channels = Array.isArray(body.channels)
         ? body.channels.slice(0, 3).join(", ")
         : "";
       row = [dateSaved, body.topic, channels, "", "", "", "", "", "", "New"];
+      idea = {
+        title: body.topic,
+        summary: body.summary || null,
+        source: "youtube_topic",
+        payload: { channels: body.channels || [], mentionCount: body.mentionCount ?? null, sentiment: body.sentiment ?? null },
+      };
     }
 
-    const saved = await appendToSheet(
-      SHEET_TAB,
-      ["Date Saved", "Title", "Channel", "URL", "Views", "Likes", "Eng Rate", "Duration", "Published Date", "Status"],
-      row
+    const result = await saveEverywhere(
+      () =>
+        appendToSheet(
+          SHEET_TAB,
+          ["Date Saved", "Title", "Channel", "URL", "Views", "Likes", "Eng Rate", "Duration", "Published Date", "Status"],
+          row
+        ),
+      idea
     );
-    return NextResponse.json({ success: true, ...saved });
+    if (!result.ok) return sheetsError(result.sheetError);
+    return NextResponse.json({ success: true, ...(result.sheet || {}), contentOs: result.contentOs, sheetSaved: !!result.sheet });
   } catch (error) {
     return sheetsError(error);
   }

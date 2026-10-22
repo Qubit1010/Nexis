@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { appendToSheet, sheetsError } from "@/lib/google-sheets";
+import { saveEverywhere } from "@/lib/content-os";
 
 interface SaveRequest {
   briefDate: string;
@@ -36,12 +37,22 @@ export async function POST(request: Request) {
       "New",
     ];
 
-    const saved = await appendToSheet(
-      "Content Opportunities",
-      ["Date Saved", "Brief Date", "Title", "Format", "Timeliness", "Angle", "Hook", "Key Points", "Related Trends", "Status"],
-      row
+    const result = await saveEverywhere(
+      () =>
+        appendToSheet(
+          "Content Opportunities",
+          ["Date Saved", "Brief Date", "Title", "Format", "Timeliness", "Angle", "Hook", "Key Points", "Related Trends", "Status"],
+          row
+        ),
+      {
+        title: body.title,
+        summary: [body.angle, body.hook].filter(Boolean).join("\n\n") || null,
+        source: "practical_idea",
+        payload: { format: body.format, timeliness: body.timeliness, keyPoints: body.keyPoints, relatedTrends: body.relatedTrends, briefDate: body.briefDate },
+      }
     );
-    return NextResponse.json({ success: true, message: "Saved to Google Sheet", ...saved });
+    if (!result.ok) return sheetsError(result.sheetError);
+    return NextResponse.json({ success: true, message: result.sheet ? "Saved to Google Sheet" : "Saved to Content OS (Google Sheet save failed)", ...(result.sheet || {}), contentOs: result.contentOs, sheetSaved: !!result.sheet });
   } catch (error) {
     return sheetsError(error);
   }

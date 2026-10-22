@@ -10,14 +10,14 @@
     "ready_regex": "Ready in|Local:"
   },
   {
-    "id": "content-engine-dashboard",
-    "label": "Content Engine",
-    "description": "Content ideas, scoring, and creation dashboard (Next.js).",
-    "dir": "C:/Users/qubit/OneDrive/Documents/Automations/Nexis/projects/content-engine-dashboard",
-    "command": "npm run dev -- -p 3002",
-    "url": "http://localhost:3002",
-    "port": 3002,
-    "ready_regex": "Ready in|Local:"
+    "id": "content-os",
+    "label": "Content OS",
+    "description": "Brief bookmarks to ideas, calendar, headless skill drafts, review and scheduled publishing (Hono + React, SQLite).",
+    "dir": "D:/Nexis/projects/content-os",
+    "command": "node server/index.ts",
+    "url": "http://127.0.0.1:4600",
+    "port": 4600,
+    "ready_regex": "Content OS ->|already running"
   },
   {
     "id": "sales-playbook-dashboard",

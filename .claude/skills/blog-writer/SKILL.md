@@ -11,6 +11,10 @@ Aleem's research-backed engine for one thing done well: a finished, **SEO + AI-s
 ## Read once (provenance + honesty)
 - Built research-first on an **83-source cited 2026 corpus** (`references/research-synthesis.md`, audit trail in `_research/sources.json`) covering blog SEO, AEO/GEO, Google AI Overviews, human-tone writing, and blog formats.
 - **Honesty rule:** the corpus flags every claim **[peer-reviewed]** vs **[practitioner]**. Peer-reviewed: people-first/E-E-A-T, answer-first structure drives AI citation, query intent > rank, query fan-out, human-tone craft. Practitioner (attributed, not invented): the Princeton GEO per-method boosts, the "40-60 word answer block," format citation-share numbers. Never present a practitioner heuristic as measured fact, and never quote a number that isn't in the corpus or a live query.
+**Run headless by Content OS?** (`projects/content-os/`, the prompt says so.) Follow
+`references/content-os-contract.md`: it outputs an Astro-ready file for aleemuh.com or
+nexus-point.co, skips the review gate and step 8, and covers the agency voice.
+
 ## Voice resolution (do this before anything else)
 
 This skill writes in **one resolved voice source**. Everything downstream - including every
@@ -64,7 +68,7 @@ Extract or decide: **topic**, **search intent** (informational / comparison / ho
 - **from-scratch:** propose 3 angles rooted in Aleem's pillars (AI automation, agentic systems, real client/build lessons, cross-domain: philosophy/systems/CS) and one target keyword each. Let him pick before writing. Ask at most ONE clarifying question if truly blocked.
 
 ### Step 2 - Research the topic (real sources)
-Gather facts, stats, and citable sources - GEO rewards real citations and specific data, and E-E-A-T rewards accuracy. Use the `research` skill (unsandboxed, Python 3.12):
+Gather facts, stats, and citable sources - GEO rewards real citations and specific data, and E-E-A-T rewards accuracy. Use the `research` skill (unsandboxed, `python` on PATH):
 ```
 python .claude/skills/research/scripts/research.py --query "<topic> 2026" --depth medium --json
 ```

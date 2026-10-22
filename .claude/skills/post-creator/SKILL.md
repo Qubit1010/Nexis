@@ -19,10 +19,14 @@ teaser prompt set (`Instagram-Short-Template-1`, the only shorts-creator templat
 that generation is prompts-only too, same as the other image templates. No video is
 rendered here.
 
+**Run headless by Content OS?** (`projects/content-os/`, the prompt says so.) Follow
+`references/content-os-contract.md` instead of the steps below wherever they differ: no sheet,
+no Doc, no NotebookLM, no checkpoint, LinkedIn only.
+
 ## Setup notes (read once per session)
 
-- Python is NOT on PATH. Use the full path and UTF-8:
-  `$env:PYTHONIOENCODING="utf-8"` + `$env:LOCALAPPDATA\Programs\Python\Python312\python.exe`.
+- Python 3.13 is on PATH as `python` on this machine (there is no Python312 install). Set UTF-8
+  output first in PowerShell: `$env:PYTHONIOENCODING="utf-8"`.
 - Research (Exa/Tavily/Serper/Jina), gws, and NotebookLM calls need real network — run
   those commands with sandbox disabled (`dangerouslyDisableSandbox: true`); api.exa.ai
   DNS fails inside the sandbox.

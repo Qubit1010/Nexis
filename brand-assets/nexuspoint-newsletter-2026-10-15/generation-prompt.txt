@@ -1,0 +1,13 @@
+Use case: logo-brand.
+Asset type: square LinkedIn newsletter logo and website publication identity.
+Edit the supplied NexusPoint agency symbol into one finished, premium square newsletter identity tile for the publication "Notes from the Build". The input image is the existing approved agency logo and must be preserved in recognizable geometry: white soft folded ribbon N surrounding one cyan circular center. Do not redesign the N.
+
+Layout: pure black 1:1 square canvas. Editorial, type-led, confidently composed, exceptionally clean. Place the approved N symbol as a small endorsement at top left, around 14% of canvas width, with generous negative space. Across the middle and lower-middle set the publication name in three substantial left-aligned lines:
+"NOTES"
+"FROM THE"
+"BUILD"
+NOTES and FROM THE in white, BUILD in saturated blue #02A1E1. Use broad geometric futuristic sans lettering inspired by Conthrax, controlled and readable, with clean solid letterforms and no decorative slashes. NOTES and BUILD should be very large and dominant; FROM THE smaller but easily readable at 300px output. All text must fit with generous 10% outer margins. Add a short thin cyan horizontal rule near the bottom, then the small but legible agency endorsement "NexusPoint" in clean sans serif. Publication title is the hero, agency symbol is supporting. Balance negative space carefully.
+
+Exact text only: "NOTES", "FROM THE", "BUILD", "NexusPoint".
+Palette: solid black #000000, clean white #FFFFFF, blue #02A1E1.
+Style: flat crisp vector-like brand artwork, high contrast and precise typesetting. Output a single finished flat logo tile, edge-to-edge square, high resolution. No mockup, no presentation board, no shadows, no 3D, no texture, no gradients, no glow, no other text, no watermark, no rounded outer frame. Keep existing symbol contours faithful to reference.
