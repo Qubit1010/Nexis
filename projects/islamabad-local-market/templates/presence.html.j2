@@ -1,0 +1,59 @@
+{% set d = demo %}{% set title = pr.label ~ ": " ~ d.name %}
+{% include "_head.html.j2" %}
+<style>
+  .page > * { flex: none; }
+  .page > .body { flex: 1 1 auto; }
+  .pc-hero { padding-bottom: 6mm; }
+  .pc-hero .kick { margin-top: 8mm; color: var(--blue); display: block; position: relative; z-index: 2; }
+  .pc-hero h1 { font: 400 17pt/1.18 var(--display); margin-top: 3mm; max-width: 165mm; position: relative; z-index: 2; }
+  .pc-hero .sub { color: var(--t2); font-size: 8.8pt; line-height: 1.55; margin-top: 3mm; max-width: 172mm; position: relative; z-index: 2; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; margin-top: 5mm; position: relative; z-index: 2; }
+  .stats div { background: var(--ink-soft); box-shadow: inset 0 0 0 1px var(--edge-dark); padding: 3mm 3.4mm; }
+  .stats b { display: block; font: 400 15pt/1 var(--display); color: var(--blue); }
+  .stats span { display: block; font-size: 6.9pt; line-height: 1.35; color: var(--t2); margin-top: 1.6mm; }
+
+  .body { padding-top: 5mm; padding-bottom: 4mm; display: flex; flex-direction: column; gap: 3mm; }
+  .fd { display: grid; grid-template-columns: 9mm 1fr; gap: 3mm; padding-bottom: 3mm; border-bottom: 1px solid var(--rule); }
+  .fd:last-of-type { border-bottom: 0; }
+  .fd .n { font: 400 11pt/1.2 var(--display); color: var(--blue-text); }
+  .fd h3 { font: 600 9.6pt/1.3 var(--sans); }
+  .fd p { font-size: 7.9pt; line-height: 1.45; color: var(--ink-2); margin-top: 1.1mm; }
+  .fd p b { font: 400 5.8pt/1 var(--loud); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); margin-right: 1.4mm; }
+  .fd p.fix b { color: var(--blue-text); }
+  .moves { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5mm; margin-top: auto; }
+  .moves div { background: var(--ink); color: var(--white); padding: 3.2mm 3.6mm; font-size: 7.8pt; line-height: 1.45; }
+  .moves span { display: block; font: 400 6pt/1 var(--loud); letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 1.8mm; }
+  .src { font-size: 6.4pt; color: var(--ink-3); line-height: 1.4; margin-top: 1mm; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="band pc-hero pad">
+    <div class="mark">{{ symbol_svg }}</div>
+    <div class="topbar"><img src="{{ a.logo_white }}" alt="NexusPoint"><span class="label">{{ pr.label }} &middot; {{ prepared }}</span></div>
+    <span class="label kick">{{ pr.eyebrow }}</span>
+    <h1>{{ pr.title }}</h1>
+    <p class="sub">{{ pr.sub }}</p>
+    <div class="stats">{% for s in pr.stats %}<div class="clip"><b class="num">{{ s.v }}</b><span>{{ s.l }}</span></div>{% endfor %}</div>
+  </div>
+  <div class="band-rule"></div>
+  <div class="body pad">
+    <div class="sh" style="margin-bottom:0"><span class="idx">04</span>{% set who = {'healthcare': 'patient', 'real-estate': 'buyer', 'food': 'customer', 'education': 'parent'} %}<h2>{{ pr.get('section_title') or ('What a new ' ~ who.get(d.sector, 'customer') ~ ' runs into') }}</h2></div>
+    {% for f in pr.findings %}
+    <div class="fd">
+      <span class="n">0{{ loop.index }}</span>
+      <div>
+        <h3>{{ f.title }}</h3>
+        <p><b>Seen</b>{{ f.seen }}</p>
+        <p><b>Why it matters</b>{{ f.why }}</p>
+        <p class="fix"><b>Fix</b>{{ f.fix }}</p>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="moves">{% for m in pr.moves %}<div class="clip"><span>{{ m.when }}</span>{{ m.text }}</div>{% endfor %}</div>
+    <p class="src">{{ pr.sources }}</p>
+  </div>
+  <div class="foot"><span><b>NexusPoint</b> &middot; {{ kit.meta.website }} &middot; {{ kit.meta.email }}</span><span>{{ kit.meta.tagline }}</span></div>
+</div>
+</body>
+</html>
