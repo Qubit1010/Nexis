@@ -108,10 +108,28 @@ Two things to carry through:
 
 ## Step 4. Compose the concept
 
-Invent the visual metaphor for this topic. A good one is a **mechanism, not a mood**: something with
-parts that relate, so a viewer can read the argument off the picture. Chaos resolving into order,
-one input fanning into many outputs, a level scale, a filling grid, a dashed ring where a layer
-should be solid.
+Invent the visual idea for this topic. The viewer should be able to read the article's argument
+from the subject and its relationships. That can be a scene, a material transformation, a visual
+paradox, a literal subject treated unexpectedly, or an explanatory mechanism. A meaningful
+relationship does not require a physical machine.
+
+### Blog covers: check the collection before composing
+
+For Aleem's portfolio, inspect four to six recent cover images in
+`D:/Work/aleem-portfolio/src/assets/blog/`, checking the matching article's `coverImage` field to
+identify the active asset. Compare their visual structure, not just their colours or labels.
+Read the latest article as well. If the assets are unavailable, state that the collection was not
+inspected instead of claiming the new cover is distinct.
+
+Aleem's feedback on October 20, 2026: the covers repeat conveyor belts and the same structure.
+Choose the subject and composition from the particular story. Keep the confirmed brand palette,
+while varying metaphor, framing, medium, scale and use of typography. Brand consistency does not
+require repeating a layout.
+
+A cover is an editorial hook. Supporting figures can explain access routes, workflows or other
+details. Do not default to input-process-output diagrams, conveyor belts, document presses,
+cartridge machines or test benches for a cover merely because the article concerns AI. A process
+layout needs a specific editorial reason and must pass the collection comparison.
 
 Check the concept against three failure modes before writing the prompt:
 
@@ -120,6 +138,8 @@ Check the concept against three failure modes before writing the prompt:
 - **Cliché.** Glowing brains, robot hands, humanoid robots at desks, circuit-board textures, blue
   holographic HUDs. These read as "AI-generated stock" instantly.
 - **Repetition.** If it is the same structure you used for the last topic, change it.
+- **Collection repetition.** If a recent cover has the same silhouette, reading direction and
+  object relationships, new labels or more detailed rendering do not make the concept fresh.
 
 ## Step 5. Emit
 

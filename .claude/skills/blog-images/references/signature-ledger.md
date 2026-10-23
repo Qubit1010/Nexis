@@ -39,6 +39,7 @@ Cover the labels. If two covers still read as the same drawing, one of them is w
 | `gpt-6-astra-creator-agent-workflows` | a creator workflow contained inside an operating boundary, with research, drafting, and QA held inside before a human gate controls public action | **a map with a boundary** (a governed territory) | the operating boundary around the agent workflow |
 | `frontier-ai-model-comparison-2026` | four output artifacts inspected through one accepted-result lens, making the task's acceptance gate the choice mechanism | **an inspection lens** (a filter instrument) | the central accepted-result lens |
 | `argon-vs-opus-5-5-deep-work-benchmark` | one frozen specimen held by opposed fixed jaws, so each model faces the same test | **a test clamp / fixture jig** (a mechanical constraint) | the frozen task specimen; prepared for the agency article, 2026-10-18 |
+| `gemini-4-argon-real-world-performance` | one continuous Gemini star seen through three task-shaped die-cut paper masks, showing that the verdict depends on the task | **a paper-mask collage** (task-shaped apertures, generated raster art) | the single blue Gemini star beneath code, automation and analysis masks |
 
 ## Worlds already used, do not reach for these again
 

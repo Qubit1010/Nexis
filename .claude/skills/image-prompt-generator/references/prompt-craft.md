@@ -15,8 +15,8 @@ model can act on.
 A prompt is only as good as the thing it is trying to say. Before any visual vocabulary, get this:
 
 **What would a reader disagree with?** Not the subject, the claim. "A marketing brief" is a
-subject. "The brief is the machine, discipline is not" is a claim, and a claim has shape: an input,
-a mechanism, an output.
+subject. "An approved decision must survive the next handoff" is a claim. Find a visual
+relationship that makes the claim readable, rather than automatically drawing a production line.
 
 Three questions that reliably turn a topic into a drawable claim:
 
@@ -27,9 +27,16 @@ Three questions that reliably turn a topic into a drawable claim:
 - **What is the one number?** A real figure from the source anchors an image and makes it specific
   to this piece rather than reusable filler. Never invent one to get the effect.
 
-## 2. Choose a metaphor with parts
+## 2. Choose a visual idea with a reason
 
-The strongest concepts are **mechanisms**, because a mechanism can be read. A mood cannot.
+Choose the image from the story's specific tension, subject or change. A scene, visual paradox,
+unusual crop, material transformation or literal object can carry an argument as clearly as a
+diagram. Mechanism means a meaningful relationship here, not industrial machinery.
+
+For a blog cover, make an editorial hook that earns attention at thumbnail scale. Put detailed
+process explanations in supporting figures when that serves the article. First inspect recent
+covers as required by the main skill. Repeating their composition with different labels is a
+failed concept, even when the rendering is attractive.
 
 Families that carry meaning, offered as starting points to depart from rather than a menu to pick
 from:
@@ -37,7 +44,9 @@ from:
 | Family | Reads as |
 |---|---|
 | Routing and switching | one input becoming many outputs, deliberately |
-| Assembly line or conveyor | sequence, and what happens at each stage |
+| Scene or environment | the article's situation and what is changing within it |
+| Material transformation | a specific change made tangible |
+| Scale or perspective shift | the difference between the apparent story and the consequential one |
 | Filling or accumulation | progress against a total, compounding |
 | Balance, scale, gauge | comparison, and the reading that means nothing |
 | Nested containment | layers, and the one that is missing or incomplete |
@@ -48,8 +57,10 @@ from:
 **The test:** if the topic were swapped for an unrelated one and the image would still work, the
 metaphor is decoration. Start again.
 
-**The other test:** if this is structurally the same image as the last one produced, change it. No
-ledger enforces this. It is a matter of noticing.
+**The collection test:** compare the actual recent covers. If the silhouette, reading direction
+and object relationships repeat, change the concept. A different palette, headline or rendering
+style alone does not pass this test. Conveyor belts, presses, test benches and cartridge machines
+have already been overused in Aleem's portfolio, so they require a specific editorial reason.
 
 ## 3. Style registers, translated
 
@@ -76,9 +87,9 @@ pair it with one clear focal point or it reads as chaos rather than intensity.
 **Photographic or 3D render**
 Real-world optics. Words: *shallow depth of field*, *f/1.8*, *soft directional window light*,
 *shot on medium-format*, *pronounced grain*, *studio backdrop*, *macro detail*, or for render:
-*soft studio lighting*, *matte materials*, *subtle ambient occlusion*. Note that this brand's own
-doctrine prefers diagrams over photographs, so choosing this for Aleem's own content is a
-deliberate departure worth naming.
+*soft studio lighting*, *matte materials*, *subtle ambient occlusion*. Choose the medium from the
+story and its place in the collection. Aleem's confirmed palette can remain consistent across
+editorial scenes, photographs, paper sculpture, illustration and diagrams.
 
 ## 4. Composition dials
 
