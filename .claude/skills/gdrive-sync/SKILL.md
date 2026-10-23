@@ -33,6 +33,7 @@ Two-way sync between Nexis private folders and **Work / Nexis Business Context**
 | `output/` | Nexis Business Context/output/ |
 | `tmp/` | Nexis Business Context/tmp/ |
 | `research/` | Nexis Business Context/research/ |
+| `reports/` | Nexis Business Context/reports/ |
 | `projects/islamabad-local-market/data/` | Nexis Business Context/projects/islamabad-local-market/data/ (one Drive folder named by the path) |
 | `projects/islamabad-local-market/research/` | Nexis Business Context/projects/islamabad-local-market/research/ |
 

@@ -47,7 +47,7 @@ Skills are built organically -- when a workflow gets repeated, we turn it into a
 
 **Closeout & push prompt:** See `.claude/rules/closeout-and-push-prompt.md`. After creating a skill, installing a plugin, creating a project, or making significant structural changes — always ask whether to run `/session-closeout` and whether to push to GitHub.
 
-**GDrive sync prompt:** See `.claude/rules/gdrive-sync-prompt.md`. After adding or modifying files in `archives/`, `catalog/`, `client-projects/`, `context/`, `decisions/`, `logs/`, `references/`, or `.claude/rules/` — ask whether to sync to Google Drive.
+**GDrive sync prompt:** See `.claude/rules/gdrive-sync-prompt.md`. After adding or modifying files in `archives/`, `catalog/`, `client-projects/`, `context/`, `decisions/`, `logs/`, `references/`, `reports/`, or `.claude/rules/` — ask whether to sync to Google Drive.
 
 **Skill catalog:** See `references/skills-catalog.md` for the full list of active in-house skills and installed third-party skills, plugins, and collections.
 

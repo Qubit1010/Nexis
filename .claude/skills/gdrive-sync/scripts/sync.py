@@ -72,6 +72,7 @@ SYNC_FOLDERS = [
     "output",
     "tmp",
     "research",
+    "reports",
     # gitignored project data with no other backup (scan, prospects, approved prices, research brief)
     "projects/islamabad-local-market/data",
     "projects/islamabad-local-market/research",
