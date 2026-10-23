@@ -268,3 +268,7 @@ agent/skills/website-to-video/
 # Packaged brand-kit archives duplicate committed folders (Drive is their backup)
 brand-assets/**/*.zip
 brand-assets/**/*.rar
+
+# Generated SEO audit output and crawl dumps: backed up to Drive (reports/, research/), not Git
+/reports/
+/research/aleemuh-seo-audit-2026-10-22/
