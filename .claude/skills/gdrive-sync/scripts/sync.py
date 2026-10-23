@@ -111,7 +111,7 @@ def _load_gws_credentials() -> Credentials | None:
                   if (cli_dir / name).is_file()), None)
     if entry and shutil.which("node"):
         command = [shutil.which("node"), str(entry)]
-    elif os.name != "nt" and shutil.which("gws"):
+    elif shutil.which("gws"):
         command = [shutil.which("gws")]
     else:
         return None
